@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApigatewayv2AuthorizerConfig extends cdktn.TerraformMetaArguments {
+export interface TfAuthorizerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#api_id AwsApigatewayv2Authorizer#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#api_id TfAuthorizer#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_credentials_arn AwsApigatewayv2Authorizer#authorizer_credentials_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_credentials_arn TfAuthorizer#authorizer_credentials_arn}
   */
   readonly authorizerCredentialsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_payload_format_version AwsApigatewayv2Authorizer#authorizer_payload_format_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_payload_format_version TfAuthorizer#authorizer_payload_format_version}
   */
   readonly authorizerPayloadFormatVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_result_ttl_in_seconds AwsApigatewayv2Authorizer#authorizer_result_ttl_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_result_ttl_in_seconds TfAuthorizer#authorizer_result_ttl_in_seconds}
   */
   readonly authorizerResultTtlInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_type AwsApigatewayv2Authorizer#authorizer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_type TfAuthorizer#authorizer_type}
   */
   readonly authorizerType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_uri AwsApigatewayv2Authorizer#authorizer_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#authorizer_uri TfAuthorizer#authorizer_uri}
   */
   readonly authorizerUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#enable_simple_responses AwsApigatewayv2Authorizer#enable_simple_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#enable_simple_responses TfAuthorizer#enable_simple_responses}
   */
   readonly enableSimpleResponses?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#id AwsApigatewayv2Authorizer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#id TfAuthorizer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#identity_sources AwsApigatewayv2Authorizer#identity_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#identity_sources TfAuthorizer#identity_sources}
   */
   readonly identitySources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#name AwsApigatewayv2Authorizer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#name TfAuthorizer#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#region AwsApigatewayv2Authorizer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#region TfAuthorizer#region}
   */
   readonly region?: string;
   /**
   * jwt_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#jwt_configuration AwsApigatewayv2Authorizer#jwt_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#jwt_configuration TfAuthorizer#jwt_configuration}
   */
-  readonly jwtConfiguration?: AwsApigatewayv2Authorizer.JwtConfigurationProperty;
+  readonly jwtConfiguration?: TfAuthorizer.JwtConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#timeouts AwsApigatewayv2Authorizer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#timeouts TfAuthorizer#timeouts}
   */
-  readonly timeouts?: AwsApigatewayv2Authorizer.TimeoutsProperty;
+  readonly timeouts?: TfAuthorizer.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer aws_apigatewayv2_authorizer}
 */
-export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
+export class TfAuthorizer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApigatewayv2Authorizer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAuthorizer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApigatewayv2Authorizer to import
-  * @param importFromId The id of the existing AwsApigatewayv2Authorizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApigatewayv2Authorizer to import is found
+  * @param importToId The construct id used in the generated config for the TfAuthorizer to import
+  * @param importFromId The id of the existing TfAuthorizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAuthorizer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_authorizer", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApigatewayv2AuthorizerConfig
+  * @param options TfAuthorizerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApigatewayv2AuthorizerConfig) {
+  public constructor(scope: Construct, id: string, config: TfAuthorizerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_authorizer',
       terraformGeneratorMetadata: {
@@ -307,11 +307,11 @@ export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
   }
 
   // jwt_configuration - computed: false, optional: true, required: false
-  private _jwtConfiguration = new AwsApigatewayv2Authorizer.JwtConfigurationPropertyOutputReference(this, "jwt_configuration");
+  private _jwtConfiguration = new TfAuthorizer.JwtConfigurationPropertyOutputReference(this, "jwt_configuration");
   public get jwtConfiguration() {
     return this._jwtConfiguration;
   }
-  public putJwtConfiguration(value: AwsApigatewayv2Authorizer.JwtConfigurationProperty) {
+  public putJwtConfiguration(value: TfAuthorizer.JwtConfigurationProperty) {
     this._jwtConfiguration.internalValue = value;
   }
   public resetJwtConfiguration() {
@@ -323,11 +323,11 @@ export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsApigatewayv2Authorizer.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAuthorizer.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsApigatewayv2Authorizer.TimeoutsProperty) {
+  public putTimeouts(value: TfAuthorizer.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -355,8 +355,8 @@ export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
       identity_sources: cdktn.listMapper(cdktn.stringToTerraform, false)(this._identitySources),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      jwt_configuration: awsApigatewayv2AuthorizerJwtConfigurationPropertyToTerraform(this._jwtConfiguration.internalValue),
-      timeouts: awsApigatewayv2AuthorizerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      jwt_configuration: tfAuthorizerJwtConfigurationPropertyToTerraform(this._jwtConfiguration.internalValue),
+      timeouts: tfAuthorizerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -429,16 +429,16 @@ export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       jwt_configuration: {
-        value: awsApigatewayv2AuthorizerJwtConfigurationPropertyToHclTerraform(this._jwtConfiguration.internalValue),
+        value: tfAuthorizerJwtConfigurationPropertyToHclTerraform(this._jwtConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApigatewayv2Authorizer.JwtConfigurationPropertyList",
+        storageClassType: "TfAuthorizer.JwtConfigurationPropertyList",
       },
       timeouts: {
-        value: awsApigatewayv2AuthorizerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAuthorizerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsApigatewayv2Authorizer.TimeoutsProperty",
+        storageClassType: "TfAuthorizer.TimeoutsProperty",
       },
     };
 
@@ -447,7 +447,7 @@ export class AwsApigatewayv2Authorizer extends cdktn.TerraformResource {
   }
 }
 
-export function awsApigatewayv2AuthorizerJwtConfigurationPropertyToTerraform(struct?: AwsApigatewayv2Authorizer.JwtConfigurationPropertyOutputReference | AwsApigatewayv2Authorizer.JwtConfigurationProperty): any {
+export function tfAuthorizerJwtConfigurationPropertyToTerraform(struct?: TfAuthorizer.JwtConfigurationPropertyOutputReference | TfAuthorizer.JwtConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function awsApigatewayv2AuthorizerJwtConfigurationPropertyToTerraform(str
 }
 
 
-export function awsApigatewayv2AuthorizerJwtConfigurationPropertyToHclTerraform(struct?: AwsApigatewayv2Authorizer.JwtConfigurationPropertyOutputReference | AwsApigatewayv2Authorizer.JwtConfigurationProperty): any {
+export function tfAuthorizerJwtConfigurationPropertyToHclTerraform(struct?: TfAuthorizer.JwtConfigurationPropertyOutputReference | TfAuthorizer.JwtConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function awsApigatewayv2AuthorizerJwtConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsApigatewayv2AuthorizerTimeoutsPropertyToTerraform(struct?: AwsApigatewayv2Authorizer.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAuthorizerTimeoutsPropertyToTerraform(struct?: TfAuthorizer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function awsApigatewayv2AuthorizerTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsApigatewayv2AuthorizerTimeoutsPropertyToHclTerraform(struct?: AwsApigatewayv2Authorizer.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAuthorizerTimeoutsPropertyToHclTerraform(struct?: TfAuthorizer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,14 +514,14 @@ export function awsApigatewayv2AuthorizerTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsApigatewayv2Authorizer {
+export namespace TfAuthorizer {
 export interface JwtConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#audience AwsApigatewayv2Authorizer#audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#audience TfAuthorizer#audience}
   */
   readonly audience?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#issuer AwsApigatewayv2Authorizer#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#issuer TfAuthorizer#issuer}
   */
   readonly issuer?: string;
 }
@@ -597,7 +597,7 @@ export class JwtConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#delete AwsApigatewayv2Authorizer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_authorizer#delete TfAuthorizer#delete}
   */
   readonly delete?: string;
 }

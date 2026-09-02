@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFisTargetAccountConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfTargetAccountConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#account_id AwsFisTargetAccountConfiguration#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#account_id TfTargetAccountConfiguration#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#description AwsFisTargetAccountConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#description TfTargetAccountConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#experiment_template_id AwsFisTargetAccountConfiguration#experiment_template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#experiment_template_id TfTargetAccountConfiguration#experiment_template_id}
   */
   readonly experimentTemplateId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#region AwsFisTargetAccountConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#region TfTargetAccountConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#role_arn AwsFisTargetAccountConfiguration#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#role_arn TfTargetAccountConfiguration#role_arn}
   */
   readonly roleArn?: string;
 }
@@ -33,7 +33,7 @@ export interface AwsFisTargetAccountConfigurationConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration aws_fis_target_account_configuration}
 */
-export class AwsFisTargetAccountConfiguration extends cdktn.TerraformResource {
+export class TfTargetAccountConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsFisTargetAccountConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFisTargetAccountConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTargetAccountConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFisTargetAccountConfiguration to import
-  * @param importFromId The id of the existing AwsFisTargetAccountConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFisTargetAccountConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfTargetAccountConfiguration to import
+  * @param importFromId The id of the existing TfTargetAccountConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_target_account_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTargetAccountConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fis_target_account_configuration", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsFisTargetAccountConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFisTargetAccountConfigurationConfig
+  * @param options TfTargetAccountConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFisTargetAccountConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfTargetAccountConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fis_target_account_configuration',
       terraformGeneratorMetadata: {

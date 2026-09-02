@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamRolesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfRolesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#id DataAwsIamRoles#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#id DataTfRoles#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#name_regex DataAwsIamRoles#name_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#name_regex DataTfRoles#name_regex}
   */
   readonly nameRegex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#path_prefix DataAwsIamRoles#path_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#path_prefix DataTfRoles#path_prefix}
   */
   readonly pathPrefix?: string;
 }
@@ -26,7 +26,7 @@ export interface DataAwsIamRolesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles aws_iam_roles}
 */
-export class DataAwsIamRoles extends cdktn.TerraformDataSource {
+export class DataTfRoles extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class DataAwsIamRoles extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamRoles resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfRoles resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamRoles to import
-  * @param importFromId The id of the existing DataAwsIamRoles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamRoles to import is found
+  * @param importToId The construct id used in the generated config for the DataTfRoles to import
+  * @param importFromId The id of the existing DataTfRoles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_roles#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfRoles to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_roles", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class DataAwsIamRoles extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamRolesConfig = {}
+  * @param options DataTfRolesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamRolesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfRolesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_roles',
       terraformGeneratorMetadata: {

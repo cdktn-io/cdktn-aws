@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDevopsguruServiceIntegrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceIntegrationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#region AwsDevopsguruServiceIntegration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#region TfServiceIntegration#region}
   */
   readonly region?: string;
   /**
   * kms_server_side_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#kms_server_side_encryption AwsDevopsguruServiceIntegration#kms_server_side_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#kms_server_side_encryption TfServiceIntegration#kms_server_side_encryption}
   */
-  readonly kmsServerSideEncryption?: AwsDevopsguruServiceIntegration.KmsServerSideEncryptionProperty[] | cdktn.IResolvable;
+  readonly kmsServerSideEncryption?: TfServiceIntegration.KmsServerSideEncryptionProperty[] | cdktn.IResolvable;
   /**
   * logs_anomaly_detection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#logs_anomaly_detection AwsDevopsguruServiceIntegration#logs_anomaly_detection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#logs_anomaly_detection TfServiceIntegration#logs_anomaly_detection}
   */
-  readonly logsAnomalyDetection?: AwsDevopsguruServiceIntegration.LogsAnomalyDetectionProperty[] | cdktn.IResolvable;
+  readonly logsAnomalyDetection?: TfServiceIntegration.LogsAnomalyDetectionProperty[] | cdktn.IResolvable;
   /**
   * ops_center block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#ops_center AwsDevopsguruServiceIntegration#ops_center}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#ops_center TfServiceIntegration#ops_center}
   */
-  readonly opsCenter?: AwsDevopsguruServiceIntegration.OpsCenterProperty[] | cdktn.IResolvable;
+  readonly opsCenter?: TfServiceIntegration.OpsCenterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration aws_devopsguru_service_integration}
 */
-export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
+export class TfServiceIntegration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDevopsguruServiceIntegration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServiceIntegration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDevopsguruServiceIntegration to import
-  * @param importFromId The id of the existing AwsDevopsguruServiceIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDevopsguruServiceIntegration to import is found
+  * @param importToId The construct id used in the generated config for the TfServiceIntegration to import
+  * @param importFromId The id of the existing TfServiceIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServiceIntegration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devopsguru_service_integration", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDevopsguruServiceIntegrationConfig = {}
+  * @param options TfServiceIntegrationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsDevopsguruServiceIntegrationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfServiceIntegrationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_devopsguru_service_integration',
       terraformGeneratorMetadata: {
@@ -115,11 +115,11 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
   }
 
   // kms_server_side_encryption - computed: false, optional: true, required: false
-  private _kmsServerSideEncryption = new AwsDevopsguruServiceIntegration.KmsServerSideEncryptionPropertyList(this, "kms_server_side_encryption", false);
+  private _kmsServerSideEncryption = new TfServiceIntegration.KmsServerSideEncryptionPropertyList(this, "kms_server_side_encryption", false);
   public get kmsServerSideEncryption() {
     return this._kmsServerSideEncryption;
   }
-  public putKmsServerSideEncryption(value: AwsDevopsguruServiceIntegration.KmsServerSideEncryptionProperty[] | cdktn.IResolvable) {
+  public putKmsServerSideEncryption(value: TfServiceIntegration.KmsServerSideEncryptionProperty[] | cdktn.IResolvable) {
     this._kmsServerSideEncryption.internalValue = value;
   }
   public resetKmsServerSideEncryption() {
@@ -131,11 +131,11 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
   }
 
   // logs_anomaly_detection - computed: false, optional: true, required: false
-  private _logsAnomalyDetection = new AwsDevopsguruServiceIntegration.LogsAnomalyDetectionPropertyList(this, "logs_anomaly_detection", false);
+  private _logsAnomalyDetection = new TfServiceIntegration.LogsAnomalyDetectionPropertyList(this, "logs_anomaly_detection", false);
   public get logsAnomalyDetection() {
     return this._logsAnomalyDetection;
   }
-  public putLogsAnomalyDetection(value: AwsDevopsguruServiceIntegration.LogsAnomalyDetectionProperty[] | cdktn.IResolvable) {
+  public putLogsAnomalyDetection(value: TfServiceIntegration.LogsAnomalyDetectionProperty[] | cdktn.IResolvable) {
     this._logsAnomalyDetection.internalValue = value;
   }
   public resetLogsAnomalyDetection() {
@@ -147,11 +147,11 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
   }
 
   // ops_center - computed: false, optional: true, required: false
-  private _opsCenter = new AwsDevopsguruServiceIntegration.OpsCenterPropertyList(this, "ops_center", false);
+  private _opsCenter = new TfServiceIntegration.OpsCenterPropertyList(this, "ops_center", false);
   public get opsCenter() {
     return this._opsCenter;
   }
-  public putOpsCenter(value: AwsDevopsguruServiceIntegration.OpsCenterProperty[] | cdktn.IResolvable) {
+  public putOpsCenter(value: TfServiceIntegration.OpsCenterProperty[] | cdktn.IResolvable) {
     this._opsCenter.internalValue = value;
   }
   public resetOpsCenter() {
@@ -169,9 +169,9 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      kms_server_side_encryption: cdktn.listMapper(awsDevopsguruServiceIntegrationKmsServerSideEncryptionPropertyToTerraform, true)(this._kmsServerSideEncryption.internalValue),
-      logs_anomaly_detection: cdktn.listMapper(awsDevopsguruServiceIntegrationLogsAnomalyDetectionPropertyToTerraform, true)(this._logsAnomalyDetection.internalValue),
-      ops_center: cdktn.listMapper(awsDevopsguruServiceIntegrationOpsCenterPropertyToTerraform, true)(this._opsCenter.internalValue),
+      kms_server_side_encryption: cdktn.listMapper(tfServiceIntegrationKmsServerSideEncryptionPropertyToTerraform, true)(this._kmsServerSideEncryption.internalValue),
+      logs_anomaly_detection: cdktn.listMapper(tfServiceIntegrationLogsAnomalyDetectionPropertyToTerraform, true)(this._logsAnomalyDetection.internalValue),
+      ops_center: cdktn.listMapper(tfServiceIntegrationOpsCenterPropertyToTerraform, true)(this._opsCenter.internalValue),
     };
   }
 
@@ -184,22 +184,22 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       kms_server_side_encryption: {
-        value: cdktn.listMapperHcl(awsDevopsguruServiceIntegrationKmsServerSideEncryptionPropertyToHclTerraform, true)(this._kmsServerSideEncryption.internalValue),
+        value: cdktn.listMapperHcl(tfServiceIntegrationKmsServerSideEncryptionPropertyToHclTerraform, true)(this._kmsServerSideEncryption.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDevopsguruServiceIntegration.KmsServerSideEncryptionPropertyList",
+        storageClassType: "TfServiceIntegration.KmsServerSideEncryptionPropertyList",
       },
       logs_anomaly_detection: {
-        value: cdktn.listMapperHcl(awsDevopsguruServiceIntegrationLogsAnomalyDetectionPropertyToHclTerraform, true)(this._logsAnomalyDetection.internalValue),
+        value: cdktn.listMapperHcl(tfServiceIntegrationLogsAnomalyDetectionPropertyToHclTerraform, true)(this._logsAnomalyDetection.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDevopsguruServiceIntegration.LogsAnomalyDetectionPropertyList",
+        storageClassType: "TfServiceIntegration.LogsAnomalyDetectionPropertyList",
       },
       ops_center: {
-        value: cdktn.listMapperHcl(awsDevopsguruServiceIntegrationOpsCenterPropertyToHclTerraform, true)(this._opsCenter.internalValue),
+        value: cdktn.listMapperHcl(tfServiceIntegrationOpsCenterPropertyToHclTerraform, true)(this._opsCenter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDevopsguruServiceIntegration.OpsCenterPropertyList",
+        storageClassType: "TfServiceIntegration.OpsCenterPropertyList",
       },
     };
 
@@ -208,7 +208,7 @@ export class AwsDevopsguruServiceIntegration extends cdktn.TerraformResource {
   }
 }
 
-export function awsDevopsguruServiceIntegrationKmsServerSideEncryptionPropertyToTerraform(struct?: AwsDevopsguruServiceIntegration.KmsServerSideEncryptionProperty | cdktn.IResolvable): any {
+export function tfServiceIntegrationKmsServerSideEncryptionPropertyToTerraform(struct?: TfServiceIntegration.KmsServerSideEncryptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,7 +221,7 @@ export function awsDevopsguruServiceIntegrationKmsServerSideEncryptionPropertyTo
 }
 
 
-export function awsDevopsguruServiceIntegrationKmsServerSideEncryptionPropertyToHclTerraform(struct?: AwsDevopsguruServiceIntegration.KmsServerSideEncryptionProperty | cdktn.IResolvable): any {
+export function tfServiceIntegrationKmsServerSideEncryptionPropertyToHclTerraform(struct?: TfServiceIntegration.KmsServerSideEncryptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function awsDevopsguruServiceIntegrationKmsServerSideEncryptionPropertyTo
 }
 
 
-export function awsDevopsguruServiceIntegrationLogsAnomalyDetectionPropertyToTerraform(struct?: AwsDevopsguruServiceIntegration.LogsAnomalyDetectionProperty | cdktn.IResolvable): any {
+export function tfServiceIntegrationLogsAnomalyDetectionPropertyToTerraform(struct?: TfServiceIntegration.LogsAnomalyDetectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function awsDevopsguruServiceIntegrationLogsAnomalyDetectionPropertyToTer
 }
 
 
-export function awsDevopsguruServiceIntegrationLogsAnomalyDetectionPropertyToHclTerraform(struct?: AwsDevopsguruServiceIntegration.LogsAnomalyDetectionProperty | cdktn.IResolvable): any {
+export function tfServiceIntegrationLogsAnomalyDetectionPropertyToHclTerraform(struct?: TfServiceIntegration.LogsAnomalyDetectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function awsDevopsguruServiceIntegrationLogsAnomalyDetectionPropertyToHcl
 }
 
 
-export function awsDevopsguruServiceIntegrationOpsCenterPropertyToTerraform(struct?: AwsDevopsguruServiceIntegration.OpsCenterProperty | cdktn.IResolvable): any {
+export function tfServiceIntegrationOpsCenterPropertyToTerraform(struct?: TfServiceIntegration.OpsCenterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function awsDevopsguruServiceIntegrationOpsCenterPropertyToTerraform(stru
 }
 
 
-export function awsDevopsguruServiceIntegrationOpsCenterPropertyToHclTerraform(struct?: AwsDevopsguruServiceIntegration.OpsCenterProperty | cdktn.IResolvable): any {
+export function tfServiceIntegrationOpsCenterPropertyToHclTerraform(struct?: TfServiceIntegration.OpsCenterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,18 +312,18 @@ export function awsDevopsguruServiceIntegrationOpsCenterPropertyToHclTerraform(s
 }
 
 
-export namespace AwsDevopsguruServiceIntegration {
+export namespace TfServiceIntegration {
 export interface KmsServerSideEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#kms_key_id AwsDevopsguruServiceIntegration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#kms_key_id TfServiceIntegration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#opt_in_status AwsDevopsguruServiceIntegration#opt_in_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#opt_in_status TfServiceIntegration#opt_in_status}
   */
   readonly optInStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#type AwsDevopsguruServiceIntegration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#type TfServiceIntegration#type}
   */
   readonly type?: string;
 }
@@ -453,7 +453,7 @@ export class KmsServerSideEncryptionPropertyList extends cdktn.ComplexList {
 }
 export interface LogsAnomalyDetectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#opt_in_status AwsDevopsguruServiceIntegration#opt_in_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#opt_in_status TfServiceIntegration#opt_in_status}
   */
   readonly optInStatus?: string;
 }
@@ -539,7 +539,7 @@ export class LogsAnomalyDetectionPropertyList extends cdktn.ComplexList {
 }
 export interface OpsCenterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#opt_in_status AwsDevopsguruServiceIntegration#opt_in_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_service_integration#opt_in_status TfServiceIntegration#opt_in_status}
   */
   readonly optInStatus?: string;
 }

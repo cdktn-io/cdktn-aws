@@ -5,67 +5,67 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatazoneEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#account_identifier AwsDatazoneEnvironment#account_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#account_identifier TfEnvironment#account_identifier}
   */
   readonly accountIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#account_region AwsDatazoneEnvironment#account_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#account_region TfEnvironment#account_region}
   */
   readonly accountRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#blueprint_identifier AwsDatazoneEnvironment#blueprint_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#blueprint_identifier TfEnvironment#blueprint_identifier}
   */
   readonly blueprintIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#description AwsDatazoneEnvironment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#description TfEnvironment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#domain_identifier AwsDatazoneEnvironment#domain_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#domain_identifier TfEnvironment#domain_identifier}
   */
   readonly domainIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#glossary_terms AwsDatazoneEnvironment#glossary_terms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#glossary_terms TfEnvironment#glossary_terms}
   */
   readonly glossaryTerms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#name AwsDatazoneEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#name TfEnvironment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#profile_identifier AwsDatazoneEnvironment#profile_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#profile_identifier TfEnvironment#profile_identifier}
   */
   readonly profileIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#project_identifier AwsDatazoneEnvironment#project_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#project_identifier TfEnvironment#project_identifier}
   */
   readonly projectIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#region AwsDatazoneEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#region TfEnvironment#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#timeouts AwsDatazoneEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#timeouts TfEnvironment#timeouts}
   */
-  readonly timeouts?: AwsDatazoneEnvironment.TimeoutsProperty;
+  readonly timeouts?: TfEnvironment.TimeoutsProperty;
   /**
   * user_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#user_parameters AwsDatazoneEnvironment#user_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#user_parameters TfEnvironment#user_parameters}
   */
-  readonly userParameters?: AwsDatazoneEnvironment.UserParametersProperty[] | cdktn.IResolvable;
+  readonly userParameters?: TfEnvironment.UserParametersProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment aws_datazone_environment}
 */
-export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
+export class TfEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -76,11 +76,11 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatazoneEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatazoneEnvironment to import
-  * @param importFromId The id of the existing AwsDatazoneEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatazoneEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the TfEnvironment to import
+  * @param importFromId The id of the existing TfEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_environment", importId: importFromId, provider });
@@ -95,9 +95,9 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatazoneEnvironmentConfig
+  * @param options TfEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatazoneEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_environment',
       terraformGeneratorMetadata: {
@@ -240,7 +240,7 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
   }
 
   // last_deployment - computed: true, optional: false, required: false
-  private _lastDeployment = new AwsDatazoneEnvironment.LastDeploymentPropertyList(this, "last_deployment", false);
+  private _lastDeployment = new TfEnvironment.LastDeploymentPropertyList(this, "last_deployment", false);
   public get lastDeployment() {
     return this._lastDeployment;
   }
@@ -290,7 +290,7 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
   }
 
   // provisioned_resources - computed: true, optional: false, required: false
-  private _provisionedResources = new AwsDatazoneEnvironment.ProvisionedResourcesPropertyList(this, "provisioned_resources", false);
+  private _provisionedResources = new TfEnvironment.ProvisionedResourcesPropertyList(this, "provisioned_resources", false);
   public get provisionedResources() {
     return this._provisionedResources;
   }
@@ -312,11 +312,11 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDatazoneEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDatazoneEnvironment.TimeoutsProperty) {
+  public putTimeouts(value: TfEnvironment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -328,11 +328,11 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
   }
 
   // user_parameters - computed: false, optional: true, required: false
-  private _userParameters = new AwsDatazoneEnvironment.UserParametersPropertyList(this, "user_parameters", false);
+  private _userParameters = new TfEnvironment.UserParametersPropertyList(this, "user_parameters", false);
   public get userParameters() {
     return this._userParameters;
   }
-  public putUserParameters(value: AwsDatazoneEnvironment.UserParametersProperty[] | cdktn.IResolvable) {
+  public putUserParameters(value: TfEnvironment.UserParametersProperty[] | cdktn.IResolvable) {
     this._userParameters.internalValue = value;
   }
   public resetUserParameters() {
@@ -359,8 +359,8 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
       profile_identifier: cdktn.stringToTerraform(this._profileIdentifier),
       project_identifier: cdktn.stringToTerraform(this._projectIdentifier),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsDatazoneEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      user_parameters: cdktn.listMapper(awsDatazoneEnvironmentUserParametersPropertyToTerraform, true)(this._userParameters.internalValue),
+      timeouts: tfEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      user_parameters: cdktn.listMapper(tfEnvironmentUserParametersPropertyToTerraform, true)(this._userParameters.internalValue),
     };
   }
 
@@ -427,16 +427,16 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsDatazoneEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDatazoneEnvironment.TimeoutsProperty",
+        storageClassType: "TfEnvironment.TimeoutsProperty",
       },
       user_parameters: {
-        value: cdktn.listMapperHcl(awsDatazoneEnvironmentUserParametersPropertyToHclTerraform, true)(this._userParameters.internalValue),
+        value: cdktn.listMapperHcl(tfEnvironmentUserParametersPropertyToHclTerraform, true)(this._userParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatazoneEnvironment.UserParametersPropertyList",
+        storageClassType: "TfEnvironment.UserParametersPropertyList",
       },
     };
 
@@ -445,7 +445,7 @@ export class AwsDatazoneEnvironment extends cdktn.TerraformResource {
   }
 }
 
-export function awsDatazoneEnvironmentFailureReasonsPropertyToTerraform(struct?: AwsDatazoneEnvironment.FailureReasonsProperty): any {
+export function tfEnvironmentFailureReasonsPropertyToTerraform(struct?: TfEnvironment.FailureReasonsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function awsDatazoneEnvironmentFailureReasonsPropertyToTerraform(struct?:
 }
 
 
-export function awsDatazoneEnvironmentFailureReasonsPropertyToHclTerraform(struct?: AwsDatazoneEnvironment.FailureReasonsProperty): any {
+export function tfEnvironmentFailureReasonsPropertyToHclTerraform(struct?: TfEnvironment.FailureReasonsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function awsDatazoneEnvironmentFailureReasonsPropertyToHclTerraform(struc
 }
 
 
-export function awsDatazoneEnvironmentLastDeploymentPropertyToTerraform(struct?: AwsDatazoneEnvironment.LastDeploymentProperty): any {
+export function tfEnvironmentLastDeploymentPropertyToTerraform(struct?: TfEnvironment.LastDeploymentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function awsDatazoneEnvironmentLastDeploymentPropertyToTerraform(struct?:
 }
 
 
-export function awsDatazoneEnvironmentLastDeploymentPropertyToHclTerraform(struct?: AwsDatazoneEnvironment.LastDeploymentProperty): any {
+export function tfEnvironmentLastDeploymentPropertyToHclTerraform(struct?: TfEnvironment.LastDeploymentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function awsDatazoneEnvironmentLastDeploymentPropertyToHclTerraform(struc
 }
 
 
-export function awsDatazoneEnvironmentProvisionedResourcesPropertyToTerraform(struct?: AwsDatazoneEnvironment.ProvisionedResourcesProperty): any {
+export function tfEnvironmentProvisionedResourcesPropertyToTerraform(struct?: TfEnvironment.ProvisionedResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function awsDatazoneEnvironmentProvisionedResourcesPropertyToTerraform(st
 }
 
 
-export function awsDatazoneEnvironmentProvisionedResourcesPropertyToHclTerraform(struct?: AwsDatazoneEnvironment.ProvisionedResourcesProperty): any {
+export function tfEnvironmentProvisionedResourcesPropertyToHclTerraform(struct?: TfEnvironment.ProvisionedResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function awsDatazoneEnvironmentProvisionedResourcesPropertyToHclTerraform
 }
 
 
-export function awsDatazoneEnvironmentTimeoutsPropertyToTerraform(struct?: AwsDatazoneEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentTimeoutsPropertyToTerraform(struct?: TfEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function awsDatazoneEnvironmentTimeoutsPropertyToTerraform(struct?: AwsDa
 }
 
 
-export function awsDatazoneEnvironmentTimeoutsPropertyToHclTerraform(struct?: AwsDatazoneEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentTimeoutsPropertyToHclTerraform(struct?: TfEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function awsDatazoneEnvironmentTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsDatazoneEnvironmentUserParametersPropertyToTerraform(struct?: AwsDatazoneEnvironment.UserParametersProperty | cdktn.IResolvable): any {
+export function tfEnvironmentUserParametersPropertyToTerraform(struct?: TfEnvironment.UserParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -564,7 +564,7 @@ export function awsDatazoneEnvironmentUserParametersPropertyToTerraform(struct?:
 }
 
 
-export function awsDatazoneEnvironmentUserParametersPropertyToHclTerraform(struct?: AwsDatazoneEnvironment.UserParametersProperty | cdktn.IResolvable): any {
+export function tfEnvironmentUserParametersPropertyToHclTerraform(struct?: TfEnvironment.UserParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -589,7 +589,7 @@ export function awsDatazoneEnvironmentUserParametersPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsDatazoneEnvironment {
+export namespace TfEnvironment {
 export interface FailureReasonsProperty {
 }
 export class FailureReasonsPropertyOutputReference extends cdktn.ComplexObject {
@@ -802,19 +802,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#create AwsDatazoneEnvironment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#create TfEnvironment#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#delete AwsDatazoneEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#delete TfEnvironment#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#update AwsDatazoneEnvironment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#update TfEnvironment#update}
   */
   readonly update?: string;
 }
@@ -922,11 +922,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UserParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#name AwsDatazoneEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#name TfEnvironment#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#value AwsDatazoneEnvironment#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment#value TfEnvironment#value}
   */
   readonly value?: string;
 }

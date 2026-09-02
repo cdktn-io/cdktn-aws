@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailLbCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface TfLbCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#domain_name AwsLightsailLbCertificate#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#domain_name TfLbCertificate#domain_name}
   */
   readonly domainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#id AwsLightsailLbCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#id TfLbCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#lb_name AwsLightsailLbCertificate#lb_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#lb_name TfLbCertificate#lb_name}
   */
   readonly lbName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#name AwsLightsailLbCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#name TfLbCertificate#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#region AwsLightsailLbCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#region TfLbCertificate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#subject_alternative_names AwsLightsailLbCertificate#subject_alternative_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#subject_alternative_names TfLbCertificate#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: string[];
 }
@@ -40,7 +40,7 @@ export interface AwsLightsailLbCertificateConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate aws_lightsail_lb_certificate}
 */
-export class AwsLightsailLbCertificate extends cdktn.TerraformResource {
+export class TfLbCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsLightsailLbCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailLbCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLbCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailLbCertificate to import
-  * @param importFromId The id of the existing AwsLightsailLbCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailLbCertificate to import is found
+  * @param importToId The construct id used in the generated config for the TfLbCertificate to import
+  * @param importFromId The id of the existing TfLbCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLbCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_lb_certificate", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsLightsailLbCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailLbCertificateConfig
+  * @param options TfLbCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailLbCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: TfLbCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_lb_certificate',
       terraformGeneratorMetadata: {
@@ -127,7 +127,7 @@ export class AwsLightsailLbCertificate extends cdktn.TerraformResource {
   }
 
   // domain_validation_records - computed: true, optional: false, required: false
-  private _domainValidationRecords = new AwsLightsailLbCertificate.DomainValidationRecordsPropertyList(this, "domain_validation_records", true);
+  private _domainValidationRecords = new TfLbCertificate.DomainValidationRecordsPropertyList(this, "domain_validation_records", true);
   public get domainValidationRecords() {
     return this._domainValidationRecords;
   }
@@ -271,7 +271,7 @@ export class AwsLightsailLbCertificate extends cdktn.TerraformResource {
   }
 }
 
-export function awsLightsailLbCertificateDomainValidationRecordsPropertyToTerraform(struct?: AwsLightsailLbCertificate.DomainValidationRecordsProperty): any {
+export function tfLbCertificateDomainValidationRecordsPropertyToTerraform(struct?: TfLbCertificate.DomainValidationRecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function awsLightsailLbCertificateDomainValidationRecordsPropertyToTerraf
 }
 
 
-export function awsLightsailLbCertificateDomainValidationRecordsPropertyToHclTerraform(struct?: AwsLightsailLbCertificate.DomainValidationRecordsProperty): any {
+export function tfLbCertificateDomainValidationRecordsPropertyToHclTerraform(struct?: TfLbCertificate.DomainValidationRecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function awsLightsailLbCertificateDomainValidationRecordsPropertyToHclTer
 }
 
 
-export namespace AwsLightsailLbCertificate {
+export namespace TfLbCertificate {
 export interface DomainValidationRecordsProperty {
 }
 export class DomainValidationRecordsPropertyOutputReference extends cdktn.ComplexObject {

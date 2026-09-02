@@ -5,75 +5,75 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentAgentActionGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfAgentActionGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#action_group_name AwsBedrockagentAgentActionGroup#action_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#action_group_name TfAgentActionGroup#action_group_name}
   */
   readonly actionGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#action_group_state AwsBedrockagentAgentActionGroup#action_group_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#action_group_state TfAgentActionGroup#action_group_state}
   */
   readonly actionGroupState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#agent_id AwsBedrockagentAgentActionGroup#agent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#agent_id TfAgentActionGroup#agent_id}
   */
   readonly agentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#agent_version AwsBedrockagentAgentActionGroup#agent_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#agent_version TfAgentActionGroup#agent_version}
   */
   readonly agentVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#description AwsBedrockagentAgentActionGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#description TfAgentActionGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#parent_action_group_signature AwsBedrockagentAgentActionGroup#parent_action_group_signature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#parent_action_group_signature TfAgentActionGroup#parent_action_group_signature}
   */
   readonly parentActionGroupSignature?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#prepare_agent AwsBedrockagentAgentActionGroup#prepare_agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#prepare_agent TfAgentActionGroup#prepare_agent}
   */
   readonly prepareAgent?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#region AwsBedrockagentAgentActionGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#region TfAgentActionGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#skip_resource_in_use_check AwsBedrockagentAgentActionGroup#skip_resource_in_use_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#skip_resource_in_use_check TfAgentActionGroup#skip_resource_in_use_check}
   */
   readonly skipResourceInUseCheck?: boolean | cdktn.IResolvable;
   /**
   * action_group_executor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#action_group_executor AwsBedrockagentAgentActionGroup#action_group_executor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#action_group_executor TfAgentActionGroup#action_group_executor}
   */
-  readonly actionGroupExecutor?: AwsBedrockagentAgentActionGroup.ActionGroupExecutorProperty[] | cdktn.IResolvable;
+  readonly actionGroupExecutor?: TfAgentActionGroup.ActionGroupExecutorProperty[] | cdktn.IResolvable;
   /**
   * api_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#api_schema AwsBedrockagentAgentActionGroup#api_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#api_schema TfAgentActionGroup#api_schema}
   */
-  readonly apiSchema?: AwsBedrockagentAgentActionGroup.ApiSchemaProperty[] | cdktn.IResolvable;
+  readonly apiSchema?: TfAgentActionGroup.ApiSchemaProperty[] | cdktn.IResolvable;
   /**
   * function_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#function_schema AwsBedrockagentAgentActionGroup#function_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#function_schema TfAgentActionGroup#function_schema}
   */
-  readonly functionSchema?: AwsBedrockagentAgentActionGroup.FunctionSchemaProperty[] | cdktn.IResolvable;
+  readonly functionSchema?: TfAgentActionGroup.FunctionSchemaProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#timeouts AwsBedrockagentAgentActionGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#timeouts TfAgentActionGroup#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentAgentActionGroup.TimeoutsProperty;
+  readonly timeouts?: TfAgentActionGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group aws_bedrockagent_agent_action_group}
 */
-export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
+export class TfAgentActionGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -84,11 +84,11 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentAgentActionGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAgentActionGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentAgentActionGroup to import
-  * @param importFromId The id of the existing AwsBedrockagentAgentActionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentAgentActionGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfAgentActionGroup to import
+  * @param importFromId The id of the existing TfAgentActionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAgentActionGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_agent_action_group", importId: importFromId, provider });
@@ -103,9 +103,9 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentAgentActionGroupConfig
+  * @param options TfAgentActionGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentAgentActionGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfAgentActionGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_agent_action_group',
       terraformGeneratorMetadata: {
@@ -286,11 +286,11 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
   }
 
   // action_group_executor - computed: false, optional: true, required: false
-  private _actionGroupExecutor = new AwsBedrockagentAgentActionGroup.ActionGroupExecutorPropertyList(this, "action_group_executor", false);
+  private _actionGroupExecutor = new TfAgentActionGroup.ActionGroupExecutorPropertyList(this, "action_group_executor", false);
   public get actionGroupExecutor() {
     return this._actionGroupExecutor;
   }
-  public putActionGroupExecutor(value: AwsBedrockagentAgentActionGroup.ActionGroupExecutorProperty[] | cdktn.IResolvable) {
+  public putActionGroupExecutor(value: TfAgentActionGroup.ActionGroupExecutorProperty[] | cdktn.IResolvable) {
     this._actionGroupExecutor.internalValue = value;
   }
   public resetActionGroupExecutor() {
@@ -302,11 +302,11 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
   }
 
   // api_schema - computed: false, optional: true, required: false
-  private _apiSchema = new AwsBedrockagentAgentActionGroup.ApiSchemaPropertyList(this, "api_schema", false);
+  private _apiSchema = new TfAgentActionGroup.ApiSchemaPropertyList(this, "api_schema", false);
   public get apiSchema() {
     return this._apiSchema;
   }
-  public putApiSchema(value: AwsBedrockagentAgentActionGroup.ApiSchemaProperty[] | cdktn.IResolvable) {
+  public putApiSchema(value: TfAgentActionGroup.ApiSchemaProperty[] | cdktn.IResolvable) {
     this._apiSchema.internalValue = value;
   }
   public resetApiSchema() {
@@ -318,11 +318,11 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
   }
 
   // function_schema - computed: false, optional: true, required: false
-  private _functionSchema = new AwsBedrockagentAgentActionGroup.FunctionSchemaPropertyList(this, "function_schema", false);
+  private _functionSchema = new TfAgentActionGroup.FunctionSchemaPropertyList(this, "function_schema", false);
   public get functionSchema() {
     return this._functionSchema;
   }
-  public putFunctionSchema(value: AwsBedrockagentAgentActionGroup.FunctionSchemaProperty[] | cdktn.IResolvable) {
+  public putFunctionSchema(value: TfAgentActionGroup.FunctionSchemaProperty[] | cdktn.IResolvable) {
     this._functionSchema.internalValue = value;
   }
   public resetFunctionSchema() {
@@ -334,11 +334,11 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentAgentActionGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAgentActionGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentAgentActionGroup.TimeoutsProperty) {
+  public putTimeouts(value: TfAgentActionGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -364,10 +364,10 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
       prepare_agent: cdktn.booleanToTerraform(this._prepareAgent),
       region: cdktn.stringToTerraform(this._region),
       skip_resource_in_use_check: cdktn.booleanToTerraform(this._skipResourceInUseCheck),
-      action_group_executor: cdktn.listMapper(awsBedrockagentAgentActionGroupActionGroupExecutorPropertyToTerraform, true)(this._actionGroupExecutor.internalValue),
-      api_schema: cdktn.listMapper(awsBedrockagentAgentActionGroupApiSchemaPropertyToTerraform, true)(this._apiSchema.internalValue),
-      function_schema: cdktn.listMapper(awsBedrockagentAgentActionGroupFunctionSchemaPropertyToTerraform, true)(this._functionSchema.internalValue),
-      timeouts: awsBedrockagentAgentActionGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      action_group_executor: cdktn.listMapper(tfAgentActionGroupActionGroupExecutorPropertyToTerraform, true)(this._actionGroupExecutor.internalValue),
+      api_schema: cdktn.listMapper(tfAgentActionGroupApiSchemaPropertyToTerraform, true)(this._apiSchema.internalValue),
+      function_schema: cdktn.listMapper(tfAgentActionGroupFunctionSchemaPropertyToTerraform, true)(this._functionSchema.internalValue),
+      timeouts: tfAgentActionGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -428,28 +428,28 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       action_group_executor: {
-        value: cdktn.listMapperHcl(awsBedrockagentAgentActionGroupActionGroupExecutorPropertyToHclTerraform, true)(this._actionGroupExecutor.internalValue),
+        value: cdktn.listMapperHcl(tfAgentActionGroupActionGroupExecutorPropertyToHclTerraform, true)(this._actionGroupExecutor.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentAgentActionGroup.ActionGroupExecutorPropertyList",
+        storageClassType: "TfAgentActionGroup.ActionGroupExecutorPropertyList",
       },
       api_schema: {
-        value: cdktn.listMapperHcl(awsBedrockagentAgentActionGroupApiSchemaPropertyToHclTerraform, true)(this._apiSchema.internalValue),
+        value: cdktn.listMapperHcl(tfAgentActionGroupApiSchemaPropertyToHclTerraform, true)(this._apiSchema.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentAgentActionGroup.ApiSchemaPropertyList",
+        storageClassType: "TfAgentActionGroup.ApiSchemaPropertyList",
       },
       function_schema: {
-        value: cdktn.listMapperHcl(awsBedrockagentAgentActionGroupFunctionSchemaPropertyToHclTerraform, true)(this._functionSchema.internalValue),
+        value: cdktn.listMapperHcl(tfAgentActionGroupFunctionSchemaPropertyToHclTerraform, true)(this._functionSchema.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentAgentActionGroup.FunctionSchemaPropertyList",
+        storageClassType: "TfAgentActionGroup.FunctionSchemaPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentAgentActionGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAgentActionGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentAgentActionGroup.TimeoutsProperty",
+        storageClassType: "TfAgentActionGroup.TimeoutsProperty",
       },
     };
 
@@ -458,7 +458,7 @@ export class AwsBedrockagentAgentActionGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentAgentActionGroupActionGroupExecutorPropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.ActionGroupExecutorProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupActionGroupExecutorPropertyToTerraform(struct?: TfAgentActionGroup.ActionGroupExecutorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function awsBedrockagentAgentActionGroupActionGroupExecutorPropertyToTerr
 }
 
 
-export function awsBedrockagentAgentActionGroupActionGroupExecutorPropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.ActionGroupExecutorProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupActionGroupExecutorPropertyToHclTerraform(struct?: TfAgentActionGroup.ActionGroupExecutorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function awsBedrockagentAgentActionGroupActionGroupExecutorPropertyToHclT
 }
 
 
-export function awsBedrockagentAgentActionGroupS3PropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.S3Property | cdktn.IResolvable): any {
+export function tfAgentActionGroupS3PropertyToTerraform(struct?: TfAgentActionGroup.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function awsBedrockagentAgentActionGroupS3PropertyToTerraform(struct?: Aw
 }
 
 
-export function awsBedrockagentAgentActionGroupS3PropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.S3Property | cdktn.IResolvable): any {
+export function tfAgentActionGroupS3PropertyToHclTerraform(struct?: TfAgentActionGroup.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,19 +532,19 @@ export function awsBedrockagentAgentActionGroupS3PropertyToHclTerraform(struct?:
 }
 
 
-export function awsBedrockagentAgentActionGroupApiSchemaPropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.ApiSchemaProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupApiSchemaPropertyToTerraform(struct?: TfAgentActionGroup.ApiSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     payload: cdktn.stringToTerraform(struct!.payload),
-    s3: cdktn.listMapper(awsBedrockagentAgentActionGroupS3PropertyToTerraform, true)(struct!.s3),
+    s3: cdktn.listMapper(tfAgentActionGroupS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsBedrockagentAgentActionGroupApiSchemaPropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.ApiSchemaProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupApiSchemaPropertyToHclTerraform(struct?: TfAgentActionGroup.ApiSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function awsBedrockagentAgentActionGroupApiSchemaPropertyToHclTerraform(s
       storageClassType: "string",
     },
     s3: {
-      value: cdktn.listMapperHcl(awsBedrockagentAgentActionGroupS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfAgentActionGroupS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -569,7 +569,7 @@ export function awsBedrockagentAgentActionGroupApiSchemaPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentAgentActionGroupParametersPropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.ParametersProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupParametersPropertyToTerraform(struct?: TfAgentActionGroup.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function awsBedrockagentAgentActionGroupParametersPropertyToTerraform(str
 }
 
 
-export function awsBedrockagentAgentActionGroupParametersPropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.ParametersProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupParametersPropertyToHclTerraform(struct?: TfAgentActionGroup.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function awsBedrockagentAgentActionGroupParametersPropertyToHclTerraform(
 }
 
 
-export function awsBedrockagentAgentActionGroupFunctionsPropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.FunctionsProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupFunctionsPropertyToTerraform(struct?: TfAgentActionGroup.FunctionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -628,12 +628,12 @@ export function awsBedrockagentAgentActionGroupFunctionsPropertyToTerraform(stru
   return {
     description: cdktn.stringToTerraform(struct!.description),
     name: cdktn.stringToTerraform(struct!.name),
-    parameters: cdktn.listMapper(awsBedrockagentAgentActionGroupParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfAgentActionGroupParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsBedrockagentAgentActionGroupFunctionsPropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.FunctionsProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupFunctionsPropertyToHclTerraform(struct?: TfAgentActionGroup.FunctionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function awsBedrockagentAgentActionGroupFunctionsPropertyToHclTerraform(s
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsBedrockagentAgentActionGroupParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfAgentActionGroupParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "ParametersPropertyList",
@@ -664,25 +664,25 @@ export function awsBedrockagentAgentActionGroupFunctionsPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentAgentActionGroupMemberFunctionsPropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.MemberFunctionsProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupMemberFunctionsPropertyToTerraform(struct?: TfAgentActionGroup.MemberFunctionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    functions: cdktn.listMapper(awsBedrockagentAgentActionGroupFunctionsPropertyToTerraform, true)(struct!.functions),
+    functions: cdktn.listMapper(tfAgentActionGroupFunctionsPropertyToTerraform, true)(struct!.functions),
   }
 }
 
 
-export function awsBedrockagentAgentActionGroupMemberFunctionsPropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.MemberFunctionsProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupMemberFunctionsPropertyToHclTerraform(struct?: TfAgentActionGroup.MemberFunctionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     functions: {
-      value: cdktn.listMapperHcl(awsBedrockagentAgentActionGroupFunctionsPropertyToHclTerraform, true)(struct!.functions),
+      value: cdktn.listMapperHcl(tfAgentActionGroupFunctionsPropertyToHclTerraform, true)(struct!.functions),
       isBlock: true,
       type: "list",
       storageClassType: "FunctionsPropertyList",
@@ -694,25 +694,25 @@ export function awsBedrockagentAgentActionGroupMemberFunctionsPropertyToHclTerra
 }
 
 
-export function awsBedrockagentAgentActionGroupFunctionSchemaPropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.FunctionSchemaProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupFunctionSchemaPropertyToTerraform(struct?: TfAgentActionGroup.FunctionSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    member_functions: cdktn.listMapper(awsBedrockagentAgentActionGroupMemberFunctionsPropertyToTerraform, true)(struct!.memberFunctions),
+    member_functions: cdktn.listMapper(tfAgentActionGroupMemberFunctionsPropertyToTerraform, true)(struct!.memberFunctions),
   }
 }
 
 
-export function awsBedrockagentAgentActionGroupFunctionSchemaPropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.FunctionSchemaProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupFunctionSchemaPropertyToHclTerraform(struct?: TfAgentActionGroup.FunctionSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     member_functions: {
-      value: cdktn.listMapperHcl(awsBedrockagentAgentActionGroupMemberFunctionsPropertyToHclTerraform, true)(struct!.memberFunctions),
+      value: cdktn.listMapperHcl(tfAgentActionGroupMemberFunctionsPropertyToHclTerraform, true)(struct!.memberFunctions),
       isBlock: true,
       type: "list",
       storageClassType: "MemberFunctionsPropertyList",
@@ -724,7 +724,7 @@ export function awsBedrockagentAgentActionGroupFunctionSchemaPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentAgentActionGroupTimeoutsPropertyToTerraform(struct?: AwsBedrockagentAgentActionGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupTimeoutsPropertyToTerraform(struct?: TfAgentActionGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -736,7 +736,7 @@ export function awsBedrockagentAgentActionGroupTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsBedrockagentAgentActionGroupTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentAgentActionGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAgentActionGroupTimeoutsPropertyToHclTerraform(struct?: TfAgentActionGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -761,14 +761,14 @@ export function awsBedrockagentAgentActionGroupTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsBedrockagentAgentActionGroup {
+export namespace TfAgentActionGroup {
 export interface ActionGroupExecutorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#custom_control AwsBedrockagentAgentActionGroup#custom_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#custom_control TfAgentActionGroup#custom_control}
   */
   readonly customControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#lambda AwsBedrockagentAgentActionGroup#lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#lambda TfAgentActionGroup#lambda}
   */
   readonly lambda?: string;
 }
@@ -876,11 +876,11 @@ export class ActionGroupExecutorPropertyList extends cdktn.ComplexList {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#s3_bucket_name AwsBedrockagentAgentActionGroup#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#s3_bucket_name TfAgentActionGroup#s3_bucket_name}
   */
   readonly s3BucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#s3_object_key AwsBedrockagentAgentActionGroup#s3_object_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#s3_object_key TfAgentActionGroup#s3_object_key}
   */
   readonly s3ObjectKey?: string;
 }
@@ -988,13 +988,13 @@ export class S3PropertyList extends cdktn.ComplexList {
 }
 export interface ApiSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#payload AwsBedrockagentAgentActionGroup#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#payload TfAgentActionGroup#payload}
   */
   readonly payload?: string;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#s3 AwsBedrockagentAgentActionGroup#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#s3 TfAgentActionGroup#s3}
   */
   readonly s3?: S3Property[] | cdktn.IResolvable;
 }
@@ -1102,19 +1102,19 @@ export class ApiSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface ParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#description AwsBedrockagentAgentActionGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#description TfAgentActionGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#map_block_key AwsBedrockagentAgentActionGroup#map_block_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#map_block_key TfAgentActionGroup#map_block_key}
   */
   readonly mapBlockKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#required AwsBedrockagentAgentActionGroup#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#required TfAgentActionGroup#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#type AwsBedrockagentAgentActionGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#type TfAgentActionGroup#type}
   */
   readonly type: string;
 }
@@ -1260,17 +1260,17 @@ export class ParametersPropertyList extends cdktn.ComplexList {
 }
 export interface FunctionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#description AwsBedrockagentAgentActionGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#description TfAgentActionGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#name AwsBedrockagentAgentActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#name TfAgentActionGroup#name}
   */
   readonly name: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#parameters AwsBedrockagentAgentActionGroup#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#parameters TfAgentActionGroup#parameters}
   */
   readonly parameters?: ParametersProperty[] | cdktn.IResolvable;
 }
@@ -1399,7 +1399,7 @@ export interface MemberFunctionsProperty {
   /**
   * functions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#functions AwsBedrockagentAgentActionGroup#functions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#functions TfAgentActionGroup#functions}
   */
   readonly functions?: FunctionsProperty[] | cdktn.IResolvable;
 }
@@ -1487,7 +1487,7 @@ export interface FunctionSchemaProperty {
   /**
   * member_functions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#member_functions AwsBedrockagentAgentActionGroup#member_functions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#member_functions TfAgentActionGroup#member_functions}
   */
   readonly memberFunctions?: MemberFunctionsProperty[] | cdktn.IResolvable;
 }
@@ -1575,13 +1575,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#create AwsBedrockagentAgentActionGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#create TfAgentActionGroup#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#update AwsBedrockagentAgentActionGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_action_group#update TfAgentActionGroup#update}
   */
   readonly update?: string;
 }

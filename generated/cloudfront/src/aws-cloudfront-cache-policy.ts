@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontCachePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfCachePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#comment AwsCloudfrontCachePolicy#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#comment TfCachePolicy#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#default_ttl AwsCloudfrontCachePolicy#default_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#default_ttl TfCachePolicy#default_ttl}
   */
   readonly defaultTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#id AwsCloudfrontCachePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#id TfCachePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#max_ttl AwsCloudfrontCachePolicy#max_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#max_ttl TfCachePolicy#max_ttl}
   */
   readonly maxTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#min_ttl AwsCloudfrontCachePolicy#min_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#min_ttl TfCachePolicy#min_ttl}
   */
   readonly minTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#name AwsCloudfrontCachePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#name TfCachePolicy#name}
   */
   readonly name: string;
   /**
   * parameters_in_cache_key_and_forwarded_to_origin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#parameters_in_cache_key_and_forwarded_to_origin AwsCloudfrontCachePolicy#parameters_in_cache_key_and_forwarded_to_origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#parameters_in_cache_key_and_forwarded_to_origin TfCachePolicy#parameters_in_cache_key_and_forwarded_to_origin}
   */
-  readonly parametersInCacheKeyAndForwardedToOrigin: AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty;
+  readonly parametersInCacheKeyAndForwardedToOrigin: TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy aws_cloudfront_cache_policy}
 */
-export class AwsCloudfrontCachePolicy extends cdktn.TerraformResource {
+export class TfCachePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsCloudfrontCachePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontCachePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCachePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontCachePolicy to import
-  * @param importFromId The id of the existing AwsCloudfrontCachePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontCachePolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfCachePolicy to import
+  * @param importFromId The id of the existing TfCachePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCachePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_cache_policy", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsCloudfrontCachePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontCachePolicyConfig
+  * @param options TfCachePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontCachePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfCachePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_cache_policy',
       terraformGeneratorMetadata: {
@@ -209,11 +209,11 @@ export class AwsCloudfrontCachePolicy extends cdktn.TerraformResource {
   }
 
   // parameters_in_cache_key_and_forwarded_to_origin - computed: false, optional: false, required: true
-  private _parametersInCacheKeyAndForwardedToOrigin = new AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyOutputReference(this, "parameters_in_cache_key_and_forwarded_to_origin");
+  private _parametersInCacheKeyAndForwardedToOrigin = new TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyOutputReference(this, "parameters_in_cache_key_and_forwarded_to_origin");
   public get parametersInCacheKeyAndForwardedToOrigin() {
     return this._parametersInCacheKeyAndForwardedToOrigin;
   }
-  public putParametersInCacheKeyAndForwardedToOrigin(value: AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty) {
+  public putParametersInCacheKeyAndForwardedToOrigin(value: TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty) {
     this._parametersInCacheKeyAndForwardedToOrigin.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -233,7 +233,7 @@ export class AwsCloudfrontCachePolicy extends cdktn.TerraformResource {
       max_ttl: cdktn.numberToTerraform(this._maxTtl),
       min_ttl: cdktn.numberToTerraform(this._minTtl),
       name: cdktn.stringToTerraform(this._name),
-      parameters_in_cache_key_and_forwarded_to_origin: awsCloudfrontCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToTerraform(this._parametersInCacheKeyAndForwardedToOrigin.internalValue),
+      parameters_in_cache_key_and_forwarded_to_origin: tfCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToTerraform(this._parametersInCacheKeyAndForwardedToOrigin.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class AwsCloudfrontCachePolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       parameters_in_cache_key_and_forwarded_to_origin: {
-        value: awsCloudfrontCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToHclTerraform(this._parametersInCacheKeyAndForwardedToOrigin.internalValue),
+        value: tfCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToHclTerraform(this._parametersInCacheKeyAndForwardedToOrigin.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyList",
+        storageClassType: "TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class AwsCloudfrontCachePolicy extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudfrontCachePolicyCookiesPropertyToTerraform(struct?: AwsCloudfrontCachePolicy.CookiesPropertyOutputReference | AwsCloudfrontCachePolicy.CookiesProperty): any {
+export function tfCachePolicyCookiesPropertyToTerraform(struct?: TfCachePolicy.CookiesPropertyOutputReference | TfCachePolicy.CookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function awsCloudfrontCachePolicyCookiesPropertyToTerraform(struct?: AwsC
 }
 
 
-export function awsCloudfrontCachePolicyCookiesPropertyToHclTerraform(struct?: AwsCloudfrontCachePolicy.CookiesPropertyOutputReference | AwsCloudfrontCachePolicy.CookiesProperty): any {
+export function tfCachePolicyCookiesPropertyToHclTerraform(struct?: TfCachePolicy.CookiesPropertyOutputReference | TfCachePolicy.CookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,19 +318,19 @@ export function awsCloudfrontCachePolicyCookiesPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsCloudfrontCachePolicyCookiesConfigPropertyToTerraform(struct?: AwsCloudfrontCachePolicy.CookiesConfigPropertyOutputReference | AwsCloudfrontCachePolicy.CookiesConfigProperty): any {
+export function tfCachePolicyCookiesConfigPropertyToTerraform(struct?: TfCachePolicy.CookiesConfigPropertyOutputReference | TfCachePolicy.CookiesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     cookie_behavior: cdktn.stringToTerraform(struct!.cookieBehavior),
-    cookies: awsCloudfrontCachePolicyCookiesPropertyToTerraform(struct!.cookies),
+    cookies: tfCachePolicyCookiesPropertyToTerraform(struct!.cookies),
   }
 }
 
 
-export function awsCloudfrontCachePolicyCookiesConfigPropertyToHclTerraform(struct?: AwsCloudfrontCachePolicy.CookiesConfigPropertyOutputReference | AwsCloudfrontCachePolicy.CookiesConfigProperty): any {
+export function tfCachePolicyCookiesConfigPropertyToHclTerraform(struct?: TfCachePolicy.CookiesConfigPropertyOutputReference | TfCachePolicy.CookiesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function awsCloudfrontCachePolicyCookiesConfigPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     cookies: {
-      value: awsCloudfrontCachePolicyCookiesPropertyToHclTerraform(struct!.cookies),
+      value: tfCachePolicyCookiesPropertyToHclTerraform(struct!.cookies),
       isBlock: true,
       type: "list",
       storageClassType: "CookiesPropertyList",
@@ -355,7 +355,7 @@ export function awsCloudfrontCachePolicyCookiesConfigPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudfrontCachePolicyHeadersPropertyToTerraform(struct?: AwsCloudfrontCachePolicy.HeadersPropertyOutputReference | AwsCloudfrontCachePolicy.HeadersProperty): any {
+export function tfCachePolicyHeadersPropertyToTerraform(struct?: TfCachePolicy.HeadersPropertyOutputReference | TfCachePolicy.HeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function awsCloudfrontCachePolicyHeadersPropertyToTerraform(struct?: AwsC
 }
 
 
-export function awsCloudfrontCachePolicyHeadersPropertyToHclTerraform(struct?: AwsCloudfrontCachePolicy.HeadersPropertyOutputReference | AwsCloudfrontCachePolicy.HeadersProperty): any {
+export function tfCachePolicyHeadersPropertyToHclTerraform(struct?: TfCachePolicy.HeadersPropertyOutputReference | TfCachePolicy.HeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,19 +385,19 @@ export function awsCloudfrontCachePolicyHeadersPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsCloudfrontCachePolicyHeadersConfigPropertyToTerraform(struct?: AwsCloudfrontCachePolicy.HeadersConfigPropertyOutputReference | AwsCloudfrontCachePolicy.HeadersConfigProperty): any {
+export function tfCachePolicyHeadersConfigPropertyToTerraform(struct?: TfCachePolicy.HeadersConfigPropertyOutputReference | TfCachePolicy.HeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     header_behavior: cdktn.stringToTerraform(struct!.headerBehavior),
-    headers: awsCloudfrontCachePolicyHeadersPropertyToTerraform(struct!.headers),
+    headers: tfCachePolicyHeadersPropertyToTerraform(struct!.headers),
   }
 }
 
 
-export function awsCloudfrontCachePolicyHeadersConfigPropertyToHclTerraform(struct?: AwsCloudfrontCachePolicy.HeadersConfigPropertyOutputReference | AwsCloudfrontCachePolicy.HeadersConfigProperty): any {
+export function tfCachePolicyHeadersConfigPropertyToHclTerraform(struct?: TfCachePolicy.HeadersConfigPropertyOutputReference | TfCachePolicy.HeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function awsCloudfrontCachePolicyHeadersConfigPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     headers: {
-      value: awsCloudfrontCachePolicyHeadersPropertyToHclTerraform(struct!.headers),
+      value: tfCachePolicyHeadersPropertyToHclTerraform(struct!.headers),
       isBlock: true,
       type: "list",
       storageClassType: "HeadersPropertyList",
@@ -422,7 +422,7 @@ export function awsCloudfrontCachePolicyHeadersConfigPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudfrontCachePolicyQueryStringsPropertyToTerraform(struct?: AwsCloudfrontCachePolicy.QueryStringsPropertyOutputReference | AwsCloudfrontCachePolicy.QueryStringsProperty): any {
+export function tfCachePolicyQueryStringsPropertyToTerraform(struct?: TfCachePolicy.QueryStringsPropertyOutputReference | TfCachePolicy.QueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function awsCloudfrontCachePolicyQueryStringsPropertyToTerraform(struct?:
 }
 
 
-export function awsCloudfrontCachePolicyQueryStringsPropertyToHclTerraform(struct?: AwsCloudfrontCachePolicy.QueryStringsPropertyOutputReference | AwsCloudfrontCachePolicy.QueryStringsProperty): any {
+export function tfCachePolicyQueryStringsPropertyToHclTerraform(struct?: TfCachePolicy.QueryStringsPropertyOutputReference | TfCachePolicy.QueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,19 +452,19 @@ export function awsCloudfrontCachePolicyQueryStringsPropertyToHclTerraform(struc
 }
 
 
-export function awsCloudfrontCachePolicyQueryStringsConfigPropertyToTerraform(struct?: AwsCloudfrontCachePolicy.QueryStringsConfigPropertyOutputReference | AwsCloudfrontCachePolicy.QueryStringsConfigProperty): any {
+export function tfCachePolicyQueryStringsConfigPropertyToTerraform(struct?: TfCachePolicy.QueryStringsConfigPropertyOutputReference | TfCachePolicy.QueryStringsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     query_string_behavior: cdktn.stringToTerraform(struct!.queryStringBehavior),
-    query_strings: awsCloudfrontCachePolicyQueryStringsPropertyToTerraform(struct!.queryStrings),
+    query_strings: tfCachePolicyQueryStringsPropertyToTerraform(struct!.queryStrings),
   }
 }
 
 
-export function awsCloudfrontCachePolicyQueryStringsConfigPropertyToHclTerraform(struct?: AwsCloudfrontCachePolicy.QueryStringsConfigPropertyOutputReference | AwsCloudfrontCachePolicy.QueryStringsConfigProperty): any {
+export function tfCachePolicyQueryStringsConfigPropertyToHclTerraform(struct?: TfCachePolicy.QueryStringsConfigPropertyOutputReference | TfCachePolicy.QueryStringsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function awsCloudfrontCachePolicyQueryStringsConfigPropertyToHclTerraform
       storageClassType: "string",
     },
     query_strings: {
-      value: awsCloudfrontCachePolicyQueryStringsPropertyToHclTerraform(struct!.queryStrings),
+      value: tfCachePolicyQueryStringsPropertyToHclTerraform(struct!.queryStrings),
       isBlock: true,
       type: "list",
       storageClassType: "QueryStringsPropertyList",
@@ -489,7 +489,7 @@ export function awsCloudfrontCachePolicyQueryStringsConfigPropertyToHclTerraform
 }
 
 
-export function awsCloudfrontCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToTerraform(struct?: AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyOutputReference | AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
+export function tfCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToTerraform(struct?: TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyOutputReference | TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,14 +497,14 @@ export function awsCloudfrontCachePolicyParametersInCacheKeyAndForwardedToOrigin
   return {
     enable_accept_encoding_brotli: cdktn.booleanToTerraform(struct!.enableAcceptEncodingBrotli),
     enable_accept_encoding_gzip: cdktn.booleanToTerraform(struct!.enableAcceptEncodingGzip),
-    cookies_config: awsCloudfrontCachePolicyCookiesConfigPropertyToTerraform(struct!.cookiesConfig),
-    headers_config: awsCloudfrontCachePolicyHeadersConfigPropertyToTerraform(struct!.headersConfig),
-    query_strings_config: awsCloudfrontCachePolicyQueryStringsConfigPropertyToTerraform(struct!.queryStringsConfig),
+    cookies_config: tfCachePolicyCookiesConfigPropertyToTerraform(struct!.cookiesConfig),
+    headers_config: tfCachePolicyHeadersConfigPropertyToTerraform(struct!.headersConfig),
+    query_strings_config: tfCachePolicyQueryStringsConfigPropertyToTerraform(struct!.queryStringsConfig),
   }
 }
 
 
-export function awsCloudfrontCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToHclTerraform(struct?: AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyOutputReference | AwsCloudfrontCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
+export function tfCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToHclTerraform(struct?: TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyOutputReference | TfCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -523,19 +523,19 @@ export function awsCloudfrontCachePolicyParametersInCacheKeyAndForwardedToOrigin
       storageClassType: "boolean",
     },
     cookies_config: {
-      value: awsCloudfrontCachePolicyCookiesConfigPropertyToHclTerraform(struct!.cookiesConfig),
+      value: tfCachePolicyCookiesConfigPropertyToHclTerraform(struct!.cookiesConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CookiesConfigPropertyList",
     },
     headers_config: {
-      value: awsCloudfrontCachePolicyHeadersConfigPropertyToHclTerraform(struct!.headersConfig),
+      value: tfCachePolicyHeadersConfigPropertyToHclTerraform(struct!.headersConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HeadersConfigPropertyList",
     },
     query_strings_config: {
-      value: awsCloudfrontCachePolicyQueryStringsConfigPropertyToHclTerraform(struct!.queryStringsConfig),
+      value: tfCachePolicyQueryStringsConfigPropertyToHclTerraform(struct!.queryStringsConfig),
       isBlock: true,
       type: "list",
       storageClassType: "QueryStringsConfigPropertyList",
@@ -547,10 +547,10 @@ export function awsCloudfrontCachePolicyParametersInCacheKeyAndForwardedToOrigin
 }
 
 
-export namespace AwsCloudfrontCachePolicy {
+export namespace TfCachePolicy {
 export interface CookiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#items AwsCloudfrontCachePolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#items TfCachePolicy#items}
   */
   readonly items?: string[];
 }
@@ -604,13 +604,13 @@ export class CookiesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CookiesConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#cookie_behavior AwsCloudfrontCachePolicy#cookie_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#cookie_behavior TfCachePolicy#cookie_behavior}
   */
   readonly cookieBehavior: string;
   /**
   * cookies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#cookies AwsCloudfrontCachePolicy#cookies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#cookies TfCachePolicy#cookies}
   */
   readonly cookies?: CookiesProperty;
 }
@@ -683,7 +683,7 @@ export class CookiesConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HeadersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#items AwsCloudfrontCachePolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#items TfCachePolicy#items}
   */
   readonly items?: string[];
 }
@@ -737,13 +737,13 @@ export class HeadersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HeadersConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#header_behavior AwsCloudfrontCachePolicy#header_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#header_behavior TfCachePolicy#header_behavior}
   */
   readonly headerBehavior?: string;
   /**
   * headers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#headers AwsCloudfrontCachePolicy#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#headers TfCachePolicy#headers}
   */
   readonly headers?: HeadersProperty;
 }
@@ -819,7 +819,7 @@ export class HeadersConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface QueryStringsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#items AwsCloudfrontCachePolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#items TfCachePolicy#items}
   */
   readonly items?: string[];
 }
@@ -873,13 +873,13 @@ export class QueryStringsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface QueryStringsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#query_string_behavior AwsCloudfrontCachePolicy#query_string_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#query_string_behavior TfCachePolicy#query_string_behavior}
   */
   readonly queryStringBehavior: string;
   /**
   * query_strings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#query_strings AwsCloudfrontCachePolicy#query_strings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#query_strings TfCachePolicy#query_strings}
   */
   readonly queryStrings?: QueryStringsProperty;
 }
@@ -952,29 +952,29 @@ export class QueryStringsConfigPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface ParametersInCacheKeyAndForwardedToOriginProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#enable_accept_encoding_brotli AwsCloudfrontCachePolicy#enable_accept_encoding_brotli}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#enable_accept_encoding_brotli TfCachePolicy#enable_accept_encoding_brotli}
   */
   readonly enableAcceptEncodingBrotli?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#enable_accept_encoding_gzip AwsCloudfrontCachePolicy#enable_accept_encoding_gzip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#enable_accept_encoding_gzip TfCachePolicy#enable_accept_encoding_gzip}
   */
   readonly enableAcceptEncodingGzip?: boolean | cdktn.IResolvable;
   /**
   * cookies_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#cookies_config AwsCloudfrontCachePolicy#cookies_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#cookies_config TfCachePolicy#cookies_config}
   */
   readonly cookiesConfig: CookiesConfigProperty;
   /**
   * headers_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#headers_config AwsCloudfrontCachePolicy#headers_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#headers_config TfCachePolicy#headers_config}
   */
   readonly headersConfig: HeadersConfigProperty;
   /**
   * query_strings_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#query_strings_config AwsCloudfrontCachePolicy#query_strings_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_cache_policy#query_strings_config TfCachePolicy#query_strings_config}
   */
   readonly queryStringsConfig: QueryStringsConfigProperty;
 }

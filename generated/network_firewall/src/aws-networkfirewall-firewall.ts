@@ -5,98 +5,98 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkfirewallFirewallConfig extends cdktn.TerraformMetaArguments {
+export interface TfFirewallConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#availability_zone_change_protection AwsNetworkfirewallFirewall#availability_zone_change_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#availability_zone_change_protection TfFirewall#availability_zone_change_protection}
   */
   readonly availabilityZoneChangeProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#delete_protection AwsNetworkfirewallFirewall#delete_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#delete_protection TfFirewall#delete_protection}
   */
   readonly deleteProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#description AwsNetworkfirewallFirewall#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#description TfFirewall#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#enabled_analysis_types AwsNetworkfirewallFirewall#enabled_analysis_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#enabled_analysis_types TfFirewall#enabled_analysis_types}
   */
   readonly enabledAnalysisTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#firewall_policy_arn AwsNetworkfirewallFirewall#firewall_policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#firewall_policy_arn TfFirewall#firewall_policy_arn}
   */
   readonly firewallPolicyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#firewall_policy_change_protection AwsNetworkfirewallFirewall#firewall_policy_change_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#firewall_policy_change_protection TfFirewall#firewall_policy_change_protection}
   */
   readonly firewallPolicyChangeProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#id AwsNetworkfirewallFirewall#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#id TfFirewall#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#name AwsNetworkfirewallFirewall#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#name TfFirewall#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#region AwsNetworkfirewallFirewall#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#region TfFirewall#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#subnet_change_protection AwsNetworkfirewallFirewall#subnet_change_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#subnet_change_protection TfFirewall#subnet_change_protection}
   */
   readonly subnetChangeProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#tags AwsNetworkfirewallFirewall#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#tags TfFirewall#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#tags_all AwsNetworkfirewallFirewall#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#tags_all TfFirewall#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#transit_gateway_id AwsNetworkfirewallFirewall#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#transit_gateway_id TfFirewall#transit_gateway_id}
   */
   readonly transitGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#vpc_id AwsNetworkfirewallFirewall#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#vpc_id TfFirewall#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * availability_zone_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#availability_zone_mapping AwsNetworkfirewallFirewall#availability_zone_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#availability_zone_mapping TfFirewall#availability_zone_mapping}
   */
-  readonly availabilityZoneMapping?: AwsNetworkfirewallFirewall.AvailabilityZoneMappingProperty[] | cdktn.IResolvable;
+  readonly availabilityZoneMapping?: TfFirewall.AvailabilityZoneMappingProperty[] | cdktn.IResolvable;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#encryption_configuration AwsNetworkfirewallFirewall#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#encryption_configuration TfFirewall#encryption_configuration}
   */
-  readonly encryptionConfiguration?: AwsNetworkfirewallFirewall.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: TfFirewall.EncryptionConfigurationProperty;
   /**
   * subnet_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#subnet_mapping AwsNetworkfirewallFirewall#subnet_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#subnet_mapping TfFirewall#subnet_mapping}
   */
-  readonly subnetMapping?: AwsNetworkfirewallFirewall.SubnetMappingProperty[] | cdktn.IResolvable;
+  readonly subnetMapping?: TfFirewall.SubnetMappingProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#timeouts AwsNetworkfirewallFirewall#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#timeouts TfFirewall#timeouts}
   */
-  readonly timeouts?: AwsNetworkfirewallFirewall.TimeoutsProperty;
+  readonly timeouts?: TfFirewall.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall aws_networkfirewall_firewall}
 */
-export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
+export class TfFirewall extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -107,11 +107,11 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkfirewallFirewall resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFirewall resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkfirewallFirewall to import
-  * @param importFromId The id of the existing AwsNetworkfirewallFirewall that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkfirewallFirewall to import is found
+  * @param importToId The construct id used in the generated config for the TfFirewall to import
+  * @param importFromId The id of the existing TfFirewall that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFirewall to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_firewall", importId: importFromId, provider });
@@ -126,9 +126,9 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkfirewallFirewallConfig
+  * @param options TfFirewallConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkfirewallFirewallConfig) {
+  public constructor(scope: Construct, id: string, config: TfFirewallConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_firewall',
       terraformGeneratorMetadata: {
@@ -267,7 +267,7 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   }
 
   // firewall_status - computed: true, optional: false, required: false
-  private _firewallStatus = new AwsNetworkfirewallFirewall.FirewallStatusPropertyList(this, "firewall_status", false);
+  private _firewallStatus = new TfFirewall.FirewallStatusPropertyList(this, "firewall_status", false);
   public get firewallStatus() {
     return this._firewallStatus;
   }
@@ -408,11 +408,11 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   }
 
   // availability_zone_mapping - computed: false, optional: true, required: false
-  private _availabilityZoneMapping = new AwsNetworkfirewallFirewall.AvailabilityZoneMappingPropertyList(this, "availability_zone_mapping", true);
+  private _availabilityZoneMapping = new TfFirewall.AvailabilityZoneMappingPropertyList(this, "availability_zone_mapping", true);
   public get availabilityZoneMapping() {
     return this._availabilityZoneMapping;
   }
-  public putAvailabilityZoneMapping(value: AwsNetworkfirewallFirewall.AvailabilityZoneMappingProperty[] | cdktn.IResolvable) {
+  public putAvailabilityZoneMapping(value: TfFirewall.AvailabilityZoneMappingProperty[] | cdktn.IResolvable) {
     this._availabilityZoneMapping.internalValue = value;
   }
   public resetAvailabilityZoneMapping() {
@@ -424,11 +424,11 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new AwsNetworkfirewallFirewall.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new TfFirewall.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: AwsNetworkfirewallFirewall.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: TfFirewall.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -440,11 +440,11 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   }
 
   // subnet_mapping - computed: false, optional: true, required: false
-  private _subnetMapping = new AwsNetworkfirewallFirewall.SubnetMappingPropertyList(this, "subnet_mapping", true);
+  private _subnetMapping = new TfFirewall.SubnetMappingPropertyList(this, "subnet_mapping", true);
   public get subnetMapping() {
     return this._subnetMapping;
   }
-  public putSubnetMapping(value: AwsNetworkfirewallFirewall.SubnetMappingProperty[] | cdktn.IResolvable) {
+  public putSubnetMapping(value: TfFirewall.SubnetMappingProperty[] | cdktn.IResolvable) {
     this._subnetMapping.internalValue = value;
   }
   public resetSubnetMapping() {
@@ -456,11 +456,11 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkfirewallFirewall.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFirewall.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkfirewallFirewall.TimeoutsProperty) {
+  public putTimeouts(value: TfFirewall.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -491,10 +491,10 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transit_gateway_id: cdktn.stringToTerraform(this._transitGatewayId),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      availability_zone_mapping: cdktn.listMapper(awsNetworkfirewallFirewallAvailabilityZoneMappingPropertyToTerraform, true)(this._availabilityZoneMapping.internalValue),
-      encryption_configuration: awsNetworkfirewallFirewallEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
-      subnet_mapping: cdktn.listMapper(awsNetworkfirewallFirewallSubnetMappingPropertyToTerraform, true)(this._subnetMapping.internalValue),
-      timeouts: awsNetworkfirewallFirewallTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      availability_zone_mapping: cdktn.listMapper(tfFirewallAvailabilityZoneMappingPropertyToTerraform, true)(this._availabilityZoneMapping.internalValue),
+      encryption_configuration: tfFirewallEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      subnet_mapping: cdktn.listMapper(tfFirewallSubnetMappingPropertyToTerraform, true)(this._subnetMapping.internalValue),
+      timeouts: tfFirewallTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -585,28 +585,28 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       availability_zone_mapping: {
-        value: cdktn.listMapperHcl(awsNetworkfirewallFirewallAvailabilityZoneMappingPropertyToHclTerraform, true)(this._availabilityZoneMapping.internalValue),
+        value: cdktn.listMapperHcl(tfFirewallAvailabilityZoneMappingPropertyToHclTerraform, true)(this._availabilityZoneMapping.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsNetworkfirewallFirewall.AvailabilityZoneMappingPropertyList",
+        storageClassType: "TfFirewall.AvailabilityZoneMappingPropertyList",
       },
       encryption_configuration: {
-        value: awsNetworkfirewallFirewallEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: tfFirewallEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkfirewallFirewall.EncryptionConfigurationPropertyList",
+        storageClassType: "TfFirewall.EncryptionConfigurationPropertyList",
       },
       subnet_mapping: {
-        value: cdktn.listMapperHcl(awsNetworkfirewallFirewallSubnetMappingPropertyToHclTerraform, true)(this._subnetMapping.internalValue),
+        value: cdktn.listMapperHcl(tfFirewallSubnetMappingPropertyToHclTerraform, true)(this._subnetMapping.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsNetworkfirewallFirewall.SubnetMappingPropertyList",
+        storageClassType: "TfFirewall.SubnetMappingPropertyList",
       },
       timeouts: {
-        value: awsNetworkfirewallFirewallTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFirewallTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkfirewallFirewall.TimeoutsProperty",
+        storageClassType: "TfFirewall.TimeoutsProperty",
       },
     };
 
@@ -615,7 +615,7 @@ export class AwsNetworkfirewallFirewall extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkfirewallFirewallAttachmentPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.AttachmentProperty): any {
+export function tfFirewallAttachmentPropertyToTerraform(struct?: TfFirewall.AttachmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,7 +625,7 @@ export function awsNetworkfirewallFirewallAttachmentPropertyToTerraform(struct?:
 }
 
 
-export function awsNetworkfirewallFirewallAttachmentPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.AttachmentProperty): any {
+export function tfFirewallAttachmentPropertyToHclTerraform(struct?: TfFirewall.AttachmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function awsNetworkfirewallFirewallAttachmentPropertyToHclTerraform(struc
 }
 
 
-export function awsNetworkfirewallFirewallSyncStatesPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.SyncStatesProperty): any {
+export function tfFirewallSyncStatesPropertyToTerraform(struct?: TfFirewall.SyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function awsNetworkfirewallFirewallSyncStatesPropertyToTerraform(struct?:
 }
 
 
-export function awsNetworkfirewallFirewallSyncStatesPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.SyncStatesProperty): any {
+export function tfFirewallSyncStatesPropertyToHclTerraform(struct?: TfFirewall.SyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -657,7 +657,7 @@ export function awsNetworkfirewallFirewallSyncStatesPropertyToHclTerraform(struc
 }
 
 
-export function awsNetworkfirewallFirewallTransitGatewayAttachmentSyncStatesPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
+export function tfFirewallTransitGatewayAttachmentSyncStatesPropertyToTerraform(struct?: TfFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -667,7 +667,7 @@ export function awsNetworkfirewallFirewallTransitGatewayAttachmentSyncStatesProp
 }
 
 
-export function awsNetworkfirewallFirewallTransitGatewayAttachmentSyncStatesPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
+export function tfFirewallTransitGatewayAttachmentSyncStatesPropertyToHclTerraform(struct?: TfFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function awsNetworkfirewallFirewallTransitGatewayAttachmentSyncStatesProp
 }
 
 
-export function awsNetworkfirewallFirewallFirewallStatusPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.FirewallStatusProperty): any {
+export function tfFirewallFirewallStatusPropertyToTerraform(struct?: TfFirewall.FirewallStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function awsNetworkfirewallFirewallFirewallStatusPropertyToTerraform(stru
 }
 
 
-export function awsNetworkfirewallFirewallFirewallStatusPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.FirewallStatusProperty): any {
+export function tfFirewallFirewallStatusPropertyToHclTerraform(struct?: TfFirewall.FirewallStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -699,7 +699,7 @@ export function awsNetworkfirewallFirewallFirewallStatusPropertyToHclTerraform(s
 }
 
 
-export function awsNetworkfirewallFirewallAvailabilityZoneMappingPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.AvailabilityZoneMappingProperty | cdktn.IResolvable): any {
+export function tfFirewallAvailabilityZoneMappingPropertyToTerraform(struct?: TfFirewall.AvailabilityZoneMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function awsNetworkfirewallFirewallAvailabilityZoneMappingPropertyToTerra
 }
 
 
-export function awsNetworkfirewallFirewallAvailabilityZoneMappingPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.AvailabilityZoneMappingProperty | cdktn.IResolvable): any {
+export function tfFirewallAvailabilityZoneMappingPropertyToHclTerraform(struct?: TfFirewall.AvailabilityZoneMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -729,7 +729,7 @@ export function awsNetworkfirewallFirewallAvailabilityZoneMappingPropertyToHclTe
 }
 
 
-export function awsNetworkfirewallFirewallEncryptionConfigurationPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.EncryptionConfigurationPropertyOutputReference | AwsNetworkfirewallFirewall.EncryptionConfigurationProperty): any {
+export function tfFirewallEncryptionConfigurationPropertyToTerraform(struct?: TfFirewall.EncryptionConfigurationPropertyOutputReference | TfFirewall.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,7 +741,7 @@ export function awsNetworkfirewallFirewallEncryptionConfigurationPropertyToTerra
 }
 
 
-export function awsNetworkfirewallFirewallEncryptionConfigurationPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.EncryptionConfigurationPropertyOutputReference | AwsNetworkfirewallFirewall.EncryptionConfigurationProperty): any {
+export function tfFirewallEncryptionConfigurationPropertyToHclTerraform(struct?: TfFirewall.EncryptionConfigurationPropertyOutputReference | TfFirewall.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -766,7 +766,7 @@ export function awsNetworkfirewallFirewallEncryptionConfigurationPropertyToHclTe
 }
 
 
-export function awsNetworkfirewallFirewallSubnetMappingPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.SubnetMappingProperty | cdktn.IResolvable): any {
+export function tfFirewallSubnetMappingPropertyToTerraform(struct?: TfFirewall.SubnetMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -778,7 +778,7 @@ export function awsNetworkfirewallFirewallSubnetMappingPropertyToTerraform(struc
 }
 
 
-export function awsNetworkfirewallFirewallSubnetMappingPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.SubnetMappingProperty | cdktn.IResolvable): any {
+export function tfFirewallSubnetMappingPropertyToHclTerraform(struct?: TfFirewall.SubnetMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function awsNetworkfirewallFirewallSubnetMappingPropertyToHclTerraform(st
 }
 
 
-export function awsNetworkfirewallFirewallTimeoutsPropertyToTerraform(struct?: AwsNetworkfirewallFirewall.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFirewallTimeoutsPropertyToTerraform(struct?: TfFirewall.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -816,7 +816,7 @@ export function awsNetworkfirewallFirewallTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsNetworkfirewallFirewallTimeoutsPropertyToHclTerraform(struct?: AwsNetworkfirewallFirewall.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFirewallTimeoutsPropertyToHclTerraform(struct?: TfFirewall.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -847,7 +847,7 @@ export function awsNetworkfirewallFirewallTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsNetworkfirewallFirewall {
+export namespace TfFirewall {
 export interface AttachmentProperty {
 }
 export class AttachmentPropertyOutputReference extends cdktn.ComplexObject {
@@ -1084,7 +1084,7 @@ export class FirewallStatusPropertyList extends cdktn.ComplexList {
 }
 export interface AvailabilityZoneMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#availability_zone_id AwsNetworkfirewallFirewall#availability_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#availability_zone_id TfFirewall#availability_zone_id}
   */
   readonly availabilityZoneId: string;
 }
@@ -1167,11 +1167,11 @@ export class AvailabilityZoneMappingPropertyList extends cdktn.ComplexList {
 }
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#key_id AwsNetworkfirewallFirewall#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#key_id TfFirewall#key_id}
   */
   readonly keyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#type AwsNetworkfirewallFirewall#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#type TfFirewall#type}
   */
   readonly type: string;
 }
@@ -1244,11 +1244,11 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface SubnetMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#ip_address_type AwsNetworkfirewallFirewall#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#ip_address_type TfFirewall#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#subnet_id AwsNetworkfirewallFirewall#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#subnet_id TfFirewall#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -1353,15 +1353,15 @@ export class SubnetMappingPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#create AwsNetworkfirewallFirewall#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#create TfFirewall#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#delete AwsNetworkfirewallFirewall#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#delete TfFirewall#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#update AwsNetworkfirewallFirewall#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_firewall#update TfFirewall#update}
   */
   readonly update?: string;
 }

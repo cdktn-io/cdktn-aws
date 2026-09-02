@@ -5,51 +5,51 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcSecurityGroupEgressRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfSecurityGroupEgressRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#cidr_ipv4 AwsVpcSecurityGroupEgressRule#cidr_ipv4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#cidr_ipv4 TfSecurityGroupEgressRule#cidr_ipv4}
   */
   readonly cidrIpv4?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#cidr_ipv6 AwsVpcSecurityGroupEgressRule#cidr_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#cidr_ipv6 TfSecurityGroupEgressRule#cidr_ipv6}
   */
   readonly cidrIpv6?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#description AwsVpcSecurityGroupEgressRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#description TfSecurityGroupEgressRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#from_port AwsVpcSecurityGroupEgressRule#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#from_port TfSecurityGroupEgressRule#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#ip_protocol AwsVpcSecurityGroupEgressRule#ip_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#ip_protocol TfSecurityGroupEgressRule#ip_protocol}
   */
   readonly ipProtocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#prefix_list_id AwsVpcSecurityGroupEgressRule#prefix_list_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#prefix_list_id TfSecurityGroupEgressRule#prefix_list_id}
   */
   readonly prefixListId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#referenced_security_group_id AwsVpcSecurityGroupEgressRule#referenced_security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#referenced_security_group_id TfSecurityGroupEgressRule#referenced_security_group_id}
   */
   readonly referencedSecurityGroupId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#region AwsVpcSecurityGroupEgressRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#region TfSecurityGroupEgressRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#security_group_id AwsVpcSecurityGroupEgressRule#security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#security_group_id TfSecurityGroupEgressRule#security_group_id}
   */
   readonly securityGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#tags AwsVpcSecurityGroupEgressRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#tags TfSecurityGroupEgressRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#to_port AwsVpcSecurityGroupEgressRule#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#to_port TfSecurityGroupEgressRule#to_port}
   */
   readonly toPort?: number;
 }
@@ -57,7 +57,7 @@ export interface AwsVpcSecurityGroupEgressRuleConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule aws_vpc_security_group_egress_rule}
 */
-export class AwsVpcSecurityGroupEgressRule extends cdktn.TerraformResource {
+export class TfSecurityGroupEgressRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class AwsVpcSecurityGroupEgressRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcSecurityGroupEgressRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSecurityGroupEgressRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcSecurityGroupEgressRule to import
-  * @param importFromId The id of the existing AwsVpcSecurityGroupEgressRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcSecurityGroupEgressRule to import is found
+  * @param importToId The construct id used in the generated config for the TfSecurityGroupEgressRule to import
+  * @param importFromId The id of the existing TfSecurityGroupEgressRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_egress_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSecurityGroupEgressRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_security_group_egress_rule", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class AwsVpcSecurityGroupEgressRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcSecurityGroupEgressRuleConfig
+  * @param options TfSecurityGroupEgressRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcSecurityGroupEgressRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfSecurityGroupEgressRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_security_group_egress_rule',
       terraformGeneratorMetadata: {

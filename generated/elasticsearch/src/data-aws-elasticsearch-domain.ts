@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsElasticsearchDomainConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#domain_name DataAwsElasticsearchDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#domain_name DataTfDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#id DataAwsElasticsearchDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#id DataTfDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataAwsElasticsearchDomainConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#region DataAwsElasticsearchDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#region DataTfDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#tags DataAwsElasticsearchDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#tags DataTfDomain#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsElasticsearchDomainConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain aws_elasticsearch_domain}
 */
-export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
+export class DataTfDomain extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsElasticsearchDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsElasticsearchDomain to import
-  * @param importFromId The id of the existing DataAwsElasticsearchDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsElasticsearchDomain to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDomain to import
+  * @param importFromId The id of the existing DataTfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticsearch_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticsearch_domain", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsElasticsearchDomainConfig
+  * @param options DataTfDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsElasticsearchDomainConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticsearch_domain',
       terraformGeneratorMetadata: {
@@ -102,7 +102,7 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 
   // advanced_security_options - computed: true, optional: false, required: false
-  private _advancedSecurityOptions = new DataAwsElasticsearchDomain.AdvancedSecurityOptionsPropertyList(this, "advanced_security_options", false);
+  private _advancedSecurityOptions = new DataTfDomain.AdvancedSecurityOptionsPropertyList(this, "advanced_security_options", false);
   public get advancedSecurityOptions() {
     return this._advancedSecurityOptions;
   }
@@ -113,19 +113,19 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 
   // auto_tune_options - computed: true, optional: false, required: false
-  private _autoTuneOptions = new DataAwsElasticsearchDomain.AutoTuneOptionsPropertyList(this, "auto_tune_options", false);
+  private _autoTuneOptions = new DataTfDomain.AutoTuneOptionsPropertyList(this, "auto_tune_options", false);
   public get autoTuneOptions() {
     return this._autoTuneOptions;
   }
 
   // cluster_config - computed: true, optional: false, required: false
-  private _clusterConfig = new DataAwsElasticsearchDomain.ClusterConfigPropertyList(this, "cluster_config", false);
+  private _clusterConfig = new DataTfDomain.ClusterConfigPropertyList(this, "cluster_config", false);
   public get clusterConfig() {
     return this._clusterConfig;
   }
 
   // cognito_options - computed: true, optional: false, required: false
-  private _cognitoOptions = new DataAwsElasticsearchDomain.CognitoOptionsPropertyList(this, "cognito_options", false);
+  private _cognitoOptions = new DataTfDomain.CognitoOptionsPropertyList(this, "cognito_options", false);
   public get cognitoOptions() {
     return this._cognitoOptions;
   }
@@ -159,7 +159,7 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 
   // ebs_options - computed: true, optional: false, required: false
-  private _ebsOptions = new DataAwsElasticsearchDomain.EbsOptionsPropertyList(this, "ebs_options", false);
+  private _ebsOptions = new DataTfDomain.EbsOptionsPropertyList(this, "ebs_options", false);
   public get ebsOptions() {
     return this._ebsOptions;
   }
@@ -170,7 +170,7 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 
   // encryption_at_rest - computed: true, optional: false, required: false
-  private _encryptionAtRest = new DataAwsElasticsearchDomain.EncryptionAtRestPropertyList(this, "encryption_at_rest", false);
+  private _encryptionAtRest = new DataTfDomain.EncryptionAtRestPropertyList(this, "encryption_at_rest", false);
   public get encryptionAtRest() {
     return this._encryptionAtRest;
   }
@@ -202,13 +202,13 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 
   // log_publishing_options - computed: true, optional: false, required: false
-  private _logPublishingOptions = new DataAwsElasticsearchDomain.LogPublishingOptionsPropertyList(this, "log_publishing_options", true);
+  private _logPublishingOptions = new DataTfDomain.LogPublishingOptionsPropertyList(this, "log_publishing_options", true);
   public get logPublishingOptions() {
     return this._logPublishingOptions;
   }
 
   // node_to_node_encryption - computed: true, optional: false, required: false
-  private _nodeToNodeEncryption = new DataAwsElasticsearchDomain.NodeToNodeEncryptionPropertyList(this, "node_to_node_encryption", false);
+  private _nodeToNodeEncryption = new DataTfDomain.NodeToNodeEncryptionPropertyList(this, "node_to_node_encryption", false);
   public get nodeToNodeEncryption() {
     return this._nodeToNodeEncryption;
   }
@@ -235,7 +235,7 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 
   // snapshot_options - computed: true, optional: false, required: false
-  private _snapshotOptions = new DataAwsElasticsearchDomain.SnapshotOptionsPropertyList(this, "snapshot_options", false);
+  private _snapshotOptions = new DataTfDomain.SnapshotOptionsPropertyList(this, "snapshot_options", false);
   public get snapshotOptions() {
     return this._snapshotOptions;
   }
@@ -257,7 +257,7 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 
   // vpc_options - computed: true, optional: false, required: false
-  private _vpcOptions = new DataAwsElasticsearchDomain.VpcOptionsPropertyList(this, "vpc_options", false);
+  private _vpcOptions = new DataTfDomain.VpcOptionsPropertyList(this, "vpc_options", false);
   public get vpcOptions() {
     return this._vpcOptions;
   }
@@ -308,7 +308,7 @@ export class DataAwsElasticsearchDomain extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsElasticsearchDomainAdvancedSecurityOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.AdvancedSecurityOptionsProperty): any {
+export function dataTfDomainAdvancedSecurityOptionsPropertyToTerraform(struct?: DataTfDomain.AdvancedSecurityOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function dataAwsElasticsearchDomainAdvancedSecurityOptionsPropertyToTerra
 }
 
 
-export function dataAwsElasticsearchDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.AdvancedSecurityOptionsProperty): any {
+export function dataTfDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: DataTfDomain.AdvancedSecurityOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function dataAwsElasticsearchDomainAdvancedSecurityOptionsPropertyToHclTe
 }
 
 
-export function dataAwsElasticsearchDomainDurationPropertyToTerraform(struct?: DataAwsElasticsearchDomain.DurationProperty): any {
+export function dataTfDomainDurationPropertyToTerraform(struct?: DataTfDomain.DurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataAwsElasticsearchDomainDurationPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsElasticsearchDomainDurationPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.DurationProperty): any {
+export function dataTfDomainDurationPropertyToHclTerraform(struct?: DataTfDomain.DurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function dataAwsElasticsearchDomainDurationPropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsElasticsearchDomainMaintenanceSchedulePropertyToTerraform(struct?: DataAwsElasticsearchDomain.MaintenanceScheduleProperty): any {
+export function dataTfDomainMaintenanceSchedulePropertyToTerraform(struct?: DataTfDomain.MaintenanceScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function dataAwsElasticsearchDomainMaintenanceSchedulePropertyToTerraform
 }
 
 
-export function dataAwsElasticsearchDomainMaintenanceSchedulePropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.MaintenanceScheduleProperty): any {
+export function dataTfDomainMaintenanceSchedulePropertyToHclTerraform(struct?: DataTfDomain.MaintenanceScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function dataAwsElasticsearchDomainMaintenanceSchedulePropertyToHclTerraf
 }
 
 
-export function dataAwsElasticsearchDomainAutoTuneOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.AutoTuneOptionsProperty): any {
+export function dataTfDomainAutoTuneOptionsPropertyToTerraform(struct?: DataTfDomain.AutoTuneOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function dataAwsElasticsearchDomainAutoTuneOptionsPropertyToTerraform(str
 }
 
 
-export function dataAwsElasticsearchDomainAutoTuneOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.AutoTuneOptionsProperty): any {
+export function dataTfDomainAutoTuneOptionsPropertyToHclTerraform(struct?: DataTfDomain.AutoTuneOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function dataAwsElasticsearchDomainAutoTuneOptionsPropertyToHclTerraform(
 }
 
 
-export function dataAwsElasticsearchDomainColdStorageOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.ColdStorageOptionsProperty): any {
+export function dataTfDomainColdStorageOptionsPropertyToTerraform(struct?: DataTfDomain.ColdStorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function dataAwsElasticsearchDomainColdStorageOptionsPropertyToTerraform(
 }
 
 
-export function dataAwsElasticsearchDomainColdStorageOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.ColdStorageOptionsProperty): any {
+export function dataTfDomainColdStorageOptionsPropertyToHclTerraform(struct?: DataTfDomain.ColdStorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function dataAwsElasticsearchDomainColdStorageOptionsPropertyToHclTerrafo
 }
 
 
-export function dataAwsElasticsearchDomainZoneAwarenessConfigPropertyToTerraform(struct?: DataAwsElasticsearchDomain.ZoneAwarenessConfigProperty): any {
+export function dataTfDomainZoneAwarenessConfigPropertyToTerraform(struct?: DataTfDomain.ZoneAwarenessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function dataAwsElasticsearchDomainZoneAwarenessConfigPropertyToTerraform
 }
 
 
-export function dataAwsElasticsearchDomainZoneAwarenessConfigPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.ZoneAwarenessConfigProperty): any {
+export function dataTfDomainZoneAwarenessConfigPropertyToHclTerraform(struct?: DataTfDomain.ZoneAwarenessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function dataAwsElasticsearchDomainZoneAwarenessConfigPropertyToHclTerraf
 }
 
 
-export function dataAwsElasticsearchDomainClusterConfigPropertyToTerraform(struct?: DataAwsElasticsearchDomain.ClusterConfigProperty): any {
+export function dataTfDomainClusterConfigPropertyToTerraform(struct?: DataTfDomain.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function dataAwsElasticsearchDomainClusterConfigPropertyToTerraform(struc
 }
 
 
-export function dataAwsElasticsearchDomainClusterConfigPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.ClusterConfigProperty): any {
+export function dataTfDomainClusterConfigPropertyToHclTerraform(struct?: DataTfDomain.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function dataAwsElasticsearchDomainClusterConfigPropertyToHclTerraform(st
 }
 
 
-export function dataAwsElasticsearchDomainCognitoOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.CognitoOptionsProperty): any {
+export function dataTfDomainCognitoOptionsPropertyToTerraform(struct?: DataTfDomain.CognitoOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function dataAwsElasticsearchDomainCognitoOptionsPropertyToTerraform(stru
 }
 
 
-export function dataAwsElasticsearchDomainCognitoOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.CognitoOptionsProperty): any {
+export function dataTfDomainCognitoOptionsPropertyToHclTerraform(struct?: DataTfDomain.CognitoOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function dataAwsElasticsearchDomainCognitoOptionsPropertyToHclTerraform(s
 }
 
 
-export function dataAwsElasticsearchDomainEbsOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.EbsOptionsProperty): any {
+export function dataTfDomainEbsOptionsPropertyToTerraform(struct?: DataTfDomain.EbsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function dataAwsElasticsearchDomainEbsOptionsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsElasticsearchDomainEbsOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.EbsOptionsProperty): any {
+export function dataTfDomainEbsOptionsPropertyToHclTerraform(struct?: DataTfDomain.EbsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function dataAwsElasticsearchDomainEbsOptionsPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsElasticsearchDomainEncryptionAtRestPropertyToTerraform(struct?: DataAwsElasticsearchDomain.EncryptionAtRestProperty): any {
+export function dataTfDomainEncryptionAtRestPropertyToTerraform(struct?: DataTfDomain.EncryptionAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function dataAwsElasticsearchDomainEncryptionAtRestPropertyToTerraform(st
 }
 
 
-export function dataAwsElasticsearchDomainEncryptionAtRestPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.EncryptionAtRestProperty): any {
+export function dataTfDomainEncryptionAtRestPropertyToHclTerraform(struct?: DataTfDomain.EncryptionAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function dataAwsElasticsearchDomainEncryptionAtRestPropertyToHclTerraform
 }
 
 
-export function dataAwsElasticsearchDomainLogPublishingOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.LogPublishingOptionsProperty): any {
+export function dataTfDomainLogPublishingOptionsPropertyToTerraform(struct?: DataTfDomain.LogPublishingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function dataAwsElasticsearchDomainLogPublishingOptionsPropertyToTerrafor
 }
 
 
-export function dataAwsElasticsearchDomainLogPublishingOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.LogPublishingOptionsProperty): any {
+export function dataTfDomainLogPublishingOptionsPropertyToHclTerraform(struct?: DataTfDomain.LogPublishingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function dataAwsElasticsearchDomainLogPublishingOptionsPropertyToHclTerra
 }
 
 
-export function dataAwsElasticsearchDomainNodeToNodeEncryptionPropertyToTerraform(struct?: DataAwsElasticsearchDomain.NodeToNodeEncryptionProperty): any {
+export function dataTfDomainNodeToNodeEncryptionPropertyToTerraform(struct?: DataTfDomain.NodeToNodeEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function dataAwsElasticsearchDomainNodeToNodeEncryptionPropertyToTerrafor
 }
 
 
-export function dataAwsElasticsearchDomainNodeToNodeEncryptionPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.NodeToNodeEncryptionProperty): any {
+export function dataTfDomainNodeToNodeEncryptionPropertyToHclTerraform(struct?: DataTfDomain.NodeToNodeEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function dataAwsElasticsearchDomainNodeToNodeEncryptionPropertyToHclTerra
 }
 
 
-export function dataAwsElasticsearchDomainSnapshotOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.SnapshotOptionsProperty): any {
+export function dataTfDomainSnapshotOptionsPropertyToTerraform(struct?: DataTfDomain.SnapshotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -570,7 +570,7 @@ export function dataAwsElasticsearchDomainSnapshotOptionsPropertyToTerraform(str
 }
 
 
-export function dataAwsElasticsearchDomainSnapshotOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.SnapshotOptionsProperty): any {
+export function dataTfDomainSnapshotOptionsPropertyToHclTerraform(struct?: DataTfDomain.SnapshotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -581,7 +581,7 @@ export function dataAwsElasticsearchDomainSnapshotOptionsPropertyToHclTerraform(
 }
 
 
-export function dataAwsElasticsearchDomainVpcOptionsPropertyToTerraform(struct?: DataAwsElasticsearchDomain.VpcOptionsProperty): any {
+export function dataTfDomainVpcOptionsPropertyToTerraform(struct?: DataTfDomain.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,7 +591,7 @@ export function dataAwsElasticsearchDomainVpcOptionsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsElasticsearchDomainVpcOptionsPropertyToHclTerraform(struct?: DataAwsElasticsearchDomain.VpcOptionsProperty): any {
+export function dataTfDomainVpcOptionsPropertyToHclTerraform(struct?: DataTfDomain.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function dataAwsElasticsearchDomainVpcOptionsPropertyToHclTerraform(struc
 }
 
 
-export namespace DataAwsElasticsearchDomain {
+export namespace DataTfDomain {
 export interface AdvancedSecurityOptionsProperty {
 }
 export class AdvancedSecurityOptionsPropertyOutputReference extends cdktn.ComplexObject {

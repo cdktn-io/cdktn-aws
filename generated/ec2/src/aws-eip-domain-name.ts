@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEipDomainNameConfig extends cdktn.TerraformMetaArguments {
+export interface TfEipDomainNameConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#allocation_id AwsEipDomainName#allocation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#allocation_id TfEipDomainName#allocation_id}
   */
   readonly allocationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#domain_name AwsEipDomainName#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#domain_name TfEipDomainName#domain_name}
   */
   readonly domainName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#region AwsEipDomainName#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#region TfEipDomainName#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#timeouts AwsEipDomainName#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#timeouts TfEipDomainName#timeouts}
   */
-  readonly timeouts?: AwsEipDomainName.TimeoutsProperty;
+  readonly timeouts?: TfEipDomainName.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name aws_eip_domain_name}
 */
-export class AwsEipDomainName extends cdktn.TerraformResource {
+export class TfEipDomainName extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsEipDomainName extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEipDomainName resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEipDomainName resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEipDomainName to import
-  * @param importFromId The id of the existing AwsEipDomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEipDomainName to import is found
+  * @param importToId The construct id used in the generated config for the TfEipDomainName to import
+  * @param importFromId The id of the existing TfEipDomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEipDomainName to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eip_domain_name", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsEipDomainName extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEipDomainNameConfig
+  * @param options TfEipDomainNameConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEipDomainNameConfig) {
+  public constructor(scope: Construct, id: string, config: TfEipDomainNameConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eip_domain_name',
       terraformGeneratorMetadata: {
@@ -142,11 +142,11 @@ export class AwsEipDomainName extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEipDomainName.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEipDomainName.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEipDomainName.TimeoutsProperty) {
+  public putTimeouts(value: TfEipDomainName.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -166,7 +166,7 @@ export class AwsEipDomainName extends cdktn.TerraformResource {
       allocation_id: cdktn.stringToTerraform(this._allocationId),
       domain_name: cdktn.stringToTerraform(this._domainName),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsEipDomainNameTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfEipDomainNameTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -191,10 +191,10 @@ export class AwsEipDomainName extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsEipDomainNameTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEipDomainNameTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEipDomainName.TimeoutsProperty",
+        storageClassType: "TfEipDomainName.TimeoutsProperty",
       },
     };
 
@@ -203,7 +203,7 @@ export class AwsEipDomainName extends cdktn.TerraformResource {
   }
 }
 
-export function awsEipDomainNameTimeoutsPropertyToTerraform(struct?: AwsEipDomainName.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEipDomainNameTimeoutsPropertyToTerraform(struct?: TfEipDomainName.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function awsEipDomainNameTimeoutsPropertyToTerraform(struct?: AwsEipDomai
 }
 
 
-export function awsEipDomainNameTimeoutsPropertyToHclTerraform(struct?: AwsEipDomainName.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEipDomainNameTimeoutsPropertyToHclTerraform(struct?: TfEipDomainName.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,24 +247,24 @@ export function awsEipDomainNameTimeoutsPropertyToHclTerraform(struct?: AwsEipDo
 }
 
 
-export namespace AwsEipDomainName {
+export namespace TfEipDomainName {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#create AwsEipDomainName#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#create TfEipDomainName#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#delete AwsEipDomainName#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#delete TfEipDomainName#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#update AwsEipDomainName#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_domain_name#update TfEipDomainName#update}
   */
   readonly update?: string;
 }

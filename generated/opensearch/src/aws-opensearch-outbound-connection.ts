@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOpensearchOutboundConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface TfOutboundConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#accept_connection AwsOpensearchOutboundConnection#accept_connection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#accept_connection TfOutboundConnection#accept_connection}
   */
   readonly acceptConnection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#connection_alias AwsOpensearchOutboundConnection#connection_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#connection_alias TfOutboundConnection#connection_alias}
   */
   readonly connectionAlias: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#connection_mode AwsOpensearchOutboundConnection#connection_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#connection_mode TfOutboundConnection#connection_mode}
   */
   readonly connectionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#id AwsOpensearchOutboundConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#id TfOutboundConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,39 +28,39 @@ export interface AwsOpensearchOutboundConnectionConfig extends cdktn.TerraformMe
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#region AwsOpensearchOutboundConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#region TfOutboundConnection#region}
   */
   readonly region?: string;
   /**
   * connection_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#connection_properties AwsOpensearchOutboundConnection#connection_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#connection_properties TfOutboundConnection#connection_properties}
   */
-  readonly connectionProperties?: AwsOpensearchOutboundConnection.ConnectionPropertiesProperty;
+  readonly connectionProperties?: TfOutboundConnection.ConnectionPropertiesProperty;
   /**
   * local_domain_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#local_domain_info AwsOpensearchOutboundConnection#local_domain_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#local_domain_info TfOutboundConnection#local_domain_info}
   */
-  readonly localDomainInfo: AwsOpensearchOutboundConnection.LocalDomainInfoProperty;
+  readonly localDomainInfo: TfOutboundConnection.LocalDomainInfoProperty;
   /**
   * remote_domain_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#remote_domain_info AwsOpensearchOutboundConnection#remote_domain_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#remote_domain_info TfOutboundConnection#remote_domain_info}
   */
-  readonly remoteDomainInfo: AwsOpensearchOutboundConnection.RemoteDomainInfoProperty;
+  readonly remoteDomainInfo: TfOutboundConnection.RemoteDomainInfoProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#timeouts AwsOpensearchOutboundConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#timeouts TfOutboundConnection#timeouts}
   */
-  readonly timeouts?: AwsOpensearchOutboundConnection.TimeoutsProperty;
+  readonly timeouts?: TfOutboundConnection.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection aws_opensearch_outbound_connection}
 */
-export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
+export class TfOutboundConnection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOpensearchOutboundConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOutboundConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOpensearchOutboundConnection to import
-  * @param importFromId The id of the existing AwsOpensearchOutboundConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOpensearchOutboundConnection to import is found
+  * @param importToId The construct id used in the generated config for the TfOutboundConnection to import
+  * @param importFromId The id of the existing TfOutboundConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOutboundConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_outbound_connection", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOpensearchOutboundConnectionConfig
+  * @param options TfOutboundConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOpensearchOutboundConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: TfOutboundConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_outbound_connection',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
   }
 
   // connection_properties - computed: false, optional: true, required: false
-  private _connectionProperties = new AwsOpensearchOutboundConnection.ConnectionPropertiesPropertyOutputReference(this, "connection_properties");
+  private _connectionProperties = new TfOutboundConnection.ConnectionPropertiesPropertyOutputReference(this, "connection_properties");
   public get connectionProperties() {
     return this._connectionProperties;
   }
-  public putConnectionProperties(value: AwsOpensearchOutboundConnection.ConnectionPropertiesProperty) {
+  public putConnectionProperties(value: TfOutboundConnection.ConnectionPropertiesProperty) {
     this._connectionProperties.internalValue = value;
   }
   public resetConnectionProperties() {
@@ -222,11 +222,11 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
   }
 
   // local_domain_info - computed: false, optional: false, required: true
-  private _localDomainInfo = new AwsOpensearchOutboundConnection.LocalDomainInfoPropertyOutputReference(this, "local_domain_info");
+  private _localDomainInfo = new TfOutboundConnection.LocalDomainInfoPropertyOutputReference(this, "local_domain_info");
   public get localDomainInfo() {
     return this._localDomainInfo;
   }
-  public putLocalDomainInfo(value: AwsOpensearchOutboundConnection.LocalDomainInfoProperty) {
+  public putLocalDomainInfo(value: TfOutboundConnection.LocalDomainInfoProperty) {
     this._localDomainInfo.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -235,11 +235,11 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
   }
 
   // remote_domain_info - computed: false, optional: false, required: true
-  private _remoteDomainInfo = new AwsOpensearchOutboundConnection.RemoteDomainInfoPropertyOutputReference(this, "remote_domain_info");
+  private _remoteDomainInfo = new TfOutboundConnection.RemoteDomainInfoPropertyOutputReference(this, "remote_domain_info");
   public get remoteDomainInfo() {
     return this._remoteDomainInfo;
   }
-  public putRemoteDomainInfo(value: AwsOpensearchOutboundConnection.RemoteDomainInfoProperty) {
+  public putRemoteDomainInfo(value: TfOutboundConnection.RemoteDomainInfoProperty) {
     this._remoteDomainInfo.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -248,11 +248,11 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOpensearchOutboundConnection.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOutboundConnection.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOpensearchOutboundConnection.TimeoutsProperty) {
+  public putTimeouts(value: TfOutboundConnection.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -274,10 +274,10 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
       connection_mode: cdktn.stringToTerraform(this._connectionMode),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      connection_properties: awsOpensearchOutboundConnectionConnectionPropertiesPropertyToTerraform(this._connectionProperties.internalValue),
-      local_domain_info: awsOpensearchOutboundConnectionLocalDomainInfoPropertyToTerraform(this._localDomainInfo.internalValue),
-      remote_domain_info: awsOpensearchOutboundConnectionRemoteDomainInfoPropertyToTerraform(this._remoteDomainInfo.internalValue),
-      timeouts: awsOpensearchOutboundConnectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      connection_properties: tfOutboundConnectionConnectionPropertiesPropertyToTerraform(this._connectionProperties.internalValue),
+      local_domain_info: tfOutboundConnectionLocalDomainInfoPropertyToTerraform(this._localDomainInfo.internalValue),
+      remote_domain_info: tfOutboundConnectionRemoteDomainInfoPropertyToTerraform(this._remoteDomainInfo.internalValue),
+      timeouts: tfOutboundConnectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -314,28 +314,28 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       connection_properties: {
-        value: awsOpensearchOutboundConnectionConnectionPropertiesPropertyToHclTerraform(this._connectionProperties.internalValue),
+        value: tfOutboundConnectionConnectionPropertiesPropertyToHclTerraform(this._connectionProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsOpensearchOutboundConnection.ConnectionPropertiesPropertyList",
+        storageClassType: "TfOutboundConnection.ConnectionPropertiesPropertyList",
       },
       local_domain_info: {
-        value: awsOpensearchOutboundConnectionLocalDomainInfoPropertyToHclTerraform(this._localDomainInfo.internalValue),
+        value: tfOutboundConnectionLocalDomainInfoPropertyToHclTerraform(this._localDomainInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsOpensearchOutboundConnection.LocalDomainInfoPropertyList",
+        storageClassType: "TfOutboundConnection.LocalDomainInfoPropertyList",
       },
       remote_domain_info: {
-        value: awsOpensearchOutboundConnectionRemoteDomainInfoPropertyToHclTerraform(this._remoteDomainInfo.internalValue),
+        value: tfOutboundConnectionRemoteDomainInfoPropertyToHclTerraform(this._remoteDomainInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsOpensearchOutboundConnection.RemoteDomainInfoPropertyList",
+        storageClassType: "TfOutboundConnection.RemoteDomainInfoPropertyList",
       },
       timeouts: {
-        value: awsOpensearchOutboundConnectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOutboundConnectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOpensearchOutboundConnection.TimeoutsProperty",
+        storageClassType: "TfOutboundConnection.TimeoutsProperty",
       },
     };
 
@@ -344,7 +344,7 @@ export class AwsOpensearchOutboundConnection extends cdktn.TerraformResource {
   }
 }
 
-export function awsOpensearchOutboundConnectionCrossClusterSearchPropertyToTerraform(struct?: AwsOpensearchOutboundConnection.CrossClusterSearchPropertyOutputReference | AwsOpensearchOutboundConnection.CrossClusterSearchProperty): any {
+export function tfOutboundConnectionCrossClusterSearchPropertyToTerraform(struct?: TfOutboundConnection.CrossClusterSearchPropertyOutputReference | TfOutboundConnection.CrossClusterSearchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function awsOpensearchOutboundConnectionCrossClusterSearchPropertyToTerra
 }
 
 
-export function awsOpensearchOutboundConnectionCrossClusterSearchPropertyToHclTerraform(struct?: AwsOpensearchOutboundConnection.CrossClusterSearchPropertyOutputReference | AwsOpensearchOutboundConnection.CrossClusterSearchProperty): any {
+export function tfOutboundConnectionCrossClusterSearchPropertyToHclTerraform(struct?: TfOutboundConnection.CrossClusterSearchPropertyOutputReference | TfOutboundConnection.CrossClusterSearchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,25 +374,25 @@ export function awsOpensearchOutboundConnectionCrossClusterSearchPropertyToHclTe
 }
 
 
-export function awsOpensearchOutboundConnectionConnectionPropertiesPropertyToTerraform(struct?: AwsOpensearchOutboundConnection.ConnectionPropertiesPropertyOutputReference | AwsOpensearchOutboundConnection.ConnectionPropertiesProperty): any {
+export function tfOutboundConnectionConnectionPropertiesPropertyToTerraform(struct?: TfOutboundConnection.ConnectionPropertiesPropertyOutputReference | TfOutboundConnection.ConnectionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cross_cluster_search: awsOpensearchOutboundConnectionCrossClusterSearchPropertyToTerraform(struct!.crossClusterSearch),
+    cross_cluster_search: tfOutboundConnectionCrossClusterSearchPropertyToTerraform(struct!.crossClusterSearch),
   }
 }
 
 
-export function awsOpensearchOutboundConnectionConnectionPropertiesPropertyToHclTerraform(struct?: AwsOpensearchOutboundConnection.ConnectionPropertiesPropertyOutputReference | AwsOpensearchOutboundConnection.ConnectionPropertiesProperty): any {
+export function tfOutboundConnectionConnectionPropertiesPropertyToHclTerraform(struct?: TfOutboundConnection.ConnectionPropertiesPropertyOutputReference | TfOutboundConnection.ConnectionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cross_cluster_search: {
-      value: awsOpensearchOutboundConnectionCrossClusterSearchPropertyToHclTerraform(struct!.crossClusterSearch),
+      value: tfOutboundConnectionCrossClusterSearchPropertyToHclTerraform(struct!.crossClusterSearch),
       isBlock: true,
       type: "list",
       storageClassType: "CrossClusterSearchPropertyList",
@@ -404,7 +404,7 @@ export function awsOpensearchOutboundConnectionConnectionPropertiesPropertyToHcl
 }
 
 
-export function awsOpensearchOutboundConnectionLocalDomainInfoPropertyToTerraform(struct?: AwsOpensearchOutboundConnection.LocalDomainInfoPropertyOutputReference | AwsOpensearchOutboundConnection.LocalDomainInfoProperty): any {
+export function tfOutboundConnectionLocalDomainInfoPropertyToTerraform(struct?: TfOutboundConnection.LocalDomainInfoPropertyOutputReference | TfOutboundConnection.LocalDomainInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function awsOpensearchOutboundConnectionLocalDomainInfoPropertyToTerrafor
 }
 
 
-export function awsOpensearchOutboundConnectionLocalDomainInfoPropertyToHclTerraform(struct?: AwsOpensearchOutboundConnection.LocalDomainInfoPropertyOutputReference | AwsOpensearchOutboundConnection.LocalDomainInfoProperty): any {
+export function tfOutboundConnectionLocalDomainInfoPropertyToHclTerraform(struct?: TfOutboundConnection.LocalDomainInfoPropertyOutputReference | TfOutboundConnection.LocalDomainInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function awsOpensearchOutboundConnectionLocalDomainInfoPropertyToHclTerra
 }
 
 
-export function awsOpensearchOutboundConnectionRemoteDomainInfoPropertyToTerraform(struct?: AwsOpensearchOutboundConnection.RemoteDomainInfoPropertyOutputReference | AwsOpensearchOutboundConnection.RemoteDomainInfoProperty): any {
+export function tfOutboundConnectionRemoteDomainInfoPropertyToTerraform(struct?: TfOutboundConnection.RemoteDomainInfoPropertyOutputReference | TfOutboundConnection.RemoteDomainInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function awsOpensearchOutboundConnectionRemoteDomainInfoPropertyToTerrafo
 }
 
 
-export function awsOpensearchOutboundConnectionRemoteDomainInfoPropertyToHclTerraform(struct?: AwsOpensearchOutboundConnection.RemoteDomainInfoPropertyOutputReference | AwsOpensearchOutboundConnection.RemoteDomainInfoProperty): any {
+export function tfOutboundConnectionRemoteDomainInfoPropertyToHclTerraform(struct?: TfOutboundConnection.RemoteDomainInfoPropertyOutputReference | TfOutboundConnection.RemoteDomainInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,7 +492,7 @@ export function awsOpensearchOutboundConnectionRemoteDomainInfoPropertyToHclTerr
 }
 
 
-export function awsOpensearchOutboundConnectionTimeoutsPropertyToTerraform(struct?: AwsOpensearchOutboundConnection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOutboundConnectionTimeoutsPropertyToTerraform(struct?: TfOutboundConnection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function awsOpensearchOutboundConnectionTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsOpensearchOutboundConnectionTimeoutsPropertyToHclTerraform(struct?: AwsOpensearchOutboundConnection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOutboundConnectionTimeoutsPropertyToHclTerraform(struct?: TfOutboundConnection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,10 +529,10 @@ export function awsOpensearchOutboundConnectionTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsOpensearchOutboundConnection {
+export namespace TfOutboundConnection {
 export interface CrossClusterSearchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#skip_unavailable AwsOpensearchOutboundConnection#skip_unavailable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#skip_unavailable TfOutboundConnection#skip_unavailable}
   */
   readonly skipUnavailable?: string;
 }
@@ -588,7 +588,7 @@ export interface ConnectionPropertiesProperty {
   /**
   * cross_cluster_search block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#cross_cluster_search AwsOpensearchOutboundConnection#cross_cluster_search}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#cross_cluster_search TfOutboundConnection#cross_cluster_search}
   */
   readonly crossClusterSearch?: CrossClusterSearchProperty;
 }
@@ -647,15 +647,15 @@ export class ConnectionPropertiesPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface LocalDomainInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#domain_name AwsOpensearchOutboundConnection#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#domain_name TfOutboundConnection#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#owner_id AwsOpensearchOutboundConnection#owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#owner_id TfOutboundConnection#owner_id}
   */
   readonly ownerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#region AwsOpensearchOutboundConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#region TfOutboundConnection#region}
   */
   readonly region: string;
 }
@@ -744,15 +744,15 @@ export class LocalDomainInfoPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface RemoteDomainInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#domain_name AwsOpensearchOutboundConnection#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#domain_name TfOutboundConnection#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#owner_id AwsOpensearchOutboundConnection#owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#owner_id TfOutboundConnection#owner_id}
   */
   readonly ownerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#region AwsOpensearchOutboundConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#region TfOutboundConnection#region}
   */
   readonly region: string;
 }
@@ -841,11 +841,11 @@ export class RemoteDomainInfoPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#create AwsOpensearchOutboundConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#create TfOutboundConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#delete AwsOpensearchOutboundConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_outbound_connection#delete TfOutboundConnection#delete}
   */
   readonly delete?: string;
 }

@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSsoadminPrincipalApplicationAssignmentsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPrincipalApplicationAssignmentsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#instance_arn DataAwsSsoadminPrincipalApplicationAssignments#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#instance_arn DataTfPrincipalApplicationAssignments#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#principal_id DataAwsSsoadminPrincipalApplicationAssignments#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#principal_id DataTfPrincipalApplicationAssignments#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#principal_type DataAwsSsoadminPrincipalApplicationAssignments#principal_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#principal_type DataTfPrincipalApplicationAssignments#principal_type}
   */
   readonly principalType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#region DataAwsSsoadminPrincipalApplicationAssignments#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#region DataTfPrincipalApplicationAssignments#region}
   */
   readonly region?: string;
   /**
   * application_assignments block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#application_assignments DataAwsSsoadminPrincipalApplicationAssignments#application_assignments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#application_assignments DataTfPrincipalApplicationAssignments#application_assignments}
   */
-  readonly applicationAssignments?: DataAwsSsoadminPrincipalApplicationAssignments.ApplicationAssignmentsProperty[] | cdktn.IResolvable;
+  readonly applicationAssignments?: DataTfPrincipalApplicationAssignments.ApplicationAssignmentsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments aws_ssoadmin_principal_application_assignments}
 */
-export class DataAwsSsoadminPrincipalApplicationAssignments extends cdktn.TerraformDataSource {
+export class DataTfPrincipalApplicationAssignments extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class DataAwsSsoadminPrincipalApplicationAssignments extends cdktn.Terraf
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSsoadminPrincipalApplicationAssignments resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPrincipalApplicationAssignments resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSsoadminPrincipalApplicationAssignments to import
-  * @param importFromId The id of the existing DataAwsSsoadminPrincipalApplicationAssignments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSsoadminPrincipalApplicationAssignments to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPrincipalApplicationAssignments to import
+  * @param importFromId The id of the existing DataTfPrincipalApplicationAssignments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_principal_application_assignments#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPrincipalApplicationAssignments to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_principal_application_assignments", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class DataAwsSsoadminPrincipalApplicationAssignments extends cdktn.Terraf
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSsoadminPrincipalApplicationAssignmentsConfig
+  * @param options DataTfPrincipalApplicationAssignmentsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSsoadminPrincipalApplicationAssignmentsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPrincipalApplicationAssignmentsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_principal_application_assignments',
       terraformGeneratorMetadata: {
@@ -155,11 +155,11 @@ export class DataAwsSsoadminPrincipalApplicationAssignments extends cdktn.Terraf
   }
 
   // application_assignments - computed: false, optional: true, required: false
-  private _applicationAssignments = new DataAwsSsoadminPrincipalApplicationAssignments.ApplicationAssignmentsPropertyList(this, "application_assignments", false);
+  private _applicationAssignments = new DataTfPrincipalApplicationAssignments.ApplicationAssignmentsPropertyList(this, "application_assignments", false);
   public get applicationAssignments() {
     return this._applicationAssignments;
   }
-  public putApplicationAssignments(value: DataAwsSsoadminPrincipalApplicationAssignments.ApplicationAssignmentsProperty[] | cdktn.IResolvable) {
+  public putApplicationAssignments(value: DataTfPrincipalApplicationAssignments.ApplicationAssignmentsProperty[] | cdktn.IResolvable) {
     this._applicationAssignments.internalValue = value;
   }
   public resetApplicationAssignments() {
@@ -180,7 +180,7 @@ export class DataAwsSsoadminPrincipalApplicationAssignments extends cdktn.Terraf
       principal_id: cdktn.stringToTerraform(this._principalId),
       principal_type: cdktn.stringToTerraform(this._principalType),
       region: cdktn.stringToTerraform(this._region),
-      application_assignments: cdktn.listMapper(dataAwsSsoadminPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToTerraform, true)(this._applicationAssignments.internalValue),
+      application_assignments: cdktn.listMapper(dataTfPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToTerraform, true)(this._applicationAssignments.internalValue),
     };
   }
 
@@ -211,10 +211,10 @@ export class DataAwsSsoadminPrincipalApplicationAssignments extends cdktn.Terraf
         storageClassType: "string",
       },
       application_assignments: {
-        value: cdktn.listMapperHcl(dataAwsSsoadminPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToHclTerraform, true)(this._applicationAssignments.internalValue),
+        value: cdktn.listMapperHcl(dataTfPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToHclTerraform, true)(this._applicationAssignments.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsSsoadminPrincipalApplicationAssignments.ApplicationAssignmentsPropertyList",
+        storageClassType: "DataTfPrincipalApplicationAssignments.ApplicationAssignmentsPropertyList",
       },
     };
 
@@ -223,7 +223,7 @@ export class DataAwsSsoadminPrincipalApplicationAssignments extends cdktn.Terraf
   }
 }
 
-export function dataAwsSsoadminPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToTerraform(struct?: DataAwsSsoadminPrincipalApplicationAssignments.ApplicationAssignmentsProperty | cdktn.IResolvable): any {
+export function dataTfPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToTerraform(struct?: DataTfPrincipalApplicationAssignments.ApplicationAssignmentsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataAwsSsoadminPrincipalApplicationAssignmentsApplicationAssignm
 }
 
 
-export function dataAwsSsoadminPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToHclTerraform(struct?: DataAwsSsoadminPrincipalApplicationAssignments.ApplicationAssignmentsProperty | cdktn.IResolvable): any {
+export function dataTfPrincipalApplicationAssignmentsApplicationAssignmentsPropertyToHclTerraform(struct?: DataTfPrincipalApplicationAssignments.ApplicationAssignmentsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataAwsSsoadminPrincipalApplicationAssignmentsApplicationAssignm
 }
 
 
-export namespace DataAwsSsoadminPrincipalApplicationAssignments {
+export namespace DataTfPrincipalApplicationAssignments {
 export interface ApplicationAssignmentsProperty {
 }
 export class ApplicationAssignmentsPropertyOutputReference extends cdktn.ComplexObject {

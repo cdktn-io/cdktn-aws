@@ -5,65 +5,65 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLexv2ModelsBotConfig extends cdktn.TerraformMetaArguments {
+export interface TfBotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#description AwsLexv2ModelsBot#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#description TfBot#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#idle_session_ttl_in_seconds AwsLexv2ModelsBot#idle_session_ttl_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#idle_session_ttl_in_seconds TfBot#idle_session_ttl_in_seconds}
   */
   readonly idleSessionTtlInSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#name AwsLexv2ModelsBot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#name TfBot#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#region AwsLexv2ModelsBot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#region TfBot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#role_arn AwsLexv2ModelsBot#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#role_arn TfBot#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#tags AwsLexv2ModelsBot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#tags TfBot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#test_bot_alias_tags AwsLexv2ModelsBot#test_bot_alias_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#test_bot_alias_tags TfBot#test_bot_alias_tags}
   */
   readonly testBotAliasTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#type AwsLexv2ModelsBot#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#type TfBot#type}
   */
   readonly type?: string;
   /**
   * data_privacy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#data_privacy AwsLexv2ModelsBot#data_privacy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#data_privacy TfBot#data_privacy}
   */
-  readonly dataPrivacy?: AwsLexv2ModelsBot.DataPrivacyProperty[] | cdktn.IResolvable;
+  readonly dataPrivacy?: TfBot.DataPrivacyProperty[] | cdktn.IResolvable;
   /**
   * members block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#members AwsLexv2ModelsBot#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#members TfBot#members}
   */
-  readonly members?: AwsLexv2ModelsBot.MembersProperty[] | cdktn.IResolvable;
+  readonly members?: TfBot.MembersProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#timeouts AwsLexv2ModelsBot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#timeouts TfBot#timeouts}
   */
-  readonly timeouts?: AwsLexv2ModelsBot.TimeoutsProperty;
+  readonly timeouts?: TfBot.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot aws_lexv2models_bot}
 */
-export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
+export class TfBot extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -74,11 +74,11 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLexv2ModelsBot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLexv2ModelsBot to import
-  * @param importFromId The id of the existing AwsLexv2ModelsBot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLexv2ModelsBot to import is found
+  * @param importToId The construct id used in the generated config for the TfBot to import
+  * @param importFromId The id of the existing TfBot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lexv2models_bot", importId: importFromId, provider });
@@ -93,9 +93,9 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLexv2ModelsBotConfig
+  * @param options TfBotConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLexv2ModelsBotConfig) {
+  public constructor(scope: Construct, id: string, config: TfBotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lexv2models_bot',
       terraformGeneratorMetadata: {
@@ -264,11 +264,11 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
   }
 
   // data_privacy - computed: false, optional: true, required: false
-  private _dataPrivacy = new AwsLexv2ModelsBot.DataPrivacyPropertyList(this, "data_privacy", false);
+  private _dataPrivacy = new TfBot.DataPrivacyPropertyList(this, "data_privacy", false);
   public get dataPrivacy() {
     return this._dataPrivacy;
   }
-  public putDataPrivacy(value: AwsLexv2ModelsBot.DataPrivacyProperty[] | cdktn.IResolvable) {
+  public putDataPrivacy(value: TfBot.DataPrivacyProperty[] | cdktn.IResolvable) {
     this._dataPrivacy.internalValue = value;
   }
   public resetDataPrivacy() {
@@ -280,11 +280,11 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
   }
 
   // members - computed: false, optional: true, required: false
-  private _members = new AwsLexv2ModelsBot.MembersPropertyList(this, "members", false);
+  private _members = new TfBot.MembersPropertyList(this, "members", false);
   public get members() {
     return this._members;
   }
-  public putMembers(value: AwsLexv2ModelsBot.MembersProperty[] | cdktn.IResolvable) {
+  public putMembers(value: TfBot.MembersProperty[] | cdktn.IResolvable) {
     this._members.internalValue = value;
   }
   public resetMembers() {
@@ -296,11 +296,11 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLexv2ModelsBot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfBot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLexv2ModelsBot.TimeoutsProperty) {
+  public putTimeouts(value: TfBot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -325,9 +325,9 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       test_bot_alias_tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._testBotAliasTags),
       type: cdktn.stringToTerraform(this._type),
-      data_privacy: cdktn.listMapper(awsLexv2ModelsBotDataPrivacyPropertyToTerraform, true)(this._dataPrivacy.internalValue),
-      members: cdktn.listMapper(awsLexv2ModelsBotMembersPropertyToTerraform, true)(this._members.internalValue),
-      timeouts: awsLexv2ModelsBotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_privacy: cdktn.listMapper(tfBotDataPrivacyPropertyToTerraform, true)(this._dataPrivacy.internalValue),
+      members: cdktn.listMapper(tfBotMembersPropertyToTerraform, true)(this._members.internalValue),
+      timeouts: tfBotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -382,22 +382,22 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       data_privacy: {
-        value: cdktn.listMapperHcl(awsLexv2ModelsBotDataPrivacyPropertyToHclTerraform, true)(this._dataPrivacy.internalValue),
+        value: cdktn.listMapperHcl(tfBotDataPrivacyPropertyToHclTerraform, true)(this._dataPrivacy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLexv2ModelsBot.DataPrivacyPropertyList",
+        storageClassType: "TfBot.DataPrivacyPropertyList",
       },
       members: {
-        value: cdktn.listMapperHcl(awsLexv2ModelsBotMembersPropertyToHclTerraform, true)(this._members.internalValue),
+        value: cdktn.listMapperHcl(tfBotMembersPropertyToHclTerraform, true)(this._members.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLexv2ModelsBot.MembersPropertyList",
+        storageClassType: "TfBot.MembersPropertyList",
       },
       timeouts: {
-        value: awsLexv2ModelsBotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfBotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLexv2ModelsBot.TimeoutsProperty",
+        storageClassType: "TfBot.TimeoutsProperty",
       },
     };
 
@@ -406,7 +406,7 @@ export class AwsLexv2ModelsBot extends cdktn.TerraformResource {
   }
 }
 
-export function awsLexv2ModelsBotDataPrivacyPropertyToTerraform(struct?: AwsLexv2ModelsBot.DataPrivacyProperty | cdktn.IResolvable): any {
+export function tfBotDataPrivacyPropertyToTerraform(struct?: TfBot.DataPrivacyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function awsLexv2ModelsBotDataPrivacyPropertyToTerraform(struct?: AwsLexv
 }
 
 
-export function awsLexv2ModelsBotDataPrivacyPropertyToHclTerraform(struct?: AwsLexv2ModelsBot.DataPrivacyProperty | cdktn.IResolvable): any {
+export function tfBotDataPrivacyPropertyToHclTerraform(struct?: TfBot.DataPrivacyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsLexv2ModelsBotDataPrivacyPropertyToHclTerraform(struct?: AwsL
 }
 
 
-export function awsLexv2ModelsBotMembersPropertyToTerraform(struct?: AwsLexv2ModelsBot.MembersProperty | cdktn.IResolvable): any {
+export function tfBotMembersPropertyToTerraform(struct?: TfBot.MembersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function awsLexv2ModelsBotMembersPropertyToTerraform(struct?: AwsLexv2Mod
 }
 
 
-export function awsLexv2ModelsBotMembersPropertyToHclTerraform(struct?: AwsLexv2ModelsBot.MembersProperty | cdktn.IResolvable): any {
+export function tfBotMembersPropertyToHclTerraform(struct?: TfBot.MembersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function awsLexv2ModelsBotMembersPropertyToHclTerraform(struct?: AwsLexv2
 }
 
 
-export function awsLexv2ModelsBotTimeoutsPropertyToTerraform(struct?: AwsLexv2ModelsBot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBotTimeoutsPropertyToTerraform(struct?: TfBot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function awsLexv2ModelsBotTimeoutsPropertyToTerraform(struct?: AwsLexv2Mo
 }
 
 
-export function awsLexv2ModelsBotTimeoutsPropertyToHclTerraform(struct?: AwsLexv2ModelsBot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBotTimeoutsPropertyToHclTerraform(struct?: TfBot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,10 +538,10 @@ export function awsLexv2ModelsBotTimeoutsPropertyToHclTerraform(struct?: AwsLexv
 }
 
 
-export namespace AwsLexv2ModelsBot {
+export namespace TfBot {
 export interface DataPrivacyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#child_directed AwsLexv2ModelsBot#child_directed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#child_directed TfBot#child_directed}
   */
   readonly childDirected: boolean | cdktn.IResolvable;
 }
@@ -624,26 +624,26 @@ export class DataPrivacyPropertyList extends cdktn.ComplexList {
 }
 export interface MembersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#alias_id AwsLexv2ModelsBot#alias_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#alias_id TfBot#alias_id}
   */
   readonly aliasId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#alias_name AwsLexv2ModelsBot#alias_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#alias_name TfBot#alias_name}
   */
   readonly aliasName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#id AwsLexv2ModelsBot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#id TfBot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#name AwsLexv2ModelsBot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#name TfBot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#version AwsLexv2ModelsBot#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#version TfBot#version}
   */
   readonly version: string;
 }
@@ -804,19 +804,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#create AwsLexv2ModelsBot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#create TfBot#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#delete AwsLexv2ModelsBot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#delete TfBot#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#update AwsLexv2ModelsBot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot#update TfBot#update}
   */
   readonly update?: string;
 }

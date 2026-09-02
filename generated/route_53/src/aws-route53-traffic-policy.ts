@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53TrafficPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfTrafficPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#comment AwsRoute53TrafficPolicy#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#comment TfTrafficPolicy#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#document AwsRoute53TrafficPolicy#document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#document TfTrafficPolicy#document}
   */
   readonly document: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#id AwsRoute53TrafficPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#id TfTrafficPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#name AwsRoute53TrafficPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#name TfTrafficPolicy#name}
   */
   readonly name: string;
 }
@@ -30,7 +30,7 @@ export interface AwsRoute53TrafficPolicyConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy aws_route53_traffic_policy}
 */
-export class AwsRoute53TrafficPolicy extends cdktn.TerraformResource {
+export class TfTrafficPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class AwsRoute53TrafficPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53TrafficPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTrafficPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53TrafficPolicy to import
-  * @param importFromId The id of the existing AwsRoute53TrafficPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53TrafficPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfTrafficPolicy to import
+  * @param importFromId The id of the existing TfTrafficPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_traffic_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTrafficPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_traffic_policy", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class AwsRoute53TrafficPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53TrafficPolicyConfig
+  * @param options TfTrafficPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53TrafficPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfTrafficPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_traffic_policy',
       terraformGeneratorMetadata: {

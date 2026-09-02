@@ -16,6 +16,10 @@ import {
 } from "@cdktn-aws/groups-core";
 import { ensureProviderCheckout, websiteDir } from "./clone.js";
 import { readAllowedSubcategories, readDocSubcategories } from "./frontmatter.js";
+import { proposeStripPrefixes } from "./strip-prefixes.js";
+// The generator's own class-name function, so the example spelling this report prints is the one
+// the generator will actually emit rather than a second implementation of the rule.
+import { STRIP_PREFIX_PATTERN, classNameForEntry } from "../../aws2cdk/src/naming.js";
 
 const argv = new Set(process.argv.slice(2));
 const refresh = argv.has("--refresh");
@@ -63,7 +67,8 @@ function main(): number {
   const group = (slug: string, title: string): Group => {
     let g = groups.get(slug);
     if (!g) {
-      g = { title, resources: [], dataSources: [], ephemeralResources: [] };
+      // stripPrefixes is filled in below, once the group's whole member set is known.
+      g = { title, stripPrefixes: [], resources: [], dataSources: [], ephemeralResources: [] };
       groups.set(slug, g);
     }
     return g;
@@ -135,6 +140,48 @@ function main(): number {
     return 1;
   }
 
+  // --- stripPrefixes: propose, then let the curated overrides win ----------
+  const unknownOverrides = Object.keys(cfg.stripPrefixOverrides).filter((s) => !groups.has(s));
+  if (unknownOverrides.length > 0) {
+    console.error(
+      `\nFAIL: stripPrefixOverrides names ${unknownOverrides.length} slug(s) no subcategory maps to: ` +
+        unknownOverrides.sort().join(", "),
+    );
+    return 1;
+  }
+  const prefixReport: Record<string, { proposed: string[]; final: string[]; overridden: boolean; example: string }> = {};
+  for (const [slug, g] of groups) {
+    const members = [...g.resources, ...g.dataSources, ...g.ephemeralResources].sort();
+    const proposed = proposeStripPrefixes(slug, members);
+    const override = cfg.stripPrefixOverrides[slug];
+    // `?? proposed`, never `|| proposed`: an empty override is a curated "this group has no service
+    // prefix, strip nothing", not an unset one.
+    const final = [...new Set(override ?? proposed)].sort();
+    for (const p of final) {
+      if (!STRIP_PREFIX_PATTERN.test(p)) {
+        console.error(`\nFAIL: stripPrefixOverrides.${slug} has a malformed prefix ${JSON.stringify(p)}`);
+        return 1;
+      }
+    }
+    g.stripPrefixes = final;
+    // One worked example per group, so the proposal is reviewable as names rather than as tokens.
+    const sample = g.resources.length > 0
+      ? { parserType: g.resources[0], surface: "resource" as const }
+      : g.dataSources.length > 0
+        ? { parserType: `data_${g.dataSources[0]}`, surface: "data_source" as const }
+        : g.ephemeralResources.length > 0
+          ? { parserType: `ephemeral_${g.ephemeralResources[0]}`, surface: "ephemeral_resource" as const }
+          : undefined;
+    prefixReport[slug] = {
+      proposed,
+      final,
+      overridden: override !== undefined,
+      example: sample
+        ? `${sample.parserType} -> ${classNameForEntry({ ...sample, stripPrefixes: final })}`
+        : "",
+    };
+  }
+
   // --- emit ----------------------------------------------------------------
   const file: GroupsFile = {
     pinnedProviderVersion: cfg.pinnedProviderVersion,
@@ -165,6 +212,8 @@ function main(): number {
     handAssigned,
     docsWithoutSchemaEntry: docsWithoutSchema,
     slugOverrides: cfg.slugOverrides,
+    stripPrefixOverrides: cfg.stripPrefixOverrides,
+    stripPrefixes: prefixReport,
   };
   mkdirSync(tmpDir, { recursive: true });
   const reportPath = path.join(tmpDir, "mine-report.json");
@@ -180,7 +229,8 @@ function main(): number {
   );
   console.log(
     `  ${Object.keys(cfg.aliases).length} aliases | ${handAssigned.length} hand assignments | ` +
-      `${Object.keys(cfg.slugOverrides).length} slug overrides`,
+      `${Object.keys(cfg.slugOverrides).length} slug overrides | ` +
+      `${Object.keys(cfg.stripPrefixOverrides).length} stripPrefix overrides`,
   );
   console.log(`  report: ${reportPath}`);
 

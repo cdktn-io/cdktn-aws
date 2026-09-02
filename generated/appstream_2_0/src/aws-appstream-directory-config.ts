@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppstreamDirectoryConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfDirectoryConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#directory_name AwsAppstreamDirectoryConfig#directory_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#directory_name TfDirectoryConfig#directory_name}
   */
   readonly directoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#id AwsAppstreamDirectoryConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#id TfDirectoryConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#organizational_unit_distinguished_names AwsAppstreamDirectoryConfig#organizational_unit_distinguished_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#organizational_unit_distinguished_names TfDirectoryConfig#organizational_unit_distinguished_names}
   */
   readonly organizationalUnitDistinguishedNames: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#region AwsAppstreamDirectoryConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#region TfDirectoryConfig#region}
   */
   readonly region?: string;
   /**
   * certificate_based_auth_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#certificate_based_auth_properties AwsAppstreamDirectoryConfig#certificate_based_auth_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#certificate_based_auth_properties TfDirectoryConfig#certificate_based_auth_properties}
   */
-  readonly certificateBasedAuthProperties?: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty;
+  readonly certificateBasedAuthProperties?: TfDirectoryConfig.CertificateBasedAuthPropertiesProperty;
   /**
   * service_account_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#service_account_credentials AwsAppstreamDirectoryConfig#service_account_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#service_account_credentials TfDirectoryConfig#service_account_credentials}
   */
-  readonly serviceAccountCredentials: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty;
+  readonly serviceAccountCredentials: TfDirectoryConfig.ServiceAccountCredentialsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config aws_appstream_directory_config}
 */
-export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
+export class TfDirectoryConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppstreamDirectoryConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDirectoryConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppstreamDirectoryConfig to import
-  * @param importFromId The id of the existing AwsAppstreamDirectoryConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppstreamDirectoryConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfDirectoryConfig to import
+  * @param importFromId The id of the existing TfDirectoryConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDirectoryConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appstream_directory_config", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppstreamDirectoryConfigConfig
+  * @param options TfDirectoryConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppstreamDirectoryConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfDirectoryConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appstream_directory_config',
       terraformGeneratorMetadata: {
@@ -168,11 +168,11 @@ export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
   }
 
   // certificate_based_auth_properties - computed: false, optional: true, required: false
-  private _certificateBasedAuthProperties = new AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference(this, "certificate_based_auth_properties");
+  private _certificateBasedAuthProperties = new TfDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference(this, "certificate_based_auth_properties");
   public get certificateBasedAuthProperties() {
     return this._certificateBasedAuthProperties;
   }
-  public putCertificateBasedAuthProperties(value: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty) {
+  public putCertificateBasedAuthProperties(value: TfDirectoryConfig.CertificateBasedAuthPropertiesProperty) {
     this._certificateBasedAuthProperties.internalValue = value;
   }
   public resetCertificateBasedAuthProperties() {
@@ -184,11 +184,11 @@ export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
   }
 
   // service_account_credentials - computed: false, optional: false, required: true
-  private _serviceAccountCredentials = new AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference(this, "service_account_credentials");
+  private _serviceAccountCredentials = new TfDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference(this, "service_account_credentials");
   public get serviceAccountCredentials() {
     return this._serviceAccountCredentials;
   }
-  public putServiceAccountCredentials(value: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty) {
+  public putServiceAccountCredentials(value: TfDirectoryConfig.ServiceAccountCredentialsProperty) {
     this._serviceAccountCredentials.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -206,8 +206,8 @@ export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       organizational_unit_distinguished_names: cdktn.listMapper(cdktn.stringToTerraform, false)(this._organizationalUnitDistinguishedNames),
       region: cdktn.stringToTerraform(this._region),
-      certificate_based_auth_properties: awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToTerraform(this._certificateBasedAuthProperties.internalValue),
-      service_account_credentials: awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToTerraform(this._serviceAccountCredentials.internalValue),
+      certificate_based_auth_properties: tfDirectoryConfigCertificateBasedAuthPropertiesPropertyToTerraform(this._certificateBasedAuthProperties.internalValue),
+      service_account_credentials: tfDirectoryConfigServiceAccountCredentialsPropertyToTerraform(this._serviceAccountCredentials.internalValue),
     };
   }
 
@@ -238,16 +238,16 @@ export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       certificate_based_auth_properties: {
-        value: awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToHclTerraform(this._certificateBasedAuthProperties.internalValue),
+        value: tfDirectoryConfigCertificateBasedAuthPropertiesPropertyToHclTerraform(this._certificateBasedAuthProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyList",
+        storageClassType: "TfDirectoryConfig.CertificateBasedAuthPropertiesPropertyList",
       },
       service_account_credentials: {
-        value: awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToHclTerraform(this._serviceAccountCredentials.internalValue),
+        value: tfDirectoryConfigServiceAccountCredentialsPropertyToHclTerraform(this._serviceAccountCredentials.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyList",
+        storageClassType: "TfDirectoryConfig.ServiceAccountCredentialsPropertyList",
       },
     };
 
@@ -256,7 +256,7 @@ export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToTerraform(struct?: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference | AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty): any {
+export function tfDirectoryConfigCertificateBasedAuthPropertiesPropertyToTerraform(struct?: TfDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference | TfDirectoryConfig.CertificateBasedAuthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropert
 }
 
 
-export function awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToHclTerraform(struct?: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference | AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty): any {
+export function tfDirectoryConfigCertificateBasedAuthPropertiesPropertyToHclTerraform(struct?: TfDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference | TfDirectoryConfig.CertificateBasedAuthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropert
 }
 
 
-export function awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToTerraform(struct?: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference | AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty): any {
+export function tfDirectoryConfigServiceAccountCredentialsPropertyToTerraform(struct?: TfDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference | TfDirectoryConfig.ServiceAccountCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToTe
 }
 
 
-export function awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToHclTerraform(struct?: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference | AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty): any {
+export function tfDirectoryConfigServiceAccountCredentialsPropertyToHclTerraform(struct?: TfDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference | TfDirectoryConfig.ServiceAccountCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,14 +330,14 @@ export function awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToHc
 }
 
 
-export namespace AwsAppstreamDirectoryConfig {
+export namespace TfDirectoryConfig {
 export interface CertificateBasedAuthPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#certificate_authority_arn AwsAppstreamDirectoryConfig#certificate_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#certificate_authority_arn TfDirectoryConfig#certificate_authority_arn}
   */
   readonly certificateAuthorityArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#status AwsAppstreamDirectoryConfig#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#status TfDirectoryConfig#status}
   */
   readonly status?: string;
 }
@@ -413,11 +413,11 @@ export class CertificateBasedAuthPropertiesPropertyOutputReference extends cdktn
 }
 export interface ServiceAccountCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#account_name AwsAppstreamDirectoryConfig#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#account_name TfDirectoryConfig#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#account_password AwsAppstreamDirectoryConfig#account_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#account_password TfDirectoryConfig#account_password}
   */
   readonly accountPassword: string;
 }

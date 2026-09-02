@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLambdaFunctionUrlConfig extends cdktn.TerraformMetaArguments {
+export interface TfFunctionUrlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#authorization_type AwsLambdaFunctionUrl#authorization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#authorization_type TfFunctionUrl#authorization_type}
   */
   readonly authorizationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#function_name AwsLambdaFunctionUrl#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#function_name TfFunctionUrl#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#id AwsLambdaFunctionUrl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#id TfFunctionUrl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#invoke_mode AwsLambdaFunctionUrl#invoke_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#invoke_mode TfFunctionUrl#invoke_mode}
   */
   readonly invokeMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#qualifier AwsLambdaFunctionUrl#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#qualifier TfFunctionUrl#qualifier}
   */
   readonly qualifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#region AwsLambdaFunctionUrl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#region TfFunctionUrl#region}
   */
   readonly region?: string;
   /**
   * cors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#cors AwsLambdaFunctionUrl#cors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#cors TfFunctionUrl#cors}
   */
-  readonly cors?: AwsLambdaFunctionUrl.CorsProperty;
+  readonly cors?: TfFunctionUrl.CorsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#timeouts AwsLambdaFunctionUrl#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#timeouts TfFunctionUrl#timeouts}
   */
-  readonly timeouts?: AwsLambdaFunctionUrl.TimeoutsProperty;
+  readonly timeouts?: TfFunctionUrl.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url aws_lambda_function_url}
 */
-export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
+export class TfFunctionUrl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLambdaFunctionUrl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFunctionUrl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLambdaFunctionUrl to import
-  * @param importFromId The id of the existing AwsLambdaFunctionUrl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLambdaFunctionUrl to import is found
+  * @param importToId The construct id used in the generated config for the TfFunctionUrl to import
+  * @param importFromId The id of the existing TfFunctionUrl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFunctionUrl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_function_url", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLambdaFunctionUrlConfig
+  * @param options TfFunctionUrlConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLambdaFunctionUrlConfig) {
+  public constructor(scope: Construct, id: string, config: TfFunctionUrlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_function_url',
       terraformGeneratorMetadata: {
@@ -220,11 +220,11 @@ export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors = new AwsLambdaFunctionUrl.CorsPropertyOutputReference(this, "cors");
+  private _cors = new TfFunctionUrl.CorsPropertyOutputReference(this, "cors");
   public get cors() {
     return this._cors;
   }
-  public putCors(value: AwsLambdaFunctionUrl.CorsProperty) {
+  public putCors(value: TfFunctionUrl.CorsProperty) {
     this._cors.internalValue = value;
   }
   public resetCors() {
@@ -236,11 +236,11 @@ export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLambdaFunctionUrl.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFunctionUrl.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLambdaFunctionUrl.TimeoutsProperty) {
+  public putTimeouts(value: TfFunctionUrl.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -263,8 +263,8 @@ export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
       invoke_mode: cdktn.stringToTerraform(this._invokeMode),
       qualifier: cdktn.stringToTerraform(this._qualifier),
       region: cdktn.stringToTerraform(this._region),
-      cors: awsLambdaFunctionUrlCorsPropertyToTerraform(this._cors.internalValue),
-      timeouts: awsLambdaFunctionUrlTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      cors: tfFunctionUrlCorsPropertyToTerraform(this._cors.internalValue),
+      timeouts: tfFunctionUrlTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -307,16 +307,16 @@ export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cors: {
-        value: awsLambdaFunctionUrlCorsPropertyToHclTerraform(this._cors.internalValue),
+        value: tfFunctionUrlCorsPropertyToHclTerraform(this._cors.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunctionUrl.CorsPropertyList",
+        storageClassType: "TfFunctionUrl.CorsPropertyList",
       },
       timeouts: {
-        value: awsLambdaFunctionUrlTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFunctionUrlTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLambdaFunctionUrl.TimeoutsProperty",
+        storageClassType: "TfFunctionUrl.TimeoutsProperty",
       },
     };
 
@@ -325,7 +325,7 @@ export class AwsLambdaFunctionUrl extends cdktn.TerraformResource {
   }
 }
 
-export function awsLambdaFunctionUrlCorsPropertyToTerraform(struct?: AwsLambdaFunctionUrl.CorsPropertyOutputReference | AwsLambdaFunctionUrl.CorsProperty): any {
+export function tfFunctionUrlCorsPropertyToTerraform(struct?: TfFunctionUrl.CorsPropertyOutputReference | TfFunctionUrl.CorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function awsLambdaFunctionUrlCorsPropertyToTerraform(struct?: AwsLambdaFu
 }
 
 
-export function awsLambdaFunctionUrlCorsPropertyToHclTerraform(struct?: AwsLambdaFunctionUrl.CorsPropertyOutputReference | AwsLambdaFunctionUrl.CorsProperty): any {
+export function tfFunctionUrlCorsPropertyToHclTerraform(struct?: TfFunctionUrl.CorsPropertyOutputReference | TfFunctionUrl.CorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,7 +390,7 @@ export function awsLambdaFunctionUrlCorsPropertyToHclTerraform(struct?: AwsLambd
 }
 
 
-export function awsLambdaFunctionUrlTimeoutsPropertyToTerraform(struct?: AwsLambdaFunctionUrl.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFunctionUrlTimeoutsPropertyToTerraform(struct?: TfFunctionUrl.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function awsLambdaFunctionUrlTimeoutsPropertyToTerraform(struct?: AwsLamb
 }
 
 
-export function awsLambdaFunctionUrlTimeoutsPropertyToHclTerraform(struct?: AwsLambdaFunctionUrl.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFunctionUrlTimeoutsPropertyToHclTerraform(struct?: TfFunctionUrl.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,30 +420,30 @@ export function awsLambdaFunctionUrlTimeoutsPropertyToHclTerraform(struct?: AwsL
 }
 
 
-export namespace AwsLambdaFunctionUrl {
+export namespace TfFunctionUrl {
 export interface CorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_credentials AwsLambdaFunctionUrl#allow_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_credentials TfFunctionUrl#allow_credentials}
   */
   readonly allowCredentials?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_headers AwsLambdaFunctionUrl#allow_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_headers TfFunctionUrl#allow_headers}
   */
   readonly allowHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_methods AwsLambdaFunctionUrl#allow_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_methods TfFunctionUrl#allow_methods}
   */
   readonly allowMethods?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_origins AwsLambdaFunctionUrl#allow_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#allow_origins TfFunctionUrl#allow_origins}
   */
   readonly allowOrigins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#expose_headers AwsLambdaFunctionUrl#expose_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#expose_headers TfFunctionUrl#expose_headers}
   */
   readonly exposeHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#max_age AwsLambdaFunctionUrl#max_age}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#max_age TfFunctionUrl#max_age}
   */
   readonly maxAge?: number;
 }
@@ -607,7 +607,7 @@ export class CorsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#create AwsLambdaFunctionUrl#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_url#create TfFunctionUrl#create}
   */
   readonly create?: string;
 }

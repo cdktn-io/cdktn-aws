@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTransferAgreementConfig extends cdktn.TerraformMetaArguments {
+export interface TfAgreementConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#access_role AwsTransferAgreement#access_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#access_role TfAgreement#access_role}
   */
   readonly accessRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#base_directory AwsTransferAgreement#base_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#base_directory TfAgreement#base_directory}
   */
   readonly baseDirectory: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#description AwsTransferAgreement#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#description TfAgreement#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#id AwsTransferAgreement#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#id TfAgreement#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#local_profile_id AwsTransferAgreement#local_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#local_profile_id TfAgreement#local_profile_id}
   */
   readonly localProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#partner_profile_id AwsTransferAgreement#partner_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#partner_profile_id TfAgreement#partner_profile_id}
   */
   readonly partnerProfileId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#region AwsTransferAgreement#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#region TfAgreement#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#server_id AwsTransferAgreement#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#server_id TfAgreement#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#tags AwsTransferAgreement#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#tags TfAgreement#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#tags_all AwsTransferAgreement#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#tags_all TfAgreement#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -56,7 +56,7 @@ export interface AwsTransferAgreementConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement aws_transfer_agreement}
 */
-export class AwsTransferAgreement extends cdktn.TerraformResource {
+export class TfAgreement extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsTransferAgreement extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTransferAgreement resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAgreement resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTransferAgreement to import
-  * @param importFromId The id of the existing AwsTransferAgreement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTransferAgreement to import is found
+  * @param importToId The construct id used in the generated config for the TfAgreement to import
+  * @param importFromId The id of the existing TfAgreement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_agreement#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAgreement to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_agreement", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsTransferAgreement extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTransferAgreementConfig
+  * @param options TfAgreementConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTransferAgreementConfig) {
+  public constructor(scope: Construct, id: string, config: TfAgreementConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_agreement',
       terraformGeneratorMetadata: {

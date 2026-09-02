@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEksAccessEntryConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccessEntryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#cluster_name AwsEksAccessEntry#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#cluster_name TfAccessEntry#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#id AwsEksAccessEntry#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#id TfAccessEntry#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#kubernetes_groups AwsEksAccessEntry#kubernetes_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#kubernetes_groups TfAccessEntry#kubernetes_groups}
   */
   readonly kubernetesGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#principal_arn AwsEksAccessEntry#principal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#principal_arn TfAccessEntry#principal_arn}
   */
   readonly principalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#region AwsEksAccessEntry#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#region TfAccessEntry#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#tags AwsEksAccessEntry#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#tags TfAccessEntry#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#tags_all AwsEksAccessEntry#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#tags_all TfAccessEntry#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#type AwsEksAccessEntry#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#type TfAccessEntry#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#user_name AwsEksAccessEntry#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#user_name TfAccessEntry#user_name}
   */
   readonly userName?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#timeouts AwsEksAccessEntry#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#timeouts TfAccessEntry#timeouts}
   */
-  readonly timeouts?: AwsEksAccessEntry.TimeoutsProperty;
+  readonly timeouts?: TfAccessEntry.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry aws_eks_access_entry}
 */
-export class AwsEksAccessEntry extends cdktn.TerraformResource {
+export class TfAccessEntry extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsEksAccessEntry extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEksAccessEntry resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccessEntry resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEksAccessEntry to import
-  * @param importFromId The id of the existing AwsEksAccessEntry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEksAccessEntry to import is found
+  * @param importToId The construct id used in the generated config for the TfAccessEntry to import
+  * @param importFromId The id of the existing TfAccessEntry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccessEntry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_access_entry", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsEksAccessEntry extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEksAccessEntryConfig
+  * @param options TfAccessEntryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEksAccessEntryConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccessEntryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_access_entry',
       terraformGeneratorMetadata: {
@@ -276,11 +276,11 @@ export class AwsEksAccessEntry extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEksAccessEntry.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAccessEntry.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEksAccessEntry.TimeoutsProperty) {
+  public putTimeouts(value: TfAccessEntry.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -306,7 +306,7 @@ export class AwsEksAccessEntry extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
       user_name: cdktn.stringToTerraform(this._userName),
-      timeouts: awsEksAccessEntryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfAccessEntryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -367,10 +367,10 @@ export class AwsEksAccessEntry extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsEksAccessEntryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAccessEntryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEksAccessEntry.TimeoutsProperty",
+        storageClassType: "TfAccessEntry.TimeoutsProperty",
       },
     };
 
@@ -379,7 +379,7 @@ export class AwsEksAccessEntry extends cdktn.TerraformResource {
   }
 }
 
-export function awsEksAccessEntryTimeoutsPropertyToTerraform(struct?: AwsEksAccessEntry.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccessEntryTimeoutsPropertyToTerraform(struct?: TfAccessEntry.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function awsEksAccessEntryTimeoutsPropertyToTerraform(struct?: AwsEksAcce
 }
 
 
-export function awsEksAccessEntryTimeoutsPropertyToHclTerraform(struct?: AwsEksAccessEntry.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccessEntryTimeoutsPropertyToHclTerraform(struct?: TfAccessEntry.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,14 +416,14 @@ export function awsEksAccessEntryTimeoutsPropertyToHclTerraform(struct?: AwsEksA
 }
 
 
-export namespace AwsEksAccessEntry {
+export namespace TfAccessEntry {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#create AwsEksAccessEntry#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#create TfAccessEntry#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#delete AwsEksAccessEntry#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_entry#delete TfAccessEntry#delete}
   */
   readonly delete?: string;
 }

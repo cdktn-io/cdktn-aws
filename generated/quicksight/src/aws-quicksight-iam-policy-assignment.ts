@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightIamPolicyAssignmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfIamPolicyAssignmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#assignment_name AwsQuicksightIamPolicyAssignment#assignment_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#assignment_name TfIamPolicyAssignment#assignment_name}
   */
   readonly assignmentName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#assignment_status AwsQuicksightIamPolicyAssignment#assignment_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#assignment_status TfIamPolicyAssignment#assignment_status}
   */
   readonly assignmentStatus: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#aws_account_id AwsQuicksightIamPolicyAssignment#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#aws_account_id TfIamPolicyAssignment#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#namespace AwsQuicksightIamPolicyAssignment#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#namespace TfIamPolicyAssignment#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#policy_arn AwsQuicksightIamPolicyAssignment#policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#policy_arn TfIamPolicyAssignment#policy_arn}
   */
   readonly policyArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#region AwsQuicksightIamPolicyAssignment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#region TfIamPolicyAssignment#region}
   */
   readonly region?: string;
   /**
   * identities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#identities AwsQuicksightIamPolicyAssignment#identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#identities TfIamPolicyAssignment#identities}
   */
-  readonly identities?: AwsQuicksightIamPolicyAssignment.IdentitiesProperty[] | cdktn.IResolvable;
+  readonly identities?: TfIamPolicyAssignment.IdentitiesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment aws_quicksight_iam_policy_assignment}
 */
-export class AwsQuicksightIamPolicyAssignment extends cdktn.TerraformResource {
+export class TfIamPolicyAssignment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsQuicksightIamPolicyAssignment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightIamPolicyAssignment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIamPolicyAssignment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightIamPolicyAssignment to import
-  * @param importFromId The id of the existing AwsQuicksightIamPolicyAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightIamPolicyAssignment to import is found
+  * @param importToId The construct id used in the generated config for the TfIamPolicyAssignment to import
+  * @param importFromId The id of the existing TfIamPolicyAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIamPolicyAssignment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_iam_policy_assignment", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsQuicksightIamPolicyAssignment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightIamPolicyAssignmentConfig
+  * @param options TfIamPolicyAssignmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightIamPolicyAssignmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfIamPolicyAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_iam_policy_assignment',
       terraformGeneratorMetadata: {
@@ -205,11 +205,11 @@ export class AwsQuicksightIamPolicyAssignment extends cdktn.TerraformResource {
   }
 
   // identities - computed: false, optional: true, required: false
-  private _identities = new AwsQuicksightIamPolicyAssignment.IdentitiesPropertyList(this, "identities", false);
+  private _identities = new TfIamPolicyAssignment.IdentitiesPropertyList(this, "identities", false);
   public get identities() {
     return this._identities;
   }
-  public putIdentities(value: AwsQuicksightIamPolicyAssignment.IdentitiesProperty[] | cdktn.IResolvable) {
+  public putIdentities(value: TfIamPolicyAssignment.IdentitiesProperty[] | cdktn.IResolvable) {
     this._identities.internalValue = value;
   }
   public resetIdentities() {
@@ -232,7 +232,7 @@ export class AwsQuicksightIamPolicyAssignment extends cdktn.TerraformResource {
       namespace: cdktn.stringToTerraform(this._namespace),
       policy_arn: cdktn.stringToTerraform(this._policyArn),
       region: cdktn.stringToTerraform(this._region),
-      identities: cdktn.listMapper(awsQuicksightIamPolicyAssignmentIdentitiesPropertyToTerraform, true)(this._identities.internalValue),
+      identities: cdktn.listMapper(tfIamPolicyAssignmentIdentitiesPropertyToTerraform, true)(this._identities.internalValue),
     };
   }
 
@@ -275,10 +275,10 @@ export class AwsQuicksightIamPolicyAssignment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       identities: {
-        value: cdktn.listMapperHcl(awsQuicksightIamPolicyAssignmentIdentitiesPropertyToHclTerraform, true)(this._identities.internalValue),
+        value: cdktn.listMapperHcl(tfIamPolicyAssignmentIdentitiesPropertyToHclTerraform, true)(this._identities.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightIamPolicyAssignment.IdentitiesPropertyList",
+        storageClassType: "TfIamPolicyAssignment.IdentitiesPropertyList",
       },
     };
 
@@ -287,7 +287,7 @@ export class AwsQuicksightIamPolicyAssignment extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightIamPolicyAssignmentIdentitiesPropertyToTerraform(struct?: AwsQuicksightIamPolicyAssignment.IdentitiesProperty | cdktn.IResolvable): any {
+export function tfIamPolicyAssignmentIdentitiesPropertyToTerraform(struct?: TfIamPolicyAssignment.IdentitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function awsQuicksightIamPolicyAssignmentIdentitiesPropertyToTerraform(st
 }
 
 
-export function awsQuicksightIamPolicyAssignmentIdentitiesPropertyToHclTerraform(struct?: AwsQuicksightIamPolicyAssignment.IdentitiesProperty | cdktn.IResolvable): any {
+export function tfIamPolicyAssignmentIdentitiesPropertyToHclTerraform(struct?: TfIamPolicyAssignment.IdentitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,14 +324,14 @@ export function awsQuicksightIamPolicyAssignmentIdentitiesPropertyToHclTerraform
 }
 
 
-export namespace AwsQuicksightIamPolicyAssignment {
+export namespace TfIamPolicyAssignment {
 export interface IdentitiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#group AwsQuicksightIamPolicyAssignment#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#group TfIamPolicyAssignment#group}
   */
   readonly group?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#user AwsQuicksightIamPolicyAssignment#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_iam_policy_assignment#user TfIamPolicyAssignment#user}
   */
   readonly user?: string[];
 }

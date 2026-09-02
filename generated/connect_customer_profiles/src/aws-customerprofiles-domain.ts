@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCustomerprofilesDomainConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#dead_letter_queue_url AwsCustomerprofilesDomain#dead_letter_queue_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#dead_letter_queue_url TfDomain#dead_letter_queue_url}
   */
   readonly deadLetterQueueUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#default_encryption_key AwsCustomerprofilesDomain#default_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#default_encryption_key TfDomain#default_encryption_key}
   */
   readonly defaultEncryptionKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#default_expiration_days AwsCustomerprofilesDomain#default_expiration_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#default_expiration_days TfDomain#default_expiration_days}
   */
   readonly defaultExpirationDays: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#domain_name AwsCustomerprofilesDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#domain_name TfDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#id AwsCustomerprofilesDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#id TfDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,35 +32,35 @@ export interface AwsCustomerprofilesDomainConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#region AwsCustomerprofilesDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#region TfDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#tags AwsCustomerprofilesDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#tags TfDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#tags_all AwsCustomerprofilesDomain#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#tags_all TfDomain#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * matching block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#matching AwsCustomerprofilesDomain#matching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#matching TfDomain#matching}
   */
-  readonly matching?: AwsCustomerprofilesDomain.MatchingProperty;
+  readonly matching?: TfDomain.MatchingProperty;
   /**
   * rule_based_matching block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#rule_based_matching AwsCustomerprofilesDomain#rule_based_matching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#rule_based_matching TfDomain#rule_based_matching}
   */
-  readonly ruleBasedMatching?: AwsCustomerprofilesDomain.RuleBasedMatchingProperty;
+  readonly ruleBasedMatching?: TfDomain.RuleBasedMatchingProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain aws_customerprofiles_domain}
 */
-export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
+export class TfDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCustomerprofilesDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCustomerprofilesDomain to import
-  * @param importFromId The id of the existing AwsCustomerprofilesDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCustomerprofilesDomain to import is found
+  * @param importToId The construct id used in the generated config for the TfDomain to import
+  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_customerprofiles_domain", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCustomerprofilesDomainConfig
+  * @param options TfDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCustomerprofilesDomainConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_customerprofiles_domain',
       terraformGeneratorMetadata: {
@@ -252,11 +252,11 @@ export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
   }
 
   // matching - computed: false, optional: true, required: false
-  private _matching = new AwsCustomerprofilesDomain.MatchingPropertyOutputReference(this, "matching");
+  private _matching = new TfDomain.MatchingPropertyOutputReference(this, "matching");
   public get matching() {
     return this._matching;
   }
-  public putMatching(value: AwsCustomerprofilesDomain.MatchingProperty) {
+  public putMatching(value: TfDomain.MatchingProperty) {
     this._matching.internalValue = value;
   }
   public resetMatching() {
@@ -268,11 +268,11 @@ export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
   }
 
   // rule_based_matching - computed: false, optional: true, required: false
-  private _ruleBasedMatching = new AwsCustomerprofilesDomain.RuleBasedMatchingPropertyOutputReference(this, "rule_based_matching");
+  private _ruleBasedMatching = new TfDomain.RuleBasedMatchingPropertyOutputReference(this, "rule_based_matching");
   public get ruleBasedMatching() {
     return this._ruleBasedMatching;
   }
-  public putRuleBasedMatching(value: AwsCustomerprofilesDomain.RuleBasedMatchingProperty) {
+  public putRuleBasedMatching(value: TfDomain.RuleBasedMatchingProperty) {
     this._ruleBasedMatching.internalValue = value;
   }
   public resetRuleBasedMatching() {
@@ -297,8 +297,8 @@ export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      matching: awsCustomerprofilesDomainMatchingPropertyToTerraform(this._matching.internalValue),
-      rule_based_matching: awsCustomerprofilesDomainRuleBasedMatchingPropertyToTerraform(this._ruleBasedMatching.internalValue),
+      matching: tfDomainMatchingPropertyToTerraform(this._matching.internalValue),
+      rule_based_matching: tfDomainRuleBasedMatchingPropertyToTerraform(this._ruleBasedMatching.internalValue),
     };
   }
 
@@ -353,16 +353,16 @@ export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       matching: {
-        value: awsCustomerprofilesDomainMatchingPropertyToHclTerraform(this._matching.internalValue),
+        value: tfDomainMatchingPropertyToHclTerraform(this._matching.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCustomerprofilesDomain.MatchingPropertyList",
+        storageClassType: "TfDomain.MatchingPropertyList",
       },
       rule_based_matching: {
-        value: awsCustomerprofilesDomainRuleBasedMatchingPropertyToHclTerraform(this._ruleBasedMatching.internalValue),
+        value: tfDomainRuleBasedMatchingPropertyToHclTerraform(this._ruleBasedMatching.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCustomerprofilesDomain.RuleBasedMatchingPropertyList",
+        storageClassType: "TfDomain.RuleBasedMatchingPropertyList",
       },
     };
 
@@ -371,7 +371,7 @@ export class AwsCustomerprofilesDomain extends cdktn.TerraformResource {
   }
 }
 
-export function awsCustomerprofilesDomainMatchingAutoMergingConflictResolutionPropertyToTerraform(struct?: AwsCustomerprofilesDomain.MatchingAutoMergingConflictResolutionPropertyOutputReference | AwsCustomerprofilesDomain.MatchingAutoMergingConflictResolutionProperty): any {
+export function tfDomainMatchingAutoMergingConflictResolutionPropertyToTerraform(struct?: TfDomain.MatchingAutoMergingConflictResolutionPropertyOutputReference | TfDomain.MatchingAutoMergingConflictResolutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function awsCustomerprofilesDomainMatchingAutoMergingConflictResolutionPr
 }
 
 
-export function awsCustomerprofilesDomainMatchingAutoMergingConflictResolutionPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.MatchingAutoMergingConflictResolutionPropertyOutputReference | AwsCustomerprofilesDomain.MatchingAutoMergingConflictResolutionProperty): any {
+export function tfDomainMatchingAutoMergingConflictResolutionPropertyToHclTerraform(struct?: TfDomain.MatchingAutoMergingConflictResolutionPropertyOutputReference | TfDomain.MatchingAutoMergingConflictResolutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsCustomerprofilesDomainMatchingAutoMergingConflictResolutionPr
 }
 
 
-export function awsCustomerprofilesDomainConsolidationPropertyToTerraform(struct?: AwsCustomerprofilesDomain.ConsolidationPropertyOutputReference | AwsCustomerprofilesDomain.ConsolidationProperty): any {
+export function tfDomainConsolidationPropertyToTerraform(struct?: TfDomain.ConsolidationPropertyOutputReference | TfDomain.ConsolidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function awsCustomerprofilesDomainConsolidationPropertyToTerraform(struct
 }
 
 
-export function awsCustomerprofilesDomainConsolidationPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.ConsolidationPropertyOutputReference | AwsCustomerprofilesDomain.ConsolidationProperty): any {
+export function tfDomainConsolidationPropertyToHclTerraform(struct?: TfDomain.ConsolidationPropertyOutputReference | TfDomain.ConsolidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function awsCustomerprofilesDomainConsolidationPropertyToHclTerraform(str
 }
 
 
-export function awsCustomerprofilesDomainAutoMergingPropertyToTerraform(struct?: AwsCustomerprofilesDomain.AutoMergingPropertyOutputReference | AwsCustomerprofilesDomain.AutoMergingProperty): any {
+export function tfDomainAutoMergingPropertyToTerraform(struct?: TfDomain.AutoMergingPropertyOutputReference | TfDomain.AutoMergingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,13 +446,13 @@ export function awsCustomerprofilesDomainAutoMergingPropertyToTerraform(struct?:
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     min_allowed_confidence_score_for_merging: cdktn.numberToTerraform(struct!.minAllowedConfidenceScoreForMerging),
-    conflict_resolution: awsCustomerprofilesDomainMatchingAutoMergingConflictResolutionPropertyToTerraform(struct!.conflictResolution),
-    consolidation: awsCustomerprofilesDomainConsolidationPropertyToTerraform(struct!.consolidation),
+    conflict_resolution: tfDomainMatchingAutoMergingConflictResolutionPropertyToTerraform(struct!.conflictResolution),
+    consolidation: tfDomainConsolidationPropertyToTerraform(struct!.consolidation),
   }
 }
 
 
-export function awsCustomerprofilesDomainAutoMergingPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.AutoMergingPropertyOutputReference | AwsCustomerprofilesDomain.AutoMergingProperty): any {
+export function tfDomainAutoMergingPropertyToHclTerraform(struct?: TfDomain.AutoMergingPropertyOutputReference | TfDomain.AutoMergingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,13 +471,13 @@ export function awsCustomerprofilesDomainAutoMergingPropertyToHclTerraform(struc
       storageClassType: "number",
     },
     conflict_resolution: {
-      value: awsCustomerprofilesDomainMatchingAutoMergingConflictResolutionPropertyToHclTerraform(struct!.conflictResolution),
+      value: tfDomainMatchingAutoMergingConflictResolutionPropertyToHclTerraform(struct!.conflictResolution),
       isBlock: true,
       type: "list",
       storageClassType: "MatchingAutoMergingConflictResolutionPropertyList",
     },
     consolidation: {
-      value: awsCustomerprofilesDomainConsolidationPropertyToHclTerraform(struct!.consolidation),
+      value: tfDomainConsolidationPropertyToHclTerraform(struct!.consolidation),
       isBlock: true,
       type: "list",
       storageClassType: "ConsolidationPropertyList",
@@ -489,7 +489,7 @@ export function awsCustomerprofilesDomainAutoMergingPropertyToHclTerraform(struc
 }
 
 
-export function awsCustomerprofilesDomainMatchingExportingConfigS3ExportingPropertyToTerraform(struct?: AwsCustomerprofilesDomain.MatchingExportingConfigS3ExportingPropertyOutputReference | AwsCustomerprofilesDomain.MatchingExportingConfigS3ExportingProperty): any {
+export function tfDomainMatchingExportingConfigS3ExportingPropertyToTerraform(struct?: TfDomain.MatchingExportingConfigS3ExportingPropertyOutputReference | TfDomain.MatchingExportingConfigS3ExportingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,7 +501,7 @@ export function awsCustomerprofilesDomainMatchingExportingConfigS3ExportingPrope
 }
 
 
-export function awsCustomerprofilesDomainMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.MatchingExportingConfigS3ExportingPropertyOutputReference | AwsCustomerprofilesDomain.MatchingExportingConfigS3ExportingProperty): any {
+export function tfDomainMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct?: TfDomain.MatchingExportingConfigS3ExportingPropertyOutputReference | TfDomain.MatchingExportingConfigS3ExportingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,25 +526,25 @@ export function awsCustomerprofilesDomainMatchingExportingConfigS3ExportingPrope
 }
 
 
-export function awsCustomerprofilesDomainMatchingExportingConfigPropertyToTerraform(struct?: AwsCustomerprofilesDomain.MatchingExportingConfigPropertyOutputReference | AwsCustomerprofilesDomain.MatchingExportingConfigProperty): any {
+export function tfDomainMatchingExportingConfigPropertyToTerraform(struct?: TfDomain.MatchingExportingConfigPropertyOutputReference | TfDomain.MatchingExportingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_exporting: awsCustomerprofilesDomainMatchingExportingConfigS3ExportingPropertyToTerraform(struct!.s3Exporting),
+    s3_exporting: tfDomainMatchingExportingConfigS3ExportingPropertyToTerraform(struct!.s3Exporting),
   }
 }
 
 
-export function awsCustomerprofilesDomainMatchingExportingConfigPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.MatchingExportingConfigPropertyOutputReference | AwsCustomerprofilesDomain.MatchingExportingConfigProperty): any {
+export function tfDomainMatchingExportingConfigPropertyToHclTerraform(struct?: TfDomain.MatchingExportingConfigPropertyOutputReference | TfDomain.MatchingExportingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_exporting: {
-      value: awsCustomerprofilesDomainMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct!.s3Exporting),
+      value: tfDomainMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct!.s3Exporting),
       isBlock: true,
       type: "list",
       storageClassType: "MatchingExportingConfigS3ExportingPropertyList",
@@ -556,7 +556,7 @@ export function awsCustomerprofilesDomainMatchingExportingConfigPropertyToHclTer
 }
 
 
-export function awsCustomerprofilesDomainJobSchedulePropertyToTerraform(struct?: AwsCustomerprofilesDomain.JobSchedulePropertyOutputReference | AwsCustomerprofilesDomain.JobScheduleProperty): any {
+export function tfDomainJobSchedulePropertyToTerraform(struct?: TfDomain.JobSchedulePropertyOutputReference | TfDomain.JobScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function awsCustomerprofilesDomainJobSchedulePropertyToTerraform(struct?:
 }
 
 
-export function awsCustomerprofilesDomainJobSchedulePropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.JobSchedulePropertyOutputReference | AwsCustomerprofilesDomain.JobScheduleProperty): any {
+export function tfDomainJobSchedulePropertyToHclTerraform(struct?: TfDomain.JobSchedulePropertyOutputReference | TfDomain.JobScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,21 +593,21 @@ export function awsCustomerprofilesDomainJobSchedulePropertyToHclTerraform(struc
 }
 
 
-export function awsCustomerprofilesDomainMatchingPropertyToTerraform(struct?: AwsCustomerprofilesDomain.MatchingPropertyOutputReference | AwsCustomerprofilesDomain.MatchingProperty): any {
+export function tfDomainMatchingPropertyToTerraform(struct?: TfDomain.MatchingPropertyOutputReference | TfDomain.MatchingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    auto_merging: awsCustomerprofilesDomainAutoMergingPropertyToTerraform(struct!.autoMerging),
-    exporting_config: awsCustomerprofilesDomainMatchingExportingConfigPropertyToTerraform(struct!.exportingConfig),
-    job_schedule: awsCustomerprofilesDomainJobSchedulePropertyToTerraform(struct!.jobSchedule),
+    auto_merging: tfDomainAutoMergingPropertyToTerraform(struct!.autoMerging),
+    exporting_config: tfDomainMatchingExportingConfigPropertyToTerraform(struct!.exportingConfig),
+    job_schedule: tfDomainJobSchedulePropertyToTerraform(struct!.jobSchedule),
   }
 }
 
 
-export function awsCustomerprofilesDomainMatchingPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.MatchingPropertyOutputReference | AwsCustomerprofilesDomain.MatchingProperty): any {
+export function tfDomainMatchingPropertyToHclTerraform(struct?: TfDomain.MatchingPropertyOutputReference | TfDomain.MatchingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,19 +620,19 @@ export function awsCustomerprofilesDomainMatchingPropertyToHclTerraform(struct?:
       storageClassType: "boolean",
     },
     auto_merging: {
-      value: awsCustomerprofilesDomainAutoMergingPropertyToHclTerraform(struct!.autoMerging),
+      value: tfDomainAutoMergingPropertyToHclTerraform(struct!.autoMerging),
       isBlock: true,
       type: "list",
       storageClassType: "AutoMergingPropertyList",
     },
     exporting_config: {
-      value: awsCustomerprofilesDomainMatchingExportingConfigPropertyToHclTerraform(struct!.exportingConfig),
+      value: tfDomainMatchingExportingConfigPropertyToHclTerraform(struct!.exportingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "MatchingExportingConfigPropertyList",
     },
     job_schedule: {
-      value: awsCustomerprofilesDomainJobSchedulePropertyToHclTerraform(struct!.jobSchedule),
+      value: tfDomainJobSchedulePropertyToHclTerraform(struct!.jobSchedule),
       isBlock: true,
       type: "list",
       storageClassType: "JobSchedulePropertyList",
@@ -644,7 +644,7 @@ export function awsCustomerprofilesDomainMatchingPropertyToHclTerraform(struct?:
 }
 
 
-export function awsCustomerprofilesDomainAttributeTypesSelectorPropertyToTerraform(struct?: AwsCustomerprofilesDomain.AttributeTypesSelectorPropertyOutputReference | AwsCustomerprofilesDomain.AttributeTypesSelectorProperty): any {
+export function tfDomainAttributeTypesSelectorPropertyToTerraform(struct?: TfDomain.AttributeTypesSelectorPropertyOutputReference | TfDomain.AttributeTypesSelectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function awsCustomerprofilesDomainAttributeTypesSelectorPropertyToTerrafo
 }
 
 
-export function awsCustomerprofilesDomainAttributeTypesSelectorPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.AttributeTypesSelectorPropertyOutputReference | AwsCustomerprofilesDomain.AttributeTypesSelectorProperty): any {
+export function tfDomainAttributeTypesSelectorPropertyToHclTerraform(struct?: TfDomain.AttributeTypesSelectorPropertyOutputReference | TfDomain.AttributeTypesSelectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -695,7 +695,7 @@ export function awsCustomerprofilesDomainAttributeTypesSelectorPropertyToHclTerr
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingConflictResolutionPropertyToTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingConflictResolutionPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingConflictResolutionProperty): any {
+export function tfDomainRuleBasedMatchingConflictResolutionPropertyToTerraform(struct?: TfDomain.RuleBasedMatchingConflictResolutionPropertyOutputReference | TfDomain.RuleBasedMatchingConflictResolutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -707,7 +707,7 @@ export function awsCustomerprofilesDomainRuleBasedMatchingConflictResolutionProp
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingConflictResolutionPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingConflictResolutionPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingConflictResolutionProperty): any {
+export function tfDomainRuleBasedMatchingConflictResolutionPropertyToHclTerraform(struct?: TfDomain.RuleBasedMatchingConflictResolutionPropertyOutputReference | TfDomain.RuleBasedMatchingConflictResolutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function awsCustomerprofilesDomainRuleBasedMatchingConflictResolutionProp
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigS3ExportingPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigS3ExportingProperty): any {
+export function tfDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToTerraform(struct?: TfDomain.RuleBasedMatchingExportingConfigS3ExportingPropertyOutputReference | TfDomain.RuleBasedMatchingExportingConfigS3ExportingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -744,7 +744,7 @@ export function awsCustomerprofilesDomainRuleBasedMatchingExportingConfigS3Expor
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigS3ExportingPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigS3ExportingProperty): any {
+export function tfDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct?: TfDomain.RuleBasedMatchingExportingConfigS3ExportingPropertyOutputReference | TfDomain.RuleBasedMatchingExportingConfigS3ExportingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,25 +769,25 @@ export function awsCustomerprofilesDomainRuleBasedMatchingExportingConfigS3Expor
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingExportingConfigPropertyToTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigProperty): any {
+export function tfDomainRuleBasedMatchingExportingConfigPropertyToTerraform(struct?: TfDomain.RuleBasedMatchingExportingConfigPropertyOutputReference | TfDomain.RuleBasedMatchingExportingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_exporting: awsCustomerprofilesDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToTerraform(struct!.s3Exporting),
+    s3_exporting: tfDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToTerraform(struct!.s3Exporting),
   }
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingExportingConfigPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingExportingConfigProperty): any {
+export function tfDomainRuleBasedMatchingExportingConfigPropertyToHclTerraform(struct?: TfDomain.RuleBasedMatchingExportingConfigPropertyOutputReference | TfDomain.RuleBasedMatchingExportingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_exporting: {
-      value: awsCustomerprofilesDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct!.s3Exporting),
+      value: tfDomainRuleBasedMatchingExportingConfigS3ExportingPropertyToHclTerraform(struct!.s3Exporting),
       isBlock: true,
       type: "list",
       storageClassType: "RuleBasedMatchingExportingConfigS3ExportingPropertyList",
@@ -799,7 +799,7 @@ export function awsCustomerprofilesDomainRuleBasedMatchingExportingConfigPropert
 }
 
 
-export function awsCustomerprofilesDomainMatchingRulesPropertyToTerraform(struct?: AwsCustomerprofilesDomain.MatchingRulesProperty | cdktn.IResolvable): any {
+export function tfDomainMatchingRulesPropertyToTerraform(struct?: TfDomain.MatchingRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -810,7 +810,7 @@ export function awsCustomerprofilesDomainMatchingRulesPropertyToTerraform(struct
 }
 
 
-export function awsCustomerprofilesDomainMatchingRulesPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.MatchingRulesProperty | cdktn.IResolvable): any {
+export function tfDomainMatchingRulesPropertyToHclTerraform(struct?: TfDomain.MatchingRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -829,7 +829,7 @@ export function awsCustomerprofilesDomainMatchingRulesPropertyToHclTerraform(str
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingPropertyToTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingProperty): any {
+export function tfDomainRuleBasedMatchingPropertyToTerraform(struct?: TfDomain.RuleBasedMatchingPropertyOutputReference | TfDomain.RuleBasedMatchingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -839,15 +839,15 @@ export function awsCustomerprofilesDomainRuleBasedMatchingPropertyToTerraform(st
     max_allowed_rule_level_for_matching: cdktn.numberToTerraform(struct!.maxAllowedRuleLevelForMatching),
     max_allowed_rule_level_for_merging: cdktn.numberToTerraform(struct!.maxAllowedRuleLevelForMerging),
     status: cdktn.stringToTerraform(struct!.status),
-    attribute_types_selector: awsCustomerprofilesDomainAttributeTypesSelectorPropertyToTerraform(struct!.attributeTypesSelector),
-    conflict_resolution: awsCustomerprofilesDomainRuleBasedMatchingConflictResolutionPropertyToTerraform(struct!.conflictResolution),
-    exporting_config: awsCustomerprofilesDomainRuleBasedMatchingExportingConfigPropertyToTerraform(struct!.exportingConfig),
-    matching_rules: cdktn.listMapper(awsCustomerprofilesDomainMatchingRulesPropertyToTerraform, true)(struct!.matchingRules),
+    attribute_types_selector: tfDomainAttributeTypesSelectorPropertyToTerraform(struct!.attributeTypesSelector),
+    conflict_resolution: tfDomainRuleBasedMatchingConflictResolutionPropertyToTerraform(struct!.conflictResolution),
+    exporting_config: tfDomainRuleBasedMatchingExportingConfigPropertyToTerraform(struct!.exportingConfig),
+    matching_rules: cdktn.listMapper(tfDomainMatchingRulesPropertyToTerraform, true)(struct!.matchingRules),
   }
 }
 
 
-export function awsCustomerprofilesDomainRuleBasedMatchingPropertyToHclTerraform(struct?: AwsCustomerprofilesDomain.RuleBasedMatchingPropertyOutputReference | AwsCustomerprofilesDomain.RuleBasedMatchingProperty): any {
+export function tfDomainRuleBasedMatchingPropertyToHclTerraform(struct?: TfDomain.RuleBasedMatchingPropertyOutputReference | TfDomain.RuleBasedMatchingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,25 +878,25 @@ export function awsCustomerprofilesDomainRuleBasedMatchingPropertyToHclTerraform
       storageClassType: "string",
     },
     attribute_types_selector: {
-      value: awsCustomerprofilesDomainAttributeTypesSelectorPropertyToHclTerraform(struct!.attributeTypesSelector),
+      value: tfDomainAttributeTypesSelectorPropertyToHclTerraform(struct!.attributeTypesSelector),
       isBlock: true,
       type: "list",
       storageClassType: "AttributeTypesSelectorPropertyList",
     },
     conflict_resolution: {
-      value: awsCustomerprofilesDomainRuleBasedMatchingConflictResolutionPropertyToHclTerraform(struct!.conflictResolution),
+      value: tfDomainRuleBasedMatchingConflictResolutionPropertyToHclTerraform(struct!.conflictResolution),
       isBlock: true,
       type: "list",
       storageClassType: "RuleBasedMatchingConflictResolutionPropertyList",
     },
     exporting_config: {
-      value: awsCustomerprofilesDomainRuleBasedMatchingExportingConfigPropertyToHclTerraform(struct!.exportingConfig),
+      value: tfDomainRuleBasedMatchingExportingConfigPropertyToHclTerraform(struct!.exportingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RuleBasedMatchingExportingConfigPropertyList",
     },
     matching_rules: {
-      value: cdktn.listMapperHcl(awsCustomerprofilesDomainMatchingRulesPropertyToHclTerraform, true)(struct!.matchingRules),
+      value: cdktn.listMapperHcl(tfDomainMatchingRulesPropertyToHclTerraform, true)(struct!.matchingRules),
       isBlock: true,
       type: "set",
       storageClassType: "MatchingRulesPropertyList",
@@ -908,14 +908,14 @@ export function awsCustomerprofilesDomainRuleBasedMatchingPropertyToHclTerraform
 }
 
 
-export namespace AwsCustomerprofilesDomain {
+export namespace TfDomain {
 export interface MatchingAutoMergingConflictResolutionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolving_model AwsCustomerprofilesDomain#conflict_resolving_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolving_model TfDomain#conflict_resolving_model}
   */
   readonly conflictResolvingModel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#source_name AwsCustomerprofilesDomain#source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#source_name TfDomain#source_name}
   */
   readonly sourceName?: string;
 }
@@ -988,7 +988,7 @@ export class MatchingAutoMergingConflictResolutionPropertyOutputReference extend
 }
 export interface ConsolidationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#matching_attributes_list AwsCustomerprofilesDomain#matching_attributes_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#matching_attributes_list TfDomain#matching_attributes_list}
   */
   readonly matchingAttributesList: string[][] | cdktn.IResolvable;
 }
@@ -1039,23 +1039,23 @@ export class ConsolidationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AutoMergingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#enabled AwsCustomerprofilesDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#enabled TfDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#min_allowed_confidence_score_for_merging AwsCustomerprofilesDomain#min_allowed_confidence_score_for_merging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#min_allowed_confidence_score_for_merging TfDomain#min_allowed_confidence_score_for_merging}
   */
   readonly minAllowedConfidenceScoreForMerging?: number;
   /**
   * conflict_resolution block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolution AwsCustomerprofilesDomain#conflict_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolution TfDomain#conflict_resolution}
   */
   readonly conflictResolution?: MatchingAutoMergingConflictResolutionProperty;
   /**
   * consolidation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#consolidation AwsCustomerprofilesDomain#consolidation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#consolidation TfDomain#consolidation}
   */
   readonly consolidation?: ConsolidationProperty;
 }
@@ -1172,11 +1172,11 @@ export class AutoMergingPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MatchingExportingConfigS3ExportingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_bucket_name AwsCustomerprofilesDomain#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_bucket_name TfDomain#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_key_name AwsCustomerprofilesDomain#s3_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_key_name TfDomain#s3_key_name}
   */
   readonly s3KeyName?: string;
 }
@@ -1251,7 +1251,7 @@ export interface MatchingExportingConfigProperty {
   /**
   * s3_exporting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_exporting AwsCustomerprofilesDomain#s3_exporting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_exporting TfDomain#s3_exporting}
   */
   readonly s3Exporting?: MatchingExportingConfigS3ExportingProperty;
 }
@@ -1305,11 +1305,11 @@ export class MatchingExportingConfigPropertyOutputReference extends cdktn.Comple
 }
 export interface JobScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#day_of_the_week AwsCustomerprofilesDomain#day_of_the_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#day_of_the_week TfDomain#day_of_the_week}
   */
   readonly dayOfTheWeek: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#time AwsCustomerprofilesDomain#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#time TfDomain#time}
   */
   readonly time: string;
 }
@@ -1379,25 +1379,25 @@ export class JobSchedulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MatchingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#enabled AwsCustomerprofilesDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#enabled TfDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
   * auto_merging block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#auto_merging AwsCustomerprofilesDomain#auto_merging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#auto_merging TfDomain#auto_merging}
   */
   readonly autoMerging?: AutoMergingProperty;
   /**
   * exporting_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#exporting_config AwsCustomerprofilesDomain#exporting_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#exporting_config TfDomain#exporting_config}
   */
   readonly exportingConfig?: MatchingExportingConfigProperty;
   /**
   * job_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#job_schedule AwsCustomerprofilesDomain#job_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#job_schedule TfDomain#job_schedule}
   */
   readonly jobSchedule?: JobScheduleProperty;
 }
@@ -1514,19 +1514,19 @@ export class MatchingPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AttributeTypesSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#address AwsCustomerprofilesDomain#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#address TfDomain#address}
   */
   readonly address?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#attribute_matching_model AwsCustomerprofilesDomain#attribute_matching_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#attribute_matching_model TfDomain#attribute_matching_model}
   */
   readonly attributeMatchingModel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#email_address AwsCustomerprofilesDomain#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#email_address TfDomain#email_address}
   */
   readonly emailAddress?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#phone_number AwsCustomerprofilesDomain#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#phone_number TfDomain#phone_number}
   */
   readonly phoneNumber?: string[];
 }
@@ -1643,11 +1643,11 @@ export class AttributeTypesSelectorPropertyOutputReference extends cdktn.Complex
 }
 export interface RuleBasedMatchingConflictResolutionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolving_model AwsCustomerprofilesDomain#conflict_resolving_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolving_model TfDomain#conflict_resolving_model}
   */
   readonly conflictResolvingModel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#source_name AwsCustomerprofilesDomain#source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#source_name TfDomain#source_name}
   */
   readonly sourceName?: string;
 }
@@ -1720,11 +1720,11 @@ export class RuleBasedMatchingConflictResolutionPropertyOutputReference extends 
 }
 export interface RuleBasedMatchingExportingConfigS3ExportingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_bucket_name AwsCustomerprofilesDomain#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_bucket_name TfDomain#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_key_name AwsCustomerprofilesDomain#s3_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_key_name TfDomain#s3_key_name}
   */
   readonly s3KeyName?: string;
 }
@@ -1799,7 +1799,7 @@ export interface RuleBasedMatchingExportingConfigProperty {
   /**
   * s3_exporting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_exporting AwsCustomerprofilesDomain#s3_exporting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#s3_exporting TfDomain#s3_exporting}
   */
   readonly s3Exporting?: RuleBasedMatchingExportingConfigS3ExportingProperty;
 }
@@ -1853,7 +1853,7 @@ export class RuleBasedMatchingExportingConfigPropertyOutputReference extends cdk
 }
 export interface MatchingRulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#rule AwsCustomerprofilesDomain#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#rule TfDomain#rule}
   */
   readonly rule: string[];
 }
@@ -1936,43 +1936,43 @@ export class MatchingRulesPropertyList extends cdktn.ComplexList {
 }
 export interface RuleBasedMatchingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#enabled AwsCustomerprofilesDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#enabled TfDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#max_allowed_rule_level_for_matching AwsCustomerprofilesDomain#max_allowed_rule_level_for_matching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#max_allowed_rule_level_for_matching TfDomain#max_allowed_rule_level_for_matching}
   */
   readonly maxAllowedRuleLevelForMatching?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#max_allowed_rule_level_for_merging AwsCustomerprofilesDomain#max_allowed_rule_level_for_merging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#max_allowed_rule_level_for_merging TfDomain#max_allowed_rule_level_for_merging}
   */
   readonly maxAllowedRuleLevelForMerging?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#status AwsCustomerprofilesDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#status TfDomain#status}
   */
   readonly status?: string;
   /**
   * attribute_types_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#attribute_types_selector AwsCustomerprofilesDomain#attribute_types_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#attribute_types_selector TfDomain#attribute_types_selector}
   */
   readonly attributeTypesSelector?: AttributeTypesSelectorProperty;
   /**
   * conflict_resolution block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolution AwsCustomerprofilesDomain#conflict_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#conflict_resolution TfDomain#conflict_resolution}
   */
   readonly conflictResolution?: RuleBasedMatchingConflictResolutionProperty;
   /**
   * exporting_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#exporting_config AwsCustomerprofilesDomain#exporting_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#exporting_config TfDomain#exporting_config}
   */
   readonly exportingConfig?: RuleBasedMatchingExportingConfigProperty;
   /**
   * matching_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#matching_rules AwsCustomerprofilesDomain#matching_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_domain#matching_rules TfDomain#matching_rules}
   */
   readonly matchingRules?: MatchingRulesProperty[] | cdktn.IResolvable;
 }

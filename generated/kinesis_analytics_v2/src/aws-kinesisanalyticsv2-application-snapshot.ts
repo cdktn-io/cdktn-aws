@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKinesisanalyticsv2ApplicationSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#application_name AwsKinesisanalyticsv2ApplicationSnapshot#application_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#application_name TfApplicationSnapshot#application_name}
   */
   readonly applicationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#id AwsKinesisanalyticsv2ApplicationSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#id TfApplicationSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface AwsKinesisanalyticsv2ApplicationSnapshotConfig extends cdktn.Te
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#region AwsKinesisanalyticsv2ApplicationSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#region TfApplicationSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#snapshot_name AwsKinesisanalyticsv2ApplicationSnapshot#snapshot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#snapshot_name TfApplicationSnapshot#snapshot_name}
   */
   readonly snapshotName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#timeouts AwsKinesisanalyticsv2ApplicationSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#timeouts TfApplicationSnapshot#timeouts}
   */
-  readonly timeouts?: AwsKinesisanalyticsv2ApplicationSnapshot.TimeoutsProperty;
+  readonly timeouts?: TfApplicationSnapshot.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot aws_kinesisanalyticsv2_application_snapshot}
 */
-export class AwsKinesisanalyticsv2ApplicationSnapshot extends cdktn.TerraformResource {
+export class TfApplicationSnapshot extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsKinesisanalyticsv2ApplicationSnapshot extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKinesisanalyticsv2ApplicationSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplicationSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKinesisanalyticsv2ApplicationSnapshot to import
-  * @param importFromId The id of the existing AwsKinesisanalyticsv2ApplicationSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKinesisanalyticsv2ApplicationSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the TfApplicationSnapshot to import
+  * @param importFromId The id of the existing TfApplicationSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplicationSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kinesisanalyticsv2_application_snapshot", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsKinesisanalyticsv2ApplicationSnapshot extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKinesisanalyticsv2ApplicationSnapshotConfig
+  * @param options TfApplicationSnapshotConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsKinesisanalyticsv2ApplicationSnapshotConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kinesisanalyticsv2_application_snapshot',
       terraformGeneratorMetadata: {
@@ -166,11 +166,11 @@ export class AwsKinesisanalyticsv2ApplicationSnapshot extends cdktn.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsKinesisanalyticsv2ApplicationSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfApplicationSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsKinesisanalyticsv2ApplicationSnapshot.TimeoutsProperty) {
+  public putTimeouts(value: TfApplicationSnapshot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -191,7 +191,7 @@ export class AwsKinesisanalyticsv2ApplicationSnapshot extends cdktn.TerraformRes
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       snapshot_name: cdktn.stringToTerraform(this._snapshotName),
-      timeouts: awsKinesisanalyticsv2ApplicationSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfApplicationSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -222,10 +222,10 @@ export class AwsKinesisanalyticsv2ApplicationSnapshot extends cdktn.TerraformRes
         storageClassType: "string",
       },
       timeouts: {
-        value: awsKinesisanalyticsv2ApplicationSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfApplicationSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsKinesisanalyticsv2ApplicationSnapshot.TimeoutsProperty",
+        storageClassType: "TfApplicationSnapshot.TimeoutsProperty",
       },
     };
 
@@ -234,7 +234,7 @@ export class AwsKinesisanalyticsv2ApplicationSnapshot extends cdktn.TerraformRes
   }
 }
 
-export function awsKinesisanalyticsv2ApplicationSnapshotTimeoutsPropertyToTerraform(struct?: AwsKinesisanalyticsv2ApplicationSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationSnapshotTimeoutsPropertyToTerraform(struct?: TfApplicationSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function awsKinesisanalyticsv2ApplicationSnapshotTimeoutsPropertyToTerraf
 }
 
 
-export function awsKinesisanalyticsv2ApplicationSnapshotTimeoutsPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2ApplicationSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationSnapshotTimeoutsPropertyToHclTerraform(struct?: TfApplicationSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,14 +271,14 @@ export function awsKinesisanalyticsv2ApplicationSnapshotTimeoutsPropertyToHclTer
 }
 
 
-export namespace AwsKinesisanalyticsv2ApplicationSnapshot {
+export namespace TfApplicationSnapshot {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#create AwsKinesisanalyticsv2ApplicationSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#create TfApplicationSnapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#delete AwsKinesisanalyticsv2ApplicationSnapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application_snapshot#delete TfApplicationSnapshot#delete}
   */
   readonly delete?: string;
 }

@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchLogDestinationPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfDestinationPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#access_policy AwsCloudwatchLogDestinationPolicy#access_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#access_policy TfDestinationPolicy#access_policy}
   */
   readonly accessPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#destination_name AwsCloudwatchLogDestinationPolicy#destination_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#destination_name TfDestinationPolicy#destination_name}
   */
   readonly destinationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#force_update AwsCloudwatchLogDestinationPolicy#force_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#force_update TfDestinationPolicy#force_update}
   */
   readonly forceUpdate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#id AwsCloudwatchLogDestinationPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#id TfDestinationPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface AwsCloudwatchLogDestinationPolicyConfig extends cdktn.Terraform
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#region AwsCloudwatchLogDestinationPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#region TfDestinationPolicy#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsCloudwatchLogDestinationPolicyConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy aws_cloudwatch_log_destination_policy}
 */
-export class AwsCloudwatchLogDestinationPolicy extends cdktn.TerraformResource {
+export class TfDestinationPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsCloudwatchLogDestinationPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchLogDestinationPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDestinationPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchLogDestinationPolicy to import
-  * @param importFromId The id of the existing AwsCloudwatchLogDestinationPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchLogDestinationPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfDestinationPolicy to import
+  * @param importFromId The id of the existing TfDestinationPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_destination_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDestinationPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_log_destination_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsCloudwatchLogDestinationPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchLogDestinationPolicyConfig
+  * @param options TfDestinationPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchLogDestinationPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfDestinationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_log_destination_policy',
       terraformGeneratorMetadata: {

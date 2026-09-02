@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSecurityhubSecurityControlsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSecurityControlsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_security_controls#region DataAwsSecurityhubSecurityControls#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_security_controls#region DataTfSecurityControls#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_security_controls#standards_arn DataAwsSecurityhubSecurityControls#standards_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_security_controls#standards_arn DataTfSecurityControls#standards_arn}
   */
   readonly standardsArn?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsSecurityhubSecurityControlsConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_security_controls aws_securityhub_security_controls}
 */
-export class DataAwsSecurityhubSecurityControls extends cdktn.TerraformDataSource {
+export class DataTfSecurityControls extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsSecurityhubSecurityControls extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSecurityhubSecurityControls resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSecurityControls resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSecurityhubSecurityControls to import
-  * @param importFromId The id of the existing DataAwsSecurityhubSecurityControls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_security_controls#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSecurityhubSecurityControls to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSecurityControls to import
+  * @param importFromId The id of the existing DataTfSecurityControls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_security_controls#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSecurityControls to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_security_controls", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsSecurityhubSecurityControls extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSecurityhubSecurityControlsConfig = {}
+  * @param options DataTfSecurityControlsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSecurityhubSecurityControlsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfSecurityControlsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_security_controls',
       terraformGeneratorMetadata: {
@@ -94,7 +94,7 @@ export class DataAwsSecurityhubSecurityControls extends cdktn.TerraformDataSourc
   }
 
   // security_control_definitions - computed: true, optional: false, required: false
-  private _securityControlDefinitions = new DataAwsSecurityhubSecurityControls.SecurityControlDefinitionsPropertyList(this, "security_control_definitions", false);
+  private _securityControlDefinitions = new DataTfSecurityControls.SecurityControlDefinitionsPropertyList(this, "security_control_definitions", false);
   public get securityControlDefinitions() {
     return this._securityControlDefinitions;
   }
@@ -147,7 +147,7 @@ export class DataAwsSecurityhubSecurityControls extends cdktn.TerraformDataSourc
   }
 }
 
-export function dataAwsSecurityhubSecurityControlsSecurityControlDefinitionsPropertyToTerraform(struct?: DataAwsSecurityhubSecurityControls.SecurityControlDefinitionsProperty): any {
+export function dataTfSecurityControlsSecurityControlDefinitionsPropertyToTerraform(struct?: DataTfSecurityControls.SecurityControlDefinitionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -157,7 +157,7 @@ export function dataAwsSecurityhubSecurityControlsSecurityControlDefinitionsProp
 }
 
 
-export function dataAwsSecurityhubSecurityControlsSecurityControlDefinitionsPropertyToHclTerraform(struct?: DataAwsSecurityhubSecurityControls.SecurityControlDefinitionsProperty): any {
+export function dataTfSecurityControlsSecurityControlDefinitionsPropertyToHclTerraform(struct?: DataTfSecurityControls.SecurityControlDefinitionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -168,7 +168,7 @@ export function dataAwsSecurityhubSecurityControlsSecurityControlDefinitionsProp
 }
 
 
-export namespace DataAwsSecurityhubSecurityControls {
+export namespace DataTfSecurityControls {
 export interface SecurityControlDefinitionsProperty {
 }
 export class SecurityControlDefinitionsPropertyOutputReference extends cdktn.ComplexObject {

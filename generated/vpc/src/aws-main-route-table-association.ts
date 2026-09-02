@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMainRouteTableAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfMainRouteTableAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#id AwsMainRouteTableAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#id TfMainRouteTableAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,29 +16,29 @@ export interface AwsMainRouteTableAssociationConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#region AwsMainRouteTableAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#region TfMainRouteTableAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#route_table_id AwsMainRouteTableAssociation#route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#route_table_id TfMainRouteTableAssociation#route_table_id}
   */
   readonly routeTableId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#vpc_id AwsMainRouteTableAssociation#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#vpc_id TfMainRouteTableAssociation#vpc_id}
   */
   readonly vpcId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#timeouts AwsMainRouteTableAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#timeouts TfMainRouteTableAssociation#timeouts}
   */
-  readonly timeouts?: AwsMainRouteTableAssociation.TimeoutsProperty;
+  readonly timeouts?: TfMainRouteTableAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association aws_main_route_table_association}
 */
-export class AwsMainRouteTableAssociation extends cdktn.TerraformResource {
+export class TfMainRouteTableAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsMainRouteTableAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMainRouteTableAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMainRouteTableAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMainRouteTableAssociation to import
-  * @param importFromId The id of the existing AwsMainRouteTableAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMainRouteTableAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfMainRouteTableAssociation to import
+  * @param importFromId The id of the existing TfMainRouteTableAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMainRouteTableAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_main_route_table_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsMainRouteTableAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMainRouteTableAssociationConfig
+  * @param options TfMainRouteTableAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMainRouteTableAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfMainRouteTableAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_main_route_table_association',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class AwsMainRouteTableAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMainRouteTableAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMainRouteTableAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMainRouteTableAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfMainRouteTableAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -186,7 +186,7 @@ export class AwsMainRouteTableAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       route_table_id: cdktn.stringToTerraform(this._routeTableId),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: awsMainRouteTableAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfMainRouteTableAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -217,10 +217,10 @@ export class AwsMainRouteTableAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsMainRouteTableAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMainRouteTableAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMainRouteTableAssociation.TimeoutsProperty",
+        storageClassType: "TfMainRouteTableAssociation.TimeoutsProperty",
       },
     };
 
@@ -229,7 +229,7 @@ export class AwsMainRouteTableAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsMainRouteTableAssociationTimeoutsPropertyToTerraform(struct?: AwsMainRouteTableAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMainRouteTableAssociationTimeoutsPropertyToTerraform(struct?: TfMainRouteTableAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function awsMainRouteTableAssociationTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsMainRouteTableAssociationTimeoutsPropertyToHclTerraform(struct?: AwsMainRouteTableAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMainRouteTableAssociationTimeoutsPropertyToHclTerraform(struct?: TfMainRouteTableAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,18 +273,18 @@ export function awsMainRouteTableAssociationTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsMainRouteTableAssociation {
+export namespace TfMainRouteTableAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#create AwsMainRouteTableAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#create TfMainRouteTableAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#delete AwsMainRouteTableAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#delete TfMainRouteTableAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#update AwsMainRouteTableAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/main_route_table_association#update TfMainRouteTableAssociation#update}
   */
   readonly update?: string;
 }

@@ -5,32 +5,32 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamServiceLinkedRoleConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceLinkedRoleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#aws_service_name AwsIamServiceLinkedRole#aws_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#aws_service_name TfServiceLinkedRole#aws_service_name}
   */
   readonly awsServiceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#custom_suffix AwsIamServiceLinkedRole#custom_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#custom_suffix TfServiceLinkedRole#custom_suffix}
   */
   readonly customSuffix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#description AwsIamServiceLinkedRole#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#description TfServiceLinkedRole#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#id AwsIamServiceLinkedRole#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#id TfServiceLinkedRole#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#tags AwsIamServiceLinkedRole#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#tags TfServiceLinkedRole#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#tags_all AwsIamServiceLinkedRole#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#tags_all TfServiceLinkedRole#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -38,7 +38,7 @@ export interface AwsIamServiceLinkedRoleConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role aws_iam_service_linked_role}
 */
-export class AwsIamServiceLinkedRole extends cdktn.TerraformResource {
+export class TfServiceLinkedRole extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsIamServiceLinkedRole extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamServiceLinkedRole resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServiceLinkedRole resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamServiceLinkedRole to import
-  * @param importFromId The id of the existing AwsIamServiceLinkedRole that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamServiceLinkedRole to import is found
+  * @param importToId The construct id used in the generated config for the TfServiceLinkedRole to import
+  * @param importFromId The id of the existing TfServiceLinkedRole that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_service_linked_role#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServiceLinkedRole to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_service_linked_role", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsIamServiceLinkedRole extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamServiceLinkedRoleConfig
+  * @param options TfServiceLinkedRoleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamServiceLinkedRoleConfig) {
+  public constructor(scope: Construct, id: string, config: TfServiceLinkedRoleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_service_linked_role',
       terraformGeneratorMetadata: {

@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCognitoIdentityPoolProviderPrincipalTagConfig extends cdktn.TerraformMetaArguments {
+export interface TfPoolProviderPrincipalTagConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#id AwsCognitoIdentityPoolProviderPrincipalTag#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#id TfPoolProviderPrincipalTag#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#identity_pool_id AwsCognitoIdentityPoolProviderPrincipalTag#identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#identity_pool_id TfPoolProviderPrincipalTag#identity_pool_id}
   */
   readonly identityPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#identity_provider_name AwsCognitoIdentityPoolProviderPrincipalTag#identity_provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#identity_provider_name TfPoolProviderPrincipalTag#identity_provider_name}
   */
   readonly identityProviderName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#principal_tags AwsCognitoIdentityPoolProviderPrincipalTag#principal_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#principal_tags TfPoolProviderPrincipalTag#principal_tags}
   */
   readonly principalTags?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#region AwsCognitoIdentityPoolProviderPrincipalTag#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#region TfPoolProviderPrincipalTag#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#use_defaults AwsCognitoIdentityPoolProviderPrincipalTag#use_defaults}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#use_defaults TfPoolProviderPrincipalTag#use_defaults}
   */
   readonly useDefaults?: boolean | cdktn.IResolvable;
 }
@@ -40,7 +40,7 @@ export interface AwsCognitoIdentityPoolProviderPrincipalTagConfig extends cdktn.
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag aws_cognito_identity_pool_provider_principal_tag}
 */
-export class AwsCognitoIdentityPoolProviderPrincipalTag extends cdktn.TerraformResource {
+export class TfPoolProviderPrincipalTag extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsCognitoIdentityPoolProviderPrincipalTag extends cdktn.TerraformR
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCognitoIdentityPoolProviderPrincipalTag resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPoolProviderPrincipalTag resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCognitoIdentityPoolProviderPrincipalTag to import
-  * @param importFromId The id of the existing AwsCognitoIdentityPoolProviderPrincipalTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCognitoIdentityPoolProviderPrincipalTag to import is found
+  * @param importToId The construct id used in the generated config for the TfPoolProviderPrincipalTag to import
+  * @param importFromId The id of the existing TfPoolProviderPrincipalTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_provider_principal_tag#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPoolProviderPrincipalTag to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_identity_pool_provider_principal_tag", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsCognitoIdentityPoolProviderPrincipalTag extends cdktn.TerraformR
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCognitoIdentityPoolProviderPrincipalTagConfig
+  * @param options TfPoolProviderPrincipalTagConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCognitoIdentityPoolProviderPrincipalTagConfig) {
+  public constructor(scope: Construct, id: string, config: TfPoolProviderPrincipalTagConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_identity_pool_provider_principal_tag',
       terraformGeneratorMetadata: {

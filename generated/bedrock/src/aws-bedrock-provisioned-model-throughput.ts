@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockProvisionedModelThroughputConfig extends cdktn.TerraformMetaArguments {
+export interface TfProvisionedModelThroughputConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#commitment_duration AwsBedrockProvisionedModelThroughput#commitment_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#commitment_duration TfProvisionedModelThroughput#commitment_duration}
   */
   readonly commitmentDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#model_arn AwsBedrockProvisionedModelThroughput#model_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#model_arn TfProvisionedModelThroughput#model_arn}
   */
   readonly modelArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#model_units AwsBedrockProvisionedModelThroughput#model_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#model_units TfProvisionedModelThroughput#model_units}
   */
   readonly modelUnits: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#provisioned_model_name AwsBedrockProvisionedModelThroughput#provisioned_model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#provisioned_model_name TfProvisionedModelThroughput#provisioned_model_name}
   */
   readonly provisionedModelName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#region AwsBedrockProvisionedModelThroughput#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#region TfProvisionedModelThroughput#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#tags AwsBedrockProvisionedModelThroughput#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#tags TfProvisionedModelThroughput#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#timeouts AwsBedrockProvisionedModelThroughput#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#timeouts TfProvisionedModelThroughput#timeouts}
   */
-  readonly timeouts?: AwsBedrockProvisionedModelThroughput.TimeoutsProperty;
+  readonly timeouts?: TfProvisionedModelThroughput.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput aws_bedrock_provisioned_model_throughput}
 */
-export class AwsBedrockProvisionedModelThroughput extends cdktn.TerraformResource {
+export class TfProvisionedModelThroughput extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsBedrockProvisionedModelThroughput extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockProvisionedModelThroughput resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProvisionedModelThroughput resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockProvisionedModelThroughput to import
-  * @param importFromId The id of the existing AwsBedrockProvisionedModelThroughput that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockProvisionedModelThroughput to import is found
+  * @param importToId The construct id used in the generated config for the TfProvisionedModelThroughput to import
+  * @param importFromId The id of the existing TfProvisionedModelThroughput that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProvisionedModelThroughput to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_provisioned_model_throughput", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsBedrockProvisionedModelThroughput extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockProvisionedModelThroughputConfig
+  * @param options TfProvisionedModelThroughputConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockProvisionedModelThroughputConfig) {
+  public constructor(scope: Construct, id: string, config: TfProvisionedModelThroughputConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_provisioned_model_throughput',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class AwsBedrockProvisionedModelThroughput extends cdktn.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockProvisionedModelThroughput.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfProvisionedModelThroughput.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockProvisionedModelThroughput.TimeoutsProperty) {
+  public putTimeouts(value: TfProvisionedModelThroughput.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -235,7 +235,7 @@ export class AwsBedrockProvisionedModelThroughput extends cdktn.TerraformResourc
       provisioned_model_name: cdktn.stringToTerraform(this._provisionedModelName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsBedrockProvisionedModelThroughputTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfProvisionedModelThroughputTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class AwsBedrockProvisionedModelThroughput extends cdktn.TerraformResourc
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsBedrockProvisionedModelThroughputTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfProvisionedModelThroughputTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockProvisionedModelThroughput.TimeoutsProperty",
+        storageClassType: "TfProvisionedModelThroughput.TimeoutsProperty",
       },
     };
 
@@ -290,7 +290,7 @@ export class AwsBedrockProvisionedModelThroughput extends cdktn.TerraformResourc
   }
 }
 
-export function awsBedrockProvisionedModelThroughputTimeoutsPropertyToTerraform(struct?: AwsBedrockProvisionedModelThroughput.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProvisionedModelThroughputTimeoutsPropertyToTerraform(struct?: TfProvisionedModelThroughput.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function awsBedrockProvisionedModelThroughputTimeoutsPropertyToTerraform(
 }
 
 
-export function awsBedrockProvisionedModelThroughputTimeoutsPropertyToHclTerraform(struct?: AwsBedrockProvisionedModelThroughput.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProvisionedModelThroughputTimeoutsPropertyToHclTerraform(struct?: TfProvisionedModelThroughput.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,12 +320,12 @@ export function awsBedrockProvisionedModelThroughputTimeoutsPropertyToHclTerrafo
 }
 
 
-export namespace AwsBedrockProvisionedModelThroughput {
+export namespace TfProvisionedModelThroughput {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#create AwsBedrockProvisionedModelThroughput#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_provisioned_model_throughput#create TfProvisionedModelThroughput#create}
   */
   readonly create?: string;
 }

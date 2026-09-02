@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsDatapipelinePipelineDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPipelineDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#id DataAwsDatapipelinePipelineDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#id DataTfPipelineDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#pipeline_id DataAwsDatapipelinePipelineDefinition#pipeline_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#pipeline_id DataTfPipelineDefinition#pipeline_id}
   */
   readonly pipelineId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#region DataAwsDatapipelinePipelineDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#region DataTfPipelineDefinition#region}
   */
   readonly region?: string;
   /**
   * parameter_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#parameter_value DataAwsDatapipelinePipelineDefinition#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#parameter_value DataTfPipelineDefinition#parameter_value}
   */
-  readonly parameterValue?: DataAwsDatapipelinePipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable;
+  readonly parameterValue?: DataTfPipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition aws_datapipeline_pipeline_definition}
 */
-export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSource {
+export class DataTfPipelineDefinition extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsDatapipelinePipelineDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPipelineDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsDatapipelinePipelineDefinition to import
-  * @param importFromId The id of the existing DataAwsDatapipelinePipelineDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsDatapipelinePipelineDefinition to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPipelineDefinition to import
+  * @param importFromId The id of the existing DataTfPipelineDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datapipeline_pipeline_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPipelineDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datapipeline_pipeline_definition", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsDatapipelinePipelineDefinitionConfig
+  * @param options DataTfPipelineDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsDatapipelinePipelineDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPipelineDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datapipeline_pipeline_definition',
       terraformGeneratorMetadata: {
@@ -109,7 +109,7 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
   }
 
   // parameter_object - computed: true, optional: false, required: false
-  private _parameterObject = new DataAwsDatapipelinePipelineDefinition.ParameterObjectPropertyList(this, "parameter_object", true);
+  private _parameterObject = new DataTfPipelineDefinition.ParameterObjectPropertyList(this, "parameter_object", true);
   public get parameterObject() {
     return this._parameterObject;
   }
@@ -128,7 +128,7 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
   }
 
   // pipeline_object - computed: true, optional: false, required: false
-  private _pipelineObject = new DataAwsDatapipelinePipelineDefinition.PipelineObjectPropertyList(this, "pipeline_object", true);
+  private _pipelineObject = new DataTfPipelineDefinition.PipelineObjectPropertyList(this, "pipeline_object", true);
   public get pipelineObject() {
     return this._pipelineObject;
   }
@@ -150,11 +150,11 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
   }
 
   // parameter_value - computed: false, optional: true, required: false
-  private _parameterValue = new DataAwsDatapipelinePipelineDefinition.ParameterValuePropertyList(this, "parameter_value", true);
+  private _parameterValue = new DataTfPipelineDefinition.ParameterValuePropertyList(this, "parameter_value", true);
   public get parameterValue() {
     return this._parameterValue;
   }
-  public putParameterValue(value: DataAwsDatapipelinePipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable) {
+  public putParameterValue(value: DataTfPipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable) {
     this._parameterValue.internalValue = value;
   }
   public resetParameterValue() {
@@ -174,7 +174,7 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
       id: cdktn.stringToTerraform(this._id),
       pipeline_id: cdktn.stringToTerraform(this._pipelineId),
       region: cdktn.stringToTerraform(this._region),
-      parameter_value: cdktn.listMapper(dataAwsDatapipelinePipelineDefinitionParameterValuePropertyToTerraform, true)(this._parameterValue.internalValue),
+      parameter_value: cdktn.listMapper(dataTfPipelineDefinitionParameterValuePropertyToTerraform, true)(this._parameterValue.internalValue),
     };
   }
 
@@ -199,10 +199,10 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
         storageClassType: "string",
       },
       parameter_value: {
-        value: cdktn.listMapperHcl(dataAwsDatapipelinePipelineDefinitionParameterValuePropertyToHclTerraform, true)(this._parameterValue.internalValue),
+        value: cdktn.listMapperHcl(dataTfPipelineDefinitionParameterValuePropertyToHclTerraform, true)(this._parameterValue.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsDatapipelinePipelineDefinition.ParameterValuePropertyList",
+        storageClassType: "DataTfPipelineDefinition.ParameterValuePropertyList",
       },
     };
 
@@ -211,7 +211,7 @@ export class DataAwsDatapipelinePipelineDefinition extends cdktn.TerraformDataSo
   }
 }
 
-export function dataAwsDatapipelinePipelineDefinitionAttributePropertyToTerraform(struct?: DataAwsDatapipelinePipelineDefinition.AttributeProperty): any {
+export function dataTfPipelineDefinitionAttributePropertyToTerraform(struct?: DataTfPipelineDefinition.AttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,7 +221,7 @@ export function dataAwsDatapipelinePipelineDefinitionAttributePropertyToTerrafor
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionAttributePropertyToHclTerraform(struct?: DataAwsDatapipelinePipelineDefinition.AttributeProperty): any {
+export function dataTfPipelineDefinitionAttributePropertyToHclTerraform(struct?: DataTfPipelineDefinition.AttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -232,7 +232,7 @@ export function dataAwsDatapipelinePipelineDefinitionAttributePropertyToHclTerra
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionParameterObjectPropertyToTerraform(struct?: DataAwsDatapipelinePipelineDefinition.ParameterObjectProperty): any {
+export function dataTfPipelineDefinitionParameterObjectPropertyToTerraform(struct?: DataTfPipelineDefinition.ParameterObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function dataAwsDatapipelinePipelineDefinitionParameterObjectPropertyToTe
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionParameterObjectPropertyToHclTerraform(struct?: DataAwsDatapipelinePipelineDefinition.ParameterObjectProperty): any {
+export function dataTfPipelineDefinitionParameterObjectPropertyToHclTerraform(struct?: DataTfPipelineDefinition.ParameterObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -253,7 +253,7 @@ export function dataAwsDatapipelinePipelineDefinitionParameterObjectPropertyToHc
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionFieldPropertyToTerraform(struct?: DataAwsDatapipelinePipelineDefinition.FieldProperty): any {
+export function dataTfPipelineDefinitionFieldPropertyToTerraform(struct?: DataTfPipelineDefinition.FieldProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function dataAwsDatapipelinePipelineDefinitionFieldPropertyToTerraform(st
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionFieldPropertyToHclTerraform(struct?: DataAwsDatapipelinePipelineDefinition.FieldProperty): any {
+export function dataTfPipelineDefinitionFieldPropertyToHclTerraform(struct?: DataTfPipelineDefinition.FieldProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataAwsDatapipelinePipelineDefinitionFieldPropertyToHclTerraform
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionPipelineObjectPropertyToTerraform(struct?: DataAwsDatapipelinePipelineDefinition.PipelineObjectProperty): any {
+export function dataTfPipelineDefinitionPipelineObjectPropertyToTerraform(struct?: DataTfPipelineDefinition.PipelineObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function dataAwsDatapipelinePipelineDefinitionPipelineObjectPropertyToTer
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionPipelineObjectPropertyToHclTerraform(struct?: DataAwsDatapipelinePipelineDefinition.PipelineObjectProperty): any {
+export function dataTfPipelineDefinitionPipelineObjectPropertyToHclTerraform(struct?: DataTfPipelineDefinition.PipelineObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function dataAwsDatapipelinePipelineDefinitionPipelineObjectPropertyToHcl
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionParameterValuePropertyToTerraform(struct?: DataAwsDatapipelinePipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
+export function dataTfPipelineDefinitionParameterValuePropertyToTerraform(struct?: DataTfPipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsDatapipelinePipelineDefinitionParameterValuePropertyToTer
 }
 
 
-export function dataAwsDatapipelinePipelineDefinitionParameterValuePropertyToHclTerraform(struct?: DataAwsDatapipelinePipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
+export function dataTfPipelineDefinitionParameterValuePropertyToHclTerraform(struct?: DataTfPipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function dataAwsDatapipelinePipelineDefinitionParameterValuePropertyToHcl
 }
 
 
-export namespace DataAwsDatapipelinePipelineDefinition {
+export namespace DataTfPipelineDefinition {
 export interface AttributeProperty {
 }
 export class AttributePropertyOutputReference extends cdktn.ComplexObject {

@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBatchJobQueueConfig extends cdktn.TerraformMetaArguments {
+export interface TfJobQueueConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#name AwsBatchJobQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#name TfJobQueue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#priority AwsBatchJobQueue#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#priority TfJobQueue#priority}
   */
   readonly priority: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#region AwsBatchJobQueue#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#region TfJobQueue#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#scheduling_policy_arn AwsBatchJobQueue#scheduling_policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#scheduling_policy_arn TfJobQueue#scheduling_policy_arn}
   */
   readonly schedulingPolicyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#state AwsBatchJobQueue#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#state TfJobQueue#state}
   */
   readonly state: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#tags AwsBatchJobQueue#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#tags TfJobQueue#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * compute_environment_order block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#compute_environment_order AwsBatchJobQueue#compute_environment_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#compute_environment_order TfJobQueue#compute_environment_order}
   */
-  readonly computeEnvironmentOrder?: AwsBatchJobQueue.ComputeEnvironmentOrderProperty[] | cdktn.IResolvable;
+  readonly computeEnvironmentOrder?: TfJobQueue.ComputeEnvironmentOrderProperty[] | cdktn.IResolvable;
   /**
   * job_state_time_limit_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#job_state_time_limit_action AwsBatchJobQueue#job_state_time_limit_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#job_state_time_limit_action TfJobQueue#job_state_time_limit_action}
   */
-  readonly jobStateTimeLimitAction?: AwsBatchJobQueue.JobStateTimeLimitActionProperty[] | cdktn.IResolvable;
+  readonly jobStateTimeLimitAction?: TfJobQueue.JobStateTimeLimitActionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#timeouts AwsBatchJobQueue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#timeouts TfJobQueue#timeouts}
   */
-  readonly timeouts?: AwsBatchJobQueue.TimeoutsProperty;
+  readonly timeouts?: TfJobQueue.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue aws_batch_job_queue}
 */
-export class AwsBatchJobQueue extends cdktn.TerraformResource {
+export class TfJobQueue extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBatchJobQueue resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfJobQueue resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBatchJobQueue to import
-  * @param importFromId The id of the existing AwsBatchJobQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBatchJobQueue to import is found
+  * @param importToId The construct id used in the generated config for the TfJobQueue to import
+  * @param importFromId The id of the existing TfJobQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfJobQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_batch_job_queue", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBatchJobQueueConfig
+  * @param options TfJobQueueConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBatchJobQueueConfig) {
+  public constructor(scope: Construct, id: string, config: TfJobQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_batch_job_queue',
       terraformGeneratorMetadata: {
@@ -222,11 +222,11 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
   }
 
   // compute_environment_order - computed: false, optional: true, required: false
-  private _computeEnvironmentOrder = new AwsBatchJobQueue.ComputeEnvironmentOrderPropertyList(this, "compute_environment_order", false);
+  private _computeEnvironmentOrder = new TfJobQueue.ComputeEnvironmentOrderPropertyList(this, "compute_environment_order", false);
   public get computeEnvironmentOrder() {
     return this._computeEnvironmentOrder;
   }
-  public putComputeEnvironmentOrder(value: AwsBatchJobQueue.ComputeEnvironmentOrderProperty[] | cdktn.IResolvable) {
+  public putComputeEnvironmentOrder(value: TfJobQueue.ComputeEnvironmentOrderProperty[] | cdktn.IResolvable) {
     this._computeEnvironmentOrder.internalValue = value;
   }
   public resetComputeEnvironmentOrder() {
@@ -238,11 +238,11 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
   }
 
   // job_state_time_limit_action - computed: false, optional: true, required: false
-  private _jobStateTimeLimitAction = new AwsBatchJobQueue.JobStateTimeLimitActionPropertyList(this, "job_state_time_limit_action", false);
+  private _jobStateTimeLimitAction = new TfJobQueue.JobStateTimeLimitActionPropertyList(this, "job_state_time_limit_action", false);
   public get jobStateTimeLimitAction() {
     return this._jobStateTimeLimitAction;
   }
-  public putJobStateTimeLimitAction(value: AwsBatchJobQueue.JobStateTimeLimitActionProperty[] | cdktn.IResolvable) {
+  public putJobStateTimeLimitAction(value: TfJobQueue.JobStateTimeLimitActionProperty[] | cdktn.IResolvable) {
     this._jobStateTimeLimitAction.internalValue = value;
   }
   public resetJobStateTimeLimitAction() {
@@ -254,11 +254,11 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBatchJobQueue.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfJobQueue.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBatchJobQueue.TimeoutsProperty) {
+  public putTimeouts(value: TfJobQueue.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -281,9 +281,9 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
       scheduling_policy_arn: cdktn.stringToTerraform(this._schedulingPolicyArn),
       state: cdktn.stringToTerraform(this._state),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      compute_environment_order: cdktn.listMapper(awsBatchJobQueueComputeEnvironmentOrderPropertyToTerraform, true)(this._computeEnvironmentOrder.internalValue),
-      job_state_time_limit_action: cdktn.listMapper(awsBatchJobQueueJobStateTimeLimitActionPropertyToTerraform, true)(this._jobStateTimeLimitAction.internalValue),
-      timeouts: awsBatchJobQueueTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      compute_environment_order: cdktn.listMapper(tfJobQueueComputeEnvironmentOrderPropertyToTerraform, true)(this._computeEnvironmentOrder.internalValue),
+      job_state_time_limit_action: cdktn.listMapper(tfJobQueueJobStateTimeLimitActionPropertyToTerraform, true)(this._jobStateTimeLimitAction.internalValue),
+      timeouts: tfJobQueueTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -326,22 +326,22 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       compute_environment_order: {
-        value: cdktn.listMapperHcl(awsBatchJobQueueComputeEnvironmentOrderPropertyToHclTerraform, true)(this._computeEnvironmentOrder.internalValue),
+        value: cdktn.listMapperHcl(tfJobQueueComputeEnvironmentOrderPropertyToHclTerraform, true)(this._computeEnvironmentOrder.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBatchJobQueue.ComputeEnvironmentOrderPropertyList",
+        storageClassType: "TfJobQueue.ComputeEnvironmentOrderPropertyList",
       },
       job_state_time_limit_action: {
-        value: cdktn.listMapperHcl(awsBatchJobQueueJobStateTimeLimitActionPropertyToHclTerraform, true)(this._jobStateTimeLimitAction.internalValue),
+        value: cdktn.listMapperHcl(tfJobQueueJobStateTimeLimitActionPropertyToHclTerraform, true)(this._jobStateTimeLimitAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBatchJobQueue.JobStateTimeLimitActionPropertyList",
+        storageClassType: "TfJobQueue.JobStateTimeLimitActionPropertyList",
       },
       timeouts: {
-        value: awsBatchJobQueueTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfJobQueueTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBatchJobQueue.TimeoutsProperty",
+        storageClassType: "TfJobQueue.TimeoutsProperty",
       },
     };
 
@@ -350,7 +350,7 @@ export class AwsBatchJobQueue extends cdktn.TerraformResource {
   }
 }
 
-export function awsBatchJobQueueComputeEnvironmentOrderPropertyToTerraform(struct?: AwsBatchJobQueue.ComputeEnvironmentOrderProperty | cdktn.IResolvable): any {
+export function tfJobQueueComputeEnvironmentOrderPropertyToTerraform(struct?: TfJobQueue.ComputeEnvironmentOrderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function awsBatchJobQueueComputeEnvironmentOrderPropertyToTerraform(struc
 }
 
 
-export function awsBatchJobQueueComputeEnvironmentOrderPropertyToHclTerraform(struct?: AwsBatchJobQueue.ComputeEnvironmentOrderProperty | cdktn.IResolvable): any {
+export function tfJobQueueComputeEnvironmentOrderPropertyToHclTerraform(struct?: TfJobQueue.ComputeEnvironmentOrderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function awsBatchJobQueueComputeEnvironmentOrderPropertyToHclTerraform(st
 }
 
 
-export function awsBatchJobQueueJobStateTimeLimitActionPropertyToTerraform(struct?: AwsBatchJobQueue.JobStateTimeLimitActionProperty | cdktn.IResolvable): any {
+export function tfJobQueueJobStateTimeLimitActionPropertyToTerraform(struct?: TfJobQueue.JobStateTimeLimitActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function awsBatchJobQueueJobStateTimeLimitActionPropertyToTerraform(struc
 }
 
 
-export function awsBatchJobQueueJobStateTimeLimitActionPropertyToHclTerraform(struct?: AwsBatchJobQueue.JobStateTimeLimitActionProperty | cdktn.IResolvable): any {
+export function tfJobQueueJobStateTimeLimitActionPropertyToHclTerraform(struct?: TfJobQueue.JobStateTimeLimitActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function awsBatchJobQueueJobStateTimeLimitActionPropertyToHclTerraform(st
 }
 
 
-export function awsBatchJobQueueTimeoutsPropertyToTerraform(struct?: AwsBatchJobQueue.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfJobQueueTimeoutsPropertyToTerraform(struct?: TfJobQueue.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function awsBatchJobQueueTimeoutsPropertyToTerraform(struct?: AwsBatchJob
 }
 
 
-export function awsBatchJobQueueTimeoutsPropertyToHclTerraform(struct?: AwsBatchJobQueue.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfJobQueueTimeoutsPropertyToHclTerraform(struct?: TfJobQueue.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,14 +482,14 @@ export function awsBatchJobQueueTimeoutsPropertyToHclTerraform(struct?: AwsBatch
 }
 
 
-export namespace AwsBatchJobQueue {
+export namespace TfJobQueue {
 export interface ComputeEnvironmentOrderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#compute_environment AwsBatchJobQueue#compute_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#compute_environment TfJobQueue#compute_environment}
   */
   readonly computeEnvironment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#order AwsBatchJobQueue#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#order TfJobQueue#order}
   */
   readonly order: number;
 }
@@ -591,19 +591,19 @@ export class ComputeEnvironmentOrderPropertyList extends cdktn.ComplexList {
 }
 export interface JobStateTimeLimitActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#action AwsBatchJobQueue#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#action TfJobQueue#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#max_time_seconds AwsBatchJobQueue#max_time_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#max_time_seconds TfJobQueue#max_time_seconds}
   */
   readonly maxTimeSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#reason AwsBatchJobQueue#reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#reason TfJobQueue#reason}
   */
   readonly reason: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#state AwsBatchJobQueue#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#state TfJobQueue#state}
   */
   readonly state: string;
 }
@@ -745,19 +745,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#create AwsBatchJobQueue#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#create TfJobQueue#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#delete AwsBatchJobQueue#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#delete TfJobQueue#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#update AwsBatchJobQueue#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_queue#update TfJobQueue#update}
   */
   readonly update?: string;
 }

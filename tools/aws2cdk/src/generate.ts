@@ -11,10 +11,10 @@
  *
  * The emitted file per schema entry is:
  *
- *     <top level>            AwsInstanceConfig, class AwsInstance, the *ToTerraform mappers
- *     export namespace AwsInstance { <namespace body> }   nested interfaces + Output/List/Map
+ *     <top level>            TfInstanceConfig, class TfInstance, the *ToTerraform mappers
+ *     export namespace TfInstance { <namespace body> }   nested interfaces + Output/List/Map
  *
- * TypeScript merges the class and the namespace, so `AwsInstance.EbsBlockDeviceProperty` is a
+ * TypeScript merges the class and the namespace, so `TfInstance.EbsBlockDeviceProperty` is a
  * real, jsii-visible nested type. Mapper *functions* stay module-level because jsii ignores
  * functions entirely — putting them in the namespace would make the namespace un-mergeable
  * with the class for jsii's assembler.
@@ -79,6 +79,8 @@ export interface GenerateOptions {
 
 export interface EmittedEntry {
   readonly terraformName: string;
+  /** the surface-marked type the file is named after (`data_aws_lb`), i.e. the naming-map key */
+  readonly parserType: string;
   readonly schemaType: TerraformSchemaType;
   readonly className: string;
   readonly fileBase: string;
@@ -105,9 +107,10 @@ export interface GenerateResult {
  * Two different names, and the difference is the whole of locked decision 2:
  *
  *  - `parserType` is the full terraform type as the vendored parser spells it (`aws_lb`,
- *    `data_aws_lb`, `ephemeral_aws_lambda_invocation`, `aws_provider`). The CLASS NAME is
- *    PascalCase of THIS — provider prefix kept — so `aws_lambda_function` is `AwsLambdaFunction`,
- *    never `AwsFunction`.
+ *    `data_aws_lb`, `ephemeral_aws_lambda_invocation`, `aws_provider`). It feeds BOTH names a file
+ *    has: the class name, through the owning group's `stripPrefixes` (`aws_lambda_function` ->
+ *    `TfFunction`), and the FILE name, through its own dashed spelling (`aws-lambda-function.ts`)
+ *    — which is why the two are derived by two different functions in `src/naming.ts`.
  *  - `baseName` is the vendored parser's `baseName`, i.e. `parserType` with the `aws_` prefix
  *    removed (`lb`, but `data_aws_lb` unchanged). Nothing is named after it; it exists only
  *    because it is the ROOT SCOPE NAME, and `skipped-attributes.ts` matches scope full names
@@ -221,7 +224,12 @@ interface BuiltEntry {
   readonly resource: ResourceModel;
 }
 
-function buildEntry(planned: PlannedEntry, fqpn: string, providerVersion: string): BuiltEntry {
+function buildEntry(
+  planned: PlannedEntry,
+  fqpn: string,
+  providerVersion: string,
+  stripPrefixes: readonly string[],
+): BuiltEntry {
   const isProvider = planned.schemaType === "provider";
   const parsed = parseResourceAttributes(planned.schema, {
     providerName: "aws",
@@ -240,7 +248,11 @@ function buildEntry(planned: PlannedEntry, fqpn: string, providerVersion: string
     struct.name = finalName;
   }
 
-  const className = naming.classNameForTerraformType(planned.parserType);
+  const className = naming.classNameForEntry({
+    parserType: planned.parserType,
+    surface: planned.schemaType,
+    stripPrefixes,
+  });
   const resource = new ResourceModel({
     terraformType: planned.parserType,
     className,
@@ -306,7 +318,9 @@ function emitEntry(built: BuiltEntry, srcDir: string, mapperPrefix: string): Emi
   const namespaceBody = renderVirtualFile(code, nsFile);
   const topLevel = renderVirtualFile(code, topFile);
 
-  const fileBase = naming.fileNameFor(className);
+  // Keyed on the TERRAFORM TYPE, never on `className`: renaming what a file exports must not move
+  // the file (see `naming.fileNameForTerraformType`).
+  const fileBase = naming.fileNameForTerraformType(planned.parserType);
   const header = [
     ...GENERATED_LICENSE_HEADER,
     `// ${resource.linkToDocs}`,
@@ -326,6 +340,7 @@ function emitEntry(built: BuiltEntry, srcDir: string, mapperPrefix: string): Emi
 
   return {
     terraformName: planned.terraformName,
+    parserType: planned.parserType,
     schemaType: planned.schemaType,
     className,
     fileBase,
@@ -384,6 +399,9 @@ export function generate(options: GenerateOptions): GenerateResult {
         ? {
             slug,
             title: "AWS Provider",
+            // The provider construct is not an L1 resource and keeps its classic name, so there is
+            // nothing to strip — `naming.classNameForEntry` short-circuits on the provider surface.
+            stripPrefixes: [],
             resources: [],
             dataSources: [],
             ephemeralResources: [],
@@ -404,7 +422,11 @@ export function generate(options: GenerateOptions): GenerateResult {
     // Two passes: build every model first, so the mapper prefixes can be decided with the whole
     // package's naming in view, then render.
     const built = planGroup(options.schema, fqpn, members).map((planned) =>
-      buildEntry(planned, fqpn, providerVersion),
+      buildEntry(planned, fqpn, providerVersion, members.stripPrefixes),
+    );
+    naming.assertUniqueClassNames(
+      slug,
+      built.map((b) => ({ parserType: b.planned.parserType, className: b.resource.className })),
     );
     const mapperPrefixes = naming.mapperPrefixesForGroup(
       built.map((b) => ({

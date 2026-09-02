@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApigatewayv2IntegrationResponseConfig extends cdktn.TerraformMetaArguments {
+export interface TfIntegrationResponseConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#api_id AwsApigatewayv2IntegrationResponse#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#api_id TfIntegrationResponse#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#content_handling_strategy AwsApigatewayv2IntegrationResponse#content_handling_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#content_handling_strategy TfIntegrationResponse#content_handling_strategy}
   */
   readonly contentHandlingStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#id AwsApigatewayv2IntegrationResponse#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#id TfIntegrationResponse#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#integration_id AwsApigatewayv2IntegrationResponse#integration_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#integration_id TfIntegrationResponse#integration_id}
   */
   readonly integrationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#integration_response_key AwsApigatewayv2IntegrationResponse#integration_response_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#integration_response_key TfIntegrationResponse#integration_response_key}
   */
   readonly integrationResponseKey: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#region AwsApigatewayv2IntegrationResponse#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#region TfIntegrationResponse#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#response_templates AwsApigatewayv2IntegrationResponse#response_templates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#response_templates TfIntegrationResponse#response_templates}
   */
   readonly responseTemplates?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#template_selection_expression AwsApigatewayv2IntegrationResponse#template_selection_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#template_selection_expression TfIntegrationResponse#template_selection_expression}
   */
   readonly templateSelectionExpression?: string;
 }
@@ -48,7 +48,7 @@ export interface AwsApigatewayv2IntegrationResponseConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response aws_apigatewayv2_integration_response}
 */
-export class AwsApigatewayv2IntegrationResponse extends cdktn.TerraformResource {
+export class TfIntegrationResponse extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsApigatewayv2IntegrationResponse extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApigatewayv2IntegrationResponse resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIntegrationResponse resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApigatewayv2IntegrationResponse to import
-  * @param importFromId The id of the existing AwsApigatewayv2IntegrationResponse that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApigatewayv2IntegrationResponse to import is found
+  * @param importToId The construct id used in the generated config for the TfIntegrationResponse to import
+  * @param importFromId The id of the existing TfIntegrationResponse that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration_response#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIntegrationResponse to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_integration_response", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsApigatewayv2IntegrationResponse extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApigatewayv2IntegrationResponseConfig
+  * @param options TfIntegrationResponseConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApigatewayv2IntegrationResponseConfig) {
+  public constructor(scope: Construct, id: string, config: TfIntegrationResponseConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_integration_response',
       terraformGeneratorMetadata: {

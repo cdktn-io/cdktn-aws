@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAuditmanagerAssessmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfAssessmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#description AwsAuditmanagerAssessment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#description TfAssessment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#framework_id AwsAuditmanagerAssessment#framework_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#framework_id TfAssessment#framework_id}
   */
   readonly frameworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#name AwsAuditmanagerAssessment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#name TfAssessment#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#region AwsAuditmanagerAssessment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#region TfAssessment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#tags AwsAuditmanagerAssessment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#tags TfAssessment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * assessment_reports_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#assessment_reports_destination AwsAuditmanagerAssessment#assessment_reports_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#assessment_reports_destination TfAssessment#assessment_reports_destination}
   */
-  readonly assessmentReportsDestination?: AwsAuditmanagerAssessment.AssessmentReportsDestinationProperty[] | cdktn.IResolvable;
+  readonly assessmentReportsDestination?: TfAssessment.AssessmentReportsDestinationProperty[] | cdktn.IResolvable;
   /**
   * roles block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#roles AwsAuditmanagerAssessment#roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#roles TfAssessment#roles}
   */
-  readonly roles?: AwsAuditmanagerAssessment.RolesProperty[] | cdktn.IResolvable;
+  readonly roles?: TfAssessment.RolesProperty[] | cdktn.IResolvable;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#scope AwsAuditmanagerAssessment#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#scope TfAssessment#scope}
   */
-  readonly scope?: AwsAuditmanagerAssessment.ScopeProperty[] | cdktn.IResolvable;
+  readonly scope?: TfAssessment.ScopeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment aws_auditmanager_assessment}
 */
-export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
+export class TfAssessment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAuditmanagerAssessment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAssessment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAuditmanagerAssessment to import
-  * @param importFromId The id of the existing AwsAuditmanagerAssessment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAuditmanagerAssessment to import is found
+  * @param importToId The construct id used in the generated config for the TfAssessment to import
+  * @param importFromId The id of the existing TfAssessment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAssessment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_assessment", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAuditmanagerAssessmentConfig
+  * @param options TfAssessmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAuditmanagerAssessmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfAssessmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_assessment',
       terraformGeneratorMetadata: {
@@ -182,7 +182,7 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
   }
 
   // roles_all - computed: true, optional: false, required: false
-  private _rolesAll = new AwsAuditmanagerAssessment.RolesAllPropertyList(this, "roles_all", false);
+  private _rolesAll = new TfAssessment.RolesAllPropertyList(this, "roles_all", false);
   public get rolesAll() {
     return this._rolesAll;
   }
@@ -215,11 +215,11 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
   }
 
   // assessment_reports_destination - computed: false, optional: true, required: false
-  private _assessmentReportsDestination = new AwsAuditmanagerAssessment.AssessmentReportsDestinationPropertyList(this, "assessment_reports_destination", false);
+  private _assessmentReportsDestination = new TfAssessment.AssessmentReportsDestinationPropertyList(this, "assessment_reports_destination", false);
   public get assessmentReportsDestination() {
     return this._assessmentReportsDestination;
   }
-  public putAssessmentReportsDestination(value: AwsAuditmanagerAssessment.AssessmentReportsDestinationProperty[] | cdktn.IResolvable) {
+  public putAssessmentReportsDestination(value: TfAssessment.AssessmentReportsDestinationProperty[] | cdktn.IResolvable) {
     this._assessmentReportsDestination.internalValue = value;
   }
   public resetAssessmentReportsDestination() {
@@ -231,11 +231,11 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
   }
 
   // roles - computed: false, optional: true, required: false
-  private _roles = new AwsAuditmanagerAssessment.RolesPropertyList(this, "roles", true);
+  private _roles = new TfAssessment.RolesPropertyList(this, "roles", true);
   public get roles() {
     return this._roles;
   }
-  public putRoles(value: AwsAuditmanagerAssessment.RolesProperty[] | cdktn.IResolvable) {
+  public putRoles(value: TfAssessment.RolesProperty[] | cdktn.IResolvable) {
     this._roles.internalValue = value;
   }
   public resetRoles() {
@@ -247,11 +247,11 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new AwsAuditmanagerAssessment.ScopePropertyList(this, "scope", false);
+  private _scope = new TfAssessment.ScopePropertyList(this, "scope", false);
   public get scope() {
     return this._scope;
   }
-  public putScope(value: AwsAuditmanagerAssessment.ScopeProperty[] | cdktn.IResolvable) {
+  public putScope(value: TfAssessment.ScopeProperty[] | cdktn.IResolvable) {
     this._scope.internalValue = value;
   }
   public resetScope() {
@@ -273,9 +273,9 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      assessment_reports_destination: cdktn.listMapper(awsAuditmanagerAssessmentAssessmentReportsDestinationPropertyToTerraform, true)(this._assessmentReportsDestination.internalValue),
-      roles: cdktn.listMapper(awsAuditmanagerAssessmentRolesPropertyToTerraform, true)(this._roles.internalValue),
-      scope: cdktn.listMapper(awsAuditmanagerAssessmentScopePropertyToTerraform, true)(this._scope.internalValue),
+      assessment_reports_destination: cdktn.listMapper(tfAssessmentAssessmentReportsDestinationPropertyToTerraform, true)(this._assessmentReportsDestination.internalValue),
+      roles: cdktn.listMapper(tfAssessmentRolesPropertyToTerraform, true)(this._roles.internalValue),
+      scope: cdktn.listMapper(tfAssessmentScopePropertyToTerraform, true)(this._scope.internalValue),
     };
   }
 
@@ -312,22 +312,22 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       assessment_reports_destination: {
-        value: cdktn.listMapperHcl(awsAuditmanagerAssessmentAssessmentReportsDestinationPropertyToHclTerraform, true)(this._assessmentReportsDestination.internalValue),
+        value: cdktn.listMapperHcl(tfAssessmentAssessmentReportsDestinationPropertyToHclTerraform, true)(this._assessmentReportsDestination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAuditmanagerAssessment.AssessmentReportsDestinationPropertyList",
+        storageClassType: "TfAssessment.AssessmentReportsDestinationPropertyList",
       },
       roles: {
-        value: cdktn.listMapperHcl(awsAuditmanagerAssessmentRolesPropertyToHclTerraform, true)(this._roles.internalValue),
+        value: cdktn.listMapperHcl(tfAssessmentRolesPropertyToHclTerraform, true)(this._roles.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAuditmanagerAssessment.RolesPropertyList",
+        storageClassType: "TfAssessment.RolesPropertyList",
       },
       scope: {
-        value: cdktn.listMapperHcl(awsAuditmanagerAssessmentScopePropertyToHclTerraform, true)(this._scope.internalValue),
+        value: cdktn.listMapperHcl(tfAssessmentScopePropertyToHclTerraform, true)(this._scope.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAuditmanagerAssessment.ScopePropertyList",
+        storageClassType: "TfAssessment.ScopePropertyList",
       },
     };
 
@@ -336,7 +336,7 @@ export class AwsAuditmanagerAssessment extends cdktn.TerraformResource {
   }
 }
 
-export function awsAuditmanagerAssessmentRolesAllPropertyToTerraform(struct?: AwsAuditmanagerAssessment.RolesAllProperty): any {
+export function tfAssessmentRolesAllPropertyToTerraform(struct?: TfAssessment.RolesAllProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function awsAuditmanagerAssessmentRolesAllPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsAuditmanagerAssessmentRolesAllPropertyToHclTerraform(struct?: AwsAuditmanagerAssessment.RolesAllProperty): any {
+export function tfAssessmentRolesAllPropertyToHclTerraform(struct?: TfAssessment.RolesAllProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function awsAuditmanagerAssessmentRolesAllPropertyToHclTerraform(struct?:
 }
 
 
-export function awsAuditmanagerAssessmentAssessmentReportsDestinationPropertyToTerraform(struct?: AwsAuditmanagerAssessment.AssessmentReportsDestinationProperty | cdktn.IResolvable): any {
+export function tfAssessmentAssessmentReportsDestinationPropertyToTerraform(struct?: TfAssessment.AssessmentReportsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function awsAuditmanagerAssessmentAssessmentReportsDestinationPropertyToT
 }
 
 
-export function awsAuditmanagerAssessmentAssessmentReportsDestinationPropertyToHclTerraform(struct?: AwsAuditmanagerAssessment.AssessmentReportsDestinationProperty | cdktn.IResolvable): any {
+export function tfAssessmentAssessmentReportsDestinationPropertyToHclTerraform(struct?: TfAssessment.AssessmentReportsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function awsAuditmanagerAssessmentAssessmentReportsDestinationPropertyToH
 }
 
 
-export function awsAuditmanagerAssessmentRolesPropertyToTerraform(struct?: AwsAuditmanagerAssessment.RolesProperty | cdktn.IResolvable): any {
+export function tfAssessmentRolesPropertyToTerraform(struct?: TfAssessment.RolesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function awsAuditmanagerAssessmentRolesPropertyToTerraform(struct?: AwsAu
 }
 
 
-export function awsAuditmanagerAssessmentRolesPropertyToHclTerraform(struct?: AwsAuditmanagerAssessment.RolesProperty | cdktn.IResolvable): any {
+export function tfAssessmentRolesPropertyToHclTerraform(struct?: TfAssessment.RolesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function awsAuditmanagerAssessmentRolesPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsAuditmanagerAssessmentAwsAccountsPropertyToTerraform(struct?: AwsAuditmanagerAssessment.AwsAccountsProperty | cdktn.IResolvable): any {
+export function tfAssessmentAwsAccountsPropertyToTerraform(struct?: TfAssessment.AwsAccountsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function awsAuditmanagerAssessmentAwsAccountsPropertyToTerraform(struct?:
 }
 
 
-export function awsAuditmanagerAssessmentAwsAccountsPropertyToHclTerraform(struct?: AwsAuditmanagerAssessment.AwsAccountsProperty | cdktn.IResolvable): any {
+export function tfAssessmentAwsAccountsPropertyToHclTerraform(struct?: TfAssessment.AwsAccountsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function awsAuditmanagerAssessmentAwsAccountsPropertyToHclTerraform(struc
 }
 
 
-export function awsAuditmanagerAssessmentAwsServicesPropertyToTerraform(struct?: AwsAuditmanagerAssessment.AwsServicesProperty | cdktn.IResolvable): any {
+export function tfAssessmentAwsServicesPropertyToTerraform(struct?: TfAssessment.AwsServicesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function awsAuditmanagerAssessmentAwsServicesPropertyToTerraform(struct?:
 }
 
 
-export function awsAuditmanagerAssessmentAwsServicesPropertyToHclTerraform(struct?: AwsAuditmanagerAssessment.AwsServicesProperty | cdktn.IResolvable): any {
+export function tfAssessmentAwsServicesPropertyToHclTerraform(struct?: TfAssessment.AwsServicesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,32 +491,32 @@ export function awsAuditmanagerAssessmentAwsServicesPropertyToHclTerraform(struc
 }
 
 
-export function awsAuditmanagerAssessmentScopePropertyToTerraform(struct?: AwsAuditmanagerAssessment.ScopeProperty | cdktn.IResolvable): any {
+export function tfAssessmentScopePropertyToTerraform(struct?: TfAssessment.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aws_accounts: cdktn.listMapper(awsAuditmanagerAssessmentAwsAccountsPropertyToTerraform, true)(struct!.awsAccounts),
-    aws_services: cdktn.listMapper(awsAuditmanagerAssessmentAwsServicesPropertyToTerraform, true)(struct!.awsServices),
+    aws_accounts: cdktn.listMapper(tfAssessmentAwsAccountsPropertyToTerraform, true)(struct!.awsAccounts),
+    aws_services: cdktn.listMapper(tfAssessmentAwsServicesPropertyToTerraform, true)(struct!.awsServices),
   }
 }
 
 
-export function awsAuditmanagerAssessmentScopePropertyToHclTerraform(struct?: AwsAuditmanagerAssessment.ScopeProperty | cdktn.IResolvable): any {
+export function tfAssessmentScopePropertyToHclTerraform(struct?: TfAssessment.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aws_accounts: {
-      value: cdktn.listMapperHcl(awsAuditmanagerAssessmentAwsAccountsPropertyToHclTerraform, true)(struct!.awsAccounts),
+      value: cdktn.listMapperHcl(tfAssessmentAwsAccountsPropertyToHclTerraform, true)(struct!.awsAccounts),
       isBlock: true,
       type: "set",
       storageClassType: "AwsAccountsPropertyList",
     },
     aws_services: {
-      value: cdktn.listMapperHcl(awsAuditmanagerAssessmentAwsServicesPropertyToHclTerraform, true)(struct!.awsServices),
+      value: cdktn.listMapperHcl(tfAssessmentAwsServicesPropertyToHclTerraform, true)(struct!.awsServices),
       isBlock: true,
       type: "set",
       storageClassType: "AwsServicesPropertyList",
@@ -528,7 +528,7 @@ export function awsAuditmanagerAssessmentScopePropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsAuditmanagerAssessment {
+export namespace TfAssessment {
 export interface RolesAllProperty {
 }
 export class RolesAllPropertyOutputReference extends cdktn.ComplexObject {
@@ -590,11 +590,11 @@ export class RolesAllPropertyList extends cdktn.ComplexList {
 }
 export interface AssessmentReportsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#destination AwsAuditmanagerAssessment#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#destination TfAssessment#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#destination_type AwsAuditmanagerAssessment#destination_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#destination_type TfAssessment#destination_type}
   */
   readonly destinationType: string;
 }
@@ -696,11 +696,11 @@ export class AssessmentReportsDestinationPropertyList extends cdktn.ComplexList 
 }
 export interface RolesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#role_arn AwsAuditmanagerAssessment#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#role_arn TfAssessment#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#role_type AwsAuditmanagerAssessment#role_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#role_type TfAssessment#role_type}
   */
   readonly roleType: string;
 }
@@ -802,7 +802,7 @@ export class RolesPropertyList extends cdktn.ComplexList {
 }
 export interface AwsAccountsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#id AwsAuditmanagerAssessment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#id TfAssessment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -888,7 +888,7 @@ export class AwsAccountsPropertyList extends cdktn.ComplexList {
 }
 export interface AwsServicesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#service_name AwsAuditmanagerAssessment#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#service_name TfAssessment#service_name}
   */
   readonly serviceName: string;
 }
@@ -973,13 +973,13 @@ export interface ScopeProperty {
   /**
   * aws_accounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#aws_accounts AwsAuditmanagerAssessment#aws_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#aws_accounts TfAssessment#aws_accounts}
   */
   readonly awsAccounts?: AwsAccountsProperty[] | cdktn.IResolvable;
   /**
   * aws_services block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#aws_services AwsAuditmanagerAssessment#aws_services}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment#aws_services TfAssessment#aws_services}
   */
   readonly awsServices?: AwsServicesProperty[] | cdktn.IResolvable;
 }

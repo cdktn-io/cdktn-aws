@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailInstancePublicPortsConfig extends cdktn.TerraformMetaArguments {
+export interface TfInstancePublicPortsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#id AwsLightsailInstancePublicPorts#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#id TfInstancePublicPorts#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#instance_name AwsLightsailInstancePublicPorts#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#instance_name TfInstancePublicPorts#instance_name}
   */
   readonly instanceName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#region AwsLightsailInstancePublicPorts#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#region TfInstancePublicPorts#region}
   */
   readonly region?: string;
   /**
   * port_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#port_info AwsLightsailInstancePublicPorts#port_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#port_info TfInstancePublicPorts#port_info}
   */
-  readonly portInfo: AwsLightsailInstancePublicPorts.PortInfoProperty[] | cdktn.IResolvable;
+  readonly portInfo: TfInstancePublicPorts.PortInfoProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports aws_lightsail_instance_public_ports}
 */
-export class AwsLightsailInstancePublicPorts extends cdktn.TerraformResource {
+export class TfInstancePublicPorts extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsLightsailInstancePublicPorts extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailInstancePublicPorts resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInstancePublicPorts resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailInstancePublicPorts to import
-  * @param importFromId The id of the existing AwsLightsailInstancePublicPorts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailInstancePublicPorts to import is found
+  * @param importToId The construct id used in the generated config for the TfInstancePublicPorts to import
+  * @param importFromId The id of the existing TfInstancePublicPorts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInstancePublicPorts to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_instance_public_ports", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsLightsailInstancePublicPorts extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailInstancePublicPortsConfig
+  * @param options TfInstancePublicPortsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailInstancePublicPortsConfig) {
+  public constructor(scope: Construct, id: string, config: TfInstancePublicPortsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_instance_public_ports',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class AwsLightsailInstancePublicPorts extends cdktn.TerraformResource {
   }
 
   // port_info - computed: false, optional: false, required: true
-  private _portInfo = new AwsLightsailInstancePublicPorts.PortInfoPropertyList(this, "port_info", true);
+  private _portInfo = new TfInstancePublicPorts.PortInfoPropertyList(this, "port_info", true);
   public get portInfo() {
     return this._portInfo;
   }
-  public putPortInfo(value: AwsLightsailInstancePublicPorts.PortInfoProperty[] | cdktn.IResolvable) {
+  public putPortInfo(value: TfInstancePublicPorts.PortInfoProperty[] | cdktn.IResolvable) {
     this._portInfo.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class AwsLightsailInstancePublicPorts extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       instance_name: cdktn.stringToTerraform(this._instanceName),
       region: cdktn.stringToTerraform(this._region),
-      port_info: cdktn.listMapper(awsLightsailInstancePublicPortsPortInfoPropertyToTerraform, true)(this._portInfo.internalValue),
+      port_info: cdktn.listMapper(tfInstancePublicPortsPortInfoPropertyToTerraform, true)(this._portInfo.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class AwsLightsailInstancePublicPorts extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       port_info: {
-        value: cdktn.listMapperHcl(awsLightsailInstancePublicPortsPortInfoPropertyToHclTerraform, true)(this._portInfo.internalValue),
+        value: cdktn.listMapperHcl(tfInstancePublicPortsPortInfoPropertyToHclTerraform, true)(this._portInfo.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsLightsailInstancePublicPorts.PortInfoPropertyList",
+        storageClassType: "TfInstancePublicPorts.PortInfoPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class AwsLightsailInstancePublicPorts extends cdktn.TerraformResource {
   }
 }
 
-export function awsLightsailInstancePublicPortsPortInfoPropertyToTerraform(struct?: AwsLightsailInstancePublicPorts.PortInfoProperty | cdktn.IResolvable): any {
+export function tfInstancePublicPortsPortInfoPropertyToTerraform(struct?: TfInstancePublicPorts.PortInfoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,7 +212,7 @@ export function awsLightsailInstancePublicPortsPortInfoPropertyToTerraform(struc
 }
 
 
-export function awsLightsailInstancePublicPortsPortInfoPropertyToHclTerraform(struct?: AwsLightsailInstancePublicPorts.PortInfoProperty | cdktn.IResolvable): any {
+export function tfInstancePublicPortsPortInfoPropertyToHclTerraform(struct?: TfInstancePublicPorts.PortInfoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,30 +261,30 @@ export function awsLightsailInstancePublicPortsPortInfoPropertyToHclTerraform(st
 }
 
 
-export namespace AwsLightsailInstancePublicPorts {
+export namespace TfInstancePublicPorts {
 export interface PortInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#cidr_list_aliases AwsLightsailInstancePublicPorts#cidr_list_aliases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#cidr_list_aliases TfInstancePublicPorts#cidr_list_aliases}
   */
   readonly cidrListAliases?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#cidrs AwsLightsailInstancePublicPorts#cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#cidrs TfInstancePublicPorts#cidrs}
   */
   readonly cidrs?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#from_port AwsLightsailInstancePublicPorts#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#from_port TfInstancePublicPorts#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#ipv6_cidrs AwsLightsailInstancePublicPorts#ipv6_cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#ipv6_cidrs TfInstancePublicPorts#ipv6_cidrs}
   */
   readonly ipv6Cidrs?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#protocol AwsLightsailInstancePublicPorts#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#protocol TfInstancePublicPorts#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#to_port AwsLightsailInstancePublicPorts#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance_public_ports#to_port TfInstancePublicPorts#to_port}
   */
   readonly toPort: number;
 }

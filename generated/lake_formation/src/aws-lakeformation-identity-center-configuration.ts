@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLakeformationIdentityCenterConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfIdentityCenterConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * The ID of the Data Catalog.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#catalog_id AwsLakeformationIdentityCenterConfiguration#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#catalog_id TfIdentityCenterConfiguration#catalog_id}
   */
   readonly catalogId?: string;
   /**
   * The ARN of the Identity Center instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#instance_arn AwsLakeformationIdentityCenterConfiguration#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#instance_arn TfIdentityCenterConfiguration#instance_arn}
   */
   readonly instanceArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#region AwsLakeformationIdentityCenterConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#region TfIdentityCenterConfiguration#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface AwsLakeformationIdentityCenterConfigurationConfig extends cdktn
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration aws_lakeformation_identity_center_configuration}
 */
-export class AwsLakeformationIdentityCenterConfiguration extends cdktn.TerraformResource {
+export class TfIdentityCenterConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsLakeformationIdentityCenterConfiguration extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLakeformationIdentityCenterConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIdentityCenterConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLakeformationIdentityCenterConfiguration to import
-  * @param importFromId The id of the existing AwsLakeformationIdentityCenterConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLakeformationIdentityCenterConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfIdentityCenterConfiguration to import
+  * @param importFromId The id of the existing TfIdentityCenterConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_identity_center_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIdentityCenterConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_identity_center_configuration", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsLakeformationIdentityCenterConfiguration extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLakeformationIdentityCenterConfigurationConfig
+  * @param options TfIdentityCenterConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLakeformationIdentityCenterConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfIdentityCenterConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_identity_center_configuration',
       terraformGeneratorMetadata: {

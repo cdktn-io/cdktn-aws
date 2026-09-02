@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFmsResourceSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceSetConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#region AwsFmsResourceSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#region TfResourceSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#tags AwsFmsResourceSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#tags TfResourceSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * resource_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#resource_set AwsFmsResourceSet#resource_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#resource_set TfResourceSet#resource_set}
   */
-  readonly resourceSet?: AwsFmsResourceSet.ResourceSetProperty[] | cdktn.IResolvable;
+  readonly resourceSet?: TfResourceSet.ResourceSetProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#timeouts AwsFmsResourceSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#timeouts TfResourceSet#timeouts}
   */
-  readonly timeouts?: AwsFmsResourceSet.TimeoutsProperty;
+  readonly timeouts?: TfResourceSet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set aws_fms_resource_set}
 */
-export class AwsFmsResourceSet extends cdktn.TerraformResource {
+export class TfResourceSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsFmsResourceSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFmsResourceSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFmsResourceSet to import
-  * @param importFromId The id of the existing AwsFmsResourceSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFmsResourceSet to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceSet to import
+  * @param importFromId The id of the existing TfResourceSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fms_resource_set", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsFmsResourceSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFmsResourceSetConfig = {}
+  * @param options TfResourceSetConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsFmsResourceSetConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfResourceSetConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_fms_resource_set',
       terraformGeneratorMetadata: {
@@ -140,11 +140,11 @@ export class AwsFmsResourceSet extends cdktn.TerraformResource {
   }
 
   // resource_set - computed: false, optional: true, required: false
-  private _resourceSet = new AwsFmsResourceSet.ResourceSetPropertyList(this, "resource_set", false);
+  private _resourceSet = new TfResourceSet.ResourceSetPropertyList(this, "resource_set", false);
   public get resourceSet() {
     return this._resourceSet;
   }
-  public putResourceSet(value: AwsFmsResourceSet.ResourceSetProperty[] | cdktn.IResolvable) {
+  public putResourceSet(value: TfResourceSet.ResourceSetProperty[] | cdktn.IResolvable) {
     this._resourceSet.internalValue = value;
   }
   public resetResourceSet() {
@@ -156,11 +156,11 @@ export class AwsFmsResourceSet extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFmsResourceSet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfResourceSet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFmsResourceSet.TimeoutsProperty) {
+  public putTimeouts(value: TfResourceSet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -179,8 +179,8 @@ export class AwsFmsResourceSet extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      resource_set: cdktn.listMapper(awsFmsResourceSetResourceSetPropertyToTerraform, true)(this._resourceSet.internalValue),
-      timeouts: awsFmsResourceSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      resource_set: cdktn.listMapper(tfResourceSetResourceSetPropertyToTerraform, true)(this._resourceSet.internalValue),
+      timeouts: tfResourceSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -199,16 +199,16 @@ export class AwsFmsResourceSet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       resource_set: {
-        value: cdktn.listMapperHcl(awsFmsResourceSetResourceSetPropertyToHclTerraform, true)(this._resourceSet.internalValue),
+        value: cdktn.listMapperHcl(tfResourceSetResourceSetPropertyToHclTerraform, true)(this._resourceSet.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFmsResourceSet.ResourceSetPropertyList",
+        storageClassType: "TfResourceSet.ResourceSetPropertyList",
       },
       timeouts: {
-        value: awsFmsResourceSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfResourceSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFmsResourceSet.TimeoutsProperty",
+        storageClassType: "TfResourceSet.TimeoutsProperty",
       },
     };
 
@@ -217,7 +217,7 @@ export class AwsFmsResourceSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsFmsResourceSetResourceSetPropertyToTerraform(struct?: AwsFmsResourceSet.ResourceSetProperty | cdktn.IResolvable): any {
+export function tfResourceSetResourceSetPropertyToTerraform(struct?: TfResourceSet.ResourceSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -232,7 +232,7 @@ export function awsFmsResourceSetResourceSetPropertyToTerraform(struct?: AwsFmsR
 }
 
 
-export function awsFmsResourceSetResourceSetPropertyToHclTerraform(struct?: AwsFmsResourceSet.ResourceSetProperty | cdktn.IResolvable): any {
+export function tfResourceSetResourceSetPropertyToHclTerraform(struct?: TfResourceSet.ResourceSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function awsFmsResourceSetResourceSetPropertyToHclTerraform(struct?: AwsF
 }
 
 
-export function awsFmsResourceSetTimeoutsPropertyToTerraform(struct?: AwsFmsResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceSetTimeoutsPropertyToTerraform(struct?: TfResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function awsFmsResourceSetTimeoutsPropertyToTerraform(struct?: AwsFmsReso
 }
 
 
-export function awsFmsResourceSetTimeoutsPropertyToHclTerraform(struct?: AwsFmsResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceSetTimeoutsPropertyToHclTerraform(struct?: TfResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,26 +319,26 @@ export function awsFmsResourceSetTimeoutsPropertyToHclTerraform(struct?: AwsFmsR
 }
 
 
-export namespace AwsFmsResourceSet {
+export namespace TfResourceSet {
 export interface ResourceSetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#description AwsFmsResourceSet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#description TfResourceSet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#name AwsFmsResourceSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#name TfResourceSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#resource_set_status AwsFmsResourceSet#resource_set_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#resource_set_status TfResourceSet#resource_set_status}
   */
   readonly resourceSetStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#resource_type_list AwsFmsResourceSet#resource_type_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#resource_type_list TfResourceSet#resource_type_list}
   */
   readonly resourceTypeList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#update_token AwsFmsResourceSet#update_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#update_token TfResourceSet#update_token}
   */
   readonly updateToken?: string;
 }
@@ -521,19 +521,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#create AwsFmsResourceSet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#create TfResourceSet#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#delete AwsFmsResourceSet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#delete TfResourceSet#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#update AwsFmsResourceSet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_resource_set#update TfResourceSet#update}
   */
   readonly update?: string;
 }

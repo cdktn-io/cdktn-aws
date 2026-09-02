@@ -267,6 +267,20 @@ Permanent, and all three needed **before the first tag**:
 | [`docs/m2-metrics.md`](./docs/m2-metrics.md) | every headline number, its command, and its caveats |
 | [`docs/m3-go.md`](./docs/m3-go.md) | the fleet build, isolation, sizes, consumer cost, release, CI |
 | [`docs/m4-publishing.md`](./docs/m4-publishing.md) | the publishing shape and the first-release checklist |
+| [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md) | the `Tf` class-naming decision, its algorithm and its gates |
 | [`docs/provider-bump-runbook.md`](./docs/provider-bump-runbook.md) | the human-intervention playbook per provider bump |
 | `../go-split-spike/VERDICT.md` | the option decision, re-verified by its judge |
 | [`docs/phase1-results.md`](./docs/phase1-results.md) | the sibling `cdktn-awscc` PoC's numbers (targets, not ours) |
+
+## Addendum (M6) — the L1 class names changed
+
+This report records M0–M4 as they were built and stays as written. One thing in it is now out of
+date: the class-naming rule. §"the generator" describes classes named PascalCase-of-the-full-
+terraform-type (`AwsLambdaFunction`); since M6 they are `Tf` + the terraform type with the owning
+group's service prefix stripped (`lambda.TfFunction`, `s3.TfBucket`, `s3.DataTfBucket`), with `Tf`
+playing the role `Cfn` plays in aws-cdk-lib and the bare name left free for a future L2. Curated
+per group in `groups.json#stripPrefixes`, gated by `check:groups` gate C, and mapped from the
+`@cdktn/provider-aws` name a migrating consumer imports today in `naming-map.json`. Decision and algorithm: [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
+
+The measurements are unaffected — no file moved, no type was added or removed, and the runtime
+contract still diffs 22/22 identical against the reference build.

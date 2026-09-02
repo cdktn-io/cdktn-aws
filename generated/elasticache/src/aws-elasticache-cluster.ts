@@ -5,154 +5,154 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsElasticacheClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#apply_immediately AwsElasticacheCluster#apply_immediately}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#apply_immediately TfCluster#apply_immediately}
   */
   readonly applyImmediately?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#auto_minor_version_upgrade AwsElasticacheCluster#auto_minor_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#auto_minor_version_upgrade TfCluster#auto_minor_version_upgrade}
   */
   readonly autoMinorVersionUpgrade?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#availability_zone AwsElasticacheCluster#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#availability_zone TfCluster#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#az_mode AwsElasticacheCluster#az_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#az_mode TfCluster#az_mode}
   */
   readonly azMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#cluster_id AwsElasticacheCluster#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#cluster_id TfCluster#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#engine AwsElasticacheCluster#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#engine TfCluster#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#engine_version AwsElasticacheCluster#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#engine_version TfCluster#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#final_snapshot_identifier AwsElasticacheCluster#final_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#final_snapshot_identifier TfCluster#final_snapshot_identifier}
   */
   readonly finalSnapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#id AwsElasticacheCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#id TfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#ip_discovery AwsElasticacheCluster#ip_discovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#ip_discovery TfCluster#ip_discovery}
   */
   readonly ipDiscovery?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#maintenance_window AwsElasticacheCluster#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#maintenance_window TfCluster#maintenance_window}
   */
   readonly maintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#network_type AwsElasticacheCluster#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#network_type TfCluster#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#node_type AwsElasticacheCluster#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#node_type TfCluster#node_type}
   */
   readonly nodeType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#notification_topic_arn AwsElasticacheCluster#notification_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#notification_topic_arn TfCluster#notification_topic_arn}
   */
   readonly notificationTopicArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#num_cache_nodes AwsElasticacheCluster#num_cache_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#num_cache_nodes TfCluster#num_cache_nodes}
   */
   readonly numCacheNodes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#outpost_mode AwsElasticacheCluster#outpost_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#outpost_mode TfCluster#outpost_mode}
   */
   readonly outpostMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#parameter_group_name AwsElasticacheCluster#parameter_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#parameter_group_name TfCluster#parameter_group_name}
   */
   readonly parameterGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#port AwsElasticacheCluster#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#port TfCluster#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#preferred_availability_zones AwsElasticacheCluster#preferred_availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#preferred_availability_zones TfCluster#preferred_availability_zones}
   */
   readonly preferredAvailabilityZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#preferred_outpost_arn AwsElasticacheCluster#preferred_outpost_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#preferred_outpost_arn TfCluster#preferred_outpost_arn}
   */
   readonly preferredOutpostArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#region AwsElasticacheCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#region TfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#replication_group_id AwsElasticacheCluster#replication_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#replication_group_id TfCluster#replication_group_id}
   */
   readonly replicationGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#security_group_ids AwsElasticacheCluster#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#security_group_ids TfCluster#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_arns AwsElasticacheCluster#snapshot_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_arns TfCluster#snapshot_arns}
   */
   readonly snapshotArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_name AwsElasticacheCluster#snapshot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_name TfCluster#snapshot_name}
   */
   readonly snapshotName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_retention_limit AwsElasticacheCluster#snapshot_retention_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_retention_limit TfCluster#snapshot_retention_limit}
   */
   readonly snapshotRetentionLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_window AwsElasticacheCluster#snapshot_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#snapshot_window TfCluster#snapshot_window}
   */
   readonly snapshotWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#subnet_group_name AwsElasticacheCluster#subnet_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#subnet_group_name TfCluster#subnet_group_name}
   */
   readonly subnetGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#tags AwsElasticacheCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#tags TfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#tags_all AwsElasticacheCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#tags_all TfCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#transit_encryption_enabled AwsElasticacheCluster#transit_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#transit_encryption_enabled TfCluster#transit_encryption_enabled}
   */
   readonly transitEncryptionEnabled?: boolean | cdktn.IResolvable;
   /**
   * log_delivery_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#log_delivery_configuration AwsElasticacheCluster#log_delivery_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#log_delivery_configuration TfCluster#log_delivery_configuration}
   */
-  readonly logDeliveryConfiguration?: AwsElasticacheCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable;
+  readonly logDeliveryConfiguration?: TfCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#timeouts AwsElasticacheCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#timeouts TfCluster#timeouts}
   */
-  readonly timeouts?: AwsElasticacheCluster.TimeoutsProperty;
+  readonly timeouts?: TfCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster aws_elasticache_cluster}
 */
-export class AwsElasticacheCluster extends cdktn.TerraformResource {
+export class TfCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -163,11 +163,11 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsElasticacheCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsElasticacheCluster to import
-  * @param importFromId The id of the existing AwsElasticacheCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsElasticacheCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCluster to import
+  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_cluster", importId: importFromId, provider });
@@ -182,9 +182,9 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsElasticacheClusterConfig
+  * @param options TfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsElasticacheClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_cluster',
       terraformGeneratorMetadata: {
@@ -309,7 +309,7 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
   }
 
   // cache_nodes - computed: true, optional: false, required: false
-  private _cacheNodes = new AwsElasticacheCluster.CacheNodesPropertyList(this, "cache_nodes", false);
+  private _cacheNodes = new TfCluster.CacheNodesPropertyList(this, "cache_nodes", false);
   public get cacheNodes() {
     return this._cacheNodes;
   }
@@ -759,11 +759,11 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
   }
 
   // log_delivery_configuration - computed: false, optional: true, required: false
-  private _logDeliveryConfiguration = new AwsElasticacheCluster.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", true);
+  private _logDeliveryConfiguration = new TfCluster.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", true);
   public get logDeliveryConfiguration() {
     return this._logDeliveryConfiguration;
   }
-  public putLogDeliveryConfiguration(value: AwsElasticacheCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable) {
+  public putLogDeliveryConfiguration(value: TfCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable) {
     this._logDeliveryConfiguration.internalValue = value;
   }
   public resetLogDeliveryConfiguration() {
@@ -775,11 +775,11 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsElasticacheCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsElasticacheCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -827,8 +827,8 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transit_encryption_enabled: cdktn.booleanToTerraform(this._transitEncryptionEnabled),
-      log_delivery_configuration: cdktn.listMapper(awsElasticacheClusterLogDeliveryConfigurationPropertyToTerraform, true)(this._logDeliveryConfiguration.internalValue),
-      timeouts: awsElasticacheClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      log_delivery_configuration: cdktn.listMapper(tfClusterLogDeliveryConfigurationPropertyToTerraform, true)(this._logDeliveryConfiguration.internalValue),
+      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -1021,16 +1021,16 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       log_delivery_configuration: {
-        value: cdktn.listMapperHcl(awsElasticacheClusterLogDeliveryConfigurationPropertyToHclTerraform, true)(this._logDeliveryConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfClusterLogDeliveryConfigurationPropertyToHclTerraform, true)(this._logDeliveryConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsElasticacheCluster.LogDeliveryConfigurationPropertyList",
+        storageClassType: "TfCluster.LogDeliveryConfigurationPropertyList",
       },
       timeouts: {
-        value: awsElasticacheClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsElasticacheCluster.TimeoutsProperty",
+        storageClassType: "TfCluster.TimeoutsProperty",
       },
     };
 
@@ -1039,7 +1039,7 @@ export class AwsElasticacheCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsElasticacheClusterCacheNodesPropertyToTerraform(struct?: AwsElasticacheCluster.CacheNodesProperty): any {
+export function tfClusterCacheNodesPropertyToTerraform(struct?: TfCluster.CacheNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1049,7 +1049,7 @@ export function awsElasticacheClusterCacheNodesPropertyToTerraform(struct?: AwsE
 }
 
 
-export function awsElasticacheClusterCacheNodesPropertyToHclTerraform(struct?: AwsElasticacheCluster.CacheNodesProperty): any {
+export function tfClusterCacheNodesPropertyToHclTerraform(struct?: TfCluster.CacheNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1060,7 +1060,7 @@ export function awsElasticacheClusterCacheNodesPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsElasticacheClusterLogDeliveryConfigurationPropertyToTerraform(struct?: AwsElasticacheCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+export function tfClusterLogDeliveryConfigurationPropertyToTerraform(struct?: TfCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1074,7 +1074,7 @@ export function awsElasticacheClusterLogDeliveryConfigurationPropertyToTerraform
 }
 
 
-export function awsElasticacheClusterLogDeliveryConfigurationPropertyToHclTerraform(struct?: AwsElasticacheCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+export function tfClusterLogDeliveryConfigurationPropertyToHclTerraform(struct?: TfCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1111,7 +1111,7 @@ export function awsElasticacheClusterLogDeliveryConfigurationPropertyToHclTerraf
 }
 
 
-export function awsElasticacheClusterTimeoutsPropertyToTerraform(struct?: AwsElasticacheCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1124,7 +1124,7 @@ export function awsElasticacheClusterTimeoutsPropertyToTerraform(struct?: AwsEla
 }
 
 
-export function awsElasticacheClusterTimeoutsPropertyToHclTerraform(struct?: AwsElasticacheCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1155,7 +1155,7 @@ export function awsElasticacheClusterTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsElasticacheCluster {
+export namespace TfCluster {
 export interface CacheNodesProperty {
 }
 export class CacheNodesPropertyOutputReference extends cdktn.ComplexObject {
@@ -1232,19 +1232,19 @@ export class CacheNodesPropertyList extends cdktn.ComplexList {
 }
 export interface LogDeliveryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#destination AwsElasticacheCluster#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#destination TfCluster#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#destination_type AwsElasticacheCluster#destination_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#destination_type TfCluster#destination_type}
   */
   readonly destinationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#log_format AwsElasticacheCluster#log_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#log_format TfCluster#log_format}
   */
   readonly logFormat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#log_type AwsElasticacheCluster#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#log_type TfCluster#log_type}
   */
   readonly logType: string;
 }
@@ -1384,15 +1384,15 @@ export class LogDeliveryConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#create AwsElasticacheCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#create TfCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#delete AwsElasticacheCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#delete TfCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#update AwsElasticacheCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_cluster#update TfCluster#update}
   */
   readonly update?: string;
 }

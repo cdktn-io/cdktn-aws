@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3FilesFileSystemPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfFileSystemPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * File system ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#file_system_id AwsS3FilesFileSystemPolicy#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#file_system_id TfFileSystemPolicy#file_system_id}
   */
   readonly fileSystemId: string;
   /**
   * File system policy JSON
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#policy AwsS3FilesFileSystemPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#policy TfFileSystemPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#region AwsS3FilesFileSystemPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#region TfFileSystemPolicy#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface AwsS3FilesFileSystemPolicyConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy aws_s3files_file_system_policy}
 */
-export class AwsS3FilesFileSystemPolicy extends cdktn.TerraformResource {
+export class TfFileSystemPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsS3FilesFileSystemPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3FilesFileSystemPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFileSystemPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3FilesFileSystemPolicy to import
-  * @param importFromId The id of the existing AwsS3FilesFileSystemPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3FilesFileSystemPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfFileSystemPolicy to import
+  * @param importFromId The id of the existing TfFileSystemPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_file_system_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFileSystemPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3files_file_system_policy", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsS3FilesFileSystemPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3FilesFileSystemPolicyConfig
+  * @param options TfFileSystemPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3FilesFileSystemPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfFileSystemPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3files_file_system_policy',
       terraformGeneratorMetadata: {

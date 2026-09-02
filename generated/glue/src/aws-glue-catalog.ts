@@ -5,79 +5,79 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlueCatalogConfig extends cdktn.TerraformMetaArguments {
+export interface TfCatalogConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#allow_full_table_external_data_access AwsGlueCatalog#allow_full_table_external_data_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#allow_full_table_external_data_access TfCatalog#allow_full_table_external_data_access}
   */
   readonly allowFullTableExternalDataAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#description AwsGlueCatalog#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#description TfCatalog#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#name AwsGlueCatalog#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#name TfCatalog#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#overwrite_child_resource_permissions_with_default AwsGlueCatalog#overwrite_child_resource_permissions_with_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#overwrite_child_resource_permissions_with_default TfCatalog#overwrite_child_resource_permissions_with_default}
   */
   readonly overwriteChildResourcePermissionsWithDefault?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#parameters AwsGlueCatalog#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#parameters TfCatalog#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#region AwsGlueCatalog#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#region TfCatalog#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#tags AwsGlueCatalog#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#tags TfCatalog#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * catalog_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#catalog_properties AwsGlueCatalog#catalog_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#catalog_properties TfCatalog#catalog_properties}
   */
-  readonly catalogProperties?: AwsGlueCatalog.CatalogPropertiesProperty[] | cdktn.IResolvable;
+  readonly catalogProperties?: TfCatalog.CatalogPropertiesProperty[] | cdktn.IResolvable;
   /**
   * create_database_default_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#create_database_default_permissions AwsGlueCatalog#create_database_default_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#create_database_default_permissions TfCatalog#create_database_default_permissions}
   */
-  readonly createDatabaseDefaultPermissions?: AwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable;
+  readonly createDatabaseDefaultPermissions?: TfCatalog.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable;
   /**
   * create_table_default_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#create_table_default_permissions AwsGlueCatalog#create_table_default_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#create_table_default_permissions TfCatalog#create_table_default_permissions}
   */
-  readonly createTableDefaultPermissions?: AwsGlueCatalog.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable;
+  readonly createTableDefaultPermissions?: TfCatalog.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable;
   /**
   * federated_catalog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#federated_catalog AwsGlueCatalog#federated_catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#federated_catalog TfCatalog#federated_catalog}
   */
-  readonly federatedCatalog?: AwsGlueCatalog.FederatedCatalogProperty[] | cdktn.IResolvable;
+  readonly federatedCatalog?: TfCatalog.FederatedCatalogProperty[] | cdktn.IResolvable;
   /**
   * target_redshift_catalog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#target_redshift_catalog AwsGlueCatalog#target_redshift_catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#target_redshift_catalog TfCatalog#target_redshift_catalog}
   */
-  readonly targetRedshiftCatalog?: AwsGlueCatalog.TargetRedshiftCatalogProperty[] | cdktn.IResolvable;
+  readonly targetRedshiftCatalog?: TfCatalog.TargetRedshiftCatalogProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#timeouts AwsGlueCatalog#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#timeouts TfCatalog#timeouts}
   */
-  readonly timeouts?: AwsGlueCatalog.TimeoutsProperty;
+  readonly timeouts?: TfCatalog.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog aws_glue_catalog}
 */
-export class AwsGlueCatalog extends cdktn.TerraformResource {
+export class TfCatalog extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -88,11 +88,11 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlueCatalog resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCatalog resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlueCatalog to import
-  * @param importFromId The id of the existing AwsGlueCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlueCatalog to import is found
+  * @param importToId The construct id used in the generated config for the TfCatalog to import
+  * @param importFromId The id of the existing TfCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCatalog to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog", importId: importFromId, provider });
@@ -107,9 +107,9 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlueCatalogConfig
+  * @param options TfCatalogConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlueCatalogConfig) {
+  public constructor(scope: Construct, id: string, config: TfCatalogConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_catalog',
       terraformGeneratorMetadata: {
@@ -280,11 +280,11 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   }
 
   // catalog_properties - computed: false, optional: true, required: false
-  private _catalogProperties = new AwsGlueCatalog.CatalogPropertiesPropertyList(this, "catalog_properties", false);
+  private _catalogProperties = new TfCatalog.CatalogPropertiesPropertyList(this, "catalog_properties", false);
   public get catalogProperties() {
     return this._catalogProperties;
   }
-  public putCatalogProperties(value: AwsGlueCatalog.CatalogPropertiesProperty[] | cdktn.IResolvable) {
+  public putCatalogProperties(value: TfCatalog.CatalogPropertiesProperty[] | cdktn.IResolvable) {
     this._catalogProperties.internalValue = value;
   }
   public resetCatalogProperties() {
@@ -296,11 +296,11 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   }
 
   // create_database_default_permissions - computed: false, optional: true, required: false
-  private _createDatabaseDefaultPermissions = new AwsGlueCatalog.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
+  private _createDatabaseDefaultPermissions = new TfCatalog.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
   public get createDatabaseDefaultPermissions() {
     return this._createDatabaseDefaultPermissions;
   }
-  public putCreateDatabaseDefaultPermissions(value: AwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable) {
+  public putCreateDatabaseDefaultPermissions(value: TfCatalog.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable) {
     this._createDatabaseDefaultPermissions.internalValue = value;
   }
   public resetCreateDatabaseDefaultPermissions() {
@@ -312,11 +312,11 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   }
 
   // create_table_default_permissions - computed: false, optional: true, required: false
-  private _createTableDefaultPermissions = new AwsGlueCatalog.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
+  private _createTableDefaultPermissions = new TfCatalog.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
   public get createTableDefaultPermissions() {
     return this._createTableDefaultPermissions;
   }
-  public putCreateTableDefaultPermissions(value: AwsGlueCatalog.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable) {
+  public putCreateTableDefaultPermissions(value: TfCatalog.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable) {
     this._createTableDefaultPermissions.internalValue = value;
   }
   public resetCreateTableDefaultPermissions() {
@@ -328,11 +328,11 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   }
 
   // federated_catalog - computed: false, optional: true, required: false
-  private _federatedCatalog = new AwsGlueCatalog.FederatedCatalogPropertyList(this, "federated_catalog", false);
+  private _federatedCatalog = new TfCatalog.FederatedCatalogPropertyList(this, "federated_catalog", false);
   public get federatedCatalog() {
     return this._federatedCatalog;
   }
-  public putFederatedCatalog(value: AwsGlueCatalog.FederatedCatalogProperty[] | cdktn.IResolvable) {
+  public putFederatedCatalog(value: TfCatalog.FederatedCatalogProperty[] | cdktn.IResolvable) {
     this._federatedCatalog.internalValue = value;
   }
   public resetFederatedCatalog() {
@@ -344,11 +344,11 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   }
 
   // target_redshift_catalog - computed: false, optional: true, required: false
-  private _targetRedshiftCatalog = new AwsGlueCatalog.TargetRedshiftCatalogPropertyList(this, "target_redshift_catalog", false);
+  private _targetRedshiftCatalog = new TfCatalog.TargetRedshiftCatalogPropertyList(this, "target_redshift_catalog", false);
   public get targetRedshiftCatalog() {
     return this._targetRedshiftCatalog;
   }
-  public putTargetRedshiftCatalog(value: AwsGlueCatalog.TargetRedshiftCatalogProperty[] | cdktn.IResolvable) {
+  public putTargetRedshiftCatalog(value: TfCatalog.TargetRedshiftCatalogProperty[] | cdktn.IResolvable) {
     this._targetRedshiftCatalog.internalValue = value;
   }
   public resetTargetRedshiftCatalog() {
@@ -360,11 +360,11 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGlueCatalog.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCatalog.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGlueCatalog.TimeoutsProperty) {
+  public putTimeouts(value: TfCatalog.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -388,12 +388,12 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
       parameters: cdktn.hashMapper(cdktn.stringToTerraform)(this._parameters),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      catalog_properties: cdktn.listMapper(awsGlueCatalogCatalogPropertiesPropertyToTerraform, true)(this._catalogProperties.internalValue),
-      create_database_default_permissions: cdktn.listMapper(awsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
-      create_table_default_permissions: cdktn.listMapper(awsGlueCatalogCreateTableDefaultPermissionsPropertyToTerraform, true)(this._createTableDefaultPermissions.internalValue),
-      federated_catalog: cdktn.listMapper(awsGlueCatalogFederatedCatalogPropertyToTerraform, true)(this._federatedCatalog.internalValue),
-      target_redshift_catalog: cdktn.listMapper(awsGlueCatalogTargetRedshiftCatalogPropertyToTerraform, true)(this._targetRedshiftCatalog.internalValue),
-      timeouts: awsGlueCatalogTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      catalog_properties: cdktn.listMapper(tfCatalogCatalogPropertiesPropertyToTerraform, true)(this._catalogProperties.internalValue),
+      create_database_default_permissions: cdktn.listMapper(tfCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
+      create_table_default_permissions: cdktn.listMapper(tfCatalogCreateTableDefaultPermissionsPropertyToTerraform, true)(this._createTableDefaultPermissions.internalValue),
+      federated_catalog: cdktn.listMapper(tfCatalogFederatedCatalogPropertyToTerraform, true)(this._federatedCatalog.internalValue),
+      target_redshift_catalog: cdktn.listMapper(tfCatalogTargetRedshiftCatalogPropertyToTerraform, true)(this._targetRedshiftCatalog.internalValue),
+      timeouts: tfCatalogTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -442,40 +442,40 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       catalog_properties: {
-        value: cdktn.listMapperHcl(awsGlueCatalogCatalogPropertiesPropertyToHclTerraform, true)(this._catalogProperties.internalValue),
+        value: cdktn.listMapperHcl(tfCatalogCatalogPropertiesPropertyToHclTerraform, true)(this._catalogProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalog.CatalogPropertiesPropertyList",
+        storageClassType: "TfCatalog.CatalogPropertiesPropertyList",
       },
       create_database_default_permissions: {
-        value: cdktn.listMapperHcl(awsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
+        value: cdktn.listMapperHcl(tfCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalog.CreateDatabaseDefaultPermissionsPropertyList",
+        storageClassType: "TfCatalog.CreateDatabaseDefaultPermissionsPropertyList",
       },
       create_table_default_permissions: {
-        value: cdktn.listMapperHcl(awsGlueCatalogCreateTableDefaultPermissionsPropertyToHclTerraform, true)(this._createTableDefaultPermissions.internalValue),
+        value: cdktn.listMapperHcl(tfCatalogCreateTableDefaultPermissionsPropertyToHclTerraform, true)(this._createTableDefaultPermissions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalog.CreateTableDefaultPermissionsPropertyList",
+        storageClassType: "TfCatalog.CreateTableDefaultPermissionsPropertyList",
       },
       federated_catalog: {
-        value: cdktn.listMapperHcl(awsGlueCatalogFederatedCatalogPropertyToHclTerraform, true)(this._federatedCatalog.internalValue),
+        value: cdktn.listMapperHcl(tfCatalogFederatedCatalogPropertyToHclTerraform, true)(this._federatedCatalog.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalog.FederatedCatalogPropertyList",
+        storageClassType: "TfCatalog.FederatedCatalogPropertyList",
       },
       target_redshift_catalog: {
-        value: cdktn.listMapperHcl(awsGlueCatalogTargetRedshiftCatalogPropertyToHclTerraform, true)(this._targetRedshiftCatalog.internalValue),
+        value: cdktn.listMapperHcl(tfCatalogTargetRedshiftCatalogPropertyToHclTerraform, true)(this._targetRedshiftCatalog.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalog.TargetRedshiftCatalogPropertyList",
+        storageClassType: "TfCatalog.TargetRedshiftCatalogPropertyList",
       },
       timeouts: {
-        value: awsGlueCatalogTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCatalogTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGlueCatalog.TimeoutsProperty",
+        storageClassType: "TfCatalog.TimeoutsProperty",
       },
     };
 
@@ -484,7 +484,7 @@ export class AwsGlueCatalog extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlueCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?: AwsGlueCatalog.DataLakeAccessPropertiesProperty | cdktn.IResolvable): any {
+export function tfCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?: TfCatalog.DataLakeAccessPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function awsGlueCatalogDataLakeAccessPropertiesPropertyToTerraform(struct
 }
 
 
-export function awsGlueCatalogDataLakeAccessPropertiesPropertyToHclTerraform(struct?: AwsGlueCatalog.DataLakeAccessPropertiesProperty | cdktn.IResolvable): any {
+export function tfCatalogDataLakeAccessPropertiesPropertyToHclTerraform(struct?: TfCatalog.DataLakeAccessPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function awsGlueCatalogDataLakeAccessPropertiesPropertyToHclTerraform(str
 }
 
 
-export function awsGlueCatalogIcebergOptimizationPropertiesPropertyToTerraform(struct?: AwsGlueCatalog.IcebergOptimizationPropertiesProperty | cdktn.IResolvable): any {
+export function tfCatalogIcebergOptimizationPropertiesPropertyToTerraform(struct?: TfCatalog.IcebergOptimizationPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function awsGlueCatalogIcebergOptimizationPropertiesPropertyToTerraform(s
 }
 
 
-export function awsGlueCatalogIcebergOptimizationPropertiesPropertyToHclTerraform(struct?: AwsGlueCatalog.IcebergOptimizationPropertiesProperty | cdktn.IResolvable): any {
+export function tfCatalogIcebergOptimizationPropertiesPropertyToHclTerraform(struct?: TfCatalog.IcebergOptimizationPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -586,20 +586,20 @@ export function awsGlueCatalogIcebergOptimizationPropertiesPropertyToHclTerrafor
 }
 
 
-export function awsGlueCatalogCatalogPropertiesPropertyToTerraform(struct?: AwsGlueCatalog.CatalogPropertiesProperty | cdktn.IResolvable): any {
+export function tfCatalogCatalogPropertiesPropertyToTerraform(struct?: TfCatalog.CatalogPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     custom_properties: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.customProperties),
-    data_lake_access_properties: cdktn.listMapper(awsGlueCatalogDataLakeAccessPropertiesPropertyToTerraform, true)(struct!.dataLakeAccessProperties),
-    iceberg_optimization_properties: cdktn.listMapper(awsGlueCatalogIcebergOptimizationPropertiesPropertyToTerraform, true)(struct!.icebergOptimizationProperties),
+    data_lake_access_properties: cdktn.listMapper(tfCatalogDataLakeAccessPropertiesPropertyToTerraform, true)(struct!.dataLakeAccessProperties),
+    iceberg_optimization_properties: cdktn.listMapper(tfCatalogIcebergOptimizationPropertiesPropertyToTerraform, true)(struct!.icebergOptimizationProperties),
   }
 }
 
 
-export function awsGlueCatalogCatalogPropertiesPropertyToHclTerraform(struct?: AwsGlueCatalog.CatalogPropertiesProperty | cdktn.IResolvable): any {
+export function tfCatalogCatalogPropertiesPropertyToHclTerraform(struct?: TfCatalog.CatalogPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,13 +612,13 @@ export function awsGlueCatalogCatalogPropertiesPropertyToHclTerraform(struct?: A
       storageClassType: "stringMap",
     },
     data_lake_access_properties: {
-      value: cdktn.listMapperHcl(awsGlueCatalogDataLakeAccessPropertiesPropertyToHclTerraform, true)(struct!.dataLakeAccessProperties),
+      value: cdktn.listMapperHcl(tfCatalogDataLakeAccessPropertiesPropertyToHclTerraform, true)(struct!.dataLakeAccessProperties),
       isBlock: true,
       type: "list",
       storageClassType: "DataLakeAccessPropertiesPropertyList",
     },
     iceberg_optimization_properties: {
-      value: cdktn.listMapperHcl(awsGlueCatalogIcebergOptimizationPropertiesPropertyToHclTerraform, true)(struct!.icebergOptimizationProperties),
+      value: cdktn.listMapperHcl(tfCatalogIcebergOptimizationPropertiesPropertyToHclTerraform, true)(struct!.icebergOptimizationProperties),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergOptimizationPropertiesPropertyList",
@@ -630,7 +630,7 @@ export function awsGlueCatalogCatalogPropertiesPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform(struct?: AwsGlueCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform(struct?: TfCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function awsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyT
 }
 
 
-export function awsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: AwsGlueCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: TfCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,19 +660,19 @@ export function awsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyT
 }
 
 
-export function awsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: AwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: TfCatalog.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     permissions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.permissions),
-    principal: cdktn.listMapper(awsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform, true)(struct!.principal),
+    principal: cdktn.listMapper(tfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform, true)(struct!.principal),
   }
 }
 
 
-export function awsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: AwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: TfCatalog.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,7 +685,7 @@ export function awsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerra
       storageClassType: "stringList",
     },
     principal: {
-      value: cdktn.listMapperHcl(awsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform, true)(struct!.principal),
+      value: cdktn.listMapperHcl(tfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform, true)(struct!.principal),
       isBlock: true,
       type: "list",
       storageClassType: "CreateDatabaseDefaultPermissionsPrincipalPropertyList",
@@ -697,7 +697,7 @@ export function awsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerra
 }
 
 
-export function awsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform(struct?: AwsGlueCatalog.CreateTableDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform(struct?: TfCatalog.CreateTableDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function awsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToTe
 }
 
 
-export function awsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: AwsGlueCatalog.CreateTableDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: TfCatalog.CreateTableDefaultPermissionsPrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,19 +727,19 @@ export function awsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToHc
 }
 
 
-export function awsGlueCatalogCreateTableDefaultPermissionsPropertyToTerraform(struct?: AwsGlueCatalog.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateTableDefaultPermissionsPropertyToTerraform(struct?: TfCatalog.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     permissions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.permissions),
-    principal: cdktn.listMapper(awsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform, true)(struct!.principal),
+    principal: cdktn.listMapper(tfCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform, true)(struct!.principal),
   }
 }
 
 
-export function awsGlueCatalogCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: AwsGlueCatalog.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfCatalogCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: TfCatalog.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function awsGlueCatalogCreateTableDefaultPermissionsPropertyToHclTerrafor
       storageClassType: "stringList",
     },
     principal: {
-      value: cdktn.listMapperHcl(awsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform, true)(struct!.principal),
+      value: cdktn.listMapperHcl(tfCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform, true)(struct!.principal),
       isBlock: true,
       type: "list",
       storageClassType: "CreateTableDefaultPermissionsPrincipalPropertyList",
@@ -764,7 +764,7 @@ export function awsGlueCatalogCreateTableDefaultPermissionsPropertyToHclTerrafor
 }
 
 
-export function awsGlueCatalogFederatedCatalogPropertyToTerraform(struct?: AwsGlueCatalog.FederatedCatalogProperty | cdktn.IResolvable): any {
+export function tfCatalogFederatedCatalogPropertyToTerraform(struct?: TfCatalog.FederatedCatalogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -777,7 +777,7 @@ export function awsGlueCatalogFederatedCatalogPropertyToTerraform(struct?: AwsGl
 }
 
 
-export function awsGlueCatalogFederatedCatalogPropertyToHclTerraform(struct?: AwsGlueCatalog.FederatedCatalogProperty | cdktn.IResolvable): any {
+export function tfCatalogFederatedCatalogPropertyToHclTerraform(struct?: TfCatalog.FederatedCatalogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -808,7 +808,7 @@ export function awsGlueCatalogFederatedCatalogPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsGlueCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: AwsGlueCatalog.TargetRedshiftCatalogProperty | cdktn.IResolvable): any {
+export function tfCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: TfCatalog.TargetRedshiftCatalogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -819,7 +819,7 @@ export function awsGlueCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: 
 }
 
 
-export function awsGlueCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?: AwsGlueCatalog.TargetRedshiftCatalogProperty | cdktn.IResolvable): any {
+export function tfCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?: TfCatalog.TargetRedshiftCatalogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -838,7 +838,7 @@ export function awsGlueCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct
 }
 
 
-export function awsGlueCatalogTimeoutsPropertyToTerraform(struct?: AwsGlueCatalog.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCatalogTimeoutsPropertyToTerraform(struct?: TfCatalog.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -851,7 +851,7 @@ export function awsGlueCatalogTimeoutsPropertyToTerraform(struct?: AwsGlueCatalo
 }
 
 
-export function awsGlueCatalogTimeoutsPropertyToHclTerraform(struct?: AwsGlueCatalog.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCatalogTimeoutsPropertyToHclTerraform(struct?: TfCatalog.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -882,22 +882,22 @@ export function awsGlueCatalogTimeoutsPropertyToHclTerraform(struct?: AwsGlueCat
 }
 
 
-export namespace AwsGlueCatalog {
+export namespace TfCatalog {
 export interface DataLakeAccessPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#catalog_type AwsGlueCatalog#catalog_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#catalog_type TfCatalog#catalog_type}
   */
   readonly catalogType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_access AwsGlueCatalog#data_lake_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_access TfCatalog#data_lake_access}
   */
   readonly dataLakeAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_transfer_role AwsGlueCatalog#data_transfer_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_transfer_role TfCatalog#data_transfer_role}
   */
   readonly dataTransferRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#kms_key AwsGlueCatalog#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#kms_key TfCatalog#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -1069,19 +1069,19 @@ export class DataLakeAccessPropertiesPropertyList extends cdktn.ComplexList {
 }
 export interface IcebergOptimizationPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#compaction AwsGlueCatalog#compaction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#compaction TfCatalog#compaction}
   */
   readonly compaction?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#orphan_file_deletion AwsGlueCatalog#orphan_file_deletion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#orphan_file_deletion TfCatalog#orphan_file_deletion}
   */
   readonly orphanFileDeletion?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#retention AwsGlueCatalog#retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#retention TfCatalog#retention}
   */
   readonly retention?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#role_arn AwsGlueCatalog#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#role_arn TfCatalog#role_arn}
   */
   readonly roleArn?: string;
 }
@@ -1233,19 +1233,19 @@ export class IcebergOptimizationPropertiesPropertyList extends cdktn.ComplexList
 }
 export interface CatalogPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#custom_properties AwsGlueCatalog#custom_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#custom_properties TfCatalog#custom_properties}
   */
   readonly customProperties?: { [key: string]: string };
   /**
   * data_lake_access_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_access_properties AwsGlueCatalog#data_lake_access_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_access_properties TfCatalog#data_lake_access_properties}
   */
   readonly dataLakeAccessProperties?: DataLakeAccessPropertiesProperty[] | cdktn.IResolvable;
   /**
   * iceberg_optimization_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#iceberg_optimization_properties AwsGlueCatalog#iceberg_optimization_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#iceberg_optimization_properties TfCatalog#iceberg_optimization_properties}
   */
   readonly icebergOptimizationProperties?: IcebergOptimizationPropertiesProperty[] | cdktn.IResolvable;
 }
@@ -1375,7 +1375,7 @@ export class CatalogPropertiesPropertyList extends cdktn.ComplexList {
 }
 export interface CreateDatabaseDefaultPermissionsPrincipalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_principal_identifier AwsGlueCatalog#data_lake_principal_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_principal_identifier TfCatalog#data_lake_principal_identifier}
   */
   readonly dataLakePrincipalIdentifier?: string;
 }
@@ -1461,13 +1461,13 @@ export class CreateDatabaseDefaultPermissionsPrincipalPropertyList extends cdktn
 }
 export interface CreateDatabaseDefaultPermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#permissions AwsGlueCatalog#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#permissions TfCatalog#permissions}
   */
   readonly permissions?: string[];
   /**
   * principal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#principal AwsGlueCatalog#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#principal TfCatalog#principal}
   */
   readonly principal?: CreateDatabaseDefaultPermissionsPrincipalProperty[] | cdktn.IResolvable;
 }
@@ -1575,7 +1575,7 @@ export class CreateDatabaseDefaultPermissionsPropertyList extends cdktn.ComplexL
 }
 export interface CreateTableDefaultPermissionsPrincipalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_principal_identifier AwsGlueCatalog#data_lake_principal_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#data_lake_principal_identifier TfCatalog#data_lake_principal_identifier}
   */
   readonly dataLakePrincipalIdentifier?: string;
 }
@@ -1661,13 +1661,13 @@ export class CreateTableDefaultPermissionsPrincipalPropertyList extends cdktn.Co
 }
 export interface CreateTableDefaultPermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#permissions AwsGlueCatalog#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#permissions TfCatalog#permissions}
   */
   readonly permissions?: string[];
   /**
   * principal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#principal AwsGlueCatalog#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#principal TfCatalog#principal}
   */
   readonly principal?: CreateTableDefaultPermissionsPrincipalProperty[] | cdktn.IResolvable;
 }
@@ -1775,15 +1775,15 @@ export class CreateTableDefaultPermissionsPropertyList extends cdktn.ComplexList
 }
 export interface FederatedCatalogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#connection_name AwsGlueCatalog#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#connection_name TfCatalog#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#connection_type AwsGlueCatalog#connection_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#connection_type TfCatalog#connection_type}
   */
   readonly connectionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#identifier AwsGlueCatalog#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#identifier TfCatalog#identifier}
   */
   readonly identifier?: string;
 }
@@ -1913,7 +1913,7 @@ export class FederatedCatalogPropertyList extends cdktn.ComplexList {
 }
 export interface TargetRedshiftCatalogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#catalog_arn AwsGlueCatalog#catalog_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#catalog_arn TfCatalog#catalog_arn}
   */
   readonly catalogArn: string;
 }
@@ -1998,19 +1998,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#create AwsGlueCatalog#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#create TfCatalog#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#delete AwsGlueCatalog#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#delete TfCatalog#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#update AwsGlueCatalog#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog#update TfCatalog#update}
   */
   readonly update?: string;
 }

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSesv2EmailIdentityMailFromAttributesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfEmailIdentityMailFromAttributesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#email_identity DataAwsSesv2EmailIdentityMailFromAttributes#email_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#email_identity DataTfEmailIdentityMailFromAttributes#email_identity}
   */
   readonly emailIdentity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#id DataAwsSesv2EmailIdentityMailFromAttributes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#id DataTfEmailIdentityMailFromAttributes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataAwsSesv2EmailIdentityMailFromAttributesConfig extends cdktn
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#region DataAwsSesv2EmailIdentityMailFromAttributes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#region DataTfEmailIdentityMailFromAttributes#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsSesv2EmailIdentityMailFromAttributesConfig extends cdktn
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes aws_sesv2_email_identity_mail_from_attributes}
 */
-export class DataAwsSesv2EmailIdentityMailFromAttributes extends cdktn.TerraformDataSource {
+export class DataTfEmailIdentityMailFromAttributes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsSesv2EmailIdentityMailFromAttributes extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSesv2EmailIdentityMailFromAttributes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfEmailIdentityMailFromAttributes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSesv2EmailIdentityMailFromAttributes to import
-  * @param importFromId The id of the existing DataAwsSesv2EmailIdentityMailFromAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSesv2EmailIdentityMailFromAttributes to import is found
+  * @param importToId The construct id used in the generated config for the DataTfEmailIdentityMailFromAttributes to import
+  * @param importFromId The id of the existing DataTfEmailIdentityMailFromAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_email_identity_mail_from_attributes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfEmailIdentityMailFromAttributes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_email_identity_mail_from_attributes", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsSesv2EmailIdentityMailFromAttributes extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSesv2EmailIdentityMailFromAttributesConfig
+  * @param options DataTfEmailIdentityMailFromAttributesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSesv2EmailIdentityMailFromAttributesConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfEmailIdentityMailFromAttributesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_email_identity_mail_from_attributes',
       terraformGeneratorMetadata: {

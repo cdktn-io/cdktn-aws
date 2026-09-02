@@ -5,49 +5,49 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOpensearchserverlessVpcEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface TfVpcEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name of the interface endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#name AwsOpensearchserverlessVpcEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#name TfVpcEndpoint#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#region AwsOpensearchserverlessVpcEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#region TfVpcEndpoint#region}
   */
   readonly region?: string;
   /**
   * One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#security_group_ids AwsOpensearchserverlessVpcEndpoint#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#security_group_ids TfVpcEndpoint#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
   * One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#subnet_ids AwsOpensearchserverlessVpcEndpoint#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#subnet_ids TfVpcEndpoint#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
   * ID of the VPC from which you'll access OpenSearch Serverless.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#vpc_id AwsOpensearchserverlessVpcEndpoint#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#vpc_id TfVpcEndpoint#vpc_id}
   */
   readonly vpcId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#timeouts AwsOpensearchserverlessVpcEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#timeouts TfVpcEndpoint#timeouts}
   */
-  readonly timeouts?: AwsOpensearchserverlessVpcEndpoint.TimeoutsProperty;
+  readonly timeouts?: TfVpcEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint aws_opensearchserverless_vpc_endpoint}
 */
-export class AwsOpensearchserverlessVpcEndpoint extends cdktn.TerraformResource {
+export class TfVpcEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -58,11 +58,11 @@ export class AwsOpensearchserverlessVpcEndpoint extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOpensearchserverlessVpcEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVpcEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOpensearchserverlessVpcEndpoint to import
-  * @param importFromId The id of the existing AwsOpensearchserverlessVpcEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOpensearchserverlessVpcEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the TfVpcEndpoint to import
+  * @param importFromId The id of the existing TfVpcEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVpcEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_vpc_endpoint", importId: importFromId, provider });
@@ -77,9 +77,9 @@ export class AwsOpensearchserverlessVpcEndpoint extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOpensearchserverlessVpcEndpointConfig
+  * @param options TfVpcEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOpensearchserverlessVpcEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: TfVpcEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_vpc_endpoint',
       terraformGeneratorMetadata: {
@@ -184,11 +184,11 @@ export class AwsOpensearchserverlessVpcEndpoint extends cdktn.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOpensearchserverlessVpcEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVpcEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOpensearchserverlessVpcEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: TfVpcEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -210,7 +210,7 @@ export class AwsOpensearchserverlessVpcEndpoint extends cdktn.TerraformResource 
       security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupIds),
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: awsOpensearchserverlessVpcEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfVpcEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -247,10 +247,10 @@ export class AwsOpensearchserverlessVpcEndpoint extends cdktn.TerraformResource 
         storageClassType: "string",
       },
       timeouts: {
-        value: awsOpensearchserverlessVpcEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVpcEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOpensearchserverlessVpcEndpoint.TimeoutsProperty",
+        storageClassType: "TfVpcEndpoint.TimeoutsProperty",
       },
     };
 
@@ -259,7 +259,7 @@ export class AwsOpensearchserverlessVpcEndpoint extends cdktn.TerraformResource 
   }
 }
 
-export function awsOpensearchserverlessVpcEndpointTimeoutsPropertyToTerraform(struct?: AwsOpensearchserverlessVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcEndpointTimeoutsPropertyToTerraform(struct?: TfVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function awsOpensearchserverlessVpcEndpointTimeoutsPropertyToTerraform(st
 }
 
 
-export function awsOpensearchserverlessVpcEndpointTimeoutsPropertyToHclTerraform(struct?: AwsOpensearchserverlessVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcEndpointTimeoutsPropertyToHclTerraform(struct?: TfVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,24 +303,24 @@ export function awsOpensearchserverlessVpcEndpointTimeoutsPropertyToHclTerraform
 }
 
 
-export namespace AwsOpensearchserverlessVpcEndpoint {
+export namespace TfVpcEndpoint {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#create AwsOpensearchserverlessVpcEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#create TfVpcEndpoint#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#delete AwsOpensearchserverlessVpcEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#delete TfVpcEndpoint#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#update AwsOpensearchserverlessVpcEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_vpc_endpoint#update TfVpcEndpoint#update}
   */
   readonly update?: string;
 }

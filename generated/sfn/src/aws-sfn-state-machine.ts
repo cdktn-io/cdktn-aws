@@ -5,82 +5,82 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSfnStateMachineConfig extends cdktn.TerraformMetaArguments {
+export interface TfStateMachineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#definition AwsSfnStateMachine#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#definition TfStateMachine#definition}
   */
   readonly definition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#id AwsSfnStateMachine#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#id TfStateMachine#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#name AwsSfnStateMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#name TfStateMachine#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#name_prefix AwsSfnStateMachine#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#name_prefix TfStateMachine#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#publish AwsSfnStateMachine#publish}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#publish TfStateMachine#publish}
   */
   readonly publish?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#region AwsSfnStateMachine#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#region TfStateMachine#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#role_arn AwsSfnStateMachine#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#role_arn TfStateMachine#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#tags AwsSfnStateMachine#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#tags TfStateMachine#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#tags_all AwsSfnStateMachine#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#tags_all TfStateMachine#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#type AwsSfnStateMachine#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#type TfStateMachine#type}
   */
   readonly type?: string;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#encryption_configuration AwsSfnStateMachine#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#encryption_configuration TfStateMachine#encryption_configuration}
   */
-  readonly encryptionConfiguration?: AwsSfnStateMachine.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: TfStateMachine.EncryptionConfigurationProperty;
   /**
   * logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#logging_configuration AwsSfnStateMachine#logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#logging_configuration TfStateMachine#logging_configuration}
   */
-  readonly loggingConfiguration?: AwsSfnStateMachine.LoggingConfigurationProperty;
+  readonly loggingConfiguration?: TfStateMachine.LoggingConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#timeouts AwsSfnStateMachine#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#timeouts TfStateMachine#timeouts}
   */
-  readonly timeouts?: AwsSfnStateMachine.TimeoutsProperty;
+  readonly timeouts?: TfStateMachine.TimeoutsProperty;
   /**
   * tracing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#tracing_configuration AwsSfnStateMachine#tracing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#tracing_configuration TfStateMachine#tracing_configuration}
   */
-  readonly tracingConfiguration?: AwsSfnStateMachine.TracingConfigurationProperty;
+  readonly tracingConfiguration?: TfStateMachine.TracingConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine aws_sfn_state_machine}
 */
-export class AwsSfnStateMachine extends cdktn.TerraformResource {
+export class TfStateMachine extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSfnStateMachine resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfStateMachine resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSfnStateMachine to import
-  * @param importFromId The id of the existing AwsSfnStateMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSfnStateMachine to import is found
+  * @param importToId The construct id used in the generated config for the TfStateMachine to import
+  * @param importFromId The id of the existing TfStateMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfStateMachine to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sfn_state_machine", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSfnStateMachineConfig
+  * @param options TfStateMachineConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSfnStateMachineConfig) {
+  public constructor(scope: Construct, id: string, config: TfStateMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sfn_state_machine',
       terraformGeneratorMetadata: {
@@ -338,11 +338,11 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new AwsSfnStateMachine.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new TfStateMachine.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: AwsSfnStateMachine.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: TfStateMachine.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -354,11 +354,11 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
   }
 
   // logging_configuration - computed: false, optional: true, required: false
-  private _loggingConfiguration = new AwsSfnStateMachine.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
+  private _loggingConfiguration = new TfStateMachine.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
   public get loggingConfiguration() {
     return this._loggingConfiguration;
   }
-  public putLoggingConfiguration(value: AwsSfnStateMachine.LoggingConfigurationProperty) {
+  public putLoggingConfiguration(value: TfStateMachine.LoggingConfigurationProperty) {
     this._loggingConfiguration.internalValue = value;
   }
   public resetLoggingConfiguration() {
@@ -370,11 +370,11 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSfnStateMachine.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfStateMachine.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSfnStateMachine.TimeoutsProperty) {
+  public putTimeouts(value: TfStateMachine.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -386,11 +386,11 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
   }
 
   // tracing_configuration - computed: false, optional: true, required: false
-  private _tracingConfiguration = new AwsSfnStateMachine.TracingConfigurationPropertyOutputReference(this, "tracing_configuration");
+  private _tracingConfiguration = new TfStateMachine.TracingConfigurationPropertyOutputReference(this, "tracing_configuration");
   public get tracingConfiguration() {
     return this._tracingConfiguration;
   }
-  public putTracingConfiguration(value: AwsSfnStateMachine.TracingConfigurationProperty) {
+  public putTracingConfiguration(value: TfStateMachine.TracingConfigurationProperty) {
     this._tracingConfiguration.internalValue = value;
   }
   public resetTracingConfiguration() {
@@ -417,10 +417,10 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      encryption_configuration: awsSfnStateMachineEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
-      logging_configuration: awsSfnStateMachineLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
-      timeouts: awsSfnStateMachineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      tracing_configuration: awsSfnStateMachineTracingConfigurationPropertyToTerraform(this._tracingConfiguration.internalValue),
+      encryption_configuration: tfStateMachineEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      logging_configuration: tfStateMachineLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
+      timeouts: tfStateMachineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      tracing_configuration: tfStateMachineTracingConfigurationPropertyToTerraform(this._tracingConfiguration.internalValue),
     };
   }
 
@@ -487,28 +487,28 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       encryption_configuration: {
-        value: awsSfnStateMachineEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: tfStateMachineEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSfnStateMachine.EncryptionConfigurationPropertyList",
+        storageClassType: "TfStateMachine.EncryptionConfigurationPropertyList",
       },
       logging_configuration: {
-        value: awsSfnStateMachineLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
+        value: tfStateMachineLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSfnStateMachine.LoggingConfigurationPropertyList",
+        storageClassType: "TfStateMachine.LoggingConfigurationPropertyList",
       },
       timeouts: {
-        value: awsSfnStateMachineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfStateMachineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSfnStateMachine.TimeoutsProperty",
+        storageClassType: "TfStateMachine.TimeoutsProperty",
       },
       tracing_configuration: {
-        value: awsSfnStateMachineTracingConfigurationPropertyToHclTerraform(this._tracingConfiguration.internalValue),
+        value: tfStateMachineTracingConfigurationPropertyToHclTerraform(this._tracingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSfnStateMachine.TracingConfigurationPropertyList",
+        storageClassType: "TfStateMachine.TracingConfigurationPropertyList",
       },
     };
 
@@ -517,7 +517,7 @@ export class AwsSfnStateMachine extends cdktn.TerraformResource {
   }
 }
 
-export function awsSfnStateMachineEncryptionConfigurationPropertyToTerraform(struct?: AwsSfnStateMachine.EncryptionConfigurationPropertyOutputReference | AwsSfnStateMachine.EncryptionConfigurationProperty): any {
+export function tfStateMachineEncryptionConfigurationPropertyToTerraform(struct?: TfStateMachine.EncryptionConfigurationPropertyOutputReference | TfStateMachine.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function awsSfnStateMachineEncryptionConfigurationPropertyToTerraform(str
 }
 
 
-export function awsSfnStateMachineEncryptionConfigurationPropertyToHclTerraform(struct?: AwsSfnStateMachine.EncryptionConfigurationPropertyOutputReference | AwsSfnStateMachine.EncryptionConfigurationProperty): any {
+export function tfStateMachineEncryptionConfigurationPropertyToHclTerraform(struct?: TfStateMachine.EncryptionConfigurationPropertyOutputReference | TfStateMachine.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function awsSfnStateMachineEncryptionConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsSfnStateMachineLoggingConfigurationPropertyToTerraform(struct?: AwsSfnStateMachine.LoggingConfigurationPropertyOutputReference | AwsSfnStateMachine.LoggingConfigurationProperty): any {
+export function tfStateMachineLoggingConfigurationPropertyToTerraform(struct?: TfStateMachine.LoggingConfigurationPropertyOutputReference | TfStateMachine.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function awsSfnStateMachineLoggingConfigurationPropertyToTerraform(struct
 }
 
 
-export function awsSfnStateMachineLoggingConfigurationPropertyToHclTerraform(struct?: AwsSfnStateMachine.LoggingConfigurationPropertyOutputReference | AwsSfnStateMachine.LoggingConfigurationProperty): any {
+export function tfStateMachineLoggingConfigurationPropertyToHclTerraform(struct?: TfStateMachine.LoggingConfigurationPropertyOutputReference | TfStateMachine.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function awsSfnStateMachineLoggingConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsSfnStateMachineTimeoutsPropertyToTerraform(struct?: AwsSfnStateMachine.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfStateMachineTimeoutsPropertyToTerraform(struct?: TfStateMachine.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,7 +618,7 @@ export function awsSfnStateMachineTimeoutsPropertyToTerraform(struct?: AwsSfnSta
 }
 
 
-export function awsSfnStateMachineTimeoutsPropertyToHclTerraform(struct?: AwsSfnStateMachine.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfStateMachineTimeoutsPropertyToHclTerraform(struct?: TfStateMachine.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,7 +649,7 @@ export function awsSfnStateMachineTimeoutsPropertyToHclTerraform(struct?: AwsSfn
 }
 
 
-export function awsSfnStateMachineTracingConfigurationPropertyToTerraform(struct?: AwsSfnStateMachine.TracingConfigurationPropertyOutputReference | AwsSfnStateMachine.TracingConfigurationProperty): any {
+export function tfStateMachineTracingConfigurationPropertyToTerraform(struct?: TfStateMachine.TracingConfigurationPropertyOutputReference | TfStateMachine.TracingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function awsSfnStateMachineTracingConfigurationPropertyToTerraform(struct
 }
 
 
-export function awsSfnStateMachineTracingConfigurationPropertyToHclTerraform(struct?: AwsSfnStateMachine.TracingConfigurationPropertyOutputReference | AwsSfnStateMachine.TracingConfigurationProperty): any {
+export function tfStateMachineTracingConfigurationPropertyToHclTerraform(struct?: TfStateMachine.TracingConfigurationPropertyOutputReference | TfStateMachine.TracingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,18 +679,18 @@ export function awsSfnStateMachineTracingConfigurationPropertyToHclTerraform(str
 }
 
 
-export namespace AwsSfnStateMachine {
+export namespace TfStateMachine {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#kms_data_key_reuse_period_seconds AwsSfnStateMachine#kms_data_key_reuse_period_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#kms_data_key_reuse_period_seconds TfStateMachine#kms_data_key_reuse_period_seconds}
   */
   readonly kmsDataKeyReusePeriodSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#kms_key_id AwsSfnStateMachine#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#kms_key_id TfStateMachine#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#type AwsSfnStateMachine#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#type TfStateMachine#type}
   */
   readonly type?: string;
 }
@@ -788,15 +788,15 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface LoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#include_execution_data AwsSfnStateMachine#include_execution_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#include_execution_data TfStateMachine#include_execution_data}
   */
   readonly includeExecutionData?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#level AwsSfnStateMachine#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#level TfStateMachine#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#log_destination AwsSfnStateMachine#log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#log_destination TfStateMachine#log_destination}
   */
   readonly logDestination?: string;
 }
@@ -894,15 +894,15 @@ export class LoggingConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#create AwsSfnStateMachine#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#create TfStateMachine#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#delete AwsSfnStateMachine#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#delete TfStateMachine#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#update AwsSfnStateMachine#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#update TfStateMachine#update}
   */
   readonly update?: string;
 }
@@ -1010,7 +1010,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TracingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#enabled AwsSfnStateMachine#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_state_machine#enabled TfStateMachine#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }

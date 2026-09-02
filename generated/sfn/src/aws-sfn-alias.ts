@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSfnAliasConfig extends cdktn.TerraformMetaArguments {
+export interface TfAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#description AwsSfnAlias#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#description TfAlias#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#id AwsSfnAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#id TfAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#name AwsSfnAlias#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#name TfAlias#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#region AwsSfnAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#region TfAlias#region}
   */
   readonly region?: string;
   /**
   * routing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#routing_configuration AwsSfnAlias#routing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#routing_configuration TfAlias#routing_configuration}
   */
-  readonly routingConfiguration: AwsSfnAlias.RoutingConfigurationProperty[] | cdktn.IResolvable;
+  readonly routingConfiguration: TfAlias.RoutingConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#timeouts AwsSfnAlias#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#timeouts TfAlias#timeouts}
   */
-  readonly timeouts?: AwsSfnAlias.TimeoutsProperty;
+  readonly timeouts?: TfAlias.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias aws_sfn_alias}
 */
-export class AwsSfnAlias extends cdktn.TerraformResource {
+export class TfAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsSfnAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSfnAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSfnAlias to import
-  * @param importFromId The id of the existing AwsSfnAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSfnAlias to import is found
+  * @param importToId The construct id used in the generated config for the TfAlias to import
+  * @param importFromId The id of the existing TfAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sfn_alias", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsSfnAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSfnAliasConfig
+  * @param options TfAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSfnAliasConfig) {
+  public constructor(scope: Construct, id: string, config: TfAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sfn_alias',
       terraformGeneratorMetadata: {
@@ -176,11 +176,11 @@ export class AwsSfnAlias extends cdktn.TerraformResource {
   }
 
   // routing_configuration - computed: false, optional: false, required: true
-  private _routingConfiguration = new AwsSfnAlias.RoutingConfigurationPropertyList(this, "routing_configuration", false);
+  private _routingConfiguration = new TfAlias.RoutingConfigurationPropertyList(this, "routing_configuration", false);
   public get routingConfiguration() {
     return this._routingConfiguration;
   }
-  public putRoutingConfiguration(value: AwsSfnAlias.RoutingConfigurationProperty[] | cdktn.IResolvable) {
+  public putRoutingConfiguration(value: TfAlias.RoutingConfigurationProperty[] | cdktn.IResolvable) {
     this._routingConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -189,11 +189,11 @@ export class AwsSfnAlias extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSfnAlias.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAlias.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSfnAlias.TimeoutsProperty) {
+  public putTimeouts(value: TfAlias.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -214,8 +214,8 @@ export class AwsSfnAlias extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      routing_configuration: cdktn.listMapper(awsSfnAliasRoutingConfigurationPropertyToTerraform, true)(this._routingConfiguration.internalValue),
-      timeouts: awsSfnAliasTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      routing_configuration: cdktn.listMapper(tfAliasRoutingConfigurationPropertyToTerraform, true)(this._routingConfiguration.internalValue),
+      timeouts: tfAliasTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -246,16 +246,16 @@ export class AwsSfnAlias extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       routing_configuration: {
-        value: cdktn.listMapperHcl(awsSfnAliasRoutingConfigurationPropertyToHclTerraform, true)(this._routingConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfAliasRoutingConfigurationPropertyToHclTerraform, true)(this._routingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSfnAlias.RoutingConfigurationPropertyList",
+        storageClassType: "TfAlias.RoutingConfigurationPropertyList",
       },
       timeouts: {
-        value: awsSfnAliasTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAliasTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSfnAlias.TimeoutsProperty",
+        storageClassType: "TfAlias.TimeoutsProperty",
       },
     };
 
@@ -264,7 +264,7 @@ export class AwsSfnAlias extends cdktn.TerraformResource {
   }
 }
 
-export function awsSfnAliasRoutingConfigurationPropertyToTerraform(struct?: AwsSfnAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
+export function tfAliasRoutingConfigurationPropertyToTerraform(struct?: TfAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function awsSfnAliasRoutingConfigurationPropertyToTerraform(struct?: AwsS
 }
 
 
-export function awsSfnAliasRoutingConfigurationPropertyToHclTerraform(struct?: AwsSfnAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
+export function tfAliasRoutingConfigurationPropertyToHclTerraform(struct?: TfAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function awsSfnAliasRoutingConfigurationPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsSfnAliasTimeoutsPropertyToTerraform(struct?: AwsSfnAlias.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAliasTimeoutsPropertyToTerraform(struct?: TfAlias.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function awsSfnAliasTimeoutsPropertyToTerraform(struct?: AwsSfnAlias.Time
 }
 
 
-export function awsSfnAliasTimeoutsPropertyToHclTerraform(struct?: AwsSfnAlias.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAliasTimeoutsPropertyToHclTerraform(struct?: TfAlias.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,14 +345,14 @@ export function awsSfnAliasTimeoutsPropertyToHclTerraform(struct?: AwsSfnAlias.T
 }
 
 
-export namespace AwsSfnAlias {
+export namespace TfAlias {
 export interface RoutingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#state_machine_version_arn AwsSfnAlias#state_machine_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#state_machine_version_arn TfAlias#state_machine_version_arn}
   */
   readonly stateMachineVersionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#weight AwsSfnAlias#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#weight TfAlias#weight}
   */
   readonly weight: number;
 }
@@ -454,15 +454,15 @@ export class RoutingConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#create AwsSfnAlias#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#create TfAlias#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#delete AwsSfnAlias#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#delete TfAlias#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#update AwsSfnAlias#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_alias#update TfAlias#update}
   */
   readonly update?: string;
 }

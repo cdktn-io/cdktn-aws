@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsElasticacheServerlessCacheConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfServerlessCacheConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_serverless_cache#name DataAwsElasticacheServerlessCache#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_serverless_cache#name DataTfServerlessCache#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_serverless_cache#region DataAwsElasticacheServerlessCache#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_serverless_cache#region DataTfServerlessCache#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsElasticacheServerlessCacheConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_serverless_cache aws_elasticache_serverless_cache}
 */
-export class DataAwsElasticacheServerlessCache extends cdktn.TerraformDataSource {
+export class DataTfServerlessCache extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsElasticacheServerlessCache extends cdktn.TerraformDataSource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsElasticacheServerlessCache resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfServerlessCache resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsElasticacheServerlessCache to import
-  * @param importFromId The id of the existing DataAwsElasticacheServerlessCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_serverless_cache#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsElasticacheServerlessCache to import is found
+  * @param importToId The construct id used in the generated config for the DataTfServerlessCache to import
+  * @param importFromId The id of the existing DataTfServerlessCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_serverless_cache#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfServerlessCache to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_serverless_cache", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsElasticacheServerlessCache extends cdktn.TerraformDataSource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsElasticacheServerlessCacheConfig
+  * @param options DataTfServerlessCacheConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsElasticacheServerlessCacheConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfServerlessCacheConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_serverless_cache',
       terraformGeneratorMetadata: {
@@ -83,7 +83,7 @@ export class DataAwsElasticacheServerlessCache extends cdktn.TerraformDataSource
   }
 
   // cache_usage_limits - computed: true, optional: false, required: false
-  private _cacheUsageLimits = new DataAwsElasticacheServerlessCache.CacheUsageLimitsPropertyOutputReference(this, "cache_usage_limits");
+  private _cacheUsageLimits = new DataTfServerlessCache.CacheUsageLimitsPropertyOutputReference(this, "cache_usage_limits");
   public get cacheUsageLimits() {
     return this._cacheUsageLimits;
   }
@@ -104,7 +104,7 @@ export class DataAwsElasticacheServerlessCache extends cdktn.TerraformDataSource
   }
 
   // endpoint - computed: true, optional: false, required: false
-  private _endpoint = new DataAwsElasticacheServerlessCache.EndpointPropertyOutputReference(this, "endpoint");
+  private _endpoint = new DataTfServerlessCache.EndpointPropertyOutputReference(this, "endpoint");
   public get endpoint() {
     return this._endpoint;
   }
@@ -143,7 +143,7 @@ export class DataAwsElasticacheServerlessCache extends cdktn.TerraformDataSource
   }
 
   // reader_endpoint - computed: true, optional: false, required: false
-  private _readerEndpoint = new DataAwsElasticacheServerlessCache.ReaderEndpointPropertyOutputReference(this, "reader_endpoint");
+  private _readerEndpoint = new DataTfServerlessCache.ReaderEndpointPropertyOutputReference(this, "reader_endpoint");
   public get readerEndpoint() {
     return this._readerEndpoint;
   }
@@ -221,7 +221,7 @@ export class DataAwsElasticacheServerlessCache extends cdktn.TerraformDataSource
   }
 }
 
-export function dataAwsElasticacheServerlessCacheDataStoragePropertyToTerraform(struct?: DataAwsElasticacheServerlessCache.DataStorageProperty): any {
+export function dataTfServerlessCacheDataStoragePropertyToTerraform(struct?: DataTfServerlessCache.DataStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function dataAwsElasticacheServerlessCacheDataStoragePropertyToTerraform(
 }
 
 
-export function dataAwsElasticacheServerlessCacheDataStoragePropertyToHclTerraform(struct?: DataAwsElasticacheServerlessCache.DataStorageProperty): any {
+export function dataTfServerlessCacheDataStoragePropertyToHclTerraform(struct?: DataTfServerlessCache.DataStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function dataAwsElasticacheServerlessCacheDataStoragePropertyToHclTerrafo
 }
 
 
-export function dataAwsElasticacheServerlessCacheEcpuPerSecondPropertyToTerraform(struct?: DataAwsElasticacheServerlessCache.EcpuPerSecondProperty): any {
+export function dataTfServerlessCacheEcpuPerSecondPropertyToTerraform(struct?: DataTfServerlessCache.EcpuPerSecondProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function dataAwsElasticacheServerlessCacheEcpuPerSecondPropertyToTerrafor
 }
 
 
-export function dataAwsElasticacheServerlessCacheEcpuPerSecondPropertyToHclTerraform(struct?: DataAwsElasticacheServerlessCache.EcpuPerSecondProperty): any {
+export function dataTfServerlessCacheEcpuPerSecondPropertyToHclTerraform(struct?: DataTfServerlessCache.EcpuPerSecondProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function dataAwsElasticacheServerlessCacheEcpuPerSecondPropertyToHclTerra
 }
 
 
-export function dataAwsElasticacheServerlessCacheCacheUsageLimitsPropertyToTerraform(struct?: DataAwsElasticacheServerlessCache.CacheUsageLimitsProperty): any {
+export function dataTfServerlessCacheCacheUsageLimitsPropertyToTerraform(struct?: DataTfServerlessCache.CacheUsageLimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function dataAwsElasticacheServerlessCacheCacheUsageLimitsPropertyToTerra
 }
 
 
-export function dataAwsElasticacheServerlessCacheCacheUsageLimitsPropertyToHclTerraform(struct?: DataAwsElasticacheServerlessCache.CacheUsageLimitsProperty): any {
+export function dataTfServerlessCacheCacheUsageLimitsPropertyToHclTerraform(struct?: DataTfServerlessCache.CacheUsageLimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function dataAwsElasticacheServerlessCacheCacheUsageLimitsPropertyToHclTe
 }
 
 
-export function dataAwsElasticacheServerlessCacheEndpointPropertyToTerraform(struct?: DataAwsElasticacheServerlessCache.EndpointProperty): any {
+export function dataTfServerlessCacheEndpointPropertyToTerraform(struct?: DataTfServerlessCache.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function dataAwsElasticacheServerlessCacheEndpointPropertyToTerraform(str
 }
 
 
-export function dataAwsElasticacheServerlessCacheEndpointPropertyToHclTerraform(struct?: DataAwsElasticacheServerlessCache.EndpointProperty): any {
+export function dataTfServerlessCacheEndpointPropertyToHclTerraform(struct?: DataTfServerlessCache.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsElasticacheServerlessCacheEndpointPropertyToHclTerraform(
 }
 
 
-export function dataAwsElasticacheServerlessCacheReaderEndpointPropertyToTerraform(struct?: DataAwsElasticacheServerlessCache.ReaderEndpointProperty): any {
+export function dataTfServerlessCacheReaderEndpointPropertyToTerraform(struct?: DataTfServerlessCache.ReaderEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function dataAwsElasticacheServerlessCacheReaderEndpointPropertyToTerrafo
 }
 
 
-export function dataAwsElasticacheServerlessCacheReaderEndpointPropertyToHclTerraform(struct?: DataAwsElasticacheServerlessCache.ReaderEndpointProperty): any {
+export function dataTfServerlessCacheReaderEndpointPropertyToHclTerraform(struct?: DataTfServerlessCache.ReaderEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function dataAwsElasticacheServerlessCacheReaderEndpointPropertyToHclTerr
 }
 
 
-export namespace DataAwsElasticacheServerlessCache {
+export namespace DataTfServerlessCache {
 export interface DataStorageProperty {
 }
 export class DataStoragePropertyOutputReference extends cdktn.ComplexObject {

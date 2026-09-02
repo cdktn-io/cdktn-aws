@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailDiskConfig extends cdktn.TerraformMetaArguments {
+export interface TfDiskConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#availability_zone AwsLightsailDisk#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#availability_zone TfDisk#availability_zone}
   */
   readonly availabilityZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#id AwsLightsailDisk#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#id TfDisk#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#name AwsLightsailDisk#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#name TfDisk#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#region AwsLightsailDisk#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#region TfDisk#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#size_in_gb AwsLightsailDisk#size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#size_in_gb TfDisk#size_in_gb}
   */
   readonly sizeInGb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#tags AwsLightsailDisk#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#tags TfDisk#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#tags_all AwsLightsailDisk#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#tags_all TfDisk#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -44,7 +44,7 @@ export interface AwsLightsailDiskConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk aws_lightsail_disk}
 */
-export class AwsLightsailDisk extends cdktn.TerraformResource {
+export class TfDisk extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsLightsailDisk extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailDisk resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDisk resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailDisk to import
-  * @param importFromId The id of the existing AwsLightsailDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailDisk to import is found
+  * @param importToId The construct id used in the generated config for the TfDisk to import
+  * @param importFromId The id of the existing TfDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDisk to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_disk", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsLightsailDisk extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailDiskConfig
+  * @param options TfDiskConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailDiskConfig) {
+  public constructor(scope: Construct, id: string, config: TfDiskConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_disk',
       terraformGeneratorMetadata: {

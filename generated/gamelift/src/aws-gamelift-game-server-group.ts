@@ -5,86 +5,86 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGameliftGameServerGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfGameServerGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#balancing_strategy AwsGameliftGameServerGroup#balancing_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#balancing_strategy TfGameServerGroup#balancing_strategy}
   */
   readonly balancingStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#game_server_group_name AwsGameliftGameServerGroup#game_server_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#game_server_group_name TfGameServerGroup#game_server_group_name}
   */
   readonly gameServerGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#game_server_protection_policy AwsGameliftGameServerGroup#game_server_protection_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#game_server_protection_policy TfGameServerGroup#game_server_protection_policy}
   */
   readonly gameServerProtectionPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#id AwsGameliftGameServerGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#id TfGameServerGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#max_size AwsGameliftGameServerGroup#max_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#max_size TfGameServerGroup#max_size}
   */
   readonly maxSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#min_size AwsGameliftGameServerGroup#min_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#min_size TfGameServerGroup#min_size}
   */
   readonly minSize: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#region AwsGameliftGameServerGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#region TfGameServerGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#role_arn AwsGameliftGameServerGroup#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#role_arn TfGameServerGroup#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#tags AwsGameliftGameServerGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#tags TfGameServerGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#tags_all AwsGameliftGameServerGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#tags_all TfGameServerGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#vpc_subnets AwsGameliftGameServerGroup#vpc_subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#vpc_subnets TfGameServerGroup#vpc_subnets}
   */
   readonly vpcSubnets?: string[];
   /**
   * auto_scaling_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#auto_scaling_policy AwsGameliftGameServerGroup#auto_scaling_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#auto_scaling_policy TfGameServerGroup#auto_scaling_policy}
   */
-  readonly autoScalingPolicy?: AwsGameliftGameServerGroup.AutoScalingPolicyProperty;
+  readonly autoScalingPolicy?: TfGameServerGroup.AutoScalingPolicyProperty;
   /**
   * instance_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#instance_definition AwsGameliftGameServerGroup#instance_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#instance_definition TfGameServerGroup#instance_definition}
   */
-  readonly instanceDefinition: AwsGameliftGameServerGroup.InstanceDefinitionProperty[] | cdktn.IResolvable;
+  readonly instanceDefinition: TfGameServerGroup.InstanceDefinitionProperty[] | cdktn.IResolvable;
   /**
   * launch_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#launch_template AwsGameliftGameServerGroup#launch_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#launch_template TfGameServerGroup#launch_template}
   */
-  readonly launchTemplate: AwsGameliftGameServerGroup.LaunchTemplateProperty;
+  readonly launchTemplate: TfGameServerGroup.LaunchTemplateProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#timeouts AwsGameliftGameServerGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#timeouts TfGameServerGroup#timeouts}
   */
-  readonly timeouts?: AwsGameliftGameServerGroup.TimeoutsProperty;
+  readonly timeouts?: TfGameServerGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group aws_gamelift_game_server_group}
 */
-export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
+export class TfGameServerGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -95,11 +95,11 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGameliftGameServerGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGameServerGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGameliftGameServerGroup to import
-  * @param importFromId The id of the existing AwsGameliftGameServerGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGameliftGameServerGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfGameServerGroup to import
+  * @param importFromId The id of the existing TfGameServerGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGameServerGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_gamelift_game_server_group", importId: importFromId, provider });
@@ -114,9 +114,9 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGameliftGameServerGroupConfig
+  * @param options TfGameServerGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGameliftGameServerGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfGameServerGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_gamelift_game_server_group',
       terraformGeneratorMetadata: {
@@ -328,11 +328,11 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
   }
 
   // auto_scaling_policy - computed: false, optional: true, required: false
-  private _autoScalingPolicy = new AwsGameliftGameServerGroup.AutoScalingPolicyPropertyOutputReference(this, "auto_scaling_policy");
+  private _autoScalingPolicy = new TfGameServerGroup.AutoScalingPolicyPropertyOutputReference(this, "auto_scaling_policy");
   public get autoScalingPolicy() {
     return this._autoScalingPolicy;
   }
-  public putAutoScalingPolicy(value: AwsGameliftGameServerGroup.AutoScalingPolicyProperty) {
+  public putAutoScalingPolicy(value: TfGameServerGroup.AutoScalingPolicyProperty) {
     this._autoScalingPolicy.internalValue = value;
   }
   public resetAutoScalingPolicy() {
@@ -344,11 +344,11 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
   }
 
   // instance_definition - computed: false, optional: false, required: true
-  private _instanceDefinition = new AwsGameliftGameServerGroup.InstanceDefinitionPropertyList(this, "instance_definition", true);
+  private _instanceDefinition = new TfGameServerGroup.InstanceDefinitionPropertyList(this, "instance_definition", true);
   public get instanceDefinition() {
     return this._instanceDefinition;
   }
-  public putInstanceDefinition(value: AwsGameliftGameServerGroup.InstanceDefinitionProperty[] | cdktn.IResolvable) {
+  public putInstanceDefinition(value: TfGameServerGroup.InstanceDefinitionProperty[] | cdktn.IResolvable) {
     this._instanceDefinition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -357,11 +357,11 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
   }
 
   // launch_template - computed: false, optional: false, required: true
-  private _launchTemplate = new AwsGameliftGameServerGroup.LaunchTemplatePropertyOutputReference(this, "launch_template");
+  private _launchTemplate = new TfGameServerGroup.LaunchTemplatePropertyOutputReference(this, "launch_template");
   public get launchTemplate() {
     return this._launchTemplate;
   }
-  public putLaunchTemplate(value: AwsGameliftGameServerGroup.LaunchTemplateProperty) {
+  public putLaunchTemplate(value: TfGameServerGroup.LaunchTemplateProperty) {
     this._launchTemplate.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -370,11 +370,11 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGameliftGameServerGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGameServerGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGameliftGameServerGroup.TimeoutsProperty) {
+  public putTimeouts(value: TfGameServerGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -402,10 +402,10 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_subnets: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSubnets),
-      auto_scaling_policy: awsGameliftGameServerGroupAutoScalingPolicyPropertyToTerraform(this._autoScalingPolicy.internalValue),
-      instance_definition: cdktn.listMapper(awsGameliftGameServerGroupInstanceDefinitionPropertyToTerraform, true)(this._instanceDefinition.internalValue),
-      launch_template: awsGameliftGameServerGroupLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
-      timeouts: awsGameliftGameServerGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      auto_scaling_policy: tfGameServerGroupAutoScalingPolicyPropertyToTerraform(this._autoScalingPolicy.internalValue),
+      instance_definition: cdktn.listMapper(tfGameServerGroupInstanceDefinitionPropertyToTerraform, true)(this._instanceDefinition.internalValue),
+      launch_template: tfGameServerGroupLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
+      timeouts: tfGameServerGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -478,28 +478,28 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       auto_scaling_policy: {
-        value: awsGameliftGameServerGroupAutoScalingPolicyPropertyToHclTerraform(this._autoScalingPolicy.internalValue),
+        value: tfGameServerGroupAutoScalingPolicyPropertyToHclTerraform(this._autoScalingPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGameliftGameServerGroup.AutoScalingPolicyPropertyList",
+        storageClassType: "TfGameServerGroup.AutoScalingPolicyPropertyList",
       },
       instance_definition: {
-        value: cdktn.listMapperHcl(awsGameliftGameServerGroupInstanceDefinitionPropertyToHclTerraform, true)(this._instanceDefinition.internalValue),
+        value: cdktn.listMapperHcl(tfGameServerGroupInstanceDefinitionPropertyToHclTerraform, true)(this._instanceDefinition.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsGameliftGameServerGroup.InstanceDefinitionPropertyList",
+        storageClassType: "TfGameServerGroup.InstanceDefinitionPropertyList",
       },
       launch_template: {
-        value: awsGameliftGameServerGroupLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
+        value: tfGameServerGroupLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGameliftGameServerGroup.LaunchTemplatePropertyList",
+        storageClassType: "TfGameServerGroup.LaunchTemplatePropertyList",
       },
       timeouts: {
-        value: awsGameliftGameServerGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGameServerGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGameliftGameServerGroup.TimeoutsProperty",
+        storageClassType: "TfGameServerGroup.TimeoutsProperty",
       },
     };
 
@@ -508,7 +508,7 @@ export class AwsGameliftGameServerGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsGameliftGameServerGroupTargetTrackingConfigurationPropertyToTerraform(struct?: AwsGameliftGameServerGroup.TargetTrackingConfigurationPropertyOutputReference | AwsGameliftGameServerGroup.TargetTrackingConfigurationProperty): any {
+export function tfGameServerGroupTargetTrackingConfigurationPropertyToTerraform(struct?: TfGameServerGroup.TargetTrackingConfigurationPropertyOutputReference | TfGameServerGroup.TargetTrackingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function awsGameliftGameServerGroupTargetTrackingConfigurationPropertyToT
 }
 
 
-export function awsGameliftGameServerGroupTargetTrackingConfigurationPropertyToHclTerraform(struct?: AwsGameliftGameServerGroup.TargetTrackingConfigurationPropertyOutputReference | AwsGameliftGameServerGroup.TargetTrackingConfigurationProperty): any {
+export function tfGameServerGroupTargetTrackingConfigurationPropertyToHclTerraform(struct?: TfGameServerGroup.TargetTrackingConfigurationPropertyOutputReference | TfGameServerGroup.TargetTrackingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,19 +538,19 @@ export function awsGameliftGameServerGroupTargetTrackingConfigurationPropertyToH
 }
 
 
-export function awsGameliftGameServerGroupAutoScalingPolicyPropertyToTerraform(struct?: AwsGameliftGameServerGroup.AutoScalingPolicyPropertyOutputReference | AwsGameliftGameServerGroup.AutoScalingPolicyProperty): any {
+export function tfGameServerGroupAutoScalingPolicyPropertyToTerraform(struct?: TfGameServerGroup.AutoScalingPolicyPropertyOutputReference | TfGameServerGroup.AutoScalingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     estimated_instance_warmup: cdktn.numberToTerraform(struct!.estimatedInstanceWarmup),
-    target_tracking_configuration: awsGameliftGameServerGroupTargetTrackingConfigurationPropertyToTerraform(struct!.targetTrackingConfiguration),
+    target_tracking_configuration: tfGameServerGroupTargetTrackingConfigurationPropertyToTerraform(struct!.targetTrackingConfiguration),
   }
 }
 
 
-export function awsGameliftGameServerGroupAutoScalingPolicyPropertyToHclTerraform(struct?: AwsGameliftGameServerGroup.AutoScalingPolicyPropertyOutputReference | AwsGameliftGameServerGroup.AutoScalingPolicyProperty): any {
+export function tfGameServerGroupAutoScalingPolicyPropertyToHclTerraform(struct?: TfGameServerGroup.AutoScalingPolicyPropertyOutputReference | TfGameServerGroup.AutoScalingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function awsGameliftGameServerGroupAutoScalingPolicyPropertyToHclTerrafor
       storageClassType: "number",
     },
     target_tracking_configuration: {
-      value: awsGameliftGameServerGroupTargetTrackingConfigurationPropertyToHclTerraform(struct!.targetTrackingConfiguration),
+      value: tfGameServerGroupTargetTrackingConfigurationPropertyToHclTerraform(struct!.targetTrackingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TargetTrackingConfigurationPropertyList",
@@ -575,7 +575,7 @@ export function awsGameliftGameServerGroupAutoScalingPolicyPropertyToHclTerrafor
 }
 
 
-export function awsGameliftGameServerGroupInstanceDefinitionPropertyToTerraform(struct?: AwsGameliftGameServerGroup.InstanceDefinitionProperty | cdktn.IResolvable): any {
+export function tfGameServerGroupInstanceDefinitionPropertyToTerraform(struct?: TfGameServerGroup.InstanceDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function awsGameliftGameServerGroupInstanceDefinitionPropertyToTerraform(
 }
 
 
-export function awsGameliftGameServerGroupInstanceDefinitionPropertyToHclTerraform(struct?: AwsGameliftGameServerGroup.InstanceDefinitionProperty | cdktn.IResolvable): any {
+export function tfGameServerGroupInstanceDefinitionPropertyToHclTerraform(struct?: TfGameServerGroup.InstanceDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function awsGameliftGameServerGroupInstanceDefinitionPropertyToHclTerrafo
 }
 
 
-export function awsGameliftGameServerGroupLaunchTemplatePropertyToTerraform(struct?: AwsGameliftGameServerGroup.LaunchTemplatePropertyOutputReference | AwsGameliftGameServerGroup.LaunchTemplateProperty): any {
+export function tfGameServerGroupLaunchTemplatePropertyToTerraform(struct?: TfGameServerGroup.LaunchTemplatePropertyOutputReference | TfGameServerGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,7 +625,7 @@ export function awsGameliftGameServerGroupLaunchTemplatePropertyToTerraform(stru
 }
 
 
-export function awsGameliftGameServerGroupLaunchTemplatePropertyToHclTerraform(struct?: AwsGameliftGameServerGroup.LaunchTemplatePropertyOutputReference | AwsGameliftGameServerGroup.LaunchTemplateProperty): any {
+export function tfGameServerGroupLaunchTemplatePropertyToHclTerraform(struct?: TfGameServerGroup.LaunchTemplatePropertyOutputReference | TfGameServerGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function awsGameliftGameServerGroupLaunchTemplatePropertyToHclTerraform(s
 }
 
 
-export function awsGameliftGameServerGroupTimeoutsPropertyToTerraform(struct?: AwsGameliftGameServerGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGameServerGroupTimeoutsPropertyToTerraform(struct?: TfGameServerGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function awsGameliftGameServerGroupTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsGameliftGameServerGroupTimeoutsPropertyToHclTerraform(struct?: AwsGameliftGameServerGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGameServerGroupTimeoutsPropertyToHclTerraform(struct?: TfGameServerGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,10 +693,10 @@ export function awsGameliftGameServerGroupTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsGameliftGameServerGroup {
+export namespace TfGameServerGroup {
 export interface TargetTrackingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#target_value AwsGameliftGameServerGroup#target_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#target_value TfGameServerGroup#target_value}
   */
   readonly targetValue: number;
 }
@@ -747,13 +747,13 @@ export class TargetTrackingConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface AutoScalingPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#estimated_instance_warmup AwsGameliftGameServerGroup#estimated_instance_warmup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#estimated_instance_warmup TfGameServerGroup#estimated_instance_warmup}
   */
   readonly estimatedInstanceWarmup?: number;
   /**
   * target_tracking_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#target_tracking_configuration AwsGameliftGameServerGroup#target_tracking_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#target_tracking_configuration TfGameServerGroup#target_tracking_configuration}
   */
   readonly targetTrackingConfiguration: TargetTrackingConfigurationProperty;
 }
@@ -826,11 +826,11 @@ export class AutoScalingPolicyPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface InstanceDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#instance_type AwsGameliftGameServerGroup#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#instance_type TfGameServerGroup#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#weighted_capacity AwsGameliftGameServerGroup#weighted_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#weighted_capacity TfGameServerGroup#weighted_capacity}
   */
   readonly weightedCapacity?: string;
 }
@@ -935,18 +935,18 @@ export class InstanceDefinitionPropertyList extends cdktn.ComplexList {
 }
 export interface LaunchTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#id AwsGameliftGameServerGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#id TfGameServerGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#name AwsGameliftGameServerGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#name TfGameServerGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#version AwsGameliftGameServerGroup#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#version TfGameServerGroup#version}
   */
   readonly version?: string;
 }
@@ -1044,11 +1044,11 @@ export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#create AwsGameliftGameServerGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#create TfGameServerGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#delete AwsGameliftGameServerGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_server_group#delete TfGameServerGroup#delete}
   */
   readonly delete?: string;
 }

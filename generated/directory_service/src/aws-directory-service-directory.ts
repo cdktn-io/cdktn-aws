@@ -5,96 +5,96 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDirectoryServiceDirectoryConfig extends cdktn.TerraformMetaArguments {
+export interface TfDirectoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#alias AwsDirectoryServiceDirectory#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#alias TfDirectory#alias}
   */
   readonly alias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#description AwsDirectoryServiceDirectory#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#description TfDirectory#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#desired_number_of_domain_controllers AwsDirectoryServiceDirectory#desired_number_of_domain_controllers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#desired_number_of_domain_controllers TfDirectory#desired_number_of_domain_controllers}
   */
   readonly desiredNumberOfDomainControllers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#edition AwsDirectoryServiceDirectory#edition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#edition TfDirectory#edition}
   */
   readonly edition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#enable_directory_data_access AwsDirectoryServiceDirectory#enable_directory_data_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#enable_directory_data_access TfDirectory#enable_directory_data_access}
   */
   readonly enableDirectoryDataAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#enable_sso AwsDirectoryServiceDirectory#enable_sso}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#enable_sso TfDirectory#enable_sso}
   */
   readonly enableSso?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#id AwsDirectoryServiceDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#id TfDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#name AwsDirectoryServiceDirectory#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#name TfDirectory#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#password AwsDirectoryServiceDirectory#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#password TfDirectory#password}
   */
   readonly password: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#region AwsDirectoryServiceDirectory#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#region TfDirectory#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#short_name AwsDirectoryServiceDirectory#short_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#short_name TfDirectory#short_name}
   */
   readonly shortName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#size AwsDirectoryServiceDirectory#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#size TfDirectory#size}
   */
   readonly size?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#tags AwsDirectoryServiceDirectory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#tags TfDirectory#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#tags_all AwsDirectoryServiceDirectory#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#tags_all TfDirectory#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#type AwsDirectoryServiceDirectory#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#type TfDirectory#type}
   */
   readonly type?: string;
   /**
   * connect_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#connect_settings AwsDirectoryServiceDirectory#connect_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#connect_settings TfDirectory#connect_settings}
   */
-  readonly connectSettings?: AwsDirectoryServiceDirectory.ConnectSettingsProperty;
+  readonly connectSettings?: TfDirectory.ConnectSettingsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#timeouts AwsDirectoryServiceDirectory#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#timeouts TfDirectory#timeouts}
   */
-  readonly timeouts?: AwsDirectoryServiceDirectory.TimeoutsProperty;
+  readonly timeouts?: TfDirectory.TimeoutsProperty;
   /**
   * vpc_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_settings AwsDirectoryServiceDirectory#vpc_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_settings TfDirectory#vpc_settings}
   */
-  readonly vpcSettings?: AwsDirectoryServiceDirectory.VpcSettingsProperty;
+  readonly vpcSettings?: TfDirectory.VpcSettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory aws_directory_service_directory}
 */
-export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
+export class TfDirectory extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -105,11 +105,11 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDirectoryServiceDirectory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDirectory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDirectoryServiceDirectory to import
-  * @param importFromId The id of the existing AwsDirectoryServiceDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDirectoryServiceDirectory to import is found
+  * @param importToId The construct id used in the generated config for the TfDirectory to import
+  * @param importFromId The id of the existing TfDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDirectory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_directory", importId: importFromId, provider });
@@ -124,9 +124,9 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDirectoryServiceDirectoryConfig
+  * @param options TfDirectoryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDirectoryServiceDirectoryConfig) {
+  public constructor(scope: Construct, id: string, config: TfDirectoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_directory_service_directory',
       terraformGeneratorMetadata: {
@@ -416,11 +416,11 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
   }
 
   // connect_settings - computed: false, optional: true, required: false
-  private _connectSettings = new AwsDirectoryServiceDirectory.ConnectSettingsPropertyOutputReference(this, "connect_settings");
+  private _connectSettings = new TfDirectory.ConnectSettingsPropertyOutputReference(this, "connect_settings");
   public get connectSettings() {
     return this._connectSettings;
   }
-  public putConnectSettings(value: AwsDirectoryServiceDirectory.ConnectSettingsProperty) {
+  public putConnectSettings(value: TfDirectory.ConnectSettingsProperty) {
     this._connectSettings.internalValue = value;
   }
   public resetConnectSettings() {
@@ -432,11 +432,11 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDirectoryServiceDirectory.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDirectory.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDirectoryServiceDirectory.TimeoutsProperty) {
+  public putTimeouts(value: TfDirectory.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -448,11 +448,11 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
   }
 
   // vpc_settings - computed: false, optional: true, required: false
-  private _vpcSettings = new AwsDirectoryServiceDirectory.VpcSettingsPropertyOutputReference(this, "vpc_settings");
+  private _vpcSettings = new TfDirectory.VpcSettingsPropertyOutputReference(this, "vpc_settings");
   public get vpcSettings() {
     return this._vpcSettings;
   }
-  public putVpcSettings(value: AwsDirectoryServiceDirectory.VpcSettingsProperty) {
+  public putVpcSettings(value: TfDirectory.VpcSettingsProperty) {
     this._vpcSettings.internalValue = value;
   }
   public resetVpcSettings() {
@@ -484,9 +484,9 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      connect_settings: awsDirectoryServiceDirectoryConnectSettingsPropertyToTerraform(this._connectSettings.internalValue),
-      timeouts: awsDirectoryServiceDirectoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_settings: awsDirectoryServiceDirectoryVpcSettingsPropertyToTerraform(this._vpcSettings.internalValue),
+      connect_settings: tfDirectoryConnectSettingsPropertyToTerraform(this._connectSettings.internalValue),
+      timeouts: tfDirectoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_settings: tfDirectoryVpcSettingsPropertyToTerraform(this._vpcSettings.internalValue),
     };
   }
 
@@ -583,22 +583,22 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       connect_settings: {
-        value: awsDirectoryServiceDirectoryConnectSettingsPropertyToHclTerraform(this._connectSettings.internalValue),
+        value: tfDirectoryConnectSettingsPropertyToHclTerraform(this._connectSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDirectoryServiceDirectory.ConnectSettingsPropertyList",
+        storageClassType: "TfDirectory.ConnectSettingsPropertyList",
       },
       timeouts: {
-        value: awsDirectoryServiceDirectoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDirectoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDirectoryServiceDirectory.TimeoutsProperty",
+        storageClassType: "TfDirectory.TimeoutsProperty",
       },
       vpc_settings: {
-        value: awsDirectoryServiceDirectoryVpcSettingsPropertyToHclTerraform(this._vpcSettings.internalValue),
+        value: tfDirectoryVpcSettingsPropertyToHclTerraform(this._vpcSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDirectoryServiceDirectory.VpcSettingsPropertyList",
+        storageClassType: "TfDirectory.VpcSettingsPropertyList",
       },
     };
 
@@ -607,7 +607,7 @@ export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
   }
 }
 
-export function awsDirectoryServiceDirectoryConnectSettingsPropertyToTerraform(struct?: AwsDirectoryServiceDirectory.ConnectSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.ConnectSettingsProperty): any {
+export function tfDirectoryConnectSettingsPropertyToTerraform(struct?: TfDirectory.ConnectSettingsPropertyOutputReference | TfDirectory.ConnectSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -621,7 +621,7 @@ export function awsDirectoryServiceDirectoryConnectSettingsPropertyToTerraform(s
 }
 
 
-export function awsDirectoryServiceDirectoryConnectSettingsPropertyToHclTerraform(struct?: AwsDirectoryServiceDirectory.ConnectSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.ConnectSettingsProperty): any {
+export function tfDirectoryConnectSettingsPropertyToHclTerraform(struct?: TfDirectory.ConnectSettingsPropertyOutputReference | TfDirectory.ConnectSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function awsDirectoryServiceDirectoryConnectSettingsPropertyToHclTerrafor
 }
 
 
-export function awsDirectoryServiceDirectoryTimeoutsPropertyToTerraform(struct?: AwsDirectoryServiceDirectory.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDirectoryTimeoutsPropertyToTerraform(struct?: TfDirectory.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -671,7 +671,7 @@ export function awsDirectoryServiceDirectoryTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsDirectoryServiceDirectoryTimeoutsPropertyToHclTerraform(struct?: AwsDirectoryServiceDirectory.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDirectoryTimeoutsPropertyToHclTerraform(struct?: TfDirectory.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function awsDirectoryServiceDirectoryTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export function awsDirectoryServiceDirectoryVpcSettingsPropertyToTerraform(struct?: AwsDirectoryServiceDirectory.VpcSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.VpcSettingsProperty): any {
+export function tfDirectoryVpcSettingsPropertyToTerraform(struct?: TfDirectory.VpcSettingsPropertyOutputReference | TfDirectory.VpcSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function awsDirectoryServiceDirectoryVpcSettingsPropertyToTerraform(struc
 }
 
 
-export function awsDirectoryServiceDirectoryVpcSettingsPropertyToHclTerraform(struct?: AwsDirectoryServiceDirectory.VpcSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.VpcSettingsProperty): any {
+export function tfDirectoryVpcSettingsPropertyToHclTerraform(struct?: TfDirectory.VpcSettingsPropertyOutputReference | TfDirectory.VpcSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,22 +739,22 @@ export function awsDirectoryServiceDirectoryVpcSettingsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsDirectoryServiceDirectory {
+export namespace TfDirectory {
 export interface ConnectSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#customer_dns_ips AwsDirectoryServiceDirectory#customer_dns_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#customer_dns_ips TfDirectory#customer_dns_ips}
   */
   readonly customerDnsIps: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#customer_username AwsDirectoryServiceDirectory#customer_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#customer_username TfDirectory#customer_username}
   */
   readonly customerUsername: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#subnet_ids AwsDirectoryServiceDirectory#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#subnet_ids TfDirectory#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_id AwsDirectoryServiceDirectory#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_id TfDirectory#vpc_id}
   */
   readonly vpcId: string;
 }
@@ -872,15 +872,15 @@ export class ConnectSettingsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#create AwsDirectoryServiceDirectory#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#create TfDirectory#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#delete AwsDirectoryServiceDirectory#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#delete TfDirectory#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#update AwsDirectoryServiceDirectory#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#update TfDirectory#update}
   */
   readonly update?: string;
 }
@@ -988,11 +988,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#subnet_ids AwsDirectoryServiceDirectory#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#subnet_ids TfDirectory#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_id AwsDirectoryServiceDirectory#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_id TfDirectory#vpc_id}
   */
   readonly vpcId: string;
 }

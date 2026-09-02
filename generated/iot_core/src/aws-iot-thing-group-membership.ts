@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotThingGroupMembershipConfig extends cdktn.TerraformMetaArguments {
+export interface TfThingGroupMembershipConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#id AwsIotThingGroupMembership#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#id TfThingGroupMembership#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#override_dynamic_group AwsIotThingGroupMembership#override_dynamic_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#override_dynamic_group TfThingGroupMembership#override_dynamic_group}
   */
   readonly overrideDynamicGroup?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#region AwsIotThingGroupMembership#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#region TfThingGroupMembership#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#thing_group_name AwsIotThingGroupMembership#thing_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#thing_group_name TfThingGroupMembership#thing_group_name}
   */
   readonly thingGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#thing_name AwsIotThingGroupMembership#thing_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#thing_name TfThingGroupMembership#thing_name}
   */
   readonly thingName: string;
 }
@@ -36,7 +36,7 @@ export interface AwsIotThingGroupMembershipConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership aws_iot_thing_group_membership}
 */
-export class AwsIotThingGroupMembership extends cdktn.TerraformResource {
+export class TfThingGroupMembership extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsIotThingGroupMembership extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotThingGroupMembership resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfThingGroupMembership resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotThingGroupMembership to import
-  * @param importFromId The id of the existing AwsIotThingGroupMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotThingGroupMembership to import is found
+  * @param importToId The construct id used in the generated config for the TfThingGroupMembership to import
+  * @param importFromId The id of the existing TfThingGroupMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group_membership#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfThingGroupMembership to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_thing_group_membership", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsIotThingGroupMembership extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotThingGroupMembershipConfig
+  * @param options TfThingGroupMembershipConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotThingGroupMembershipConfig) {
+  public constructor(scope: Construct, id: string, config: TfThingGroupMembershipConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_thing_group_membership',
       terraformGeneratorMetadata: {

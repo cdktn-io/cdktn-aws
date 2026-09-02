@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRedshiftNamespaceRegistrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfNamespaceRegistrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#consumer_identifier AwsRedshiftNamespaceRegistration#consumer_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#consumer_identifier TfNamespaceRegistration#consumer_identifier}
   */
   readonly consumerIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#namespace_type AwsRedshiftNamespaceRegistration#namespace_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#namespace_type TfNamespaceRegistration#namespace_type}
   */
   readonly namespaceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#provisioned_cluster_identifier AwsRedshiftNamespaceRegistration#provisioned_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#provisioned_cluster_identifier TfNamespaceRegistration#provisioned_cluster_identifier}
   */
   readonly provisionedClusterIdentifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#region AwsRedshiftNamespaceRegistration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#region TfNamespaceRegistration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#serverless_namespace_identifier AwsRedshiftNamespaceRegistration#serverless_namespace_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#serverless_namespace_identifier TfNamespaceRegistration#serverless_namespace_identifier}
   */
   readonly serverlessNamespaceIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#serverless_workgroup_identifier AwsRedshiftNamespaceRegistration#serverless_workgroup_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#serverless_workgroup_identifier TfNamespaceRegistration#serverless_workgroup_identifier}
   */
   readonly serverlessWorkgroupIdentifier?: string;
 }
@@ -37,7 +37,7 @@ export interface AwsRedshiftNamespaceRegistrationConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration aws_redshift_namespace_registration}
 */
-export class AwsRedshiftNamespaceRegistration extends cdktn.TerraformResource {
+export class TfNamespaceRegistration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsRedshiftNamespaceRegistration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRedshiftNamespaceRegistration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNamespaceRegistration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRedshiftNamespaceRegistration to import
-  * @param importFromId The id of the existing AwsRedshiftNamespaceRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRedshiftNamespaceRegistration to import is found
+  * @param importToId The construct id used in the generated config for the TfNamespaceRegistration to import
+  * @param importFromId The id of the existing TfNamespaceRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_namespace_registration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNamespaceRegistration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_namespace_registration", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsRedshiftNamespaceRegistration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRedshiftNamespaceRegistrationConfig
+  * @param options TfNamespaceRegistrationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRedshiftNamespaceRegistrationConfig) {
+  public constructor(scope: Construct, id: string, config: TfNamespaceRegistrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_namespace_registration',
       terraformGeneratorMetadata: {

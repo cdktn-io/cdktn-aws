@@ -5,90 +5,90 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIdentitystoreUserConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#display_name AwsIdentitystoreUser#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#display_name TfUser#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#id AwsIdentitystoreUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#id TfUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#identity_store_id AwsIdentitystoreUser#identity_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#identity_store_id TfUser#identity_store_id}
   */
   readonly identityStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#locale AwsIdentitystoreUser#locale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#locale TfUser#locale}
   */
   readonly locale?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#nickname AwsIdentitystoreUser#nickname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#nickname TfUser#nickname}
   */
   readonly nickname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#preferred_language AwsIdentitystoreUser#preferred_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#preferred_language TfUser#preferred_language}
   */
   readonly preferredLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#profile_url AwsIdentitystoreUser#profile_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#profile_url TfUser#profile_url}
   */
   readonly profileUrl?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#region AwsIdentitystoreUser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#region TfUser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#timezone AwsIdentitystoreUser#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#timezone TfUser#timezone}
   */
   readonly timezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#title AwsIdentitystoreUser#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#title TfUser#title}
   */
   readonly title?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#user_name AwsIdentitystoreUser#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#user_name TfUser#user_name}
   */
   readonly userName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#user_type AwsIdentitystoreUser#user_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#user_type TfUser#user_type}
   */
   readonly userType?: string;
   /**
   * addresses block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#addresses AwsIdentitystoreUser#addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#addresses TfUser#addresses}
   */
-  readonly addresses?: AwsIdentitystoreUser.AddressesProperty;
+  readonly addresses?: TfUser.AddressesProperty;
   /**
   * emails block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#emails AwsIdentitystoreUser#emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#emails TfUser#emails}
   */
-  readonly emails?: AwsIdentitystoreUser.EmailsProperty;
+  readonly emails?: TfUser.EmailsProperty;
   /**
   * name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#name AwsIdentitystoreUser#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#name TfUser#name}
   */
-  readonly name: AwsIdentitystoreUser.NameProperty;
+  readonly name: TfUser.NameProperty;
   /**
   * phone_numbers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#phone_numbers AwsIdentitystoreUser#phone_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#phone_numbers TfUser#phone_numbers}
   */
-  readonly phoneNumbers?: AwsIdentitystoreUser.PhoneNumbersProperty;
+  readonly phoneNumbers?: TfUser.PhoneNumbersProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user aws_identitystore_user}
 */
-export class AwsIdentitystoreUser extends cdktn.TerraformResource {
+export class TfUser extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -99,11 +99,11 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIdentitystoreUser resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUser resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIdentitystoreUser to import
-  * @param importFromId The id of the existing AwsIdentitystoreUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIdentitystoreUser to import is found
+  * @param importToId The construct id used in the generated config for the TfUser to import
+  * @param importFromId The id of the existing TfUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_identitystore_user", importId: importFromId, provider });
@@ -118,9 +118,9 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIdentitystoreUserConfig
+  * @param options TfUserConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIdentitystoreUserConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_identitystore_user',
       terraformGeneratorMetadata: {
@@ -172,7 +172,7 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   }
 
   // external_ids - computed: true, optional: false, required: false
-  private _externalIds = new AwsIdentitystoreUser.ExternalIdsPropertyList(this, "external_ids", false);
+  private _externalIds = new TfUser.ExternalIdsPropertyList(this, "external_ids", false);
   public get externalIds() {
     return this._externalIds;
   }
@@ -358,11 +358,11 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   }
 
   // addresses - computed: false, optional: true, required: false
-  private _addresses = new AwsIdentitystoreUser.AddressesPropertyOutputReference(this, "addresses");
+  private _addresses = new TfUser.AddressesPropertyOutputReference(this, "addresses");
   public get addresses() {
     return this._addresses;
   }
-  public putAddresses(value: AwsIdentitystoreUser.AddressesProperty) {
+  public putAddresses(value: TfUser.AddressesProperty) {
     this._addresses.internalValue = value;
   }
   public resetAddresses() {
@@ -374,11 +374,11 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   }
 
   // emails - computed: false, optional: true, required: false
-  private _emails = new AwsIdentitystoreUser.EmailsPropertyOutputReference(this, "emails");
+  private _emails = new TfUser.EmailsPropertyOutputReference(this, "emails");
   public get emails() {
     return this._emails;
   }
-  public putEmails(value: AwsIdentitystoreUser.EmailsProperty) {
+  public putEmails(value: TfUser.EmailsProperty) {
     this._emails.internalValue = value;
   }
   public resetEmails() {
@@ -390,11 +390,11 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name = new AwsIdentitystoreUser.NamePropertyOutputReference(this, "name");
+  private _name = new TfUser.NamePropertyOutputReference(this, "name");
   public get name() {
     return this._name;
   }
-  public putName(value: AwsIdentitystoreUser.NameProperty) {
+  public putName(value: TfUser.NameProperty) {
     this._name.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -403,11 +403,11 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   }
 
   // phone_numbers - computed: false, optional: true, required: false
-  private _phoneNumbers = new AwsIdentitystoreUser.PhoneNumbersPropertyOutputReference(this, "phone_numbers");
+  private _phoneNumbers = new TfUser.PhoneNumbersPropertyOutputReference(this, "phone_numbers");
   public get phoneNumbers() {
     return this._phoneNumbers;
   }
-  public putPhoneNumbers(value: AwsIdentitystoreUser.PhoneNumbersProperty) {
+  public putPhoneNumbers(value: TfUser.PhoneNumbersProperty) {
     this._phoneNumbers.internalValue = value;
   }
   public resetPhoneNumbers() {
@@ -436,10 +436,10 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
       title: cdktn.stringToTerraform(this._title),
       user_name: cdktn.stringToTerraform(this._userName),
       user_type: cdktn.stringToTerraform(this._userType),
-      addresses: awsIdentitystoreUserAddressesPropertyToTerraform(this._addresses.internalValue),
-      emails: awsIdentitystoreUserEmailsPropertyToTerraform(this._emails.internalValue),
-      name: awsIdentitystoreUserNamePropertyToTerraform(this._name.internalValue),
-      phone_numbers: awsIdentitystoreUserPhoneNumbersPropertyToTerraform(this._phoneNumbers.internalValue),
+      addresses: tfUserAddressesPropertyToTerraform(this._addresses.internalValue),
+      emails: tfUserEmailsPropertyToTerraform(this._emails.internalValue),
+      name: tfUserNamePropertyToTerraform(this._name.internalValue),
+      phone_numbers: tfUserPhoneNumbersPropertyToTerraform(this._phoneNumbers.internalValue),
     };
   }
 
@@ -518,28 +518,28 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       addresses: {
-        value: awsIdentitystoreUserAddressesPropertyToHclTerraform(this._addresses.internalValue),
+        value: tfUserAddressesPropertyToHclTerraform(this._addresses.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIdentitystoreUser.AddressesPropertyList",
+        storageClassType: "TfUser.AddressesPropertyList",
       },
       emails: {
-        value: awsIdentitystoreUserEmailsPropertyToHclTerraform(this._emails.internalValue),
+        value: tfUserEmailsPropertyToHclTerraform(this._emails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIdentitystoreUser.EmailsPropertyList",
+        storageClassType: "TfUser.EmailsPropertyList",
       },
       name: {
-        value: awsIdentitystoreUserNamePropertyToHclTerraform(this._name.internalValue),
+        value: tfUserNamePropertyToHclTerraform(this._name.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIdentitystoreUser.NamePropertyList",
+        storageClassType: "TfUser.NamePropertyList",
       },
       phone_numbers: {
-        value: awsIdentitystoreUserPhoneNumbersPropertyToHclTerraform(this._phoneNumbers.internalValue),
+        value: tfUserPhoneNumbersPropertyToHclTerraform(this._phoneNumbers.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIdentitystoreUser.PhoneNumbersPropertyList",
+        storageClassType: "TfUser.PhoneNumbersPropertyList",
       },
     };
 
@@ -548,7 +548,7 @@ export class AwsIdentitystoreUser extends cdktn.TerraformResource {
   }
 }
 
-export function awsIdentitystoreUserExternalIdsPropertyToTerraform(struct?: AwsIdentitystoreUser.ExternalIdsProperty): any {
+export function tfUserExternalIdsPropertyToTerraform(struct?: TfUser.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,7 +558,7 @@ export function awsIdentitystoreUserExternalIdsPropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsIdentitystoreUserExternalIdsPropertyToHclTerraform(struct?: AwsIdentitystoreUser.ExternalIdsProperty): any {
+export function tfUserExternalIdsPropertyToHclTerraform(struct?: TfUser.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function awsIdentitystoreUserExternalIdsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsIdentitystoreUserAddressesPropertyToTerraform(struct?: AwsIdentitystoreUser.AddressesPropertyOutputReference | AwsIdentitystoreUser.AddressesProperty): any {
+export function tfUserAddressesPropertyToTerraform(struct?: TfUser.AddressesPropertyOutputReference | TfUser.AddressesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function awsIdentitystoreUserAddressesPropertyToTerraform(struct?: AwsIde
 }
 
 
-export function awsIdentitystoreUserAddressesPropertyToHclTerraform(struct?: AwsIdentitystoreUser.AddressesPropertyOutputReference | AwsIdentitystoreUser.AddressesProperty): any {
+export function tfUserAddressesPropertyToHclTerraform(struct?: TfUser.AddressesPropertyOutputReference | TfUser.AddressesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -648,7 +648,7 @@ export function awsIdentitystoreUserAddressesPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsIdentitystoreUserEmailsPropertyToTerraform(struct?: AwsIdentitystoreUser.EmailsPropertyOutputReference | AwsIdentitystoreUser.EmailsProperty): any {
+export function tfUserEmailsPropertyToTerraform(struct?: TfUser.EmailsPropertyOutputReference | TfUser.EmailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function awsIdentitystoreUserEmailsPropertyToTerraform(struct?: AwsIdenti
 }
 
 
-export function awsIdentitystoreUserEmailsPropertyToHclTerraform(struct?: AwsIdentitystoreUser.EmailsPropertyOutputReference | AwsIdentitystoreUser.EmailsProperty): any {
+export function tfUserEmailsPropertyToHclTerraform(struct?: TfUser.EmailsPropertyOutputReference | TfUser.EmailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -692,7 +692,7 @@ export function awsIdentitystoreUserEmailsPropertyToHclTerraform(struct?: AwsIde
 }
 
 
-export function awsIdentitystoreUserNamePropertyToTerraform(struct?: AwsIdentitystoreUser.NamePropertyOutputReference | AwsIdentitystoreUser.NameProperty): any {
+export function tfUserNamePropertyToTerraform(struct?: TfUser.NamePropertyOutputReference | TfUser.NameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function awsIdentitystoreUserNamePropertyToTerraform(struct?: AwsIdentity
 }
 
 
-export function awsIdentitystoreUserNamePropertyToHclTerraform(struct?: AwsIdentitystoreUser.NamePropertyOutputReference | AwsIdentitystoreUser.NameProperty): any {
+export function tfUserNamePropertyToHclTerraform(struct?: TfUser.NamePropertyOutputReference | TfUser.NameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function awsIdentitystoreUserNamePropertyToHclTerraform(struct?: AwsIdent
 }
 
 
-export function awsIdentitystoreUserPhoneNumbersPropertyToTerraform(struct?: AwsIdentitystoreUser.PhoneNumbersPropertyOutputReference | AwsIdentitystoreUser.PhoneNumbersProperty): any {
+export function tfUserPhoneNumbersPropertyToTerraform(struct?: TfUser.PhoneNumbersPropertyOutputReference | TfUser.PhoneNumbersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -770,7 +770,7 @@ export function awsIdentitystoreUserPhoneNumbersPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsIdentitystoreUserPhoneNumbersPropertyToHclTerraform(struct?: AwsIdentitystoreUser.PhoneNumbersPropertyOutputReference | AwsIdentitystoreUser.PhoneNumbersProperty): any {
+export function tfUserPhoneNumbersPropertyToHclTerraform(struct?: TfUser.PhoneNumbersPropertyOutputReference | TfUser.PhoneNumbersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -801,7 +801,7 @@ export function awsIdentitystoreUserPhoneNumbersPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsIdentitystoreUser {
+export namespace TfUser {
 export interface ExternalIdsProperty {
 }
 export class ExternalIdsPropertyOutputReference extends cdktn.ComplexObject {
@@ -863,35 +863,35 @@ export class ExternalIdsPropertyList extends cdktn.ComplexList {
 }
 export interface AddressesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#country AwsIdentitystoreUser#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#country TfUser#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#formatted AwsIdentitystoreUser#formatted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#formatted TfUser#formatted}
   */
   readonly formatted?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#locality AwsIdentitystoreUser#locality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#locality TfUser#locality}
   */
   readonly locality?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#postal_code AwsIdentitystoreUser#postal_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#postal_code TfUser#postal_code}
   */
   readonly postalCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary AwsIdentitystoreUser#primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary TfUser#primary}
   */
   readonly primary?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#region AwsIdentitystoreUser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#region TfUser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#street_address AwsIdentitystoreUser#street_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#street_address TfUser#street_address}
   */
   readonly streetAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type AwsIdentitystoreUser#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type TfUser#type}
   */
   readonly type?: string;
 }
@@ -1099,15 +1099,15 @@ export class AddressesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EmailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary AwsIdentitystoreUser#primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary TfUser#primary}
   */
   readonly primary?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type AwsIdentitystoreUser#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type TfUser#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#value AwsIdentitystoreUser#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#value TfUser#value}
   */
   readonly value?: string;
 }
@@ -1205,27 +1205,27 @@ export class EmailsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#family_name AwsIdentitystoreUser#family_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#family_name TfUser#family_name}
   */
   readonly familyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#formatted AwsIdentitystoreUser#formatted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#formatted TfUser#formatted}
   */
   readonly formatted?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#given_name AwsIdentitystoreUser#given_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#given_name TfUser#given_name}
   */
   readonly givenName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#honorific_prefix AwsIdentitystoreUser#honorific_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#honorific_prefix TfUser#honorific_prefix}
   */
   readonly honorificPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#honorific_suffix AwsIdentitystoreUser#honorific_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#honorific_suffix TfUser#honorific_suffix}
   */
   readonly honorificSuffix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#middle_name AwsIdentitystoreUser#middle_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#middle_name TfUser#middle_name}
   */
   readonly middleName?: string;
 }
@@ -1383,15 +1383,15 @@ export class NamePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PhoneNumbersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary AwsIdentitystoreUser#primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary TfUser#primary}
   */
   readonly primary?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type AwsIdentitystoreUser#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type TfUser#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#value AwsIdentitystoreUser#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#value TfUser#value}
   */
   readonly value?: string;
 }

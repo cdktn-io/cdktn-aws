@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafregionalRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#id AwsWafregionalRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#id TfRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#metric_name AwsWafregionalRule#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#metric_name TfRule#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#name AwsWafregionalRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#name TfRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#region AwsWafregionalRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#region TfRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#tags AwsWafregionalRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#tags TfRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#tags_all AwsWafregionalRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#tags_all TfRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * predicate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#predicate AwsWafregionalRule#predicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#predicate TfRule#predicate}
   */
-  readonly predicate?: AwsWafregionalRule.PredicateProperty[] | cdktn.IResolvable;
+  readonly predicate?: TfRule.PredicateProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule aws_wafregional_rule}
 */
-export class AwsWafregionalRule extends cdktn.TerraformResource {
+export class TfRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsWafregionalRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafregionalRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafregionalRule to import
-  * @param importFromId The id of the existing AwsWafregionalRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafregionalRule to import is found
+  * @param importToId The construct id used in the generated config for the TfRule to import
+  * @param importFromId The id of the existing TfRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_rule", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsWafregionalRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafregionalRuleConfig
+  * @param options TfRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafregionalRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_rule',
       terraformGeneratorMetadata: {
@@ -203,11 +203,11 @@ export class AwsWafregionalRule extends cdktn.TerraformResource {
   }
 
   // predicate - computed: false, optional: true, required: false
-  private _predicate = new AwsWafregionalRule.PredicatePropertyList(this, "predicate", true);
+  private _predicate = new TfRule.PredicatePropertyList(this, "predicate", true);
   public get predicate() {
     return this._predicate;
   }
-  public putPredicate(value: AwsWafregionalRule.PredicateProperty[] | cdktn.IResolvable) {
+  public putPredicate(value: TfRule.PredicateProperty[] | cdktn.IResolvable) {
     this._predicate.internalValue = value;
   }
   public resetPredicate() {
@@ -230,7 +230,7 @@ export class AwsWafregionalRule extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      predicate: cdktn.listMapper(awsWafregionalRulePredicatePropertyToTerraform, true)(this._predicate.internalValue),
+      predicate: cdktn.listMapper(tfRulePredicatePropertyToTerraform, true)(this._predicate.internalValue),
     };
   }
 
@@ -273,10 +273,10 @@ export class AwsWafregionalRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       predicate: {
-        value: cdktn.listMapperHcl(awsWafregionalRulePredicatePropertyToHclTerraform, true)(this._predicate.internalValue),
+        value: cdktn.listMapperHcl(tfRulePredicatePropertyToHclTerraform, true)(this._predicate.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafregionalRule.PredicatePropertyList",
+        storageClassType: "TfRule.PredicatePropertyList",
       },
     };
 
@@ -285,7 +285,7 @@ export class AwsWafregionalRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafregionalRulePredicatePropertyToTerraform(struct?: AwsWafregionalRule.PredicateProperty | cdktn.IResolvable): any {
+export function tfRulePredicatePropertyToTerraform(struct?: TfRule.PredicateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function awsWafregionalRulePredicatePropertyToTerraform(struct?: AwsWafre
 }
 
 
-export function awsWafregionalRulePredicatePropertyToHclTerraform(struct?: AwsWafregionalRule.PredicateProperty | cdktn.IResolvable): any {
+export function tfRulePredicatePropertyToHclTerraform(struct?: TfRule.PredicateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,18 +329,18 @@ export function awsWafregionalRulePredicatePropertyToHclTerraform(struct?: AwsWa
 }
 
 
-export namespace AwsWafregionalRule {
+export namespace TfRule {
 export interface PredicateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#data_id AwsWafregionalRule#data_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#data_id TfRule#data_id}
   */
   readonly dataId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#negated AwsWafregionalRule#negated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#negated TfRule#negated}
   */
   readonly negated: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#type AwsWafregionalRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rule#type TfRule#type}
   */
   readonly type: string;
 }

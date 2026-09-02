@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightIngestionConfig extends cdktn.TerraformMetaArguments {
+export interface TfIngestionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#aws_account_id AwsQuicksightIngestion#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#aws_account_id TfIngestion#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#data_set_id AwsQuicksightIngestion#data_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#data_set_id TfIngestion#data_set_id}
   */
   readonly dataSetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#ingestion_id AwsQuicksightIngestion#ingestion_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#ingestion_id TfIngestion#ingestion_id}
   */
   readonly ingestionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#ingestion_type AwsQuicksightIngestion#ingestion_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#ingestion_type TfIngestion#ingestion_type}
   */
   readonly ingestionType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#region AwsQuicksightIngestion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#region TfIngestion#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface AwsQuicksightIngestionConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion aws_quicksight_ingestion}
 */
-export class AwsQuicksightIngestion extends cdktn.TerraformResource {
+export class TfIngestion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsQuicksightIngestion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightIngestion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIngestion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightIngestion to import
-  * @param importFromId The id of the existing AwsQuicksightIngestion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightIngestion to import is found
+  * @param importToId The construct id used in the generated config for the TfIngestion to import
+  * @param importFromId The id of the existing TfIngestion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ingestion#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIngestion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_ingestion", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsQuicksightIngestion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightIngestionConfig
+  * @param options TfIngestionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightIngestionConfig) {
+  public constructor(scope: Construct, id: string, config: TfIngestionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_ingestion',
       terraformGeneratorMetadata: {

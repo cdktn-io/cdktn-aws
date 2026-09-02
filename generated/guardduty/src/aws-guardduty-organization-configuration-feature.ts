@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGuarddutyOrganizationConfigurationFeatureConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationConfigurationFeatureConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#auto_enable AwsGuarddutyOrganizationConfigurationFeature#auto_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#auto_enable TfOrganizationConfigurationFeature#auto_enable}
   */
   readonly autoEnable: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#detector_id AwsGuarddutyOrganizationConfigurationFeature#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#detector_id TfOrganizationConfigurationFeature#detector_id}
   */
   readonly detectorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#id AwsGuarddutyOrganizationConfigurationFeature#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#id TfOrganizationConfigurationFeature#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#name AwsGuarddutyOrganizationConfigurationFeature#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#name TfOrganizationConfigurationFeature#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#region AwsGuarddutyOrganizationConfigurationFeature#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#region TfOrganizationConfigurationFeature#region}
   */
   readonly region?: string;
   /**
   * additional_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#additional_configuration AwsGuarddutyOrganizationConfigurationFeature#additional_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#additional_configuration TfOrganizationConfigurationFeature#additional_configuration}
   */
-  readonly additionalConfiguration?: AwsGuarddutyOrganizationConfigurationFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable;
+  readonly additionalConfiguration?: TfOrganizationConfigurationFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature aws_guardduty_organization_configuration_feature}
 */
-export class AwsGuarddutyOrganizationConfigurationFeature extends cdktn.TerraformResource {
+export class TfOrganizationConfigurationFeature extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsGuarddutyOrganizationConfigurationFeature extends cdktn.Terrafor
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGuarddutyOrganizationConfigurationFeature resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationConfigurationFeature resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGuarddutyOrganizationConfigurationFeature to import
-  * @param importFromId The id of the existing AwsGuarddutyOrganizationConfigurationFeature that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGuarddutyOrganizationConfigurationFeature to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationConfigurationFeature to import
+  * @param importFromId The id of the existing TfOrganizationConfigurationFeature that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationConfigurationFeature to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_organization_configuration_feature", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsGuarddutyOrganizationConfigurationFeature extends cdktn.Terrafor
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGuarddutyOrganizationConfigurationFeatureConfig
+  * @param options TfOrganizationConfigurationFeatureConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGuarddutyOrganizationConfigurationFeatureConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationConfigurationFeatureConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_organization_configuration_feature',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class AwsGuarddutyOrganizationConfigurationFeature extends cdktn.Terrafor
   }
 
   // additional_configuration - computed: false, optional: true, required: false
-  private _additionalConfiguration = new AwsGuarddutyOrganizationConfigurationFeature.AdditionalConfigurationPropertyList(this, "additional_configuration", false);
+  private _additionalConfiguration = new TfOrganizationConfigurationFeature.AdditionalConfigurationPropertyList(this, "additional_configuration", false);
   public get additionalConfiguration() {
     return this._additionalConfiguration;
   }
-  public putAdditionalConfiguration(value: AwsGuarddutyOrganizationConfigurationFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable) {
+  public putAdditionalConfiguration(value: TfOrganizationConfigurationFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable) {
     this._additionalConfiguration.internalValue = value;
   }
   public resetAdditionalConfiguration() {
@@ -200,7 +200,7 @@ export class AwsGuarddutyOrganizationConfigurationFeature extends cdktn.Terrafor
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      additional_configuration: cdktn.listMapper(awsGuarddutyOrganizationConfigurationFeatureAdditionalConfigurationPropertyToTerraform, true)(this._additionalConfiguration.internalValue),
+      additional_configuration: cdktn.listMapper(tfOrganizationConfigurationFeatureAdditionalConfigurationPropertyToTerraform, true)(this._additionalConfiguration.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class AwsGuarddutyOrganizationConfigurationFeature extends cdktn.Terrafor
         storageClassType: "string",
       },
       additional_configuration: {
-        value: cdktn.listMapperHcl(awsGuarddutyOrganizationConfigurationFeatureAdditionalConfigurationPropertyToHclTerraform, true)(this._additionalConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfOrganizationConfigurationFeatureAdditionalConfigurationPropertyToHclTerraform, true)(this._additionalConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGuarddutyOrganizationConfigurationFeature.AdditionalConfigurationPropertyList",
+        storageClassType: "TfOrganizationConfigurationFeature.AdditionalConfigurationPropertyList",
       },
     };
 
@@ -249,7 +249,7 @@ export class AwsGuarddutyOrganizationConfigurationFeature extends cdktn.Terrafor
   }
 }
 
-export function awsGuarddutyOrganizationConfigurationFeatureAdditionalConfigurationPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfigurationFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
+export function tfOrganizationConfigurationFeatureAdditionalConfigurationPropertyToTerraform(struct?: TfOrganizationConfigurationFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function awsGuarddutyOrganizationConfigurationFeatureAdditionalConfigurat
 }
 
 
-export function awsGuarddutyOrganizationConfigurationFeatureAdditionalConfigurationPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfigurationFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
+export function tfOrganizationConfigurationFeatureAdditionalConfigurationPropertyToHclTerraform(struct?: TfOrganizationConfigurationFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,14 +286,14 @@ export function awsGuarddutyOrganizationConfigurationFeatureAdditionalConfigurat
 }
 
 
-export namespace AwsGuarddutyOrganizationConfigurationFeature {
+export namespace TfOrganizationConfigurationFeature {
 export interface AdditionalConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#auto_enable AwsGuarddutyOrganizationConfigurationFeature#auto_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#auto_enable TfOrganizationConfigurationFeature#auto_enable}
   */
   readonly autoEnable: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#name AwsGuarddutyOrganizationConfigurationFeature#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration_feature#name TfOrganizationConfigurationFeature#name}
   */
   readonly name: string;
 }

@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRedshiftDataSharesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDataSharesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_data_shares#region DataAwsRedshiftDataShares#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_data_shares#region DataTfDataShares#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataAwsRedshiftDataSharesConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_data_shares aws_redshift_data_shares}
 */
-export class DataAwsRedshiftDataShares extends cdktn.TerraformDataSource {
+export class DataTfDataShares extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataAwsRedshiftDataShares extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRedshiftDataShares resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDataShares resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRedshiftDataShares to import
-  * @param importFromId The id of the existing DataAwsRedshiftDataShares that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_data_shares#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRedshiftDataShares to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDataShares to import
+  * @param importFromId The id of the existing DataTfDataShares that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_data_shares#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDataShares to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_data_shares", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataAwsRedshiftDataShares extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRedshiftDataSharesConfig = {}
+  * @param options DataTfDataSharesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRedshiftDataSharesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDataSharesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_data_shares',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class DataAwsRedshiftDataShares extends cdktn.TerraformDataSource {
   // ==========
 
   // data_shares - computed: true, optional: false, required: false
-  private _dataShares = new DataAwsRedshiftDataShares.DataSharesPropertyList(this, "data_shares", false);
+  private _dataShares = new DataTfDataShares.DataSharesPropertyList(this, "data_shares", false);
   public get dataShares() {
     return this._dataShares;
   }
@@ -124,7 +124,7 @@ export class DataAwsRedshiftDataShares extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsRedshiftDataSharesDataSharesPropertyToTerraform(struct?: DataAwsRedshiftDataShares.DataSharesProperty): any {
+export function dataTfDataSharesDataSharesPropertyToTerraform(struct?: DataTfDataShares.DataSharesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -134,7 +134,7 @@ export function dataAwsRedshiftDataSharesDataSharesPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsRedshiftDataSharesDataSharesPropertyToHclTerraform(struct?: DataAwsRedshiftDataShares.DataSharesProperty): any {
+export function dataTfDataSharesDataSharesPropertyToHclTerraform(struct?: DataTfDataShares.DataSharesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -145,7 +145,7 @@ export function dataAwsRedshiftDataSharesDataSharesPropertyToHclTerraform(struct
 }
 
 
-export namespace DataAwsRedshiftDataShares {
+export namespace DataTfDataShares {
 export interface DataSharesProperty {
 }
 export class DataSharesPropertyOutputReference extends cdktn.ComplexObject {

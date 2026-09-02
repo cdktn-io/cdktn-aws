@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDmsReplicationSubnetGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicationSubnetGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#id AwsDmsReplicationSubnetGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#id TfReplicationSubnetGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,27 +16,27 @@ export interface AwsDmsReplicationSubnetGroupConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#region AwsDmsReplicationSubnetGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#region TfReplicationSubnetGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#replication_subnet_group_description AwsDmsReplicationSubnetGroup#replication_subnet_group_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#replication_subnet_group_description TfReplicationSubnetGroup#replication_subnet_group_description}
   */
   readonly replicationSubnetGroupDescription: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#replication_subnet_group_id AwsDmsReplicationSubnetGroup#replication_subnet_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#replication_subnet_group_id TfReplicationSubnetGroup#replication_subnet_group_id}
   */
   readonly replicationSubnetGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#subnet_ids AwsDmsReplicationSubnetGroup#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#subnet_ids TfReplicationSubnetGroup#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#tags AwsDmsReplicationSubnetGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#tags TfReplicationSubnetGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#tags_all AwsDmsReplicationSubnetGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#tags_all TfReplicationSubnetGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -44,7 +44,7 @@ export interface AwsDmsReplicationSubnetGroupConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group aws_dms_replication_subnet_group}
 */
-export class AwsDmsReplicationSubnetGroup extends cdktn.TerraformResource {
+export class TfReplicationSubnetGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsDmsReplicationSubnetGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDmsReplicationSubnetGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicationSubnetGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDmsReplicationSubnetGroup to import
-  * @param importFromId The id of the existing AwsDmsReplicationSubnetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDmsReplicationSubnetGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicationSubnetGroup to import
+  * @param importFromId The id of the existing TfReplicationSubnetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_subnet_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicationSubnetGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_replication_subnet_group", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsDmsReplicationSubnetGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDmsReplicationSubnetGroupConfig
+  * @param options TfReplicationSubnetGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDmsReplicationSubnetGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfReplicationSubnetGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dms_replication_subnet_group',
       terraformGeneratorMetadata: {

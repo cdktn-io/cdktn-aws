@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsQuicksightThemeConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfThemeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#aws_account_id DataAwsQuicksightTheme#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#aws_account_id DataTfTheme#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#id DataAwsQuicksightTheme#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#id DataTfTheme#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,15 +20,15 @@ export interface DataAwsQuicksightThemeConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#region DataAwsQuicksightTheme#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#region DataTfTheme#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#tags DataAwsQuicksightTheme#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#tags DataTfTheme#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#theme_id DataAwsQuicksightTheme#theme_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#theme_id DataTfTheme#theme_id}
   */
   readonly themeId: string;
 }
@@ -36,7 +36,7 @@ export interface DataAwsQuicksightThemeConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme aws_quicksight_theme}
 */
-export class DataAwsQuicksightTheme extends cdktn.TerraformDataSource {
+export class DataTfTheme extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsQuicksightTheme extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsQuicksightTheme resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfTheme resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsQuicksightTheme to import
-  * @param importFromId The id of the existing DataAwsQuicksightTheme that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsQuicksightTheme to import is found
+  * @param importToId The construct id used in the generated config for the DataTfTheme to import
+  * @param importFromId The id of the existing DataTfTheme that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_theme#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfTheme to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_theme", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsQuicksightTheme extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsQuicksightThemeConfig
+  * @param options DataTfThemeConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsQuicksightThemeConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfThemeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_theme',
       terraformGeneratorMetadata: {
@@ -122,7 +122,7 @@ export class DataAwsQuicksightTheme extends cdktn.TerraformDataSource {
   }
 
   // configuration - computed: true, optional: false, required: false
-  private _configuration = new DataAwsQuicksightTheme.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new DataTfTheme.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
@@ -159,7 +159,7 @@ export class DataAwsQuicksightTheme extends cdktn.TerraformDataSource {
   }
 
   // permissions - computed: true, optional: false, required: false
-  private _permissions = new DataAwsQuicksightTheme.PermissionsPropertyList(this, "permissions", false);
+  private _permissions = new DataTfTheme.PermissionsPropertyList(this, "permissions", false);
   public get permissions() {
     return this._permissions;
   }
@@ -277,7 +277,7 @@ export class DataAwsQuicksightTheme extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsQuicksightThemeDataColorPalettePropertyToTerraform(struct?: DataAwsQuicksightTheme.DataColorPaletteProperty): any {
+export function dataTfThemeDataColorPalettePropertyToTerraform(struct?: DataTfTheme.DataColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function dataAwsQuicksightThemeDataColorPalettePropertyToTerraform(struct
 }
 
 
-export function dataAwsQuicksightThemeDataColorPalettePropertyToHclTerraform(struct?: DataAwsQuicksightTheme.DataColorPaletteProperty): any {
+export function dataTfThemeDataColorPalettePropertyToHclTerraform(struct?: DataTfTheme.DataColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function dataAwsQuicksightThemeDataColorPalettePropertyToHclTerraform(str
 }
 
 
-export function dataAwsQuicksightThemeBorderPropertyToTerraform(struct?: DataAwsQuicksightTheme.BorderProperty): any {
+export function dataTfThemeBorderPropertyToTerraform(struct?: DataTfTheme.BorderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function dataAwsQuicksightThemeBorderPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsQuicksightThemeBorderPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.BorderProperty): any {
+export function dataTfThemeBorderPropertyToHclTerraform(struct?: DataTfTheme.BorderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function dataAwsQuicksightThemeBorderPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsQuicksightThemeTilePropertyToTerraform(struct?: DataAwsQuicksightTheme.TileProperty): any {
+export function dataTfThemeTilePropertyToTerraform(struct?: DataTfTheme.TileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function dataAwsQuicksightThemeTilePropertyToTerraform(struct?: DataAwsQu
 }
 
 
-export function dataAwsQuicksightThemeTilePropertyToHclTerraform(struct?: DataAwsQuicksightTheme.TileProperty): any {
+export function dataTfThemeTilePropertyToHclTerraform(struct?: DataTfTheme.TileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function dataAwsQuicksightThemeTilePropertyToHclTerraform(struct?: DataAw
 }
 
 
-export function dataAwsQuicksightThemeGutterPropertyToTerraform(struct?: DataAwsQuicksightTheme.GutterProperty): any {
+export function dataTfThemeGutterPropertyToTerraform(struct?: DataTfTheme.GutterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function dataAwsQuicksightThemeGutterPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsQuicksightThemeGutterPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.GutterProperty): any {
+export function dataTfThemeGutterPropertyToHclTerraform(struct?: DataTfTheme.GutterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function dataAwsQuicksightThemeGutterPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsQuicksightThemeMarginPropertyToTerraform(struct?: DataAwsQuicksightTheme.MarginProperty): any {
+export function dataTfThemeMarginPropertyToTerraform(struct?: DataTfTheme.MarginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function dataAwsQuicksightThemeMarginPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsQuicksightThemeMarginPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.MarginProperty): any {
+export function dataTfThemeMarginPropertyToHclTerraform(struct?: DataTfTheme.MarginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function dataAwsQuicksightThemeMarginPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsQuicksightThemeTileLayoutPropertyToTerraform(struct?: DataAwsQuicksightTheme.TileLayoutProperty): any {
+export function dataTfThemeTileLayoutPropertyToTerraform(struct?: DataTfTheme.TileLayoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function dataAwsQuicksightThemeTileLayoutPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsQuicksightThemeTileLayoutPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.TileLayoutProperty): any {
+export function dataTfThemeTileLayoutPropertyToHclTerraform(struct?: DataTfTheme.TileLayoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function dataAwsQuicksightThemeTileLayoutPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsQuicksightThemeSheetPropertyToTerraform(struct?: DataAwsQuicksightTheme.SheetProperty): any {
+export function dataTfThemeSheetPropertyToTerraform(struct?: DataTfTheme.SheetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function dataAwsQuicksightThemeSheetPropertyToTerraform(struct?: DataAwsQ
 }
 
 
-export function dataAwsQuicksightThemeSheetPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.SheetProperty): any {
+export function dataTfThemeSheetPropertyToHclTerraform(struct?: DataTfTheme.SheetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function dataAwsQuicksightThemeSheetPropertyToHclTerraform(struct?: DataA
 }
 
 
-export function dataAwsQuicksightThemeFontFamiliesPropertyToTerraform(struct?: DataAwsQuicksightTheme.FontFamiliesProperty): any {
+export function dataTfThemeFontFamiliesPropertyToTerraform(struct?: DataTfTheme.FontFamiliesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function dataAwsQuicksightThemeFontFamiliesPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsQuicksightThemeFontFamiliesPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.FontFamiliesProperty): any {
+export function dataTfThemeFontFamiliesPropertyToHclTerraform(struct?: DataTfTheme.FontFamiliesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function dataAwsQuicksightThemeFontFamiliesPropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsQuicksightThemeTypographyPropertyToTerraform(struct?: DataAwsQuicksightTheme.TypographyProperty): any {
+export function dataTfThemeTypographyPropertyToTerraform(struct?: DataTfTheme.TypographyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function dataAwsQuicksightThemeTypographyPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsQuicksightThemeTypographyPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.TypographyProperty): any {
+export function dataTfThemeTypographyPropertyToHclTerraform(struct?: DataTfTheme.TypographyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function dataAwsQuicksightThemeTypographyPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsQuicksightThemeUiColorPalettePropertyToTerraform(struct?: DataAwsQuicksightTheme.UiColorPaletteProperty): any {
+export function dataTfThemeUiColorPalettePropertyToTerraform(struct?: DataTfTheme.UiColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function dataAwsQuicksightThemeUiColorPalettePropertyToTerraform(struct?:
 }
 
 
-export function dataAwsQuicksightThemeUiColorPalettePropertyToHclTerraform(struct?: DataAwsQuicksightTheme.UiColorPaletteProperty): any {
+export function dataTfThemeUiColorPalettePropertyToHclTerraform(struct?: DataTfTheme.UiColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function dataAwsQuicksightThemeUiColorPalettePropertyToHclTerraform(struc
 }
 
 
-export function dataAwsQuicksightThemeConfigurationPropertyToTerraform(struct?: DataAwsQuicksightTheme.ConfigurationProperty): any {
+export function dataTfThemeConfigurationPropertyToTerraform(struct?: DataTfTheme.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function dataAwsQuicksightThemeConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsQuicksightThemeConfigurationPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.ConfigurationProperty): any {
+export function dataTfThemeConfigurationPropertyToHclTerraform(struct?: DataTfTheme.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function dataAwsQuicksightThemeConfigurationPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsQuicksightThemePermissionsPropertyToTerraform(struct?: DataAwsQuicksightTheme.PermissionsProperty): any {
+export function dataTfThemePermissionsPropertyToTerraform(struct?: DataTfTheme.PermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function dataAwsQuicksightThemePermissionsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsQuicksightThemePermissionsPropertyToHclTerraform(struct?: DataAwsQuicksightTheme.PermissionsProperty): any {
+export function dataTfThemePermissionsPropertyToHclTerraform(struct?: DataTfTheme.PermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function dataAwsQuicksightThemePermissionsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace DataAwsQuicksightTheme {
+export namespace DataTfTheme {
 export interface DataColorPaletteProperty {
 }
 export class DataColorPalettePropertyOutputReference extends cdktn.ComplexObject {

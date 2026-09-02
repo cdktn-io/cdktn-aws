@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudcontrolapiResourceConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#desired_state AwsCloudcontrolapiResource#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#desired_state TfResource#desired_state}
   */
   readonly desiredState: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#id AwsCloudcontrolapiResource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#id TfResource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,37 +20,37 @@ export interface AwsCloudcontrolapiResourceConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#region AwsCloudcontrolapiResource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#region TfResource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#role_arn AwsCloudcontrolapiResource#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#role_arn TfResource#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#schema AwsCloudcontrolapiResource#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#schema TfResource#schema}
   */
   readonly schema?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#type_name AwsCloudcontrolapiResource#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#type_name TfResource#type_name}
   */
   readonly typeName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#type_version_id AwsCloudcontrolapiResource#type_version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#type_version_id TfResource#type_version_id}
   */
   readonly typeVersionId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#timeouts AwsCloudcontrolapiResource#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#timeouts TfResource#timeouts}
   */
-  readonly timeouts?: AwsCloudcontrolapiResource.TimeoutsProperty;
+  readonly timeouts?: TfResource.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource aws_cloudcontrolapi_resource}
 */
-export class AwsCloudcontrolapiResource extends cdktn.TerraformResource {
+export class TfResource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsCloudcontrolapiResource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudcontrolapiResource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudcontrolapiResource to import
-  * @param importFromId The id of the existing AwsCloudcontrolapiResource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudcontrolapiResource to import is found
+  * @param importToId The construct id used in the generated config for the TfResource to import
+  * @param importFromId The id of the existing TfResource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudcontrolapi_resource", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsCloudcontrolapiResource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudcontrolapiResourceConfig
+  * @param options TfResourceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudcontrolapiResourceConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudcontrolapi_resource',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class AwsCloudcontrolapiResource extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCloudcontrolapiResource.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfResource.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCloudcontrolapiResource.TimeoutsProperty) {
+  public putTimeouts(value: TfResource.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -252,7 +252,7 @@ export class AwsCloudcontrolapiResource extends cdktn.TerraformResource {
       schema: cdktn.stringToTerraform(this._schema),
       type_name: cdktn.stringToTerraform(this._typeName),
       type_version_id: cdktn.stringToTerraform(this._typeVersionId),
-      timeouts: awsCloudcontrolapiResourceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfResourceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -301,10 +301,10 @@ export class AwsCloudcontrolapiResource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsCloudcontrolapiResourceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfResourceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCloudcontrolapiResource.TimeoutsProperty",
+        storageClassType: "TfResource.TimeoutsProperty",
       },
     };
 
@@ -313,7 +313,7 @@ export class AwsCloudcontrolapiResource extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudcontrolapiResourceTimeoutsPropertyToTerraform(struct?: AwsCloudcontrolapiResource.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceTimeoutsPropertyToTerraform(struct?: TfResource.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function awsCloudcontrolapiResourceTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsCloudcontrolapiResourceTimeoutsPropertyToHclTerraform(struct?: AwsCloudcontrolapiResource.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceTimeoutsPropertyToHclTerraform(struct?: TfResource.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,18 +357,18 @@ export function awsCloudcontrolapiResourceTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsCloudcontrolapiResource {
+export namespace TfResource {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#create AwsCloudcontrolapiResource#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#create TfResource#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#delete AwsCloudcontrolapiResource#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#delete TfResource#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#update AwsCloudcontrolapiResource#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudcontrolapi_resource#update TfResource#update}
   */
   readonly update?: string;
 }

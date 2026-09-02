@@ -5,82 +5,82 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchMetricStreamConfig extends cdktn.TerraformMetaArguments {
+export interface TfMetricStreamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#firehose_arn AwsCloudwatchMetricStream#firehose_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#firehose_arn TfMetricStream#firehose_arn}
   */
   readonly firehoseArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#id AwsCloudwatchMetricStream#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#id TfMetricStream#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#include_linked_accounts_metrics AwsCloudwatchMetricStream#include_linked_accounts_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#include_linked_accounts_metrics TfMetricStream#include_linked_accounts_metrics}
   */
   readonly includeLinkedAccountsMetrics?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#name AwsCloudwatchMetricStream#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#name TfMetricStream#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#name_prefix AwsCloudwatchMetricStream#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#name_prefix TfMetricStream#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#output_format AwsCloudwatchMetricStream#output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#output_format TfMetricStream#output_format}
   */
   readonly outputFormat: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#region AwsCloudwatchMetricStream#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#region TfMetricStream#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#role_arn AwsCloudwatchMetricStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#role_arn TfMetricStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#tags AwsCloudwatchMetricStream#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#tags TfMetricStream#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#tags_all AwsCloudwatchMetricStream#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#tags_all TfMetricStream#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * exclude_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#exclude_filter AwsCloudwatchMetricStream#exclude_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#exclude_filter TfMetricStream#exclude_filter}
   */
-  readonly excludeFilter?: AwsCloudwatchMetricStream.ExcludeFilterProperty[] | cdktn.IResolvable;
+  readonly excludeFilter?: TfMetricStream.ExcludeFilterProperty[] | cdktn.IResolvable;
   /**
   * include_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#include_filter AwsCloudwatchMetricStream#include_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#include_filter TfMetricStream#include_filter}
   */
-  readonly includeFilter?: AwsCloudwatchMetricStream.IncludeFilterProperty[] | cdktn.IResolvable;
+  readonly includeFilter?: TfMetricStream.IncludeFilterProperty[] | cdktn.IResolvable;
   /**
   * statistics_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#statistics_configuration AwsCloudwatchMetricStream#statistics_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#statistics_configuration TfMetricStream#statistics_configuration}
   */
-  readonly statisticsConfiguration?: AwsCloudwatchMetricStream.StatisticsConfigurationProperty[] | cdktn.IResolvable;
+  readonly statisticsConfiguration?: TfMetricStream.StatisticsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#timeouts AwsCloudwatchMetricStream#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#timeouts TfMetricStream#timeouts}
   */
-  readonly timeouts?: AwsCloudwatchMetricStream.TimeoutsProperty;
+  readonly timeouts?: TfMetricStream.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream aws_cloudwatch_metric_stream}
 */
-export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
+export class TfMetricStream extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchMetricStream resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMetricStream resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchMetricStream to import
-  * @param importFromId The id of the existing AwsCloudwatchMetricStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchMetricStream to import is found
+  * @param importToId The construct id used in the generated config for the TfMetricStream to import
+  * @param importFromId The id of the existing TfMetricStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMetricStream to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_metric_stream", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchMetricStreamConfig
+  * @param options TfMetricStreamConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchMetricStreamConfig) {
+  public constructor(scope: Construct, id: string, config: TfMetricStreamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_metric_stream',
       terraformGeneratorMetadata: {
@@ -320,11 +320,11 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
   }
 
   // exclude_filter - computed: false, optional: true, required: false
-  private _excludeFilter = new AwsCloudwatchMetricStream.ExcludeFilterPropertyList(this, "exclude_filter", true);
+  private _excludeFilter = new TfMetricStream.ExcludeFilterPropertyList(this, "exclude_filter", true);
   public get excludeFilter() {
     return this._excludeFilter;
   }
-  public putExcludeFilter(value: AwsCloudwatchMetricStream.ExcludeFilterProperty[] | cdktn.IResolvable) {
+  public putExcludeFilter(value: TfMetricStream.ExcludeFilterProperty[] | cdktn.IResolvable) {
     this._excludeFilter.internalValue = value;
   }
   public resetExcludeFilter() {
@@ -336,11 +336,11 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
   }
 
   // include_filter - computed: false, optional: true, required: false
-  private _includeFilter = new AwsCloudwatchMetricStream.IncludeFilterPropertyList(this, "include_filter", true);
+  private _includeFilter = new TfMetricStream.IncludeFilterPropertyList(this, "include_filter", true);
   public get includeFilter() {
     return this._includeFilter;
   }
-  public putIncludeFilter(value: AwsCloudwatchMetricStream.IncludeFilterProperty[] | cdktn.IResolvable) {
+  public putIncludeFilter(value: TfMetricStream.IncludeFilterProperty[] | cdktn.IResolvable) {
     this._includeFilter.internalValue = value;
   }
   public resetIncludeFilter() {
@@ -352,11 +352,11 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
   }
 
   // statistics_configuration - computed: false, optional: true, required: false
-  private _statisticsConfiguration = new AwsCloudwatchMetricStream.StatisticsConfigurationPropertyList(this, "statistics_configuration", true);
+  private _statisticsConfiguration = new TfMetricStream.StatisticsConfigurationPropertyList(this, "statistics_configuration", true);
   public get statisticsConfiguration() {
     return this._statisticsConfiguration;
   }
-  public putStatisticsConfiguration(value: AwsCloudwatchMetricStream.StatisticsConfigurationProperty[] | cdktn.IResolvable) {
+  public putStatisticsConfiguration(value: TfMetricStream.StatisticsConfigurationProperty[] | cdktn.IResolvable) {
     this._statisticsConfiguration.internalValue = value;
   }
   public resetStatisticsConfiguration() {
@@ -368,11 +368,11 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCloudwatchMetricStream.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMetricStream.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCloudwatchMetricStream.TimeoutsProperty) {
+  public putTimeouts(value: TfMetricStream.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -399,10 +399,10 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      exclude_filter: cdktn.listMapper(awsCloudwatchMetricStreamExcludeFilterPropertyToTerraform, true)(this._excludeFilter.internalValue),
-      include_filter: cdktn.listMapper(awsCloudwatchMetricStreamIncludeFilterPropertyToTerraform, true)(this._includeFilter.internalValue),
-      statistics_configuration: cdktn.listMapper(awsCloudwatchMetricStreamStatisticsConfigurationPropertyToTerraform, true)(this._statisticsConfiguration.internalValue),
-      timeouts: awsCloudwatchMetricStreamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      exclude_filter: cdktn.listMapper(tfMetricStreamExcludeFilterPropertyToTerraform, true)(this._excludeFilter.internalValue),
+      include_filter: cdktn.listMapper(tfMetricStreamIncludeFilterPropertyToTerraform, true)(this._includeFilter.internalValue),
+      statistics_configuration: cdktn.listMapper(tfMetricStreamStatisticsConfigurationPropertyToTerraform, true)(this._statisticsConfiguration.internalValue),
+      timeouts: tfMetricStreamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -469,28 +469,28 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       exclude_filter: {
-        value: cdktn.listMapperHcl(awsCloudwatchMetricStreamExcludeFilterPropertyToHclTerraform, true)(this._excludeFilter.internalValue),
+        value: cdktn.listMapperHcl(tfMetricStreamExcludeFilterPropertyToHclTerraform, true)(this._excludeFilter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudwatchMetricStream.ExcludeFilterPropertyList",
+        storageClassType: "TfMetricStream.ExcludeFilterPropertyList",
       },
       include_filter: {
-        value: cdktn.listMapperHcl(awsCloudwatchMetricStreamIncludeFilterPropertyToHclTerraform, true)(this._includeFilter.internalValue),
+        value: cdktn.listMapperHcl(tfMetricStreamIncludeFilterPropertyToHclTerraform, true)(this._includeFilter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudwatchMetricStream.IncludeFilterPropertyList",
+        storageClassType: "TfMetricStream.IncludeFilterPropertyList",
       },
       statistics_configuration: {
-        value: cdktn.listMapperHcl(awsCloudwatchMetricStreamStatisticsConfigurationPropertyToHclTerraform, true)(this._statisticsConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfMetricStreamStatisticsConfigurationPropertyToHclTerraform, true)(this._statisticsConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudwatchMetricStream.StatisticsConfigurationPropertyList",
+        storageClassType: "TfMetricStream.StatisticsConfigurationPropertyList",
       },
       timeouts: {
-        value: awsCloudwatchMetricStreamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMetricStreamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCloudwatchMetricStream.TimeoutsProperty",
+        storageClassType: "TfMetricStream.TimeoutsProperty",
       },
     };
 
@@ -499,7 +499,7 @@ export class AwsCloudwatchMetricStream extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchMetricStreamExcludeFilterPropertyToTerraform(struct?: AwsCloudwatchMetricStream.ExcludeFilterProperty | cdktn.IResolvable): any {
+export function tfMetricStreamExcludeFilterPropertyToTerraform(struct?: TfMetricStream.ExcludeFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function awsCloudwatchMetricStreamExcludeFilterPropertyToTerraform(struct
 }
 
 
-export function awsCloudwatchMetricStreamExcludeFilterPropertyToHclTerraform(struct?: AwsCloudwatchMetricStream.ExcludeFilterProperty | cdktn.IResolvable): any {
+export function tfMetricStreamExcludeFilterPropertyToHclTerraform(struct?: TfMetricStream.ExcludeFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function awsCloudwatchMetricStreamExcludeFilterPropertyToHclTerraform(str
 }
 
 
-export function awsCloudwatchMetricStreamIncludeFilterPropertyToTerraform(struct?: AwsCloudwatchMetricStream.IncludeFilterProperty | cdktn.IResolvable): any {
+export function tfMetricStreamIncludeFilterPropertyToTerraform(struct?: TfMetricStream.IncludeFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function awsCloudwatchMetricStreamIncludeFilterPropertyToTerraform(struct
 }
 
 
-export function awsCloudwatchMetricStreamIncludeFilterPropertyToHclTerraform(struct?: AwsCloudwatchMetricStream.IncludeFilterProperty | cdktn.IResolvable): any {
+export function tfMetricStreamIncludeFilterPropertyToHclTerraform(struct?: TfMetricStream.IncludeFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -573,7 +573,7 @@ export function awsCloudwatchMetricStreamIncludeFilterPropertyToHclTerraform(str
 }
 
 
-export function awsCloudwatchMetricStreamIncludeMetricPropertyToTerraform(struct?: AwsCloudwatchMetricStream.IncludeMetricProperty | cdktn.IResolvable): any {
+export function tfMetricStreamIncludeMetricPropertyToTerraform(struct?: TfMetricStream.IncludeMetricProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function awsCloudwatchMetricStreamIncludeMetricPropertyToTerraform(struct
 }
 
 
-export function awsCloudwatchMetricStreamIncludeMetricPropertyToHclTerraform(struct?: AwsCloudwatchMetricStream.IncludeMetricProperty | cdktn.IResolvable): any {
+export function tfMetricStreamIncludeMetricPropertyToHclTerraform(struct?: TfMetricStream.IncludeMetricProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -610,19 +610,19 @@ export function awsCloudwatchMetricStreamIncludeMetricPropertyToHclTerraform(str
 }
 
 
-export function awsCloudwatchMetricStreamStatisticsConfigurationPropertyToTerraform(struct?: AwsCloudwatchMetricStream.StatisticsConfigurationProperty | cdktn.IResolvable): any {
+export function tfMetricStreamStatisticsConfigurationPropertyToTerraform(struct?: TfMetricStream.StatisticsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     additional_statistics: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.additionalStatistics),
-    include_metric: cdktn.listMapper(awsCloudwatchMetricStreamIncludeMetricPropertyToTerraform, true)(struct!.includeMetric),
+    include_metric: cdktn.listMapper(tfMetricStreamIncludeMetricPropertyToTerraform, true)(struct!.includeMetric),
   }
 }
 
 
-export function awsCloudwatchMetricStreamStatisticsConfigurationPropertyToHclTerraform(struct?: AwsCloudwatchMetricStream.StatisticsConfigurationProperty | cdktn.IResolvable): any {
+export function tfMetricStreamStatisticsConfigurationPropertyToHclTerraform(struct?: TfMetricStream.StatisticsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -635,7 +635,7 @@ export function awsCloudwatchMetricStreamStatisticsConfigurationPropertyToHclTer
       storageClassType: "stringList",
     },
     include_metric: {
-      value: cdktn.listMapperHcl(awsCloudwatchMetricStreamIncludeMetricPropertyToHclTerraform, true)(struct!.includeMetric),
+      value: cdktn.listMapperHcl(tfMetricStreamIncludeMetricPropertyToHclTerraform, true)(struct!.includeMetric),
       isBlock: true,
       type: "set",
       storageClassType: "IncludeMetricPropertyList",
@@ -647,7 +647,7 @@ export function awsCloudwatchMetricStreamStatisticsConfigurationPropertyToHclTer
 }
 
 
-export function awsCloudwatchMetricStreamTimeoutsPropertyToTerraform(struct?: AwsCloudwatchMetricStream.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMetricStreamTimeoutsPropertyToTerraform(struct?: TfMetricStream.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function awsCloudwatchMetricStreamTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsCloudwatchMetricStreamTimeoutsPropertyToHclTerraform(struct?: AwsCloudwatchMetricStream.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMetricStreamTimeoutsPropertyToHclTerraform(struct?: TfMetricStream.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -691,14 +691,14 @@ export function awsCloudwatchMetricStreamTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsCloudwatchMetricStream {
+export namespace TfMetricStream {
 export interface ExcludeFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#metric_names AwsCloudwatchMetricStream#metric_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#metric_names TfMetricStream#metric_names}
   */
   readonly metricNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#namespace AwsCloudwatchMetricStream#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#namespace TfMetricStream#namespace}
   */
   readonly namespace: string;
 }
@@ -803,11 +803,11 @@ export class ExcludeFilterPropertyList extends cdktn.ComplexList {
 }
 export interface IncludeFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#metric_names AwsCloudwatchMetricStream#metric_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#metric_names TfMetricStream#metric_names}
   */
   readonly metricNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#namespace AwsCloudwatchMetricStream#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#namespace TfMetricStream#namespace}
   */
   readonly namespace: string;
 }
@@ -912,11 +912,11 @@ export class IncludeFilterPropertyList extends cdktn.ComplexList {
 }
 export interface IncludeMetricProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#metric_name AwsCloudwatchMetricStream#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#metric_name TfMetricStream#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#namespace AwsCloudwatchMetricStream#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#namespace TfMetricStream#namespace}
   */
   readonly namespace: string;
 }
@@ -1018,13 +1018,13 @@ export class IncludeMetricPropertyList extends cdktn.ComplexList {
 }
 export interface StatisticsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#additional_statistics AwsCloudwatchMetricStream#additional_statistics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#additional_statistics TfMetricStream#additional_statistics}
   */
   readonly additionalStatistics: string[];
   /**
   * include_metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#include_metric AwsCloudwatchMetricStream#include_metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#include_metric TfMetricStream#include_metric}
   */
   readonly includeMetric: IncludeMetricProperty[] | cdktn.IResolvable;
 }
@@ -1126,15 +1126,15 @@ export class StatisticsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#create AwsCloudwatchMetricStream#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#create TfMetricStream#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#delete AwsCloudwatchMetricStream#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#delete TfMetricStream#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#update AwsCloudwatchMetricStream#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_stream#update TfMetricStream#update}
   */
   readonly update?: string;
 }

@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDbInstanceAutomatedBackupsReplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDbInstanceAutomatedBackupsReplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#id AwsDbInstanceAutomatedBackupsReplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#id TfDbInstanceAutomatedBackupsReplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#kms_key_id AwsDbInstanceAutomatedBackupsReplication#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#kms_key_id TfDbInstanceAutomatedBackupsReplication#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#pre_signed_url AwsDbInstanceAutomatedBackupsReplication#pre_signed_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#pre_signed_url TfDbInstanceAutomatedBackupsReplication#pre_signed_url}
   */
   readonly preSignedUrl?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#region AwsDbInstanceAutomatedBackupsReplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#region TfDbInstanceAutomatedBackupsReplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#retention_period AwsDbInstanceAutomatedBackupsReplication#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#retention_period TfDbInstanceAutomatedBackupsReplication#retention_period}
   */
   readonly retentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#source_db_instance_arn AwsDbInstanceAutomatedBackupsReplication#source_db_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#source_db_instance_arn TfDbInstanceAutomatedBackupsReplication#source_db_instance_arn}
   */
   readonly sourceDbInstanceArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#timeouts AwsDbInstanceAutomatedBackupsReplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#timeouts TfDbInstanceAutomatedBackupsReplication#timeouts}
   */
-  readonly timeouts?: AwsDbInstanceAutomatedBackupsReplication.TimeoutsProperty;
+  readonly timeouts?: TfDbInstanceAutomatedBackupsReplication.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication aws_db_instance_automated_backups_replication}
 */
-export class AwsDbInstanceAutomatedBackupsReplication extends cdktn.TerraformResource {
+export class TfDbInstanceAutomatedBackupsReplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsDbInstanceAutomatedBackupsReplication extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDbInstanceAutomatedBackupsReplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDbInstanceAutomatedBackupsReplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDbInstanceAutomatedBackupsReplication to import
-  * @param importFromId The id of the existing AwsDbInstanceAutomatedBackupsReplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDbInstanceAutomatedBackupsReplication to import is found
+  * @param importToId The construct id used in the generated config for the TfDbInstanceAutomatedBackupsReplication to import
+  * @param importFromId The id of the existing TfDbInstanceAutomatedBackupsReplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDbInstanceAutomatedBackupsReplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_instance_automated_backups_replication", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsDbInstanceAutomatedBackupsReplication extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDbInstanceAutomatedBackupsReplicationConfig
+  * @param options TfDbInstanceAutomatedBackupsReplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDbInstanceAutomatedBackupsReplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDbInstanceAutomatedBackupsReplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_instance_automated_backups_replication',
       terraformGeneratorMetadata: {
@@ -201,11 +201,11 @@ export class AwsDbInstanceAutomatedBackupsReplication extends cdktn.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDbInstanceAutomatedBackupsReplication.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDbInstanceAutomatedBackupsReplication.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDbInstanceAutomatedBackupsReplication.TimeoutsProperty) {
+  public putTimeouts(value: TfDbInstanceAutomatedBackupsReplication.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -228,7 +228,7 @@ export class AwsDbInstanceAutomatedBackupsReplication extends cdktn.TerraformRes
       region: cdktn.stringToTerraform(this._region),
       retention_period: cdktn.numberToTerraform(this._retentionPeriod),
       source_db_instance_arn: cdktn.stringToTerraform(this._sourceDbInstanceArn),
-      timeouts: awsDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -271,10 +271,10 @@ export class AwsDbInstanceAutomatedBackupsReplication extends cdktn.TerraformRes
         storageClassType: "string",
       },
       timeouts: {
-        value: awsDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDbInstanceAutomatedBackupsReplication.TimeoutsProperty",
+        storageClassType: "TfDbInstanceAutomatedBackupsReplication.TimeoutsProperty",
       },
     };
 
@@ -283,7 +283,7 @@ export class AwsDbInstanceAutomatedBackupsReplication extends cdktn.TerraformRes
   }
 }
 
-export function awsDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToTerraform(struct?: AwsDbInstanceAutomatedBackupsReplication.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToTerraform(struct?: TfDbInstanceAutomatedBackupsReplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function awsDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToTerraf
 }
 
 
-export function awsDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToHclTerraform(struct?: AwsDbInstanceAutomatedBackupsReplication.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToHclTerraform(struct?: TfDbInstanceAutomatedBackupsReplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,14 +320,14 @@ export function awsDbInstanceAutomatedBackupsReplicationTimeoutsPropertyToHclTer
 }
 
 
-export namespace AwsDbInstanceAutomatedBackupsReplication {
+export namespace TfDbInstanceAutomatedBackupsReplication {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#create AwsDbInstanceAutomatedBackupsReplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#create TfDbInstanceAutomatedBackupsReplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#delete AwsDbInstanceAutomatedBackupsReplication#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_automated_backups_replication#delete TfDbInstanceAutomatedBackupsReplication#delete}
   */
   readonly delete?: string;
 }

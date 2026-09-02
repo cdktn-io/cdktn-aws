@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGrafanaWorkspaceServiceAccountConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkspaceServiceAccountConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#grafana_role AwsGrafanaWorkspaceServiceAccount#grafana_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#grafana_role TfWorkspaceServiceAccount#grafana_role}
   */
   readonly grafanaRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#name AwsGrafanaWorkspaceServiceAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#name TfWorkspaceServiceAccount#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#region AwsGrafanaWorkspaceServiceAccount#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#region TfWorkspaceServiceAccount#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#workspace_id AwsGrafanaWorkspaceServiceAccount#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#workspace_id TfWorkspaceServiceAccount#workspace_id}
   */
   readonly workspaceId: string;
 }
@@ -29,7 +29,7 @@ export interface AwsGrafanaWorkspaceServiceAccountConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account aws_grafana_workspace_service_account}
 */
-export class AwsGrafanaWorkspaceServiceAccount extends cdktn.TerraformResource {
+export class TfWorkspaceServiceAccount extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsGrafanaWorkspaceServiceAccount extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGrafanaWorkspaceServiceAccount resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkspaceServiceAccount resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGrafanaWorkspaceServiceAccount to import
-  * @param importFromId The id of the existing AwsGrafanaWorkspaceServiceAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGrafanaWorkspaceServiceAccount to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkspaceServiceAccount to import
+  * @param importFromId The id of the existing TfWorkspaceServiceAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkspaceServiceAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_workspace_service_account", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsGrafanaWorkspaceServiceAccount extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGrafanaWorkspaceServiceAccountConfig
+  * @param options TfWorkspaceServiceAccountConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGrafanaWorkspaceServiceAccountConfig) {
+  public constructor(scope: Construct, id: string, config: TfWorkspaceServiceAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_grafana_workspace_service_account',
       terraformGeneratorMetadata: {

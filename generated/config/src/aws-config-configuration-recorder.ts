@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConfigConfigurationRecorderConfig extends cdktn.TerraformMetaArguments {
+export interface TfConfigurationRecorderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#id AwsConfigConfigurationRecorder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#id TfConfigurationRecorder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#name AwsConfigConfigurationRecorder#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#name TfConfigurationRecorder#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#region AwsConfigConfigurationRecorder#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#region TfConfigurationRecorder#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#role_arn AwsConfigConfigurationRecorder#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#role_arn TfConfigurationRecorder#role_arn}
   */
   readonly roleArn: string;
   /**
   * recording_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_group AwsConfigConfigurationRecorder#recording_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_group TfConfigurationRecorder#recording_group}
   */
-  readonly recordingGroup?: AwsConfigConfigurationRecorder.RecordingGroupProperty;
+  readonly recordingGroup?: TfConfigurationRecorder.RecordingGroupProperty;
   /**
   * recording_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_mode AwsConfigConfigurationRecorder#recording_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_mode TfConfigurationRecorder#recording_mode}
   */
-  readonly recordingMode?: AwsConfigConfigurationRecorder.RecordingModeProperty;
+  readonly recordingMode?: TfConfigurationRecorder.RecordingModeProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder aws_config_configuration_recorder}
 */
-export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
+export class TfConfigurationRecorder extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConfigConfigurationRecorder resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConfigurationRecorder resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConfigConfigurationRecorder to import
-  * @param importFromId The id of the existing AwsConfigConfigurationRecorder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConfigConfigurationRecorder to import is found
+  * @param importToId The construct id used in the generated config for the TfConfigurationRecorder to import
+  * @param importFromId The id of the existing TfConfigurationRecorder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConfigurationRecorder to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_configuration_recorder", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConfigConfigurationRecorderConfig
+  * @param options TfConfigurationRecorderConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConfigConfigurationRecorderConfig) {
+  public constructor(scope: Construct, id: string, config: TfConfigurationRecorderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_configuration_recorder',
       terraformGeneratorMetadata: {
@@ -166,11 +166,11 @@ export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
   }
 
   // recording_group - computed: false, optional: true, required: false
-  private _recordingGroup = new AwsConfigConfigurationRecorder.RecordingGroupPropertyOutputReference(this, "recording_group");
+  private _recordingGroup = new TfConfigurationRecorder.RecordingGroupPropertyOutputReference(this, "recording_group");
   public get recordingGroup() {
     return this._recordingGroup;
   }
-  public putRecordingGroup(value: AwsConfigConfigurationRecorder.RecordingGroupProperty) {
+  public putRecordingGroup(value: TfConfigurationRecorder.RecordingGroupProperty) {
     this._recordingGroup.internalValue = value;
   }
   public resetRecordingGroup() {
@@ -182,11 +182,11 @@ export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
   }
 
   // recording_mode - computed: false, optional: true, required: false
-  private _recordingMode = new AwsConfigConfigurationRecorder.RecordingModePropertyOutputReference(this, "recording_mode");
+  private _recordingMode = new TfConfigurationRecorder.RecordingModePropertyOutputReference(this, "recording_mode");
   public get recordingMode() {
     return this._recordingMode;
   }
-  public putRecordingMode(value: AwsConfigConfigurationRecorder.RecordingModeProperty) {
+  public putRecordingMode(value: TfConfigurationRecorder.RecordingModeProperty) {
     this._recordingMode.internalValue = value;
   }
   public resetRecordingMode() {
@@ -207,8 +207,8 @@ export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
-      recording_group: awsConfigConfigurationRecorderRecordingGroupPropertyToTerraform(this._recordingGroup.internalValue),
-      recording_mode: awsConfigConfigurationRecorderRecordingModePropertyToTerraform(this._recordingMode.internalValue),
+      recording_group: tfConfigurationRecorderRecordingGroupPropertyToTerraform(this._recordingGroup.internalValue),
+      recording_mode: tfConfigurationRecorderRecordingModePropertyToTerraform(this._recordingMode.internalValue),
     };
   }
 
@@ -239,16 +239,16 @@ export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       recording_group: {
-        value: awsConfigConfigurationRecorderRecordingGroupPropertyToHclTerraform(this._recordingGroup.internalValue),
+        value: tfConfigurationRecorderRecordingGroupPropertyToHclTerraform(this._recordingGroup.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConfigConfigurationRecorder.RecordingGroupPropertyList",
+        storageClassType: "TfConfigurationRecorder.RecordingGroupPropertyList",
       },
       recording_mode: {
-        value: awsConfigConfigurationRecorderRecordingModePropertyToHclTerraform(this._recordingMode.internalValue),
+        value: tfConfigurationRecorderRecordingModePropertyToHclTerraform(this._recordingMode.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConfigConfigurationRecorder.RecordingModePropertyList",
+        storageClassType: "TfConfigurationRecorder.RecordingModePropertyList",
       },
     };
 
@@ -257,7 +257,7 @@ export class AwsConfigConfigurationRecorder extends cdktn.TerraformResource {
   }
 }
 
-export function awsConfigConfigurationRecorderExclusionByResourceTypesPropertyToTerraform(struct?: AwsConfigConfigurationRecorder.ExclusionByResourceTypesProperty | cdktn.IResolvable): any {
+export function tfConfigurationRecorderExclusionByResourceTypesPropertyToTerraform(struct?: TfConfigurationRecorder.ExclusionByResourceTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function awsConfigConfigurationRecorderExclusionByResourceTypesPropertyTo
 }
 
 
-export function awsConfigConfigurationRecorderExclusionByResourceTypesPropertyToHclTerraform(struct?: AwsConfigConfigurationRecorder.ExclusionByResourceTypesProperty | cdktn.IResolvable): any {
+export function tfConfigurationRecorderExclusionByResourceTypesPropertyToHclTerraform(struct?: TfConfigurationRecorder.ExclusionByResourceTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function awsConfigConfigurationRecorderExclusionByResourceTypesPropertyTo
 }
 
 
-export function awsConfigConfigurationRecorderRecordingStrategyPropertyToTerraform(struct?: AwsConfigConfigurationRecorder.RecordingStrategyProperty | cdktn.IResolvable): any {
+export function tfConfigurationRecorderRecordingStrategyPropertyToTerraform(struct?: TfConfigurationRecorder.RecordingStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function awsConfigConfigurationRecorderRecordingStrategyPropertyToTerrafo
 }
 
 
-export function awsConfigConfigurationRecorderRecordingStrategyPropertyToHclTerraform(struct?: AwsConfigConfigurationRecorder.RecordingStrategyProperty | cdktn.IResolvable): any {
+export function tfConfigurationRecorderRecordingStrategyPropertyToHclTerraform(struct?: TfConfigurationRecorder.RecordingStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function awsConfigConfigurationRecorderRecordingStrategyPropertyToHclTerr
 }
 
 
-export function awsConfigConfigurationRecorderRecordingGroupPropertyToTerraform(struct?: AwsConfigConfigurationRecorder.RecordingGroupPropertyOutputReference | AwsConfigConfigurationRecorder.RecordingGroupProperty): any {
+export function tfConfigurationRecorderRecordingGroupPropertyToTerraform(struct?: TfConfigurationRecorder.RecordingGroupPropertyOutputReference | TfConfigurationRecorder.RecordingGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,13 +326,13 @@ export function awsConfigConfigurationRecorderRecordingGroupPropertyToTerraform(
     all_supported: cdktn.booleanToTerraform(struct!.allSupported),
     include_global_resource_types: cdktn.booleanToTerraform(struct!.includeGlobalResourceTypes),
     resource_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.resourceTypes),
-    exclusion_by_resource_types: cdktn.listMapper(awsConfigConfigurationRecorderExclusionByResourceTypesPropertyToTerraform, true)(struct!.exclusionByResourceTypes),
-    recording_strategy: cdktn.listMapper(awsConfigConfigurationRecorderRecordingStrategyPropertyToTerraform, true)(struct!.recordingStrategy),
+    exclusion_by_resource_types: cdktn.listMapper(tfConfigurationRecorderExclusionByResourceTypesPropertyToTerraform, true)(struct!.exclusionByResourceTypes),
+    recording_strategy: cdktn.listMapper(tfConfigurationRecorderRecordingStrategyPropertyToTerraform, true)(struct!.recordingStrategy),
   }
 }
 
 
-export function awsConfigConfigurationRecorderRecordingGroupPropertyToHclTerraform(struct?: AwsConfigConfigurationRecorder.RecordingGroupPropertyOutputReference | AwsConfigConfigurationRecorder.RecordingGroupProperty): any {
+export function tfConfigurationRecorderRecordingGroupPropertyToHclTerraform(struct?: TfConfigurationRecorder.RecordingGroupPropertyOutputReference | TfConfigurationRecorder.RecordingGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,13 +357,13 @@ export function awsConfigConfigurationRecorderRecordingGroupPropertyToHclTerrafo
       storageClassType: "stringList",
     },
     exclusion_by_resource_types: {
-      value: cdktn.listMapperHcl(awsConfigConfigurationRecorderExclusionByResourceTypesPropertyToHclTerraform, true)(struct!.exclusionByResourceTypes),
+      value: cdktn.listMapperHcl(tfConfigurationRecorderExclusionByResourceTypesPropertyToHclTerraform, true)(struct!.exclusionByResourceTypes),
       isBlock: true,
       type: "list",
       storageClassType: "ExclusionByResourceTypesPropertyList",
     },
     recording_strategy: {
-      value: cdktn.listMapperHcl(awsConfigConfigurationRecorderRecordingStrategyPropertyToHclTerraform, true)(struct!.recordingStrategy),
+      value: cdktn.listMapperHcl(tfConfigurationRecorderRecordingStrategyPropertyToHclTerraform, true)(struct!.recordingStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "RecordingStrategyPropertyList",
@@ -375,7 +375,7 @@ export function awsConfigConfigurationRecorderRecordingGroupPropertyToHclTerrafo
 }
 
 
-export function awsConfigConfigurationRecorderRecordingModeOverridePropertyToTerraform(struct?: AwsConfigConfigurationRecorder.RecordingModeOverridePropertyOutputReference | AwsConfigConfigurationRecorder.RecordingModeOverrideProperty): any {
+export function tfConfigurationRecorderRecordingModeOverridePropertyToTerraform(struct?: TfConfigurationRecorder.RecordingModeOverridePropertyOutputReference | TfConfigurationRecorder.RecordingModeOverrideProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function awsConfigConfigurationRecorderRecordingModeOverridePropertyToTer
 }
 
 
-export function awsConfigConfigurationRecorderRecordingModeOverridePropertyToHclTerraform(struct?: AwsConfigConfigurationRecorder.RecordingModeOverridePropertyOutputReference | AwsConfigConfigurationRecorder.RecordingModeOverrideProperty): any {
+export function tfConfigurationRecorderRecordingModeOverridePropertyToHclTerraform(struct?: TfConfigurationRecorder.RecordingModeOverridePropertyOutputReference | TfConfigurationRecorder.RecordingModeOverrideProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,19 +419,19 @@ export function awsConfigConfigurationRecorderRecordingModeOverridePropertyToHcl
 }
 
 
-export function awsConfigConfigurationRecorderRecordingModePropertyToTerraform(struct?: AwsConfigConfigurationRecorder.RecordingModePropertyOutputReference | AwsConfigConfigurationRecorder.RecordingModeProperty): any {
+export function tfConfigurationRecorderRecordingModePropertyToTerraform(struct?: TfConfigurationRecorder.RecordingModePropertyOutputReference | TfConfigurationRecorder.RecordingModeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     recording_frequency: cdktn.stringToTerraform(struct!.recordingFrequency),
-    recording_mode_override: awsConfigConfigurationRecorderRecordingModeOverridePropertyToTerraform(struct!.recordingModeOverride),
+    recording_mode_override: tfConfigurationRecorderRecordingModeOverridePropertyToTerraform(struct!.recordingModeOverride),
   }
 }
 
 
-export function awsConfigConfigurationRecorderRecordingModePropertyToHclTerraform(struct?: AwsConfigConfigurationRecorder.RecordingModePropertyOutputReference | AwsConfigConfigurationRecorder.RecordingModeProperty): any {
+export function tfConfigurationRecorderRecordingModePropertyToHclTerraform(struct?: TfConfigurationRecorder.RecordingModePropertyOutputReference | TfConfigurationRecorder.RecordingModeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function awsConfigConfigurationRecorderRecordingModePropertyToHclTerrafor
       storageClassType: "string",
     },
     recording_mode_override: {
-      value: awsConfigConfigurationRecorderRecordingModeOverridePropertyToHclTerraform(struct!.recordingModeOverride),
+      value: tfConfigurationRecorderRecordingModeOverridePropertyToHclTerraform(struct!.recordingModeOverride),
       isBlock: true,
       type: "list",
       storageClassType: "RecordingModeOverridePropertyList",
@@ -456,10 +456,10 @@ export function awsConfigConfigurationRecorderRecordingModePropertyToHclTerrafor
 }
 
 
-export namespace AwsConfigConfigurationRecorder {
+export namespace TfConfigurationRecorder {
 export interface ExclusionByResourceTypesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#resource_types AwsConfigConfigurationRecorder#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#resource_types TfConfigurationRecorder#resource_types}
   */
   readonly resourceTypes?: string[];
 }
@@ -545,7 +545,7 @@ export class ExclusionByResourceTypesPropertyList extends cdktn.ComplexList {
 }
 export interface RecordingStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#use_only AwsConfigConfigurationRecorder#use_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#use_only TfConfigurationRecorder#use_only}
   */
   readonly useOnly?: string;
 }
@@ -631,27 +631,27 @@ export class RecordingStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface RecordingGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#all_supported AwsConfigConfigurationRecorder#all_supported}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#all_supported TfConfigurationRecorder#all_supported}
   */
   readonly allSupported?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#include_global_resource_types AwsConfigConfigurationRecorder#include_global_resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#include_global_resource_types TfConfigurationRecorder#include_global_resource_types}
   */
   readonly includeGlobalResourceTypes?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#resource_types AwsConfigConfigurationRecorder#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#resource_types TfConfigurationRecorder#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
   * exclusion_by_resource_types block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#exclusion_by_resource_types AwsConfigConfigurationRecorder#exclusion_by_resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#exclusion_by_resource_types TfConfigurationRecorder#exclusion_by_resource_types}
   */
   readonly exclusionByResourceTypes?: ExclusionByResourceTypesProperty[] | cdktn.IResolvable;
   /**
   * recording_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_strategy AwsConfigConfigurationRecorder#recording_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_strategy TfConfigurationRecorder#recording_strategy}
   */
   readonly recordingStrategy?: RecordingStrategyProperty[] | cdktn.IResolvable;
 }
@@ -793,15 +793,15 @@ export class RecordingGroupPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RecordingModeOverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#description AwsConfigConfigurationRecorder#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#description TfConfigurationRecorder#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_frequency AwsConfigConfigurationRecorder#recording_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_frequency TfConfigurationRecorder#recording_frequency}
   */
   readonly recordingFrequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#resource_types AwsConfigConfigurationRecorder#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#resource_types TfConfigurationRecorder#resource_types}
   */
   readonly resourceTypes: string[];
 }
@@ -893,13 +893,13 @@ export class RecordingModeOverridePropertyOutputReference extends cdktn.ComplexO
 }
 export interface RecordingModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_frequency AwsConfigConfigurationRecorder#recording_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_frequency TfConfigurationRecorder#recording_frequency}
   */
   readonly recordingFrequency?: string;
   /**
   * recording_mode_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_mode_override AwsConfigConfigurationRecorder#recording_mode_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder#recording_mode_override TfConfigurationRecorder#recording_mode_override}
   */
   readonly recordingModeOverride?: RecordingModeOverrideProperty;
 }

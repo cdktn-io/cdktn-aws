@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerServicecatalogPortfolioStatusConfig extends cdktn.TerraformMetaArguments {
+export interface TfServicecatalogPortfolioStatusConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#id AwsSagemakerServicecatalogPortfolioStatus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#id TfServicecatalogPortfolioStatus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface AwsSagemakerServicecatalogPortfolioStatusConfig extends cdktn.T
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#region AwsSagemakerServicecatalogPortfolioStatus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#region TfServicecatalogPortfolioStatus#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#status AwsSagemakerServicecatalogPortfolioStatus#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#status TfServicecatalogPortfolioStatus#status}
   */
   readonly status: string;
 }
@@ -28,7 +28,7 @@ export interface AwsSagemakerServicecatalogPortfolioStatusConfig extends cdktn.T
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status aws_sagemaker_servicecatalog_portfolio_status}
 */
-export class AwsSagemakerServicecatalogPortfolioStatus extends cdktn.TerraformResource {
+export class TfServicecatalogPortfolioStatus extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsSagemakerServicecatalogPortfolioStatus extends cdktn.TerraformRe
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerServicecatalogPortfolioStatus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServicecatalogPortfolioStatus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerServicecatalogPortfolioStatus to import
-  * @param importFromId The id of the existing AwsSagemakerServicecatalogPortfolioStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerServicecatalogPortfolioStatus to import is found
+  * @param importToId The construct id used in the generated config for the TfServicecatalogPortfolioStatus to import
+  * @param importFromId The id of the existing TfServicecatalogPortfolioStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_servicecatalog_portfolio_status#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServicecatalogPortfolioStatus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_servicecatalog_portfolio_status", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsSagemakerServicecatalogPortfolioStatus extends cdktn.TerraformRe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerServicecatalogPortfolioStatusConfig
+  * @param options TfServicecatalogPortfolioStatusConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerServicecatalogPortfolioStatusConfig) {
+  public constructor(scope: Construct, id: string, config: TfServicecatalogPortfolioStatusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_servicecatalog_portfolio_status',
       terraformGeneratorMetadata: {

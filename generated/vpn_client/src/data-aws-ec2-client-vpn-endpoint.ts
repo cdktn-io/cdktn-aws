@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEc2ClientVpnEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#client_vpn_endpoint_id DataAwsEc2ClientVpnEndpoint#client_vpn_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#client_vpn_endpoint_id DataTfEndpoint#client_vpn_endpoint_id}
   */
   readonly clientVpnEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#id DataAwsEc2ClientVpnEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#id DataTfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,31 +20,31 @@ export interface DataAwsEc2ClientVpnEndpointConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#region DataAwsEc2ClientVpnEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#region DataTfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#tags DataAwsEc2ClientVpnEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#tags DataTfEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#filter DataAwsEc2ClientVpnEndpoint#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#filter DataTfEndpoint#filter}
   */
-  readonly filter?: DataAwsEc2ClientVpnEndpoint.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfEndpoint.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#timeouts DataAwsEc2ClientVpnEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#timeouts DataTfEndpoint#timeouts}
   */
-  readonly timeouts?: DataAwsEc2ClientVpnEndpoint.TimeoutsProperty;
+  readonly timeouts?: DataTfEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint aws_ec2_client_vpn_endpoint}
 */
-export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
+export class DataTfEndpoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEc2ClientVpnEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEc2ClientVpnEndpoint to import
-  * @param importFromId The id of the existing DataAwsEc2ClientVpnEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEc2ClientVpnEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the DataTfEndpoint to import
+  * @param importFromId The id of the existing DataTfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_client_vpn_endpoint", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEc2ClientVpnEndpointConfig = {}
+  * @param options DataTfEndpointConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEc2ClientVpnEndpointConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfEndpointConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_client_vpn_endpoint',
       terraformGeneratorMetadata: {
@@ -110,7 +110,7 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   }
 
   // authentication_options - computed: true, optional: false, required: false
-  private _authenticationOptions = new DataAwsEc2ClientVpnEndpoint.AuthenticationOptionsPropertyList(this, "authentication_options", false);
+  private _authenticationOptions = new DataTfEndpoint.AuthenticationOptionsPropertyList(this, "authentication_options", false);
   public get authenticationOptions() {
     return this._authenticationOptions;
   }
@@ -121,19 +121,19 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   }
 
   // client_connect_options - computed: true, optional: false, required: false
-  private _clientConnectOptions = new DataAwsEc2ClientVpnEndpoint.ClientConnectOptionsPropertyList(this, "client_connect_options", false);
+  private _clientConnectOptions = new DataTfEndpoint.ClientConnectOptionsPropertyList(this, "client_connect_options", false);
   public get clientConnectOptions() {
     return this._clientConnectOptions;
   }
 
   // client_login_banner_options - computed: true, optional: false, required: false
-  private _clientLoginBannerOptions = new DataAwsEc2ClientVpnEndpoint.ClientLoginBannerOptionsPropertyList(this, "client_login_banner_options", false);
+  private _clientLoginBannerOptions = new DataTfEndpoint.ClientLoginBannerOptionsPropertyList(this, "client_login_banner_options", false);
   public get clientLoginBannerOptions() {
     return this._clientLoginBannerOptions;
   }
 
   // client_route_enforcement_options - computed: true, optional: false, required: false
-  private _clientRouteEnforcementOptions = new DataAwsEc2ClientVpnEndpoint.ClientRouteEnforcementOptionsPropertyList(this, "client_route_enforcement_options", false);
+  private _clientRouteEnforcementOptions = new DataTfEndpoint.ClientRouteEnforcementOptionsPropertyList(this, "client_route_enforcement_options", false);
   public get clientRouteEnforcementOptions() {
     return this._clientRouteEnforcementOptions;
   }
@@ -155,7 +155,7 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   }
 
   // connection_log_options - computed: true, optional: false, required: false
-  private _connectionLogOptions = new DataAwsEc2ClientVpnEndpoint.ConnectionLogOptionsPropertyList(this, "connection_log_options", false);
+  private _connectionLogOptions = new DataTfEndpoint.ConnectionLogOptionsPropertyList(this, "connection_log_options", false);
   public get connectionLogOptions() {
     return this._connectionLogOptions;
   }
@@ -264,7 +264,7 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   }
 
   // transit_gateway_configuration - computed: true, optional: false, required: false
-  private _transitGatewayConfiguration = new DataAwsEc2ClientVpnEndpoint.TransitGatewayConfigurationPropertyList(this, "transit_gateway_configuration", false);
+  private _transitGatewayConfiguration = new DataTfEndpoint.TransitGatewayConfigurationPropertyList(this, "transit_gateway_configuration", false);
   public get transitGatewayConfiguration() {
     return this._transitGatewayConfiguration;
   }
@@ -285,11 +285,11 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsEc2ClientVpnEndpoint.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfEndpoint.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsEc2ClientVpnEndpoint.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfEndpoint.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -301,11 +301,11 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsEc2ClientVpnEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsEc2ClientVpnEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: DataTfEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -326,8 +326,8 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsEc2ClientVpnEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsEc2ClientVpnEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -358,16 +358,16 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsEc2ClientVpnEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsEc2ClientVpnEndpoint.FilterPropertyList",
+        storageClassType: "DataTfEndpoint.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsEc2ClientVpnEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsEc2ClientVpnEndpoint.TimeoutsProperty",
+        storageClassType: "DataTfEndpoint.TimeoutsProperty",
       },
     };
 
@@ -376,7 +376,7 @@ export class DataAwsEc2ClientVpnEndpoint extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsEc2ClientVpnEndpointAuthenticationOptionsPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.AuthenticationOptionsProperty): any {
+export function dataTfEndpointAuthenticationOptionsPropertyToTerraform(struct?: DataTfEndpoint.AuthenticationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function dataAwsEc2ClientVpnEndpointAuthenticationOptionsPropertyToTerraf
 }
 
 
-export function dataAwsEc2ClientVpnEndpointAuthenticationOptionsPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.AuthenticationOptionsProperty): any {
+export function dataTfEndpointAuthenticationOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.AuthenticationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function dataAwsEc2ClientVpnEndpointAuthenticationOptionsPropertyToHclTer
 }
 
 
-export function dataAwsEc2ClientVpnEndpointClientConnectOptionsPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ClientConnectOptionsProperty): any {
+export function dataTfEndpointClientConnectOptionsPropertyToTerraform(struct?: DataTfEndpoint.ClientConnectOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,7 +407,7 @@ export function dataAwsEc2ClientVpnEndpointClientConnectOptionsPropertyToTerrafo
 }
 
 
-export function dataAwsEc2ClientVpnEndpointClientConnectOptionsPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ClientConnectOptionsProperty): any {
+export function dataTfEndpointClientConnectOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ClientConnectOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function dataAwsEc2ClientVpnEndpointClientConnectOptionsPropertyToHclTerr
 }
 
 
-export function dataAwsEc2ClientVpnEndpointClientLoginBannerOptionsPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ClientLoginBannerOptionsProperty): any {
+export function dataTfEndpointClientLoginBannerOptionsPropertyToTerraform(struct?: DataTfEndpoint.ClientLoginBannerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,7 +428,7 @@ export function dataAwsEc2ClientVpnEndpointClientLoginBannerOptionsPropertyToTer
 }
 
 
-export function dataAwsEc2ClientVpnEndpointClientLoginBannerOptionsPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ClientLoginBannerOptionsProperty): any {
+export function dataTfEndpointClientLoginBannerOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ClientLoginBannerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function dataAwsEc2ClientVpnEndpointClientLoginBannerOptionsPropertyToHcl
 }
 
 
-export function dataAwsEc2ClientVpnEndpointClientRouteEnforcementOptionsPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ClientRouteEnforcementOptionsProperty): any {
+export function dataTfEndpointClientRouteEnforcementOptionsPropertyToTerraform(struct?: DataTfEndpoint.ClientRouteEnforcementOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function dataAwsEc2ClientVpnEndpointClientRouteEnforcementOptionsProperty
 }
 
 
-export function dataAwsEc2ClientVpnEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ClientRouteEnforcementOptionsProperty): any {
+export function dataTfEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ClientRouteEnforcementOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function dataAwsEc2ClientVpnEndpointClientRouteEnforcementOptionsProperty
 }
 
 
-export function dataAwsEc2ClientVpnEndpointConnectionLogOptionsPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ConnectionLogOptionsProperty): any {
+export function dataTfEndpointConnectionLogOptionsPropertyToTerraform(struct?: DataTfEndpoint.ConnectionLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function dataAwsEc2ClientVpnEndpointConnectionLogOptionsPropertyToTerrafo
 }
 
 
-export function dataAwsEc2ClientVpnEndpointConnectionLogOptionsPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.ConnectionLogOptionsProperty): any {
+export function dataTfEndpointConnectionLogOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ConnectionLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function dataAwsEc2ClientVpnEndpointConnectionLogOptionsPropertyToHclTerr
 }
 
 
-export function dataAwsEc2ClientVpnEndpointTransitGatewayConfigurationPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.TransitGatewayConfigurationProperty): any {
+export function dataTfEndpointTransitGatewayConfigurationPropertyToTerraform(struct?: DataTfEndpoint.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function dataAwsEc2ClientVpnEndpointTransitGatewayConfigurationPropertyTo
 }
 
 
-export function dataAwsEc2ClientVpnEndpointTransitGatewayConfigurationPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.TransitGatewayConfigurationProperty): any {
+export function dataTfEndpointTransitGatewayConfigurationPropertyToHclTerraform(struct?: DataTfEndpoint.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function dataAwsEc2ClientVpnEndpointTransitGatewayConfigurationPropertyTo
 }
 
 
-export function dataAwsEc2ClientVpnEndpointFilterPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEndpointFilterPropertyToTerraform(struct?: DataTfEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function dataAwsEc2ClientVpnEndpointFilterPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsEc2ClientVpnEndpointFilterPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEndpointFilterPropertyToHclTerraform(struct?: DataTfEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function dataAwsEc2ClientVpnEndpointFilterPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsEc2ClientVpnEndpointTimeoutsPropertyToTerraform(struct?: DataAwsEc2ClientVpnEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfEndpointTimeoutsPropertyToTerraform(struct?: DataTfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function dataAwsEc2ClientVpnEndpointTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsEc2ClientVpnEndpointTimeoutsPropertyToHclTerraform(struct?: DataAwsEc2ClientVpnEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfEndpointTimeoutsPropertyToHclTerraform(struct?: DataTfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function dataAwsEc2ClientVpnEndpointTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace DataAwsEc2ClientVpnEndpoint {
+export namespace DataTfEndpoint {
 export interface AuthenticationOptionsProperty {
 }
 export class AuthenticationOptionsPropertyOutputReference extends cdktn.ComplexObject {
@@ -951,11 +951,11 @@ export class TransitGatewayConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#name DataAwsEc2ClientVpnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#name DataTfEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#values DataAwsEc2ClientVpnEndpoint#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#values DataTfEndpoint#values}
   */
   readonly values: string[];
 }
@@ -1057,7 +1057,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#read DataAwsEc2ClientVpnEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#read DataTfEndpoint#read}
   */
   readonly read?: string;
 }

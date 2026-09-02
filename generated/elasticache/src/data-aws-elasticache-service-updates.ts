@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsElasticacheServiceUpdatesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfServiceUpdatesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_updates#region DataAwsElasticacheServiceUpdates#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_updates#region DataTfServiceUpdates#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_updates#status DataAwsElasticacheServiceUpdates#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_updates#status DataTfServiceUpdates#status}
   */
   readonly status?: string[];
 }
@@ -21,7 +21,7 @@ export interface DataAwsElasticacheServiceUpdatesConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_updates aws_elasticache_service_updates}
 */
-export class DataAwsElasticacheServiceUpdates extends cdktn.TerraformDataSource {
+export class DataTfServiceUpdates extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsElasticacheServiceUpdates extends cdktn.TerraformDataSource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsElasticacheServiceUpdates resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfServiceUpdates resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsElasticacheServiceUpdates to import
-  * @param importFromId The id of the existing DataAwsElasticacheServiceUpdates that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_updates#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsElasticacheServiceUpdates to import is found
+  * @param importToId The construct id used in the generated config for the DataTfServiceUpdates to import
+  * @param importFromId The id of the existing DataTfServiceUpdates that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_updates#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfServiceUpdates to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_service_updates", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsElasticacheServiceUpdates extends cdktn.TerraformDataSource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsElasticacheServiceUpdatesConfig = {}
+  * @param options DataTfServiceUpdatesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsElasticacheServiceUpdatesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfServiceUpdatesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_service_updates',
       terraformGeneratorMetadata: {
@@ -94,7 +94,7 @@ export class DataAwsElasticacheServiceUpdates extends cdktn.TerraformDataSource 
   }
 
   // service_updates - computed: true, optional: false, required: false
-  private _serviceUpdates = new DataAwsElasticacheServiceUpdates.ServiceUpdatesPropertyList(this, "service_updates", false);
+  private _serviceUpdates = new DataTfServiceUpdates.ServiceUpdatesPropertyList(this, "service_updates", false);
   public get serviceUpdates() {
     return this._serviceUpdates;
   }
@@ -147,7 +147,7 @@ export class DataAwsElasticacheServiceUpdates extends cdktn.TerraformDataSource 
   }
 }
 
-export function dataAwsElasticacheServiceUpdatesServiceUpdatesPropertyToTerraform(struct?: DataAwsElasticacheServiceUpdates.ServiceUpdatesProperty): any {
+export function dataTfServiceUpdatesServiceUpdatesPropertyToTerraform(struct?: DataTfServiceUpdates.ServiceUpdatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -157,7 +157,7 @@ export function dataAwsElasticacheServiceUpdatesServiceUpdatesPropertyToTerrafor
 }
 
 
-export function dataAwsElasticacheServiceUpdatesServiceUpdatesPropertyToHclTerraform(struct?: DataAwsElasticacheServiceUpdates.ServiceUpdatesProperty): any {
+export function dataTfServiceUpdatesServiceUpdatesPropertyToHclTerraform(struct?: DataTfServiceUpdates.ServiceUpdatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -168,7 +168,7 @@ export function dataAwsElasticacheServiceUpdatesServiceUpdatesPropertyToHclTerra
 }
 
 
-export namespace DataAwsElasticacheServiceUpdates {
+export namespace DataTfServiceUpdates {
 export interface ServiceUpdatesProperty {
 }
 export class ServiceUpdatesPropertyOutputReference extends cdktn.ComplexObject {

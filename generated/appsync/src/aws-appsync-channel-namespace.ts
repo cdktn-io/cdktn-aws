@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppsyncChannelNamespaceConfig extends cdktn.TerraformMetaArguments {
+export interface TfChannelNamespaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#api_id AwsAppsyncChannelNamespace#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#api_id TfChannelNamespace#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#code_handlers AwsAppsyncChannelNamespace#code_handlers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#code_handlers TfChannelNamespace#code_handlers}
   */
   readonly codeHandlers?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#name AwsAppsyncChannelNamespace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#name TfChannelNamespace#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#region AwsAppsyncChannelNamespace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#region TfChannelNamespace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#tags AwsAppsyncChannelNamespace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#tags TfChannelNamespace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * handler_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#handler_configs AwsAppsyncChannelNamespace#handler_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#handler_configs TfChannelNamespace#handler_configs}
   */
-  readonly handlerConfigs?: AwsAppsyncChannelNamespace.HandlerConfigsProperty[] | cdktn.IResolvable;
+  readonly handlerConfigs?: TfChannelNamespace.HandlerConfigsProperty[] | cdktn.IResolvable;
   /**
   * publish_auth_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#publish_auth_mode AwsAppsyncChannelNamespace#publish_auth_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#publish_auth_mode TfChannelNamespace#publish_auth_mode}
   */
-  readonly publishAuthMode?: AwsAppsyncChannelNamespace.PublishAuthModeProperty[] | cdktn.IResolvable;
+  readonly publishAuthMode?: TfChannelNamespace.PublishAuthModeProperty[] | cdktn.IResolvable;
   /**
   * subscribe_auth_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#subscribe_auth_mode AwsAppsyncChannelNamespace#subscribe_auth_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#subscribe_auth_mode TfChannelNamespace#subscribe_auth_mode}
   */
-  readonly subscribeAuthMode?: AwsAppsyncChannelNamespace.SubscribeAuthModeProperty[] | cdktn.IResolvable;
+  readonly subscribeAuthMode?: TfChannelNamespace.SubscribeAuthModeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace aws_appsync_channel_namespace}
 */
-export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
+export class TfChannelNamespace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppsyncChannelNamespace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfChannelNamespace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppsyncChannelNamespace to import
-  * @param importFromId The id of the existing AwsAppsyncChannelNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppsyncChannelNamespace to import is found
+  * @param importToId The construct id used in the generated config for the TfChannelNamespace to import
+  * @param importFromId The id of the existing TfChannelNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfChannelNamespace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_channel_namespace", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppsyncChannelNamespaceConfig
+  * @param options TfChannelNamespaceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppsyncChannelNamespaceConfig) {
+  public constructor(scope: Construct, id: string, config: TfChannelNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_channel_namespace',
       terraformGeneratorMetadata: {
@@ -199,11 +199,11 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
   }
 
   // handler_configs - computed: false, optional: true, required: false
-  private _handlerConfigs = new AwsAppsyncChannelNamespace.HandlerConfigsPropertyList(this, "handler_configs", false);
+  private _handlerConfigs = new TfChannelNamespace.HandlerConfigsPropertyList(this, "handler_configs", false);
   public get handlerConfigs() {
     return this._handlerConfigs;
   }
-  public putHandlerConfigs(value: AwsAppsyncChannelNamespace.HandlerConfigsProperty[] | cdktn.IResolvable) {
+  public putHandlerConfigs(value: TfChannelNamespace.HandlerConfigsProperty[] | cdktn.IResolvable) {
     this._handlerConfigs.internalValue = value;
   }
   public resetHandlerConfigs() {
@@ -215,11 +215,11 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
   }
 
   // publish_auth_mode - computed: false, optional: true, required: false
-  private _publishAuthMode = new AwsAppsyncChannelNamespace.PublishAuthModePropertyList(this, "publish_auth_mode", false);
+  private _publishAuthMode = new TfChannelNamespace.PublishAuthModePropertyList(this, "publish_auth_mode", false);
   public get publishAuthMode() {
     return this._publishAuthMode;
   }
-  public putPublishAuthMode(value: AwsAppsyncChannelNamespace.PublishAuthModeProperty[] | cdktn.IResolvable) {
+  public putPublishAuthMode(value: TfChannelNamespace.PublishAuthModeProperty[] | cdktn.IResolvable) {
     this._publishAuthMode.internalValue = value;
   }
   public resetPublishAuthMode() {
@@ -231,11 +231,11 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
   }
 
   // subscribe_auth_mode - computed: false, optional: true, required: false
-  private _subscribeAuthMode = new AwsAppsyncChannelNamespace.SubscribeAuthModePropertyList(this, "subscribe_auth_mode", false);
+  private _subscribeAuthMode = new TfChannelNamespace.SubscribeAuthModePropertyList(this, "subscribe_auth_mode", false);
   public get subscribeAuthMode() {
     return this._subscribeAuthMode;
   }
-  public putSubscribeAuthMode(value: AwsAppsyncChannelNamespace.SubscribeAuthModeProperty[] | cdktn.IResolvable) {
+  public putSubscribeAuthMode(value: TfChannelNamespace.SubscribeAuthModeProperty[] | cdktn.IResolvable) {
     this._subscribeAuthMode.internalValue = value;
   }
   public resetSubscribeAuthMode() {
@@ -257,9 +257,9 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      handler_configs: cdktn.listMapper(awsAppsyncChannelNamespaceHandlerConfigsPropertyToTerraform, true)(this._handlerConfigs.internalValue),
-      publish_auth_mode: cdktn.listMapper(awsAppsyncChannelNamespacePublishAuthModePropertyToTerraform, true)(this._publishAuthMode.internalValue),
-      subscribe_auth_mode: cdktn.listMapper(awsAppsyncChannelNamespaceSubscribeAuthModePropertyToTerraform, true)(this._subscribeAuthMode.internalValue),
+      handler_configs: cdktn.listMapper(tfChannelNamespaceHandlerConfigsPropertyToTerraform, true)(this._handlerConfigs.internalValue),
+      publish_auth_mode: cdktn.listMapper(tfChannelNamespacePublishAuthModePropertyToTerraform, true)(this._publishAuthMode.internalValue),
+      subscribe_auth_mode: cdktn.listMapper(tfChannelNamespaceSubscribeAuthModePropertyToTerraform, true)(this._subscribeAuthMode.internalValue),
     };
   }
 
@@ -296,22 +296,22 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       handler_configs: {
-        value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceHandlerConfigsPropertyToHclTerraform, true)(this._handlerConfigs.internalValue),
+        value: cdktn.listMapperHcl(tfChannelNamespaceHandlerConfigsPropertyToHclTerraform, true)(this._handlerConfigs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppsyncChannelNamespace.HandlerConfigsPropertyList",
+        storageClassType: "TfChannelNamespace.HandlerConfigsPropertyList",
       },
       publish_auth_mode: {
-        value: cdktn.listMapperHcl(awsAppsyncChannelNamespacePublishAuthModePropertyToHclTerraform, true)(this._publishAuthMode.internalValue),
+        value: cdktn.listMapperHcl(tfChannelNamespacePublishAuthModePropertyToHclTerraform, true)(this._publishAuthMode.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppsyncChannelNamespace.PublishAuthModePropertyList",
+        storageClassType: "TfChannelNamespace.PublishAuthModePropertyList",
       },
       subscribe_auth_mode: {
-        value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceSubscribeAuthModePropertyToHclTerraform, true)(this._subscribeAuthMode.internalValue),
+        value: cdktn.listMapperHcl(tfChannelNamespaceSubscribeAuthModePropertyToHclTerraform, true)(this._subscribeAuthMode.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppsyncChannelNamespace.SubscribeAuthModePropertyList",
+        storageClassType: "TfChannelNamespace.SubscribeAuthModePropertyList",
       },
     };
 
@@ -320,7 +320,7 @@ export class AwsAppsyncChannelNamespace extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnPublishIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToTerraform(struct?: TfChannelNamespace.HandlerConfigsOnPublishIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationLamb
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnPublishIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToHclTerraform(struct?: TfChannelNamespace.HandlerConfigsOnPublishIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,19 +350,19 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationLamb
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnPublishIntegrationProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToTerraform(struct?: TfChannelNamespace.HandlerConfigsOnPublishIntegrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     data_source_name: cdktn.stringToTerraform(struct!.dataSourceName),
-    lambda_config: cdktn.listMapper(awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToTerraform, true)(struct!.lambdaConfig),
+    lambda_config: cdktn.listMapper(tfChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToTerraform, true)(struct!.lambdaConfig),
   }
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnPublishIntegrationProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToHclTerraform(struct?: TfChannelNamespace.HandlerConfigsOnPublishIntegrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationProp
       storageClassType: "string",
     },
     lambda_config: {
-      value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToHclTerraform, true)(struct!.lambdaConfig),
+      value: cdktn.listMapperHcl(tfChannelNamespaceHandlerConfigsOnPublishIntegrationLambdaConfigPropertyToHclTerraform, true)(struct!.lambdaConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HandlerConfigsOnPublishIntegrationLambdaConfigPropertyList",
@@ -387,19 +387,19 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationProp
 }
 
 
-export function awsAppsyncChannelNamespaceOnPublishPropertyToTerraform(struct?: AwsAppsyncChannelNamespace.OnPublishProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceOnPublishPropertyToTerraform(struct?: TfChannelNamespace.OnPublishProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     behavior: cdktn.stringToTerraform(struct!.behavior),
-    integration: cdktn.listMapper(awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToTerraform, true)(struct!.integration),
+    integration: cdktn.listMapper(tfChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToTerraform, true)(struct!.integration),
   }
 }
 
 
-export function awsAppsyncChannelNamespaceOnPublishPropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.OnPublishProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceOnPublishPropertyToHclTerraform(struct?: TfChannelNamespace.OnPublishProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function awsAppsyncChannelNamespaceOnPublishPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     integration: {
-      value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToHclTerraform, true)(struct!.integration),
+      value: cdktn.listMapperHcl(tfChannelNamespaceHandlerConfigsOnPublishIntegrationPropertyToHclTerraform, true)(struct!.integration),
       isBlock: true,
       type: "list",
       storageClassType: "HandlerConfigsOnPublishIntegrationPropertyList",
@@ -424,7 +424,7 @@ export function awsAppsyncChannelNamespaceOnPublishPropertyToHclTerraform(struct
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnSubscribeIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToTerraform(struct?: TfChannelNamespace.HandlerConfigsOnSubscribeIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationLa
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnSubscribeIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToHclTerraform(struct?: TfChannelNamespace.HandlerConfigsOnSubscribeIntegrationLambdaConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,19 +454,19 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationLa
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnSubscribeIntegrationProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToTerraform(struct?: TfChannelNamespace.HandlerConfigsOnSubscribeIntegrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     data_source_name: cdktn.stringToTerraform(struct!.dataSourceName),
-    lambda_config: cdktn.listMapper(awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToTerraform, true)(struct!.lambdaConfig),
+    lambda_config: cdktn.listMapper(tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToTerraform, true)(struct!.lambdaConfig),
   }
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsOnSubscribeIntegrationProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToHclTerraform(struct?: TfChannelNamespace.HandlerConfigsOnSubscribeIntegrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,7 +479,7 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationPr
       storageClassType: "string",
     },
     lambda_config: {
-      value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToHclTerraform, true)(struct!.lambdaConfig),
+      value: cdktn.listMapperHcl(tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyToHclTerraform, true)(struct!.lambdaConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyList",
@@ -491,19 +491,19 @@ export function awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationPr
 }
 
 
-export function awsAppsyncChannelNamespaceOnSubscribePropertyToTerraform(struct?: AwsAppsyncChannelNamespace.OnSubscribeProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceOnSubscribePropertyToTerraform(struct?: TfChannelNamespace.OnSubscribeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     behavior: cdktn.stringToTerraform(struct!.behavior),
-    integration: cdktn.listMapper(awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToTerraform, true)(struct!.integration),
+    integration: cdktn.listMapper(tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToTerraform, true)(struct!.integration),
   }
 }
 
 
-export function awsAppsyncChannelNamespaceOnSubscribePropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.OnSubscribeProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceOnSubscribePropertyToHclTerraform(struct?: TfChannelNamespace.OnSubscribeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -516,7 +516,7 @@ export function awsAppsyncChannelNamespaceOnSubscribePropertyToHclTerraform(stru
       storageClassType: "string",
     },
     integration: {
-      value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToHclTerraform, true)(struct!.integration),
+      value: cdktn.listMapperHcl(tfChannelNamespaceHandlerConfigsOnSubscribeIntegrationPropertyToHclTerraform, true)(struct!.integration),
       isBlock: true,
       type: "list",
       storageClassType: "HandlerConfigsOnSubscribeIntegrationPropertyList",
@@ -528,32 +528,32 @@ export function awsAppsyncChannelNamespaceOnSubscribePropertyToHclTerraform(stru
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsPropertyToTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsPropertyToTerraform(struct?: TfChannelNamespace.HandlerConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    on_publish: cdktn.listMapper(awsAppsyncChannelNamespaceOnPublishPropertyToTerraform, true)(struct!.onPublish),
-    on_subscribe: cdktn.listMapper(awsAppsyncChannelNamespaceOnSubscribePropertyToTerraform, true)(struct!.onSubscribe),
+    on_publish: cdktn.listMapper(tfChannelNamespaceOnPublishPropertyToTerraform, true)(struct!.onPublish),
+    on_subscribe: cdktn.listMapper(tfChannelNamespaceOnSubscribePropertyToTerraform, true)(struct!.onSubscribe),
   }
 }
 
 
-export function awsAppsyncChannelNamespaceHandlerConfigsPropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.HandlerConfigsProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceHandlerConfigsPropertyToHclTerraform(struct?: TfChannelNamespace.HandlerConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     on_publish: {
-      value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceOnPublishPropertyToHclTerraform, true)(struct!.onPublish),
+      value: cdktn.listMapperHcl(tfChannelNamespaceOnPublishPropertyToHclTerraform, true)(struct!.onPublish),
       isBlock: true,
       type: "list",
       storageClassType: "OnPublishPropertyList",
     },
     on_subscribe: {
-      value: cdktn.listMapperHcl(awsAppsyncChannelNamespaceOnSubscribePropertyToHclTerraform, true)(struct!.onSubscribe),
+      value: cdktn.listMapperHcl(tfChannelNamespaceOnSubscribePropertyToHclTerraform, true)(struct!.onSubscribe),
       isBlock: true,
       type: "list",
       storageClassType: "OnSubscribePropertyList",
@@ -565,7 +565,7 @@ export function awsAppsyncChannelNamespaceHandlerConfigsPropertyToHclTerraform(s
 }
 
 
-export function awsAppsyncChannelNamespacePublishAuthModePropertyToTerraform(struct?: AwsAppsyncChannelNamespace.PublishAuthModeProperty | cdktn.IResolvable): any {
+export function tfChannelNamespacePublishAuthModePropertyToTerraform(struct?: TfChannelNamespace.PublishAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,7 +576,7 @@ export function awsAppsyncChannelNamespacePublishAuthModePropertyToTerraform(str
 }
 
 
-export function awsAppsyncChannelNamespacePublishAuthModePropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.PublishAuthModeProperty | cdktn.IResolvable): any {
+export function tfChannelNamespacePublishAuthModePropertyToHclTerraform(struct?: TfChannelNamespace.PublishAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function awsAppsyncChannelNamespacePublishAuthModePropertyToHclTerraform(
 }
 
 
-export function awsAppsyncChannelNamespaceSubscribeAuthModePropertyToTerraform(struct?: AwsAppsyncChannelNamespace.SubscribeAuthModeProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceSubscribeAuthModePropertyToTerraform(struct?: TfChannelNamespace.SubscribeAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function awsAppsyncChannelNamespaceSubscribeAuthModePropertyToTerraform(s
 }
 
 
-export function awsAppsyncChannelNamespaceSubscribeAuthModePropertyToHclTerraform(struct?: AwsAppsyncChannelNamespace.SubscribeAuthModeProperty | cdktn.IResolvable): any {
+export function tfChannelNamespaceSubscribeAuthModePropertyToHclTerraform(struct?: TfChannelNamespace.SubscribeAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,10 +625,10 @@ export function awsAppsyncChannelNamespaceSubscribeAuthModePropertyToHclTerrafor
 }
 
 
-export namespace AwsAppsyncChannelNamespace {
+export namespace TfChannelNamespace {
 export interface HandlerConfigsOnPublishIntegrationLambdaConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#invoke_type AwsAppsyncChannelNamespace#invoke_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#invoke_type TfChannelNamespace#invoke_type}
   */
   readonly invokeType?: string;
 }
@@ -714,13 +714,13 @@ export class HandlerConfigsOnPublishIntegrationLambdaConfigPropertyList extends 
 }
 export interface HandlerConfigsOnPublishIntegrationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#data_source_name AwsAppsyncChannelNamespace#data_source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#data_source_name TfChannelNamespace#data_source_name}
   */
   readonly dataSourceName: string;
   /**
   * lambda_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#lambda_config AwsAppsyncChannelNamespace#lambda_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#lambda_config TfChannelNamespace#lambda_config}
   */
   readonly lambdaConfig?: HandlerConfigsOnPublishIntegrationLambdaConfigProperty[] | cdktn.IResolvable;
 }
@@ -825,13 +825,13 @@ export class HandlerConfigsOnPublishIntegrationPropertyList extends cdktn.Comple
 }
 export interface OnPublishProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#behavior AwsAppsyncChannelNamespace#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#behavior TfChannelNamespace#behavior}
   */
   readonly behavior: string;
   /**
   * integration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#integration AwsAppsyncChannelNamespace#integration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#integration TfChannelNamespace#integration}
   */
   readonly integration?: HandlerConfigsOnPublishIntegrationProperty[] | cdktn.IResolvable;
 }
@@ -936,7 +936,7 @@ export class OnPublishPropertyList extends cdktn.ComplexList {
 }
 export interface HandlerConfigsOnSubscribeIntegrationLambdaConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#invoke_type AwsAppsyncChannelNamespace#invoke_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#invoke_type TfChannelNamespace#invoke_type}
   */
   readonly invokeType?: string;
 }
@@ -1022,13 +1022,13 @@ export class HandlerConfigsOnSubscribeIntegrationLambdaConfigPropertyList extend
 }
 export interface HandlerConfigsOnSubscribeIntegrationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#data_source_name AwsAppsyncChannelNamespace#data_source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#data_source_name TfChannelNamespace#data_source_name}
   */
   readonly dataSourceName: string;
   /**
   * lambda_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#lambda_config AwsAppsyncChannelNamespace#lambda_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#lambda_config TfChannelNamespace#lambda_config}
   */
   readonly lambdaConfig?: HandlerConfigsOnSubscribeIntegrationLambdaConfigProperty[] | cdktn.IResolvable;
 }
@@ -1133,13 +1133,13 @@ export class HandlerConfigsOnSubscribeIntegrationPropertyList extends cdktn.Comp
 }
 export interface OnSubscribeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#behavior AwsAppsyncChannelNamespace#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#behavior TfChannelNamespace#behavior}
   */
   readonly behavior: string;
   /**
   * integration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#integration AwsAppsyncChannelNamespace#integration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#integration TfChannelNamespace#integration}
   */
   readonly integration?: HandlerConfigsOnSubscribeIntegrationProperty[] | cdktn.IResolvable;
 }
@@ -1246,13 +1246,13 @@ export interface HandlerConfigsProperty {
   /**
   * on_publish block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#on_publish AwsAppsyncChannelNamespace#on_publish}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#on_publish TfChannelNamespace#on_publish}
   */
   readonly onPublish?: OnPublishProperty[] | cdktn.IResolvable;
   /**
   * on_subscribe block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#on_subscribe AwsAppsyncChannelNamespace#on_subscribe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#on_subscribe TfChannelNamespace#on_subscribe}
   */
   readonly onSubscribe?: OnSubscribeProperty[] | cdktn.IResolvable;
 }
@@ -1360,7 +1360,7 @@ export class HandlerConfigsPropertyList extends cdktn.ComplexList {
 }
 export interface PublishAuthModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#auth_type AwsAppsyncChannelNamespace#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#auth_type TfChannelNamespace#auth_type}
   */
   readonly authType: string;
 }
@@ -1443,7 +1443,7 @@ export class PublishAuthModePropertyList extends cdktn.ComplexList {
 }
 export interface SubscribeAuthModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#auth_type AwsAppsyncChannelNamespace#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_channel_namespace#auth_type TfChannelNamespace#auth_type}
   */
   readonly authType: string;
 }

@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcsDaemonTaskDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface TfDaemonTaskDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#cpu AwsEcsDaemonTaskDefinition#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#cpu TfDaemonTaskDefinition#cpu}
   */
   readonly cpu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#execution_role_arn AwsEcsDaemonTaskDefinition#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#execution_role_arn TfDaemonTaskDefinition#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#family AwsEcsDaemonTaskDefinition#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#family TfDaemonTaskDefinition#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#memory AwsEcsDaemonTaskDefinition#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#memory TfDaemonTaskDefinition#memory}
   */
   readonly memory?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#region AwsEcsDaemonTaskDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#region TfDaemonTaskDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#tags AwsEcsDaemonTaskDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#tags TfDaemonTaskDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#task_role_arn AwsEcsDaemonTaskDefinition#task_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#task_role_arn TfDaemonTaskDefinition#task_role_arn}
   */
   readonly taskRoleArn?: string;
   /**
   * container_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_definition AwsEcsDaemonTaskDefinition#container_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_definition TfDaemonTaskDefinition#container_definition}
   */
-  readonly containerDefinition?: AwsEcsDaemonTaskDefinition.ContainerDefinitionProperty[] | cdktn.IResolvable;
+  readonly containerDefinition?: TfDaemonTaskDefinition.ContainerDefinitionProperty[] | cdktn.IResolvable;
   /**
   * volume block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#volume AwsEcsDaemonTaskDefinition#volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#volume TfDaemonTaskDefinition#volume}
   */
-  readonly volume?: AwsEcsDaemonTaskDefinition.VolumeProperty[] | cdktn.IResolvable;
+  readonly volume?: TfDaemonTaskDefinition.VolumeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition aws_ecs_daemon_task_definition}
 */
-export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
+export class TfDaemonTaskDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcsDaemonTaskDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDaemonTaskDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcsDaemonTaskDefinition to import
-  * @param importFromId The id of the existing AwsEcsDaemonTaskDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcsDaemonTaskDefinition to import is found
+  * @param importToId The construct id used in the generated config for the TfDaemonTaskDefinition to import
+  * @param importFromId The id of the existing TfDaemonTaskDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDaemonTaskDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_daemon_task_definition", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcsDaemonTaskDefinitionConfig
+  * @param options TfDaemonTaskDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcsDaemonTaskDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: TfDaemonTaskDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_daemon_task_definition',
       terraformGeneratorMetadata: {
@@ -247,11 +247,11 @@ export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
   }
 
   // container_definition - computed: false, optional: true, required: false
-  private _containerDefinition = new AwsEcsDaemonTaskDefinition.ContainerDefinitionPropertyList(this, "container_definition", false);
+  private _containerDefinition = new TfDaemonTaskDefinition.ContainerDefinitionPropertyList(this, "container_definition", false);
   public get containerDefinition() {
     return this._containerDefinition;
   }
-  public putContainerDefinition(value: AwsEcsDaemonTaskDefinition.ContainerDefinitionProperty[] | cdktn.IResolvable) {
+  public putContainerDefinition(value: TfDaemonTaskDefinition.ContainerDefinitionProperty[] | cdktn.IResolvable) {
     this._containerDefinition.internalValue = value;
   }
   public resetContainerDefinition() {
@@ -263,11 +263,11 @@ export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
   }
 
   // volume - computed: false, optional: true, required: false
-  private _volume = new AwsEcsDaemonTaskDefinition.VolumePropertyList(this, "volume", true);
+  private _volume = new TfDaemonTaskDefinition.VolumePropertyList(this, "volume", true);
   public get volume() {
     return this._volume;
   }
-  public putVolume(value: AwsEcsDaemonTaskDefinition.VolumeProperty[] | cdktn.IResolvable) {
+  public putVolume(value: TfDaemonTaskDefinition.VolumeProperty[] | cdktn.IResolvable) {
     this._volume.internalValue = value;
   }
   public resetVolume() {
@@ -291,8 +291,8 @@ export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       task_role_arn: cdktn.stringToTerraform(this._taskRoleArn),
-      container_definition: cdktn.listMapper(awsEcsDaemonTaskDefinitionContainerDefinitionPropertyToTerraform, true)(this._containerDefinition.internalValue),
-      volume: cdktn.listMapper(awsEcsDaemonTaskDefinitionVolumePropertyToTerraform, true)(this._volume.internalValue),
+      container_definition: cdktn.listMapper(tfDaemonTaskDefinitionContainerDefinitionPropertyToTerraform, true)(this._containerDefinition.internalValue),
+      volume: cdktn.listMapper(tfDaemonTaskDefinitionVolumePropertyToTerraform, true)(this._volume.internalValue),
     };
   }
 
@@ -341,16 +341,16 @@ export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       container_definition: {
-        value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionContainerDefinitionPropertyToHclTerraform, true)(this._containerDefinition.internalValue),
+        value: cdktn.listMapperHcl(tfDaemonTaskDefinitionContainerDefinitionPropertyToHclTerraform, true)(this._containerDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcsDaemonTaskDefinition.ContainerDefinitionPropertyList",
+        storageClassType: "TfDaemonTaskDefinition.ContainerDefinitionPropertyList",
       },
       volume: {
-        value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionVolumePropertyToHclTerraform, true)(this._volume.internalValue),
+        value: cdktn.listMapperHcl(tfDaemonTaskDefinitionVolumePropertyToHclTerraform, true)(this._volume.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsEcsDaemonTaskDefinition.VolumePropertyList",
+        storageClassType: "TfDaemonTaskDefinition.VolumePropertyList",
       },
     };
 
@@ -359,7 +359,7 @@ export class AwsEcsDaemonTaskDefinition extends cdktn.TerraformResource {
   }
 }
 
-export function awsEcsDaemonTaskDefinitionDependsOnPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.DependsOnProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionDependsOnPropertyToTerraform(struct?: TfDaemonTaskDefinition.DependsOnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function awsEcsDaemonTaskDefinitionDependsOnPropertyToTerraform(struct?: 
 }
 
 
-export function awsEcsDaemonTaskDefinitionDependsOnPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.DependsOnProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionDependsOnPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.DependsOnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function awsEcsDaemonTaskDefinitionDependsOnPropertyToHclTerraform(struct
 }
 
 
-export function awsEcsDaemonTaskDefinitionEnvironmentPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.EnvironmentProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionEnvironmentPropertyToTerraform(struct?: TfDaemonTaskDefinition.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsEcsDaemonTaskDefinitionEnvironmentPropertyToTerraform(struct?
 }
 
 
-export function awsEcsDaemonTaskDefinitionEnvironmentPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.EnvironmentProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionEnvironmentPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function awsEcsDaemonTaskDefinitionEnvironmentPropertyToHclTerraform(stru
 }
 
 
-export function awsEcsDaemonTaskDefinitionEnvironmentFilePropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.EnvironmentFileProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionEnvironmentFilePropertyToTerraform(struct?: TfDaemonTaskDefinition.EnvironmentFileProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function awsEcsDaemonTaskDefinitionEnvironmentFilePropertyToTerraform(str
 }
 
 
-export function awsEcsDaemonTaskDefinitionEnvironmentFilePropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.EnvironmentFileProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionEnvironmentFilePropertyToHclTerraform(struct?: TfDaemonTaskDefinition.EnvironmentFileProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function awsEcsDaemonTaskDefinitionEnvironmentFilePropertyToHclTerraform(
 }
 
 
-export function awsEcsDaemonTaskDefinitionFirelensConfigurationPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.FirelensConfigurationProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionFirelensConfigurationPropertyToTerraform(struct?: TfDaemonTaskDefinition.FirelensConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function awsEcsDaemonTaskDefinitionFirelensConfigurationPropertyToTerrafo
 }
 
 
-export function awsEcsDaemonTaskDefinitionFirelensConfigurationPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.FirelensConfigurationProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionFirelensConfigurationPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.FirelensConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function awsEcsDaemonTaskDefinitionFirelensConfigurationPropertyToHclTerr
 }
 
 
-export function awsEcsDaemonTaskDefinitionHealthCheckPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.HealthCheckProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionHealthCheckPropertyToTerraform(struct?: TfDaemonTaskDefinition.HealthCheckProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function awsEcsDaemonTaskDefinitionHealthCheckPropertyToTerraform(struct?
 }
 
 
-export function awsEcsDaemonTaskDefinitionHealthCheckPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.HealthCheckProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionHealthCheckPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.HealthCheckProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function awsEcsDaemonTaskDefinitionHealthCheckPropertyToHclTerraform(stru
 }
 
 
-export function awsEcsDaemonTaskDefinitionCapabilitiesPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.CapabilitiesProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionCapabilitiesPropertyToTerraform(struct?: TfDaemonTaskDefinition.CapabilitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function awsEcsDaemonTaskDefinitionCapabilitiesPropertyToTerraform(struct
 }
 
 
-export function awsEcsDaemonTaskDefinitionCapabilitiesPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.CapabilitiesProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionCapabilitiesPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.CapabilitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function awsEcsDaemonTaskDefinitionCapabilitiesPropertyToHclTerraform(str
 }
 
 
-export function awsEcsDaemonTaskDefinitionDevicePropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.DeviceProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionDevicePropertyToTerraform(struct?: TfDaemonTaskDefinition.DeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -615,7 +615,7 @@ export function awsEcsDaemonTaskDefinitionDevicePropertyToTerraform(struct?: Aws
 }
 
 
-export function awsEcsDaemonTaskDefinitionDevicePropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.DeviceProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionDevicePropertyToHclTerraform(struct?: TfDaemonTaskDefinition.DeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function awsEcsDaemonTaskDefinitionDevicePropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEcsDaemonTaskDefinitionTmpfsPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.TmpfsProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionTmpfsPropertyToTerraform(struct?: TfDaemonTaskDefinition.TmpfsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -659,7 +659,7 @@ export function awsEcsDaemonTaskDefinitionTmpfsPropertyToTerraform(struct?: AwsE
 }
 
 
-export function awsEcsDaemonTaskDefinitionTmpfsPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.TmpfsProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionTmpfsPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.TmpfsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -690,21 +690,21 @@ export function awsEcsDaemonTaskDefinitionTmpfsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsEcsDaemonTaskDefinitionLinuxParametersPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.LinuxParametersProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionLinuxParametersPropertyToTerraform(struct?: TfDaemonTaskDefinition.LinuxParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     init_process_enabled: cdktn.booleanToTerraform(struct!.initProcessEnabled),
-    capabilities: cdktn.listMapper(awsEcsDaemonTaskDefinitionCapabilitiesPropertyToTerraform, true)(struct!.capabilities),
-    device: cdktn.listMapper(awsEcsDaemonTaskDefinitionDevicePropertyToTerraform, true)(struct!.device),
-    tmpfs: cdktn.listMapper(awsEcsDaemonTaskDefinitionTmpfsPropertyToTerraform, true)(struct!.tmpfs),
+    capabilities: cdktn.listMapper(tfDaemonTaskDefinitionCapabilitiesPropertyToTerraform, true)(struct!.capabilities),
+    device: cdktn.listMapper(tfDaemonTaskDefinitionDevicePropertyToTerraform, true)(struct!.device),
+    tmpfs: cdktn.listMapper(tfDaemonTaskDefinitionTmpfsPropertyToTerraform, true)(struct!.tmpfs),
   }
 }
 
 
-export function awsEcsDaemonTaskDefinitionLinuxParametersPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.LinuxParametersProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionLinuxParametersPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.LinuxParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,19 +717,19 @@ export function awsEcsDaemonTaskDefinitionLinuxParametersPropertyToHclTerraform(
       storageClassType: "boolean",
     },
     capabilities: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionCapabilitiesPropertyToHclTerraform, true)(struct!.capabilities),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionCapabilitiesPropertyToHclTerraform, true)(struct!.capabilities),
       isBlock: true,
       type: "list",
       storageClassType: "CapabilitiesPropertyList",
     },
     device: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionDevicePropertyToHclTerraform, true)(struct!.device),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionDevicePropertyToHclTerraform, true)(struct!.device),
       isBlock: true,
       type: "list",
       storageClassType: "DevicePropertyList",
     },
     tmpfs: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionTmpfsPropertyToHclTerraform, true)(struct!.tmpfs),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionTmpfsPropertyToHclTerraform, true)(struct!.tmpfs),
       isBlock: true,
       type: "list",
       storageClassType: "TmpfsPropertyList",
@@ -741,7 +741,7 @@ export function awsEcsDaemonTaskDefinitionLinuxParametersPropertyToHclTerraform(
 }
 
 
-export function awsEcsDaemonTaskDefinitionSecretOptionPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.SecretOptionProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionSecretOptionPropertyToTerraform(struct?: TfDaemonTaskDefinition.SecretOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,7 +753,7 @@ export function awsEcsDaemonTaskDefinitionSecretOptionPropertyToTerraform(struct
 }
 
 
-export function awsEcsDaemonTaskDefinitionSecretOptionPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.SecretOptionProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionSecretOptionPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.SecretOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -778,7 +778,7 @@ export function awsEcsDaemonTaskDefinitionSecretOptionPropertyToHclTerraform(str
 }
 
 
-export function awsEcsDaemonTaskDefinitionLogConfigurationPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.LogConfigurationProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionLogConfigurationPropertyToTerraform(struct?: TfDaemonTaskDefinition.LogConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -786,12 +786,12 @@ export function awsEcsDaemonTaskDefinitionLogConfigurationPropertyToTerraform(st
   return {
     log_driver: cdktn.stringToTerraform(struct!.logDriver),
     options: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.options),
-    secret_option: cdktn.listMapper(awsEcsDaemonTaskDefinitionSecretOptionPropertyToTerraform, true)(struct!.secretOption),
+    secret_option: cdktn.listMapper(tfDaemonTaskDefinitionSecretOptionPropertyToTerraform, true)(struct!.secretOption),
   }
 }
 
 
-export function awsEcsDaemonTaskDefinitionLogConfigurationPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.LogConfigurationProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionLogConfigurationPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.LogConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -810,7 +810,7 @@ export function awsEcsDaemonTaskDefinitionLogConfigurationPropertyToHclTerraform
       storageClassType: "stringMap",
     },
     secret_option: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionSecretOptionPropertyToHclTerraform, true)(struct!.secretOption),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionSecretOptionPropertyToHclTerraform, true)(struct!.secretOption),
       isBlock: true,
       type: "list",
       storageClassType: "SecretOptionPropertyList",
@@ -822,7 +822,7 @@ export function awsEcsDaemonTaskDefinitionLogConfigurationPropertyToHclTerraform
 }
 
 
-export function awsEcsDaemonTaskDefinitionMountPointPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.MountPointProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionMountPointPropertyToTerraform(struct?: TfDaemonTaskDefinition.MountPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -835,7 +835,7 @@ export function awsEcsDaemonTaskDefinitionMountPointPropertyToTerraform(struct?:
 }
 
 
-export function awsEcsDaemonTaskDefinitionMountPointPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.MountPointProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionMountPointPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.MountPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -866,7 +866,7 @@ export function awsEcsDaemonTaskDefinitionMountPointPropertyToHclTerraform(struc
 }
 
 
-export function awsEcsDaemonTaskDefinitionRepositoryCredentialsPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.RepositoryCredentialsProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionRepositoryCredentialsPropertyToTerraform(struct?: TfDaemonTaskDefinition.RepositoryCredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -877,7 +877,7 @@ export function awsEcsDaemonTaskDefinitionRepositoryCredentialsPropertyToTerrafo
 }
 
 
-export function awsEcsDaemonTaskDefinitionRepositoryCredentialsPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.RepositoryCredentialsProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionRepositoryCredentialsPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.RepositoryCredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -896,7 +896,7 @@ export function awsEcsDaemonTaskDefinitionRepositoryCredentialsPropertyToHclTerr
 }
 
 
-export function awsEcsDaemonTaskDefinitionRestartPolicyPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.RestartPolicyProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionRestartPolicyPropertyToTerraform(struct?: TfDaemonTaskDefinition.RestartPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -909,7 +909,7 @@ export function awsEcsDaemonTaskDefinitionRestartPolicyPropertyToTerraform(struc
 }
 
 
-export function awsEcsDaemonTaskDefinitionRestartPolicyPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.RestartPolicyProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionRestartPolicyPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.RestartPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -940,7 +940,7 @@ export function awsEcsDaemonTaskDefinitionRestartPolicyPropertyToHclTerraform(st
 }
 
 
-export function awsEcsDaemonTaskDefinitionSecretPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.SecretProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionSecretPropertyToTerraform(struct?: TfDaemonTaskDefinition.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -952,7 +952,7 @@ export function awsEcsDaemonTaskDefinitionSecretPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsEcsDaemonTaskDefinitionSecretPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.SecretProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionSecretPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -977,7 +977,7 @@ export function awsEcsDaemonTaskDefinitionSecretPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEcsDaemonTaskDefinitionSystemControlPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.SystemControlProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionSystemControlPropertyToTerraform(struct?: TfDaemonTaskDefinition.SystemControlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -989,7 +989,7 @@ export function awsEcsDaemonTaskDefinitionSystemControlPropertyToTerraform(struc
 }
 
 
-export function awsEcsDaemonTaskDefinitionSystemControlPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.SystemControlProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionSystemControlPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.SystemControlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1014,7 +1014,7 @@ export function awsEcsDaemonTaskDefinitionSystemControlPropertyToHclTerraform(st
 }
 
 
-export function awsEcsDaemonTaskDefinitionUlimitPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.UlimitProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionUlimitPropertyToTerraform(struct?: TfDaemonTaskDefinition.UlimitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1027,7 +1027,7 @@ export function awsEcsDaemonTaskDefinitionUlimitPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsEcsDaemonTaskDefinitionUlimitPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.UlimitProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionUlimitPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.UlimitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1058,7 +1058,7 @@ export function awsEcsDaemonTaskDefinitionUlimitPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEcsDaemonTaskDefinitionContainerDefinitionPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.ContainerDefinitionProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionContainerDefinitionPropertyToTerraform(struct?: TfDaemonTaskDefinition.ContainerDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1080,24 +1080,24 @@ export function awsEcsDaemonTaskDefinitionContainerDefinitionPropertyToTerraform
     stop_timeout: cdktn.numberToTerraform(struct!.stopTimeout),
     user: cdktn.stringToTerraform(struct!.user),
     working_directory: cdktn.stringToTerraform(struct!.workingDirectory),
-    depends_on: cdktn.listMapper(awsEcsDaemonTaskDefinitionDependsOnPropertyToTerraform, true)(struct!.dependsOn),
-    environment: cdktn.listMapper(awsEcsDaemonTaskDefinitionEnvironmentPropertyToTerraform, true)(struct!.environment),
-    environment_file: cdktn.listMapper(awsEcsDaemonTaskDefinitionEnvironmentFilePropertyToTerraform, true)(struct!.environmentFile),
-    firelens_configuration: cdktn.listMapper(awsEcsDaemonTaskDefinitionFirelensConfigurationPropertyToTerraform, true)(struct!.firelensConfiguration),
-    health_check: cdktn.listMapper(awsEcsDaemonTaskDefinitionHealthCheckPropertyToTerraform, true)(struct!.healthCheck),
-    linux_parameters: cdktn.listMapper(awsEcsDaemonTaskDefinitionLinuxParametersPropertyToTerraform, true)(struct!.linuxParameters),
-    log_configuration: cdktn.listMapper(awsEcsDaemonTaskDefinitionLogConfigurationPropertyToTerraform, true)(struct!.logConfiguration),
-    mount_point: cdktn.listMapper(awsEcsDaemonTaskDefinitionMountPointPropertyToTerraform, true)(struct!.mountPoint),
-    repository_credentials: cdktn.listMapper(awsEcsDaemonTaskDefinitionRepositoryCredentialsPropertyToTerraform, true)(struct!.repositoryCredentials),
-    restart_policy: cdktn.listMapper(awsEcsDaemonTaskDefinitionRestartPolicyPropertyToTerraform, true)(struct!.restartPolicy),
-    secret: cdktn.listMapper(awsEcsDaemonTaskDefinitionSecretPropertyToTerraform, true)(struct!.secret),
-    system_control: cdktn.listMapper(awsEcsDaemonTaskDefinitionSystemControlPropertyToTerraform, true)(struct!.systemControl),
-    ulimit: cdktn.listMapper(awsEcsDaemonTaskDefinitionUlimitPropertyToTerraform, true)(struct!.ulimit),
+    depends_on: cdktn.listMapper(tfDaemonTaskDefinitionDependsOnPropertyToTerraform, true)(struct!.dependsOn),
+    environment: cdktn.listMapper(tfDaemonTaskDefinitionEnvironmentPropertyToTerraform, true)(struct!.environment),
+    environment_file: cdktn.listMapper(tfDaemonTaskDefinitionEnvironmentFilePropertyToTerraform, true)(struct!.environmentFile),
+    firelens_configuration: cdktn.listMapper(tfDaemonTaskDefinitionFirelensConfigurationPropertyToTerraform, true)(struct!.firelensConfiguration),
+    health_check: cdktn.listMapper(tfDaemonTaskDefinitionHealthCheckPropertyToTerraform, true)(struct!.healthCheck),
+    linux_parameters: cdktn.listMapper(tfDaemonTaskDefinitionLinuxParametersPropertyToTerraform, true)(struct!.linuxParameters),
+    log_configuration: cdktn.listMapper(tfDaemonTaskDefinitionLogConfigurationPropertyToTerraform, true)(struct!.logConfiguration),
+    mount_point: cdktn.listMapper(tfDaemonTaskDefinitionMountPointPropertyToTerraform, true)(struct!.mountPoint),
+    repository_credentials: cdktn.listMapper(tfDaemonTaskDefinitionRepositoryCredentialsPropertyToTerraform, true)(struct!.repositoryCredentials),
+    restart_policy: cdktn.listMapper(tfDaemonTaskDefinitionRestartPolicyPropertyToTerraform, true)(struct!.restartPolicy),
+    secret: cdktn.listMapper(tfDaemonTaskDefinitionSecretPropertyToTerraform, true)(struct!.secret),
+    system_control: cdktn.listMapper(tfDaemonTaskDefinitionSystemControlPropertyToTerraform, true)(struct!.systemControl),
+    ulimit: cdktn.listMapper(tfDaemonTaskDefinitionUlimitPropertyToTerraform, true)(struct!.ulimit),
   }
 }
 
 
-export function awsEcsDaemonTaskDefinitionContainerDefinitionPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.ContainerDefinitionProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionContainerDefinitionPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.ContainerDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1200,79 +1200,79 @@ export function awsEcsDaemonTaskDefinitionContainerDefinitionPropertyToHclTerraf
       storageClassType: "string",
     },
     depends_on: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionDependsOnPropertyToHclTerraform, true)(struct!.dependsOn),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionDependsOnPropertyToHclTerraform, true)(struct!.dependsOn),
       isBlock: true,
       type: "list",
       storageClassType: "DependsOnPropertyList",
     },
     environment: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionEnvironmentPropertyToHclTerraform, true)(struct!.environment),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionEnvironmentPropertyToHclTerraform, true)(struct!.environment),
       isBlock: true,
       type: "set",
       storageClassType: "EnvironmentPropertyList",
     },
     environment_file: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionEnvironmentFilePropertyToHclTerraform, true)(struct!.environmentFile),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionEnvironmentFilePropertyToHclTerraform, true)(struct!.environmentFile),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentFilePropertyList",
     },
     firelens_configuration: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionFirelensConfigurationPropertyToHclTerraform, true)(struct!.firelensConfiguration),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionFirelensConfigurationPropertyToHclTerraform, true)(struct!.firelensConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "FirelensConfigurationPropertyList",
     },
     health_check: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionHealthCheckPropertyToHclTerraform, true)(struct!.healthCheck),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionHealthCheckPropertyToHclTerraform, true)(struct!.healthCheck),
       isBlock: true,
       type: "list",
       storageClassType: "HealthCheckPropertyList",
     },
     linux_parameters: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionLinuxParametersPropertyToHclTerraform, true)(struct!.linuxParameters),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionLinuxParametersPropertyToHclTerraform, true)(struct!.linuxParameters),
       isBlock: true,
       type: "list",
       storageClassType: "LinuxParametersPropertyList",
     },
     log_configuration: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionLogConfigurationPropertyToHclTerraform, true)(struct!.logConfiguration),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionLogConfigurationPropertyToHclTerraform, true)(struct!.logConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LogConfigurationPropertyList",
     },
     mount_point: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionMountPointPropertyToHclTerraform, true)(struct!.mountPoint),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionMountPointPropertyToHclTerraform, true)(struct!.mountPoint),
       isBlock: true,
       type: "list",
       storageClassType: "MountPointPropertyList",
     },
     repository_credentials: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionRepositoryCredentialsPropertyToHclTerraform, true)(struct!.repositoryCredentials),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionRepositoryCredentialsPropertyToHclTerraform, true)(struct!.repositoryCredentials),
       isBlock: true,
       type: "list",
       storageClassType: "RepositoryCredentialsPropertyList",
     },
     restart_policy: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionRestartPolicyPropertyToHclTerraform, true)(struct!.restartPolicy),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionRestartPolicyPropertyToHclTerraform, true)(struct!.restartPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "RestartPolicyPropertyList",
     },
     secret: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionSecretPropertyToHclTerraform, true)(struct!.secret),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionSecretPropertyToHclTerraform, true)(struct!.secret),
       isBlock: true,
       type: "list",
       storageClassType: "SecretPropertyList",
     },
     system_control: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionSystemControlPropertyToHclTerraform, true)(struct!.systemControl),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionSystemControlPropertyToHclTerraform, true)(struct!.systemControl),
       isBlock: true,
       type: "list",
       storageClassType: "SystemControlPropertyList",
     },
     ulimit: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionUlimitPropertyToHclTerraform, true)(struct!.ulimit),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionUlimitPropertyToHclTerraform, true)(struct!.ulimit),
       isBlock: true,
       type: "list",
       storageClassType: "UlimitPropertyList",
@@ -1284,7 +1284,7 @@ export function awsEcsDaemonTaskDefinitionContainerDefinitionPropertyToHclTerraf
 }
 
 
-export function awsEcsDaemonTaskDefinitionHostPropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.HostProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionHostPropertyToTerraform(struct?: TfDaemonTaskDefinition.HostProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1295,7 +1295,7 @@ export function awsEcsDaemonTaskDefinitionHostPropertyToTerraform(struct?: AwsEc
 }
 
 
-export function awsEcsDaemonTaskDefinitionHostPropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.HostProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionHostPropertyToHclTerraform(struct?: TfDaemonTaskDefinition.HostProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1314,19 +1314,19 @@ export function awsEcsDaemonTaskDefinitionHostPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsEcsDaemonTaskDefinitionVolumePropertyToTerraform(struct?: AwsEcsDaemonTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionVolumePropertyToTerraform(struct?: TfDaemonTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    host: cdktn.listMapper(awsEcsDaemonTaskDefinitionHostPropertyToTerraform, true)(struct!.host),
+    host: cdktn.listMapper(tfDaemonTaskDefinitionHostPropertyToTerraform, true)(struct!.host),
   }
 }
 
 
-export function awsEcsDaemonTaskDefinitionVolumePropertyToHclTerraform(struct?: AwsEcsDaemonTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
+export function tfDaemonTaskDefinitionVolumePropertyToHclTerraform(struct?: TfDaemonTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1339,7 +1339,7 @@ export function awsEcsDaemonTaskDefinitionVolumePropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     host: {
-      value: cdktn.listMapperHcl(awsEcsDaemonTaskDefinitionHostPropertyToHclTerraform, true)(struct!.host),
+      value: cdktn.listMapperHcl(tfDaemonTaskDefinitionHostPropertyToHclTerraform, true)(struct!.host),
       isBlock: true,
       type: "list",
       storageClassType: "HostPropertyList",
@@ -1351,14 +1351,14 @@ export function awsEcsDaemonTaskDefinitionVolumePropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsEcsDaemonTaskDefinition {
+export namespace TfDaemonTaskDefinition {
 export interface DependsOnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#condition AwsEcsDaemonTaskDefinition#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#condition TfDaemonTaskDefinition#condition}
   */
   readonly condition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_name AwsEcsDaemonTaskDefinition#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_name TfDaemonTaskDefinition#container_name}
   */
   readonly containerName: string;
 }
@@ -1460,11 +1460,11 @@ export class DependsOnPropertyList extends cdktn.ComplexList {
 }
 export interface EnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name AwsEcsDaemonTaskDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name TfDaemonTaskDefinition#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value AwsEcsDaemonTaskDefinition#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value TfDaemonTaskDefinition#value}
   */
   readonly value?: string;
 }
@@ -1572,11 +1572,11 @@ export class EnvironmentPropertyList extends cdktn.ComplexList {
 }
 export interface EnvironmentFileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#type AwsEcsDaemonTaskDefinition#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#type TfDaemonTaskDefinition#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value AwsEcsDaemonTaskDefinition#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value TfDaemonTaskDefinition#value}
   */
   readonly value: string;
 }
@@ -1678,11 +1678,11 @@ export class EnvironmentFilePropertyList extends cdktn.ComplexList {
 }
 export interface FirelensConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#options AwsEcsDaemonTaskDefinition#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#options TfDaemonTaskDefinition#options}
   */
   readonly options?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#type AwsEcsDaemonTaskDefinition#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#type TfDaemonTaskDefinition#type}
   */
   readonly type: string;
 }
@@ -1787,23 +1787,23 @@ export class FirelensConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface HealthCheckProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#command AwsEcsDaemonTaskDefinition#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#command TfDaemonTaskDefinition#command}
   */
   readonly command: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#interval AwsEcsDaemonTaskDefinition#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#interval TfDaemonTaskDefinition#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#retries AwsEcsDaemonTaskDefinition#retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#retries TfDaemonTaskDefinition#retries}
   */
   readonly retries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#start_period AwsEcsDaemonTaskDefinition#start_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#start_period TfDaemonTaskDefinition#start_period}
   */
   readonly startPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#timeout AwsEcsDaemonTaskDefinition#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#timeout TfDaemonTaskDefinition#timeout}
   */
   readonly timeout?: number;
 }
@@ -1974,11 +1974,11 @@ export class HealthCheckPropertyList extends cdktn.ComplexList {
 }
 export interface CapabilitiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#add AwsEcsDaemonTaskDefinition#add}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#add TfDaemonTaskDefinition#add}
   */
   readonly add?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#drop AwsEcsDaemonTaskDefinition#drop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#drop TfDaemonTaskDefinition#drop}
   */
   readonly drop?: string[];
 }
@@ -2086,15 +2086,15 @@ export class CapabilitiesPropertyList extends cdktn.ComplexList {
 }
 export interface DeviceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_path AwsEcsDaemonTaskDefinition#container_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_path TfDaemonTaskDefinition#container_path}
   */
   readonly containerPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#host_path AwsEcsDaemonTaskDefinition#host_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#host_path TfDaemonTaskDefinition#host_path}
   */
   readonly hostPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#permissions AwsEcsDaemonTaskDefinition#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#permissions TfDaemonTaskDefinition#permissions}
   */
   readonly permissions?: string[];
 }
@@ -2221,15 +2221,15 @@ export class DevicePropertyList extends cdktn.ComplexList {
 }
 export interface TmpfsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_path AwsEcsDaemonTaskDefinition#container_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_path TfDaemonTaskDefinition#container_path}
   */
   readonly containerPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#mount_options AwsEcsDaemonTaskDefinition#mount_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#mount_options TfDaemonTaskDefinition#mount_options}
   */
   readonly mountOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#size AwsEcsDaemonTaskDefinition#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#size TfDaemonTaskDefinition#size}
   */
   readonly size: number;
 }
@@ -2353,25 +2353,25 @@ export class TmpfsPropertyList extends cdktn.ComplexList {
 }
 export interface LinuxParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#init_process_enabled AwsEcsDaemonTaskDefinition#init_process_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#init_process_enabled TfDaemonTaskDefinition#init_process_enabled}
   */
   readonly initProcessEnabled?: boolean | cdktn.IResolvable;
   /**
   * capabilities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#capabilities AwsEcsDaemonTaskDefinition#capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#capabilities TfDaemonTaskDefinition#capabilities}
   */
   readonly capabilities?: CapabilitiesProperty[] | cdktn.IResolvable;
   /**
   * device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#device AwsEcsDaemonTaskDefinition#device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#device TfDaemonTaskDefinition#device}
   */
   readonly device?: DeviceProperty[] | cdktn.IResolvable;
   /**
   * tmpfs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#tmpfs AwsEcsDaemonTaskDefinition#tmpfs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#tmpfs TfDaemonTaskDefinition#tmpfs}
   */
   readonly tmpfs?: TmpfsProperty[] | cdktn.IResolvable;
 }
@@ -2523,11 +2523,11 @@ export class LinuxParametersPropertyList extends cdktn.ComplexList {
 }
 export interface SecretOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name AwsEcsDaemonTaskDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name TfDaemonTaskDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value_from AwsEcsDaemonTaskDefinition#value_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value_from TfDaemonTaskDefinition#value_from}
   */
   readonly valueFrom: string;
 }
@@ -2629,17 +2629,17 @@ export class SecretOptionPropertyList extends cdktn.ComplexList {
 }
 export interface LogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#log_driver AwsEcsDaemonTaskDefinition#log_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#log_driver TfDaemonTaskDefinition#log_driver}
   */
   readonly logDriver: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#options AwsEcsDaemonTaskDefinition#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#options TfDaemonTaskDefinition#options}
   */
   readonly options?: { [key: string]: string };
   /**
   * secret_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#secret_option AwsEcsDaemonTaskDefinition#secret_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#secret_option TfDaemonTaskDefinition#secret_option}
   */
   readonly secretOption?: SecretOptionProperty[] | cdktn.IResolvable;
 }
@@ -2766,15 +2766,15 @@ export class LogConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface MountPointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_path AwsEcsDaemonTaskDefinition#container_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#container_path TfDaemonTaskDefinition#container_path}
   */
   readonly containerPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#read_only AwsEcsDaemonTaskDefinition#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#read_only TfDaemonTaskDefinition#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#source_volume AwsEcsDaemonTaskDefinition#source_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#source_volume TfDaemonTaskDefinition#source_volume}
   */
   readonly sourceVolume?: string;
 }
@@ -2904,7 +2904,7 @@ export class MountPointPropertyList extends cdktn.ComplexList {
 }
 export interface RepositoryCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#credentials_parameter AwsEcsDaemonTaskDefinition#credentials_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#credentials_parameter TfDaemonTaskDefinition#credentials_parameter}
   */
   readonly credentialsParameter: string;
 }
@@ -2987,15 +2987,15 @@ export class RepositoryCredentialsPropertyList extends cdktn.ComplexList {
 }
 export interface RestartPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#enabled AwsEcsDaemonTaskDefinition#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#enabled TfDaemonTaskDefinition#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#ignored_exit_codes AwsEcsDaemonTaskDefinition#ignored_exit_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#ignored_exit_codes TfDaemonTaskDefinition#ignored_exit_codes}
   */
   readonly ignoredExitCodes?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#restart_attempt_period AwsEcsDaemonTaskDefinition#restart_attempt_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#restart_attempt_period TfDaemonTaskDefinition#restart_attempt_period}
   */
   readonly restartAttemptPeriod?: number;
 }
@@ -3122,11 +3122,11 @@ export class RestartPolicyPropertyList extends cdktn.ComplexList {
 }
 export interface SecretProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name AwsEcsDaemonTaskDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name TfDaemonTaskDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value_from AwsEcsDaemonTaskDefinition#value_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value_from TfDaemonTaskDefinition#value_from}
   */
   readonly valueFrom: string;
 }
@@ -3228,11 +3228,11 @@ export class SecretPropertyList extends cdktn.ComplexList {
 }
 export interface SystemControlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#namespace AwsEcsDaemonTaskDefinition#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#namespace TfDaemonTaskDefinition#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value AwsEcsDaemonTaskDefinition#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#value TfDaemonTaskDefinition#value}
   */
   readonly value?: string;
 }
@@ -3340,15 +3340,15 @@ export class SystemControlPropertyList extends cdktn.ComplexList {
 }
 export interface UlimitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#hard_limit AwsEcsDaemonTaskDefinition#hard_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#hard_limit TfDaemonTaskDefinition#hard_limit}
   */
   readonly hardLimit: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name AwsEcsDaemonTaskDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name TfDaemonTaskDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#soft_limit AwsEcsDaemonTaskDefinition#soft_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#soft_limit TfDaemonTaskDefinition#soft_limit}
   */
   readonly softLimit: number;
 }
@@ -3469,145 +3469,145 @@ export class UlimitPropertyList extends cdktn.ComplexList {
 }
 export interface ContainerDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#command AwsEcsDaemonTaskDefinition#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#command TfDaemonTaskDefinition#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#cpu AwsEcsDaemonTaskDefinition#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#cpu TfDaemonTaskDefinition#cpu}
   */
   readonly cpu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#entry_point AwsEcsDaemonTaskDefinition#entry_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#entry_point TfDaemonTaskDefinition#entry_point}
   */
   readonly entryPoint?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#essential AwsEcsDaemonTaskDefinition#essential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#essential TfDaemonTaskDefinition#essential}
   */
   readonly essential?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#image AwsEcsDaemonTaskDefinition#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#image TfDaemonTaskDefinition#image}
   */
   readonly image: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#interactive AwsEcsDaemonTaskDefinition#interactive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#interactive TfDaemonTaskDefinition#interactive}
   */
   readonly interactive?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#memory AwsEcsDaemonTaskDefinition#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#memory TfDaemonTaskDefinition#memory}
   */
   readonly memory?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#memory_reservation AwsEcsDaemonTaskDefinition#memory_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#memory_reservation TfDaemonTaskDefinition#memory_reservation}
   */
   readonly memoryReservation?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name AwsEcsDaemonTaskDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name TfDaemonTaskDefinition#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#privileged AwsEcsDaemonTaskDefinition#privileged}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#privileged TfDaemonTaskDefinition#privileged}
   */
   readonly privileged?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#pseudo_terminal AwsEcsDaemonTaskDefinition#pseudo_terminal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#pseudo_terminal TfDaemonTaskDefinition#pseudo_terminal}
   */
   readonly pseudoTerminal?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#readonly_root_filesystem AwsEcsDaemonTaskDefinition#readonly_root_filesystem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#readonly_root_filesystem TfDaemonTaskDefinition#readonly_root_filesystem}
   */
   readonly readonlyRootFilesystem?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#start_timeout AwsEcsDaemonTaskDefinition#start_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#start_timeout TfDaemonTaskDefinition#start_timeout}
   */
   readonly startTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#stop_timeout AwsEcsDaemonTaskDefinition#stop_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#stop_timeout TfDaemonTaskDefinition#stop_timeout}
   */
   readonly stopTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#user AwsEcsDaemonTaskDefinition#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#user TfDaemonTaskDefinition#user}
   */
   readonly user?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#working_directory AwsEcsDaemonTaskDefinition#working_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#working_directory TfDaemonTaskDefinition#working_directory}
   */
   readonly workingDirectory?: string;
   /**
   * depends_on block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#depends_on AwsEcsDaemonTaskDefinition#depends_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#depends_on TfDaemonTaskDefinition#depends_on}
   */
   readonly dependsOn?: DependsOnProperty[] | cdktn.IResolvable;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#environment AwsEcsDaemonTaskDefinition#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#environment TfDaemonTaskDefinition#environment}
   */
   readonly environment?: EnvironmentProperty[] | cdktn.IResolvable;
   /**
   * environment_file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#environment_file AwsEcsDaemonTaskDefinition#environment_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#environment_file TfDaemonTaskDefinition#environment_file}
   */
   readonly environmentFile?: EnvironmentFileProperty[] | cdktn.IResolvable;
   /**
   * firelens_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#firelens_configuration AwsEcsDaemonTaskDefinition#firelens_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#firelens_configuration TfDaemonTaskDefinition#firelens_configuration}
   */
   readonly firelensConfiguration?: FirelensConfigurationProperty[] | cdktn.IResolvable;
   /**
   * health_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#health_check AwsEcsDaemonTaskDefinition#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#health_check TfDaemonTaskDefinition#health_check}
   */
   readonly healthCheck?: HealthCheckProperty[] | cdktn.IResolvable;
   /**
   * linux_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#linux_parameters AwsEcsDaemonTaskDefinition#linux_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#linux_parameters TfDaemonTaskDefinition#linux_parameters}
   */
   readonly linuxParameters?: LinuxParametersProperty[] | cdktn.IResolvable;
   /**
   * log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#log_configuration AwsEcsDaemonTaskDefinition#log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#log_configuration TfDaemonTaskDefinition#log_configuration}
   */
   readonly logConfiguration?: LogConfigurationProperty[] | cdktn.IResolvable;
   /**
   * mount_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#mount_point AwsEcsDaemonTaskDefinition#mount_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#mount_point TfDaemonTaskDefinition#mount_point}
   */
   readonly mountPoint?: MountPointProperty[] | cdktn.IResolvable;
   /**
   * repository_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#repository_credentials AwsEcsDaemonTaskDefinition#repository_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#repository_credentials TfDaemonTaskDefinition#repository_credentials}
   */
   readonly repositoryCredentials?: RepositoryCredentialsProperty[] | cdktn.IResolvable;
   /**
   * restart_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#restart_policy AwsEcsDaemonTaskDefinition#restart_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#restart_policy TfDaemonTaskDefinition#restart_policy}
   */
   readonly restartPolicy?: RestartPolicyProperty[] | cdktn.IResolvable;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#secret AwsEcsDaemonTaskDefinition#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#secret TfDaemonTaskDefinition#secret}
   */
   readonly secret?: SecretProperty[] | cdktn.IResolvable;
   /**
   * system_control block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#system_control AwsEcsDaemonTaskDefinition#system_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#system_control TfDaemonTaskDefinition#system_control}
   */
   readonly systemControl?: SystemControlProperty[] | cdktn.IResolvable;
   /**
   * ulimit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#ulimit AwsEcsDaemonTaskDefinition#ulimit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#ulimit TfDaemonTaskDefinition#ulimit}
   */
   readonly ulimit?: UlimitProperty[] | cdktn.IResolvable;
 }
@@ -4306,7 +4306,7 @@ export class ContainerDefinitionPropertyList extends cdktn.ComplexList {
 }
 export interface HostProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#source_path AwsEcsDaemonTaskDefinition#source_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#source_path TfDaemonTaskDefinition#source_path}
   */
   readonly sourcePath?: string;
 }
@@ -4392,13 +4392,13 @@ export class HostPropertyList extends cdktn.ComplexList {
 }
 export interface VolumeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name AwsEcsDaemonTaskDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#name TfDaemonTaskDefinition#name}
   */
   readonly name: string;
   /**
   * host block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#host AwsEcsDaemonTaskDefinition#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon_task_definition#host TfDaemonTaskDefinition#host}
   */
   readonly host?: HostProperty[] | cdktn.IResolvable;
 }

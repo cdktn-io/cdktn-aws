@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApiGatewayUsagePlanConfig extends cdktn.TerraformMetaArguments {
+export interface TfUsagePlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#description AwsApiGatewayUsagePlan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#description TfUsagePlan#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#id AwsApiGatewayUsagePlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#id TfUsagePlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#name AwsApiGatewayUsagePlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#name TfUsagePlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#product_code AwsApiGatewayUsagePlan#product_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#product_code TfUsagePlan#product_code}
   */
   readonly productCode?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#region AwsApiGatewayUsagePlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#region TfUsagePlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#tags AwsApiGatewayUsagePlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#tags TfUsagePlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#tags_all AwsApiGatewayUsagePlan#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#tags_all TfUsagePlan#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * api_stages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#api_stages AwsApiGatewayUsagePlan#api_stages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#api_stages TfUsagePlan#api_stages}
   */
-  readonly apiStages?: AwsApiGatewayUsagePlan.ApiStagesProperty[] | cdktn.IResolvable;
+  readonly apiStages?: TfUsagePlan.ApiStagesProperty[] | cdktn.IResolvable;
   /**
   * quota_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#quota_settings AwsApiGatewayUsagePlan#quota_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#quota_settings TfUsagePlan#quota_settings}
   */
-  readonly quotaSettings?: AwsApiGatewayUsagePlan.QuotaSettingsProperty;
+  readonly quotaSettings?: TfUsagePlan.QuotaSettingsProperty;
   /**
   * throttle_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#throttle_settings AwsApiGatewayUsagePlan#throttle_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#throttle_settings TfUsagePlan#throttle_settings}
   */
-  readonly throttleSettings?: AwsApiGatewayUsagePlan.ThrottleSettingsProperty;
+  readonly throttleSettings?: TfUsagePlan.ThrottleSettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan aws_api_gateway_usage_plan}
 */
-export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
+export class TfUsagePlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApiGatewayUsagePlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUsagePlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApiGatewayUsagePlan to import
-  * @param importFromId The id of the existing AwsApiGatewayUsagePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApiGatewayUsagePlan to import is found
+  * @param importToId The construct id used in the generated config for the TfUsagePlan to import
+  * @param importFromId The id of the existing TfUsagePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUsagePlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_usage_plan", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApiGatewayUsagePlanConfig
+  * @param options TfUsagePlanConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApiGatewayUsagePlanConfig) {
+  public constructor(scope: Construct, id: string, config: TfUsagePlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_usage_plan',
       terraformGeneratorMetadata: {
@@ -241,11 +241,11 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
   }
 
   // api_stages - computed: false, optional: true, required: false
-  private _apiStages = new AwsApiGatewayUsagePlan.ApiStagesPropertyList(this, "api_stages", true);
+  private _apiStages = new TfUsagePlan.ApiStagesPropertyList(this, "api_stages", true);
   public get apiStages() {
     return this._apiStages;
   }
-  public putApiStages(value: AwsApiGatewayUsagePlan.ApiStagesProperty[] | cdktn.IResolvable) {
+  public putApiStages(value: TfUsagePlan.ApiStagesProperty[] | cdktn.IResolvable) {
     this._apiStages.internalValue = value;
   }
   public resetApiStages() {
@@ -257,11 +257,11 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
   }
 
   // quota_settings - computed: false, optional: true, required: false
-  private _quotaSettings = new AwsApiGatewayUsagePlan.QuotaSettingsPropertyOutputReference(this, "quota_settings");
+  private _quotaSettings = new TfUsagePlan.QuotaSettingsPropertyOutputReference(this, "quota_settings");
   public get quotaSettings() {
     return this._quotaSettings;
   }
-  public putQuotaSettings(value: AwsApiGatewayUsagePlan.QuotaSettingsProperty) {
+  public putQuotaSettings(value: TfUsagePlan.QuotaSettingsProperty) {
     this._quotaSettings.internalValue = value;
   }
   public resetQuotaSettings() {
@@ -273,11 +273,11 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
   }
 
   // throttle_settings - computed: false, optional: true, required: false
-  private _throttleSettings = new AwsApiGatewayUsagePlan.ThrottleSettingsPropertyOutputReference(this, "throttle_settings");
+  private _throttleSettings = new TfUsagePlan.ThrottleSettingsPropertyOutputReference(this, "throttle_settings");
   public get throttleSettings() {
     return this._throttleSettings;
   }
-  public putThrottleSettings(value: AwsApiGatewayUsagePlan.ThrottleSettingsProperty) {
+  public putThrottleSettings(value: TfUsagePlan.ThrottleSettingsProperty) {
     this._throttleSettings.internalValue = value;
   }
   public resetThrottleSettings() {
@@ -301,9 +301,9 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      api_stages: cdktn.listMapper(awsApiGatewayUsagePlanApiStagesPropertyToTerraform, true)(this._apiStages.internalValue),
-      quota_settings: awsApiGatewayUsagePlanQuotaSettingsPropertyToTerraform(this._quotaSettings.internalValue),
-      throttle_settings: awsApiGatewayUsagePlanThrottleSettingsPropertyToTerraform(this._throttleSettings.internalValue),
+      api_stages: cdktn.listMapper(tfUsagePlanApiStagesPropertyToTerraform, true)(this._apiStages.internalValue),
+      quota_settings: tfUsagePlanQuotaSettingsPropertyToTerraform(this._quotaSettings.internalValue),
+      throttle_settings: tfUsagePlanThrottleSettingsPropertyToTerraform(this._throttleSettings.internalValue),
     };
   }
 
@@ -352,22 +352,22 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       api_stages: {
-        value: cdktn.listMapperHcl(awsApiGatewayUsagePlanApiStagesPropertyToHclTerraform, true)(this._apiStages.internalValue),
+        value: cdktn.listMapperHcl(tfUsagePlanApiStagesPropertyToHclTerraform, true)(this._apiStages.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsApiGatewayUsagePlan.ApiStagesPropertyList",
+        storageClassType: "TfUsagePlan.ApiStagesPropertyList",
       },
       quota_settings: {
-        value: awsApiGatewayUsagePlanQuotaSettingsPropertyToHclTerraform(this._quotaSettings.internalValue),
+        value: tfUsagePlanQuotaSettingsPropertyToHclTerraform(this._quotaSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApiGatewayUsagePlan.QuotaSettingsPropertyList",
+        storageClassType: "TfUsagePlan.QuotaSettingsPropertyList",
       },
       throttle_settings: {
-        value: awsApiGatewayUsagePlanThrottleSettingsPropertyToHclTerraform(this._throttleSettings.internalValue),
+        value: tfUsagePlanThrottleSettingsPropertyToHclTerraform(this._throttleSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApiGatewayUsagePlan.ThrottleSettingsPropertyList",
+        storageClassType: "TfUsagePlan.ThrottleSettingsPropertyList",
       },
     };
 
@@ -376,7 +376,7 @@ export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
   }
 }
 
-export function awsApiGatewayUsagePlanThrottlePropertyToTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleProperty | cdktn.IResolvable): any {
+export function tfUsagePlanThrottlePropertyToTerraform(struct?: TfUsagePlan.ThrottleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function awsApiGatewayUsagePlanThrottlePropertyToTerraform(struct?: AwsAp
 }
 
 
-export function awsApiGatewayUsagePlanThrottlePropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleProperty | cdktn.IResolvable): any {
+export function tfUsagePlanThrottlePropertyToHclTerraform(struct?: TfUsagePlan.ThrottleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function awsApiGatewayUsagePlanThrottlePropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsApiGatewayUsagePlanApiStagesPropertyToTerraform(struct?: AwsApiGatewayUsagePlan.ApiStagesProperty | cdktn.IResolvable): any {
+export function tfUsagePlanApiStagesPropertyToTerraform(struct?: TfUsagePlan.ApiStagesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,12 +428,12 @@ export function awsApiGatewayUsagePlanApiStagesPropertyToTerraform(struct?: AwsA
   return {
     api_id: cdktn.stringToTerraform(struct!.apiId),
     stage: cdktn.stringToTerraform(struct!.stage),
-    throttle: cdktn.listMapper(awsApiGatewayUsagePlanThrottlePropertyToTerraform, true)(struct!.throttle),
+    throttle: cdktn.listMapper(tfUsagePlanThrottlePropertyToTerraform, true)(struct!.throttle),
   }
 }
 
 
-export function awsApiGatewayUsagePlanApiStagesPropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.ApiStagesProperty | cdktn.IResolvable): any {
+export function tfUsagePlanApiStagesPropertyToHclTerraform(struct?: TfUsagePlan.ApiStagesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsApiGatewayUsagePlanApiStagesPropertyToHclTerraform(struct?: A
       storageClassType: "string",
     },
     throttle: {
-      value: cdktn.listMapperHcl(awsApiGatewayUsagePlanThrottlePropertyToHclTerraform, true)(struct!.throttle),
+      value: cdktn.listMapperHcl(tfUsagePlanThrottlePropertyToHclTerraform, true)(struct!.throttle),
       isBlock: true,
       type: "set",
       storageClassType: "ThrottlePropertyList",
@@ -464,7 +464,7 @@ export function awsApiGatewayUsagePlanApiStagesPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsApiGatewayUsagePlanQuotaSettingsPropertyToTerraform(struct?: AwsApiGatewayUsagePlan.QuotaSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.QuotaSettingsProperty): any {
+export function tfUsagePlanQuotaSettingsPropertyToTerraform(struct?: TfUsagePlan.QuotaSettingsPropertyOutputReference | TfUsagePlan.QuotaSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function awsApiGatewayUsagePlanQuotaSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function awsApiGatewayUsagePlanQuotaSettingsPropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.QuotaSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.QuotaSettingsProperty): any {
+export function tfUsagePlanQuotaSettingsPropertyToHclTerraform(struct?: TfUsagePlan.QuotaSettingsPropertyOutputReference | TfUsagePlan.QuotaSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function awsApiGatewayUsagePlanQuotaSettingsPropertyToHclTerraform(struct
 }
 
 
-export function awsApiGatewayUsagePlanThrottleSettingsPropertyToTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.ThrottleSettingsProperty): any {
+export function tfUsagePlanThrottleSettingsPropertyToTerraform(struct?: TfUsagePlan.ThrottleSettingsPropertyOutputReference | TfUsagePlan.ThrottleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,7 +520,7 @@ export function awsApiGatewayUsagePlanThrottleSettingsPropertyToTerraform(struct
 }
 
 
-export function awsApiGatewayUsagePlanThrottleSettingsPropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.ThrottleSettingsProperty): any {
+export function tfUsagePlanThrottleSettingsPropertyToHclTerraform(struct?: TfUsagePlan.ThrottleSettingsPropertyOutputReference | TfUsagePlan.ThrottleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,18 +545,18 @@ export function awsApiGatewayUsagePlanThrottleSettingsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsApiGatewayUsagePlan {
+export namespace TfUsagePlan {
 export interface ThrottleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#burst_limit AwsApiGatewayUsagePlan#burst_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#burst_limit TfUsagePlan#burst_limit}
   */
   readonly burstLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#path AwsApiGatewayUsagePlan#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#path TfUsagePlan#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#rate_limit AwsApiGatewayUsagePlan#rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#rate_limit TfUsagePlan#rate_limit}
   */
   readonly rateLimit?: number;
 }
@@ -683,17 +683,17 @@ export class ThrottlePropertyList extends cdktn.ComplexList {
 }
 export interface ApiStagesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#api_id AwsApiGatewayUsagePlan#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#api_id TfUsagePlan#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#stage AwsApiGatewayUsagePlan#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#stage TfUsagePlan#stage}
   */
   readonly stage: string;
   /**
   * throttle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#throttle AwsApiGatewayUsagePlan#throttle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#throttle TfUsagePlan#throttle}
   */
   readonly throttle?: ThrottleProperty[] | cdktn.IResolvable;
 }
@@ -817,15 +817,15 @@ export class ApiStagesPropertyList extends cdktn.ComplexList {
 }
 export interface QuotaSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#limit AwsApiGatewayUsagePlan#limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#limit TfUsagePlan#limit}
   */
   readonly limit: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#offset AwsApiGatewayUsagePlan#offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#offset TfUsagePlan#offset}
   */
   readonly offset?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#period AwsApiGatewayUsagePlan#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#period TfUsagePlan#period}
   */
   readonly period: string;
 }
@@ -917,11 +917,11 @@ export class QuotaSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ThrottleSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#burst_limit AwsApiGatewayUsagePlan#burst_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#burst_limit TfUsagePlan#burst_limit}
   */
   readonly burstLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#rate_limit AwsApiGatewayUsagePlan#rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#rate_limit TfUsagePlan#rate_limit}
   */
   readonly rateLimit?: number;
 }

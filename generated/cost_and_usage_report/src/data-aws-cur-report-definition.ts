@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCurReportDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfReportDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#id DataAwsCurReportDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#id DataTfReportDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#report_name DataAwsCurReportDefinition#report_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#report_name DataTfReportDefinition#report_name}
   */
   readonly reportName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#tags DataAwsCurReportDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#tags DataTfReportDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -26,7 +26,7 @@ export interface DataAwsCurReportDefinitionConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition aws_cur_report_definition}
 */
-export class DataAwsCurReportDefinition extends cdktn.TerraformDataSource {
+export class DataTfReportDefinition extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class DataAwsCurReportDefinition extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCurReportDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfReportDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCurReportDefinition to import
-  * @param importFromId The id of the existing DataAwsCurReportDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCurReportDefinition to import is found
+  * @param importToId The construct id used in the generated config for the DataTfReportDefinition to import
+  * @param importFromId The id of the existing DataTfReportDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cur_report_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfReportDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cur_report_definition", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class DataAwsCurReportDefinition extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCurReportDefinitionConfig
+  * @param options DataTfReportDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCurReportDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfReportDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cur_report_definition',
       terraformGeneratorMetadata: {

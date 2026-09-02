@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCodestarnotificationsNotificationRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfNotificationRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#detail_type AwsCodestarnotificationsNotificationRule#detail_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#detail_type TfNotificationRule#detail_type}
   */
   readonly detailType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#event_type_ids AwsCodestarnotificationsNotificationRule#event_type_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#event_type_ids TfNotificationRule#event_type_ids}
   */
   readonly eventTypeIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#id AwsCodestarnotificationsNotificationRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#id TfNotificationRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#name AwsCodestarnotificationsNotificationRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#name TfNotificationRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#region AwsCodestarnotificationsNotificationRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#region TfNotificationRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#resource AwsCodestarnotificationsNotificationRule#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#resource TfNotificationRule#resource}
   */
   readonly resource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#status AwsCodestarnotificationsNotificationRule#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#status TfNotificationRule#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#tags AwsCodestarnotificationsNotificationRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#tags TfNotificationRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#tags_all AwsCodestarnotificationsNotificationRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#tags_all TfNotificationRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#target AwsCodestarnotificationsNotificationRule#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#target TfNotificationRule#target}
   */
-  readonly target?: AwsCodestarnotificationsNotificationRule.TargetProperty[] | cdktn.IResolvable;
+  readonly target?: TfNotificationRule.TargetProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule aws_codestarnotifications_notification_rule}
 */
-export class AwsCodestarnotificationsNotificationRule extends cdktn.TerraformResource {
+export class TfNotificationRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsCodestarnotificationsNotificationRule extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCodestarnotificationsNotificationRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNotificationRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCodestarnotificationsNotificationRule to import
-  * @param importFromId The id of the existing AwsCodestarnotificationsNotificationRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCodestarnotificationsNotificationRule to import is found
+  * @param importToId The construct id used in the generated config for the TfNotificationRule to import
+  * @param importFromId The id of the existing TfNotificationRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNotificationRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codestarnotifications_notification_rule", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsCodestarnotificationsNotificationRule extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCodestarnotificationsNotificationRuleConfig
+  * @param options TfNotificationRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCodestarnotificationsNotificationRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfNotificationRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codestarnotifications_notification_rule',
       terraformGeneratorMetadata: {
@@ -260,11 +260,11 @@ export class AwsCodestarnotificationsNotificationRule extends cdktn.TerraformRes
   }
 
   // target - computed: false, optional: true, required: false
-  private _target = new AwsCodestarnotificationsNotificationRule.TargetPropertyList(this, "target", true);
+  private _target = new TfNotificationRule.TargetPropertyList(this, "target", true);
   public get target() {
     return this._target;
   }
-  public putTarget(value: AwsCodestarnotificationsNotificationRule.TargetProperty[] | cdktn.IResolvable) {
+  public putTarget(value: TfNotificationRule.TargetProperty[] | cdktn.IResolvable) {
     this._target.internalValue = value;
   }
   public resetTarget() {
@@ -290,7 +290,7 @@ export class AwsCodestarnotificationsNotificationRule extends cdktn.TerraformRes
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      target: cdktn.listMapper(awsCodestarnotificationsNotificationRuleTargetPropertyToTerraform, true)(this._target.internalValue),
+      target: cdktn.listMapper(tfNotificationRuleTargetPropertyToTerraform, true)(this._target.internalValue),
     };
   }
 
@@ -351,10 +351,10 @@ export class AwsCodestarnotificationsNotificationRule extends cdktn.TerraformRes
         storageClassType: "stringMap",
       },
       target: {
-        value: cdktn.listMapperHcl(awsCodestarnotificationsNotificationRuleTargetPropertyToHclTerraform, true)(this._target.internalValue),
+        value: cdktn.listMapperHcl(tfNotificationRuleTargetPropertyToHclTerraform, true)(this._target.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCodestarnotificationsNotificationRule.TargetPropertyList",
+        storageClassType: "TfNotificationRule.TargetPropertyList",
       },
     };
 
@@ -363,7 +363,7 @@ export class AwsCodestarnotificationsNotificationRule extends cdktn.TerraformRes
   }
 }
 
-export function awsCodestarnotificationsNotificationRuleTargetPropertyToTerraform(struct?: AwsCodestarnotificationsNotificationRule.TargetProperty | cdktn.IResolvable): any {
+export function tfNotificationRuleTargetPropertyToTerraform(struct?: TfNotificationRule.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function awsCodestarnotificationsNotificationRuleTargetPropertyToTerrafor
 }
 
 
-export function awsCodestarnotificationsNotificationRuleTargetPropertyToHclTerraform(struct?: AwsCodestarnotificationsNotificationRule.TargetProperty | cdktn.IResolvable): any {
+export function tfNotificationRuleTargetPropertyToHclTerraform(struct?: TfNotificationRule.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,14 +400,14 @@ export function awsCodestarnotificationsNotificationRuleTargetPropertyToHclTerra
 }
 
 
-export namespace AwsCodestarnotificationsNotificationRule {
+export namespace TfNotificationRule {
 export interface TargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#address AwsCodestarnotificationsNotificationRule#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#address TfNotificationRule#address}
   */
   readonly address: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#type AwsCodestarnotificationsNotificationRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarnotifications_notification_rule#type TfNotificationRule#type}
   */
   readonly type?: string;
 }

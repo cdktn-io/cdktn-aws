@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#endpoint_config_name AwsSagemakerEndpoint#endpoint_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#endpoint_config_name TfEndpoint#endpoint_config_name}
   */
   readonly endpointConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#id AwsSagemakerEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#id TfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#name AwsSagemakerEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#name TfEndpoint#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#region AwsSagemakerEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#region TfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#tags AwsSagemakerEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#tags TfEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#tags_all AwsSagemakerEndpoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#tags_all TfEndpoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * deployment_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#deployment_config AwsSagemakerEndpoint#deployment_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#deployment_config TfEndpoint#deployment_config}
   */
-  readonly deploymentConfig?: AwsSagemakerEndpoint.DeploymentConfigProperty;
+  readonly deploymentConfig?: TfEndpoint.DeploymentConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint aws_sagemaker_endpoint}
 */
-export class AwsSagemakerEndpoint extends cdktn.TerraformResource {
+export class TfEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsSagemakerEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerEndpoint to import
-  * @param importFromId The id of the existing AwsSagemakerEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpoint to import
+  * @param importFromId The id of the existing TfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_endpoint", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsSagemakerEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerEndpointConfig
+  * @param options TfEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_endpoint',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class AwsSagemakerEndpoint extends cdktn.TerraformResource {
   }
 
   // deployment_config - computed: false, optional: true, required: false
-  private _deploymentConfig = new AwsSagemakerEndpoint.DeploymentConfigPropertyOutputReference(this, "deployment_config");
+  private _deploymentConfig = new TfEndpoint.DeploymentConfigPropertyOutputReference(this, "deployment_config");
   public get deploymentConfig() {
     return this._deploymentConfig;
   }
-  public putDeploymentConfig(value: AwsSagemakerEndpoint.DeploymentConfigProperty) {
+  public putDeploymentConfig(value: TfEndpoint.DeploymentConfigProperty) {
     this._deploymentConfig.internalValue = value;
   }
   public resetDeploymentConfig() {
@@ -233,7 +233,7 @@ export class AwsSagemakerEndpoint extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      deployment_config: awsSagemakerEndpointDeploymentConfigPropertyToTerraform(this._deploymentConfig.internalValue),
+      deployment_config: tfEndpointDeploymentConfigPropertyToTerraform(this._deploymentConfig.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class AwsSagemakerEndpoint extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       deployment_config: {
-        value: awsSagemakerEndpointDeploymentConfigPropertyToHclTerraform(this._deploymentConfig.internalValue),
+        value: tfEndpointDeploymentConfigPropertyToHclTerraform(this._deploymentConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerEndpoint.DeploymentConfigPropertyList",
+        storageClassType: "TfEndpoint.DeploymentConfigPropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class AwsSagemakerEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerEndpointAlarmsPropertyToTerraform(struct?: AwsSagemakerEndpoint.AlarmsProperty | cdktn.IResolvable): any {
+export function tfEndpointAlarmsPropertyToTerraform(struct?: TfEndpoint.AlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function awsSagemakerEndpointAlarmsPropertyToTerraform(struct?: AwsSagema
 }
 
 
-export function awsSagemakerEndpointAlarmsPropertyToHclTerraform(struct?: AwsSagemakerEndpoint.AlarmsProperty | cdktn.IResolvable): any {
+export function tfEndpointAlarmsPropertyToHclTerraform(struct?: TfEndpoint.AlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,25 +318,25 @@ export function awsSagemakerEndpointAlarmsPropertyToHclTerraform(struct?: AwsSag
 }
 
 
-export function awsSagemakerEndpointAutoRollbackConfigurationPropertyToTerraform(struct?: AwsSagemakerEndpoint.AutoRollbackConfigurationPropertyOutputReference | AwsSagemakerEndpoint.AutoRollbackConfigurationProperty): any {
+export function tfEndpointAutoRollbackConfigurationPropertyToTerraform(struct?: TfEndpoint.AutoRollbackConfigurationPropertyOutputReference | TfEndpoint.AutoRollbackConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    alarms: cdktn.listMapper(awsSagemakerEndpointAlarmsPropertyToTerraform, true)(struct!.alarms),
+    alarms: cdktn.listMapper(tfEndpointAlarmsPropertyToTerraform, true)(struct!.alarms),
   }
 }
 
 
-export function awsSagemakerEndpointAutoRollbackConfigurationPropertyToHclTerraform(struct?: AwsSagemakerEndpoint.AutoRollbackConfigurationPropertyOutputReference | AwsSagemakerEndpoint.AutoRollbackConfigurationProperty): any {
+export function tfEndpointAutoRollbackConfigurationPropertyToHclTerraform(struct?: TfEndpoint.AutoRollbackConfigurationPropertyOutputReference | TfEndpoint.AutoRollbackConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     alarms: {
-      value: cdktn.listMapperHcl(awsSagemakerEndpointAlarmsPropertyToHclTerraform, true)(struct!.alarms),
+      value: cdktn.listMapperHcl(tfEndpointAlarmsPropertyToHclTerraform, true)(struct!.alarms),
       isBlock: true,
       type: "set",
       storageClassType: "AlarmsPropertyList",
@@ -348,7 +348,7 @@ export function awsSagemakerEndpointAutoRollbackConfigurationPropertyToHclTerraf
 }
 
 
-export function awsSagemakerEndpointCanarySizePropertyToTerraform(struct?: AwsSagemakerEndpoint.CanarySizePropertyOutputReference | AwsSagemakerEndpoint.CanarySizeProperty): any {
+export function tfEndpointCanarySizePropertyToTerraform(struct?: TfEndpoint.CanarySizePropertyOutputReference | TfEndpoint.CanarySizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function awsSagemakerEndpointCanarySizePropertyToTerraform(struct?: AwsSa
 }
 
 
-export function awsSagemakerEndpointCanarySizePropertyToHclTerraform(struct?: AwsSagemakerEndpoint.CanarySizePropertyOutputReference | AwsSagemakerEndpoint.CanarySizeProperty): any {
+export function tfEndpointCanarySizePropertyToHclTerraform(struct?: TfEndpoint.CanarySizePropertyOutputReference | TfEndpoint.CanarySizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsSagemakerEndpointCanarySizePropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsSagemakerEndpointLinearStepSizePropertyToTerraform(struct?: AwsSagemakerEndpoint.LinearStepSizePropertyOutputReference | AwsSagemakerEndpoint.LinearStepSizeProperty): any {
+export function tfEndpointLinearStepSizePropertyToTerraform(struct?: TfEndpoint.LinearStepSizePropertyOutputReference | TfEndpoint.LinearStepSizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function awsSagemakerEndpointLinearStepSizePropertyToTerraform(struct?: A
 }
 
 
-export function awsSagemakerEndpointLinearStepSizePropertyToHclTerraform(struct?: AwsSagemakerEndpoint.LinearStepSizePropertyOutputReference | AwsSagemakerEndpoint.LinearStepSizeProperty): any {
+export function tfEndpointLinearStepSizePropertyToHclTerraform(struct?: TfEndpoint.LinearStepSizePropertyOutputReference | TfEndpoint.LinearStepSizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function awsSagemakerEndpointLinearStepSizePropertyToHclTerraform(struct?
 }
 
 
-export function awsSagemakerEndpointTrafficRoutingConfigurationPropertyToTerraform(struct?: AwsSagemakerEndpoint.TrafficRoutingConfigurationPropertyOutputReference | AwsSagemakerEndpoint.TrafficRoutingConfigurationProperty): any {
+export function tfEndpointTrafficRoutingConfigurationPropertyToTerraform(struct?: TfEndpoint.TrafficRoutingConfigurationPropertyOutputReference | TfEndpoint.TrafficRoutingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,13 +430,13 @@ export function awsSagemakerEndpointTrafficRoutingConfigurationPropertyToTerrafo
   return {
     type: cdktn.stringToTerraform(struct!.type),
     wait_interval_in_seconds: cdktn.numberToTerraform(struct!.waitIntervalInSeconds),
-    canary_size: awsSagemakerEndpointCanarySizePropertyToTerraform(struct!.canarySize),
-    linear_step_size: awsSagemakerEndpointLinearStepSizePropertyToTerraform(struct!.linearStepSize),
+    canary_size: tfEndpointCanarySizePropertyToTerraform(struct!.canarySize),
+    linear_step_size: tfEndpointLinearStepSizePropertyToTerraform(struct!.linearStepSize),
   }
 }
 
 
-export function awsSagemakerEndpointTrafficRoutingConfigurationPropertyToHclTerraform(struct?: AwsSagemakerEndpoint.TrafficRoutingConfigurationPropertyOutputReference | AwsSagemakerEndpoint.TrafficRoutingConfigurationProperty): any {
+export function tfEndpointTrafficRoutingConfigurationPropertyToHclTerraform(struct?: TfEndpoint.TrafficRoutingConfigurationPropertyOutputReference | TfEndpoint.TrafficRoutingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,13 +455,13 @@ export function awsSagemakerEndpointTrafficRoutingConfigurationPropertyToHclTerr
       storageClassType: "number",
     },
     canary_size: {
-      value: awsSagemakerEndpointCanarySizePropertyToHclTerraform(struct!.canarySize),
+      value: tfEndpointCanarySizePropertyToHclTerraform(struct!.canarySize),
       isBlock: true,
       type: "list",
       storageClassType: "CanarySizePropertyList",
     },
     linear_step_size: {
-      value: awsSagemakerEndpointLinearStepSizePropertyToHclTerraform(struct!.linearStepSize),
+      value: tfEndpointLinearStepSizePropertyToHclTerraform(struct!.linearStepSize),
       isBlock: true,
       type: "list",
       storageClassType: "LinearStepSizePropertyList",
@@ -473,7 +473,7 @@ export function awsSagemakerEndpointTrafficRoutingConfigurationPropertyToHclTerr
 }
 
 
-export function awsSagemakerEndpointBlueGreenUpdatePolicyPropertyToTerraform(struct?: AwsSagemakerEndpoint.BlueGreenUpdatePolicyPropertyOutputReference | AwsSagemakerEndpoint.BlueGreenUpdatePolicyProperty): any {
+export function tfEndpointBlueGreenUpdatePolicyPropertyToTerraform(struct?: TfEndpoint.BlueGreenUpdatePolicyPropertyOutputReference | TfEndpoint.BlueGreenUpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,12 +481,12 @@ export function awsSagemakerEndpointBlueGreenUpdatePolicyPropertyToTerraform(str
   return {
     maximum_execution_timeout_in_seconds: cdktn.numberToTerraform(struct!.maximumExecutionTimeoutInSeconds),
     termination_wait_in_seconds: cdktn.numberToTerraform(struct!.terminationWaitInSeconds),
-    traffic_routing_configuration: awsSagemakerEndpointTrafficRoutingConfigurationPropertyToTerraform(struct!.trafficRoutingConfiguration),
+    traffic_routing_configuration: tfEndpointTrafficRoutingConfigurationPropertyToTerraform(struct!.trafficRoutingConfiguration),
   }
 }
 
 
-export function awsSagemakerEndpointBlueGreenUpdatePolicyPropertyToHclTerraform(struct?: AwsSagemakerEndpoint.BlueGreenUpdatePolicyPropertyOutputReference | AwsSagemakerEndpoint.BlueGreenUpdatePolicyProperty): any {
+export function tfEndpointBlueGreenUpdatePolicyPropertyToHclTerraform(struct?: TfEndpoint.BlueGreenUpdatePolicyPropertyOutputReference | TfEndpoint.BlueGreenUpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function awsSagemakerEndpointBlueGreenUpdatePolicyPropertyToHclTerraform(
       storageClassType: "number",
     },
     traffic_routing_configuration: {
-      value: awsSagemakerEndpointTrafficRoutingConfigurationPropertyToHclTerraform(struct!.trafficRoutingConfiguration),
+      value: tfEndpointTrafficRoutingConfigurationPropertyToHclTerraform(struct!.trafficRoutingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TrafficRoutingConfigurationPropertyList",
@@ -517,7 +517,7 @@ export function awsSagemakerEndpointBlueGreenUpdatePolicyPropertyToHclTerraform(
 }
 
 
-export function awsSagemakerEndpointMaximumBatchSizePropertyToTerraform(struct?: AwsSagemakerEndpoint.MaximumBatchSizePropertyOutputReference | AwsSagemakerEndpoint.MaximumBatchSizeProperty): any {
+export function tfEndpointMaximumBatchSizePropertyToTerraform(struct?: TfEndpoint.MaximumBatchSizePropertyOutputReference | TfEndpoint.MaximumBatchSizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function awsSagemakerEndpointMaximumBatchSizePropertyToTerraform(struct?:
 }
 
 
-export function awsSagemakerEndpointMaximumBatchSizePropertyToHclTerraform(struct?: AwsSagemakerEndpoint.MaximumBatchSizePropertyOutputReference | AwsSagemakerEndpoint.MaximumBatchSizeProperty): any {
+export function tfEndpointMaximumBatchSizePropertyToHclTerraform(struct?: TfEndpoint.MaximumBatchSizePropertyOutputReference | TfEndpoint.MaximumBatchSizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -554,7 +554,7 @@ export function awsSagemakerEndpointMaximumBatchSizePropertyToHclTerraform(struc
 }
 
 
-export function awsSagemakerEndpointRollbackMaximumBatchSizePropertyToTerraform(struct?: AwsSagemakerEndpoint.RollbackMaximumBatchSizePropertyOutputReference | AwsSagemakerEndpoint.RollbackMaximumBatchSizeProperty): any {
+export function tfEndpointRollbackMaximumBatchSizePropertyToTerraform(struct?: TfEndpoint.RollbackMaximumBatchSizePropertyOutputReference | TfEndpoint.RollbackMaximumBatchSizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,7 +566,7 @@ export function awsSagemakerEndpointRollbackMaximumBatchSizePropertyToTerraform(
 }
 
 
-export function awsSagemakerEndpointRollbackMaximumBatchSizePropertyToHclTerraform(struct?: AwsSagemakerEndpoint.RollbackMaximumBatchSizePropertyOutputReference | AwsSagemakerEndpoint.RollbackMaximumBatchSizeProperty): any {
+export function tfEndpointRollbackMaximumBatchSizePropertyToHclTerraform(struct?: TfEndpoint.RollbackMaximumBatchSizePropertyOutputReference | TfEndpoint.RollbackMaximumBatchSizeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,7 +591,7 @@ export function awsSagemakerEndpointRollbackMaximumBatchSizePropertyToHclTerrafo
 }
 
 
-export function awsSagemakerEndpointRollingUpdatePolicyPropertyToTerraform(struct?: AwsSagemakerEndpoint.RollingUpdatePolicyPropertyOutputReference | AwsSagemakerEndpoint.RollingUpdatePolicyProperty): any {
+export function tfEndpointRollingUpdatePolicyPropertyToTerraform(struct?: TfEndpoint.RollingUpdatePolicyPropertyOutputReference | TfEndpoint.RollingUpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,13 +599,13 @@ export function awsSagemakerEndpointRollingUpdatePolicyPropertyToTerraform(struc
   return {
     maximum_execution_timeout_in_seconds: cdktn.numberToTerraform(struct!.maximumExecutionTimeoutInSeconds),
     wait_interval_in_seconds: cdktn.numberToTerraform(struct!.waitIntervalInSeconds),
-    maximum_batch_size: awsSagemakerEndpointMaximumBatchSizePropertyToTerraform(struct!.maximumBatchSize),
-    rollback_maximum_batch_size: awsSagemakerEndpointRollbackMaximumBatchSizePropertyToTerraform(struct!.rollbackMaximumBatchSize),
+    maximum_batch_size: tfEndpointMaximumBatchSizePropertyToTerraform(struct!.maximumBatchSize),
+    rollback_maximum_batch_size: tfEndpointRollbackMaximumBatchSizePropertyToTerraform(struct!.rollbackMaximumBatchSize),
   }
 }
 
 
-export function awsSagemakerEndpointRollingUpdatePolicyPropertyToHclTerraform(struct?: AwsSagemakerEndpoint.RollingUpdatePolicyPropertyOutputReference | AwsSagemakerEndpoint.RollingUpdatePolicyProperty): any {
+export function tfEndpointRollingUpdatePolicyPropertyToHclTerraform(struct?: TfEndpoint.RollingUpdatePolicyPropertyOutputReference | TfEndpoint.RollingUpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,13 +624,13 @@ export function awsSagemakerEndpointRollingUpdatePolicyPropertyToHclTerraform(st
       storageClassType: "number",
     },
     maximum_batch_size: {
-      value: awsSagemakerEndpointMaximumBatchSizePropertyToHclTerraform(struct!.maximumBatchSize),
+      value: tfEndpointMaximumBatchSizePropertyToHclTerraform(struct!.maximumBatchSize),
       isBlock: true,
       type: "list",
       storageClassType: "MaximumBatchSizePropertyList",
     },
     rollback_maximum_batch_size: {
-      value: awsSagemakerEndpointRollbackMaximumBatchSizePropertyToHclTerraform(struct!.rollbackMaximumBatchSize),
+      value: tfEndpointRollbackMaximumBatchSizePropertyToHclTerraform(struct!.rollbackMaximumBatchSize),
       isBlock: true,
       type: "list",
       storageClassType: "RollbackMaximumBatchSizePropertyList",
@@ -642,39 +642,39 @@ export function awsSagemakerEndpointRollingUpdatePolicyPropertyToHclTerraform(st
 }
 
 
-export function awsSagemakerEndpointDeploymentConfigPropertyToTerraform(struct?: AwsSagemakerEndpoint.DeploymentConfigPropertyOutputReference | AwsSagemakerEndpoint.DeploymentConfigProperty): any {
+export function tfEndpointDeploymentConfigPropertyToTerraform(struct?: TfEndpoint.DeploymentConfigPropertyOutputReference | TfEndpoint.DeploymentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    auto_rollback_configuration: awsSagemakerEndpointAutoRollbackConfigurationPropertyToTerraform(struct!.autoRollbackConfiguration),
-    blue_green_update_policy: awsSagemakerEndpointBlueGreenUpdatePolicyPropertyToTerraform(struct!.blueGreenUpdatePolicy),
-    rolling_update_policy: awsSagemakerEndpointRollingUpdatePolicyPropertyToTerraform(struct!.rollingUpdatePolicy),
+    auto_rollback_configuration: tfEndpointAutoRollbackConfigurationPropertyToTerraform(struct!.autoRollbackConfiguration),
+    blue_green_update_policy: tfEndpointBlueGreenUpdatePolicyPropertyToTerraform(struct!.blueGreenUpdatePolicy),
+    rolling_update_policy: tfEndpointRollingUpdatePolicyPropertyToTerraform(struct!.rollingUpdatePolicy),
   }
 }
 
 
-export function awsSagemakerEndpointDeploymentConfigPropertyToHclTerraform(struct?: AwsSagemakerEndpoint.DeploymentConfigPropertyOutputReference | AwsSagemakerEndpoint.DeploymentConfigProperty): any {
+export function tfEndpointDeploymentConfigPropertyToHclTerraform(struct?: TfEndpoint.DeploymentConfigPropertyOutputReference | TfEndpoint.DeploymentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     auto_rollback_configuration: {
-      value: awsSagemakerEndpointAutoRollbackConfigurationPropertyToHclTerraform(struct!.autoRollbackConfiguration),
+      value: tfEndpointAutoRollbackConfigurationPropertyToHclTerraform(struct!.autoRollbackConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AutoRollbackConfigurationPropertyList",
     },
     blue_green_update_policy: {
-      value: awsSagemakerEndpointBlueGreenUpdatePolicyPropertyToHclTerraform(struct!.blueGreenUpdatePolicy),
+      value: tfEndpointBlueGreenUpdatePolicyPropertyToHclTerraform(struct!.blueGreenUpdatePolicy),
       isBlock: true,
       type: "list",
       storageClassType: "BlueGreenUpdatePolicyPropertyList",
     },
     rolling_update_policy: {
-      value: awsSagemakerEndpointRollingUpdatePolicyPropertyToHclTerraform(struct!.rollingUpdatePolicy),
+      value: tfEndpointRollingUpdatePolicyPropertyToHclTerraform(struct!.rollingUpdatePolicy),
       isBlock: true,
       type: "list",
       storageClassType: "RollingUpdatePolicyPropertyList",
@@ -686,10 +686,10 @@ export function awsSagemakerEndpointDeploymentConfigPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsSagemakerEndpoint {
+export namespace TfEndpoint {
 export interface AlarmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#alarm_name AwsSagemakerEndpoint#alarm_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#alarm_name TfEndpoint#alarm_name}
   */
   readonly alarmName: string;
 }
@@ -774,7 +774,7 @@ export interface AutoRollbackConfigurationProperty {
   /**
   * alarms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#alarms AwsSagemakerEndpoint#alarms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#alarms TfEndpoint#alarms}
   */
   readonly alarms?: AlarmsProperty[] | cdktn.IResolvable;
 }
@@ -828,11 +828,11 @@ export class AutoRollbackConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface CanarySizeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type AwsSagemakerEndpoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type TfEndpoint#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value AwsSagemakerEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value TfEndpoint#value}
   */
   readonly value: number;
 }
@@ -902,11 +902,11 @@ export class CanarySizePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LinearStepSizeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type AwsSagemakerEndpoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type TfEndpoint#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value AwsSagemakerEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value TfEndpoint#value}
   */
   readonly value: number;
 }
@@ -976,23 +976,23 @@ export class LinearStepSizePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TrafficRoutingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type AwsSagemakerEndpoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type TfEndpoint#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#wait_interval_in_seconds AwsSagemakerEndpoint#wait_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#wait_interval_in_seconds TfEndpoint#wait_interval_in_seconds}
   */
   readonly waitIntervalInSeconds: number;
   /**
   * canary_size block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#canary_size AwsSagemakerEndpoint#canary_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#canary_size TfEndpoint#canary_size}
   */
   readonly canarySize?: CanarySizeProperty;
   /**
   * linear_step_size block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#linear_step_size AwsSagemakerEndpoint#linear_step_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#linear_step_size TfEndpoint#linear_step_size}
   */
   readonly linearStepSize?: LinearStepSizeProperty;
 }
@@ -1106,17 +1106,17 @@ export class TrafficRoutingConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface BlueGreenUpdatePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#maximum_execution_timeout_in_seconds AwsSagemakerEndpoint#maximum_execution_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#maximum_execution_timeout_in_seconds TfEndpoint#maximum_execution_timeout_in_seconds}
   */
   readonly maximumExecutionTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#termination_wait_in_seconds AwsSagemakerEndpoint#termination_wait_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#termination_wait_in_seconds TfEndpoint#termination_wait_in_seconds}
   */
   readonly terminationWaitInSeconds?: number;
   /**
   * traffic_routing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#traffic_routing_configuration AwsSagemakerEndpoint#traffic_routing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#traffic_routing_configuration TfEndpoint#traffic_routing_configuration}
   */
   readonly trafficRoutingConfiguration: TrafficRoutingConfigurationProperty;
 }
@@ -1211,11 +1211,11 @@ export class BlueGreenUpdatePolicyPropertyOutputReference extends cdktn.ComplexO
 }
 export interface MaximumBatchSizeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type AwsSagemakerEndpoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type TfEndpoint#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value AwsSagemakerEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value TfEndpoint#value}
   */
   readonly value: number;
 }
@@ -1285,11 +1285,11 @@ export class MaximumBatchSizePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface RollbackMaximumBatchSizeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type AwsSagemakerEndpoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#type TfEndpoint#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value AwsSagemakerEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#value TfEndpoint#value}
   */
   readonly value: number;
 }
@@ -1359,23 +1359,23 @@ export class RollbackMaximumBatchSizePropertyOutputReference extends cdktn.Compl
 }
 export interface RollingUpdatePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#maximum_execution_timeout_in_seconds AwsSagemakerEndpoint#maximum_execution_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#maximum_execution_timeout_in_seconds TfEndpoint#maximum_execution_timeout_in_seconds}
   */
   readonly maximumExecutionTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#wait_interval_in_seconds AwsSagemakerEndpoint#wait_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#wait_interval_in_seconds TfEndpoint#wait_interval_in_seconds}
   */
   readonly waitIntervalInSeconds: number;
   /**
   * maximum_batch_size block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#maximum_batch_size AwsSagemakerEndpoint#maximum_batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#maximum_batch_size TfEndpoint#maximum_batch_size}
   */
   readonly maximumBatchSize: MaximumBatchSizeProperty;
   /**
   * rollback_maximum_batch_size block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#rollback_maximum_batch_size AwsSagemakerEndpoint#rollback_maximum_batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#rollback_maximum_batch_size TfEndpoint#rollback_maximum_batch_size}
   */
   readonly rollbackMaximumBatchSize?: RollbackMaximumBatchSizeProperty;
 }
@@ -1491,19 +1491,19 @@ export interface DeploymentConfigProperty {
   /**
   * auto_rollback_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#auto_rollback_configuration AwsSagemakerEndpoint#auto_rollback_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#auto_rollback_configuration TfEndpoint#auto_rollback_configuration}
   */
   readonly autoRollbackConfiguration?: AutoRollbackConfigurationProperty;
   /**
   * blue_green_update_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#blue_green_update_policy AwsSagemakerEndpoint#blue_green_update_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#blue_green_update_policy TfEndpoint#blue_green_update_policy}
   */
   readonly blueGreenUpdatePolicy?: BlueGreenUpdatePolicyProperty;
   /**
   * rolling_update_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#rolling_update_policy AwsSagemakerEndpoint#rolling_update_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint#rolling_update_policy TfEndpoint#rolling_update_policy}
   */
   readonly rollingUpdatePolicy?: RollingUpdatePolicyProperty;
 }

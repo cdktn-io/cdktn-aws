@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEbsDefaultKmsKeyConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDefaultKmsKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#id DataAwsEbsDefaultKmsKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#id DataTfDefaultKmsKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataAwsEbsDefaultKmsKeyConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#region DataAwsEbsDefaultKmsKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#region DataTfDefaultKmsKey#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#timeouts DataAwsEbsDefaultKmsKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#timeouts DataTfDefaultKmsKey#timeouts}
   */
-  readonly timeouts?: DataAwsEbsDefaultKmsKey.TimeoutsProperty;
+  readonly timeouts?: DataTfDefaultKmsKey.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key aws_ebs_default_kms_key}
 */
-export class DataAwsEbsDefaultKmsKey extends cdktn.TerraformDataSource {
+export class DataTfDefaultKmsKey extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataAwsEbsDefaultKmsKey extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEbsDefaultKmsKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDefaultKmsKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEbsDefaultKmsKey to import
-  * @param importFromId The id of the existing DataAwsEbsDefaultKmsKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEbsDefaultKmsKey to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDefaultKmsKey to import
+  * @param importFromId The id of the existing DataTfDefaultKmsKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDefaultKmsKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_default_kms_key", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataAwsEbsDefaultKmsKey extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEbsDefaultKmsKeyConfig = {}
+  * @param options DataTfDefaultKmsKeyConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEbsDefaultKmsKeyConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDefaultKmsKeyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_default_kms_key',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class DataAwsEbsDefaultKmsKey extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsEbsDefaultKmsKey.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfDefaultKmsKey.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsEbsDefaultKmsKey.TimeoutsProperty) {
+  public putTimeouts(value: DataTfDefaultKmsKey.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -148,7 +148,7 @@ export class DataAwsEbsDefaultKmsKey extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: dataAwsEbsDefaultKmsKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataTfDefaultKmsKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class DataAwsEbsDefaultKmsKey extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       timeouts: {
-        value: dataAwsEbsDefaultKmsKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfDefaultKmsKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsEbsDefaultKmsKey.TimeoutsProperty",
+        storageClassType: "DataTfDefaultKmsKey.TimeoutsProperty",
       },
     };
 
@@ -179,7 +179,7 @@ export class DataAwsEbsDefaultKmsKey extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsEbsDefaultKmsKeyTimeoutsPropertyToTerraform(struct?: DataAwsEbsDefaultKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfDefaultKmsKeyTimeoutsPropertyToTerraform(struct?: DataTfDefaultKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,7 +190,7 @@ export function dataAwsEbsDefaultKmsKeyTimeoutsPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsEbsDefaultKmsKeyTimeoutsPropertyToHclTerraform(struct?: DataAwsEbsDefaultKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfDefaultKmsKeyTimeoutsPropertyToHclTerraform(struct?: DataTfDefaultKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,10 +209,10 @@ export function dataAwsEbsDefaultKmsKeyTimeoutsPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataAwsEbsDefaultKmsKey {
+export namespace DataTfDefaultKmsKey {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#read DataAwsEbsDefaultKmsKey#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_default_kms_key#read DataTfDefaultKmsKey#read}
   */
   readonly read?: string;
 }

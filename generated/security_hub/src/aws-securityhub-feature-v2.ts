@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubFeatureV2Config extends cdktn.TerraformMetaArguments {
+export interface TfFeatureV2Config extends cdktn.TerraformMetaArguments {
   /**
   * The name of the opt-in feature to enable. Valid values: NETWORK_SCANNING.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#feature_name AwsSecurityhubFeatureV2#feature_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#feature_name TfFeatureV2#feature_name}
   */
   readonly featureName: string;
   /**
   * The current enablement status of the feature. Valid values: ENABLED, DISABLED.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#feature_status AwsSecurityhubFeatureV2#feature_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#feature_status TfFeatureV2#feature_status}
   */
   readonly featureStatus: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#region AwsSecurityhubFeatureV2#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#region TfFeatureV2#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface AwsSecurityhubFeatureV2Config extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2 aws_securityhub_feature_v2}
 */
-export class AwsSecurityhubFeatureV2 extends cdktn.TerraformResource {
+export class TfFeatureV2 extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsSecurityhubFeatureV2 extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubFeatureV2 resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFeatureV2 resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubFeatureV2 to import
-  * @param importFromId The id of the existing AwsSecurityhubFeatureV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubFeatureV2 to import is found
+  * @param importToId The construct id used in the generated config for the TfFeatureV2 to import
+  * @param importFromId The id of the existing TfFeatureV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_feature_v2#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFeatureV2 to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_feature_v2", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsSecurityhubFeatureV2 extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubFeatureV2Config
+  * @param options TfFeatureV2Config
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubFeatureV2Config) {
+  public constructor(scope: Construct, id: string, config: TfFeatureV2Config) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_feature_v2',
       terraformGeneratorMetadata: {

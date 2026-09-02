@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlobalacceleratorEndpointGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_group_region AwsGlobalacceleratorEndpointGroup#endpoint_group_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_group_region TfEndpointGroup#endpoint_group_region}
   */
   readonly endpointGroupRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_interval_seconds AwsGlobalacceleratorEndpointGroup#health_check_interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_interval_seconds TfEndpointGroup#health_check_interval_seconds}
   */
   readonly healthCheckIntervalSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_path AwsGlobalacceleratorEndpointGroup#health_check_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_path TfEndpointGroup#health_check_path}
   */
   readonly healthCheckPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_port AwsGlobalacceleratorEndpointGroup#health_check_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_port TfEndpointGroup#health_check_port}
   */
   readonly healthCheckPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_protocol AwsGlobalacceleratorEndpointGroup#health_check_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#health_check_protocol TfEndpointGroup#health_check_protocol}
   */
   readonly healthCheckProtocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#id AwsGlobalacceleratorEndpointGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#id TfEndpointGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#listener_arn AwsGlobalacceleratorEndpointGroup#listener_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#listener_arn TfEndpointGroup#listener_arn}
   */
   readonly listenerArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#threshold_count AwsGlobalacceleratorEndpointGroup#threshold_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#threshold_count TfEndpointGroup#threshold_count}
   */
   readonly thresholdCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#traffic_dial_percentage AwsGlobalacceleratorEndpointGroup#traffic_dial_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#traffic_dial_percentage TfEndpointGroup#traffic_dial_percentage}
   */
   readonly trafficDialPercentage?: number;
   /**
   * endpoint_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_configuration AwsGlobalacceleratorEndpointGroup#endpoint_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_configuration TfEndpointGroup#endpoint_configuration}
   */
-  readonly endpointConfiguration?: AwsGlobalacceleratorEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable;
+  readonly endpointConfiguration?: TfEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable;
   /**
   * port_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#port_override AwsGlobalacceleratorEndpointGroup#port_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#port_override TfEndpointGroup#port_override}
   */
-  readonly portOverride?: AwsGlobalacceleratorEndpointGroup.PortOverrideProperty[] | cdktn.IResolvable;
+  readonly portOverride?: TfEndpointGroup.PortOverrideProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#timeouts AwsGlobalacceleratorEndpointGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#timeouts TfEndpointGroup#timeouts}
   */
-  readonly timeouts?: AwsGlobalacceleratorEndpointGroup.TimeoutsProperty;
+  readonly timeouts?: TfEndpointGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group aws_globalaccelerator_endpoint_group}
 */
-export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
+export class TfEndpointGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlobalacceleratorEndpointGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpointGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlobalacceleratorEndpointGroup to import
-  * @param importFromId The id of the existing AwsGlobalacceleratorEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlobalacceleratorEndpointGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpointGroup to import
+  * @param importFromId The id of the existing TfEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpointGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_endpoint_group", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlobalacceleratorEndpointGroupConfig
+  * @param options TfEndpointGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlobalacceleratorEndpointGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_endpoint_group',
       terraformGeneratorMetadata: {
@@ -281,11 +281,11 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
   }
 
   // endpoint_configuration - computed: false, optional: true, required: false
-  private _endpointConfiguration = new AwsGlobalacceleratorEndpointGroup.EndpointConfigurationPropertyList(this, "endpoint_configuration", true);
+  private _endpointConfiguration = new TfEndpointGroup.EndpointConfigurationPropertyList(this, "endpoint_configuration", true);
   public get endpointConfiguration() {
     return this._endpointConfiguration;
   }
-  public putEndpointConfiguration(value: AwsGlobalacceleratorEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable) {
+  public putEndpointConfiguration(value: TfEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable) {
     this._endpointConfiguration.internalValue = value;
   }
   public resetEndpointConfiguration() {
@@ -297,11 +297,11 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
   }
 
   // port_override - computed: false, optional: true, required: false
-  private _portOverride = new AwsGlobalacceleratorEndpointGroup.PortOverridePropertyList(this, "port_override", true);
+  private _portOverride = new TfEndpointGroup.PortOverridePropertyList(this, "port_override", true);
   public get portOverride() {
     return this._portOverride;
   }
-  public putPortOverride(value: AwsGlobalacceleratorEndpointGroup.PortOverrideProperty[] | cdktn.IResolvable) {
+  public putPortOverride(value: TfEndpointGroup.PortOverrideProperty[] | cdktn.IResolvable) {
     this._portOverride.internalValue = value;
   }
   public resetPortOverride() {
@@ -313,11 +313,11 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGlobalacceleratorEndpointGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEndpointGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGlobalacceleratorEndpointGroup.TimeoutsProperty) {
+  public putTimeouts(value: TfEndpointGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -343,9 +343,9 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
       listener_arn: cdktn.stringToTerraform(this._listenerArn),
       threshold_count: cdktn.numberToTerraform(this._thresholdCount),
       traffic_dial_percentage: cdktn.numberToTerraform(this._trafficDialPercentage),
-      endpoint_configuration: cdktn.listMapper(awsGlobalacceleratorEndpointGroupEndpointConfigurationPropertyToTerraform, true)(this._endpointConfiguration.internalValue),
-      port_override: cdktn.listMapper(awsGlobalacceleratorEndpointGroupPortOverridePropertyToTerraform, true)(this._portOverride.internalValue),
-      timeouts: awsGlobalacceleratorEndpointGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      endpoint_configuration: cdktn.listMapper(tfEndpointGroupEndpointConfigurationPropertyToTerraform, true)(this._endpointConfiguration.internalValue),
+      port_override: cdktn.listMapper(tfEndpointGroupPortOverridePropertyToTerraform, true)(this._portOverride.internalValue),
+      timeouts: tfEndpointGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -406,22 +406,22 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       endpoint_configuration: {
-        value: cdktn.listMapperHcl(awsGlobalacceleratorEndpointGroupEndpointConfigurationPropertyToHclTerraform, true)(this._endpointConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfEndpointGroupEndpointConfigurationPropertyToHclTerraform, true)(this._endpointConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsGlobalacceleratorEndpointGroup.EndpointConfigurationPropertyList",
+        storageClassType: "TfEndpointGroup.EndpointConfigurationPropertyList",
       },
       port_override: {
-        value: cdktn.listMapperHcl(awsGlobalacceleratorEndpointGroupPortOverridePropertyToHclTerraform, true)(this._portOverride.internalValue),
+        value: cdktn.listMapperHcl(tfEndpointGroupPortOverridePropertyToHclTerraform, true)(this._portOverride.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsGlobalacceleratorEndpointGroup.PortOverridePropertyList",
+        storageClassType: "TfEndpointGroup.PortOverridePropertyList",
       },
       timeouts: {
-        value: awsGlobalacceleratorEndpointGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEndpointGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGlobalacceleratorEndpointGroup.TimeoutsProperty",
+        storageClassType: "TfEndpointGroup.TimeoutsProperty",
       },
     };
 
@@ -430,7 +430,7 @@ export class AwsGlobalacceleratorEndpointGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlobalacceleratorEndpointGroupEndpointConfigurationPropertyToTerraform(struct?: AwsGlobalacceleratorEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
+export function tfEndpointGroupEndpointConfigurationPropertyToTerraform(struct?: TfEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function awsGlobalacceleratorEndpointGroupEndpointConfigurationPropertyTo
 }
 
 
-export function awsGlobalacceleratorEndpointGroupEndpointConfigurationPropertyToHclTerraform(struct?: AwsGlobalacceleratorEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
+export function tfEndpointGroupEndpointConfigurationPropertyToHclTerraform(struct?: TfEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function awsGlobalacceleratorEndpointGroupEndpointConfigurationPropertyTo
 }
 
 
-export function awsGlobalacceleratorEndpointGroupPortOverridePropertyToTerraform(struct?: AwsGlobalacceleratorEndpointGroup.PortOverrideProperty | cdktn.IResolvable): any {
+export function tfEndpointGroupPortOverridePropertyToTerraform(struct?: TfEndpointGroup.PortOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function awsGlobalacceleratorEndpointGroupPortOverridePropertyToTerraform
 }
 
 
-export function awsGlobalacceleratorEndpointGroupPortOverridePropertyToHclTerraform(struct?: AwsGlobalacceleratorEndpointGroup.PortOverrideProperty | cdktn.IResolvable): any {
+export function tfEndpointGroupPortOverridePropertyToHclTerraform(struct?: TfEndpointGroup.PortOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function awsGlobalacceleratorEndpointGroupPortOverridePropertyToHclTerraf
 }
 
 
-export function awsGlobalacceleratorEndpointGroupTimeoutsPropertyToTerraform(struct?: AwsGlobalacceleratorEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointGroupTimeoutsPropertyToTerraform(struct?: TfEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -531,7 +531,7 @@ export function awsGlobalacceleratorEndpointGroupTimeoutsPropertyToTerraform(str
 }
 
 
-export function awsGlobalacceleratorEndpointGroupTimeoutsPropertyToHclTerraform(struct?: AwsGlobalacceleratorEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointGroupTimeoutsPropertyToHclTerraform(struct?: TfEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -562,22 +562,22 @@ export function awsGlobalacceleratorEndpointGroupTimeoutsPropertyToHclTerraform(
 }
 
 
-export namespace AwsGlobalacceleratorEndpointGroup {
+export namespace TfEndpointGroup {
 export interface EndpointConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#attachment_arn AwsGlobalacceleratorEndpointGroup#attachment_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#attachment_arn TfEndpointGroup#attachment_arn}
   */
   readonly attachmentArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#client_ip_preservation_enabled AwsGlobalacceleratorEndpointGroup#client_ip_preservation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#client_ip_preservation_enabled TfEndpointGroup#client_ip_preservation_enabled}
   */
   readonly clientIpPreservationEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_id AwsGlobalacceleratorEndpointGroup#endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_id TfEndpointGroup#endpoint_id}
   */
   readonly endpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#weight AwsGlobalacceleratorEndpointGroup#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#weight TfEndpointGroup#weight}
   */
   readonly weight?: number;
 }
@@ -729,11 +729,11 @@ export class EndpointConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface PortOverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_port AwsGlobalacceleratorEndpointGroup#endpoint_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#endpoint_port TfEndpointGroup#endpoint_port}
   */
   readonly endpointPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#listener_port AwsGlobalacceleratorEndpointGroup#listener_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#listener_port TfEndpointGroup#listener_port}
   */
   readonly listenerPort: number;
 }
@@ -835,15 +835,15 @@ export class PortOverridePropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#create AwsGlobalacceleratorEndpointGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#create TfEndpointGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#delete AwsGlobalacceleratorEndpointGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#delete TfEndpointGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#update AwsGlobalacceleratorEndpointGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_endpoint_group#update TfEndpointGroup#update}
   */
   readonly update?: string;
 }

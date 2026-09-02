@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsMedialiveInputConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfInputConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/medialive_input#id DataAwsMedialiveInput#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/medialive_input#id DataTfInput#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,7 +16,7 @@ export interface DataAwsMedialiveInputConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/medialive_input#region DataAwsMedialiveInput#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/medialive_input#region DataTfInput#region}
   */
   readonly region?: string;
 }
@@ -24,7 +24,7 @@ export interface DataAwsMedialiveInputConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/medialive_input aws_medialive_input}
 */
-export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
+export class DataTfInput extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -35,11 +35,11 @@ export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsMedialiveInput resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfInput resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsMedialiveInput to import
-  * @param importFromId The id of the existing DataAwsMedialiveInput that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/medialive_input#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsMedialiveInput to import is found
+  * @param importToId The construct id used in the generated config for the DataTfInput to import
+  * @param importFromId The id of the existing DataTfInput that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/medialive_input#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfInput to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_medialive_input", importId: importFromId, provider });
@@ -54,9 +54,9 @@ export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsMedialiveInputConfig
+  * @param options DataTfInputConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsMedialiveInputConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfInputConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_medialive_input',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
   }
 
   // destinations - computed: true, optional: false, required: false
-  private _destinations = new DataAwsMedialiveInput.DestinationsPropertyList(this, "destinations", false);
+  private _destinations = new DataTfInput.DestinationsPropertyList(this, "destinations", false);
   public get destinations() {
     return this._destinations;
   }
@@ -115,7 +115,7 @@ export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
   }
 
   // input_devices - computed: true, optional: false, required: false
-  private _inputDevices = new DataAwsMedialiveInput.InputDevicesPropertyList(this, "input_devices", false);
+  private _inputDevices = new DataTfInput.InputDevicesPropertyList(this, "input_devices", false);
   public get inputDevices() {
     return this._inputDevices;
   }
@@ -131,7 +131,7 @@ export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
   }
 
   // media_connect_flows - computed: true, optional: false, required: false
-  private _mediaConnectFlows = new DataAwsMedialiveInput.MediaConnectFlowsPropertyList(this, "media_connect_flows", false);
+  private _mediaConnectFlows = new DataTfInput.MediaConnectFlowsPropertyList(this, "media_connect_flows", false);
   public get mediaConnectFlows() {
     return this._mediaConnectFlows;
   }
@@ -168,7 +168,7 @@ export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
   }
 
   // sources - computed: true, optional: false, required: false
-  private _sources = new DataAwsMedialiveInput.SourcesPropertyList(this, "sources", false);
+  private _sources = new DataTfInput.SourcesPropertyList(this, "sources", false);
   public get sources() {
     return this._sources;
   }
@@ -221,7 +221,7 @@ export class DataAwsMedialiveInput extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsMedialiveInputVpcPropertyToTerraform(struct?: DataAwsMedialiveInput.VpcProperty): any {
+export function dataTfInputVpcPropertyToTerraform(struct?: DataTfInput.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function dataAwsMedialiveInputVpcPropertyToTerraform(struct?: DataAwsMedi
 }
 
 
-export function dataAwsMedialiveInputVpcPropertyToHclTerraform(struct?: DataAwsMedialiveInput.VpcProperty): any {
+export function dataTfInputVpcPropertyToHclTerraform(struct?: DataTfInput.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function dataAwsMedialiveInputVpcPropertyToHclTerraform(struct?: DataAwsM
 }
 
 
-export function dataAwsMedialiveInputDestinationsPropertyToTerraform(struct?: DataAwsMedialiveInput.DestinationsProperty): any {
+export function dataTfInputDestinationsPropertyToTerraform(struct?: DataTfInput.DestinationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function dataAwsMedialiveInputDestinationsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsMedialiveInputDestinationsPropertyToHclTerraform(struct?: DataAwsMedialiveInput.DestinationsProperty): any {
+export function dataTfInputDestinationsPropertyToHclTerraform(struct?: DataTfInput.DestinationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function dataAwsMedialiveInputDestinationsPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsMedialiveInputInputDevicesPropertyToTerraform(struct?: DataAwsMedialiveInput.InputDevicesProperty): any {
+export function dataTfInputInputDevicesPropertyToTerraform(struct?: DataTfInput.InputDevicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function dataAwsMedialiveInputInputDevicesPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsMedialiveInputInputDevicesPropertyToHclTerraform(struct?: DataAwsMedialiveInput.InputDevicesProperty): any {
+export function dataTfInputInputDevicesPropertyToHclTerraform(struct?: DataTfInput.InputDevicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function dataAwsMedialiveInputInputDevicesPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsMedialiveInputMediaConnectFlowsPropertyToTerraform(struct?: DataAwsMedialiveInput.MediaConnectFlowsProperty): any {
+export function dataTfInputMediaConnectFlowsPropertyToTerraform(struct?: DataTfInput.MediaConnectFlowsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function dataAwsMedialiveInputMediaConnectFlowsPropertyToTerraform(struct
 }
 
 
-export function dataAwsMedialiveInputMediaConnectFlowsPropertyToHclTerraform(struct?: DataAwsMedialiveInput.MediaConnectFlowsProperty): any {
+export function dataTfInputMediaConnectFlowsPropertyToHclTerraform(struct?: DataTfInput.MediaConnectFlowsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsMedialiveInputMediaConnectFlowsPropertyToHclTerraform(str
 }
 
 
-export function dataAwsMedialiveInputSourcesPropertyToTerraform(struct?: DataAwsMedialiveInput.SourcesProperty): any {
+export function dataTfInputSourcesPropertyToTerraform(struct?: DataTfInput.SourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function dataAwsMedialiveInputSourcesPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsMedialiveInputSourcesPropertyToHclTerraform(struct?: DataAwsMedialiveInput.SourcesProperty): any {
+export function dataTfInputSourcesPropertyToHclTerraform(struct?: DataTfInput.SourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function dataAwsMedialiveInputSourcesPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataAwsMedialiveInput {
+export namespace DataTfInput {
 export interface VpcProperty {
 }
 export class VpcPropertyOutputReference extends cdktn.ComplexObject {

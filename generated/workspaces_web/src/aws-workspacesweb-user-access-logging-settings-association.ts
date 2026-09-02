@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebUserAccessLoggingSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserAccessLoggingSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#portal_arn AwsWorkspaceswebUserAccessLoggingSettingsAssociation#portal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#portal_arn TfUserAccessLoggingSettingsAssociation#portal_arn}
   */
   readonly portalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#region AwsWorkspaceswebUserAccessLoggingSettingsAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#region TfUserAccessLoggingSettingsAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#user_access_logging_settings_arn AwsWorkspaceswebUserAccessLoggingSettingsAssociation#user_access_logging_settings_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#user_access_logging_settings_arn TfUserAccessLoggingSettingsAssociation#user_access_logging_settings_arn}
   */
   readonly userAccessLoggingSettingsArn: string;
 }
@@ -25,7 +25,7 @@ export interface AwsWorkspaceswebUserAccessLoggingSettingsAssociationConfig exte
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association aws_workspacesweb_user_access_logging_settings_association}
 */
-export class AwsWorkspaceswebUserAccessLoggingSettingsAssociation extends cdktn.TerraformResource {
+export class TfUserAccessLoggingSettingsAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsWorkspaceswebUserAccessLoggingSettingsAssociation extends cdktn.
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebUserAccessLoggingSettingsAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUserAccessLoggingSettingsAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebUserAccessLoggingSettingsAssociation to import
-  * @param importFromId The id of the existing AwsWorkspaceswebUserAccessLoggingSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebUserAccessLoggingSettingsAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfUserAccessLoggingSettingsAssociation to import
+  * @param importFromId The id of the existing TfUserAccessLoggingSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_access_logging_settings_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUserAccessLoggingSettingsAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_user_access_logging_settings_association", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsWorkspaceswebUserAccessLoggingSettingsAssociation extends cdktn.
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebUserAccessLoggingSettingsAssociationConfig
+  * @param options TfUserAccessLoggingSettingsAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebUserAccessLoggingSettingsAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserAccessLoggingSettingsAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_user_access_logging_settings_association',
       terraformGeneratorMetadata: {

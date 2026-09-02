@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDocdbEventSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfEventSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#enabled AwsDocdbEventSubscription#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#enabled TfEventSubscription#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#event_categories AwsDocdbEventSubscription#event_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#event_categories TfEventSubscription#event_categories}
   */
   readonly eventCategories?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#id AwsDocdbEventSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#id TfEventSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#name AwsDocdbEventSubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#name TfEventSubscription#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#name_prefix AwsDocdbEventSubscription#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#name_prefix TfEventSubscription#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#region AwsDocdbEventSubscription#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#region TfEventSubscription#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#sns_topic_arn AwsDocdbEventSubscription#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#sns_topic_arn TfEventSubscription#sns_topic_arn}
   */
   readonly snsTopicArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#source_ids AwsDocdbEventSubscription#source_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#source_ids TfEventSubscription#source_ids}
   */
   readonly sourceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#source_type AwsDocdbEventSubscription#source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#source_type TfEventSubscription#source_type}
   */
   readonly sourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#tags AwsDocdbEventSubscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#tags TfEventSubscription#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#tags_all AwsDocdbEventSubscription#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#tags_all TfEventSubscription#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#timeouts AwsDocdbEventSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#timeouts TfEventSubscription#timeouts}
   */
-  readonly timeouts?: AwsDocdbEventSubscription.TimeoutsProperty;
+  readonly timeouts?: TfEventSubscription.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription aws_docdb_event_subscription}
 */
-export class AwsDocdbEventSubscription extends cdktn.TerraformResource {
+export class TfEventSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsDocdbEventSubscription extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDocdbEventSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEventSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDocdbEventSubscription to import
-  * @param importFromId The id of the existing AwsDocdbEventSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDocdbEventSubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfEventSubscription to import
+  * @param importFromId The id of the existing TfEventSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEventSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_docdb_event_subscription", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsDocdbEventSubscription extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDocdbEventSubscriptionConfig
+  * @param options TfEventSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDocdbEventSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfEventSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_docdb_event_subscription',
       terraformGeneratorMetadata: {
@@ -316,11 +316,11 @@ export class AwsDocdbEventSubscription extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDocdbEventSubscription.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEventSubscription.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDocdbEventSubscription.TimeoutsProperty) {
+  public putTimeouts(value: TfEventSubscription.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -348,7 +348,7 @@ export class AwsDocdbEventSubscription extends cdktn.TerraformResource {
       source_type: cdktn.stringToTerraform(this._sourceType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsDocdbEventSubscriptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfEventSubscriptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -421,10 +421,10 @@ export class AwsDocdbEventSubscription extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsDocdbEventSubscriptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEventSubscriptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDocdbEventSubscription.TimeoutsProperty",
+        storageClassType: "TfEventSubscription.TimeoutsProperty",
       },
     };
 
@@ -433,7 +433,7 @@ export class AwsDocdbEventSubscription extends cdktn.TerraformResource {
   }
 }
 
-export function awsDocdbEventSubscriptionTimeoutsPropertyToTerraform(struct?: AwsDocdbEventSubscription.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEventSubscriptionTimeoutsPropertyToTerraform(struct?: TfEventSubscription.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function awsDocdbEventSubscriptionTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsDocdbEventSubscriptionTimeoutsPropertyToHclTerraform(struct?: AwsDocdbEventSubscription.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEventSubscriptionTimeoutsPropertyToHclTerraform(struct?: TfEventSubscription.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,18 +477,18 @@ export function awsDocdbEventSubscriptionTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsDocdbEventSubscription {
+export namespace TfEventSubscription {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#create AwsDocdbEventSubscription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#create TfEventSubscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#delete AwsDocdbEventSubscription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#delete TfEventSubscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#update AwsDocdbEventSubscription#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_event_subscription#update TfEventSubscription#update}
   */
   readonly update?: string;
 }

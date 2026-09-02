@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkmailOrganizationConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#delete_directory AwsWorkmailOrganization#delete_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#delete_directory TfOrganization#delete_directory}
   */
   readonly deleteDirectory?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#delete_identity_center_application AwsWorkmailOrganization#delete_identity_center_application}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#delete_identity_center_application TfOrganization#delete_identity_center_application}
   */
   readonly deleteIdentityCenterApplication?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#directory_id AwsWorkmailOrganization#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#directory_id TfOrganization#directory_id}
   */
   readonly directoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#interoperability_enabled AwsWorkmailOrganization#interoperability_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#interoperability_enabled TfOrganization#interoperability_enabled}
   */
   readonly interoperabilityEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#kms_key_arn AwsWorkmailOrganization#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#kms_key_arn TfOrganization#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#organization_alias AwsWorkmailOrganization#organization_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#organization_alias TfOrganization#organization_alias}
   */
   readonly organizationAlias: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#region AwsWorkmailOrganization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#region TfOrganization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#tags AwsWorkmailOrganization#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#tags TfOrganization#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#timeouts AwsWorkmailOrganization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#timeouts TfOrganization#timeouts}
   */
-  readonly timeouts?: AwsWorkmailOrganization.TimeoutsProperty;
+  readonly timeouts?: TfOrganization.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization aws_workmail_organization}
 */
-export class AwsWorkmailOrganization extends cdktn.TerraformResource {
+export class TfOrganization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsWorkmailOrganization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkmailOrganization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkmailOrganization to import
-  * @param importFromId The id of the existing AwsWorkmailOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkmailOrganization to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganization to import
+  * @param importFromId The id of the existing TfOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workmail_organization", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsWorkmailOrganization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkmailOrganizationConfig
+  * @param options TfOrganizationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkmailOrganizationConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workmail_organization',
       terraformGeneratorMetadata: {
@@ -281,11 +281,11 @@ export class AwsWorkmailOrganization extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsWorkmailOrganization.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOrganization.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsWorkmailOrganization.TimeoutsProperty) {
+  public putTimeouts(value: TfOrganization.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -310,7 +310,7 @@ export class AwsWorkmailOrganization extends cdktn.TerraformResource {
       organization_alias: cdktn.stringToTerraform(this._organizationAlias),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsWorkmailOrganizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfOrganizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -365,10 +365,10 @@ export class AwsWorkmailOrganization extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsWorkmailOrganizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOrganizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsWorkmailOrganization.TimeoutsProperty",
+        storageClassType: "TfOrganization.TimeoutsProperty",
       },
     };
 
@@ -377,7 +377,7 @@ export class AwsWorkmailOrganization extends cdktn.TerraformResource {
   }
 }
 
-export function awsWorkmailOrganizationTimeoutsPropertyToTerraform(struct?: AwsWorkmailOrganization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationTimeoutsPropertyToTerraform(struct?: TfOrganization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function awsWorkmailOrganizationTimeoutsPropertyToTerraform(struct?: AwsW
 }
 
 
-export function awsWorkmailOrganizationTimeoutsPropertyToHclTerraform(struct?: AwsWorkmailOrganization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationTimeoutsPropertyToHclTerraform(struct?: TfOrganization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,18 +414,18 @@ export function awsWorkmailOrganizationTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsWorkmailOrganization {
+export namespace TfOrganization {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#create AwsWorkmailOrganization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#create TfOrganization#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#delete AwsWorkmailOrganization#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_organization#delete TfOrganization#delete}
   */
   readonly delete?: string;
 }

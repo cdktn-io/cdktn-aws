@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreResourcePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourcePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#policy AwsBedrockagentcoreResourcePolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#policy TfResourcePolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#region AwsBedrockagentcoreResourcePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#region TfResourcePolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#resource_arn AwsBedrockagentcoreResourcePolicy#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#resource_arn TfResourcePolicy#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -25,7 +25,7 @@ export interface AwsBedrockagentcoreResourcePolicyConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy aws_bedrockagentcore_resource_policy}
 */
-export class AwsBedrockagentcoreResourcePolicy extends cdktn.TerraformResource {
+export class TfResourcePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsBedrockagentcoreResourcePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreResourcePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourcePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreResourcePolicy to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreResourcePolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfResourcePolicy to import
+  * @param importFromId The id of the existing TfResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_resource_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourcePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_resource_policy", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsBedrockagentcoreResourcePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreResourcePolicyConfig
+  * @param options TfResourcePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreResourcePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourcePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_resource_policy',
       terraformGeneratorMetadata: {

@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkmailDomainConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
   /**
   * Mail domain name to register.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#domain_name AwsWorkmailDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#domain_name TfDomain#domain_name}
   */
   readonly domainName: string;
   /**
   * Identifier of the WorkMail organization.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#organization_id AwsWorkmailDomain#organization_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#organization_id TfDomain#organization_id}
   */
   readonly organizationId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#region AwsWorkmailDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#region TfDomain#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface AwsWorkmailDomainConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain aws_workmail_domain}
 */
-export class AwsWorkmailDomain extends cdktn.TerraformResource {
+export class TfDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsWorkmailDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkmailDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkmailDomain to import
-  * @param importFromId The id of the existing AwsWorkmailDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkmailDomain to import is found
+  * @param importToId The construct id used in the generated config for the TfDomain to import
+  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workmail_domain", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsWorkmailDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkmailDomainConfig
+  * @param options TfDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkmailDomainConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workmail_domain',
       terraformGeneratorMetadata: {
@@ -133,7 +133,7 @@ export class AwsWorkmailDomain extends cdktn.TerraformResource {
   }
 
   // records - computed: true, optional: false, required: false
-  private _records = new AwsWorkmailDomain.RecordsPropertyList(this, "records", false);
+  private _records = new TfDomain.RecordsPropertyList(this, "records", false);
   public get records() {
     return this._records;
   }
@@ -193,7 +193,7 @@ export class AwsWorkmailDomain extends cdktn.TerraformResource {
   }
 }
 
-export function awsWorkmailDomainRecordsPropertyToTerraform(struct?: AwsWorkmailDomain.RecordsProperty): any {
+export function tfDomainRecordsPropertyToTerraform(struct?: TfDomain.RecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -203,7 +203,7 @@ export function awsWorkmailDomainRecordsPropertyToTerraform(struct?: AwsWorkmail
 }
 
 
-export function awsWorkmailDomainRecordsPropertyToHclTerraform(struct?: AwsWorkmailDomain.RecordsProperty): any {
+export function tfDomainRecordsPropertyToHclTerraform(struct?: TfDomain.RecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,7 +214,7 @@ export function awsWorkmailDomainRecordsPropertyToHclTerraform(struct?: AwsWorkm
 }
 
 
-export namespace AwsWorkmailDomain {
+export namespace TfDomain {
 export interface RecordsProperty {
 }
 export class RecordsPropertyOutputReference extends cdktn.ComplexObject {

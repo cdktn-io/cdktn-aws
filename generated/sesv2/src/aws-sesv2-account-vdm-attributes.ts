@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesv2AccountVdmAttributesConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountVdmAttributesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#id AwsSesv2AccountVdmAttributes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#id TfAccountVdmAttributes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface AwsSesv2AccountVdmAttributesConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#region AwsSesv2AccountVdmAttributes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#region TfAccountVdmAttributes#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#vdm_enabled AwsSesv2AccountVdmAttributes#vdm_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#vdm_enabled TfAccountVdmAttributes#vdm_enabled}
   */
   readonly vdmEnabled: string;
   /**
   * dashboard_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#dashboard_attributes AwsSesv2AccountVdmAttributes#dashboard_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#dashboard_attributes TfAccountVdmAttributes#dashboard_attributes}
   */
-  readonly dashboardAttributes?: AwsSesv2AccountVdmAttributes.DashboardAttributesProperty;
+  readonly dashboardAttributes?: TfAccountVdmAttributes.DashboardAttributesProperty;
   /**
   * guardian_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#guardian_attributes AwsSesv2AccountVdmAttributes#guardian_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#guardian_attributes TfAccountVdmAttributes#guardian_attributes}
   */
-  readonly guardianAttributes?: AwsSesv2AccountVdmAttributes.GuardianAttributesProperty;
+  readonly guardianAttributes?: TfAccountVdmAttributes.GuardianAttributesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes aws_sesv2_account_vdm_attributes}
 */
-export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
+export class TfAccountVdmAttributes extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesv2AccountVdmAttributes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccountVdmAttributes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesv2AccountVdmAttributes to import
-  * @param importFromId The id of the existing AwsSesv2AccountVdmAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesv2AccountVdmAttributes to import is found
+  * @param importToId The construct id used in the generated config for the TfAccountVdmAttributes to import
+  * @param importFromId The id of the existing TfAccountVdmAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccountVdmAttributes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_account_vdm_attributes", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesv2AccountVdmAttributesConfig
+  * @param options TfAccountVdmAttributesConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesv2AccountVdmAttributesConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccountVdmAttributesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_account_vdm_attributes',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
   }
 
   // dashboard_attributes - computed: false, optional: true, required: false
-  private _dashboardAttributes = new AwsSesv2AccountVdmAttributes.DashboardAttributesPropertyOutputReference(this, "dashboard_attributes");
+  private _dashboardAttributes = new TfAccountVdmAttributes.DashboardAttributesPropertyOutputReference(this, "dashboard_attributes");
   public get dashboardAttributes() {
     return this._dashboardAttributes;
   }
-  public putDashboardAttributes(value: AwsSesv2AccountVdmAttributes.DashboardAttributesProperty) {
+  public putDashboardAttributes(value: TfAccountVdmAttributes.DashboardAttributesProperty) {
     this._dashboardAttributes.internalValue = value;
   }
   public resetDashboardAttributes() {
@@ -161,11 +161,11 @@ export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
   }
 
   // guardian_attributes - computed: false, optional: true, required: false
-  private _guardianAttributes = new AwsSesv2AccountVdmAttributes.GuardianAttributesPropertyOutputReference(this, "guardian_attributes");
+  private _guardianAttributes = new TfAccountVdmAttributes.GuardianAttributesPropertyOutputReference(this, "guardian_attributes");
   public get guardianAttributes() {
     return this._guardianAttributes;
   }
-  public putGuardianAttributes(value: AwsSesv2AccountVdmAttributes.GuardianAttributesProperty) {
+  public putGuardianAttributes(value: TfAccountVdmAttributes.GuardianAttributesProperty) {
     this._guardianAttributes.internalValue = value;
   }
   public resetGuardianAttributes() {
@@ -185,8 +185,8 @@ export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       vdm_enabled: cdktn.stringToTerraform(this._vdmEnabled),
-      dashboard_attributes: awsSesv2AccountVdmAttributesDashboardAttributesPropertyToTerraform(this._dashboardAttributes.internalValue),
-      guardian_attributes: awsSesv2AccountVdmAttributesGuardianAttributesPropertyToTerraform(this._guardianAttributes.internalValue),
+      dashboard_attributes: tfAccountVdmAttributesDashboardAttributesPropertyToTerraform(this._dashboardAttributes.internalValue),
+      guardian_attributes: tfAccountVdmAttributesGuardianAttributesPropertyToTerraform(this._guardianAttributes.internalValue),
     };
   }
 
@@ -211,16 +211,16 @@ export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       dashboard_attributes: {
-        value: awsSesv2AccountVdmAttributesDashboardAttributesPropertyToHclTerraform(this._dashboardAttributes.internalValue),
+        value: tfAccountVdmAttributesDashboardAttributesPropertyToHclTerraform(this._dashboardAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSesv2AccountVdmAttributes.DashboardAttributesPropertyList",
+        storageClassType: "TfAccountVdmAttributes.DashboardAttributesPropertyList",
       },
       guardian_attributes: {
-        value: awsSesv2AccountVdmAttributesGuardianAttributesPropertyToHclTerraform(this._guardianAttributes.internalValue),
+        value: tfAccountVdmAttributesGuardianAttributesPropertyToHclTerraform(this._guardianAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSesv2AccountVdmAttributes.GuardianAttributesPropertyList",
+        storageClassType: "TfAccountVdmAttributes.GuardianAttributesPropertyList",
       },
     };
 
@@ -229,7 +229,7 @@ export class AwsSesv2AccountVdmAttributes extends cdktn.TerraformResource {
   }
 }
 
-export function awsSesv2AccountVdmAttributesDashboardAttributesPropertyToTerraform(struct?: AwsSesv2AccountVdmAttributes.DashboardAttributesPropertyOutputReference | AwsSesv2AccountVdmAttributes.DashboardAttributesProperty): any {
+export function tfAccountVdmAttributesDashboardAttributesPropertyToTerraform(struct?: TfAccountVdmAttributes.DashboardAttributesPropertyOutputReference | TfAccountVdmAttributes.DashboardAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function awsSesv2AccountVdmAttributesDashboardAttributesPropertyToTerrafo
 }
 
 
-export function awsSesv2AccountVdmAttributesDashboardAttributesPropertyToHclTerraform(struct?: AwsSesv2AccountVdmAttributes.DashboardAttributesPropertyOutputReference | AwsSesv2AccountVdmAttributes.DashboardAttributesProperty): any {
+export function tfAccountVdmAttributesDashboardAttributesPropertyToHclTerraform(struct?: TfAccountVdmAttributes.DashboardAttributesPropertyOutputReference | TfAccountVdmAttributes.DashboardAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsSesv2AccountVdmAttributesDashboardAttributesPropertyToHclTerr
 }
 
 
-export function awsSesv2AccountVdmAttributesGuardianAttributesPropertyToTerraform(struct?: AwsSesv2AccountVdmAttributes.GuardianAttributesPropertyOutputReference | AwsSesv2AccountVdmAttributes.GuardianAttributesProperty): any {
+export function tfAccountVdmAttributesGuardianAttributesPropertyToTerraform(struct?: TfAccountVdmAttributes.GuardianAttributesPropertyOutputReference | TfAccountVdmAttributes.GuardianAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function awsSesv2AccountVdmAttributesGuardianAttributesPropertyToTerrafor
 }
 
 
-export function awsSesv2AccountVdmAttributesGuardianAttributesPropertyToHclTerraform(struct?: AwsSesv2AccountVdmAttributes.GuardianAttributesPropertyOutputReference | AwsSesv2AccountVdmAttributes.GuardianAttributesProperty): any {
+export function tfAccountVdmAttributesGuardianAttributesPropertyToHclTerraform(struct?: TfAccountVdmAttributes.GuardianAttributesPropertyOutputReference | TfAccountVdmAttributes.GuardianAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,10 +289,10 @@ export function awsSesv2AccountVdmAttributesGuardianAttributesPropertyToHclTerra
 }
 
 
-export namespace AwsSesv2AccountVdmAttributes {
+export namespace TfAccountVdmAttributes {
 export interface DashboardAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#engagement_metrics AwsSesv2AccountVdmAttributes#engagement_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#engagement_metrics TfAccountVdmAttributes#engagement_metrics}
   */
   readonly engagementMetrics?: string;
 }
@@ -346,7 +346,7 @@ export class DashboardAttributesPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface GuardianAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#optimized_shared_delivery AwsSesv2AccountVdmAttributes#optimized_shared_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_vdm_attributes#optimized_shared_delivery TfAccountVdmAttributes#optimized_shared_delivery}
   */
   readonly optimizedSharedDelivery?: string;
 }

@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3FilesMountTargetConfig extends cdktn.TerraformMetaArguments {
+export interface TfMountTargetConfig extends cdktn.TerraformMetaArguments {
   /**
   * File system ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#file_system_id AwsS3FilesMountTarget#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#file_system_id TfMountTarget#file_system_id}
   */
   readonly fileSystemId: string;
   /**
   * IP address type
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#ip_address_type AwsS3FilesMountTarget#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#ip_address_type TfMountTarget#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
   * IPv4 address
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#ipv4_address AwsS3FilesMountTarget#ipv4_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#ipv4_address TfMountTarget#ipv4_address}
   */
   readonly ipv4Address?: string;
   /**
   * IPv6 address
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#ipv6_address AwsS3FilesMountTarget#ipv6_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#ipv6_address TfMountTarget#ipv6_address}
   */
   readonly ipv6Address?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#region AwsS3FilesMountTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#region TfMountTarget#region}
   */
   readonly region?: string;
   /**
   * Security group IDs
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#security_groups AwsS3FilesMountTarget#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#security_groups TfMountTarget#security_groups}
   */
   readonly securityGroups?: string[];
   /**
   * Subnet ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#subnet_id AwsS3FilesMountTarget#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#subnet_id TfMountTarget#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#timeouts AwsS3FilesMountTarget#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#timeouts TfMountTarget#timeouts}
   */
-  readonly timeouts?: AwsS3FilesMountTarget.TimeoutsProperty;
+  readonly timeouts?: TfMountTarget.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target aws_s3files_mount_target}
 */
-export class AwsS3FilesMountTarget extends cdktn.TerraformResource {
+export class TfMountTarget extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class AwsS3FilesMountTarget extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3FilesMountTarget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMountTarget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3FilesMountTarget to import
-  * @param importFromId The id of the existing AwsS3FilesMountTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3FilesMountTarget to import is found
+  * @param importToId The construct id used in the generated config for the TfMountTarget to import
+  * @param importFromId The id of the existing TfMountTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMountTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3files_mount_target", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class AwsS3FilesMountTarget extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3FilesMountTargetConfig
+  * @param options TfMountTargetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3FilesMountTargetConfig) {
+  public constructor(scope: Construct, id: string, config: TfMountTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3files_mount_target',
       terraformGeneratorMetadata: {
@@ -263,11 +263,11 @@ export class AwsS3FilesMountTarget extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsS3FilesMountTarget.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMountTarget.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsS3FilesMountTarget.TimeoutsProperty) {
+  public putTimeouts(value: TfMountTarget.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -291,7 +291,7 @@ export class AwsS3FilesMountTarget extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroups),
       subnet_id: cdktn.stringToTerraform(this._subnetId),
-      timeouts: awsS3FilesMountTargetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfMountTargetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -340,10 +340,10 @@ export class AwsS3FilesMountTarget extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsS3FilesMountTargetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMountTargetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsS3FilesMountTarget.TimeoutsProperty",
+        storageClassType: "TfMountTarget.TimeoutsProperty",
       },
     };
 
@@ -352,7 +352,7 @@ export class AwsS3FilesMountTarget extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3FilesMountTargetTimeoutsPropertyToTerraform(struct?: AwsS3FilesMountTarget.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMountTargetTimeoutsPropertyToTerraform(struct?: TfMountTarget.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function awsS3FilesMountTargetTimeoutsPropertyToTerraform(struct?: AwsS3F
 }
 
 
-export function awsS3FilesMountTargetTimeoutsPropertyToHclTerraform(struct?: AwsS3FilesMountTarget.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMountTargetTimeoutsPropertyToHclTerraform(struct?: TfMountTarget.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,24 +396,24 @@ export function awsS3FilesMountTargetTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsS3FilesMountTarget {
+export namespace TfMountTarget {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#create AwsS3FilesMountTarget#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#create TfMountTarget#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#delete AwsS3FilesMountTarget#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#delete TfMountTarget#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#update AwsS3FilesMountTarget#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_mount_target#update TfMountTarget#update}
   */
   readonly update?: string;
 }

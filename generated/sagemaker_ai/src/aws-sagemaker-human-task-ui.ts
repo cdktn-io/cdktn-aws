@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerHumanTaskUiConfig extends cdktn.TerraformMetaArguments {
+export interface TfHumanTaskUiConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#human_task_ui_name AwsSagemakerHumanTaskUi#human_task_ui_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#human_task_ui_name TfHumanTaskUi#human_task_ui_name}
   */
   readonly humanTaskUiName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#id AwsSagemakerHumanTaskUi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#id TfHumanTaskUi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,29 +20,29 @@ export interface AwsSagemakerHumanTaskUiConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#region AwsSagemakerHumanTaskUi#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#region TfHumanTaskUi#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#tags AwsSagemakerHumanTaskUi#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#tags TfHumanTaskUi#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#tags_all AwsSagemakerHumanTaskUi#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#tags_all TfHumanTaskUi#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * ui_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#ui_template AwsSagemakerHumanTaskUi#ui_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#ui_template TfHumanTaskUi#ui_template}
   */
-  readonly uiTemplate: AwsSagemakerHumanTaskUi.UiTemplateProperty;
+  readonly uiTemplate: TfHumanTaskUi.UiTemplateProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui aws_sagemaker_human_task_ui}
 */
-export class AwsSagemakerHumanTaskUi extends cdktn.TerraformResource {
+export class TfHumanTaskUi extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsSagemakerHumanTaskUi extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerHumanTaskUi resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfHumanTaskUi resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerHumanTaskUi to import
-  * @param importFromId The id of the existing AwsSagemakerHumanTaskUi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerHumanTaskUi to import is found
+  * @param importToId The construct id used in the generated config for the TfHumanTaskUi to import
+  * @param importFromId The id of the existing TfHumanTaskUi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfHumanTaskUi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_human_task_ui", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsSagemakerHumanTaskUi extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerHumanTaskUiConfig
+  * @param options TfHumanTaskUiConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerHumanTaskUiConfig) {
+  public constructor(scope: Construct, id: string, config: TfHumanTaskUiConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_human_task_ui',
       terraformGeneratorMetadata: {
@@ -185,11 +185,11 @@ export class AwsSagemakerHumanTaskUi extends cdktn.TerraformResource {
   }
 
   // ui_template - computed: false, optional: false, required: true
-  private _uiTemplate = new AwsSagemakerHumanTaskUi.UiTemplatePropertyOutputReference(this, "ui_template");
+  private _uiTemplate = new TfHumanTaskUi.UiTemplatePropertyOutputReference(this, "ui_template");
   public get uiTemplate() {
     return this._uiTemplate;
   }
-  public putUiTemplate(value: AwsSagemakerHumanTaskUi.UiTemplateProperty) {
+  public putUiTemplate(value: TfHumanTaskUi.UiTemplateProperty) {
     this._uiTemplate.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -208,7 +208,7 @@ export class AwsSagemakerHumanTaskUi extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      ui_template: awsSagemakerHumanTaskUiUiTemplatePropertyToTerraform(this._uiTemplate.internalValue),
+      ui_template: tfHumanTaskUiUiTemplatePropertyToTerraform(this._uiTemplate.internalValue),
     };
   }
 
@@ -245,10 +245,10 @@ export class AwsSagemakerHumanTaskUi extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       ui_template: {
-        value: awsSagemakerHumanTaskUiUiTemplatePropertyToHclTerraform(this._uiTemplate.internalValue),
+        value: tfHumanTaskUiUiTemplatePropertyToHclTerraform(this._uiTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerHumanTaskUi.UiTemplatePropertyList",
+        storageClassType: "TfHumanTaskUi.UiTemplatePropertyList",
       },
     };
 
@@ -257,7 +257,7 @@ export class AwsSagemakerHumanTaskUi extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerHumanTaskUiUiTemplatePropertyToTerraform(struct?: AwsSagemakerHumanTaskUi.UiTemplatePropertyOutputReference | AwsSagemakerHumanTaskUi.UiTemplateProperty): any {
+export function tfHumanTaskUiUiTemplatePropertyToTerraform(struct?: TfHumanTaskUi.UiTemplatePropertyOutputReference | TfHumanTaskUi.UiTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function awsSagemakerHumanTaskUiUiTemplatePropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSagemakerHumanTaskUiUiTemplatePropertyToHclTerraform(struct?: AwsSagemakerHumanTaskUi.UiTemplatePropertyOutputReference | AwsSagemakerHumanTaskUi.UiTemplateProperty): any {
+export function tfHumanTaskUiUiTemplatePropertyToHclTerraform(struct?: TfHumanTaskUi.UiTemplatePropertyOutputReference | TfHumanTaskUi.UiTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,10 +287,10 @@ export function awsSagemakerHumanTaskUiUiTemplatePropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsSagemakerHumanTaskUi {
+export namespace TfHumanTaskUi {
 export interface UiTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#content AwsSagemakerHumanTaskUi#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_human_task_ui#content TfHumanTaskUi#content}
   */
   readonly content?: string;
 }

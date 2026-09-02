@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDetectiveOrganizationAdminAccountConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationAdminAccountConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#account_id AwsDetectiveOrganizationAdminAccount#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#account_id TfOrganizationAdminAccount#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#id AwsDetectiveOrganizationAdminAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#id TfOrganizationAdminAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface AwsDetectiveOrganizationAdminAccountConfig extends cdktn.Terraf
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#region AwsDetectiveOrganizationAdminAccount#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#region TfOrganizationAdminAccount#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface AwsDetectiveOrganizationAdminAccountConfig extends cdktn.Terraf
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account aws_detective_organization_admin_account}
 */
-export class AwsDetectiveOrganizationAdminAccount extends cdktn.TerraformResource {
+export class TfOrganizationAdminAccount extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsDetectiveOrganizationAdminAccount extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDetectiveOrganizationAdminAccount resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationAdminAccount resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDetectiveOrganizationAdminAccount to import
-  * @param importFromId The id of the existing AwsDetectiveOrganizationAdminAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDetectiveOrganizationAdminAccount to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationAdminAccount to import
+  * @param importFromId The id of the existing TfOrganizationAdminAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_organization_admin_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationAdminAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_detective_organization_admin_account", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsDetectiveOrganizationAdminAccount extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDetectiveOrganizationAdminAccountConfig
+  * @param options TfOrganizationAdminAccountConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDetectiveOrganizationAdminAccountConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationAdminAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_detective_organization_admin_account',
       terraformGeneratorMetadata: {

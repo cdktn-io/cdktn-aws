@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKmsReplicaExternalKeyConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicaExternalKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#bypass_policy_lockout_safety_check AwsKmsReplicaExternalKey#bypass_policy_lockout_safety_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#bypass_policy_lockout_safety_check TfReplicaExternalKey#bypass_policy_lockout_safety_check}
   */
   readonly bypassPolicyLockoutSafetyCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#deletion_window_in_days AwsKmsReplicaExternalKey#deletion_window_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#deletion_window_in_days TfReplicaExternalKey#deletion_window_in_days}
   */
   readonly deletionWindowInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#description AwsKmsReplicaExternalKey#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#description TfReplicaExternalKey#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#enabled AwsKmsReplicaExternalKey#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#enabled TfReplicaExternalKey#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#id AwsKmsReplicaExternalKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#id TfReplicaExternalKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#key_material_base64 AwsKmsReplicaExternalKey#key_material_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#key_material_base64 TfReplicaExternalKey#key_material_base64}
   */
   readonly keyMaterialBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#policy AwsKmsReplicaExternalKey#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#policy TfReplicaExternalKey#policy}
   */
   readonly policy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#primary_key_arn AwsKmsReplicaExternalKey#primary_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#primary_key_arn TfReplicaExternalKey#primary_key_arn}
   */
   readonly primaryKeyArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#region AwsKmsReplicaExternalKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#region TfReplicaExternalKey#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#tags AwsKmsReplicaExternalKey#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#tags TfReplicaExternalKey#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#tags_all AwsKmsReplicaExternalKey#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#tags_all TfReplicaExternalKey#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#valid_to AwsKmsReplicaExternalKey#valid_to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#valid_to TfReplicaExternalKey#valid_to}
   */
   readonly validTo?: string;
 }
@@ -64,7 +64,7 @@ export interface AwsKmsReplicaExternalKeyConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key aws_kms_replica_external_key}
 */
-export class AwsKmsReplicaExternalKey extends cdktn.TerraformResource {
+export class TfReplicaExternalKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsKmsReplicaExternalKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKmsReplicaExternalKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicaExternalKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKmsReplicaExternalKey to import
-  * @param importFromId The id of the existing AwsKmsReplicaExternalKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKmsReplicaExternalKey to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicaExternalKey to import
+  * @param importFromId The id of the existing TfReplicaExternalKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_external_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicaExternalKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_replica_external_key", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsKmsReplicaExternalKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKmsReplicaExternalKeyConfig
+  * @param options TfReplicaExternalKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsKmsReplicaExternalKeyConfig) {
+  public constructor(scope: Construct, id: string, config: TfReplicaExternalKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_replica_external_key',
       terraformGeneratorMetadata: {

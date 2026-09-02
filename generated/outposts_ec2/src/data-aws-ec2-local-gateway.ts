@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEc2LocalGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLocalGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#id DataAwsEc2LocalGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#id DataTfLocalGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,35 +16,35 @@ export interface DataAwsEc2LocalGatewayConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#region DataAwsEc2LocalGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#region DataTfLocalGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#state DataAwsEc2LocalGateway#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#state DataTfLocalGateway#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#tags DataAwsEc2LocalGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#tags DataTfLocalGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#filter DataAwsEc2LocalGateway#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#filter DataTfLocalGateway#filter}
   */
-  readonly filter?: DataAwsEc2LocalGateway.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfLocalGateway.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#timeouts DataAwsEc2LocalGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#timeouts DataTfLocalGateway#timeouts}
   */
-  readonly timeouts?: DataAwsEc2LocalGateway.TimeoutsProperty;
+  readonly timeouts?: DataTfLocalGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway aws_ec2_local_gateway}
 */
-export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
+export class DataTfLocalGateway extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEc2LocalGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLocalGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEc2LocalGateway to import
-  * @param importFromId The id of the existing DataAwsEc2LocalGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEc2LocalGateway to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLocalGateway to import
+  * @param importFromId The id of the existing DataTfLocalGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLocalGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_local_gateway", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEc2LocalGatewayConfig = {}
+  * @param options DataTfLocalGatewayConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEc2LocalGatewayConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfLocalGatewayConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_local_gateway',
       terraformGeneratorMetadata: {
@@ -179,11 +179,11 @@ export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsEc2LocalGateway.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfLocalGateway.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsEc2LocalGateway.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfLocalGateway.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -195,11 +195,11 @@ export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsEc2LocalGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfLocalGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsEc2LocalGateway.TimeoutsProperty) {
+  public putTimeouts(value: DataTfLocalGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -220,8 +220,8 @@ export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       state: cdktn.stringToTerraform(this._state),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsEc2LocalGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsEc2LocalGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfLocalGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfLocalGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -252,16 +252,16 @@ export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsEc2LocalGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfLocalGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsEc2LocalGateway.FilterPropertyList",
+        storageClassType: "DataTfLocalGateway.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsEc2LocalGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfLocalGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsEc2LocalGateway.TimeoutsProperty",
+        storageClassType: "DataTfLocalGateway.TimeoutsProperty",
       },
     };
 
@@ -270,7 +270,7 @@ export class DataAwsEc2LocalGateway extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsEc2LocalGatewayFilterPropertyToTerraform(struct?: DataAwsEc2LocalGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayFilterPropertyToTerraform(struct?: DataTfLocalGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function dataAwsEc2LocalGatewayFilterPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsEc2LocalGatewayFilterPropertyToHclTerraform(struct?: DataAwsEc2LocalGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayFilterPropertyToHclTerraform(struct?: DataTfLocalGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function dataAwsEc2LocalGatewayFilterPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsEc2LocalGatewayTimeoutsPropertyToTerraform(struct?: DataAwsEc2LocalGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayTimeoutsPropertyToTerraform(struct?: DataTfLocalGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function dataAwsEc2LocalGatewayTimeoutsPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsEc2LocalGatewayTimeoutsPropertyToHclTerraform(struct?: DataAwsEc2LocalGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayTimeoutsPropertyToHclTerraform(struct?: DataTfLocalGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,14 +337,14 @@ export function dataAwsEc2LocalGatewayTimeoutsPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataAwsEc2LocalGateway {
+export namespace DataTfLocalGateway {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#name DataAwsEc2LocalGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#name DataTfLocalGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#values DataAwsEc2LocalGateway#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#values DataTfLocalGateway#values}
   */
   readonly values: string[];
 }
@@ -446,7 +446,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#read DataAwsEc2LocalGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway#read DataTfLocalGateway#read}
   */
   readonly read?: string;
 }

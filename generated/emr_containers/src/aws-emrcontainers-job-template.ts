@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEmrcontainersJobTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface TfJobTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#id AwsEmrcontainersJobTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#id TfJobTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#kms_key_arn AwsEmrcontainersJobTemplate#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#kms_key_arn TfJobTemplate#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#name AwsEmrcontainersJobTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#name TfJobTemplate#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#region AwsEmrcontainersJobTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#region TfJobTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#tags AwsEmrcontainersJobTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#tags TfJobTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#tags_all AwsEmrcontainersJobTemplate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#tags_all TfJobTemplate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * job_template_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#job_template_data AwsEmrcontainersJobTemplate#job_template_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#job_template_data TfJobTemplate#job_template_data}
   */
-  readonly jobTemplateData: AwsEmrcontainersJobTemplate.JobTemplateDataProperty;
+  readonly jobTemplateData: TfJobTemplate.JobTemplateDataProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#timeouts AwsEmrcontainersJobTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#timeouts TfJobTemplate#timeouts}
   */
-  readonly timeouts?: AwsEmrcontainersJobTemplate.TimeoutsProperty;
+  readonly timeouts?: TfJobTemplate.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template aws_emrcontainers_job_template}
 */
-export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
+export class TfJobTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEmrcontainersJobTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfJobTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEmrcontainersJobTemplate to import
-  * @param importFromId The id of the existing AwsEmrcontainersJobTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEmrcontainersJobTemplate to import is found
+  * @param importToId The construct id used in the generated config for the TfJobTemplate to import
+  * @param importFromId The id of the existing TfJobTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfJobTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emrcontainers_job_template", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEmrcontainersJobTemplateConfig
+  * @param options TfJobTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEmrcontainersJobTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: TfJobTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emrcontainers_job_template',
       terraformGeneratorMetadata: {
@@ -213,11 +213,11 @@ export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
   }
 
   // job_template_data - computed: false, optional: false, required: true
-  private _jobTemplateData = new AwsEmrcontainersJobTemplate.JobTemplateDataPropertyOutputReference(this, "job_template_data");
+  private _jobTemplateData = new TfJobTemplate.JobTemplateDataPropertyOutputReference(this, "job_template_data");
   public get jobTemplateData() {
     return this._jobTemplateData;
   }
-  public putJobTemplateData(value: AwsEmrcontainersJobTemplate.JobTemplateDataProperty) {
+  public putJobTemplateData(value: TfJobTemplate.JobTemplateDataProperty) {
     this._jobTemplateData.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -226,11 +226,11 @@ export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEmrcontainersJobTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfJobTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEmrcontainersJobTemplate.TimeoutsProperty) {
+  public putTimeouts(value: TfJobTemplate.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -253,8 +253,8 @@ export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      job_template_data: awsEmrcontainersJobTemplateJobTemplateDataPropertyToTerraform(this._jobTemplateData.internalValue),
-      timeouts: awsEmrcontainersJobTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      job_template_data: tfJobTemplateJobTemplateDataPropertyToTerraform(this._jobTemplateData.internalValue),
+      timeouts: tfJobTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -297,16 +297,16 @@ export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       job_template_data: {
-        value: awsEmrcontainersJobTemplateJobTemplateDataPropertyToHclTerraform(this._jobTemplateData.internalValue),
+        value: tfJobTemplateJobTemplateDataPropertyToHclTerraform(this._jobTemplateData.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrcontainersJobTemplate.JobTemplateDataPropertyList",
+        storageClassType: "TfJobTemplate.JobTemplateDataPropertyList",
       },
       timeouts: {
-        value: awsEmrcontainersJobTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfJobTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEmrcontainersJobTemplate.TimeoutsProperty",
+        storageClassType: "TfJobTemplate.TimeoutsProperty",
       },
     };
 
@@ -315,7 +315,7 @@ export class AwsEmrcontainersJobTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function awsEmrcontainersJobTemplateConfigurationsPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.ConfigurationsProperty | cdktn.IResolvable): any {
+export function tfJobTemplateConfigurationsPropertyToTerraform(struct?: TfJobTemplate.ConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function awsEmrcontainersJobTemplateConfigurationsPropertyToTerraform(str
 }
 
 
-export function awsEmrcontainersJobTemplateConfigurationsPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.ConfigurationsProperty | cdktn.IResolvable): any {
+export function tfJobTemplateConfigurationsPropertyToHclTerraform(struct?: TfJobTemplate.ConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function awsEmrcontainersJobTemplateConfigurationsPropertyToHclTerraform(
 }
 
 
-export function awsEmrcontainersJobTemplateApplicationConfigurationPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.ApplicationConfigurationProperty | cdktn.IResolvable): any {
+export function tfJobTemplateApplicationConfigurationPropertyToTerraform(struct?: TfJobTemplate.ApplicationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,12 +360,12 @@ export function awsEmrcontainersJobTemplateApplicationConfigurationPropertyToTer
   return {
     classification: cdktn.stringToTerraform(struct!.classification),
     properties: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.properties),
-    configurations: cdktn.listMapper(awsEmrcontainersJobTemplateConfigurationsPropertyToTerraform, true)(struct!.configurations),
+    configurations: cdktn.listMapper(tfJobTemplateConfigurationsPropertyToTerraform, true)(struct!.configurations),
   }
 }
 
 
-export function awsEmrcontainersJobTemplateApplicationConfigurationPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.ApplicationConfigurationProperty | cdktn.IResolvable): any {
+export function tfJobTemplateApplicationConfigurationPropertyToHclTerraform(struct?: TfJobTemplate.ApplicationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function awsEmrcontainersJobTemplateApplicationConfigurationPropertyToHcl
       storageClassType: "stringMap",
     },
     configurations: {
-      value: cdktn.listMapperHcl(awsEmrcontainersJobTemplateConfigurationsPropertyToHclTerraform, true)(struct!.configurations),
+      value: cdktn.listMapperHcl(tfJobTemplateConfigurationsPropertyToHclTerraform, true)(struct!.configurations),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationsPropertyList",
@@ -396,7 +396,7 @@ export function awsEmrcontainersJobTemplateApplicationConfigurationPropertyToHcl
 }
 
 
-export function awsEmrcontainersJobTemplateCloudWatchMonitoringConfigurationPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.CloudWatchMonitoringConfigurationPropertyOutputReference | AwsEmrcontainersJobTemplate.CloudWatchMonitoringConfigurationProperty): any {
+export function tfJobTemplateCloudWatchMonitoringConfigurationPropertyToTerraform(struct?: TfJobTemplate.CloudWatchMonitoringConfigurationPropertyOutputReference | TfJobTemplate.CloudWatchMonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsEmrcontainersJobTemplateCloudWatchMonitoringConfigurationProp
 }
 
 
-export function awsEmrcontainersJobTemplateCloudWatchMonitoringConfigurationPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.CloudWatchMonitoringConfigurationPropertyOutputReference | AwsEmrcontainersJobTemplate.CloudWatchMonitoringConfigurationProperty): any {
+export function tfJobTemplateCloudWatchMonitoringConfigurationPropertyToHclTerraform(struct?: TfJobTemplate.CloudWatchMonitoringConfigurationPropertyOutputReference | TfJobTemplate.CloudWatchMonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function awsEmrcontainersJobTemplateCloudWatchMonitoringConfigurationProp
 }
 
 
-export function awsEmrcontainersJobTemplateS3MonitoringConfigurationPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.S3MonitoringConfigurationPropertyOutputReference | AwsEmrcontainersJobTemplate.S3MonitoringConfigurationProperty): any {
+export function tfJobTemplateS3MonitoringConfigurationPropertyToTerraform(struct?: TfJobTemplate.S3MonitoringConfigurationPropertyOutputReference | TfJobTemplate.S3MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function awsEmrcontainersJobTemplateS3MonitoringConfigurationPropertyToTe
 }
 
 
-export function awsEmrcontainersJobTemplateS3MonitoringConfigurationPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.S3MonitoringConfigurationPropertyOutputReference | AwsEmrcontainersJobTemplate.S3MonitoringConfigurationProperty): any {
+export function tfJobTemplateS3MonitoringConfigurationPropertyToHclTerraform(struct?: TfJobTemplate.S3MonitoringConfigurationPropertyOutputReference | TfJobTemplate.S3MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,20 +463,20 @@ export function awsEmrcontainersJobTemplateS3MonitoringConfigurationPropertyToHc
 }
 
 
-export function awsEmrcontainersJobTemplateMonitoringConfigurationPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.MonitoringConfigurationPropertyOutputReference | AwsEmrcontainersJobTemplate.MonitoringConfigurationProperty): any {
+export function tfJobTemplateMonitoringConfigurationPropertyToTerraform(struct?: TfJobTemplate.MonitoringConfigurationPropertyOutputReference | TfJobTemplate.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     persistent_app_ui: cdktn.stringToTerraform(struct!.persistentAppUi),
-    cloud_watch_monitoring_configuration: awsEmrcontainersJobTemplateCloudWatchMonitoringConfigurationPropertyToTerraform(struct!.cloudWatchMonitoringConfiguration),
-    s3_monitoring_configuration: awsEmrcontainersJobTemplateS3MonitoringConfigurationPropertyToTerraform(struct!.s3MonitoringConfiguration),
+    cloud_watch_monitoring_configuration: tfJobTemplateCloudWatchMonitoringConfigurationPropertyToTerraform(struct!.cloudWatchMonitoringConfiguration),
+    s3_monitoring_configuration: tfJobTemplateS3MonitoringConfigurationPropertyToTerraform(struct!.s3MonitoringConfiguration),
   }
 }
 
 
-export function awsEmrcontainersJobTemplateMonitoringConfigurationPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.MonitoringConfigurationPropertyOutputReference | AwsEmrcontainersJobTemplate.MonitoringConfigurationProperty): any {
+export function tfJobTemplateMonitoringConfigurationPropertyToHclTerraform(struct?: TfJobTemplate.MonitoringConfigurationPropertyOutputReference | TfJobTemplate.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,13 +489,13 @@ export function awsEmrcontainersJobTemplateMonitoringConfigurationPropertyToHclT
       storageClassType: "string",
     },
     cloud_watch_monitoring_configuration: {
-      value: awsEmrcontainersJobTemplateCloudWatchMonitoringConfigurationPropertyToHclTerraform(struct!.cloudWatchMonitoringConfiguration),
+      value: tfJobTemplateCloudWatchMonitoringConfigurationPropertyToHclTerraform(struct!.cloudWatchMonitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CloudWatchMonitoringConfigurationPropertyList",
     },
     s3_monitoring_configuration: {
-      value: awsEmrcontainersJobTemplateS3MonitoringConfigurationPropertyToHclTerraform(struct!.s3MonitoringConfiguration),
+      value: tfJobTemplateS3MonitoringConfigurationPropertyToHclTerraform(struct!.s3MonitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "S3MonitoringConfigurationPropertyList",
@@ -507,32 +507,32 @@ export function awsEmrcontainersJobTemplateMonitoringConfigurationPropertyToHclT
 }
 
 
-export function awsEmrcontainersJobTemplateConfigurationOverridesPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.ConfigurationOverridesPropertyOutputReference | AwsEmrcontainersJobTemplate.ConfigurationOverridesProperty): any {
+export function tfJobTemplateConfigurationOverridesPropertyToTerraform(struct?: TfJobTemplate.ConfigurationOverridesPropertyOutputReference | TfJobTemplate.ConfigurationOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    application_configuration: cdktn.listMapper(awsEmrcontainersJobTemplateApplicationConfigurationPropertyToTerraform, true)(struct!.applicationConfiguration),
-    monitoring_configuration: awsEmrcontainersJobTemplateMonitoringConfigurationPropertyToTerraform(struct!.monitoringConfiguration),
+    application_configuration: cdktn.listMapper(tfJobTemplateApplicationConfigurationPropertyToTerraform, true)(struct!.applicationConfiguration),
+    monitoring_configuration: tfJobTemplateMonitoringConfigurationPropertyToTerraform(struct!.monitoringConfiguration),
   }
 }
 
 
-export function awsEmrcontainersJobTemplateConfigurationOverridesPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.ConfigurationOverridesPropertyOutputReference | AwsEmrcontainersJobTemplate.ConfigurationOverridesProperty): any {
+export function tfJobTemplateConfigurationOverridesPropertyToHclTerraform(struct?: TfJobTemplate.ConfigurationOverridesPropertyOutputReference | TfJobTemplate.ConfigurationOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     application_configuration: {
-      value: cdktn.listMapperHcl(awsEmrcontainersJobTemplateApplicationConfigurationPropertyToHclTerraform, true)(struct!.applicationConfiguration),
+      value: cdktn.listMapperHcl(tfJobTemplateApplicationConfigurationPropertyToHclTerraform, true)(struct!.applicationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationPropertyList",
     },
     monitoring_configuration: {
-      value: awsEmrcontainersJobTemplateMonitoringConfigurationPropertyToHclTerraform(struct!.monitoringConfiguration),
+      value: tfJobTemplateMonitoringConfigurationPropertyToHclTerraform(struct!.monitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringConfigurationPropertyList",
@@ -544,7 +544,7 @@ export function awsEmrcontainersJobTemplateConfigurationOverridesPropertyToHclTe
 }
 
 
-export function awsEmrcontainersJobTemplateSparkSqlJobDriverPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.SparkSqlJobDriverPropertyOutputReference | AwsEmrcontainersJobTemplate.SparkSqlJobDriverProperty): any {
+export function tfJobTemplateSparkSqlJobDriverPropertyToTerraform(struct?: TfJobTemplate.SparkSqlJobDriverPropertyOutputReference | TfJobTemplate.SparkSqlJobDriverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function awsEmrcontainersJobTemplateSparkSqlJobDriverPropertyToTerraform(
 }
 
 
-export function awsEmrcontainersJobTemplateSparkSqlJobDriverPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.SparkSqlJobDriverPropertyOutputReference | AwsEmrcontainersJobTemplate.SparkSqlJobDriverProperty): any {
+export function tfJobTemplateSparkSqlJobDriverPropertyToHclTerraform(struct?: TfJobTemplate.SparkSqlJobDriverPropertyOutputReference | TfJobTemplate.SparkSqlJobDriverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -581,7 +581,7 @@ export function awsEmrcontainersJobTemplateSparkSqlJobDriverPropertyToHclTerrafo
 }
 
 
-export function awsEmrcontainersJobTemplateSparkSubmitJobDriverPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.SparkSubmitJobDriverPropertyOutputReference | AwsEmrcontainersJobTemplate.SparkSubmitJobDriverProperty): any {
+export function tfJobTemplateSparkSubmitJobDriverPropertyToTerraform(struct?: TfJobTemplate.SparkSubmitJobDriverPropertyOutputReference | TfJobTemplate.SparkSubmitJobDriverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,7 +594,7 @@ export function awsEmrcontainersJobTemplateSparkSubmitJobDriverPropertyToTerrafo
 }
 
 
-export function awsEmrcontainersJobTemplateSparkSubmitJobDriverPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.SparkSubmitJobDriverPropertyOutputReference | AwsEmrcontainersJobTemplate.SparkSubmitJobDriverProperty): any {
+export function tfJobTemplateSparkSubmitJobDriverPropertyToHclTerraform(struct?: TfJobTemplate.SparkSubmitJobDriverPropertyOutputReference | TfJobTemplate.SparkSubmitJobDriverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,32 +625,32 @@ export function awsEmrcontainersJobTemplateSparkSubmitJobDriverPropertyToHclTerr
 }
 
 
-export function awsEmrcontainersJobTemplateJobDriverPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.JobDriverPropertyOutputReference | AwsEmrcontainersJobTemplate.JobDriverProperty): any {
+export function tfJobTemplateJobDriverPropertyToTerraform(struct?: TfJobTemplate.JobDriverPropertyOutputReference | TfJobTemplate.JobDriverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    spark_sql_job_driver: awsEmrcontainersJobTemplateSparkSqlJobDriverPropertyToTerraform(struct!.sparkSqlJobDriver),
-    spark_submit_job_driver: awsEmrcontainersJobTemplateSparkSubmitJobDriverPropertyToTerraform(struct!.sparkSubmitJobDriver),
+    spark_sql_job_driver: tfJobTemplateSparkSqlJobDriverPropertyToTerraform(struct!.sparkSqlJobDriver),
+    spark_submit_job_driver: tfJobTemplateSparkSubmitJobDriverPropertyToTerraform(struct!.sparkSubmitJobDriver),
   }
 }
 
 
-export function awsEmrcontainersJobTemplateJobDriverPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.JobDriverPropertyOutputReference | AwsEmrcontainersJobTemplate.JobDriverProperty): any {
+export function tfJobTemplateJobDriverPropertyToHclTerraform(struct?: TfJobTemplate.JobDriverPropertyOutputReference | TfJobTemplate.JobDriverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     spark_sql_job_driver: {
-      value: awsEmrcontainersJobTemplateSparkSqlJobDriverPropertyToHclTerraform(struct!.sparkSqlJobDriver),
+      value: tfJobTemplateSparkSqlJobDriverPropertyToHclTerraform(struct!.sparkSqlJobDriver),
       isBlock: true,
       type: "list",
       storageClassType: "SparkSqlJobDriverPropertyList",
     },
     spark_submit_job_driver: {
-      value: awsEmrcontainersJobTemplateSparkSubmitJobDriverPropertyToHclTerraform(struct!.sparkSubmitJobDriver),
+      value: tfJobTemplateSparkSubmitJobDriverPropertyToHclTerraform(struct!.sparkSubmitJobDriver),
       isBlock: true,
       type: "list",
       storageClassType: "SparkSubmitJobDriverPropertyList",
@@ -662,7 +662,7 @@ export function awsEmrcontainersJobTemplateJobDriverPropertyToHclTerraform(struc
 }
 
 
-export function awsEmrcontainersJobTemplateJobTemplateDataPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.JobTemplateDataPropertyOutputReference | AwsEmrcontainersJobTemplate.JobTemplateDataProperty): any {
+export function tfJobTemplateJobTemplateDataPropertyToTerraform(struct?: TfJobTemplate.JobTemplateDataPropertyOutputReference | TfJobTemplate.JobTemplateDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -671,13 +671,13 @@ export function awsEmrcontainersJobTemplateJobTemplateDataPropertyToTerraform(st
     execution_role_arn: cdktn.stringToTerraform(struct!.executionRoleArn),
     job_tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.jobTags),
     release_label: cdktn.stringToTerraform(struct!.releaseLabel),
-    configuration_overrides: awsEmrcontainersJobTemplateConfigurationOverridesPropertyToTerraform(struct!.configurationOverrides),
-    job_driver: awsEmrcontainersJobTemplateJobDriverPropertyToTerraform(struct!.jobDriver),
+    configuration_overrides: tfJobTemplateConfigurationOverridesPropertyToTerraform(struct!.configurationOverrides),
+    job_driver: tfJobTemplateJobDriverPropertyToTerraform(struct!.jobDriver),
   }
 }
 
 
-export function awsEmrcontainersJobTemplateJobTemplateDataPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.JobTemplateDataPropertyOutputReference | AwsEmrcontainersJobTemplate.JobTemplateDataProperty): any {
+export function tfJobTemplateJobTemplateDataPropertyToHclTerraform(struct?: TfJobTemplate.JobTemplateDataPropertyOutputReference | TfJobTemplate.JobTemplateDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,13 +702,13 @@ export function awsEmrcontainersJobTemplateJobTemplateDataPropertyToHclTerraform
       storageClassType: "string",
     },
     configuration_overrides: {
-      value: awsEmrcontainersJobTemplateConfigurationOverridesPropertyToHclTerraform(struct!.configurationOverrides),
+      value: tfJobTemplateConfigurationOverridesPropertyToHclTerraform(struct!.configurationOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationOverridesPropertyList",
     },
     job_driver: {
-      value: awsEmrcontainersJobTemplateJobDriverPropertyToHclTerraform(struct!.jobDriver),
+      value: tfJobTemplateJobDriverPropertyToHclTerraform(struct!.jobDriver),
       isBlock: true,
       type: "list",
       storageClassType: "JobDriverPropertyList",
@@ -720,7 +720,7 @@ export function awsEmrcontainersJobTemplateJobTemplateDataPropertyToHclTerraform
 }
 
 
-export function awsEmrcontainersJobTemplateTimeoutsPropertyToTerraform(struct?: AwsEmrcontainersJobTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfJobTemplateTimeoutsPropertyToTerraform(struct?: TfJobTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function awsEmrcontainersJobTemplateTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function awsEmrcontainersJobTemplateTimeoutsPropertyToHclTerraform(struct?: AwsEmrcontainersJobTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfJobTemplateTimeoutsPropertyToHclTerraform(struct?: TfJobTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,14 +750,14 @@ export function awsEmrcontainersJobTemplateTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsEmrcontainersJobTemplate {
+export namespace TfJobTemplate {
 export interface ConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#classification AwsEmrcontainersJobTemplate#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#classification TfJobTemplate#classification}
   */
   readonly classification?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#properties AwsEmrcontainersJobTemplate#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#properties TfJobTemplate#properties}
   */
   readonly properties?: { [key: string]: string };
 }
@@ -865,17 +865,17 @@ export class ConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface ApplicationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#classification AwsEmrcontainersJobTemplate#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#classification TfJobTemplate#classification}
   */
   readonly classification: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#properties AwsEmrcontainersJobTemplate#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#properties TfJobTemplate#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#configurations AwsEmrcontainersJobTemplate#configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#configurations TfJobTemplate#configurations}
   */
   readonly configurations?: ConfigurationsProperty[] | cdktn.IResolvable;
 }
@@ -1002,11 +1002,11 @@ export class ApplicationConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface CloudWatchMonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#log_group_name AwsEmrcontainersJobTemplate#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#log_group_name TfJobTemplate#log_group_name}
   */
   readonly logGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#log_stream_name_prefix AwsEmrcontainersJobTemplate#log_stream_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#log_stream_name_prefix TfJobTemplate#log_stream_name_prefix}
   */
   readonly logStreamNamePrefix?: string;
 }
@@ -1079,7 +1079,7 @@ export class CloudWatchMonitoringConfigurationPropertyOutputReference extends cd
 }
 export interface S3MonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#log_uri AwsEmrcontainersJobTemplate#log_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#log_uri TfJobTemplate#log_uri}
   */
   readonly logUri: string;
 }
@@ -1130,19 +1130,19 @@ export class S3MonitoringConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface MonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#persistent_app_ui AwsEmrcontainersJobTemplate#persistent_app_ui}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#persistent_app_ui TfJobTemplate#persistent_app_ui}
   */
   readonly persistentAppUi?: string;
   /**
   * cloud_watch_monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#cloud_watch_monitoring_configuration AwsEmrcontainersJobTemplate#cloud_watch_monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#cloud_watch_monitoring_configuration TfJobTemplate#cloud_watch_monitoring_configuration}
   */
   readonly cloudWatchMonitoringConfiguration?: CloudWatchMonitoringConfigurationProperty;
   /**
   * s3_monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#s3_monitoring_configuration AwsEmrcontainersJobTemplate#s3_monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#s3_monitoring_configuration TfJobTemplate#s3_monitoring_configuration}
   */
   readonly s3MonitoringConfiguration?: S3MonitoringConfigurationProperty;
 }
@@ -1242,13 +1242,13 @@ export interface ConfigurationOverridesProperty {
   /**
   * application_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#application_configuration AwsEmrcontainersJobTemplate#application_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#application_configuration TfJobTemplate#application_configuration}
   */
   readonly applicationConfiguration?: ApplicationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#monitoring_configuration AwsEmrcontainersJobTemplate#monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#monitoring_configuration TfJobTemplate#monitoring_configuration}
   */
   readonly monitoringConfiguration?: MonitoringConfigurationProperty;
 }
@@ -1324,11 +1324,11 @@ export class ConfigurationOverridesPropertyOutputReference extends cdktn.Complex
 }
 export interface SparkSqlJobDriverProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#entry_point AwsEmrcontainersJobTemplate#entry_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#entry_point TfJobTemplate#entry_point}
   */
   readonly entryPoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_sql_parameters AwsEmrcontainersJobTemplate#spark_sql_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_sql_parameters TfJobTemplate#spark_sql_parameters}
   */
   readonly sparkSqlParameters?: string;
 }
@@ -1404,15 +1404,15 @@ export class SparkSqlJobDriverPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface SparkSubmitJobDriverProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#entry_point AwsEmrcontainersJobTemplate#entry_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#entry_point TfJobTemplate#entry_point}
   */
   readonly entryPoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#entry_point_arguments AwsEmrcontainersJobTemplate#entry_point_arguments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#entry_point_arguments TfJobTemplate#entry_point_arguments}
   */
   readonly entryPointArguments?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_submit_parameters AwsEmrcontainersJobTemplate#spark_submit_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_submit_parameters TfJobTemplate#spark_submit_parameters}
   */
   readonly sparkSubmitParameters?: string;
 }
@@ -1509,13 +1509,13 @@ export interface JobDriverProperty {
   /**
   * spark_sql_job_driver block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_sql_job_driver AwsEmrcontainersJobTemplate#spark_sql_job_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_sql_job_driver TfJobTemplate#spark_sql_job_driver}
   */
   readonly sparkSqlJobDriver?: SparkSqlJobDriverProperty;
   /**
   * spark_submit_job_driver block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_submit_job_driver AwsEmrcontainersJobTemplate#spark_submit_job_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#spark_submit_job_driver TfJobTemplate#spark_submit_job_driver}
   */
   readonly sparkSubmitJobDriver?: SparkSubmitJobDriverProperty;
 }
@@ -1591,27 +1591,27 @@ export class JobDriverPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface JobTemplateDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#execution_role_arn AwsEmrcontainersJobTemplate#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#execution_role_arn TfJobTemplate#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#job_tags AwsEmrcontainersJobTemplate#job_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#job_tags TfJobTemplate#job_tags}
   */
   readonly jobTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#release_label AwsEmrcontainersJobTemplate#release_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#release_label TfJobTemplate#release_label}
   */
   readonly releaseLabel: string;
   /**
   * configuration_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#configuration_overrides AwsEmrcontainersJobTemplate#configuration_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#configuration_overrides TfJobTemplate#configuration_overrides}
   */
   readonly configurationOverrides?: ConfigurationOverridesProperty;
   /**
   * job_driver block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#job_driver AwsEmrcontainersJobTemplate#job_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#job_driver TfJobTemplate#job_driver}
   */
   readonly jobDriver: JobDriverProperty;
 }
@@ -1744,7 +1744,7 @@ export class JobTemplateDataPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#delete AwsEmrcontainersJobTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_job_template#delete TfJobTemplate#delete}
   */
   readonly delete?: string;
 }

@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2DefaultCreditSpecificationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDefaultCreditSpecificationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#cpu_credits AwsEc2DefaultCreditSpecification#cpu_credits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#cpu_credits TfDefaultCreditSpecification#cpu_credits}
   */
   readonly cpuCredits: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#instance_family AwsEc2DefaultCreditSpecification#instance_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#instance_family TfDefaultCreditSpecification#instance_family}
   */
   readonly instanceFamily: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#region AwsEc2DefaultCreditSpecification#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#region TfDefaultCreditSpecification#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#timeouts AwsEc2DefaultCreditSpecification#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#timeouts TfDefaultCreditSpecification#timeouts}
   */
-  readonly timeouts?: AwsEc2DefaultCreditSpecification.TimeoutsProperty;
+  readonly timeouts?: TfDefaultCreditSpecification.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification aws_ec2_default_credit_specification}
 */
-export class AwsEc2DefaultCreditSpecification extends cdktn.TerraformResource {
+export class TfDefaultCreditSpecification extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsEc2DefaultCreditSpecification extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2DefaultCreditSpecification resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDefaultCreditSpecification resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2DefaultCreditSpecification to import
-  * @param importFromId The id of the existing AwsEc2DefaultCreditSpecification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2DefaultCreditSpecification to import is found
+  * @param importToId The construct id used in the generated config for the TfDefaultCreditSpecification to import
+  * @param importFromId The id of the existing TfDefaultCreditSpecification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDefaultCreditSpecification to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_default_credit_specification", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsEc2DefaultCreditSpecification extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2DefaultCreditSpecificationConfig
+  * @param options TfDefaultCreditSpecificationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2DefaultCreditSpecificationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDefaultCreditSpecificationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_default_credit_specification',
       terraformGeneratorMetadata: {
@@ -132,11 +132,11 @@ export class AwsEc2DefaultCreditSpecification extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEc2DefaultCreditSpecification.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDefaultCreditSpecification.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEc2DefaultCreditSpecification.TimeoutsProperty) {
+  public putTimeouts(value: TfDefaultCreditSpecification.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -156,7 +156,7 @@ export class AwsEc2DefaultCreditSpecification extends cdktn.TerraformResource {
       cpu_credits: cdktn.stringToTerraform(this._cpuCredits),
       instance_family: cdktn.stringToTerraform(this._instanceFamily),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsEc2DefaultCreditSpecificationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDefaultCreditSpecificationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -181,10 +181,10 @@ export class AwsEc2DefaultCreditSpecification extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsEc2DefaultCreditSpecificationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDefaultCreditSpecificationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEc2DefaultCreditSpecification.TimeoutsProperty",
+        storageClassType: "TfDefaultCreditSpecification.TimeoutsProperty",
       },
     };
 
@@ -193,7 +193,7 @@ export class AwsEc2DefaultCreditSpecification extends cdktn.TerraformResource {
   }
 }
 
-export function awsEc2DefaultCreditSpecificationTimeoutsPropertyToTerraform(struct?: AwsEc2DefaultCreditSpecification.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDefaultCreditSpecificationTimeoutsPropertyToTerraform(struct?: TfDefaultCreditSpecification.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function awsEc2DefaultCreditSpecificationTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsEc2DefaultCreditSpecificationTimeoutsPropertyToHclTerraform(struct?: AwsEc2DefaultCreditSpecification.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDefaultCreditSpecificationTimeoutsPropertyToHclTerraform(struct?: TfDefaultCreditSpecification.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,18 +230,18 @@ export function awsEc2DefaultCreditSpecificationTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsEc2DefaultCreditSpecification {
+export namespace TfDefaultCreditSpecification {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#create AwsEc2DefaultCreditSpecification#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#create TfDefaultCreditSpecification#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#update AwsEc2DefaultCreditSpecification#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_default_credit_specification#update TfDefaultCreditSpecification#update}
   */
   readonly update?: string;
 }

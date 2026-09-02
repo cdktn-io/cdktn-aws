@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesv2TenantConfig extends cdktn.TerraformMetaArguments {
+export interface TfTenantConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#region AwsSesv2Tenant#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#region TfTenant#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#tags AwsSesv2Tenant#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#tags TfTenant#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#tenant_name AwsSesv2Tenant#tenant_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#tenant_name TfTenant#tenant_name}
   */
   readonly tenantName: string;
 }
@@ -25,7 +25,7 @@ export interface AwsSesv2TenantConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant aws_sesv2_tenant}
 */
-export class AwsSesv2Tenant extends cdktn.TerraformResource {
+export class TfTenant extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsSesv2Tenant extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesv2Tenant resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTenant resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesv2Tenant to import
-  * @param importFromId The id of the existing AwsSesv2Tenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesv2Tenant to import is found
+  * @param importToId The construct id used in the generated config for the TfTenant to import
+  * @param importFromId The id of the existing TfTenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_tenant#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTenant to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_tenant", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsSesv2Tenant extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesv2TenantConfig
+  * @param options TfTenantConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesv2TenantConfig) {
+  public constructor(scope: Construct, id: string, config: TfTenantConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_tenant',
       terraformGeneratorMetadata: {

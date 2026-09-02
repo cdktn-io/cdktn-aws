@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafregionalWebAclAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfWebAclAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#id AwsWafregionalWebAclAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#id TfWebAclAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,29 +16,29 @@ export interface AwsWafregionalWebAclAssociationConfig extends cdktn.TerraformMe
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#region AwsWafregionalWebAclAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#region TfWebAclAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#resource_arn AwsWafregionalWebAclAssociation#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#resource_arn TfWebAclAssociation#resource_arn}
   */
   readonly resourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#web_acl_id AwsWafregionalWebAclAssociation#web_acl_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#web_acl_id TfWebAclAssociation#web_acl_id}
   */
   readonly webAclId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#timeouts AwsWafregionalWebAclAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#timeouts TfWebAclAssociation#timeouts}
   */
-  readonly timeouts?: AwsWafregionalWebAclAssociation.TimeoutsProperty;
+  readonly timeouts?: TfWebAclAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association aws_wafregional_web_acl_association}
 */
-export class AwsWafregionalWebAclAssociation extends cdktn.TerraformResource {
+export class TfWebAclAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsWafregionalWebAclAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafregionalWebAclAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWebAclAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafregionalWebAclAssociation to import
-  * @param importFromId The id of the existing AwsWafregionalWebAclAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafregionalWebAclAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfWebAclAssociation to import
+  * @param importFromId The id of the existing TfWebAclAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWebAclAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_web_acl_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsWafregionalWebAclAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafregionalWebAclAssociationConfig
+  * @param options TfWebAclAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafregionalWebAclAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfWebAclAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_web_acl_association',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsWafregionalWebAclAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsWafregionalWebAclAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfWebAclAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsWafregionalWebAclAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfWebAclAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class AwsWafregionalWebAclAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       resource_arn: cdktn.stringToTerraform(this._resourceArn),
       web_acl_id: cdktn.stringToTerraform(this._webAclId),
-      timeouts: awsWafregionalWebAclAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfWebAclAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsWafregionalWebAclAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsWafregionalWebAclAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfWebAclAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsWafregionalWebAclAssociation.TimeoutsProperty",
+        storageClassType: "TfWebAclAssociation.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsWafregionalWebAclAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafregionalWebAclAssociationTimeoutsPropertyToTerraform(struct?: AwsWafregionalWebAclAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfWebAclAssociationTimeoutsPropertyToTerraform(struct?: TfWebAclAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function awsWafregionalWebAclAssociationTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsWafregionalWebAclAssociationTimeoutsPropertyToHclTerraform(struct?: AwsWafregionalWebAclAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfWebAclAssociationTimeoutsPropertyToHclTerraform(struct?: TfWebAclAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,10 +254,10 @@ export function awsWafregionalWebAclAssociationTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsWafregionalWebAclAssociation {
+export namespace TfWebAclAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#create AwsWafregionalWebAclAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl_association#create TfWebAclAssociation#create}
   */
   readonly create?: string;
 }

@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsShieldProtectionHealthCheckAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfProtectionHealthCheckAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#health_check_arn AwsShieldProtectionHealthCheckAssociation#health_check_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#health_check_arn TfProtectionHealthCheckAssociation#health_check_arn}
   */
   readonly healthCheckArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#id AwsShieldProtectionHealthCheckAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#id TfProtectionHealthCheckAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#shield_protection_id AwsShieldProtectionHealthCheckAssociation#shield_protection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#shield_protection_id TfProtectionHealthCheckAssociation#shield_protection_id}
   */
   readonly shieldProtectionId: string;
 }
@@ -26,7 +26,7 @@ export interface AwsShieldProtectionHealthCheckAssociationConfig extends cdktn.T
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association aws_shield_protection_health_check_association}
 */
-export class AwsShieldProtectionHealthCheckAssociation extends cdktn.TerraformResource {
+export class TfProtectionHealthCheckAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class AwsShieldProtectionHealthCheckAssociation extends cdktn.TerraformRe
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsShieldProtectionHealthCheckAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProtectionHealthCheckAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsShieldProtectionHealthCheckAssociation to import
-  * @param importFromId The id of the existing AwsShieldProtectionHealthCheckAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsShieldProtectionHealthCheckAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfProtectionHealthCheckAssociation to import
+  * @param importFromId The id of the existing TfProtectionHealthCheckAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_protection_health_check_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProtectionHealthCheckAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_shield_protection_health_check_association", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class AwsShieldProtectionHealthCheckAssociation extends cdktn.TerraformRe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsShieldProtectionHealthCheckAssociationConfig
+  * @param options TfProtectionHealthCheckAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsShieldProtectionHealthCheckAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfProtectionHealthCheckAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_shield_protection_health_check_association',
       terraformGeneratorMetadata: {

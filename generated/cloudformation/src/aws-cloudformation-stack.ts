@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudformationStackConfig extends cdktn.TerraformMetaArguments {
+export interface TfStackConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#capabilities AwsCloudformationStack#capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#capabilities TfStack#capabilities}
   */
   readonly capabilities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#disable_rollback AwsCloudformationStack#disable_rollback}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#disable_rollback TfStack#disable_rollback}
   */
   readonly disableRollback?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#iam_role_arn AwsCloudformationStack#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#iam_role_arn TfStack#iam_role_arn}
   */
   readonly iamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#id AwsCloudformationStack#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#id TfStack#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#name AwsCloudformationStack#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#name TfStack#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#notification_arns AwsCloudformationStack#notification_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#notification_arns TfStack#notification_arns}
   */
   readonly notificationArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#on_failure AwsCloudformationStack#on_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#on_failure TfStack#on_failure}
   */
   readonly onFailure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#parameters AwsCloudformationStack#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#parameters TfStack#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#policy_body AwsCloudformationStack#policy_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#policy_body TfStack#policy_body}
   */
   readonly policyBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#policy_url AwsCloudformationStack#policy_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#policy_url TfStack#policy_url}
   */
   readonly policyUrl?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#region AwsCloudformationStack#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#region TfStack#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#tags AwsCloudformationStack#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#tags TfStack#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#tags_all AwsCloudformationStack#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#tags_all TfStack#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#template_body AwsCloudformationStack#template_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#template_body TfStack#template_body}
   */
   readonly templateBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#template_url AwsCloudformationStack#template_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#template_url TfStack#template_url}
   */
   readonly templateUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#timeout_in_minutes AwsCloudformationStack#timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#timeout_in_minutes TfStack#timeout_in_minutes}
   */
   readonly timeoutInMinutes?: number;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#timeouts AwsCloudformationStack#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#timeouts TfStack#timeouts}
   */
-  readonly timeouts?: AwsCloudformationStack.TimeoutsProperty;
+  readonly timeouts?: TfStack.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack aws_cloudformation_stack}
 */
-export class AwsCloudformationStack extends cdktn.TerraformResource {
+export class TfStack extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class AwsCloudformationStack extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudformationStack resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfStack resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudformationStack to import
-  * @param importFromId The id of the existing AwsCloudformationStack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudformationStack to import is found
+  * @param importToId The construct id used in the generated config for the TfStack to import
+  * @param importFromId The id of the existing TfStack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfStack to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudformation_stack", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class AwsCloudformationStack extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudformationStackConfig
+  * @param options TfStackConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudformationStackConfig) {
+  public constructor(scope: Construct, id: string, config: TfStackConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudformation_stack',
       terraformGeneratorMetadata: {
@@ -417,11 +417,11 @@ export class AwsCloudformationStack extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCloudformationStack.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfStack.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCloudformationStack.TimeoutsProperty) {
+  public putTimeouts(value: TfStack.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -454,7 +454,7 @@ export class AwsCloudformationStack extends cdktn.TerraformResource {
       template_body: cdktn.stringToTerraform(this._templateBody),
       template_url: cdktn.stringToTerraform(this._templateUrl),
       timeout_in_minutes: cdktn.numberToTerraform(this._timeoutInMinutes),
-      timeouts: awsCloudformationStackTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfStackTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -557,10 +557,10 @@ export class AwsCloudformationStack extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       timeouts: {
-        value: awsCloudformationStackTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfStackTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCloudformationStack.TimeoutsProperty",
+        storageClassType: "TfStack.TimeoutsProperty",
       },
     };
 
@@ -569,7 +569,7 @@ export class AwsCloudformationStack extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudformationStackTimeoutsPropertyToTerraform(struct?: AwsCloudformationStack.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfStackTimeoutsPropertyToTerraform(struct?: TfStack.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function awsCloudformationStackTimeoutsPropertyToTerraform(struct?: AwsCl
 }
 
 
-export function awsCloudformationStackTimeoutsPropertyToHclTerraform(struct?: AwsCloudformationStack.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfStackTimeoutsPropertyToHclTerraform(struct?: TfStack.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,18 +613,18 @@ export function awsCloudformationStackTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsCloudformationStack {
+export namespace TfStack {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#create AwsCloudformationStack#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#create TfStack#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#delete AwsCloudformationStack#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#delete TfStack#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#update AwsCloudformationStack#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack#update TfStack#update}
   */
   readonly update?: string;
 }

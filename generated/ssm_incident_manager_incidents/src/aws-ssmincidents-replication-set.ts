@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSsmincidentsReplicationSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicationSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#id AwsSsmincidentsReplicationSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#id TfReplicationSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#tags AwsSsmincidentsReplicationSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#tags TfReplicationSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#tags_all AwsSsmincidentsReplicationSet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#tags_all TfReplicationSet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * region block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#region AwsSsmincidentsReplicationSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#region TfReplicationSet#region}
   */
-  readonly region?: AwsSsmincidentsReplicationSet.RegionProperty[] | cdktn.IResolvable;
+  readonly region?: TfReplicationSet.RegionProperty[] | cdktn.IResolvable;
   /**
   * regions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#regions AwsSsmincidentsReplicationSet#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#regions TfReplicationSet#regions}
   */
-  readonly regions?: AwsSsmincidentsReplicationSet.RegionsProperty[] | cdktn.IResolvable;
+  readonly regions?: TfReplicationSet.RegionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#timeouts AwsSsmincidentsReplicationSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#timeouts TfReplicationSet#timeouts}
   */
-  readonly timeouts?: AwsSsmincidentsReplicationSet.TimeoutsProperty;
+  readonly timeouts?: TfReplicationSet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set aws_ssmincidents_replication_set}
 */
-export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
+export class TfReplicationSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSsmincidentsReplicationSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicationSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSsmincidentsReplicationSet to import
-  * @param importFromId The id of the existing AwsSsmincidentsReplicationSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSsmincidentsReplicationSet to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicationSet to import
+  * @param importFromId The id of the existing TfReplicationSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicationSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmincidents_replication_set", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSsmincidentsReplicationSetConfig = {}
+  * @param options TfReplicationSetConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsSsmincidentsReplicationSetConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfReplicationSetConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmincidents_replication_set',
       terraformGeneratorMetadata: {
@@ -178,11 +178,11 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
   }
 
   // region - computed: false, optional: true, required: false
-  private _region = new AwsSsmincidentsReplicationSet.RegionPropertyList(this, "region", true);
+  private _region = new TfReplicationSet.RegionPropertyList(this, "region", true);
   public get region() {
     return this._region;
   }
-  public putRegion(value: AwsSsmincidentsReplicationSet.RegionProperty[] | cdktn.IResolvable) {
+  public putRegion(value: TfReplicationSet.RegionProperty[] | cdktn.IResolvable) {
     this._region.internalValue = value;
   }
   public resetRegion() {
@@ -194,11 +194,11 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
   }
 
   // regions - computed: false, optional: true, required: false
-  private _regions = new AwsSsmincidentsReplicationSet.RegionsPropertyList(this, "regions", true);
+  private _regions = new TfReplicationSet.RegionsPropertyList(this, "regions", true);
   public get regions() {
     return this._regions;
   }
-  public putRegions(value: AwsSsmincidentsReplicationSet.RegionsProperty[] | cdktn.IResolvable) {
+  public putRegions(value: TfReplicationSet.RegionsProperty[] | cdktn.IResolvable) {
     this._regions.internalValue = value;
   }
   public resetRegions() {
@@ -210,11 +210,11 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSsmincidentsReplicationSet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfReplicationSet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSsmincidentsReplicationSet.TimeoutsProperty) {
+  public putTimeouts(value: TfReplicationSet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -234,9 +234,9 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      region: cdktn.listMapper(awsSsmincidentsReplicationSetRegionPropertyToTerraform, true)(this._region.internalValue),
-      regions: cdktn.listMapper(awsSsmincidentsReplicationSetRegionsPropertyToTerraform, true)(this._regions.internalValue),
-      timeouts: awsSsmincidentsReplicationSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      region: cdktn.listMapper(tfReplicationSetRegionPropertyToTerraform, true)(this._region.internalValue),
+      regions: cdktn.listMapper(tfReplicationSetRegionsPropertyToTerraform, true)(this._regions.internalValue),
+      timeouts: tfReplicationSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -261,22 +261,22 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       region: {
-        value: cdktn.listMapperHcl(awsSsmincidentsReplicationSetRegionPropertyToHclTerraform, true)(this._region.internalValue),
+        value: cdktn.listMapperHcl(tfReplicationSetRegionPropertyToHclTerraform, true)(this._region.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSsmincidentsReplicationSet.RegionPropertyList",
+        storageClassType: "TfReplicationSet.RegionPropertyList",
       },
       regions: {
-        value: cdktn.listMapperHcl(awsSsmincidentsReplicationSetRegionsPropertyToHclTerraform, true)(this._regions.internalValue),
+        value: cdktn.listMapperHcl(tfReplicationSetRegionsPropertyToHclTerraform, true)(this._regions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSsmincidentsReplicationSet.RegionsPropertyList",
+        storageClassType: "TfReplicationSet.RegionsPropertyList",
       },
       timeouts: {
-        value: awsSsmincidentsReplicationSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfReplicationSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSsmincidentsReplicationSet.TimeoutsProperty",
+        storageClassType: "TfReplicationSet.TimeoutsProperty",
       },
     };
 
@@ -285,7 +285,7 @@ export class AwsSsmincidentsReplicationSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsSsmincidentsReplicationSetRegionPropertyToTerraform(struct?: AwsSsmincidentsReplicationSet.RegionProperty | cdktn.IResolvable): any {
+export function tfReplicationSetRegionPropertyToTerraform(struct?: TfReplicationSet.RegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function awsSsmincidentsReplicationSetRegionPropertyToTerraform(struct?: 
 }
 
 
-export function awsSsmincidentsReplicationSetRegionPropertyToHclTerraform(struct?: AwsSsmincidentsReplicationSet.RegionProperty | cdktn.IResolvable): any {
+export function tfReplicationSetRegionPropertyToHclTerraform(struct?: TfReplicationSet.RegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function awsSsmincidentsReplicationSetRegionPropertyToHclTerraform(struct
 }
 
 
-export function awsSsmincidentsReplicationSetRegionsPropertyToTerraform(struct?: AwsSsmincidentsReplicationSet.RegionsProperty | cdktn.IResolvable): any {
+export function tfReplicationSetRegionsPropertyToTerraform(struct?: TfReplicationSet.RegionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function awsSsmincidentsReplicationSetRegionsPropertyToTerraform(struct?:
 }
 
 
-export function awsSsmincidentsReplicationSetRegionsPropertyToHclTerraform(struct?: AwsSsmincidentsReplicationSet.RegionsProperty | cdktn.IResolvable): any {
+export function tfReplicationSetRegionsPropertyToHclTerraform(struct?: TfReplicationSet.RegionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function awsSsmincidentsReplicationSetRegionsPropertyToHclTerraform(struc
 }
 
 
-export function awsSsmincidentsReplicationSetTimeoutsPropertyToTerraform(struct?: AwsSsmincidentsReplicationSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationSetTimeoutsPropertyToTerraform(struct?: TfReplicationSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function awsSsmincidentsReplicationSetTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsSsmincidentsReplicationSetTimeoutsPropertyToHclTerraform(struct?: AwsSsmincidentsReplicationSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationSetTimeoutsPropertyToHclTerraform(struct?: TfReplicationSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,14 +403,14 @@ export function awsSsmincidentsReplicationSetTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsSsmincidentsReplicationSet {
+export namespace TfReplicationSet {
 export interface RegionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#kms_key_arn AwsSsmincidentsReplicationSet#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#kms_key_arn TfReplicationSet#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#name AwsSsmincidentsReplicationSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#name TfReplicationSet#name}
   */
   readonly name: string;
 }
@@ -525,11 +525,11 @@ export class RegionPropertyList extends cdktn.ComplexList {
 }
 export interface RegionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#kms_key_arn AwsSsmincidentsReplicationSet#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#kms_key_arn TfReplicationSet#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#name AwsSsmincidentsReplicationSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#name TfReplicationSet#name}
   */
   readonly name: string;
 }
@@ -644,15 +644,15 @@ export class RegionsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#create AwsSsmincidentsReplicationSet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#create TfReplicationSet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#delete AwsSsmincidentsReplicationSet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#delete TfReplicationSet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#update AwsSsmincidentsReplicationSet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_replication_set#update TfReplicationSet#update}
   */
   readonly update?: string;
 }

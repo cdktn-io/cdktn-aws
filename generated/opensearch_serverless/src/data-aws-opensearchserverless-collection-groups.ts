@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOpensearchserverlessCollectionGroupsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCollectionGroupsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_groups#region DataAwsOpensearchserverlessCollectionGroups#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_groups#region DataTfCollectionGroups#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataAwsOpensearchserverlessCollectionGroupsConfig extends cdktn
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_groups aws_opensearchserverless_collection_groups}
 */
-export class DataAwsOpensearchserverlessCollectionGroups extends cdktn.TerraformDataSource {
+export class DataTfCollectionGroups extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataAwsOpensearchserverlessCollectionGroups extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOpensearchserverlessCollectionGroups resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCollectionGroups resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOpensearchserverlessCollectionGroups to import
-  * @param importFromId The id of the existing DataAwsOpensearchserverlessCollectionGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_groups#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOpensearchserverlessCollectionGroups to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCollectionGroups to import
+  * @param importFromId The id of the existing DataTfCollectionGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_groups#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCollectionGroups to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_collection_groups", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataAwsOpensearchserverlessCollectionGroups extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOpensearchserverlessCollectionGroupsConfig = {}
+  * @param options DataTfCollectionGroupsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOpensearchserverlessCollectionGroupsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfCollectionGroupsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_collection_groups',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class DataAwsOpensearchserverlessCollectionGroups extends cdktn.Terraform
   // ==========
 
   // collection_group_summaries - computed: true, optional: false, required: false
-  private _collectionGroupSummaries = new DataAwsOpensearchserverlessCollectionGroups.CollectionGroupSummariesPropertyList(this, "collection_group_summaries", false);
+  private _collectionGroupSummaries = new DataTfCollectionGroups.CollectionGroupSummariesPropertyList(this, "collection_group_summaries", false);
   public get collectionGroupSummaries() {
     return this._collectionGroupSummaries;
   }
@@ -119,7 +119,7 @@ export class DataAwsOpensearchserverlessCollectionGroups extends cdktn.Terraform
   }
 }
 
-export function dataAwsOpensearchserverlessCollectionGroupsCapacityLimitsPropertyToTerraform(struct?: DataAwsOpensearchserverlessCollectionGroups.CapacityLimitsProperty): any {
+export function dataTfCollectionGroupsCapacityLimitsPropertyToTerraform(struct?: DataTfCollectionGroups.CapacityLimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -129,7 +129,7 @@ export function dataAwsOpensearchserverlessCollectionGroupsCapacityLimitsPropert
 }
 
 
-export function dataAwsOpensearchserverlessCollectionGroupsCapacityLimitsPropertyToHclTerraform(struct?: DataAwsOpensearchserverlessCollectionGroups.CapacityLimitsProperty): any {
+export function dataTfCollectionGroupsCapacityLimitsPropertyToHclTerraform(struct?: DataTfCollectionGroups.CapacityLimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -140,7 +140,7 @@ export function dataAwsOpensearchserverlessCollectionGroupsCapacityLimitsPropert
 }
 
 
-export function dataAwsOpensearchserverlessCollectionGroupsCollectionGroupSummariesPropertyToTerraform(struct?: DataAwsOpensearchserverlessCollectionGroups.CollectionGroupSummariesProperty): any {
+export function dataTfCollectionGroupsCollectionGroupSummariesPropertyToTerraform(struct?: DataTfCollectionGroups.CollectionGroupSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -150,7 +150,7 @@ export function dataAwsOpensearchserverlessCollectionGroupsCollectionGroupSummar
 }
 
 
-export function dataAwsOpensearchserverlessCollectionGroupsCollectionGroupSummariesPropertyToHclTerraform(struct?: DataAwsOpensearchserverlessCollectionGroups.CollectionGroupSummariesProperty): any {
+export function dataTfCollectionGroupsCollectionGroupSummariesPropertyToHclTerraform(struct?: DataTfCollectionGroups.CollectionGroupSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -161,7 +161,7 @@ export function dataAwsOpensearchserverlessCollectionGroupsCollectionGroupSummar
 }
 
 
-export namespace DataAwsOpensearchserverlessCollectionGroups {
+export namespace DataTfCollectionGroups {
 export interface CapacityLimitsProperty {
 }
 export class CapacityLimitsPropertyOutputReference extends cdktn.ComplexObject {

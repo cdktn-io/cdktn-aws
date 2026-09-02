@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApigatewayv2DomainNameConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainNameConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#domain_name AwsApigatewayv2DomainName#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#domain_name TfDomainName#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#id AwsApigatewayv2DomainName#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#id TfDomainName#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,45 +20,45 @@ export interface AwsApigatewayv2DomainNameConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#region AwsApigatewayv2DomainName#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#region TfDomainName#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#routing_mode AwsApigatewayv2DomainName#routing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#routing_mode TfDomainName#routing_mode}
   */
   readonly routingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#tags AwsApigatewayv2DomainName#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#tags TfDomainName#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#tags_all AwsApigatewayv2DomainName#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#tags_all TfDomainName#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * domain_name_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#domain_name_configuration AwsApigatewayv2DomainName#domain_name_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#domain_name_configuration TfDomainName#domain_name_configuration}
   */
-  readonly domainNameConfiguration: AwsApigatewayv2DomainName.DomainNameConfigurationProperty;
+  readonly domainNameConfiguration: TfDomainName.DomainNameConfigurationProperty;
   /**
   * mutual_tls_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#mutual_tls_authentication AwsApigatewayv2DomainName#mutual_tls_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#mutual_tls_authentication TfDomainName#mutual_tls_authentication}
   */
-  readonly mutualTlsAuthentication?: AwsApigatewayv2DomainName.MutualTlsAuthenticationProperty;
+  readonly mutualTlsAuthentication?: TfDomainName.MutualTlsAuthenticationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#timeouts AwsApigatewayv2DomainName#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#timeouts TfDomainName#timeouts}
   */
-  readonly timeouts?: AwsApigatewayv2DomainName.TimeoutsProperty;
+  readonly timeouts?: TfDomainName.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name aws_apigatewayv2_domain_name}
 */
-export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
+export class TfDomainName extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApigatewayv2DomainName resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainName resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApigatewayv2DomainName to import
-  * @param importFromId The id of the existing AwsApigatewayv2DomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApigatewayv2DomainName to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainName to import
+  * @param importFromId The id of the existing TfDomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainName to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_domain_name", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApigatewayv2DomainNameConfig
+  * @param options TfDomainNameConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApigatewayv2DomainNameConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainNameConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_domain_name',
       terraformGeneratorMetadata: {
@@ -225,11 +225,11 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
   }
 
   // domain_name_configuration - computed: false, optional: false, required: true
-  private _domainNameConfiguration = new AwsApigatewayv2DomainName.DomainNameConfigurationPropertyOutputReference(this, "domain_name_configuration");
+  private _domainNameConfiguration = new TfDomainName.DomainNameConfigurationPropertyOutputReference(this, "domain_name_configuration");
   public get domainNameConfiguration() {
     return this._domainNameConfiguration;
   }
-  public putDomainNameConfiguration(value: AwsApigatewayv2DomainName.DomainNameConfigurationProperty) {
+  public putDomainNameConfiguration(value: TfDomainName.DomainNameConfigurationProperty) {
     this._domainNameConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -238,11 +238,11 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
   }
 
   // mutual_tls_authentication - computed: false, optional: true, required: false
-  private _mutualTlsAuthentication = new AwsApigatewayv2DomainName.MutualTlsAuthenticationPropertyOutputReference(this, "mutual_tls_authentication");
+  private _mutualTlsAuthentication = new TfDomainName.MutualTlsAuthenticationPropertyOutputReference(this, "mutual_tls_authentication");
   public get mutualTlsAuthentication() {
     return this._mutualTlsAuthentication;
   }
-  public putMutualTlsAuthentication(value: AwsApigatewayv2DomainName.MutualTlsAuthenticationProperty) {
+  public putMutualTlsAuthentication(value: TfDomainName.MutualTlsAuthenticationProperty) {
     this._mutualTlsAuthentication.internalValue = value;
   }
   public resetMutualTlsAuthentication() {
@@ -254,11 +254,11 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsApigatewayv2DomainName.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDomainName.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsApigatewayv2DomainName.TimeoutsProperty) {
+  public putTimeouts(value: TfDomainName.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -281,9 +281,9 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
       routing_mode: cdktn.stringToTerraform(this._routingMode),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      domain_name_configuration: awsApigatewayv2DomainNameDomainNameConfigurationPropertyToTerraform(this._domainNameConfiguration.internalValue),
-      mutual_tls_authentication: awsApigatewayv2DomainNameMutualTlsAuthenticationPropertyToTerraform(this._mutualTlsAuthentication.internalValue),
-      timeouts: awsApigatewayv2DomainNameTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      domain_name_configuration: tfDomainNameDomainNameConfigurationPropertyToTerraform(this._domainNameConfiguration.internalValue),
+      mutual_tls_authentication: tfDomainNameMutualTlsAuthenticationPropertyToTerraform(this._mutualTlsAuthentication.internalValue),
+      timeouts: tfDomainNameTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -326,22 +326,22 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       domain_name_configuration: {
-        value: awsApigatewayv2DomainNameDomainNameConfigurationPropertyToHclTerraform(this._domainNameConfiguration.internalValue),
+        value: tfDomainNameDomainNameConfigurationPropertyToHclTerraform(this._domainNameConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApigatewayv2DomainName.DomainNameConfigurationPropertyList",
+        storageClassType: "TfDomainName.DomainNameConfigurationPropertyList",
       },
       mutual_tls_authentication: {
-        value: awsApigatewayv2DomainNameMutualTlsAuthenticationPropertyToHclTerraform(this._mutualTlsAuthentication.internalValue),
+        value: tfDomainNameMutualTlsAuthenticationPropertyToHclTerraform(this._mutualTlsAuthentication.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApigatewayv2DomainName.MutualTlsAuthenticationPropertyList",
+        storageClassType: "TfDomainName.MutualTlsAuthenticationPropertyList",
       },
       timeouts: {
-        value: awsApigatewayv2DomainNameTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDomainNameTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsApigatewayv2DomainName.TimeoutsProperty",
+        storageClassType: "TfDomainName.TimeoutsProperty",
       },
     };
 
@@ -350,7 +350,7 @@ export class AwsApigatewayv2DomainName extends cdktn.TerraformResource {
   }
 }
 
-export function awsApigatewayv2DomainNameDomainNameConfigurationPropertyToTerraform(struct?: AwsApigatewayv2DomainName.DomainNameConfigurationPropertyOutputReference | AwsApigatewayv2DomainName.DomainNameConfigurationProperty): any {
+export function tfDomainNameDomainNameConfigurationPropertyToTerraform(struct?: TfDomainName.DomainNameConfigurationPropertyOutputReference | TfDomainName.DomainNameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function awsApigatewayv2DomainNameDomainNameConfigurationPropertyToTerraf
 }
 
 
-export function awsApigatewayv2DomainNameDomainNameConfigurationPropertyToHclTerraform(struct?: AwsApigatewayv2DomainName.DomainNameConfigurationPropertyOutputReference | AwsApigatewayv2DomainName.DomainNameConfigurationProperty): any {
+export function tfDomainNameDomainNameConfigurationPropertyToHclTerraform(struct?: TfDomainName.DomainNameConfigurationPropertyOutputReference | TfDomainName.DomainNameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsApigatewayv2DomainNameDomainNameConfigurationPropertyToHclTer
 }
 
 
-export function awsApigatewayv2DomainNameMutualTlsAuthenticationPropertyToTerraform(struct?: AwsApigatewayv2DomainName.MutualTlsAuthenticationPropertyOutputReference | AwsApigatewayv2DomainName.MutualTlsAuthenticationProperty): any {
+export function tfDomainNameMutualTlsAuthenticationPropertyToTerraform(struct?: TfDomainName.MutualTlsAuthenticationPropertyOutputReference | TfDomainName.MutualTlsAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function awsApigatewayv2DomainNameMutualTlsAuthenticationPropertyToTerraf
 }
 
 
-export function awsApigatewayv2DomainNameMutualTlsAuthenticationPropertyToHclTerraform(struct?: AwsApigatewayv2DomainName.MutualTlsAuthenticationPropertyOutputReference | AwsApigatewayv2DomainName.MutualTlsAuthenticationProperty): any {
+export function tfDomainNameMutualTlsAuthenticationPropertyToHclTerraform(struct?: TfDomainName.MutualTlsAuthenticationPropertyOutputReference | TfDomainName.MutualTlsAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function awsApigatewayv2DomainNameMutualTlsAuthenticationPropertyToHclTer
 }
 
 
-export function awsApigatewayv2DomainNameTimeoutsPropertyToTerraform(struct?: AwsApigatewayv2DomainName.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainNameTimeoutsPropertyToTerraform(struct?: TfDomainName.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function awsApigatewayv2DomainNameTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsApigatewayv2DomainNameTimeoutsPropertyToHclTerraform(struct?: AwsApigatewayv2DomainName.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainNameTimeoutsPropertyToHclTerraform(struct?: TfDomainName.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,26 +482,26 @@ export function awsApigatewayv2DomainNameTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsApigatewayv2DomainName {
+export namespace TfDomainName {
 export interface DomainNameConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#certificate_arn AwsApigatewayv2DomainName#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#certificate_arn TfDomainName#certificate_arn}
   */
   readonly certificateArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#endpoint_type AwsApigatewayv2DomainName#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#endpoint_type TfDomainName#endpoint_type}
   */
   readonly endpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#ip_address_type AwsApigatewayv2DomainName#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#ip_address_type TfDomainName#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#ownership_verification_certificate_arn AwsApigatewayv2DomainName#ownership_verification_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#ownership_verification_certificate_arn TfDomainName#ownership_verification_certificate_arn}
   */
   readonly ownershipVerificationCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#security_policy AwsApigatewayv2DomainName#security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#security_policy TfDomainName#security_policy}
   */
   readonly securityPolicy: string;
 }
@@ -644,11 +644,11 @@ export class DomainNameConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface MutualTlsAuthenticationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#truststore_uri AwsApigatewayv2DomainName#truststore_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#truststore_uri TfDomainName#truststore_uri}
   */
   readonly truststoreUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#truststore_version AwsApigatewayv2DomainName#truststore_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#truststore_version TfDomainName#truststore_version}
   */
   readonly truststoreVersion?: string;
 }
@@ -721,11 +721,11 @@ export class MutualTlsAuthenticationPropertyOutputReference extends cdktn.Comple
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#create AwsApigatewayv2DomainName#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#create TfDomainName#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#update AwsApigatewayv2DomainName#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_domain_name#update TfDomainName#update}
   */
   readonly update?: string;
 }

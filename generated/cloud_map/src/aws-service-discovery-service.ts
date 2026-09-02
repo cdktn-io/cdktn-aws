@@ -5,72 +5,72 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServiceDiscoveryServiceConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#description AwsServiceDiscoveryService#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#description TfService#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#force_destroy AwsServiceDiscoveryService#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#force_destroy TfService#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#id AwsServiceDiscoveryService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#id TfService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#name AwsServiceDiscoveryService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#name TfService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#namespace_id AwsServiceDiscoveryService#namespace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#namespace_id TfService#namespace_id}
   */
   readonly namespaceId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#region AwsServiceDiscoveryService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#region TfService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#tags AwsServiceDiscoveryService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#tags TfService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#tags_all AwsServiceDiscoveryService#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#tags_all TfService#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#type AwsServiceDiscoveryService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#type TfService#type}
   */
   readonly type?: string;
   /**
   * dns_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#dns_config AwsServiceDiscoveryService#dns_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#dns_config TfService#dns_config}
   */
-  readonly dnsConfig?: AwsServiceDiscoveryService.DnsConfigProperty;
+  readonly dnsConfig?: TfService.DnsConfigProperty;
   /**
   * health_check_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#health_check_config AwsServiceDiscoveryService#health_check_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#health_check_config TfService#health_check_config}
   */
-  readonly healthCheckConfig?: AwsServiceDiscoveryService.HealthCheckConfigProperty;
+  readonly healthCheckConfig?: TfService.HealthCheckConfigProperty;
   /**
   * health_check_custom_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#health_check_custom_config AwsServiceDiscoveryService#health_check_custom_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#health_check_custom_config TfService#health_check_custom_config}
   */
-  readonly healthCheckCustomConfig?: AwsServiceDiscoveryService.HealthCheckCustomConfigProperty;
+  readonly healthCheckCustomConfig?: TfService.HealthCheckCustomConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service aws_service_discovery_service}
 */
-export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
+export class TfService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServiceDiscoveryService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServiceDiscoveryService to import
-  * @param importFromId The id of the existing AwsServiceDiscoveryService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServiceDiscoveryService to import is found
+  * @param importToId The construct id used in the generated config for the TfService to import
+  * @param importFromId The id of the existing TfService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_service_discovery_service", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServiceDiscoveryServiceConfig
+  * @param options TfServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServiceDiscoveryServiceConfig) {
+  public constructor(scope: Construct, id: string, config: TfServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_service_discovery_service',
       terraformGeneratorMetadata: {
@@ -283,11 +283,11 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
   }
 
   // dns_config - computed: false, optional: true, required: false
-  private _dnsConfig = new AwsServiceDiscoveryService.DnsConfigPropertyOutputReference(this, "dns_config");
+  private _dnsConfig = new TfService.DnsConfigPropertyOutputReference(this, "dns_config");
   public get dnsConfig() {
     return this._dnsConfig;
   }
-  public putDnsConfig(value: AwsServiceDiscoveryService.DnsConfigProperty) {
+  public putDnsConfig(value: TfService.DnsConfigProperty) {
     this._dnsConfig.internalValue = value;
   }
   public resetDnsConfig() {
@@ -299,11 +299,11 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
   }
 
   // health_check_config - computed: false, optional: true, required: false
-  private _healthCheckConfig = new AwsServiceDiscoveryService.HealthCheckConfigPropertyOutputReference(this, "health_check_config");
+  private _healthCheckConfig = new TfService.HealthCheckConfigPropertyOutputReference(this, "health_check_config");
   public get healthCheckConfig() {
     return this._healthCheckConfig;
   }
-  public putHealthCheckConfig(value: AwsServiceDiscoveryService.HealthCheckConfigProperty) {
+  public putHealthCheckConfig(value: TfService.HealthCheckConfigProperty) {
     this._healthCheckConfig.internalValue = value;
   }
   public resetHealthCheckConfig() {
@@ -315,11 +315,11 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
   }
 
   // health_check_custom_config - computed: false, optional: true, required: false
-  private _healthCheckCustomConfig = new AwsServiceDiscoveryService.HealthCheckCustomConfigPropertyOutputReference(this, "health_check_custom_config");
+  private _healthCheckCustomConfig = new TfService.HealthCheckCustomConfigPropertyOutputReference(this, "health_check_custom_config");
   public get healthCheckCustomConfig() {
     return this._healthCheckCustomConfig;
   }
-  public putHealthCheckCustomConfig(value: AwsServiceDiscoveryService.HealthCheckCustomConfigProperty) {
+  public putHealthCheckCustomConfig(value: TfService.HealthCheckCustomConfigProperty) {
     this._healthCheckCustomConfig.internalValue = value;
   }
   public resetHealthCheckCustomConfig() {
@@ -345,9 +345,9 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      dns_config: awsServiceDiscoveryServiceDnsConfigPropertyToTerraform(this._dnsConfig.internalValue),
-      health_check_config: awsServiceDiscoveryServiceHealthCheckConfigPropertyToTerraform(this._healthCheckConfig.internalValue),
-      health_check_custom_config: awsServiceDiscoveryServiceHealthCheckCustomConfigPropertyToTerraform(this._healthCheckCustomConfig.internalValue),
+      dns_config: tfServiceDnsConfigPropertyToTerraform(this._dnsConfig.internalValue),
+      health_check_config: tfServiceHealthCheckConfigPropertyToTerraform(this._healthCheckConfig.internalValue),
+      health_check_custom_config: tfServiceHealthCheckCustomConfigPropertyToTerraform(this._healthCheckCustomConfig.internalValue),
     };
   }
 
@@ -408,22 +408,22 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       dns_config: {
-        value: awsServiceDiscoveryServiceDnsConfigPropertyToHclTerraform(this._dnsConfig.internalValue),
+        value: tfServiceDnsConfigPropertyToHclTerraform(this._dnsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsServiceDiscoveryService.DnsConfigPropertyList",
+        storageClassType: "TfService.DnsConfigPropertyList",
       },
       health_check_config: {
-        value: awsServiceDiscoveryServiceHealthCheckConfigPropertyToHclTerraform(this._healthCheckConfig.internalValue),
+        value: tfServiceHealthCheckConfigPropertyToHclTerraform(this._healthCheckConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsServiceDiscoveryService.HealthCheckConfigPropertyList",
+        storageClassType: "TfService.HealthCheckConfigPropertyList",
       },
       health_check_custom_config: {
-        value: awsServiceDiscoveryServiceHealthCheckCustomConfigPropertyToHclTerraform(this._healthCheckCustomConfig.internalValue),
+        value: tfServiceHealthCheckCustomConfigPropertyToHclTerraform(this._healthCheckCustomConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsServiceDiscoveryService.HealthCheckCustomConfigPropertyList",
+        storageClassType: "TfService.HealthCheckCustomConfigPropertyList",
       },
     };
 
@@ -432,7 +432,7 @@ export class AwsServiceDiscoveryService extends cdktn.TerraformResource {
   }
 }
 
-export function awsServiceDiscoveryServiceDnsRecordsPropertyToTerraform(struct?: AwsServiceDiscoveryService.DnsRecordsProperty | cdktn.IResolvable): any {
+export function tfServiceDnsRecordsPropertyToTerraform(struct?: TfService.DnsRecordsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function awsServiceDiscoveryServiceDnsRecordsPropertyToTerraform(struct?:
 }
 
 
-export function awsServiceDiscoveryServiceDnsRecordsPropertyToHclTerraform(struct?: AwsServiceDiscoveryService.DnsRecordsProperty | cdktn.IResolvable): any {
+export function tfServiceDnsRecordsPropertyToHclTerraform(struct?: TfService.DnsRecordsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function awsServiceDiscoveryServiceDnsRecordsPropertyToHclTerraform(struc
 }
 
 
-export function awsServiceDiscoveryServiceDnsConfigPropertyToTerraform(struct?: AwsServiceDiscoveryService.DnsConfigPropertyOutputReference | AwsServiceDiscoveryService.DnsConfigProperty): any {
+export function tfServiceDnsConfigPropertyToTerraform(struct?: TfService.DnsConfigPropertyOutputReference | TfService.DnsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,12 +477,12 @@ export function awsServiceDiscoveryServiceDnsConfigPropertyToTerraform(struct?: 
   return {
     namespace_id: cdktn.stringToTerraform(struct!.namespaceId),
     routing_policy: cdktn.stringToTerraform(struct!.routingPolicy),
-    dns_records: cdktn.listMapper(awsServiceDiscoveryServiceDnsRecordsPropertyToTerraform, true)(struct!.dnsRecords),
+    dns_records: cdktn.listMapper(tfServiceDnsRecordsPropertyToTerraform, true)(struct!.dnsRecords),
   }
 }
 
 
-export function awsServiceDiscoveryServiceDnsConfigPropertyToHclTerraform(struct?: AwsServiceDiscoveryService.DnsConfigPropertyOutputReference | AwsServiceDiscoveryService.DnsConfigProperty): any {
+export function tfServiceDnsConfigPropertyToHclTerraform(struct?: TfService.DnsConfigPropertyOutputReference | TfService.DnsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,7 +501,7 @@ export function awsServiceDiscoveryServiceDnsConfigPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     dns_records: {
-      value: cdktn.listMapperHcl(awsServiceDiscoveryServiceDnsRecordsPropertyToHclTerraform, true)(struct!.dnsRecords),
+      value: cdktn.listMapperHcl(tfServiceDnsRecordsPropertyToHclTerraform, true)(struct!.dnsRecords),
       isBlock: true,
       type: "list",
       storageClassType: "DnsRecordsPropertyList",
@@ -513,7 +513,7 @@ export function awsServiceDiscoveryServiceDnsConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsServiceDiscoveryServiceHealthCheckConfigPropertyToTerraform(struct?: AwsServiceDiscoveryService.HealthCheckConfigPropertyOutputReference | AwsServiceDiscoveryService.HealthCheckConfigProperty): any {
+export function tfServiceHealthCheckConfigPropertyToTerraform(struct?: TfService.HealthCheckConfigPropertyOutputReference | TfService.HealthCheckConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function awsServiceDiscoveryServiceHealthCheckConfigPropertyToTerraform(s
 }
 
 
-export function awsServiceDiscoveryServiceHealthCheckConfigPropertyToHclTerraform(struct?: AwsServiceDiscoveryService.HealthCheckConfigPropertyOutputReference | AwsServiceDiscoveryService.HealthCheckConfigProperty): any {
+export function tfServiceHealthCheckConfigPropertyToHclTerraform(struct?: TfService.HealthCheckConfigPropertyOutputReference | TfService.HealthCheckConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function awsServiceDiscoveryServiceHealthCheckConfigPropertyToHclTerrafor
 }
 
 
-export function awsServiceDiscoveryServiceHealthCheckCustomConfigPropertyToTerraform(struct?: AwsServiceDiscoveryService.HealthCheckCustomConfigPropertyOutputReference | AwsServiceDiscoveryService.HealthCheckCustomConfigProperty): any {
+export function tfServiceHealthCheckCustomConfigPropertyToTerraform(struct?: TfService.HealthCheckCustomConfigPropertyOutputReference | TfService.HealthCheckCustomConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function awsServiceDiscoveryServiceHealthCheckCustomConfigPropertyToTerra
 }
 
 
-export function awsServiceDiscoveryServiceHealthCheckCustomConfigPropertyToHclTerraform(struct?: AwsServiceDiscoveryService.HealthCheckCustomConfigPropertyOutputReference | AwsServiceDiscoveryService.HealthCheckCustomConfigProperty): any {
+export function tfServiceHealthCheckCustomConfigPropertyToHclTerraform(struct?: TfService.HealthCheckCustomConfigPropertyOutputReference | TfService.HealthCheckCustomConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,14 +587,14 @@ export function awsServiceDiscoveryServiceHealthCheckCustomConfigPropertyToHclTe
 }
 
 
-export namespace AwsServiceDiscoveryService {
+export namespace TfService {
 export interface DnsRecordsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#ttl AwsServiceDiscoveryService#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#ttl TfService#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#type AwsServiceDiscoveryService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#type TfService#type}
   */
   readonly type: string;
 }
@@ -696,17 +696,17 @@ export class DnsRecordsPropertyList extends cdktn.ComplexList {
 }
 export interface DnsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#namespace_id AwsServiceDiscoveryService#namespace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#namespace_id TfService#namespace_id}
   */
   readonly namespaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#routing_policy AwsServiceDiscoveryService#routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#routing_policy TfService#routing_policy}
   */
   readonly routingPolicy?: string;
   /**
   * dns_records block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#dns_records AwsServiceDiscoveryService#dns_records}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#dns_records TfService#dns_records}
   */
   readonly dnsRecords: DnsRecordsProperty[] | cdktn.IResolvable;
 }
@@ -798,15 +798,15 @@ export class DnsConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HealthCheckConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#failure_threshold AwsServiceDiscoveryService#failure_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#failure_threshold TfService#failure_threshold}
   */
   readonly failureThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#resource_path AwsServiceDiscoveryService#resource_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#resource_path TfService#resource_path}
   */
   readonly resourcePath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#type AwsServiceDiscoveryService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#type TfService#type}
   */
   readonly type?: string;
 }
@@ -904,7 +904,7 @@ export class HealthCheckConfigPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface HealthCheckCustomConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#failure_threshold AwsServiceDiscoveryService#failure_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_service#failure_threshold TfService#failure_threshold}
   */
   readonly failureThreshold?: number;
 }

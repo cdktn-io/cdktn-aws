@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamSessionContextConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSessionContextConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_session_context#arn DataAwsIamSessionContext#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_session_context#arn DataTfSessionContext#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_session_context#id DataAwsIamSessionContext#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_session_context#id DataTfSessionContext#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,7 +22,7 @@ export interface DataAwsIamSessionContextConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_session_context aws_iam_session_context}
 */
-export class DataAwsIamSessionContext extends cdktn.TerraformDataSource {
+export class DataTfSessionContext extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class DataAwsIamSessionContext extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamSessionContext resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSessionContext resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamSessionContext to import
-  * @param importFromId The id of the existing DataAwsIamSessionContext that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_session_context#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamSessionContext to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSessionContext to import
+  * @param importFromId The id of the existing DataTfSessionContext that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_session_context#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSessionContext to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_session_context", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class DataAwsIamSessionContext extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamSessionContextConfig
+  * @param options DataTfSessionContextConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamSessionContextConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSessionContextConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_session_context',
       terraformGeneratorMetadata: {

@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchCompositeAlarmConfig extends cdktn.TerraformMetaArguments {
+export interface TfCompositeAlarmConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#actions_enabled AwsCloudwatchCompositeAlarm#actions_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#actions_enabled TfCompositeAlarm#actions_enabled}
   */
   readonly actionsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_actions AwsCloudwatchCompositeAlarm#alarm_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_actions TfCompositeAlarm#alarm_actions}
   */
   readonly alarmActions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_description AwsCloudwatchCompositeAlarm#alarm_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_description TfCompositeAlarm#alarm_description}
   */
   readonly alarmDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_name AwsCloudwatchCompositeAlarm#alarm_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_name TfCompositeAlarm#alarm_name}
   */
   readonly alarmName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_rule AwsCloudwatchCompositeAlarm#alarm_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_rule TfCompositeAlarm#alarm_rule}
   */
   readonly alarmRule: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#id AwsCloudwatchCompositeAlarm#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#id TfCompositeAlarm#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#insufficient_data_actions AwsCloudwatchCompositeAlarm#insufficient_data_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#insufficient_data_actions TfCompositeAlarm#insufficient_data_actions}
   */
   readonly insufficientDataActions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#ok_actions AwsCloudwatchCompositeAlarm#ok_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#ok_actions TfCompositeAlarm#ok_actions}
   */
   readonly okActions?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#region AwsCloudwatchCompositeAlarm#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#region TfCompositeAlarm#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#tags AwsCloudwatchCompositeAlarm#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#tags TfCompositeAlarm#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#tags_all AwsCloudwatchCompositeAlarm#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#tags_all TfCompositeAlarm#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * actions_suppressor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#actions_suppressor AwsCloudwatchCompositeAlarm#actions_suppressor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#actions_suppressor TfCompositeAlarm#actions_suppressor}
   */
-  readonly actionsSuppressor?: AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty;
+  readonly actionsSuppressor?: TfCompositeAlarm.ActionsSuppressorProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm aws_cloudwatch_composite_alarm}
 */
-export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
+export class TfCompositeAlarm extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchCompositeAlarm resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCompositeAlarm resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchCompositeAlarm to import
-  * @param importFromId The id of the existing AwsCloudwatchCompositeAlarm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchCompositeAlarm to import is found
+  * @param importToId The construct id used in the generated config for the TfCompositeAlarm to import
+  * @param importFromId The id of the existing TfCompositeAlarm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCompositeAlarm to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_composite_alarm", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchCompositeAlarmConfig
+  * @param options TfCompositeAlarmConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchCompositeAlarmConfig) {
+  public constructor(scope: Construct, id: string, config: TfCompositeAlarmConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_composite_alarm',
       terraformGeneratorMetadata: {
@@ -308,11 +308,11 @@ export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
   }
 
   // actions_suppressor - computed: false, optional: true, required: false
-  private _actionsSuppressor = new AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyOutputReference(this, "actions_suppressor");
+  private _actionsSuppressor = new TfCompositeAlarm.ActionsSuppressorPropertyOutputReference(this, "actions_suppressor");
   public get actionsSuppressor() {
     return this._actionsSuppressor;
   }
-  public putActionsSuppressor(value: AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty) {
+  public putActionsSuppressor(value: TfCompositeAlarm.ActionsSuppressorProperty) {
     this._actionsSuppressor.internalValue = value;
   }
   public resetActionsSuppressor() {
@@ -340,7 +340,7 @@ export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      actions_suppressor: awsCloudwatchCompositeAlarmActionsSuppressorPropertyToTerraform(this._actionsSuppressor.internalValue),
+      actions_suppressor: tfCompositeAlarmActionsSuppressorPropertyToTerraform(this._actionsSuppressor.internalValue),
     };
   }
 
@@ -413,10 +413,10 @@ export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       actions_suppressor: {
-        value: awsCloudwatchCompositeAlarmActionsSuppressorPropertyToHclTerraform(this._actionsSuppressor.internalValue),
+        value: tfCompositeAlarmActionsSuppressorPropertyToHclTerraform(this._actionsSuppressor.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyList",
+        storageClassType: "TfCompositeAlarm.ActionsSuppressorPropertyList",
       },
     };
 
@@ -425,7 +425,7 @@ export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchCompositeAlarmActionsSuppressorPropertyToTerraform(struct?: AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyOutputReference | AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty): any {
+export function tfCompositeAlarmActionsSuppressorPropertyToTerraform(struct?: TfCompositeAlarm.ActionsSuppressorPropertyOutputReference | TfCompositeAlarm.ActionsSuppressorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function awsCloudwatchCompositeAlarmActionsSuppressorPropertyToTerraform(
 }
 
 
-export function awsCloudwatchCompositeAlarmActionsSuppressorPropertyToHclTerraform(struct?: AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyOutputReference | AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty): any {
+export function tfCompositeAlarmActionsSuppressorPropertyToHclTerraform(struct?: TfCompositeAlarm.ActionsSuppressorPropertyOutputReference | TfCompositeAlarm.ActionsSuppressorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,18 +469,18 @@ export function awsCloudwatchCompositeAlarmActionsSuppressorPropertyToHclTerrafo
 }
 
 
-export namespace AwsCloudwatchCompositeAlarm {
+export namespace TfCompositeAlarm {
 export interface ActionsSuppressorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm AwsCloudwatchCompositeAlarm#alarm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm TfCompositeAlarm#alarm}
   */
   readonly alarm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#extension_period AwsCloudwatchCompositeAlarm#extension_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#extension_period TfCompositeAlarm#extension_period}
   */
   readonly extensionPeriod: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#wait_period AwsCloudwatchCompositeAlarm#wait_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#wait_period TfCompositeAlarm#wait_period}
   */
   readonly waitPeriod: number;
 }

@@ -5,96 +5,96 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesReceiptRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfReceiptRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#after AwsSesReceiptRule#after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#after TfReceiptRule#after}
   */
   readonly after?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#enabled AwsSesReceiptRule#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#enabled TfReceiptRule#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#id AwsSesReceiptRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#id TfReceiptRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#name AwsSesReceiptRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#name TfReceiptRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#recipients AwsSesReceiptRule#recipients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#recipients TfReceiptRule#recipients}
   */
   readonly recipients?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#region AwsSesReceiptRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#region TfReceiptRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#rule_set_name AwsSesReceiptRule#rule_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#rule_set_name TfReceiptRule#rule_set_name}
   */
   readonly ruleSetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#scan_enabled AwsSesReceiptRule#scan_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#scan_enabled TfReceiptRule#scan_enabled}
   */
   readonly scanEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#tls_policy AwsSesReceiptRule#tls_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#tls_policy TfReceiptRule#tls_policy}
   */
   readonly tlsPolicy?: string;
   /**
   * add_header_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#add_header_action AwsSesReceiptRule#add_header_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#add_header_action TfReceiptRule#add_header_action}
   */
-  readonly addHeaderAction?: AwsSesReceiptRule.AddHeaderActionProperty[] | cdktn.IResolvable;
+  readonly addHeaderAction?: TfReceiptRule.AddHeaderActionProperty[] | cdktn.IResolvable;
   /**
   * bounce_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#bounce_action AwsSesReceiptRule#bounce_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#bounce_action TfReceiptRule#bounce_action}
   */
-  readonly bounceAction?: AwsSesReceiptRule.BounceActionProperty[] | cdktn.IResolvable;
+  readonly bounceAction?: TfReceiptRule.BounceActionProperty[] | cdktn.IResolvable;
   /**
   * lambda_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#lambda_action AwsSesReceiptRule#lambda_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#lambda_action TfReceiptRule#lambda_action}
   */
-  readonly lambdaAction?: AwsSesReceiptRule.LambdaActionProperty[] | cdktn.IResolvable;
+  readonly lambdaAction?: TfReceiptRule.LambdaActionProperty[] | cdktn.IResolvable;
   /**
   * s3_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#s3_action AwsSesReceiptRule#s3_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#s3_action TfReceiptRule#s3_action}
   */
-  readonly s3Action?: AwsSesReceiptRule.S3ActionProperty[] | cdktn.IResolvable;
+  readonly s3Action?: TfReceiptRule.S3ActionProperty[] | cdktn.IResolvable;
   /**
   * sns_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#sns_action AwsSesReceiptRule#sns_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#sns_action TfReceiptRule#sns_action}
   */
-  readonly snsAction?: AwsSesReceiptRule.SnsActionProperty[] | cdktn.IResolvable;
+  readonly snsAction?: TfReceiptRule.SnsActionProperty[] | cdktn.IResolvable;
   /**
   * stop_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#stop_action AwsSesReceiptRule#stop_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#stop_action TfReceiptRule#stop_action}
   */
-  readonly stopAction?: AwsSesReceiptRule.StopActionProperty[] | cdktn.IResolvable;
+  readonly stopAction?: TfReceiptRule.StopActionProperty[] | cdktn.IResolvable;
   /**
   * workmail_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#workmail_action AwsSesReceiptRule#workmail_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#workmail_action TfReceiptRule#workmail_action}
   */
-  readonly workmailAction?: AwsSesReceiptRule.WorkmailActionProperty[] | cdktn.IResolvable;
+  readonly workmailAction?: TfReceiptRule.WorkmailActionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule aws_ses_receipt_rule}
 */
-export class AwsSesReceiptRule extends cdktn.TerraformResource {
+export class TfReceiptRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -105,11 +105,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesReceiptRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReceiptRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesReceiptRule to import
-  * @param importFromId The id of the existing AwsSesReceiptRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesReceiptRule to import is found
+  * @param importToId The construct id used in the generated config for the TfReceiptRule to import
+  * @param importFromId The id of the existing TfReceiptRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReceiptRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ses_receipt_rule", importId: importFromId, provider });
@@ -124,9 +124,9 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesReceiptRuleConfig
+  * @param options TfReceiptRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesReceiptRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfReceiptRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ses_receipt_rule',
       terraformGeneratorMetadata: {
@@ -308,11 +308,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 
   // add_header_action - computed: false, optional: true, required: false
-  private _addHeaderAction = new AwsSesReceiptRule.AddHeaderActionPropertyList(this, "add_header_action", true);
+  private _addHeaderAction = new TfReceiptRule.AddHeaderActionPropertyList(this, "add_header_action", true);
   public get addHeaderAction() {
     return this._addHeaderAction;
   }
-  public putAddHeaderAction(value: AwsSesReceiptRule.AddHeaderActionProperty[] | cdktn.IResolvable) {
+  public putAddHeaderAction(value: TfReceiptRule.AddHeaderActionProperty[] | cdktn.IResolvable) {
     this._addHeaderAction.internalValue = value;
   }
   public resetAddHeaderAction() {
@@ -324,11 +324,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 
   // bounce_action - computed: false, optional: true, required: false
-  private _bounceAction = new AwsSesReceiptRule.BounceActionPropertyList(this, "bounce_action", true);
+  private _bounceAction = new TfReceiptRule.BounceActionPropertyList(this, "bounce_action", true);
   public get bounceAction() {
     return this._bounceAction;
   }
-  public putBounceAction(value: AwsSesReceiptRule.BounceActionProperty[] | cdktn.IResolvable) {
+  public putBounceAction(value: TfReceiptRule.BounceActionProperty[] | cdktn.IResolvable) {
     this._bounceAction.internalValue = value;
   }
   public resetBounceAction() {
@@ -340,11 +340,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 
   // lambda_action - computed: false, optional: true, required: false
-  private _lambdaAction = new AwsSesReceiptRule.LambdaActionPropertyList(this, "lambda_action", true);
+  private _lambdaAction = new TfReceiptRule.LambdaActionPropertyList(this, "lambda_action", true);
   public get lambdaAction() {
     return this._lambdaAction;
   }
-  public putLambdaAction(value: AwsSesReceiptRule.LambdaActionProperty[] | cdktn.IResolvable) {
+  public putLambdaAction(value: TfReceiptRule.LambdaActionProperty[] | cdktn.IResolvable) {
     this._lambdaAction.internalValue = value;
   }
   public resetLambdaAction() {
@@ -356,11 +356,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 
   // s3_action - computed: false, optional: true, required: false
-  private _s3Action = new AwsSesReceiptRule.S3ActionPropertyList(this, "s3_action", true);
+  private _s3Action = new TfReceiptRule.S3ActionPropertyList(this, "s3_action", true);
   public get s3Action() {
     return this._s3Action;
   }
-  public putS3Action(value: AwsSesReceiptRule.S3ActionProperty[] | cdktn.IResolvable) {
+  public putS3Action(value: TfReceiptRule.S3ActionProperty[] | cdktn.IResolvable) {
     this._s3Action.internalValue = value;
   }
   public resetS3Action() {
@@ -372,11 +372,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 
   // sns_action - computed: false, optional: true, required: false
-  private _snsAction = new AwsSesReceiptRule.SnsActionPropertyList(this, "sns_action", true);
+  private _snsAction = new TfReceiptRule.SnsActionPropertyList(this, "sns_action", true);
   public get snsAction() {
     return this._snsAction;
   }
-  public putSnsAction(value: AwsSesReceiptRule.SnsActionProperty[] | cdktn.IResolvable) {
+  public putSnsAction(value: TfReceiptRule.SnsActionProperty[] | cdktn.IResolvable) {
     this._snsAction.internalValue = value;
   }
   public resetSnsAction() {
@@ -388,11 +388,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 
   // stop_action - computed: false, optional: true, required: false
-  private _stopAction = new AwsSesReceiptRule.StopActionPropertyList(this, "stop_action", true);
+  private _stopAction = new TfReceiptRule.StopActionPropertyList(this, "stop_action", true);
   public get stopAction() {
     return this._stopAction;
   }
-  public putStopAction(value: AwsSesReceiptRule.StopActionProperty[] | cdktn.IResolvable) {
+  public putStopAction(value: TfReceiptRule.StopActionProperty[] | cdktn.IResolvable) {
     this._stopAction.internalValue = value;
   }
   public resetStopAction() {
@@ -404,11 +404,11 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 
   // workmail_action - computed: false, optional: true, required: false
-  private _workmailAction = new AwsSesReceiptRule.WorkmailActionPropertyList(this, "workmail_action", true);
+  private _workmailAction = new TfReceiptRule.WorkmailActionPropertyList(this, "workmail_action", true);
   public get workmailAction() {
     return this._workmailAction;
   }
-  public putWorkmailAction(value: AwsSesReceiptRule.WorkmailActionProperty[] | cdktn.IResolvable) {
+  public putWorkmailAction(value: TfReceiptRule.WorkmailActionProperty[] | cdktn.IResolvable) {
     this._workmailAction.internalValue = value;
   }
   public resetWorkmailAction() {
@@ -434,13 +434,13 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
       rule_set_name: cdktn.stringToTerraform(this._ruleSetName),
       scan_enabled: cdktn.booleanToTerraform(this._scanEnabled),
       tls_policy: cdktn.stringToTerraform(this._tlsPolicy),
-      add_header_action: cdktn.listMapper(awsSesReceiptRuleAddHeaderActionPropertyToTerraform, true)(this._addHeaderAction.internalValue),
-      bounce_action: cdktn.listMapper(awsSesReceiptRuleBounceActionPropertyToTerraform, true)(this._bounceAction.internalValue),
-      lambda_action: cdktn.listMapper(awsSesReceiptRuleLambdaActionPropertyToTerraform, true)(this._lambdaAction.internalValue),
-      s3_action: cdktn.listMapper(awsSesReceiptRuleS3ActionPropertyToTerraform, true)(this._s3Action.internalValue),
-      sns_action: cdktn.listMapper(awsSesReceiptRuleSnsActionPropertyToTerraform, true)(this._snsAction.internalValue),
-      stop_action: cdktn.listMapper(awsSesReceiptRuleStopActionPropertyToTerraform, true)(this._stopAction.internalValue),
-      workmail_action: cdktn.listMapper(awsSesReceiptRuleWorkmailActionPropertyToTerraform, true)(this._workmailAction.internalValue),
+      add_header_action: cdktn.listMapper(tfReceiptRuleAddHeaderActionPropertyToTerraform, true)(this._addHeaderAction.internalValue),
+      bounce_action: cdktn.listMapper(tfReceiptRuleBounceActionPropertyToTerraform, true)(this._bounceAction.internalValue),
+      lambda_action: cdktn.listMapper(tfReceiptRuleLambdaActionPropertyToTerraform, true)(this._lambdaAction.internalValue),
+      s3_action: cdktn.listMapper(tfReceiptRuleS3ActionPropertyToTerraform, true)(this._s3Action.internalValue),
+      sns_action: cdktn.listMapper(tfReceiptRuleSnsActionPropertyToTerraform, true)(this._snsAction.internalValue),
+      stop_action: cdktn.listMapper(tfReceiptRuleStopActionPropertyToTerraform, true)(this._stopAction.internalValue),
+      workmail_action: cdktn.listMapper(tfReceiptRuleWorkmailActionPropertyToTerraform, true)(this._workmailAction.internalValue),
     };
   }
 
@@ -501,46 +501,46 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       add_header_action: {
-        value: cdktn.listMapperHcl(awsSesReceiptRuleAddHeaderActionPropertyToHclTerraform, true)(this._addHeaderAction.internalValue),
+        value: cdktn.listMapperHcl(tfReceiptRuleAddHeaderActionPropertyToHclTerraform, true)(this._addHeaderAction.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesReceiptRule.AddHeaderActionPropertyList",
+        storageClassType: "TfReceiptRule.AddHeaderActionPropertyList",
       },
       bounce_action: {
-        value: cdktn.listMapperHcl(awsSesReceiptRuleBounceActionPropertyToHclTerraform, true)(this._bounceAction.internalValue),
+        value: cdktn.listMapperHcl(tfReceiptRuleBounceActionPropertyToHclTerraform, true)(this._bounceAction.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesReceiptRule.BounceActionPropertyList",
+        storageClassType: "TfReceiptRule.BounceActionPropertyList",
       },
       lambda_action: {
-        value: cdktn.listMapperHcl(awsSesReceiptRuleLambdaActionPropertyToHclTerraform, true)(this._lambdaAction.internalValue),
+        value: cdktn.listMapperHcl(tfReceiptRuleLambdaActionPropertyToHclTerraform, true)(this._lambdaAction.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesReceiptRule.LambdaActionPropertyList",
+        storageClassType: "TfReceiptRule.LambdaActionPropertyList",
       },
       s3_action: {
-        value: cdktn.listMapperHcl(awsSesReceiptRuleS3ActionPropertyToHclTerraform, true)(this._s3Action.internalValue),
+        value: cdktn.listMapperHcl(tfReceiptRuleS3ActionPropertyToHclTerraform, true)(this._s3Action.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesReceiptRule.S3ActionPropertyList",
+        storageClassType: "TfReceiptRule.S3ActionPropertyList",
       },
       sns_action: {
-        value: cdktn.listMapperHcl(awsSesReceiptRuleSnsActionPropertyToHclTerraform, true)(this._snsAction.internalValue),
+        value: cdktn.listMapperHcl(tfReceiptRuleSnsActionPropertyToHclTerraform, true)(this._snsAction.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesReceiptRule.SnsActionPropertyList",
+        storageClassType: "TfReceiptRule.SnsActionPropertyList",
       },
       stop_action: {
-        value: cdktn.listMapperHcl(awsSesReceiptRuleStopActionPropertyToHclTerraform, true)(this._stopAction.internalValue),
+        value: cdktn.listMapperHcl(tfReceiptRuleStopActionPropertyToHclTerraform, true)(this._stopAction.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesReceiptRule.StopActionPropertyList",
+        storageClassType: "TfReceiptRule.StopActionPropertyList",
       },
       workmail_action: {
-        value: cdktn.listMapperHcl(awsSesReceiptRuleWorkmailActionPropertyToHclTerraform, true)(this._workmailAction.internalValue),
+        value: cdktn.listMapperHcl(tfReceiptRuleWorkmailActionPropertyToHclTerraform, true)(this._workmailAction.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesReceiptRule.WorkmailActionPropertyList",
+        storageClassType: "TfReceiptRule.WorkmailActionPropertyList",
       },
     };
 
@@ -549,7 +549,7 @@ export class AwsSesReceiptRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsSesReceiptRuleAddHeaderActionPropertyToTerraform(struct?: AwsSesReceiptRule.AddHeaderActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleAddHeaderActionPropertyToTerraform(struct?: TfReceiptRule.AddHeaderActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -562,7 +562,7 @@ export function awsSesReceiptRuleAddHeaderActionPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsSesReceiptRuleAddHeaderActionPropertyToHclTerraform(struct?: AwsSesReceiptRule.AddHeaderActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleAddHeaderActionPropertyToHclTerraform(struct?: TfReceiptRule.AddHeaderActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function awsSesReceiptRuleAddHeaderActionPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsSesReceiptRuleBounceActionPropertyToTerraform(struct?: AwsSesReceiptRule.BounceActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleBounceActionPropertyToTerraform(struct?: TfReceiptRule.BounceActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,7 +609,7 @@ export function awsSesReceiptRuleBounceActionPropertyToTerraform(struct?: AwsSes
 }
 
 
-export function awsSesReceiptRuleBounceActionPropertyToHclTerraform(struct?: AwsSesReceiptRule.BounceActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleBounceActionPropertyToHclTerraform(struct?: TfReceiptRule.BounceActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function awsSesReceiptRuleBounceActionPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsSesReceiptRuleLambdaActionPropertyToTerraform(struct?: AwsSesReceiptRule.LambdaActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleLambdaActionPropertyToTerraform(struct?: TfReceiptRule.LambdaActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,7 +672,7 @@ export function awsSesReceiptRuleLambdaActionPropertyToTerraform(struct?: AwsSes
 }
 
 
-export function awsSesReceiptRuleLambdaActionPropertyToHclTerraform(struct?: AwsSesReceiptRule.LambdaActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleLambdaActionPropertyToHclTerraform(struct?: TfReceiptRule.LambdaActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -709,7 +709,7 @@ export function awsSesReceiptRuleLambdaActionPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsSesReceiptRuleS3ActionPropertyToTerraform(struct?: AwsSesReceiptRule.S3ActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleS3ActionPropertyToTerraform(struct?: TfReceiptRule.S3ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -725,7 +725,7 @@ export function awsSesReceiptRuleS3ActionPropertyToTerraform(struct?: AwsSesRece
 }
 
 
-export function awsSesReceiptRuleS3ActionPropertyToHclTerraform(struct?: AwsSesReceiptRule.S3ActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleS3ActionPropertyToHclTerraform(struct?: TfReceiptRule.S3ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function awsSesReceiptRuleS3ActionPropertyToHclTerraform(struct?: AwsSesR
 }
 
 
-export function awsSesReceiptRuleSnsActionPropertyToTerraform(struct?: AwsSesReceiptRule.SnsActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleSnsActionPropertyToTerraform(struct?: TfReceiptRule.SnsActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -787,7 +787,7 @@ export function awsSesReceiptRuleSnsActionPropertyToTerraform(struct?: AwsSesRec
 }
 
 
-export function awsSesReceiptRuleSnsActionPropertyToHclTerraform(struct?: AwsSesReceiptRule.SnsActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleSnsActionPropertyToHclTerraform(struct?: TfReceiptRule.SnsActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function awsSesReceiptRuleSnsActionPropertyToHclTerraform(struct?: AwsSes
 }
 
 
-export function awsSesReceiptRuleStopActionPropertyToTerraform(struct?: AwsSesReceiptRule.StopActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleStopActionPropertyToTerraform(struct?: TfReceiptRule.StopActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -831,7 +831,7 @@ export function awsSesReceiptRuleStopActionPropertyToTerraform(struct?: AwsSesRe
 }
 
 
-export function awsSesReceiptRuleStopActionPropertyToHclTerraform(struct?: AwsSesReceiptRule.StopActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleStopActionPropertyToHclTerraform(struct?: TfReceiptRule.StopActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,7 +862,7 @@ export function awsSesReceiptRuleStopActionPropertyToHclTerraform(struct?: AwsSe
 }
 
 
-export function awsSesReceiptRuleWorkmailActionPropertyToTerraform(struct?: AwsSesReceiptRule.WorkmailActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleWorkmailActionPropertyToTerraform(struct?: TfReceiptRule.WorkmailActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -875,7 +875,7 @@ export function awsSesReceiptRuleWorkmailActionPropertyToTerraform(struct?: AwsS
 }
 
 
-export function awsSesReceiptRuleWorkmailActionPropertyToHclTerraform(struct?: AwsSesReceiptRule.WorkmailActionProperty | cdktn.IResolvable): any {
+export function tfReceiptRuleWorkmailActionPropertyToHclTerraform(struct?: TfReceiptRule.WorkmailActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -906,18 +906,18 @@ export function awsSesReceiptRuleWorkmailActionPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsSesReceiptRule {
+export namespace TfReceiptRule {
 export interface AddHeaderActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#header_name AwsSesReceiptRule#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#header_name TfReceiptRule#header_name}
   */
   readonly headerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#header_value AwsSesReceiptRule#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#header_value TfReceiptRule#header_value}
   */
   readonly headerValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position AwsSesReceiptRule#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position TfReceiptRule#position}
   */
   readonly position: number;
 }
@@ -1038,27 +1038,27 @@ export class AddHeaderActionPropertyList extends cdktn.ComplexList {
 }
 export interface BounceActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#message AwsSesReceiptRule#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#message TfReceiptRule#message}
   */
   readonly message: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position AwsSesReceiptRule#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position TfReceiptRule#position}
   */
   readonly position: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#sender AwsSesReceiptRule#sender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#sender TfReceiptRule#sender}
   */
   readonly sender: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#smtp_reply_code AwsSesReceiptRule#smtp_reply_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#smtp_reply_code TfReceiptRule#smtp_reply_code}
   */
   readonly smtpReplyCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#status_code AwsSesReceiptRule#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#status_code TfReceiptRule#status_code}
   */
   readonly statusCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn AwsSesReceiptRule#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn TfReceiptRule#topic_arn}
   */
   readonly topicArn?: string;
 }
@@ -1242,19 +1242,19 @@ export class BounceActionPropertyList extends cdktn.ComplexList {
 }
 export interface LambdaActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#function_arn AwsSesReceiptRule#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#function_arn TfReceiptRule#function_arn}
   */
   readonly functionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#invocation_type AwsSesReceiptRule#invocation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#invocation_type TfReceiptRule#invocation_type}
   */
   readonly invocationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position AwsSesReceiptRule#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position TfReceiptRule#position}
   */
   readonly position: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn AwsSesReceiptRule#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn TfReceiptRule#topic_arn}
   */
   readonly topicArn?: string;
 }
@@ -1400,27 +1400,27 @@ export class LambdaActionPropertyList extends cdktn.ComplexList {
 }
 export interface S3ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#bucket_name AwsSesReceiptRule#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#bucket_name TfReceiptRule#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#iam_role_arn AwsSesReceiptRule#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#iam_role_arn TfReceiptRule#iam_role_arn}
   */
   readonly iamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#kms_key_arn AwsSesReceiptRule#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#kms_key_arn TfReceiptRule#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#object_key_prefix AwsSesReceiptRule#object_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#object_key_prefix TfReceiptRule#object_key_prefix}
   */
   readonly objectKeyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position AwsSesReceiptRule#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position TfReceiptRule#position}
   */
   readonly position: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn AwsSesReceiptRule#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn TfReceiptRule#topic_arn}
   */
   readonly topicArn?: string;
 }
@@ -1610,15 +1610,15 @@ export class S3ActionPropertyList extends cdktn.ComplexList {
 }
 export interface SnsActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#encoding AwsSesReceiptRule#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#encoding TfReceiptRule#encoding}
   */
   readonly encoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position AwsSesReceiptRule#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position TfReceiptRule#position}
   */
   readonly position: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn AwsSesReceiptRule#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn TfReceiptRule#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -1742,15 +1742,15 @@ export class SnsActionPropertyList extends cdktn.ComplexList {
 }
 export interface StopActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position AwsSesReceiptRule#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position TfReceiptRule#position}
   */
   readonly position: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#scope AwsSesReceiptRule#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#scope TfReceiptRule#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn AwsSesReceiptRule#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn TfReceiptRule#topic_arn}
   */
   readonly topicArn?: string;
 }
@@ -1874,15 +1874,15 @@ export class StopActionPropertyList extends cdktn.ComplexList {
 }
 export interface WorkmailActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#organization_arn AwsSesReceiptRule#organization_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#organization_arn TfReceiptRule#organization_arn}
   */
   readonly organizationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position AwsSesReceiptRule#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#position TfReceiptRule#position}
   */
   readonly position: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn AwsSesReceiptRule#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_receipt_rule#topic_arn TfReceiptRule#topic_arn}
   */
   readonly topicArn?: string;
 }

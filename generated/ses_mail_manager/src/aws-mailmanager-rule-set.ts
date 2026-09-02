@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMailmanagerRuleSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfRuleSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name AwsMailmanagerRuleSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name TfRuleSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#region AwsMailmanagerRuleSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#region TfRuleSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#tags AwsMailmanagerRuleSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#tags TfRuleSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#rule AwsMailmanagerRuleSet#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#rule TfRuleSet#rule}
   */
-  readonly rule?: AwsMailmanagerRuleSet.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfRuleSet.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set aws_mailmanager_rule_set}
 */
-export class AwsMailmanagerRuleSet extends cdktn.TerraformResource {
+export class TfRuleSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsMailmanagerRuleSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMailmanagerRuleSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRuleSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMailmanagerRuleSet to import
-  * @param importFromId The id of the existing AwsMailmanagerRuleSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMailmanagerRuleSet to import is found
+  * @param importToId The construct id used in the generated config for the TfRuleSet to import
+  * @param importFromId The id of the existing TfRuleSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRuleSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mailmanager_rule_set", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsMailmanagerRuleSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMailmanagerRuleSetConfig
+  * @param options TfRuleSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMailmanagerRuleSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfRuleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mailmanager_rule_set',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class AwsMailmanagerRuleSet extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsMailmanagerRuleSet.RulePropertyList(this, "rule", false);
+  private _rule = new TfRuleSet.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsMailmanagerRuleSet.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfRuleSet.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -185,7 +185,7 @@ export class AwsMailmanagerRuleSet extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      rule: cdktn.listMapper(awsMailmanagerRuleSetRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(tfRuleSetRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -210,10 +210,10 @@ export class AwsMailmanagerRuleSet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsMailmanagerRuleSetRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfRuleSetRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMailmanagerRuleSet.RulePropertyList",
+        storageClassType: "TfRuleSet.RulePropertyList",
       },
     };
 
@@ -222,7 +222,7 @@ export class AwsMailmanagerRuleSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsMailmanagerRuleSetAddHeaderPropertyToTerraform(struct?: AwsMailmanagerRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleSetAddHeaderPropertyToTerraform(struct?: TfRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function awsMailmanagerRuleSetAddHeaderPropertyToTerraform(struct?: AwsMa
 }
 
 
-export function awsMailmanagerRuleSetAddHeaderPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleSetAddHeaderPropertyToHclTerraform(struct?: TfRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsMailmanagerRuleSetAddHeaderPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMailmanagerRuleSetArchivePropertyToTerraform(struct?: AwsMailmanagerRuleSet.ArchiveProperty | cdktn.IResolvable): any {
+export function tfRuleSetArchivePropertyToTerraform(struct?: TfRuleSet.ArchiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function awsMailmanagerRuleSetArchivePropertyToTerraform(struct?: AwsMail
 }
 
 
-export function awsMailmanagerRuleSetArchivePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.ArchiveProperty | cdktn.IResolvable): any {
+export function tfRuleSetArchivePropertyToHclTerraform(struct?: TfRuleSet.ArchiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function awsMailmanagerRuleSetArchivePropertyToHclTerraform(struct?: AwsM
 }
 
 
-export function awsMailmanagerRuleSetBouncePropertyToTerraform(struct?: AwsMailmanagerRuleSet.BounceProperty | cdktn.IResolvable): any {
+export function tfRuleSetBouncePropertyToTerraform(struct?: TfRuleSet.BounceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function awsMailmanagerRuleSetBouncePropertyToTerraform(struct?: AwsMailm
 }
 
 
-export function awsMailmanagerRuleSetBouncePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.BounceProperty | cdktn.IResolvable): any {
+export function tfRuleSetBouncePropertyToHclTerraform(struct?: TfRuleSet.BounceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function awsMailmanagerRuleSetBouncePropertyToHclTerraform(struct?: AwsMa
 }
 
 
-export function awsMailmanagerRuleSetDeliverToMailboxPropertyToTerraform(struct?: AwsMailmanagerRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
+export function tfRuleSetDeliverToMailboxPropertyToTerraform(struct?: TfRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function awsMailmanagerRuleSetDeliverToMailboxPropertyToTerraform(struct?
 }
 
 
-export function awsMailmanagerRuleSetDeliverToMailboxPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
+export function tfRuleSetDeliverToMailboxPropertyToHclTerraform(struct?: TfRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function awsMailmanagerRuleSetDeliverToMailboxPropertyToHclTerraform(stru
 }
 
 
-export function awsMailmanagerRuleSetDeliverToQBusinessPropertyToTerraform(struct?: AwsMailmanagerRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
+export function tfRuleSetDeliverToQBusinessPropertyToTerraform(struct?: TfRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function awsMailmanagerRuleSetDeliverToQBusinessPropertyToTerraform(struc
 }
 
 
-export function awsMailmanagerRuleSetDeliverToQBusinessPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
+export function tfRuleSetDeliverToQBusinessPropertyToHclTerraform(struct?: TfRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function awsMailmanagerRuleSetDeliverToQBusinessPropertyToHclTerraform(st
 }
 
 
-export function awsMailmanagerRuleSetDropPropertyToTerraform(struct?: AwsMailmanagerRuleSet.DropProperty | cdktn.IResolvable): any {
+export function tfRuleSetDropPropertyToTerraform(struct?: TfRuleSet.DropProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsMailmanagerRuleSetDropPropertyToTerraform(struct?: AwsMailman
 }
 
 
-export function awsMailmanagerRuleSetDropPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.DropProperty | cdktn.IResolvable): any {
+export function tfRuleSetDropPropertyToHclTerraform(struct?: TfRuleSet.DropProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function awsMailmanagerRuleSetDropPropertyToHclTerraform(struct?: AwsMail
 }
 
 
-export function awsMailmanagerRuleSetInvokeLambdaPropertyToTerraform(struct?: AwsMailmanagerRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
+export function tfRuleSetInvokeLambdaPropertyToTerraform(struct?: TfRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function awsMailmanagerRuleSetInvokeLambdaPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsMailmanagerRuleSetInvokeLambdaPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
+export function tfRuleSetInvokeLambdaPropertyToHclTerraform(struct?: TfRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,7 +542,7 @@ export function awsMailmanagerRuleSetInvokeLambdaPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMailmanagerRuleSetPublishToSnsPropertyToTerraform(struct?: AwsMailmanagerRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
+export function tfRuleSetPublishToSnsPropertyToTerraform(struct?: TfRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function awsMailmanagerRuleSetPublishToSnsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsMailmanagerRuleSetPublishToSnsPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
+export function tfRuleSetPublishToSnsPropertyToHclTerraform(struct?: TfRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function awsMailmanagerRuleSetPublishToSnsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMailmanagerRuleSetRelayPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RelayProperty | cdktn.IResolvable): any {
+export function tfRuleSetRelayPropertyToTerraform(struct?: TfRuleSet.RelayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function awsMailmanagerRuleSetRelayPropertyToTerraform(struct?: AwsMailma
 }
 
 
-export function awsMailmanagerRuleSetRelayPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RelayProperty | cdktn.IResolvable): any {
+export function tfRuleSetRelayPropertyToHclTerraform(struct?: TfRuleSet.RelayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function awsMailmanagerRuleSetRelayPropertyToHclTerraform(struct?: AwsMai
 }
 
 
-export function awsMailmanagerRuleSetReplaceRecipientPropertyToTerraform(struct?: AwsMailmanagerRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
+export function tfRuleSetReplaceRecipientPropertyToTerraform(struct?: TfRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function awsMailmanagerRuleSetReplaceRecipientPropertyToTerraform(struct?
 }
 
 
-export function awsMailmanagerRuleSetReplaceRecipientPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
+export function tfRuleSetReplaceRecipientPropertyToHclTerraform(struct?: TfRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function awsMailmanagerRuleSetReplaceRecipientPropertyToHclTerraform(stru
 }
 
 
-export function awsMailmanagerRuleSetSendPropertyToTerraform(struct?: AwsMailmanagerRuleSet.SendProperty | cdktn.IResolvable): any {
+export function tfRuleSetSendPropertyToTerraform(struct?: TfRuleSet.SendProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -686,7 +686,7 @@ export function awsMailmanagerRuleSetSendPropertyToTerraform(struct?: AwsMailman
 }
 
 
-export function awsMailmanagerRuleSetSendPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.SendProperty | cdktn.IResolvable): any {
+export function tfRuleSetSendPropertyToHclTerraform(struct?: TfRuleSet.SendProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -711,7 +711,7 @@ export function awsMailmanagerRuleSetSendPropertyToHclTerraform(struct?: AwsMail
 }
 
 
-export function awsMailmanagerRuleSetWriteToS3PropertyToTerraform(struct?: AwsMailmanagerRuleSet.WriteToS3Property | cdktn.IResolvable): any {
+export function tfRuleSetWriteToS3PropertyToTerraform(struct?: TfRuleSet.WriteToS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,7 +726,7 @@ export function awsMailmanagerRuleSetWriteToS3PropertyToTerraform(struct?: AwsMa
 }
 
 
-export function awsMailmanagerRuleSetWriteToS3PropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.WriteToS3Property | cdktn.IResolvable): any {
+export function tfRuleSetWriteToS3PropertyToHclTerraform(struct?: TfRuleSet.WriteToS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,102 +769,102 @@ export function awsMailmanagerRuleSetWriteToS3PropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMailmanagerRuleSetActionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.ActionProperty | cdktn.IResolvable): any {
+export function tfRuleSetActionPropertyToTerraform(struct?: TfRuleSet.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    add_header: cdktn.listMapper(awsMailmanagerRuleSetAddHeaderPropertyToTerraform, true)(struct!.addHeader),
-    archive: cdktn.listMapper(awsMailmanagerRuleSetArchivePropertyToTerraform, true)(struct!.archive),
-    bounce: cdktn.listMapper(awsMailmanagerRuleSetBouncePropertyToTerraform, true)(struct!.bounce),
-    deliver_to_mailbox: cdktn.listMapper(awsMailmanagerRuleSetDeliverToMailboxPropertyToTerraform, true)(struct!.deliverToMailbox),
-    deliver_to_q_business: cdktn.listMapper(awsMailmanagerRuleSetDeliverToQBusinessPropertyToTerraform, true)(struct!.deliverToQBusiness),
-    drop: cdktn.listMapper(awsMailmanagerRuleSetDropPropertyToTerraform, true)(struct!.drop),
-    invoke_lambda: cdktn.listMapper(awsMailmanagerRuleSetInvokeLambdaPropertyToTerraform, true)(struct!.invokeLambda),
-    publish_to_sns: cdktn.listMapper(awsMailmanagerRuleSetPublishToSnsPropertyToTerraform, true)(struct!.publishToSns),
-    relay: cdktn.listMapper(awsMailmanagerRuleSetRelayPropertyToTerraform, true)(struct!.relay),
-    replace_recipient: cdktn.listMapper(awsMailmanagerRuleSetReplaceRecipientPropertyToTerraform, true)(struct!.replaceRecipient),
-    send: cdktn.listMapper(awsMailmanagerRuleSetSendPropertyToTerraform, true)(struct!.send),
-    write_to_s3: cdktn.listMapper(awsMailmanagerRuleSetWriteToS3PropertyToTerraform, true)(struct!.writeToS3),
+    add_header: cdktn.listMapper(tfRuleSetAddHeaderPropertyToTerraform, true)(struct!.addHeader),
+    archive: cdktn.listMapper(tfRuleSetArchivePropertyToTerraform, true)(struct!.archive),
+    bounce: cdktn.listMapper(tfRuleSetBouncePropertyToTerraform, true)(struct!.bounce),
+    deliver_to_mailbox: cdktn.listMapper(tfRuleSetDeliverToMailboxPropertyToTerraform, true)(struct!.deliverToMailbox),
+    deliver_to_q_business: cdktn.listMapper(tfRuleSetDeliverToQBusinessPropertyToTerraform, true)(struct!.deliverToQBusiness),
+    drop: cdktn.listMapper(tfRuleSetDropPropertyToTerraform, true)(struct!.drop),
+    invoke_lambda: cdktn.listMapper(tfRuleSetInvokeLambdaPropertyToTerraform, true)(struct!.invokeLambda),
+    publish_to_sns: cdktn.listMapper(tfRuleSetPublishToSnsPropertyToTerraform, true)(struct!.publishToSns),
+    relay: cdktn.listMapper(tfRuleSetRelayPropertyToTerraform, true)(struct!.relay),
+    replace_recipient: cdktn.listMapper(tfRuleSetReplaceRecipientPropertyToTerraform, true)(struct!.replaceRecipient),
+    send: cdktn.listMapper(tfRuleSetSendPropertyToTerraform, true)(struct!.send),
+    write_to_s3: cdktn.listMapper(tfRuleSetWriteToS3PropertyToTerraform, true)(struct!.writeToS3),
   }
 }
 
 
-export function awsMailmanagerRuleSetActionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.ActionProperty | cdktn.IResolvable): any {
+export function tfRuleSetActionPropertyToHclTerraform(struct?: TfRuleSet.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     add_header: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetAddHeaderPropertyToHclTerraform, true)(struct!.addHeader),
+      value: cdktn.listMapperHcl(tfRuleSetAddHeaderPropertyToHclTerraform, true)(struct!.addHeader),
       isBlock: true,
       type: "list",
       storageClassType: "AddHeaderPropertyList",
     },
     archive: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetArchivePropertyToHclTerraform, true)(struct!.archive),
+      value: cdktn.listMapperHcl(tfRuleSetArchivePropertyToHclTerraform, true)(struct!.archive),
       isBlock: true,
       type: "list",
       storageClassType: "ArchivePropertyList",
     },
     bounce: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetBouncePropertyToHclTerraform, true)(struct!.bounce),
+      value: cdktn.listMapperHcl(tfRuleSetBouncePropertyToHclTerraform, true)(struct!.bounce),
       isBlock: true,
       type: "list",
       storageClassType: "BouncePropertyList",
     },
     deliver_to_mailbox: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetDeliverToMailboxPropertyToHclTerraform, true)(struct!.deliverToMailbox),
+      value: cdktn.listMapperHcl(tfRuleSetDeliverToMailboxPropertyToHclTerraform, true)(struct!.deliverToMailbox),
       isBlock: true,
       type: "list",
       storageClassType: "DeliverToMailboxPropertyList",
     },
     deliver_to_q_business: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetDeliverToQBusinessPropertyToHclTerraform, true)(struct!.deliverToQBusiness),
+      value: cdktn.listMapperHcl(tfRuleSetDeliverToQBusinessPropertyToHclTerraform, true)(struct!.deliverToQBusiness),
       isBlock: true,
       type: "list",
       storageClassType: "DeliverToQBusinessPropertyList",
     },
     drop: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetDropPropertyToHclTerraform, true)(struct!.drop),
+      value: cdktn.listMapperHcl(tfRuleSetDropPropertyToHclTerraform, true)(struct!.drop),
       isBlock: true,
       type: "list",
       storageClassType: "DropPropertyList",
     },
     invoke_lambda: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetInvokeLambdaPropertyToHclTerraform, true)(struct!.invokeLambda),
+      value: cdktn.listMapperHcl(tfRuleSetInvokeLambdaPropertyToHclTerraform, true)(struct!.invokeLambda),
       isBlock: true,
       type: "list",
       storageClassType: "InvokeLambdaPropertyList",
     },
     publish_to_sns: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetPublishToSnsPropertyToHclTerraform, true)(struct!.publishToSns),
+      value: cdktn.listMapperHcl(tfRuleSetPublishToSnsPropertyToHclTerraform, true)(struct!.publishToSns),
       isBlock: true,
       type: "list",
       storageClassType: "PublishToSnsPropertyList",
     },
     relay: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRelayPropertyToHclTerraform, true)(struct!.relay),
+      value: cdktn.listMapperHcl(tfRuleSetRelayPropertyToHclTerraform, true)(struct!.relay),
       isBlock: true,
       type: "list",
       storageClassType: "RelayPropertyList",
     },
     replace_recipient: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetReplaceRecipientPropertyToHclTerraform, true)(struct!.replaceRecipient),
+      value: cdktn.listMapperHcl(tfRuleSetReplaceRecipientPropertyToHclTerraform, true)(struct!.replaceRecipient),
       isBlock: true,
       type: "list",
       storageClassType: "ReplaceRecipientPropertyList",
     },
     send: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetSendPropertyToHclTerraform, true)(struct!.send),
+      value: cdktn.listMapperHcl(tfRuleSetSendPropertyToHclTerraform, true)(struct!.send),
       isBlock: true,
       type: "list",
       storageClassType: "SendPropertyList",
     },
     write_to_s3: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetWriteToS3PropertyToHclTerraform, true)(struct!.writeToS3),
+      value: cdktn.listMapperHcl(tfRuleSetWriteToS3PropertyToHclTerraform, true)(struct!.writeToS3),
       isBlock: true,
       type: "list",
       storageClassType: "WriteToS3PropertyList",
@@ -876,7 +876,7 @@ export function awsMailmanagerRuleSetActionPropertyToHclTerraform(struct?: AwsMa
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateAnaly
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateAnaly
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -925,7 +925,7 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateIsInA
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -950,20 +950,20 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateIsInA
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
-    is_in_address_list: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
+    analysis: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    is_in_address_list: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,13 +976,13 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluatePrope
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionEvaluateAnalysisPropertyList",
     },
     is_in_address_list: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionEvaluateIsInAddressListPropertyList",
@@ -994,19 +994,19 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluatePrope
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1019,7 +1019,7 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionPropertyToHcl
       storageClassType: "string",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionEvaluatePropertyList",
@@ -1031,7 +1031,7 @@ export function awsMailmanagerRuleSetRuleConditionBooleanExpressionPropertyToHcl
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionDmarcExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionDmarcExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1043,7 +1043,7 @@ export function awsMailmanagerRuleSetRuleConditionDmarcExpressionPropertyToTerra
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1068,7 +1068,7 @@ export function awsMailmanagerRuleSetRuleConditionDmarcExpressionPropertyToHclTe
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1079,7 +1079,7 @@ export function awsMailmanagerRuleSetRuleConditionIpExpressionEvaluatePropertyTo
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1098,7 +1098,7 @@ export function awsMailmanagerRuleSetRuleConditionIpExpressionEvaluatePropertyTo
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionIpExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionIpExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1106,12 +1106,12 @@ export function awsMailmanagerRuleSetRuleConditionIpExpressionPropertyToTerrafor
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionIpExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionIpExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1130,7 +1130,7 @@ export function awsMailmanagerRuleSetRuleConditionIpExpressionPropertyToHclTerra
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionIpExpressionEvaluatePropertyList",
@@ -1142,7 +1142,7 @@ export function awsMailmanagerRuleSetRuleConditionIpExpressionPropertyToHclTerra
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1153,7 +1153,7 @@ export function awsMailmanagerRuleSetRuleConditionNumberExpressionEvaluateProper
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1172,7 +1172,7 @@ export function awsMailmanagerRuleSetRuleConditionNumberExpressionEvaluateProper
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionNumberExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionNumberExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1180,12 +1180,12 @@ export function awsMailmanagerRuleSetRuleConditionNumberExpressionPropertyToTerr
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     value: cdktn.numberToTerraform(struct!.value),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionNumberExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionNumberExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1204,7 +1204,7 @@ export function awsMailmanagerRuleSetRuleConditionNumberExpressionPropertyToHclT
       storageClassType: "number",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionNumberExpressionEvaluatePropertyList",
@@ -1216,7 +1216,7 @@ export function awsMailmanagerRuleSetRuleConditionNumberExpressionPropertyToHclT
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1228,7 +1228,7 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateAnalys
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1253,7 +1253,7 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateAnalys
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1262,12 +1262,12 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateProper
     attribute: cdktn.stringToTerraform(struct!.attribute),
     client_certificate_attribute: cdktn.stringToTerraform(struct!.clientCertificateAttribute),
     mime_header_attribute: cdktn.stringToTerraform(struct!.mimeHeaderAttribute),
-    analysis: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1292,7 +1292,7 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateProper
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionStringExpressionEvaluateAnalysisPropertyList",
@@ -1304,7 +1304,7 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionEvaluateProper
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionStringExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionStringExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1312,12 +1312,12 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionPropertyToTerr
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionStringExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionStringExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1336,7 +1336,7 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionPropertyToHclT
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionStringExpressionEvaluatePropertyList",
@@ -1348,7 +1348,7 @@ export function awsMailmanagerRuleSetRuleConditionStringExpressionPropertyToHclT
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1360,7 +1360,7 @@ export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluateAnaly
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1385,19 +1385,19 @@ export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluateAnaly
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1410,7 +1410,7 @@ export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluatePrope
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionVerdictExpressionEvaluateAnalysisPropertyList",
@@ -1422,7 +1422,7 @@ export function awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluatePrope
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionVerdictExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionVerdictExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1430,12 +1430,12 @@ export function awsMailmanagerRuleSetRuleConditionVerdictExpressionPropertyToTer
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1454,7 +1454,7 @@ export function awsMailmanagerRuleSetRuleConditionVerdictExpressionPropertyToHcl
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionVerdictExpressionEvaluatePropertyList",
@@ -1466,60 +1466,60 @@ export function awsMailmanagerRuleSetRuleConditionVerdictExpressionPropertyToHcl
 }
 
 
-export function awsMailmanagerRuleSetConditionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.ConditionProperty | cdktn.IResolvable): any {
+export function tfRuleSetConditionPropertyToTerraform(struct?: TfRuleSet.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    boolean_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
-    dmarc_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
-    ip_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
-    number_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
-    string_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
-    verdict_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleConditionVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
+    boolean_expression: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
+    dmarc_expression: cdktn.listMapper(tfRuleSetRuleConditionDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
+    ip_expression: cdktn.listMapper(tfRuleSetRuleConditionIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
+    number_expression: cdktn.listMapper(tfRuleSetRuleConditionNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
+    string_expression: cdktn.listMapper(tfRuleSetRuleConditionStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
+    verdict_expression: cdktn.listMapper(tfRuleSetRuleConditionVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
   }
 }
 
 
-export function awsMailmanagerRuleSetConditionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.ConditionProperty | cdktn.IResolvable): any {
+export function tfRuleSetConditionPropertyToHclTerraform(struct?: TfRuleSet.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     boolean_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionPropertyList",
     },
     dmarc_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionDmarcExpressionPropertyList",
     },
     ip_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionIpExpressionPropertyList",
     },
     number_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionNumberExpressionPropertyList",
     },
     string_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionStringExpressionPropertyList",
     },
     verdict_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionVerdictExpressionPropertyList",
@@ -1531,7 +1531,7 @@ export function awsMailmanagerRuleSetConditionPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1543,7 +1543,7 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateAnalysis
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1568,7 +1568,7 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateAnalysis
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1580,7 +1580,7 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddr
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1605,20 +1605,20 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddr
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
-    is_in_address_list: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
+    analysis: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    is_in_address_list: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1631,13 +1631,13 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateProperty
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionEvaluateAnalysisPropertyList",
     },
     is_in_address_list: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyList",
@@ -1649,19 +1649,19 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluateProperty
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1674,7 +1674,7 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionPropertyToHclTer
       storageClassType: "string",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionEvaluatePropertyList",
@@ -1686,7 +1686,7 @@ export function awsMailmanagerRuleSetRuleUnlessBooleanExpressionPropertyToHclTer
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessDmarcExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessDmarcExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1698,7 +1698,7 @@ export function awsMailmanagerRuleSetRuleUnlessDmarcExpressionPropertyToTerrafor
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1723,7 +1723,7 @@ export function awsMailmanagerRuleSetRuleUnlessDmarcExpressionPropertyToHclTerra
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1734,7 +1734,7 @@ export function awsMailmanagerRuleSetRuleUnlessIpExpressionEvaluatePropertyToTer
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1753,7 +1753,7 @@ export function awsMailmanagerRuleSetRuleUnlessIpExpressionEvaluatePropertyToHcl
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessIpExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessIpExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1761,12 +1761,12 @@ export function awsMailmanagerRuleSetRuleUnlessIpExpressionPropertyToTerraform(s
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessIpExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessIpExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1785,7 +1785,7 @@ export function awsMailmanagerRuleSetRuleUnlessIpExpressionPropertyToHclTerrafor
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessIpExpressionEvaluatePropertyList",
@@ -1797,7 +1797,7 @@ export function awsMailmanagerRuleSetRuleUnlessIpExpressionPropertyToHclTerrafor
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1808,7 +1808,7 @@ export function awsMailmanagerRuleSetRuleUnlessNumberExpressionEvaluatePropertyT
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1827,7 +1827,7 @@ export function awsMailmanagerRuleSetRuleUnlessNumberExpressionEvaluatePropertyT
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessNumberExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessNumberExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1835,12 +1835,12 @@ export function awsMailmanagerRuleSetRuleUnlessNumberExpressionPropertyToTerrafo
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     value: cdktn.numberToTerraform(struct!.value),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1859,7 +1859,7 @@ export function awsMailmanagerRuleSetRuleUnlessNumberExpressionPropertyToHclTerr
       storageClassType: "number",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessNumberExpressionEvaluatePropertyList",
@@ -1871,7 +1871,7 @@ export function awsMailmanagerRuleSetRuleUnlessNumberExpressionPropertyToHclTerr
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1883,7 +1883,7 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluateAnalysisP
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1908,7 +1908,7 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluateAnalysisP
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1917,12 +1917,12 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluatePropertyT
     attribute: cdktn.stringToTerraform(struct!.attribute),
     client_certificate_attribute: cdktn.stringToTerraform(struct!.clientCertificateAttribute),
     mime_header_attribute: cdktn.stringToTerraform(struct!.mimeHeaderAttribute),
-    analysis: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1947,7 +1947,7 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluatePropertyT
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessStringExpressionEvaluateAnalysisPropertyList",
@@ -1959,7 +1959,7 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluatePropertyT
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessStringExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessStringExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1967,12 +1967,12 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionPropertyToTerrafo
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessStringExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessStringExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1991,7 +1991,7 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionPropertyToHclTerr
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessStringExpressionEvaluatePropertyList",
@@ -2003,7 +2003,7 @@ export function awsMailmanagerRuleSetRuleUnlessStringExpressionPropertyToHclTerr
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2015,7 +2015,7 @@ export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateAnalysis
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2040,19 +2040,19 @@ export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateAnalysis
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2065,7 +2065,7 @@ export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateProperty
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessVerdictExpressionEvaluateAnalysisPropertyList",
@@ -2077,7 +2077,7 @@ export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluateProperty
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionPropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessVerdictExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2085,12 +2085,12 @@ export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionPropertyToTerraf
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
+export function tfRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2109,7 +2109,7 @@ export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionPropertyToHclTer
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessVerdictExpressionEvaluatePropertyList",
@@ -2121,60 +2121,60 @@ export function awsMailmanagerRuleSetRuleUnlessVerdictExpressionPropertyToHclTer
 }
 
 
-export function awsMailmanagerRuleSetUnlessPropertyToTerraform(struct?: AwsMailmanagerRuleSet.UnlessProperty | cdktn.IResolvable): any {
+export function tfRuleSetUnlessPropertyToTerraform(struct?: TfRuleSet.UnlessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    boolean_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
-    dmarc_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
-    ip_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
-    number_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
-    string_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
-    verdict_expression: cdktn.listMapper(awsMailmanagerRuleSetRuleUnlessVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
+    boolean_expression: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
+    dmarc_expression: cdktn.listMapper(tfRuleSetRuleUnlessDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
+    ip_expression: cdktn.listMapper(tfRuleSetRuleUnlessIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
+    number_expression: cdktn.listMapper(tfRuleSetRuleUnlessNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
+    string_expression: cdktn.listMapper(tfRuleSetRuleUnlessStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
+    verdict_expression: cdktn.listMapper(tfRuleSetRuleUnlessVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
   }
 }
 
 
-export function awsMailmanagerRuleSetUnlessPropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.UnlessProperty | cdktn.IResolvable): any {
+export function tfRuleSetUnlessPropertyToHclTerraform(struct?: TfRuleSet.UnlessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     boolean_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionPropertyList",
     },
     dmarc_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessDmarcExpressionPropertyList",
     },
     ip_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessIpExpressionPropertyList",
     },
     number_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessNumberExpressionPropertyList",
     },
     string_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessStringExpressionPropertyList",
     },
     verdict_expression: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
+      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessVerdictExpressionPropertyList",
@@ -2186,21 +2186,21 @@ export function awsMailmanagerRuleSetUnlessPropertyToHclTerraform(struct?: AwsMa
 }
 
 
-export function awsMailmanagerRuleSetRulePropertyToTerraform(struct?: AwsMailmanagerRuleSet.RuleProperty | cdktn.IResolvable): any {
+export function tfRuleSetRulePropertyToTerraform(struct?: TfRuleSet.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    action: cdktn.listMapper(awsMailmanagerRuleSetActionPropertyToTerraform, true)(struct!.action),
-    condition: cdktn.listMapper(awsMailmanagerRuleSetConditionPropertyToTerraform, true)(struct!.condition),
-    unless: cdktn.listMapper(awsMailmanagerRuleSetUnlessPropertyToTerraform, true)(struct!.unless),
+    action: cdktn.listMapper(tfRuleSetActionPropertyToTerraform, true)(struct!.action),
+    condition: cdktn.listMapper(tfRuleSetConditionPropertyToTerraform, true)(struct!.condition),
+    unless: cdktn.listMapper(tfRuleSetUnlessPropertyToTerraform, true)(struct!.unless),
   }
 }
 
 
-export function awsMailmanagerRuleSetRulePropertyToHclTerraform(struct?: AwsMailmanagerRuleSet.RuleProperty | cdktn.IResolvable): any {
+export function tfRuleSetRulePropertyToHclTerraform(struct?: TfRuleSet.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2213,19 +2213,19 @@ export function awsMailmanagerRuleSetRulePropertyToHclTerraform(struct?: AwsMail
       storageClassType: "string",
     },
     action: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetActionPropertyToHclTerraform, true)(struct!.action),
+      value: cdktn.listMapperHcl(tfRuleSetActionPropertyToHclTerraform, true)(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     condition: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetConditionPropertyToHclTerraform, true)(struct!.condition),
+      value: cdktn.listMapperHcl(tfRuleSetConditionPropertyToHclTerraform, true)(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "ConditionPropertyList",
     },
     unless: {
-      value: cdktn.listMapperHcl(awsMailmanagerRuleSetUnlessPropertyToHclTerraform, true)(struct!.unless),
+      value: cdktn.listMapperHcl(tfRuleSetUnlessPropertyToHclTerraform, true)(struct!.unless),
       isBlock: true,
       type: "list",
       storageClassType: "UnlessPropertyList",
@@ -2237,14 +2237,14 @@ export function awsMailmanagerRuleSetRulePropertyToHclTerraform(struct?: AwsMail
 }
 
 
-export namespace AwsMailmanagerRuleSet {
+export namespace TfRuleSet {
 export interface AddHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_name AwsMailmanagerRuleSet#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_name TfRuleSet#header_name}
   */
   readonly headerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_value AwsMailmanagerRuleSet#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_value TfRuleSet#header_value}
   */
   readonly headerValue: string;
 }
@@ -2346,11 +2346,11 @@ export class AddHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface ArchiveProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#target_archive AwsMailmanagerRuleSet#target_archive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#target_archive TfRuleSet#target_archive}
   */
   readonly targetArchive: string;
 }
@@ -2455,31 +2455,31 @@ export class ArchivePropertyList extends cdktn.ComplexList {
 }
 export interface BounceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#diagnostic_message AwsMailmanagerRuleSet#diagnostic_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#diagnostic_message TfRuleSet#diagnostic_message}
   */
   readonly diagnosticMessage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#message AwsMailmanagerRuleSet#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#message TfRuleSet#message}
   */
   readonly message?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsMailmanagerRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#sender AwsMailmanagerRuleSet#sender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#sender TfRuleSet#sender}
   */
   readonly sender: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#smtp_reply_code AwsMailmanagerRuleSet#smtp_reply_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#smtp_reply_code TfRuleSet#smtp_reply_code}
   */
   readonly smtpReplyCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#status_code AwsMailmanagerRuleSet#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#status_code TfRuleSet#status_code}
   */
   readonly statusCode: string;
 }
@@ -2682,15 +2682,15 @@ export class BouncePropertyList extends cdktn.ComplexList {
 }
 export interface DeliverToMailboxProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mailbox_arn AwsMailmanagerRuleSet#mailbox_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mailbox_arn TfRuleSet#mailbox_arn}
   */
   readonly mailboxArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsMailmanagerRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -2814,19 +2814,19 @@ export class DeliverToMailboxPropertyList extends cdktn.ComplexList {
 }
 export interface DeliverToQBusinessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#application_id AwsMailmanagerRuleSet#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#application_id TfRuleSet#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#index_id AwsMailmanagerRuleSet#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#index_id TfRuleSet#index_id}
   */
   readonly indexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsMailmanagerRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -3029,23 +3029,23 @@ export class DropPropertyList extends cdktn.ComplexList {
 }
 export interface InvokeLambdaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#function_arn AwsMailmanagerRuleSet#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#function_arn TfRuleSet#function_arn}
   */
   readonly functionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invocation_type AwsMailmanagerRuleSet#invocation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invocation_type TfRuleSet#invocation_type}
   */
   readonly invocationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#retry_time_minutes AwsMailmanagerRuleSet#retry_time_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#retry_time_minutes TfRuleSet#retry_time_minutes}
   */
   readonly retryTimeMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsMailmanagerRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -3210,23 +3210,23 @@ export class InvokeLambdaPropertyList extends cdktn.ComplexList {
 }
 export interface PublishToSnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#encoding AwsMailmanagerRuleSet#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#encoding TfRuleSet#encoding}
   */
   readonly encoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#payload_type AwsMailmanagerRuleSet#payload_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#payload_type TfRuleSet#payload_type}
   */
   readonly payloadType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsMailmanagerRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#topic_arn AwsMailmanagerRuleSet#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#topic_arn TfRuleSet#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -3394,15 +3394,15 @@ export class PublishToSnsPropertyList extends cdktn.ComplexList {
 }
 export interface RelayProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mail_from AwsMailmanagerRuleSet#mail_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mail_from TfRuleSet#mail_from}
   */
   readonly mailFrom?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay AwsMailmanagerRuleSet#relay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay TfRuleSet#relay}
   */
   readonly relay: string;
 }
@@ -3529,7 +3529,7 @@ export class RelayPropertyList extends cdktn.ComplexList {
 }
 export interface ReplaceRecipientProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_with AwsMailmanagerRuleSet#replace_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_with TfRuleSet#replace_with}
   */
   readonly replaceWith?: string[];
 }
@@ -3615,11 +3615,11 @@ export class ReplaceRecipientPropertyList extends cdktn.ComplexList {
 }
 export interface SendProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsMailmanagerRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -3724,23 +3724,23 @@ export class SendPropertyList extends cdktn.ComplexList {
 }
 export interface WriteToS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsMailmanagerRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsMailmanagerRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_bucket AwsMailmanagerRuleSet#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_bucket TfRuleSet#s3_bucket}
   */
   readonly s3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_prefix AwsMailmanagerRuleSet#s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_prefix TfRuleSet#s3_prefix}
   */
   readonly s3Prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_sse_kms_key_id AwsMailmanagerRuleSet#s3_sse_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_sse_kms_key_id TfRuleSet#s3_sse_kms_key_id}
   */
   readonly s3SseKmsKeyId?: string;
 }
@@ -3910,73 +3910,73 @@ export interface ActionProperty {
   /**
   * add_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#add_header AwsMailmanagerRuleSet#add_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#add_header TfRuleSet#add_header}
   */
   readonly addHeader?: AddHeaderProperty[] | cdktn.IResolvable;
   /**
   * archive block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#archive AwsMailmanagerRuleSet#archive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#archive TfRuleSet#archive}
   */
   readonly archive?: ArchiveProperty[] | cdktn.IResolvable;
   /**
   * bounce block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#bounce AwsMailmanagerRuleSet#bounce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#bounce TfRuleSet#bounce}
   */
   readonly bounce?: BounceProperty[] | cdktn.IResolvable;
   /**
   * deliver_to_mailbox block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_mailbox AwsMailmanagerRuleSet#deliver_to_mailbox}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_mailbox TfRuleSet#deliver_to_mailbox}
   */
   readonly deliverToMailbox?: DeliverToMailboxProperty[] | cdktn.IResolvable;
   /**
   * deliver_to_q_business block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_q_business AwsMailmanagerRuleSet#deliver_to_q_business}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_q_business TfRuleSet#deliver_to_q_business}
   */
   readonly deliverToQBusiness?: DeliverToQBusinessProperty[] | cdktn.IResolvable;
   /**
   * drop block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#drop AwsMailmanagerRuleSet#drop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#drop TfRuleSet#drop}
   */
   readonly drop?: DropProperty[] | cdktn.IResolvable;
   /**
   * invoke_lambda block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invoke_lambda AwsMailmanagerRuleSet#invoke_lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invoke_lambda TfRuleSet#invoke_lambda}
   */
   readonly invokeLambda?: InvokeLambdaProperty[] | cdktn.IResolvable;
   /**
   * publish_to_sns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#publish_to_sns AwsMailmanagerRuleSet#publish_to_sns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#publish_to_sns TfRuleSet#publish_to_sns}
   */
   readonly publishToSns?: PublishToSnsProperty[] | cdktn.IResolvable;
   /**
   * relay block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay AwsMailmanagerRuleSet#relay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay TfRuleSet#relay}
   */
   readonly relay?: RelayProperty[] | cdktn.IResolvable;
   /**
   * replace_recipient block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_recipient AwsMailmanagerRuleSet#replace_recipient}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_recipient TfRuleSet#replace_recipient}
   */
   readonly replaceRecipient?: ReplaceRecipientProperty[] | cdktn.IResolvable;
   /**
   * send block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#send AwsMailmanagerRuleSet#send}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#send TfRuleSet#send}
   */
   readonly send?: SendProperty[] | cdktn.IResolvable;
   /**
   * write_to_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#write_to_s3 AwsMailmanagerRuleSet#write_to_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#write_to_s3 TfRuleSet#write_to_s3}
   */
   readonly writeToS3?: WriteToS3Property[] | cdktn.IResolvable;
 }
@@ -4304,11 +4304,11 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleConditionBooleanExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsMailmanagerRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsMailmanagerRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -4410,11 +4410,11 @@ export class RuleConditionBooleanExpressionEvaluateAnalysisPropertyList extends 
 }
 export interface RuleConditionBooleanExpressionEvaluateIsInAddressListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists AwsMailmanagerRuleSet#address_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists TfRuleSet#address_lists}
   */
   readonly addressLists: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -4516,19 +4516,19 @@ export class RuleConditionBooleanExpressionEvaluateIsInAddressListPropertyList e
 }
 export interface RuleConditionBooleanExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsMailmanagerRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
   */
   readonly analysis?: RuleConditionBooleanExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
   /**
   * is_in_address_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list AwsMailmanagerRuleSet#is_in_address_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list TfRuleSet#is_in_address_list}
   */
   readonly isInAddressList?: RuleConditionBooleanExpressionEvaluateIsInAddressListProperty[] | cdktn.IResolvable;
 }
@@ -4658,13 +4658,13 @@ export class RuleConditionBooleanExpressionEvaluatePropertyList extends cdktn.Co
 }
 export interface RuleConditionBooleanExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionBooleanExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -4769,11 +4769,11 @@ export class RuleConditionBooleanExpressionPropertyList extends cdktn.ComplexLis
 }
 export interface RuleConditionDmarcExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
 }
@@ -4875,7 +4875,7 @@ export class RuleConditionDmarcExpressionPropertyList extends cdktn.ComplexList 
 }
 export interface RuleConditionIpExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -4958,17 +4958,17 @@ export class RuleConditionIpExpressionEvaluatePropertyList extends cdktn.Complex
 }
 export interface RuleConditionIpExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionIpExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -5092,7 +5092,7 @@ export class RuleConditionIpExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleConditionNumberExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -5175,17 +5175,17 @@ export class RuleConditionNumberExpressionEvaluatePropertyList extends cdktn.Com
 }
 export interface RuleConditionNumberExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value AwsMailmanagerRuleSet#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value TfRuleSet#value}
   */
   readonly value: number;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionNumberExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -5309,11 +5309,11 @@ export class RuleConditionNumberExpressionPropertyList extends cdktn.ComplexList
 }
 export interface RuleConditionStringExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsMailmanagerRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsMailmanagerRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -5415,21 +5415,21 @@ export class RuleConditionStringExpressionEvaluateAnalysisPropertyList extends c
 }
 export interface RuleConditionStringExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute AwsMailmanagerRuleSet#client_certificate_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute TfRuleSet#client_certificate_attribute}
   */
   readonly clientCertificateAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute AwsMailmanagerRuleSet#mime_header_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute TfRuleSet#mime_header_attribute}
   */
   readonly mimeHeaderAttribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsMailmanagerRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
   */
   readonly analysis?: RuleConditionStringExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -5581,17 +5581,17 @@ export class RuleConditionStringExpressionEvaluatePropertyList extends cdktn.Com
 }
 export interface RuleConditionStringExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionStringExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -5715,11 +5715,11 @@ export class RuleConditionStringExpressionPropertyList extends cdktn.ComplexList
 }
 export interface RuleConditionVerdictExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsMailmanagerRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsMailmanagerRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -5821,13 +5821,13 @@ export class RuleConditionVerdictExpressionEvaluateAnalysisPropertyList extends 
 }
 export interface RuleConditionVerdictExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsMailmanagerRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
   */
   readonly analysis?: RuleConditionVerdictExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -5935,17 +5935,17 @@ export class RuleConditionVerdictExpressionEvaluatePropertyList extends cdktn.Co
 }
 export interface RuleConditionVerdictExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionVerdictExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -6071,37 +6071,37 @@ export interface ConditionProperty {
   /**
   * boolean_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression AwsMailmanagerRuleSet#boolean_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression TfRuleSet#boolean_expression}
   */
   readonly booleanExpression?: RuleConditionBooleanExpressionProperty[] | cdktn.IResolvable;
   /**
   * dmarc_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression AwsMailmanagerRuleSet#dmarc_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression TfRuleSet#dmarc_expression}
   */
   readonly dmarcExpression?: RuleConditionDmarcExpressionProperty[] | cdktn.IResolvable;
   /**
   * ip_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression AwsMailmanagerRuleSet#ip_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression TfRuleSet#ip_expression}
   */
   readonly ipExpression?: RuleConditionIpExpressionProperty[] | cdktn.IResolvable;
   /**
   * number_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression AwsMailmanagerRuleSet#number_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression TfRuleSet#number_expression}
   */
   readonly numberExpression?: RuleConditionNumberExpressionProperty[] | cdktn.IResolvable;
   /**
   * string_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression AwsMailmanagerRuleSet#string_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression TfRuleSet#string_expression}
   */
   readonly stringExpression?: RuleConditionStringExpressionProperty[] | cdktn.IResolvable;
   /**
   * verdict_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression AwsMailmanagerRuleSet#verdict_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression TfRuleSet#verdict_expression}
   */
   readonly verdictExpression?: RuleConditionVerdictExpressionProperty[] | cdktn.IResolvable;
 }
@@ -6297,11 +6297,11 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessBooleanExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsMailmanagerRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsMailmanagerRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -6403,11 +6403,11 @@ export class RuleUnlessBooleanExpressionEvaluateAnalysisPropertyList extends cdk
 }
 export interface RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists AwsMailmanagerRuleSet#address_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists TfRuleSet#address_lists}
   */
   readonly addressLists: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -6509,19 +6509,19 @@ export class RuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyList exte
 }
 export interface RuleUnlessBooleanExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsMailmanagerRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
   */
   readonly analysis?: RuleUnlessBooleanExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
   /**
   * is_in_address_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list AwsMailmanagerRuleSet#is_in_address_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list TfRuleSet#is_in_address_list}
   */
   readonly isInAddressList?: RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty[] | cdktn.IResolvable;
 }
@@ -6651,13 +6651,13 @@ export class RuleUnlessBooleanExpressionEvaluatePropertyList extends cdktn.Compl
 }
 export interface RuleUnlessBooleanExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessBooleanExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -6762,11 +6762,11 @@ export class RuleUnlessBooleanExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessDmarcExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
 }
@@ -6868,7 +6868,7 @@ export class RuleUnlessDmarcExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessIpExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -6951,17 +6951,17 @@ export class RuleUnlessIpExpressionEvaluatePropertyList extends cdktn.ComplexLis
 }
 export interface RuleUnlessIpExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessIpExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -7085,7 +7085,7 @@ export class RuleUnlessIpExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessNumberExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -7168,17 +7168,17 @@ export class RuleUnlessNumberExpressionEvaluatePropertyList extends cdktn.Comple
 }
 export interface RuleUnlessNumberExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value AwsMailmanagerRuleSet#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value TfRuleSet#value}
   */
   readonly value: number;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessNumberExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -7302,11 +7302,11 @@ export class RuleUnlessNumberExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessStringExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsMailmanagerRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsMailmanagerRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -7408,21 +7408,21 @@ export class RuleUnlessStringExpressionEvaluateAnalysisPropertyList extends cdkt
 }
 export interface RuleUnlessStringExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute AwsMailmanagerRuleSet#client_certificate_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute TfRuleSet#client_certificate_attribute}
   */
   readonly clientCertificateAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute AwsMailmanagerRuleSet#mime_header_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute TfRuleSet#mime_header_attribute}
   */
   readonly mimeHeaderAttribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsMailmanagerRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
   */
   readonly analysis?: RuleUnlessStringExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -7574,17 +7574,17 @@ export class RuleUnlessStringExpressionEvaluatePropertyList extends cdktn.Comple
 }
 export interface RuleUnlessStringExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessStringExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -7708,11 +7708,11 @@ export class RuleUnlessStringExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessVerdictExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsMailmanagerRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsMailmanagerRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -7814,13 +7814,13 @@ export class RuleUnlessVerdictExpressionEvaluateAnalysisPropertyList extends cdk
 }
 export interface RuleUnlessVerdictExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsMailmanagerRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsMailmanagerRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
   */
   readonly analysis?: RuleUnlessVerdictExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -7928,17 +7928,17 @@ export class RuleUnlessVerdictExpressionEvaluatePropertyList extends cdktn.Compl
 }
 export interface RuleUnlessVerdictExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsMailmanagerRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsMailmanagerRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsMailmanagerRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessVerdictExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -8064,37 +8064,37 @@ export interface UnlessProperty {
   /**
   * boolean_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression AwsMailmanagerRuleSet#boolean_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression TfRuleSet#boolean_expression}
   */
   readonly booleanExpression?: RuleUnlessBooleanExpressionProperty[] | cdktn.IResolvable;
   /**
   * dmarc_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression AwsMailmanagerRuleSet#dmarc_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression TfRuleSet#dmarc_expression}
   */
   readonly dmarcExpression?: RuleUnlessDmarcExpressionProperty[] | cdktn.IResolvable;
   /**
   * ip_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression AwsMailmanagerRuleSet#ip_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression TfRuleSet#ip_expression}
   */
   readonly ipExpression?: RuleUnlessIpExpressionProperty[] | cdktn.IResolvable;
   /**
   * number_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression AwsMailmanagerRuleSet#number_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression TfRuleSet#number_expression}
   */
   readonly numberExpression?: RuleUnlessNumberExpressionProperty[] | cdktn.IResolvable;
   /**
   * string_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression AwsMailmanagerRuleSet#string_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression TfRuleSet#string_expression}
   */
   readonly stringExpression?: RuleUnlessStringExpressionProperty[] | cdktn.IResolvable;
   /**
   * verdict_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression AwsMailmanagerRuleSet#verdict_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression TfRuleSet#verdict_expression}
   */
   readonly verdictExpression?: RuleUnlessVerdictExpressionProperty[] | cdktn.IResolvable;
 }
@@ -8290,25 +8290,25 @@ export class UnlessPropertyList extends cdktn.ComplexList {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name AwsMailmanagerRuleSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name TfRuleSet#name}
   */
   readonly name?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action AwsMailmanagerRuleSet#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action TfRuleSet#action}
   */
   readonly action?: ActionProperty[] | cdktn.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#condition AwsMailmanagerRuleSet#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#condition TfRuleSet#condition}
   */
   readonly condition?: ConditionProperty[] | cdktn.IResolvable;
   /**
   * unless block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#unless AwsMailmanagerRuleSet#unless}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#unless TfRuleSet#unless}
   */
   readonly unless?: UnlessProperty[] | cdktn.IResolvable;
 }

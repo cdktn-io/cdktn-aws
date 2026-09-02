@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerSiteToSiteVpnAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfSiteToSiteVpnAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#core_network_id AwsNetworkmanagerSiteToSiteVpnAttachment#core_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#core_network_id TfSiteToSiteVpnAttachment#core_network_id}
   */
   readonly coreNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#id AwsNetworkmanagerSiteToSiteVpnAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#id TfSiteToSiteVpnAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#routing_policy_label AwsNetworkmanagerSiteToSiteVpnAttachment#routing_policy_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#routing_policy_label TfSiteToSiteVpnAttachment#routing_policy_label}
   */
   readonly routingPolicyLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#tags AwsNetworkmanagerSiteToSiteVpnAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#tags TfSiteToSiteVpnAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#tags_all AwsNetworkmanagerSiteToSiteVpnAttachment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#tags_all TfSiteToSiteVpnAttachment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#vpn_connection_arn AwsNetworkmanagerSiteToSiteVpnAttachment#vpn_connection_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#vpn_connection_arn TfSiteToSiteVpnAttachment#vpn_connection_arn}
   */
   readonly vpnConnectionArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#timeouts AwsNetworkmanagerSiteToSiteVpnAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#timeouts TfSiteToSiteVpnAttachment#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerSiteToSiteVpnAttachment.TimeoutsProperty;
+  readonly timeouts?: TfSiteToSiteVpnAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment aws_networkmanager_site_to_site_vpn_attachment}
 */
-export class AwsNetworkmanagerSiteToSiteVpnAttachment extends cdktn.TerraformResource {
+export class TfSiteToSiteVpnAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsNetworkmanagerSiteToSiteVpnAttachment extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerSiteToSiteVpnAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSiteToSiteVpnAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerSiteToSiteVpnAttachment to import
-  * @param importFromId The id of the existing AwsNetworkmanagerSiteToSiteVpnAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerSiteToSiteVpnAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfSiteToSiteVpnAttachment to import
+  * @param importFromId The id of the existing TfSiteToSiteVpnAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSiteToSiteVpnAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_site_to_site_vpn_attachment", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsNetworkmanagerSiteToSiteVpnAttachment extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerSiteToSiteVpnAttachmentConfig
+  * @param options TfSiteToSiteVpnAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerSiteToSiteVpnAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfSiteToSiteVpnAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_site_to_site_vpn_attachment',
       terraformGeneratorMetadata: {
@@ -241,11 +241,11 @@ export class AwsNetworkmanagerSiteToSiteVpnAttachment extends cdktn.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerSiteToSiteVpnAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSiteToSiteVpnAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerSiteToSiteVpnAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfSiteToSiteVpnAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -268,7 +268,7 @@ export class AwsNetworkmanagerSiteToSiteVpnAttachment extends cdktn.TerraformRes
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpn_connection_arn: cdktn.stringToTerraform(this._vpnConnectionArn),
-      timeouts: awsNetworkmanagerSiteToSiteVpnAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfSiteToSiteVpnAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -311,10 +311,10 @@ export class AwsNetworkmanagerSiteToSiteVpnAttachment extends cdktn.TerraformRes
         storageClassType: "string",
       },
       timeouts: {
-        value: awsNetworkmanagerSiteToSiteVpnAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSiteToSiteVpnAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerSiteToSiteVpnAttachment.TimeoutsProperty",
+        storageClassType: "TfSiteToSiteVpnAttachment.TimeoutsProperty",
       },
     };
 
@@ -323,7 +323,7 @@ export class AwsNetworkmanagerSiteToSiteVpnAttachment extends cdktn.TerraformRes
   }
 }
 
-export function awsNetworkmanagerSiteToSiteVpnAttachmentTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerSiteToSiteVpnAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSiteToSiteVpnAttachmentTimeoutsPropertyToTerraform(struct?: TfSiteToSiteVpnAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function awsNetworkmanagerSiteToSiteVpnAttachmentTimeoutsPropertyToTerraf
 }
 
 
-export function awsNetworkmanagerSiteToSiteVpnAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerSiteToSiteVpnAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSiteToSiteVpnAttachmentTimeoutsPropertyToHclTerraform(struct?: TfSiteToSiteVpnAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,18 +367,18 @@ export function awsNetworkmanagerSiteToSiteVpnAttachmentTimeoutsPropertyToHclTer
 }
 
 
-export namespace AwsNetworkmanagerSiteToSiteVpnAttachment {
+export namespace TfSiteToSiteVpnAttachment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#create AwsNetworkmanagerSiteToSiteVpnAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#create TfSiteToSiteVpnAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#delete AwsNetworkmanagerSiteToSiteVpnAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#delete TfSiteToSiteVpnAttachment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#update AwsNetworkmanagerSiteToSiteVpnAttachment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site_to_site_vpn_attachment#update TfSiteToSiteVpnAttachment#update}
   */
   readonly update?: string;
 }

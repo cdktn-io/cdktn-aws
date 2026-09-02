@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesIdentityPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfIdentityPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#id AwsSesIdentityPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#id TfIdentityPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#identity AwsSesIdentityPolicy#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#identity TfIdentityPolicy#identity}
   */
   readonly identity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#name AwsSesIdentityPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#name TfIdentityPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#policy AwsSesIdentityPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#policy TfIdentityPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#region AwsSesIdentityPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#region TfIdentityPolicy#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsSesIdentityPolicyConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy aws_ses_identity_policy}
 */
-export class AwsSesIdentityPolicy extends cdktn.TerraformResource {
+export class TfIdentityPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsSesIdentityPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesIdentityPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIdentityPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesIdentityPolicy to import
-  * @param importFromId The id of the existing AwsSesIdentityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesIdentityPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfIdentityPolicy to import
+  * @param importFromId The id of the existing TfIdentityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_identity_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIdentityPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ses_identity_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsSesIdentityPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesIdentityPolicyConfig
+  * @param options TfIdentityPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesIdentityPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfIdentityPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ses_identity_policy',
       terraformGeneratorMetadata: {

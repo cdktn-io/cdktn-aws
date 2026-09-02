@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBackupPlanConfig extends cdktn.TerraformMetaArguments {
+export interface TfPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#id AwsBackupPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#id TfPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#name AwsBackupPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#name TfPlan#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#region AwsBackupPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#region TfPlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#tags AwsBackupPlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#tags TfPlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#tags_all AwsBackupPlan#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#tags_all TfPlan#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * advanced_backup_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#advanced_backup_setting AwsBackupPlan#advanced_backup_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#advanced_backup_setting TfPlan#advanced_backup_setting}
   */
-  readonly advancedBackupSetting?: AwsBackupPlan.AdvancedBackupSettingProperty[] | cdktn.IResolvable;
+  readonly advancedBackupSetting?: TfPlan.AdvancedBackupSettingProperty[] | cdktn.IResolvable;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#rule AwsBackupPlan#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#rule TfPlan#rule}
   */
-  readonly rule: AwsBackupPlan.RuleProperty[] | cdktn.IResolvable;
+  readonly rule: TfPlan.RuleProperty[] | cdktn.IResolvable;
   /**
   * scan_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scan_setting AwsBackupPlan#scan_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scan_setting TfPlan#scan_setting}
   */
-  readonly scanSetting?: AwsBackupPlan.ScanSettingProperty[] | cdktn.IResolvable;
+  readonly scanSetting?: TfPlan.ScanSettingProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan aws_backup_plan}
 */
-export class AwsBackupPlan extends cdktn.TerraformResource {
+export class TfPlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBackupPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBackupPlan to import
-  * @param importFromId The id of the existing AwsBackupPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBackupPlan to import is found
+  * @param importToId The construct id used in the generated config for the TfPlan to import
+  * @param importFromId The id of the existing TfPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_plan", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBackupPlanConfig
+  * @param options TfPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBackupPlanConfig) {
+  public constructor(scope: Construct, id: string, config: TfPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_plan',
       terraformGeneratorMetadata: {
@@ -204,11 +204,11 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
   }
 
   // advanced_backup_setting - computed: false, optional: true, required: false
-  private _advancedBackupSetting = new AwsBackupPlan.AdvancedBackupSettingPropertyList(this, "advanced_backup_setting", true);
+  private _advancedBackupSetting = new TfPlan.AdvancedBackupSettingPropertyList(this, "advanced_backup_setting", true);
   public get advancedBackupSetting() {
     return this._advancedBackupSetting;
   }
-  public putAdvancedBackupSetting(value: AwsBackupPlan.AdvancedBackupSettingProperty[] | cdktn.IResolvable) {
+  public putAdvancedBackupSetting(value: TfPlan.AdvancedBackupSettingProperty[] | cdktn.IResolvable) {
     this._advancedBackupSetting.internalValue = value;
   }
   public resetAdvancedBackupSetting() {
@@ -220,11 +220,11 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new AwsBackupPlan.RulePropertyList(this, "rule", true);
+  private _rule = new TfPlan.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsBackupPlan.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfPlan.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -233,11 +233,11 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
   }
 
   // scan_setting - computed: false, optional: true, required: false
-  private _scanSetting = new AwsBackupPlan.ScanSettingPropertyList(this, "scan_setting", true);
+  private _scanSetting = new TfPlan.ScanSettingPropertyList(this, "scan_setting", true);
   public get scanSetting() {
     return this._scanSetting;
   }
-  public putScanSetting(value: AwsBackupPlan.ScanSettingProperty[] | cdktn.IResolvable) {
+  public putScanSetting(value: TfPlan.ScanSettingProperty[] | cdktn.IResolvable) {
     this._scanSetting.internalValue = value;
   }
   public resetScanSetting() {
@@ -259,9 +259,9 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      advanced_backup_setting: cdktn.listMapper(awsBackupPlanAdvancedBackupSettingPropertyToTerraform, true)(this._advancedBackupSetting.internalValue),
-      rule: cdktn.listMapper(awsBackupPlanRulePropertyToTerraform, true)(this._rule.internalValue),
-      scan_setting: cdktn.listMapper(awsBackupPlanScanSettingPropertyToTerraform, true)(this._scanSetting.internalValue),
+      advanced_backup_setting: cdktn.listMapper(tfPlanAdvancedBackupSettingPropertyToTerraform, true)(this._advancedBackupSetting.internalValue),
+      rule: cdktn.listMapper(tfPlanRulePropertyToTerraform, true)(this._rule.internalValue),
+      scan_setting: cdktn.listMapper(tfPlanScanSettingPropertyToTerraform, true)(this._scanSetting.internalValue),
     };
   }
 
@@ -298,22 +298,22 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       advanced_backup_setting: {
-        value: cdktn.listMapperHcl(awsBackupPlanAdvancedBackupSettingPropertyToHclTerraform, true)(this._advancedBackupSetting.internalValue),
+        value: cdktn.listMapperHcl(tfPlanAdvancedBackupSettingPropertyToHclTerraform, true)(this._advancedBackupSetting.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBackupPlan.AdvancedBackupSettingPropertyList",
+        storageClassType: "TfPlan.AdvancedBackupSettingPropertyList",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsBackupPlanRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfPlanRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBackupPlan.RulePropertyList",
+        storageClassType: "TfPlan.RulePropertyList",
       },
       scan_setting: {
-        value: cdktn.listMapperHcl(awsBackupPlanScanSettingPropertyToHclTerraform, true)(this._scanSetting.internalValue),
+        value: cdktn.listMapperHcl(tfPlanScanSettingPropertyToHclTerraform, true)(this._scanSetting.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBackupPlan.ScanSettingPropertyList",
+        storageClassType: "TfPlan.ScanSettingPropertyList",
       },
     };
 
@@ -322,7 +322,7 @@ export class AwsBackupPlan extends cdktn.TerraformResource {
   }
 }
 
-export function awsBackupPlanAdvancedBackupSettingPropertyToTerraform(struct?: AwsBackupPlan.AdvancedBackupSettingProperty | cdktn.IResolvable): any {
+export function tfPlanAdvancedBackupSettingPropertyToTerraform(struct?: TfPlan.AdvancedBackupSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function awsBackupPlanAdvancedBackupSettingPropertyToTerraform(struct?: A
 }
 
 
-export function awsBackupPlanAdvancedBackupSettingPropertyToHclTerraform(struct?: AwsBackupPlan.AdvancedBackupSettingProperty | cdktn.IResolvable): any {
+export function tfPlanAdvancedBackupSettingPropertyToHclTerraform(struct?: TfPlan.AdvancedBackupSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function awsBackupPlanAdvancedBackupSettingPropertyToHclTerraform(struct?
 }
 
 
-export function awsBackupPlanRuleCopyActionLifecyclePropertyToTerraform(struct?: AwsBackupPlan.RuleCopyActionLifecyclePropertyOutputReference | AwsBackupPlan.RuleCopyActionLifecycleProperty): any {
+export function tfPlanRuleCopyActionLifecyclePropertyToTerraform(struct?: TfPlan.RuleCopyActionLifecyclePropertyOutputReference | TfPlan.RuleCopyActionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function awsBackupPlanRuleCopyActionLifecyclePropertyToTerraform(struct?:
 }
 
 
-export function awsBackupPlanRuleCopyActionLifecyclePropertyToHclTerraform(struct?: AwsBackupPlan.RuleCopyActionLifecyclePropertyOutputReference | AwsBackupPlan.RuleCopyActionLifecycleProperty): any {
+export function tfPlanRuleCopyActionLifecyclePropertyToHclTerraform(struct?: TfPlan.RuleCopyActionLifecyclePropertyOutputReference | TfPlan.RuleCopyActionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,19 +403,19 @@ export function awsBackupPlanRuleCopyActionLifecyclePropertyToHclTerraform(struc
 }
 
 
-export function awsBackupPlanCopyActionPropertyToTerraform(struct?: AwsBackupPlan.CopyActionProperty | cdktn.IResolvable): any {
+export function tfPlanCopyActionPropertyToTerraform(struct?: TfPlan.CopyActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     destination_vault_arn: cdktn.stringToTerraform(struct!.destinationVaultArn),
-    lifecycle: awsBackupPlanRuleCopyActionLifecyclePropertyToTerraform(struct!.lifecycle),
+    lifecycle: tfPlanRuleCopyActionLifecyclePropertyToTerraform(struct!.lifecycle),
   }
 }
 
 
-export function awsBackupPlanCopyActionPropertyToHclTerraform(struct?: AwsBackupPlan.CopyActionProperty | cdktn.IResolvable): any {
+export function tfPlanCopyActionPropertyToHclTerraform(struct?: TfPlan.CopyActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,7 +428,7 @@ export function awsBackupPlanCopyActionPropertyToHclTerraform(struct?: AwsBackup
       storageClassType: "string",
     },
     lifecycle: {
-      value: awsBackupPlanRuleCopyActionLifecyclePropertyToHclTerraform(struct!.lifecycle),
+      value: tfPlanRuleCopyActionLifecyclePropertyToHclTerraform(struct!.lifecycle),
       isBlock: true,
       type: "list",
       storageClassType: "RuleCopyActionLifecyclePropertyList",
@@ -440,7 +440,7 @@ export function awsBackupPlanCopyActionPropertyToHclTerraform(struct?: AwsBackup
 }
 
 
-export function awsBackupPlanRuleLifecyclePropertyToTerraform(struct?: AwsBackupPlan.RuleLifecyclePropertyOutputReference | AwsBackupPlan.RuleLifecycleProperty): any {
+export function tfPlanRuleLifecyclePropertyToTerraform(struct?: TfPlan.RuleLifecyclePropertyOutputReference | TfPlan.RuleLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function awsBackupPlanRuleLifecyclePropertyToTerraform(struct?: AwsBackup
 }
 
 
-export function awsBackupPlanRuleLifecyclePropertyToHclTerraform(struct?: AwsBackupPlan.RuleLifecyclePropertyOutputReference | AwsBackupPlan.RuleLifecycleProperty): any {
+export function tfPlanRuleLifecyclePropertyToHclTerraform(struct?: TfPlan.RuleLifecyclePropertyOutputReference | TfPlan.RuleLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function awsBackupPlanRuleLifecyclePropertyToHclTerraform(struct?: AwsBac
 }
 
 
-export function awsBackupPlanScanActionPropertyToTerraform(struct?: AwsBackupPlan.ScanActionProperty | cdktn.IResolvable): any {
+export function tfPlanScanActionPropertyToTerraform(struct?: TfPlan.ScanActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function awsBackupPlanScanActionPropertyToTerraform(struct?: AwsBackupPla
 }
 
 
-export function awsBackupPlanScanActionPropertyToHclTerraform(struct?: AwsBackupPlan.ScanActionProperty | cdktn.IResolvable): any {
+export function tfPlanScanActionPropertyToHclTerraform(struct?: TfPlan.ScanActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function awsBackupPlanScanActionPropertyToHclTerraform(struct?: AwsBackup
 }
 
 
-export function awsBackupPlanRulePropertyToTerraform(struct?: AwsBackupPlan.RuleProperty | cdktn.IResolvable): any {
+export function tfPlanRulePropertyToTerraform(struct?: TfPlan.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,14 +536,14 @@ export function awsBackupPlanRulePropertyToTerraform(struct?: AwsBackupPlan.Rule
     start_window: cdktn.numberToTerraform(struct!.startWindow),
     target_logically_air_gapped_backup_vault_arn: cdktn.stringToTerraform(struct!.targetLogicallyAirGappedBackupVaultArn),
     target_vault_name: cdktn.stringToTerraform(struct!.targetVaultName),
-    copy_action: cdktn.listMapper(awsBackupPlanCopyActionPropertyToTerraform, true)(struct!.copyAction),
-    lifecycle: awsBackupPlanRuleLifecyclePropertyToTerraform(struct!.lifecycle),
-    scan_action: cdktn.listMapper(awsBackupPlanScanActionPropertyToTerraform, true)(struct!.scanAction),
+    copy_action: cdktn.listMapper(tfPlanCopyActionPropertyToTerraform, true)(struct!.copyAction),
+    lifecycle: tfPlanRuleLifecyclePropertyToTerraform(struct!.lifecycle),
+    scan_action: cdktn.listMapper(tfPlanScanActionPropertyToTerraform, true)(struct!.scanAction),
   }
 }
 
 
-export function awsBackupPlanRulePropertyToHclTerraform(struct?: AwsBackupPlan.RuleProperty | cdktn.IResolvable): any {
+export function tfPlanRulePropertyToHclTerraform(struct?: TfPlan.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,19 +604,19 @@ export function awsBackupPlanRulePropertyToHclTerraform(struct?: AwsBackupPlan.R
       storageClassType: "string",
     },
     copy_action: {
-      value: cdktn.listMapperHcl(awsBackupPlanCopyActionPropertyToHclTerraform, true)(struct!.copyAction),
+      value: cdktn.listMapperHcl(tfPlanCopyActionPropertyToHclTerraform, true)(struct!.copyAction),
       isBlock: true,
       type: "set",
       storageClassType: "CopyActionPropertyList",
     },
     lifecycle: {
-      value: awsBackupPlanRuleLifecyclePropertyToHclTerraform(struct!.lifecycle),
+      value: tfPlanRuleLifecyclePropertyToHclTerraform(struct!.lifecycle),
       isBlock: true,
       type: "list",
       storageClassType: "RuleLifecyclePropertyList",
     },
     scan_action: {
-      value: cdktn.listMapperHcl(awsBackupPlanScanActionPropertyToHclTerraform, true)(struct!.scanAction),
+      value: cdktn.listMapperHcl(tfPlanScanActionPropertyToHclTerraform, true)(struct!.scanAction),
       isBlock: true,
       type: "set",
       storageClassType: "ScanActionPropertyList",
@@ -628,7 +628,7 @@ export function awsBackupPlanRulePropertyToHclTerraform(struct?: AwsBackupPlan.R
 }
 
 
-export function awsBackupPlanScanSettingPropertyToTerraform(struct?: AwsBackupPlan.ScanSettingProperty | cdktn.IResolvable): any {
+export function tfPlanScanSettingPropertyToTerraform(struct?: TfPlan.ScanSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function awsBackupPlanScanSettingPropertyToTerraform(struct?: AwsBackupPl
 }
 
 
-export function awsBackupPlanScanSettingPropertyToHclTerraform(struct?: AwsBackupPlan.ScanSettingProperty | cdktn.IResolvable): any {
+export function tfPlanScanSettingPropertyToHclTerraform(struct?: TfPlan.ScanSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,14 +672,14 @@ export function awsBackupPlanScanSettingPropertyToHclTerraform(struct?: AwsBacku
 }
 
 
-export namespace AwsBackupPlan {
+export namespace TfPlan {
 export interface AdvancedBackupSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#backup_options AwsBackupPlan#backup_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#backup_options TfPlan#backup_options}
   */
   readonly backupOptions: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#resource_type AwsBackupPlan#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#resource_type TfPlan#resource_type}
   */
   readonly resourceType: string;
 }
@@ -781,15 +781,15 @@ export class AdvancedBackupSettingPropertyList extends cdktn.ComplexList {
 }
 export interface RuleCopyActionLifecycleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#cold_storage_after AwsBackupPlan#cold_storage_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#cold_storage_after TfPlan#cold_storage_after}
   */
   readonly coldStorageAfter?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#delete_after AwsBackupPlan#delete_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#delete_after TfPlan#delete_after}
   */
   readonly deleteAfter?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#opt_in_to_archive_for_supported_resources AwsBackupPlan#opt_in_to_archive_for_supported_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#opt_in_to_archive_for_supported_resources TfPlan#opt_in_to_archive_for_supported_resources}
   */
   readonly optInToArchiveForSupportedResources?: boolean | cdktn.IResolvable;
 }
@@ -887,13 +887,13 @@ export class RuleCopyActionLifecyclePropertyOutputReference extends cdktn.Comple
 }
 export interface CopyActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#destination_vault_arn AwsBackupPlan#destination_vault_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#destination_vault_arn TfPlan#destination_vault_arn}
   */
   readonly destinationVaultArn: string;
   /**
   * lifecycle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#lifecycle AwsBackupPlan#lifecycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#lifecycle TfPlan#lifecycle}
   */
   readonly lifecycle?: RuleCopyActionLifecycleProperty;
 }
@@ -998,15 +998,15 @@ export class CopyActionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleLifecycleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#cold_storage_after AwsBackupPlan#cold_storage_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#cold_storage_after TfPlan#cold_storage_after}
   */
   readonly coldStorageAfter?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#delete_after AwsBackupPlan#delete_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#delete_after TfPlan#delete_after}
   */
   readonly deleteAfter?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#opt_in_to_archive_for_supported_resources AwsBackupPlan#opt_in_to_archive_for_supported_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#opt_in_to_archive_for_supported_resources TfPlan#opt_in_to_archive_for_supported_resources}
   */
   readonly optInToArchiveForSupportedResources?: boolean | cdktn.IResolvable;
 }
@@ -1104,11 +1104,11 @@ export class RuleLifecyclePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScanActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#malware_scanner AwsBackupPlan#malware_scanner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#malware_scanner TfPlan#malware_scanner}
   */
   readonly malwareScanner: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scan_mode AwsBackupPlan#scan_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scan_mode TfPlan#scan_mode}
   */
   readonly scanMode: string;
 }
@@ -1210,57 +1210,57 @@ export class ScanActionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#completion_window AwsBackupPlan#completion_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#completion_window TfPlan#completion_window}
   */
   readonly completionWindow?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#enable_continuous_backup AwsBackupPlan#enable_continuous_backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#enable_continuous_backup TfPlan#enable_continuous_backup}
   */
   readonly enableContinuousBackup?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#recovery_point_tags AwsBackupPlan#recovery_point_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#recovery_point_tags TfPlan#recovery_point_tags}
   */
   readonly recoveryPointTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#rule_name AwsBackupPlan#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#rule_name TfPlan#rule_name}
   */
   readonly ruleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#schedule AwsBackupPlan#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#schedule TfPlan#schedule}
   */
   readonly schedule?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#schedule_expression_timezone AwsBackupPlan#schedule_expression_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#schedule_expression_timezone TfPlan#schedule_expression_timezone}
   */
   readonly scheduleExpressionTimezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#start_window AwsBackupPlan#start_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#start_window TfPlan#start_window}
   */
   readonly startWindow?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#target_logically_air_gapped_backup_vault_arn AwsBackupPlan#target_logically_air_gapped_backup_vault_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#target_logically_air_gapped_backup_vault_arn TfPlan#target_logically_air_gapped_backup_vault_arn}
   */
   readonly targetLogicallyAirGappedBackupVaultArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#target_vault_name AwsBackupPlan#target_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#target_vault_name TfPlan#target_vault_name}
   */
   readonly targetVaultName: string;
   /**
   * copy_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#copy_action AwsBackupPlan#copy_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#copy_action TfPlan#copy_action}
   */
   readonly copyAction?: CopyActionProperty[] | cdktn.IResolvable;
   /**
   * lifecycle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#lifecycle AwsBackupPlan#lifecycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#lifecycle TfPlan#lifecycle}
   */
   readonly lifecycle?: RuleLifecycleProperty;
   /**
   * scan_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scan_action AwsBackupPlan#scan_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scan_action TfPlan#scan_action}
   */
   readonly scanAction?: ScanActionProperty[] | cdktn.IResolvable;
 }
@@ -1582,15 +1582,15 @@ export class RulePropertyList extends cdktn.ComplexList {
 }
 export interface ScanSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#malware_scanner AwsBackupPlan#malware_scanner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#malware_scanner TfPlan#malware_scanner}
   */
   readonly malwareScanner: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#resource_types AwsBackupPlan#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#resource_types TfPlan#resource_types}
   */
   readonly resourceTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scanner_role_arn AwsBackupPlan#scanner_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_plan#scanner_role_arn TfPlan#scanner_role_arn}
   */
   readonly scannerRoleArn: string;
 }

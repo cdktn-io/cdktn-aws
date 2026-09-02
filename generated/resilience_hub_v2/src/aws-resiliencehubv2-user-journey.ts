@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsResiliencehubv2UserJourneyConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserJourneyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#description AwsResiliencehubv2UserJourney#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#description TfUserJourney#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#name AwsResiliencehubv2UserJourney#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#name TfUserJourney#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#policy_arn AwsResiliencehubv2UserJourney#policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#policy_arn TfUserJourney#policy_arn}
   */
   readonly policyArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#region AwsResiliencehubv2UserJourney#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#region TfUserJourney#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#system_arn AwsResiliencehubv2UserJourney#system_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#system_arn TfUserJourney#system_arn}
   */
   readonly systemArn: string;
 }
@@ -33,7 +33,7 @@ export interface AwsResiliencehubv2UserJourneyConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey aws_resiliencehubv2_user_journey}
 */
-export class AwsResiliencehubv2UserJourney extends cdktn.TerraformResource {
+export class TfUserJourney extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsResiliencehubv2UserJourney extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsResiliencehubv2UserJourney resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUserJourney resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsResiliencehubv2UserJourney to import
-  * @param importFromId The id of the existing AwsResiliencehubv2UserJourney that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsResiliencehubv2UserJourney to import is found
+  * @param importToId The construct id used in the generated config for the TfUserJourney to import
+  * @param importFromId The id of the existing TfUserJourney that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_user_journey#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUserJourney to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_user_journey", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsResiliencehubv2UserJourney extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsResiliencehubv2UserJourneyConfig
+  * @param options TfUserJourneyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsResiliencehubv2UserJourneyConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserJourneyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_user_journey',
       terraformGeneratorMetadata: {

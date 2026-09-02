@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53RecoveryreadinessResourceSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#id AwsRoute53RecoveryreadinessResourceSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#id TfResourceSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resource_set_name AwsRoute53RecoveryreadinessResourceSet#resource_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resource_set_name TfResourceSet#resource_set_name}
   */
   readonly resourceSetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resource_set_type AwsRoute53RecoveryreadinessResourceSet#resource_set_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resource_set_type TfResourceSet#resource_set_type}
   */
   readonly resourceSetType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#tags AwsRoute53RecoveryreadinessResourceSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#tags TfResourceSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#tags_all AwsRoute53RecoveryreadinessResourceSet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#tags_all TfResourceSet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resources AwsRoute53RecoveryreadinessResourceSet#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resources TfResourceSet#resources}
   */
-  readonly resources: AwsRoute53RecoveryreadinessResourceSet.ResourcesProperty[] | cdktn.IResolvable;
+  readonly resources: TfResourceSet.ResourcesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#timeouts AwsRoute53RecoveryreadinessResourceSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#timeouts TfResourceSet#timeouts}
   */
-  readonly timeouts?: AwsRoute53RecoveryreadinessResourceSet.TimeoutsProperty;
+  readonly timeouts?: TfResourceSet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set aws_route53recoveryreadiness_resource_set}
 */
-export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResource {
+export class TfResourceSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53RecoveryreadinessResourceSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53RecoveryreadinessResourceSet to import
-  * @param importFromId The id of the existing AwsRoute53RecoveryreadinessResourceSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53RecoveryreadinessResourceSet to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceSet to import
+  * @param importFromId The id of the existing TfResourceSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53recoveryreadiness_resource_set", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53RecoveryreadinessResourceSetConfig
+  * @param options TfResourceSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53RecoveryreadinessResourceSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53recoveryreadiness_resource_set',
       terraformGeneratorMetadata: {
@@ -187,11 +187,11 @@ export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResou
   }
 
   // resources - computed: false, optional: false, required: true
-  private _resources = new AwsRoute53RecoveryreadinessResourceSet.ResourcesPropertyList(this, "resources", false);
+  private _resources = new TfResourceSet.ResourcesPropertyList(this, "resources", false);
   public get resources() {
     return this._resources;
   }
-  public putResources(value: AwsRoute53RecoveryreadinessResourceSet.ResourcesProperty[] | cdktn.IResolvable) {
+  public putResources(value: TfResourceSet.ResourcesProperty[] | cdktn.IResolvable) {
     this._resources.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -200,11 +200,11 @@ export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53RecoveryreadinessResourceSet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfResourceSet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53RecoveryreadinessResourceSet.TimeoutsProperty) {
+  public putTimeouts(value: TfResourceSet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -226,8 +226,8 @@ export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResou
       resource_set_type: cdktn.stringToTerraform(this._resourceSetType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      resources: cdktn.listMapper(awsRoute53RecoveryreadinessResourceSetResourcesPropertyToTerraform, true)(this._resources.internalValue),
-      timeouts: awsRoute53RecoveryreadinessResourceSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      resources: cdktn.listMapper(tfResourceSetResourcesPropertyToTerraform, true)(this._resources.internalValue),
+      timeouts: tfResourceSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -264,16 +264,16 @@ export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResou
         storageClassType: "stringMap",
       },
       resources: {
-        value: cdktn.listMapperHcl(awsRoute53RecoveryreadinessResourceSetResourcesPropertyToHclTerraform, true)(this._resources.internalValue),
+        value: cdktn.listMapperHcl(tfResourceSetResourcesPropertyToHclTerraform, true)(this._resources.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53RecoveryreadinessResourceSet.ResourcesPropertyList",
+        storageClassType: "TfResourceSet.ResourcesPropertyList",
       },
       timeouts: {
-        value: awsRoute53RecoveryreadinessResourceSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfResourceSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53RecoveryreadinessResourceSet.TimeoutsProperty",
+        storageClassType: "TfResourceSet.TimeoutsProperty",
       },
     };
 
@@ -282,7 +282,7 @@ export class AwsRoute53RecoveryreadinessResourceSet extends cdktn.TerraformResou
   }
 }
 
-export function awsRoute53RecoveryreadinessResourceSetNlbResourcePropertyToTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.NlbResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.NlbResourceProperty): any {
+export function tfResourceSetNlbResourcePropertyToTerraform(struct?: TfResourceSet.NlbResourcePropertyOutputReference | TfResourceSet.NlbResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function awsRoute53RecoveryreadinessResourceSetNlbResourcePropertyToTerra
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetNlbResourcePropertyToHclTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.NlbResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.NlbResourceProperty): any {
+export function tfResourceSetNlbResourcePropertyToHclTerraform(struct?: TfResourceSet.NlbResourcePropertyOutputReference | TfResourceSet.NlbResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function awsRoute53RecoveryreadinessResourceSetNlbResourcePropertyToHclTe
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetR53ResourcePropertyToTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.R53ResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.R53ResourceProperty): any {
+export function tfResourceSetR53ResourcePropertyToTerraform(struct?: TfResourceSet.R53ResourcePropertyOutputReference | TfResourceSet.R53ResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function awsRoute53RecoveryreadinessResourceSetR53ResourcePropertyToTerra
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetR53ResourcePropertyToHclTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.R53ResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.R53ResourceProperty): any {
+export function tfResourceSetR53ResourcePropertyToHclTerraform(struct?: TfResourceSet.R53ResourcePropertyOutputReference | TfResourceSet.R53ResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,32 +349,32 @@ export function awsRoute53RecoveryreadinessResourceSetR53ResourcePropertyToHclTe
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetTargetResourcePropertyToTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.TargetResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.TargetResourceProperty): any {
+export function tfResourceSetTargetResourcePropertyToTerraform(struct?: TfResourceSet.TargetResourcePropertyOutputReference | TfResourceSet.TargetResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    nlb_resource: awsRoute53RecoveryreadinessResourceSetNlbResourcePropertyToTerraform(struct!.nlbResource),
-    r53_resource: awsRoute53RecoveryreadinessResourceSetR53ResourcePropertyToTerraform(struct!.r53Resource),
+    nlb_resource: tfResourceSetNlbResourcePropertyToTerraform(struct!.nlbResource),
+    r53_resource: tfResourceSetR53ResourcePropertyToTerraform(struct!.r53Resource),
   }
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetTargetResourcePropertyToHclTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.TargetResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.TargetResourceProperty): any {
+export function tfResourceSetTargetResourcePropertyToHclTerraform(struct?: TfResourceSet.TargetResourcePropertyOutputReference | TfResourceSet.TargetResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     nlb_resource: {
-      value: awsRoute53RecoveryreadinessResourceSetNlbResourcePropertyToHclTerraform(struct!.nlbResource),
+      value: tfResourceSetNlbResourcePropertyToHclTerraform(struct!.nlbResource),
       isBlock: true,
       type: "list",
       storageClassType: "NlbResourcePropertyList",
     },
     r53_resource: {
-      value: awsRoute53RecoveryreadinessResourceSetR53ResourcePropertyToHclTerraform(struct!.r53Resource),
+      value: tfResourceSetR53ResourcePropertyToHclTerraform(struct!.r53Resource),
       isBlock: true,
       type: "list",
       storageClassType: "R53ResourcePropertyList",
@@ -386,7 +386,7 @@ export function awsRoute53RecoveryreadinessResourceSetTargetResourcePropertyToHc
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetDnsTargetResourcePropertyToTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.DnsTargetResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.DnsTargetResourceProperty): any {
+export function tfResourceSetDnsTargetResourcePropertyToTerraform(struct?: TfResourceSet.DnsTargetResourcePropertyOutputReference | TfResourceSet.DnsTargetResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,12 +396,12 @@ export function awsRoute53RecoveryreadinessResourceSetDnsTargetResourcePropertyT
     hosted_zone_arn: cdktn.stringToTerraform(struct!.hostedZoneArn),
     record_set_id: cdktn.stringToTerraform(struct!.recordSetId),
     record_type: cdktn.stringToTerraform(struct!.recordType),
-    target_resource: awsRoute53RecoveryreadinessResourceSetTargetResourcePropertyToTerraform(struct!.targetResource),
+    target_resource: tfResourceSetTargetResourcePropertyToTerraform(struct!.targetResource),
   }
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetDnsTargetResourcePropertyToHclTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.DnsTargetResourcePropertyOutputReference | AwsRoute53RecoveryreadinessResourceSet.DnsTargetResourceProperty): any {
+export function tfResourceSetDnsTargetResourcePropertyToHclTerraform(struct?: TfResourceSet.DnsTargetResourcePropertyOutputReference | TfResourceSet.DnsTargetResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function awsRoute53RecoveryreadinessResourceSetDnsTargetResourcePropertyT
       storageClassType: "string",
     },
     target_resource: {
-      value: awsRoute53RecoveryreadinessResourceSetTargetResourcePropertyToHclTerraform(struct!.targetResource),
+      value: tfResourceSetTargetResourcePropertyToHclTerraform(struct!.targetResource),
       isBlock: true,
       type: "list",
       storageClassType: "TargetResourcePropertyList",
@@ -444,7 +444,7 @@ export function awsRoute53RecoveryreadinessResourceSetDnsTargetResourcePropertyT
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetResourcesPropertyToTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.ResourcesProperty | cdktn.IResolvable): any {
+export function tfResourceSetResourcesPropertyToTerraform(struct?: TfResourceSet.ResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,12 +452,12 @@ export function awsRoute53RecoveryreadinessResourceSetResourcesPropertyToTerrafo
   return {
     readiness_scopes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.readinessScopes),
     resource_arn: cdktn.stringToTerraform(struct!.resourceArn),
-    dns_target_resource: awsRoute53RecoveryreadinessResourceSetDnsTargetResourcePropertyToTerraform(struct!.dnsTargetResource),
+    dns_target_resource: tfResourceSetDnsTargetResourcePropertyToTerraform(struct!.dnsTargetResource),
   }
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetResourcesPropertyToHclTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.ResourcesProperty | cdktn.IResolvable): any {
+export function tfResourceSetResourcesPropertyToHclTerraform(struct?: TfResourceSet.ResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function awsRoute53RecoveryreadinessResourceSetResourcesPropertyToHclTerr
       storageClassType: "string",
     },
     dns_target_resource: {
-      value: awsRoute53RecoveryreadinessResourceSetDnsTargetResourcePropertyToHclTerraform(struct!.dnsTargetResource),
+      value: tfResourceSetDnsTargetResourcePropertyToHclTerraform(struct!.dnsTargetResource),
       isBlock: true,
       type: "list",
       storageClassType: "DnsTargetResourcePropertyList",
@@ -488,7 +488,7 @@ export function awsRoute53RecoveryreadinessResourceSetResourcesPropertyToHclTerr
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetTimeoutsPropertyToTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceSetTimeoutsPropertyToTerraform(struct?: TfResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function awsRoute53RecoveryreadinessResourceSetTimeoutsPropertyToTerrafor
 }
 
 
-export function awsRoute53RecoveryreadinessResourceSetTimeoutsPropertyToHclTerraform(struct?: AwsRoute53RecoveryreadinessResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceSetTimeoutsPropertyToHclTerraform(struct?: TfResourceSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,10 +518,10 @@ export function awsRoute53RecoveryreadinessResourceSetTimeoutsPropertyToHclTerra
 }
 
 
-export namespace AwsRoute53RecoveryreadinessResourceSet {
+export namespace TfResourceSet {
 export interface NlbResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#arn AwsRoute53RecoveryreadinessResourceSet#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#arn TfResourceSet#arn}
   */
   readonly arn?: string;
 }
@@ -575,11 +575,11 @@ export class NlbResourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface R53ResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#domain_name AwsRoute53RecoveryreadinessResourceSet#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#domain_name TfResourceSet#domain_name}
   */
   readonly domainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#record_set_id AwsRoute53RecoveryreadinessResourceSet#record_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#record_set_id TfResourceSet#record_set_id}
   */
   readonly recordSetId?: string;
 }
@@ -657,13 +657,13 @@ export interface TargetResourceProperty {
   /**
   * nlb_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#nlb_resource AwsRoute53RecoveryreadinessResourceSet#nlb_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#nlb_resource TfResourceSet#nlb_resource}
   */
   readonly nlbResource?: NlbResourceProperty;
   /**
   * r53_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#r53_resource AwsRoute53RecoveryreadinessResourceSet#r53_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#r53_resource TfResourceSet#r53_resource}
   */
   readonly r53Resource?: R53ResourceProperty;
 }
@@ -739,25 +739,25 @@ export class TargetResourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DnsTargetResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#domain_name AwsRoute53RecoveryreadinessResourceSet#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#domain_name TfResourceSet#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#hosted_zone_arn AwsRoute53RecoveryreadinessResourceSet#hosted_zone_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#hosted_zone_arn TfResourceSet#hosted_zone_arn}
   */
   readonly hostedZoneArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#record_set_id AwsRoute53RecoveryreadinessResourceSet#record_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#record_set_id TfResourceSet#record_set_id}
   */
   readonly recordSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#record_type AwsRoute53RecoveryreadinessResourceSet#record_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#record_type TfResourceSet#record_type}
   */
   readonly recordType?: string;
   /**
   * target_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#target_resource AwsRoute53RecoveryreadinessResourceSet#target_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#target_resource TfResourceSet#target_resource}
   */
   readonly targetResource?: TargetResourceProperty;
 }
@@ -896,17 +896,17 @@ export class DnsTargetResourcePropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface ResourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#readiness_scopes AwsRoute53RecoveryreadinessResourceSet#readiness_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#readiness_scopes TfResourceSet#readiness_scopes}
   */
   readonly readinessScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resource_arn AwsRoute53RecoveryreadinessResourceSet#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#resource_arn TfResourceSet#resource_arn}
   */
   readonly resourceArn?: string;
   /**
   * dns_target_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#dns_target_resource AwsRoute53RecoveryreadinessResourceSet#dns_target_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#dns_target_resource TfResourceSet#dns_target_resource}
   */
   readonly dnsTargetResource?: DnsTargetResourceProperty;
 }
@@ -1041,7 +1041,7 @@ export class ResourcesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#delete AwsRoute53RecoveryreadinessResourceSet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_resource_set#delete TfResourceSet#delete}
   */
   readonly delete?: string;
 }

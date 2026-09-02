@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53RecordsExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface TfRecordsExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#zone_id AwsRoute53RecordsExclusive#zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#zone_id TfRecordsExclusive#zone_id}
   */
   readonly zoneId: string;
   /**
   * resource_record_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#resource_record_set AwsRoute53RecordsExclusive#resource_record_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#resource_record_set TfRecordsExclusive#resource_record_set}
   */
-  readonly resourceRecordSet?: AwsRoute53RecordsExclusive.ResourceRecordSetProperty[] | cdktn.IResolvable;
+  readonly resourceRecordSet?: TfRecordsExclusive.ResourceRecordSetProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#timeouts AwsRoute53RecordsExclusive#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#timeouts TfRecordsExclusive#timeouts}
   */
-  readonly timeouts?: AwsRoute53RecordsExclusive.TimeoutsProperty;
+  readonly timeouts?: TfRecordsExclusive.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive aws_route53_records_exclusive}
 */
-export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
+export class TfRecordsExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53RecordsExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRecordsExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53RecordsExclusive to import
-  * @param importFromId The id of the existing AwsRoute53RecordsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53RecordsExclusive to import is found
+  * @param importToId The construct id used in the generated config for the TfRecordsExclusive to import
+  * @param importFromId The id of the existing TfRecordsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRecordsExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_records_exclusive", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53RecordsExclusiveConfig
+  * @param options TfRecordsExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53RecordsExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: TfRecordsExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_records_exclusive',
       terraformGeneratorMetadata: {
@@ -98,11 +98,11 @@ export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
   }
 
   // resource_record_set - computed: false, optional: true, required: false
-  private _resourceRecordSet = new AwsRoute53RecordsExclusive.ResourceRecordSetPropertyList(this, "resource_record_set", true);
+  private _resourceRecordSet = new TfRecordsExclusive.ResourceRecordSetPropertyList(this, "resource_record_set", true);
   public get resourceRecordSet() {
     return this._resourceRecordSet;
   }
-  public putResourceRecordSet(value: AwsRoute53RecordsExclusive.ResourceRecordSetProperty[] | cdktn.IResolvable) {
+  public putResourceRecordSet(value: TfRecordsExclusive.ResourceRecordSetProperty[] | cdktn.IResolvable) {
     this._resourceRecordSet.internalValue = value;
   }
   public resetResourceRecordSet() {
@@ -114,11 +114,11 @@ export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53RecordsExclusive.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRecordsExclusive.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53RecordsExclusive.TimeoutsProperty) {
+  public putTimeouts(value: TfRecordsExclusive.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -136,8 +136,8 @@ export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       zone_id: cdktn.stringToTerraform(this._zoneId),
-      resource_record_set: cdktn.listMapper(awsRoute53RecordsExclusiveResourceRecordSetPropertyToTerraform, true)(this._resourceRecordSet.internalValue),
-      timeouts: awsRoute53RecordsExclusiveTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      resource_record_set: cdktn.listMapper(tfRecordsExclusiveResourceRecordSetPropertyToTerraform, true)(this._resourceRecordSet.internalValue),
+      timeouts: tfRecordsExclusiveTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -150,16 +150,16 @@ export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       resource_record_set: {
-        value: cdktn.listMapperHcl(awsRoute53RecordsExclusiveResourceRecordSetPropertyToHclTerraform, true)(this._resourceRecordSet.internalValue),
+        value: cdktn.listMapperHcl(tfRecordsExclusiveResourceRecordSetPropertyToHclTerraform, true)(this._resourceRecordSet.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsRoute53RecordsExclusive.ResourceRecordSetPropertyList",
+        storageClassType: "TfRecordsExclusive.ResourceRecordSetPropertyList",
       },
       timeouts: {
-        value: awsRoute53RecordsExclusiveTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRecordsExclusiveTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53RecordsExclusive.TimeoutsProperty",
+        storageClassType: "TfRecordsExclusive.TimeoutsProperty",
       },
     };
 
@@ -168,7 +168,7 @@ export class AwsRoute53RecordsExclusive extends cdktn.TerraformResource {
   }
 }
 
-export function awsRoute53RecordsExclusiveAliasTargetPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.AliasTargetProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveAliasTargetPropertyToTerraform(struct?: TfRecordsExclusive.AliasTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -181,7 +181,7 @@ export function awsRoute53RecordsExclusiveAliasTargetPropertyToTerraform(struct?
 }
 
 
-export function awsRoute53RecordsExclusiveAliasTargetPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.AliasTargetProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveAliasTargetPropertyToHclTerraform(struct?: TfRecordsExclusive.AliasTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,7 +212,7 @@ export function awsRoute53RecordsExclusiveAliasTargetPropertyToHclTerraform(stru
 }
 
 
-export function awsRoute53RecordsExclusiveCidrRoutingConfigPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.CidrRoutingConfigProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveCidrRoutingConfigPropertyToTerraform(struct?: TfRecordsExclusive.CidrRoutingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function awsRoute53RecordsExclusiveCidrRoutingConfigPropertyToTerraform(s
 }
 
 
-export function awsRoute53RecordsExclusiveCidrRoutingConfigPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.CidrRoutingConfigProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveCidrRoutingConfigPropertyToHclTerraform(struct?: TfRecordsExclusive.CidrRoutingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function awsRoute53RecordsExclusiveCidrRoutingConfigPropertyToHclTerrafor
 }
 
 
-export function awsRoute53RecordsExclusiveGeolocationPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.GeolocationProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveGeolocationPropertyToTerraform(struct?: TfRecordsExclusive.GeolocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function awsRoute53RecordsExclusiveGeolocationPropertyToTerraform(struct?
 }
 
 
-export function awsRoute53RecordsExclusiveGeolocationPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.GeolocationProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveGeolocationPropertyToHclTerraform(struct?: TfRecordsExclusive.GeolocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function awsRoute53RecordsExclusiveGeolocationPropertyToHclTerraform(stru
 }
 
 
-export function awsRoute53RecordsExclusiveCoordinatesPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.CoordinatesProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveCoordinatesPropertyToTerraform(struct?: TfRecordsExclusive.CoordinatesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function awsRoute53RecordsExclusiveCoordinatesPropertyToTerraform(struct?
 }
 
 
-export function awsRoute53RecordsExclusiveCoordinatesPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.CoordinatesProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveCoordinatesPropertyToHclTerraform(struct?: TfRecordsExclusive.CoordinatesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function awsRoute53RecordsExclusiveCoordinatesPropertyToHclTerraform(stru
 }
 
 
-export function awsRoute53RecordsExclusiveGeoproximityLocationPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.GeoproximityLocationProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveGeoproximityLocationPropertyToTerraform(struct?: TfRecordsExclusive.GeoproximityLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,12 +339,12 @@ export function awsRoute53RecordsExclusiveGeoproximityLocationPropertyToTerrafor
     aws_region: cdktn.stringToTerraform(struct!.awsRegion),
     bias: cdktn.numberToTerraform(struct!.bias),
     local_zone_group: cdktn.stringToTerraform(struct!.localZoneGroup),
-    coordinates: cdktn.listMapper(awsRoute53RecordsExclusiveCoordinatesPropertyToTerraform, true)(struct!.coordinates),
+    coordinates: cdktn.listMapper(tfRecordsExclusiveCoordinatesPropertyToTerraform, true)(struct!.coordinates),
   }
 }
 
 
-export function awsRoute53RecordsExclusiveGeoproximityLocationPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.GeoproximityLocationProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveGeoproximityLocationPropertyToHclTerraform(struct?: TfRecordsExclusive.GeoproximityLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function awsRoute53RecordsExclusiveGeoproximityLocationPropertyToHclTerra
       storageClassType: "string",
     },
     coordinates: {
-      value: cdktn.listMapperHcl(awsRoute53RecordsExclusiveCoordinatesPropertyToHclTerraform, true)(struct!.coordinates),
+      value: cdktn.listMapperHcl(tfRecordsExclusiveCoordinatesPropertyToHclTerraform, true)(struct!.coordinates),
       isBlock: true,
       type: "list",
       storageClassType: "CoordinatesPropertyList",
@@ -381,7 +381,7 @@ export function awsRoute53RecordsExclusiveGeoproximityLocationPropertyToHclTerra
 }
 
 
-export function awsRoute53RecordsExclusiveResourceRecordsPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.ResourceRecordsProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveResourceRecordsPropertyToTerraform(struct?: TfRecordsExclusive.ResourceRecordsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function awsRoute53RecordsExclusiveResourceRecordsPropertyToTerraform(str
 }
 
 
-export function awsRoute53RecordsExclusiveResourceRecordsPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.ResourceRecordsProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveResourceRecordsPropertyToHclTerraform(struct?: TfRecordsExclusive.ResourceRecordsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function awsRoute53RecordsExclusiveResourceRecordsPropertyToHclTerraform(
 }
 
 
-export function awsRoute53RecordsExclusiveResourceRecordSetPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.ResourceRecordSetProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveResourceRecordSetPropertyToTerraform(struct?: TfRecordsExclusive.ResourceRecordSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,16 +427,16 @@ export function awsRoute53RecordsExclusiveResourceRecordSetPropertyToTerraform(s
     ttl: cdktn.numberToTerraform(struct!.ttl),
     type: cdktn.stringToTerraform(struct!.type),
     weight: cdktn.numberToTerraform(struct!.weight),
-    alias_target: cdktn.listMapper(awsRoute53RecordsExclusiveAliasTargetPropertyToTerraform, true)(struct!.aliasTarget),
-    cidr_routing_config: cdktn.listMapper(awsRoute53RecordsExclusiveCidrRoutingConfigPropertyToTerraform, true)(struct!.cidrRoutingConfig),
-    geolocation: cdktn.listMapper(awsRoute53RecordsExclusiveGeolocationPropertyToTerraform, true)(struct!.geolocation),
-    geoproximity_location: cdktn.listMapper(awsRoute53RecordsExclusiveGeoproximityLocationPropertyToTerraform, true)(struct!.geoproximityLocation),
-    resource_records: cdktn.listMapper(awsRoute53RecordsExclusiveResourceRecordsPropertyToTerraform, true)(struct!.resourceRecords),
+    alias_target: cdktn.listMapper(tfRecordsExclusiveAliasTargetPropertyToTerraform, true)(struct!.aliasTarget),
+    cidr_routing_config: cdktn.listMapper(tfRecordsExclusiveCidrRoutingConfigPropertyToTerraform, true)(struct!.cidrRoutingConfig),
+    geolocation: cdktn.listMapper(tfRecordsExclusiveGeolocationPropertyToTerraform, true)(struct!.geolocation),
+    geoproximity_location: cdktn.listMapper(tfRecordsExclusiveGeoproximityLocationPropertyToTerraform, true)(struct!.geoproximityLocation),
+    resource_records: cdktn.listMapper(tfRecordsExclusiveResourceRecordsPropertyToTerraform, true)(struct!.resourceRecords),
   }
 }
 
 
-export function awsRoute53RecordsExclusiveResourceRecordSetPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.ResourceRecordSetProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveResourceRecordSetPropertyToHclTerraform(struct?: TfRecordsExclusive.ResourceRecordSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,31 +503,31 @@ export function awsRoute53RecordsExclusiveResourceRecordSetPropertyToHclTerrafor
       storageClassType: "number",
     },
     alias_target: {
-      value: cdktn.listMapperHcl(awsRoute53RecordsExclusiveAliasTargetPropertyToHclTerraform, true)(struct!.aliasTarget),
+      value: cdktn.listMapperHcl(tfRecordsExclusiveAliasTargetPropertyToHclTerraform, true)(struct!.aliasTarget),
       isBlock: true,
       type: "list",
       storageClassType: "AliasTargetPropertyList",
     },
     cidr_routing_config: {
-      value: cdktn.listMapperHcl(awsRoute53RecordsExclusiveCidrRoutingConfigPropertyToHclTerraform, true)(struct!.cidrRoutingConfig),
+      value: cdktn.listMapperHcl(tfRecordsExclusiveCidrRoutingConfigPropertyToHclTerraform, true)(struct!.cidrRoutingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CidrRoutingConfigPropertyList",
     },
     geolocation: {
-      value: cdktn.listMapperHcl(awsRoute53RecordsExclusiveGeolocationPropertyToHclTerraform, true)(struct!.geolocation),
+      value: cdktn.listMapperHcl(tfRecordsExclusiveGeolocationPropertyToHclTerraform, true)(struct!.geolocation),
       isBlock: true,
       type: "list",
       storageClassType: "GeolocationPropertyList",
     },
     geoproximity_location: {
-      value: cdktn.listMapperHcl(awsRoute53RecordsExclusiveGeoproximityLocationPropertyToHclTerraform, true)(struct!.geoproximityLocation),
+      value: cdktn.listMapperHcl(tfRecordsExclusiveGeoproximityLocationPropertyToHclTerraform, true)(struct!.geoproximityLocation),
       isBlock: true,
       type: "list",
       storageClassType: "GeoproximityLocationPropertyList",
     },
     resource_records: {
-      value: cdktn.listMapperHcl(awsRoute53RecordsExclusiveResourceRecordsPropertyToHclTerraform, true)(struct!.resourceRecords),
+      value: cdktn.listMapperHcl(tfRecordsExclusiveResourceRecordsPropertyToHclTerraform, true)(struct!.resourceRecords),
       isBlock: true,
       type: "list",
       storageClassType: "ResourceRecordsPropertyList",
@@ -539,7 +539,7 @@ export function awsRoute53RecordsExclusiveResourceRecordSetPropertyToHclTerrafor
 }
 
 
-export function awsRoute53RecordsExclusiveTimeoutsPropertyToTerraform(struct?: AwsRoute53RecordsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveTimeoutsPropertyToTerraform(struct?: TfRecordsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function awsRoute53RecordsExclusiveTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsRoute53RecordsExclusiveTimeoutsPropertyToHclTerraform(struct?: AwsRoute53RecordsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRecordsExclusiveTimeoutsPropertyToHclTerraform(struct?: TfRecordsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,18 +576,18 @@ export function awsRoute53RecordsExclusiveTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsRoute53RecordsExclusive {
+export namespace TfRecordsExclusive {
 export interface AliasTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#dns_name AwsRoute53RecordsExclusive#dns_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#dns_name TfRecordsExclusive#dns_name}
   */
   readonly dnsName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#evaluate_target_health AwsRoute53RecordsExclusive#evaluate_target_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#evaluate_target_health TfRecordsExclusive#evaluate_target_health}
   */
   readonly evaluateTargetHealth: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#hosted_zone_id AwsRoute53RecordsExclusive#hosted_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#hosted_zone_id TfRecordsExclusive#hosted_zone_id}
   */
   readonly hostedZoneId: string;
 }
@@ -708,11 +708,11 @@ export class AliasTargetPropertyList extends cdktn.ComplexList {
 }
 export interface CidrRoutingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#collection_id AwsRoute53RecordsExclusive#collection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#collection_id TfRecordsExclusive#collection_id}
   */
   readonly collectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#location_name AwsRoute53RecordsExclusive#location_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#location_name TfRecordsExclusive#location_name}
   */
   readonly locationName: string;
 }
@@ -814,15 +814,15 @@ export class CidrRoutingConfigPropertyList extends cdktn.ComplexList {
 }
 export interface GeolocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#continent_code AwsRoute53RecordsExclusive#continent_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#continent_code TfRecordsExclusive#continent_code}
   */
   readonly continentCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#country_code AwsRoute53RecordsExclusive#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#country_code TfRecordsExclusive#country_code}
   */
   readonly countryCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#subdivision_code AwsRoute53RecordsExclusive#subdivision_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#subdivision_code TfRecordsExclusive#subdivision_code}
   */
   readonly subdivisionCode?: string;
 }
@@ -952,11 +952,11 @@ export class GeolocationPropertyList extends cdktn.ComplexList {
 }
 export interface CoordinatesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#latitude AwsRoute53RecordsExclusive#latitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#latitude TfRecordsExclusive#latitude}
   */
   readonly latitude: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#longitude AwsRoute53RecordsExclusive#longitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#longitude TfRecordsExclusive#longitude}
   */
   readonly longitude: string;
 }
@@ -1058,21 +1058,21 @@ export class CoordinatesPropertyList extends cdktn.ComplexList {
 }
 export interface GeoproximityLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#aws_region AwsRoute53RecordsExclusive#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#aws_region TfRecordsExclusive#aws_region}
   */
   readonly awsRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#bias AwsRoute53RecordsExclusive#bias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#bias TfRecordsExclusive#bias}
   */
   readonly bias?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#local_zone_group AwsRoute53RecordsExclusive#local_zone_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#local_zone_group TfRecordsExclusive#local_zone_group}
   */
   readonly localZoneGroup?: string;
   /**
   * coordinates block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#coordinates AwsRoute53RecordsExclusive#coordinates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#coordinates TfRecordsExclusive#coordinates}
   */
   readonly coordinates?: CoordinatesProperty[] | cdktn.IResolvable;
 }
@@ -1224,7 +1224,7 @@ export class GeoproximityLocationPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceRecordsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#value AwsRoute53RecordsExclusive#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#value TfRecordsExclusive#value}
   */
   readonly value: string;
 }
@@ -1307,73 +1307,73 @@ export class ResourceRecordsPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceRecordSetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#failover AwsRoute53RecordsExclusive#failover}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#failover TfRecordsExclusive#failover}
   */
   readonly failover?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#health_check_id AwsRoute53RecordsExclusive#health_check_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#health_check_id TfRecordsExclusive#health_check_id}
   */
   readonly healthCheckId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#multi_value_answer AwsRoute53RecordsExclusive#multi_value_answer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#multi_value_answer TfRecordsExclusive#multi_value_answer}
   */
   readonly multiValueAnswer?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#name AwsRoute53RecordsExclusive#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#name TfRecordsExclusive#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#region AwsRoute53RecordsExclusive#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#region TfRecordsExclusive#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#set_identifier AwsRoute53RecordsExclusive#set_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#set_identifier TfRecordsExclusive#set_identifier}
   */
   readonly setIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#traffic_policy_instance_id AwsRoute53RecordsExclusive#traffic_policy_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#traffic_policy_instance_id TfRecordsExclusive#traffic_policy_instance_id}
   */
   readonly trafficPolicyInstanceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#ttl AwsRoute53RecordsExclusive#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#ttl TfRecordsExclusive#ttl}
   */
   readonly ttl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#type AwsRoute53RecordsExclusive#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#type TfRecordsExclusive#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#weight AwsRoute53RecordsExclusive#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#weight TfRecordsExclusive#weight}
   */
   readonly weight?: number;
   /**
   * alias_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#alias_target AwsRoute53RecordsExclusive#alias_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#alias_target TfRecordsExclusive#alias_target}
   */
   readonly aliasTarget?: AliasTargetProperty[] | cdktn.IResolvable;
   /**
   * cidr_routing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#cidr_routing_config AwsRoute53RecordsExclusive#cidr_routing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#cidr_routing_config TfRecordsExclusive#cidr_routing_config}
   */
   readonly cidrRoutingConfig?: CidrRoutingConfigProperty[] | cdktn.IResolvable;
   /**
   * geolocation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#geolocation AwsRoute53RecordsExclusive#geolocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#geolocation TfRecordsExclusive#geolocation}
   */
   readonly geolocation?: GeolocationProperty[] | cdktn.IResolvable;
   /**
   * geoproximity_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#geoproximity_location AwsRoute53RecordsExclusive#geoproximity_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#geoproximity_location TfRecordsExclusive#geoproximity_location}
   */
   readonly geoproximityLocation?: GeoproximityLocationProperty[] | cdktn.IResolvable;
   /**
   * resource_records block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#resource_records AwsRoute53RecordsExclusive#resource_records}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#resource_records TfRecordsExclusive#resource_records}
   */
   readonly resourceRecords?: ResourceRecordsProperty[] | cdktn.IResolvable;
 }
@@ -1766,13 +1766,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#create AwsRoute53RecordsExclusive#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#create TfRecordsExclusive#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#update AwsRoute53RecordsExclusive#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_records_exclusive#update TfRecordsExclusive#update}
   */
   readonly update?: string;
 }

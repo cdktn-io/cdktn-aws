@@ -5,49 +5,49 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreGatewayRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfGatewayRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#description AwsBedrockagentcoreGatewayRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#description TfGatewayRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#gateway_identifier AwsBedrockagentcoreGatewayRule#gateway_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#gateway_identifier TfGatewayRule#gateway_identifier}
   */
   readonly gatewayIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#priority AwsBedrockagentcoreGatewayRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#priority TfGatewayRule#priority}
   */
   readonly priority: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#region AwsBedrockagentcoreGatewayRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#region TfGatewayRule#region}
   */
   readonly region?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#action AwsBedrockagentcoreGatewayRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#action TfGatewayRule#action}
   */
-  readonly action?: AwsBedrockagentcoreGatewayRule.ActionProperty[] | cdktn.IResolvable;
+  readonly action?: TfGatewayRule.ActionProperty[] | cdktn.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#condition AwsBedrockagentcoreGatewayRule#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#condition TfGatewayRule#condition}
   */
-  readonly condition?: AwsBedrockagentcoreGatewayRule.ConditionProperty[] | cdktn.IResolvable;
+  readonly condition?: TfGatewayRule.ConditionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#timeouts AwsBedrockagentcoreGatewayRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#timeouts TfGatewayRule#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcoreGatewayRule.TimeoutsProperty;
+  readonly timeouts?: TfGatewayRule.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule aws_bedrockagentcore_gateway_rule}
 */
-export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
+export class TfGatewayRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -58,11 +58,11 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreGatewayRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGatewayRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreGatewayRule to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreGatewayRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreGatewayRule to import is found
+  * @param importToId The construct id used in the generated config for the TfGatewayRule to import
+  * @param importFromId The id of the existing TfGatewayRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGatewayRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_gateway_rule", importId: importFromId, provider });
@@ -77,9 +77,9 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreGatewayRuleConfig
+  * @param options TfGatewayRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreGatewayRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfGatewayRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_gateway_rule',
       terraformGeneratorMetadata: {
@@ -177,17 +177,17 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
   }
 
   // system - computed: true, optional: false, required: false
-  private _system = new AwsBedrockagentcoreGatewayRule.SystemPropertyList(this, "system", false);
+  private _system = new TfGatewayRule.SystemPropertyList(this, "system", false);
   public get systemAttribute() {
     return this._system;
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new AwsBedrockagentcoreGatewayRule.ActionPropertyList(this, "action", false);
+  private _action = new TfGatewayRule.ActionPropertyList(this, "action", false);
   public get action() {
     return this._action;
   }
-  public putAction(value: AwsBedrockagentcoreGatewayRule.ActionProperty[] | cdktn.IResolvable) {
+  public putAction(value: TfGatewayRule.ActionProperty[] | cdktn.IResolvable) {
     this._action.internalValue = value;
   }
   public resetAction() {
@@ -199,11 +199,11 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new AwsBedrockagentcoreGatewayRule.ConditionPropertyList(this, "condition", false);
+  private _condition = new TfGatewayRule.ConditionPropertyList(this, "condition", false);
   public get condition() {
     return this._condition;
   }
-  public putCondition(value: AwsBedrockagentcoreGatewayRule.ConditionProperty[] | cdktn.IResolvable) {
+  public putCondition(value: TfGatewayRule.ConditionProperty[] | cdktn.IResolvable) {
     this._condition.internalValue = value;
   }
   public resetCondition() {
@@ -215,11 +215,11 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcoreGatewayRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGatewayRule.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcoreGatewayRule.TimeoutsProperty) {
+  public putTimeouts(value: TfGatewayRule.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -240,9 +240,9 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
       gateway_identifier: cdktn.stringToTerraform(this._gatewayIdentifier),
       priority: cdktn.numberToTerraform(this._priority),
       region: cdktn.stringToTerraform(this._region),
-      action: cdktn.listMapper(awsBedrockagentcoreGatewayRuleActionPropertyToTerraform, true)(this._action.internalValue),
-      condition: cdktn.listMapper(awsBedrockagentcoreGatewayRuleConditionPropertyToTerraform, true)(this._condition.internalValue),
-      timeouts: awsBedrockagentcoreGatewayRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      action: cdktn.listMapper(tfGatewayRuleActionPropertyToTerraform, true)(this._action.internalValue),
+      condition: cdktn.listMapper(tfGatewayRuleConditionPropertyToTerraform, true)(this._condition.internalValue),
+      timeouts: tfGatewayRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -273,22 +273,22 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       action: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleActionPropertyToHclTerraform, true)(this._action.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayRuleActionPropertyToHclTerraform, true)(this._action.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGatewayRule.ActionPropertyList",
+        storageClassType: "TfGatewayRule.ActionPropertyList",
       },
       condition: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleConditionPropertyToHclTerraform, true)(this._condition.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayRuleConditionPropertyToHclTerraform, true)(this._condition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGatewayRule.ConditionPropertyList",
+        storageClassType: "TfGatewayRule.ConditionPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentcoreGatewayRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGatewayRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcoreGatewayRule.TimeoutsProperty",
+        storageClassType: "TfGatewayRule.TimeoutsProperty",
       },
     };
 
@@ -297,7 +297,7 @@ export class AwsBedrockagentcoreGatewayRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcoreGatewayRuleSystemPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.SystemProperty): any {
+export function tfGatewayRuleSystemPropertyToTerraform(struct?: TfGatewayRule.SystemProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function awsBedrockagentcoreGatewayRuleSystemPropertyToTerraform(struct?:
 }
 
 
-export function awsBedrockagentcoreGatewayRuleSystemPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.SystemProperty): any {
+export function tfGatewayRuleSystemPropertyToHclTerraform(struct?: TfGatewayRule.SystemProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function awsBedrockagentcoreGatewayRuleSystemPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockagentcoreGatewayRuleStaticOverridePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.StaticOverrideProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleStaticOverridePropertyToTerraform(struct?: TfGatewayRule.StaticOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function awsBedrockagentcoreGatewayRuleStaticOverridePropertyToTerraform(
 }
 
 
-export function awsBedrockagentcoreGatewayRuleStaticOverridePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.StaticOverrideProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleStaticOverridePropertyToHclTerraform(struct?: TfGatewayRule.StaticOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function awsBedrockagentcoreGatewayRuleStaticOverridePropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundleProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToTerraform(struct?: TfGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedO
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundleProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToHclTerraform(struct?: TfGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedO
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToTerraform(struct?: TfGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,12 +402,12 @@ export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedO
     metadata: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.metadata),
     name: cdktn.stringToTerraform(struct!.name),
     weight: cdktn.numberToTerraform(struct!.weight),
-    configuration_bundle: cdktn.listMapper(awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToTerraform, true)(struct!.configurationBundle),
+    configuration_bundle: cdktn.listMapper(tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToTerraform, true)(struct!.configurationBundle),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToHclTerraform(struct?: TfGatewayRule.ActionConfigurationBundleWeightedOverrideTrafficSplitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedO
       storageClassType: "number",
     },
     configuration_bundle: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToHclTerraform, true)(struct!.configurationBundle),
+      value: cdktn.listMapperHcl(tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyToHclTerraform, true)(struct!.configurationBundle),
       isBlock: true,
       type: "list",
       storageClassType: "ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundlePropertyList",
@@ -450,25 +450,25 @@ export function awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedO
 }
 
 
-export function awsBedrockagentcoreGatewayRuleWeightedOverridePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.WeightedOverrideProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleWeightedOverridePropertyToTerraform(struct?: TfGatewayRule.WeightedOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    traffic_split: cdktn.listMapper(awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToTerraform, true)(struct!.trafficSplit),
+    traffic_split: cdktn.listMapper(tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToTerraform, true)(struct!.trafficSplit),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleWeightedOverridePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.WeightedOverrideProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleWeightedOverridePropertyToHclTerraform(struct?: TfGatewayRule.WeightedOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     traffic_split: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToHclTerraform, true)(struct!.trafficSplit),
+      value: cdktn.listMapperHcl(tfGatewayRuleActionConfigurationBundleWeightedOverrideTrafficSplitPropertyToHclTerraform, true)(struct!.trafficSplit),
       isBlock: true,
       type: "list",
       storageClassType: "ActionConfigurationBundleWeightedOverrideTrafficSplitPropertyList",
@@ -480,32 +480,32 @@ export function awsBedrockagentcoreGatewayRuleWeightedOverridePropertyToHclTerra
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionConfigurationBundlePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionConfigurationBundleProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionConfigurationBundlePropertyToTerraform(struct?: TfGatewayRule.ActionConfigurationBundleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    static_override: cdktn.listMapper(awsBedrockagentcoreGatewayRuleStaticOverridePropertyToTerraform, true)(struct!.staticOverride),
-    weighted_override: cdktn.listMapper(awsBedrockagentcoreGatewayRuleWeightedOverridePropertyToTerraform, true)(struct!.weightedOverride),
+    static_override: cdktn.listMapper(tfGatewayRuleStaticOverridePropertyToTerraform, true)(struct!.staticOverride),
+    weighted_override: cdktn.listMapper(tfGatewayRuleWeightedOverridePropertyToTerraform, true)(struct!.weightedOverride),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionConfigurationBundlePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionConfigurationBundleProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionConfigurationBundlePropertyToHclTerraform(struct?: TfGatewayRule.ActionConfigurationBundleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     static_override: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleStaticOverridePropertyToHclTerraform, true)(struct!.staticOverride),
+      value: cdktn.listMapperHcl(tfGatewayRuleStaticOverridePropertyToHclTerraform, true)(struct!.staticOverride),
       isBlock: true,
       type: "list",
       storageClassType: "StaticOverridePropertyList",
     },
     weighted_override: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleWeightedOverridePropertyToHclTerraform, true)(struct!.weightedOverride),
+      value: cdktn.listMapperHcl(tfGatewayRuleWeightedOverridePropertyToHclTerraform, true)(struct!.weightedOverride),
       isBlock: true,
       type: "list",
       storageClassType: "WeightedOverridePropertyList",
@@ -517,7 +517,7 @@ export function awsBedrockagentcoreGatewayRuleActionConfigurationBundlePropertyT
 }
 
 
-export function awsBedrockagentcoreGatewayRuleStaticRoutePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.StaticRouteProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleStaticRoutePropertyToTerraform(struct?: TfGatewayRule.StaticRouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function awsBedrockagentcoreGatewayRuleStaticRoutePropertyToTerraform(str
 }
 
 
-export function awsBedrockagentcoreGatewayRuleStaticRoutePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.StaticRouteProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleStaticRoutePropertyToHclTerraform(struct?: TfGatewayRule.StaticRouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function awsBedrockagentcoreGatewayRuleStaticRoutePropertyToHclTerraform(
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionRouteToTargetWeightedRouteTrafficSplitProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToTerraform(struct?: TfGatewayRule.ActionRouteToTargetWeightedRouteTrafficSplitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -562,7 +562,7 @@ export function awsBedrockagentcoreGatewayRuleActionRouteToTargetWeightedRouteTr
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionRouteToTargetWeightedRouteTrafficSplitProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToHclTerraform(struct?: TfGatewayRule.ActionRouteToTargetWeightedRouteTrafficSplitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,25 +605,25 @@ export function awsBedrockagentcoreGatewayRuleActionRouteToTargetWeightedRouteTr
 }
 
 
-export function awsBedrockagentcoreGatewayRuleWeightedRoutePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.WeightedRouteProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleWeightedRoutePropertyToTerraform(struct?: TfGatewayRule.WeightedRouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    traffic_split: cdktn.listMapper(awsBedrockagentcoreGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToTerraform, true)(struct!.trafficSplit),
+    traffic_split: cdktn.listMapper(tfGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToTerraform, true)(struct!.trafficSplit),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleWeightedRoutePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.WeightedRouteProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleWeightedRoutePropertyToHclTerraform(struct?: TfGatewayRule.WeightedRouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     traffic_split: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToHclTerraform, true)(struct!.trafficSplit),
+      value: cdktn.listMapperHcl(tfGatewayRuleActionRouteToTargetWeightedRouteTrafficSplitPropertyToHclTerraform, true)(struct!.trafficSplit),
       isBlock: true,
       type: "list",
       storageClassType: "ActionRouteToTargetWeightedRouteTrafficSplitPropertyList",
@@ -635,32 +635,32 @@ export function awsBedrockagentcoreGatewayRuleWeightedRoutePropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreGatewayRuleRouteToTargetPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.RouteToTargetProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleRouteToTargetPropertyToTerraform(struct?: TfGatewayRule.RouteToTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    static_route: cdktn.listMapper(awsBedrockagentcoreGatewayRuleStaticRoutePropertyToTerraform, true)(struct!.staticRoute),
-    weighted_route: cdktn.listMapper(awsBedrockagentcoreGatewayRuleWeightedRoutePropertyToTerraform, true)(struct!.weightedRoute),
+    static_route: cdktn.listMapper(tfGatewayRuleStaticRoutePropertyToTerraform, true)(struct!.staticRoute),
+    weighted_route: cdktn.listMapper(tfGatewayRuleWeightedRoutePropertyToTerraform, true)(struct!.weightedRoute),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleRouteToTargetPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.RouteToTargetProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleRouteToTargetPropertyToHclTerraform(struct?: TfGatewayRule.RouteToTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     static_route: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleStaticRoutePropertyToHclTerraform, true)(struct!.staticRoute),
+      value: cdktn.listMapperHcl(tfGatewayRuleStaticRoutePropertyToHclTerraform, true)(struct!.staticRoute),
       isBlock: true,
       type: "list",
       storageClassType: "StaticRoutePropertyList",
     },
     weighted_route: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleWeightedRoutePropertyToHclTerraform, true)(struct!.weightedRoute),
+      value: cdktn.listMapperHcl(tfGatewayRuleWeightedRoutePropertyToHclTerraform, true)(struct!.weightedRoute),
       isBlock: true,
       type: "list",
       storageClassType: "WeightedRoutePropertyList",
@@ -672,32 +672,32 @@ export function awsBedrockagentcoreGatewayRuleRouteToTargetPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionPropertyToTerraform(struct?: TfGatewayRule.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    configuration_bundle: cdktn.listMapper(awsBedrockagentcoreGatewayRuleActionConfigurationBundlePropertyToTerraform, true)(struct!.configurationBundle),
-    route_to_target: cdktn.listMapper(awsBedrockagentcoreGatewayRuleRouteToTargetPropertyToTerraform, true)(struct!.routeToTarget),
+    configuration_bundle: cdktn.listMapper(tfGatewayRuleActionConfigurationBundlePropertyToTerraform, true)(struct!.configurationBundle),
+    route_to_target: cdktn.listMapper(tfGatewayRuleRouteToTargetPropertyToTerraform, true)(struct!.routeToTarget),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleActionPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.ActionProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleActionPropertyToHclTerraform(struct?: TfGatewayRule.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     configuration_bundle: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleActionConfigurationBundlePropertyToHclTerraform, true)(struct!.configurationBundle),
+      value: cdktn.listMapperHcl(tfGatewayRuleActionConfigurationBundlePropertyToHclTerraform, true)(struct!.configurationBundle),
       isBlock: true,
       type: "list",
       storageClassType: "ActionConfigurationBundlePropertyList",
     },
     route_to_target: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleRouteToTargetPropertyToHclTerraform, true)(struct!.routeToTarget),
+      value: cdktn.listMapperHcl(tfGatewayRuleRouteToTargetPropertyToHclTerraform, true)(struct!.routeToTarget),
       isBlock: true,
       type: "list",
       storageClassType: "RouteToTargetPropertyList",
@@ -709,7 +709,7 @@ export function awsBedrockagentcoreGatewayRuleActionPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockagentcoreGatewayRuleMatchPathsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.MatchPathsProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleMatchPathsPropertyToTerraform(struct?: TfGatewayRule.MatchPathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function awsBedrockagentcoreGatewayRuleMatchPathsPropertyToTerraform(stru
 }
 
 
-export function awsBedrockagentcoreGatewayRuleMatchPathsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.MatchPathsProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleMatchPathsPropertyToHclTerraform(struct?: TfGatewayRule.MatchPathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,7 +739,7 @@ export function awsBedrockagentcoreGatewayRuleMatchPathsPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentcoreGatewayRuleIamPrincipalPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.IamPrincipalProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleIamPrincipalPropertyToTerraform(struct?: TfGatewayRule.IamPrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -751,7 +751,7 @@ export function awsBedrockagentcoreGatewayRuleIamPrincipalPropertyToTerraform(st
 }
 
 
-export function awsBedrockagentcoreGatewayRuleIamPrincipalPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.IamPrincipalProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleIamPrincipalPropertyToHclTerraform(struct?: TfGatewayRule.IamPrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,25 +776,25 @@ export function awsBedrockagentcoreGatewayRuleIamPrincipalPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreGatewayRuleAnyOfPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.AnyOfProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleAnyOfPropertyToTerraform(struct?: TfGatewayRule.AnyOfProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iam_principal: cdktn.listMapper(awsBedrockagentcoreGatewayRuleIamPrincipalPropertyToTerraform, true)(struct!.iamPrincipal),
+    iam_principal: cdktn.listMapper(tfGatewayRuleIamPrincipalPropertyToTerraform, true)(struct!.iamPrincipal),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleAnyOfPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.AnyOfProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleAnyOfPropertyToHclTerraform(struct?: TfGatewayRule.AnyOfProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iam_principal: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleIamPrincipalPropertyToHclTerraform, true)(struct!.iamPrincipal),
+      value: cdktn.listMapperHcl(tfGatewayRuleIamPrincipalPropertyToHclTerraform, true)(struct!.iamPrincipal),
       isBlock: true,
       type: "list",
       storageClassType: "IamPrincipalPropertyList",
@@ -806,25 +806,25 @@ export function awsBedrockagentcoreGatewayRuleAnyOfPropertyToHclTerraform(struct
 }
 
 
-export function awsBedrockagentcoreGatewayRuleMatchPrincipalsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.MatchPrincipalsProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleMatchPrincipalsPropertyToTerraform(struct?: TfGatewayRule.MatchPrincipalsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    any_of: cdktn.listMapper(awsBedrockagentcoreGatewayRuleAnyOfPropertyToTerraform, true)(struct!.anyOf),
+    any_of: cdktn.listMapper(tfGatewayRuleAnyOfPropertyToTerraform, true)(struct!.anyOf),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleMatchPrincipalsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.MatchPrincipalsProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleMatchPrincipalsPropertyToHclTerraform(struct?: TfGatewayRule.MatchPrincipalsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     any_of: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleAnyOfPropertyToHclTerraform, true)(struct!.anyOf),
+      value: cdktn.listMapperHcl(tfGatewayRuleAnyOfPropertyToHclTerraform, true)(struct!.anyOf),
       isBlock: true,
       type: "list",
       storageClassType: "AnyOfPropertyList",
@@ -836,32 +836,32 @@ export function awsBedrockagentcoreGatewayRuleMatchPrincipalsPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreGatewayRuleConditionPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.ConditionProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleConditionPropertyToTerraform(struct?: TfGatewayRule.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    match_paths: cdktn.listMapper(awsBedrockagentcoreGatewayRuleMatchPathsPropertyToTerraform, true)(struct!.matchPaths),
-    match_principals: cdktn.listMapper(awsBedrockagentcoreGatewayRuleMatchPrincipalsPropertyToTerraform, true)(struct!.matchPrincipals),
+    match_paths: cdktn.listMapper(tfGatewayRuleMatchPathsPropertyToTerraform, true)(struct!.matchPaths),
+    match_principals: cdktn.listMapper(tfGatewayRuleMatchPrincipalsPropertyToTerraform, true)(struct!.matchPrincipals),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayRuleConditionPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.ConditionProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleConditionPropertyToHclTerraform(struct?: TfGatewayRule.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     match_paths: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleMatchPathsPropertyToHclTerraform, true)(struct!.matchPaths),
+      value: cdktn.listMapperHcl(tfGatewayRuleMatchPathsPropertyToHclTerraform, true)(struct!.matchPaths),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPathsPropertyList",
     },
     match_principals: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayRuleMatchPrincipalsPropertyToHclTerraform, true)(struct!.matchPrincipals),
+      value: cdktn.listMapperHcl(tfGatewayRuleMatchPrincipalsPropertyToHclTerraform, true)(struct!.matchPrincipals),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPrincipalsPropertyList",
@@ -873,7 +873,7 @@ export function awsBedrockagentcoreGatewayRuleConditionPropertyToHclTerraform(st
 }
 
 
-export function awsBedrockagentcoreGatewayRuleTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleTimeoutsPropertyToTerraform(struct?: TfGatewayRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -886,7 +886,7 @@ export function awsBedrockagentcoreGatewayRuleTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsBedrockagentcoreGatewayRuleTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayRuleTimeoutsPropertyToHclTerraform(struct?: TfGatewayRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -917,7 +917,7 @@ export function awsBedrockagentcoreGatewayRuleTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsBedrockagentcoreGatewayRule {
+export namespace TfGatewayRule {
 export interface SystemProperty {
 }
 export class SystemPropertyOutputReference extends cdktn.ComplexObject {
@@ -974,11 +974,11 @@ export class SystemPropertyList extends cdktn.ComplexList {
 }
 export interface StaticOverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_arn AwsBedrockagentcoreGatewayRule#bundle_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_arn TfGatewayRule#bundle_arn}
   */
   readonly bundleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_version AwsBedrockagentcoreGatewayRule#bundle_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_version TfGatewayRule#bundle_version}
   */
   readonly bundleVersion: string;
 }
@@ -1080,11 +1080,11 @@ export class StaticOverridePropertyList extends cdktn.ComplexList {
 }
 export interface ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_arn AwsBedrockagentcoreGatewayRule#bundle_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_arn TfGatewayRule#bundle_arn}
   */
   readonly bundleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_version AwsBedrockagentcoreGatewayRule#bundle_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#bundle_version TfGatewayRule#bundle_version}
   */
   readonly bundleVersion: string;
 }
@@ -1186,25 +1186,25 @@ export class ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationB
 }
 export interface ActionConfigurationBundleWeightedOverrideTrafficSplitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#description AwsBedrockagentcoreGatewayRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#description TfGatewayRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#metadata AwsBedrockagentcoreGatewayRule#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#metadata TfGatewayRule#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#name AwsBedrockagentcoreGatewayRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#name TfGatewayRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weight AwsBedrockagentcoreGatewayRule#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weight TfGatewayRule#weight}
   */
   readonly weight: number;
   /**
   * configuration_bundle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#configuration_bundle AwsBedrockagentcoreGatewayRule#configuration_bundle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#configuration_bundle TfGatewayRule#configuration_bundle}
   */
   readonly configurationBundle?: ActionConfigurationBundleWeightedOverrideTrafficSplitConfigurationBundleProperty[] | cdktn.IResolvable;
 }
@@ -1374,7 +1374,7 @@ export interface WeightedOverrideProperty {
   /**
   * traffic_split block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#traffic_split AwsBedrockagentcoreGatewayRule#traffic_split}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#traffic_split TfGatewayRule#traffic_split}
   */
   readonly trafficSplit?: ActionConfigurationBundleWeightedOverrideTrafficSplitProperty[] | cdktn.IResolvable;
 }
@@ -1462,13 +1462,13 @@ export interface ActionConfigurationBundleProperty {
   /**
   * static_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#static_override AwsBedrockagentcoreGatewayRule#static_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#static_override TfGatewayRule#static_override}
   */
   readonly staticOverride?: StaticOverrideProperty[] | cdktn.IResolvable;
   /**
   * weighted_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weighted_override AwsBedrockagentcoreGatewayRule#weighted_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weighted_override TfGatewayRule#weighted_override}
   */
   readonly weightedOverride?: WeightedOverrideProperty[] | cdktn.IResolvable;
 }
@@ -1576,7 +1576,7 @@ export class ActionConfigurationBundlePropertyList extends cdktn.ComplexList {
 }
 export interface StaticRouteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#target_name AwsBedrockagentcoreGatewayRule#target_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#target_name TfGatewayRule#target_name}
   */
   readonly targetName: string;
 }
@@ -1659,23 +1659,23 @@ export class StaticRoutePropertyList extends cdktn.ComplexList {
 }
 export interface ActionRouteToTargetWeightedRouteTrafficSplitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#description AwsBedrockagentcoreGatewayRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#description TfGatewayRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#metadata AwsBedrockagentcoreGatewayRule#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#metadata TfGatewayRule#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#name AwsBedrockagentcoreGatewayRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#name TfGatewayRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#target_name AwsBedrockagentcoreGatewayRule#target_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#target_name TfGatewayRule#target_name}
   */
   readonly targetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weight AwsBedrockagentcoreGatewayRule#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weight TfGatewayRule#weight}
   */
   readonly weight: number;
 }
@@ -1842,7 +1842,7 @@ export interface WeightedRouteProperty {
   /**
   * traffic_split block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#traffic_split AwsBedrockagentcoreGatewayRule#traffic_split}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#traffic_split TfGatewayRule#traffic_split}
   */
   readonly trafficSplit?: ActionRouteToTargetWeightedRouteTrafficSplitProperty[] | cdktn.IResolvable;
 }
@@ -1930,13 +1930,13 @@ export interface RouteToTargetProperty {
   /**
   * static_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#static_route AwsBedrockagentcoreGatewayRule#static_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#static_route TfGatewayRule#static_route}
   */
   readonly staticRoute?: StaticRouteProperty[] | cdktn.IResolvable;
   /**
   * weighted_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weighted_route AwsBedrockagentcoreGatewayRule#weighted_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#weighted_route TfGatewayRule#weighted_route}
   */
   readonly weightedRoute?: WeightedRouteProperty[] | cdktn.IResolvable;
 }
@@ -2046,13 +2046,13 @@ export interface ActionProperty {
   /**
   * configuration_bundle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#configuration_bundle AwsBedrockagentcoreGatewayRule#configuration_bundle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#configuration_bundle TfGatewayRule#configuration_bundle}
   */
   readonly configurationBundle?: ActionConfigurationBundleProperty[] | cdktn.IResolvable;
   /**
   * route_to_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#route_to_target AwsBedrockagentcoreGatewayRule#route_to_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#route_to_target TfGatewayRule#route_to_target}
   */
   readonly routeToTarget?: RouteToTargetProperty[] | cdktn.IResolvable;
 }
@@ -2160,7 +2160,7 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface MatchPathsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#any_of AwsBedrockagentcoreGatewayRule#any_of}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#any_of TfGatewayRule#any_of}
   */
   readonly anyOf: string[];
 }
@@ -2243,11 +2243,11 @@ export class MatchPathsPropertyList extends cdktn.ComplexList {
 }
 export interface IamPrincipalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#arn AwsBedrockagentcoreGatewayRule#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#arn TfGatewayRule#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#operator AwsBedrockagentcoreGatewayRule#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#operator TfGatewayRule#operator}
   */
   readonly operator?: string;
 }
@@ -2354,7 +2354,7 @@ export interface AnyOfProperty {
   /**
   * iam_principal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#iam_principal AwsBedrockagentcoreGatewayRule#iam_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#iam_principal TfGatewayRule#iam_principal}
   */
   readonly iamPrincipal?: IamPrincipalProperty[] | cdktn.IResolvable;
 }
@@ -2442,7 +2442,7 @@ export interface MatchPrincipalsProperty {
   /**
   * any_of block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#any_of AwsBedrockagentcoreGatewayRule#any_of}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#any_of TfGatewayRule#any_of}
   */
   readonly anyOf?: AnyOfProperty[] | cdktn.IResolvable;
 }
@@ -2530,13 +2530,13 @@ export interface ConditionProperty {
   /**
   * match_paths block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#match_paths AwsBedrockagentcoreGatewayRule#match_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#match_paths TfGatewayRule#match_paths}
   */
   readonly matchPaths?: MatchPathsProperty[] | cdktn.IResolvable;
   /**
   * match_principals block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#match_principals AwsBedrockagentcoreGatewayRule#match_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#match_principals TfGatewayRule#match_principals}
   */
   readonly matchPrincipals?: MatchPrincipalsProperty[] | cdktn.IResolvable;
 }
@@ -2646,19 +2646,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#create AwsBedrockagentcoreGatewayRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#create TfGatewayRule#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#delete AwsBedrockagentcoreGatewayRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#delete TfGatewayRule#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#update AwsBedrockagentcoreGatewayRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_rule#update TfGatewayRule#update}
   */
   readonly update?: string;
 }

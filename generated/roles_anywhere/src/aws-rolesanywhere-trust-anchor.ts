@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRolesanywhereTrustAnchorConfig extends cdktn.TerraformMetaArguments {
+export interface TfTrustAnchorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#enabled AwsRolesanywhereTrustAnchor#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#enabled TfTrustAnchor#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#id AwsRolesanywhereTrustAnchor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#id TfTrustAnchor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#name AwsRolesanywhereTrustAnchor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#name TfTrustAnchor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#tags AwsRolesanywhereTrustAnchor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#tags TfTrustAnchor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#tags_all AwsRolesanywhereTrustAnchor#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#tags_all TfTrustAnchor#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * notification_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#notification_settings AwsRolesanywhereTrustAnchor#notification_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#notification_settings TfTrustAnchor#notification_settings}
   */
-  readonly notificationSettings?: AwsRolesanywhereTrustAnchor.NotificationSettingsProperty[] | cdktn.IResolvable;
+  readonly notificationSettings?: TfTrustAnchor.NotificationSettingsProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#source AwsRolesanywhereTrustAnchor#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#source TfTrustAnchor#source}
   */
-  readonly source: AwsRolesanywhereTrustAnchor.SourceProperty;
+  readonly source: TfTrustAnchor.SourceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor aws_rolesanywhere_trust_anchor}
 */
-export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
+export class TfTrustAnchor extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRolesanywhereTrustAnchor resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTrustAnchor resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRolesanywhereTrustAnchor to import
-  * @param importFromId The id of the existing AwsRolesanywhereTrustAnchor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRolesanywhereTrustAnchor to import is found
+  * @param importToId The construct id used in the generated config for the TfTrustAnchor to import
+  * @param importFromId The id of the existing TfTrustAnchor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTrustAnchor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rolesanywhere_trust_anchor", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRolesanywhereTrustAnchorConfig
+  * @param options TfTrustAnchorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRolesanywhereTrustAnchorConfig) {
+  public constructor(scope: Construct, id: string, config: TfTrustAnchorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rolesanywhere_trust_anchor',
       terraformGeneratorMetadata: {
@@ -190,11 +190,11 @@ export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
   }
 
   // notification_settings - computed: false, optional: true, required: false
-  private _notificationSettings = new AwsRolesanywhereTrustAnchor.NotificationSettingsPropertyList(this, "notification_settings", true);
+  private _notificationSettings = new TfTrustAnchor.NotificationSettingsPropertyList(this, "notification_settings", true);
   public get notificationSettings() {
     return this._notificationSettings;
   }
-  public putNotificationSettings(value: AwsRolesanywhereTrustAnchor.NotificationSettingsProperty[] | cdktn.IResolvable) {
+  public putNotificationSettings(value: TfTrustAnchor.NotificationSettingsProperty[] | cdktn.IResolvable) {
     this._notificationSettings.internalValue = value;
   }
   public resetNotificationSettings() {
@@ -206,11 +206,11 @@ export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source = new AwsRolesanywhereTrustAnchor.SourcePropertyOutputReference(this, "source");
+  private _source = new TfTrustAnchor.SourcePropertyOutputReference(this, "source");
   public get source() {
     return this._source;
   }
-  public putSource(value: AwsRolesanywhereTrustAnchor.SourceProperty) {
+  public putSource(value: TfTrustAnchor.SourceProperty) {
     this._source.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -229,8 +229,8 @@ export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      notification_settings: cdktn.listMapper(awsRolesanywhereTrustAnchorNotificationSettingsPropertyToTerraform, true)(this._notificationSettings.internalValue),
-      source: awsRolesanywhereTrustAnchorSourcePropertyToTerraform(this._source.internalValue),
+      notification_settings: cdktn.listMapper(tfTrustAnchorNotificationSettingsPropertyToTerraform, true)(this._notificationSettings.internalValue),
+      source: tfTrustAnchorSourcePropertyToTerraform(this._source.internalValue),
     };
   }
 
@@ -267,16 +267,16 @@ export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       notification_settings: {
-        value: cdktn.listMapperHcl(awsRolesanywhereTrustAnchorNotificationSettingsPropertyToHclTerraform, true)(this._notificationSettings.internalValue),
+        value: cdktn.listMapperHcl(tfTrustAnchorNotificationSettingsPropertyToHclTerraform, true)(this._notificationSettings.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsRolesanywhereTrustAnchor.NotificationSettingsPropertyList",
+        storageClassType: "TfTrustAnchor.NotificationSettingsPropertyList",
       },
       source: {
-        value: awsRolesanywhereTrustAnchorSourcePropertyToHclTerraform(this._source.internalValue),
+        value: tfTrustAnchorSourcePropertyToHclTerraform(this._source.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRolesanywhereTrustAnchor.SourcePropertyList",
+        storageClassType: "TfTrustAnchor.SourcePropertyList",
       },
     };
 
@@ -285,7 +285,7 @@ export class AwsRolesanywhereTrustAnchor extends cdktn.TerraformResource {
   }
 }
 
-export function awsRolesanywhereTrustAnchorNotificationSettingsPropertyToTerraform(struct?: AwsRolesanywhereTrustAnchor.NotificationSettingsProperty | cdktn.IResolvable): any {
+export function tfTrustAnchorNotificationSettingsPropertyToTerraform(struct?: TfTrustAnchor.NotificationSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function awsRolesanywhereTrustAnchorNotificationSettingsPropertyToTerrafo
 }
 
 
-export function awsRolesanywhereTrustAnchorNotificationSettingsPropertyToHclTerraform(struct?: AwsRolesanywhereTrustAnchor.NotificationSettingsProperty | cdktn.IResolvable): any {
+export function tfTrustAnchorNotificationSettingsPropertyToHclTerraform(struct?: TfTrustAnchor.NotificationSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function awsRolesanywhereTrustAnchorNotificationSettingsPropertyToHclTerr
 }
 
 
-export function awsRolesanywhereTrustAnchorSourceDataPropertyToTerraform(struct?: AwsRolesanywhereTrustAnchor.SourceDataPropertyOutputReference | AwsRolesanywhereTrustAnchor.SourceDataProperty): any {
+export function tfTrustAnchorSourceDataPropertyToTerraform(struct?: TfTrustAnchor.SourceDataPropertyOutputReference | TfTrustAnchor.SourceDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function awsRolesanywhereTrustAnchorSourceDataPropertyToTerraform(struct?
 }
 
 
-export function awsRolesanywhereTrustAnchorSourceDataPropertyToHclTerraform(struct?: AwsRolesanywhereTrustAnchor.SourceDataPropertyOutputReference | AwsRolesanywhereTrustAnchor.SourceDataProperty): any {
+export function tfTrustAnchorSourceDataPropertyToHclTerraform(struct?: TfTrustAnchor.SourceDataPropertyOutputReference | TfTrustAnchor.SourceDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,19 +373,19 @@ export function awsRolesanywhereTrustAnchorSourceDataPropertyToHclTerraform(stru
 }
 
 
-export function awsRolesanywhereTrustAnchorSourcePropertyToTerraform(struct?: AwsRolesanywhereTrustAnchor.SourcePropertyOutputReference | AwsRolesanywhereTrustAnchor.SourceProperty): any {
+export function tfTrustAnchorSourcePropertyToTerraform(struct?: TfTrustAnchor.SourcePropertyOutputReference | TfTrustAnchor.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     source_type: cdktn.stringToTerraform(struct!.sourceType),
-    source_data: awsRolesanywhereTrustAnchorSourceDataPropertyToTerraform(struct!.sourceData),
+    source_data: tfTrustAnchorSourceDataPropertyToTerraform(struct!.sourceData),
   }
 }
 
 
-export function awsRolesanywhereTrustAnchorSourcePropertyToHclTerraform(struct?: AwsRolesanywhereTrustAnchor.SourcePropertyOutputReference | AwsRolesanywhereTrustAnchor.SourceProperty): any {
+export function tfTrustAnchorSourcePropertyToHclTerraform(struct?: TfTrustAnchor.SourcePropertyOutputReference | TfTrustAnchor.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function awsRolesanywhereTrustAnchorSourcePropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     source_data: {
-      value: awsRolesanywhereTrustAnchorSourceDataPropertyToHclTerraform(struct!.sourceData),
+      value: tfTrustAnchorSourceDataPropertyToHclTerraform(struct!.sourceData),
       isBlock: true,
       type: "list",
       storageClassType: "SourceDataPropertyList",
@@ -410,22 +410,22 @@ export function awsRolesanywhereTrustAnchorSourcePropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsRolesanywhereTrustAnchor {
+export namespace TfTrustAnchor {
 export interface NotificationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#channel AwsRolesanywhereTrustAnchor#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#channel TfTrustAnchor#channel}
   */
   readonly channel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#enabled AwsRolesanywhereTrustAnchor#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#enabled TfTrustAnchor#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#event AwsRolesanywhereTrustAnchor#event}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#event TfTrustAnchor#event}
   */
   readonly event?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#threshold AwsRolesanywhereTrustAnchor#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#threshold TfTrustAnchor#threshold}
   */
   readonly threshold?: number;
 }
@@ -582,11 +582,11 @@ export class NotificationSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface SourceDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#acm_pca_arn AwsRolesanywhereTrustAnchor#acm_pca_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#acm_pca_arn TfTrustAnchor#acm_pca_arn}
   */
   readonly acmPcaArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#x509_certificate_data AwsRolesanywhereTrustAnchor#x509_certificate_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#x509_certificate_data TfTrustAnchor#x509_certificate_data}
   */
   readonly x509CertificateData?: string;
 }
@@ -662,13 +662,13 @@ export class SourceDataPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#source_type AwsRolesanywhereTrustAnchor#source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#source_type TfTrustAnchor#source_type}
   */
   readonly sourceType: string;
   /**
   * source_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#source_data AwsRolesanywhereTrustAnchor#source_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rolesanywhere_trust_anchor#source_data TfTrustAnchor#source_data}
   */
   readonly sourceData: SourceDataProperty;
 }

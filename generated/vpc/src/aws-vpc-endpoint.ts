@@ -5,104 +5,104 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#auto_accept AwsVpcEndpoint#auto_accept}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#auto_accept TfEndpoint#auto_accept}
   */
   readonly autoAccept?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#id AwsVpcEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#id TfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#ip_address_type AwsVpcEndpoint#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#ip_address_type TfEndpoint#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#policy AwsVpcEndpoint#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#policy TfEndpoint#policy}
   */
   readonly policy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_enabled AwsVpcEndpoint#private_dns_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_enabled TfEndpoint#private_dns_enabled}
   */
   readonly privateDnsEnabled?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#region AwsVpcEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#region TfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#resource_configuration_arn AwsVpcEndpoint#resource_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#resource_configuration_arn TfEndpoint#resource_configuration_arn}
   */
   readonly resourceConfigurationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#route_table_ids AwsVpcEndpoint#route_table_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#route_table_ids TfEndpoint#route_table_ids}
   */
   readonly routeTableIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#security_group_ids AwsVpcEndpoint#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#security_group_ids TfEndpoint#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#service_name AwsVpcEndpoint#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#service_name TfEndpoint#service_name}
   */
   readonly serviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#service_network_arn AwsVpcEndpoint#service_network_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#service_network_arn TfEndpoint#service_network_arn}
   */
   readonly serviceNetworkArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#service_region AwsVpcEndpoint#service_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#service_region TfEndpoint#service_region}
   */
   readonly serviceRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#subnet_ids AwsVpcEndpoint#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#subnet_ids TfEndpoint#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#tags AwsVpcEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#tags TfEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#tags_all AwsVpcEndpoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#tags_all TfEndpoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#vpc_endpoint_type AwsVpcEndpoint#vpc_endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#vpc_endpoint_type TfEndpoint#vpc_endpoint_type}
   */
   readonly vpcEndpointType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#vpc_id AwsVpcEndpoint#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#vpc_id TfEndpoint#vpc_id}
   */
   readonly vpcId: string;
   /**
   * dns_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#dns_options AwsVpcEndpoint#dns_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#dns_options TfEndpoint#dns_options}
   */
-  readonly dnsOptions?: AwsVpcEndpoint.DnsOptionsProperty;
+  readonly dnsOptions?: TfEndpoint.DnsOptionsProperty;
   /**
   * subnet_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#subnet_configuration AwsVpcEndpoint#subnet_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#subnet_configuration TfEndpoint#subnet_configuration}
   */
-  readonly subnetConfiguration?: AwsVpcEndpoint.SubnetConfigurationProperty[] | cdktn.IResolvable;
+  readonly subnetConfiguration?: TfEndpoint.SubnetConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#timeouts AwsVpcEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#timeouts TfEndpoint#timeouts}
   */
-  readonly timeouts?: AwsVpcEndpoint.TimeoutsProperty;
+  readonly timeouts?: TfEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint aws_vpc_endpoint}
 */
-export class AwsVpcEndpoint extends cdktn.TerraformResource {
+export class TfEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -113,11 +113,11 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcEndpoint to import
-  * @param importFromId The id of the existing AwsVpcEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpoint to import
+  * @param importFromId The id of the existing TfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint", importId: importFromId, provider });
@@ -132,9 +132,9 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcEndpointConfig
+  * @param options TfEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint',
       terraformGeneratorMetadata: {
@@ -203,7 +203,7 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
   }
 
   // dns_entry - computed: true, optional: false, required: false
-  private _dnsEntry = new AwsVpcEndpoint.DnsEntryPropertyList(this, "dns_entry", false);
+  private _dnsEntry = new TfEndpoint.DnsEntryPropertyList(this, "dns_entry", false);
   public get dnsEntry() {
     return this._dnsEntry;
   }
@@ -487,11 +487,11 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
   }
 
   // dns_options - computed: false, optional: true, required: false
-  private _dnsOptions = new AwsVpcEndpoint.DnsOptionsPropertyOutputReference(this, "dns_options");
+  private _dnsOptions = new TfEndpoint.DnsOptionsPropertyOutputReference(this, "dns_options");
   public get dnsOptions() {
     return this._dnsOptions;
   }
-  public putDnsOptions(value: AwsVpcEndpoint.DnsOptionsProperty) {
+  public putDnsOptions(value: TfEndpoint.DnsOptionsProperty) {
     this._dnsOptions.internalValue = value;
   }
   public resetDnsOptions() {
@@ -503,11 +503,11 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
   }
 
   // subnet_configuration - computed: false, optional: true, required: false
-  private _subnetConfiguration = new AwsVpcEndpoint.SubnetConfigurationPropertyList(this, "subnet_configuration", true);
+  private _subnetConfiguration = new TfEndpoint.SubnetConfigurationPropertyList(this, "subnet_configuration", true);
   public get subnetConfiguration() {
     return this._subnetConfiguration;
   }
-  public putSubnetConfiguration(value: AwsVpcEndpoint.SubnetConfigurationProperty[] | cdktn.IResolvable) {
+  public putSubnetConfiguration(value: TfEndpoint.SubnetConfigurationProperty[] | cdktn.IResolvable) {
     this._subnetConfiguration.internalValue = value;
   }
   public resetSubnetConfiguration() {
@@ -519,11 +519,11 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpcEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpcEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: TfEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -557,9 +557,9 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_endpoint_type: cdktn.stringToTerraform(this._vpcEndpointType),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      dns_options: awsVpcEndpointDnsOptionsPropertyToTerraform(this._dnsOptions.internalValue),
-      subnet_configuration: cdktn.listMapper(awsVpcEndpointSubnetConfigurationPropertyToTerraform, true)(this._subnetConfiguration.internalValue),
-      timeouts: awsVpcEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      dns_options: tfEndpointDnsOptionsPropertyToTerraform(this._dnsOptions.internalValue),
+      subnet_configuration: cdktn.listMapper(tfEndpointSubnetConfigurationPropertyToTerraform, true)(this._subnetConfiguration.internalValue),
+      timeouts: tfEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -668,22 +668,22 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       dns_options: {
-        value: awsVpcEndpointDnsOptionsPropertyToHclTerraform(this._dnsOptions.internalValue),
+        value: tfEndpointDnsOptionsPropertyToHclTerraform(this._dnsOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVpcEndpoint.DnsOptionsPropertyList",
+        storageClassType: "TfEndpoint.DnsOptionsPropertyList",
       },
       subnet_configuration: {
-        value: cdktn.listMapperHcl(awsVpcEndpointSubnetConfigurationPropertyToHclTerraform, true)(this._subnetConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfEndpointSubnetConfigurationPropertyToHclTerraform, true)(this._subnetConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsVpcEndpoint.SubnetConfigurationPropertyList",
+        storageClassType: "TfEndpoint.SubnetConfigurationPropertyList",
       },
       timeouts: {
-        value: awsVpcEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpcEndpoint.TimeoutsProperty",
+        storageClassType: "TfEndpoint.TimeoutsProperty",
       },
     };
 
@@ -692,7 +692,7 @@ export class AwsVpcEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpcEndpointDnsEntryPropertyToTerraform(struct?: AwsVpcEndpoint.DnsEntryProperty): any {
+export function tfEndpointDnsEntryPropertyToTerraform(struct?: TfEndpoint.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function awsVpcEndpointDnsEntryPropertyToTerraform(struct?: AwsVpcEndpoin
 }
 
 
-export function awsVpcEndpointDnsEntryPropertyToHclTerraform(struct?: AwsVpcEndpoint.DnsEntryProperty): any {
+export function tfEndpointDnsEntryPropertyToHclTerraform(struct?: TfEndpoint.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -713,7 +713,7 @@ export function awsVpcEndpointDnsEntryPropertyToHclTerraform(struct?: AwsVpcEndp
 }
 
 
-export function awsVpcEndpointDnsOptionsPropertyToTerraform(struct?: AwsVpcEndpoint.DnsOptionsPropertyOutputReference | AwsVpcEndpoint.DnsOptionsProperty): any {
+export function tfEndpointDnsOptionsPropertyToTerraform(struct?: TfEndpoint.DnsOptionsPropertyOutputReference | TfEndpoint.DnsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,7 +727,7 @@ export function awsVpcEndpointDnsOptionsPropertyToTerraform(struct?: AwsVpcEndpo
 }
 
 
-export function awsVpcEndpointDnsOptionsPropertyToHclTerraform(struct?: AwsVpcEndpoint.DnsOptionsPropertyOutputReference | AwsVpcEndpoint.DnsOptionsProperty): any {
+export function tfEndpointDnsOptionsPropertyToHclTerraform(struct?: TfEndpoint.DnsOptionsPropertyOutputReference | TfEndpoint.DnsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -764,7 +764,7 @@ export function awsVpcEndpointDnsOptionsPropertyToHclTerraform(struct?: AwsVpcEn
 }
 
 
-export function awsVpcEndpointSubnetConfigurationPropertyToTerraform(struct?: AwsVpcEndpoint.SubnetConfigurationProperty | cdktn.IResolvable): any {
+export function tfEndpointSubnetConfigurationPropertyToTerraform(struct?: TfEndpoint.SubnetConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -777,7 +777,7 @@ export function awsVpcEndpointSubnetConfigurationPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsVpcEndpointSubnetConfigurationPropertyToHclTerraform(struct?: AwsVpcEndpoint.SubnetConfigurationProperty | cdktn.IResolvable): any {
+export function tfEndpointSubnetConfigurationPropertyToHclTerraform(struct?: TfEndpoint.SubnetConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -808,7 +808,7 @@ export function awsVpcEndpointSubnetConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export function awsVpcEndpointTimeoutsPropertyToTerraform(struct?: AwsVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointTimeoutsPropertyToTerraform(struct?: TfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -821,7 +821,7 @@ export function awsVpcEndpointTimeoutsPropertyToTerraform(struct?: AwsVpcEndpoin
 }
 
 
-export function awsVpcEndpointTimeoutsPropertyToHclTerraform(struct?: AwsVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointTimeoutsPropertyToHclTerraform(struct?: TfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -852,7 +852,7 @@ export function awsVpcEndpointTimeoutsPropertyToHclTerraform(struct?: AwsVpcEndp
 }
 
 
-export namespace AwsVpcEndpoint {
+export namespace TfEndpoint {
 export interface DnsEntryProperty {
 }
 export class DnsEntryPropertyOutputReference extends cdktn.ComplexObject {
@@ -914,19 +914,19 @@ export class DnsEntryPropertyList extends cdktn.ComplexList {
 }
 export interface DnsOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#dns_record_ip_type AwsVpcEndpoint#dns_record_ip_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#dns_record_ip_type TfEndpoint#dns_record_ip_type}
   */
   readonly dnsRecordIpType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_only_for_inbound_resolver_endpoint AwsVpcEndpoint#private_dns_only_for_inbound_resolver_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_only_for_inbound_resolver_endpoint TfEndpoint#private_dns_only_for_inbound_resolver_endpoint}
   */
   readonly privateDnsOnlyForInboundResolverEndpoint?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_preference AwsVpcEndpoint#private_dns_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_preference TfEndpoint#private_dns_preference}
   */
   readonly privateDnsPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_specified_domains AwsVpcEndpoint#private_dns_specified_domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#private_dns_specified_domains TfEndpoint#private_dns_specified_domains}
   */
   readonly privateDnsSpecifiedDomains?: string[];
 }
@@ -1046,15 +1046,15 @@ export class DnsOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SubnetConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#ipv4 AwsVpcEndpoint#ipv4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#ipv4 TfEndpoint#ipv4}
   */
   readonly ipv4?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#ipv6 AwsVpcEndpoint#ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#ipv6 TfEndpoint#ipv6}
   */
   readonly ipv6?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#subnet_id AwsVpcEndpoint#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#subnet_id TfEndpoint#subnet_id}
   */
   readonly subnetId?: string;
 }
@@ -1184,15 +1184,15 @@ export class SubnetConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#create AwsVpcEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#create TfEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#delete AwsVpcEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#delete TfEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#update AwsVpcEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint#update TfEndpoint#update}
   */
   readonly update?: string;
 }

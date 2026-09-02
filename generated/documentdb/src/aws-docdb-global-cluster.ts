@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDocdbGlobalClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfGlobalClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#database_name AwsDocdbGlobalCluster#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#database_name TfGlobalCluster#database_name}
   */
   readonly databaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#deletion_protection AwsDocdbGlobalCluster#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#deletion_protection TfGlobalCluster#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#engine AwsDocdbGlobalCluster#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#engine TfGlobalCluster#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#engine_version AwsDocdbGlobalCluster#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#engine_version TfGlobalCluster#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#global_cluster_identifier AwsDocdbGlobalCluster#global_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#global_cluster_identifier TfGlobalCluster#global_cluster_identifier}
   */
   readonly globalClusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#id AwsDocdbGlobalCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#id TfGlobalCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,29 +36,29 @@ export interface AwsDocdbGlobalClusterConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#region AwsDocdbGlobalCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#region TfGlobalCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#source_db_cluster_identifier AwsDocdbGlobalCluster#source_db_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#source_db_cluster_identifier TfGlobalCluster#source_db_cluster_identifier}
   */
   readonly sourceDbClusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#storage_encrypted AwsDocdbGlobalCluster#storage_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#storage_encrypted TfGlobalCluster#storage_encrypted}
   */
   readonly storageEncrypted?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#timeouts AwsDocdbGlobalCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#timeouts TfGlobalCluster#timeouts}
   */
-  readonly timeouts?: AwsDocdbGlobalCluster.TimeoutsProperty;
+  readonly timeouts?: TfGlobalCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster aws_docdb_global_cluster}
 */
-export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
+export class TfGlobalCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDocdbGlobalCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGlobalCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDocdbGlobalCluster to import
-  * @param importFromId The id of the existing AwsDocdbGlobalCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDocdbGlobalCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfGlobalCluster to import
+  * @param importFromId The id of the existing TfGlobalCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGlobalCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_docdb_global_cluster", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDocdbGlobalClusterConfig
+  * @param options TfGlobalClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDocdbGlobalClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfGlobalClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_docdb_global_cluster',
       terraformGeneratorMetadata: {
@@ -205,7 +205,7 @@ export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
   }
 
   // global_cluster_members - computed: true, optional: false, required: false
-  private _globalClusterMembers = new AwsDocdbGlobalCluster.GlobalClusterMembersPropertyList(this, "global_cluster_members", true);
+  private _globalClusterMembers = new TfGlobalCluster.GlobalClusterMembersPropertyList(this, "global_cluster_members", true);
   public get globalClusterMembers() {
     return this._globalClusterMembers;
   }
@@ -285,11 +285,11 @@ export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDocdbGlobalCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGlobalCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDocdbGlobalCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfGlobalCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -315,7 +315,7 @@ export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       source_db_cluster_identifier: cdktn.stringToTerraform(this._sourceDbClusterIdentifier),
       storage_encrypted: cdktn.booleanToTerraform(this._storageEncrypted),
-      timeouts: awsDocdbGlobalClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfGlobalClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -376,10 +376,10 @@ export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: awsDocdbGlobalClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGlobalClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDocdbGlobalCluster.TimeoutsProperty",
+        storageClassType: "TfGlobalCluster.TimeoutsProperty",
       },
     };
 
@@ -388,7 +388,7 @@ export class AwsDocdbGlobalCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsDocdbGlobalClusterGlobalClusterMembersPropertyToTerraform(struct?: AwsDocdbGlobalCluster.GlobalClusterMembersProperty): any {
+export function tfGlobalClusterGlobalClusterMembersPropertyToTerraform(struct?: TfGlobalCluster.GlobalClusterMembersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function awsDocdbGlobalClusterGlobalClusterMembersPropertyToTerraform(str
 }
 
 
-export function awsDocdbGlobalClusterGlobalClusterMembersPropertyToHclTerraform(struct?: AwsDocdbGlobalCluster.GlobalClusterMembersProperty): any {
+export function tfGlobalClusterGlobalClusterMembersPropertyToHclTerraform(struct?: TfGlobalCluster.GlobalClusterMembersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function awsDocdbGlobalClusterGlobalClusterMembersPropertyToHclTerraform(
 }
 
 
-export function awsDocdbGlobalClusterTimeoutsPropertyToTerraform(struct?: AwsDocdbGlobalCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGlobalClusterTimeoutsPropertyToTerraform(struct?: TfGlobalCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function awsDocdbGlobalClusterTimeoutsPropertyToTerraform(struct?: AwsDoc
 }
 
 
-export function awsDocdbGlobalClusterTimeoutsPropertyToHclTerraform(struct?: AwsDocdbGlobalCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGlobalClusterTimeoutsPropertyToHclTerraform(struct?: TfGlobalCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function awsDocdbGlobalClusterTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsDocdbGlobalCluster {
+export namespace TfGlobalCluster {
 export interface GlobalClusterMembersProperty {
 }
 export class GlobalClusterMembersPropertyOutputReference extends cdktn.ComplexObject {
@@ -515,15 +515,15 @@ export class GlobalClusterMembersPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#create AwsDocdbGlobalCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#create TfGlobalCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#delete AwsDocdbGlobalCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#delete TfGlobalCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#update AwsDocdbGlobalCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_global_cluster#update TfGlobalCluster#update}
   */
   readonly update?: string;
 }

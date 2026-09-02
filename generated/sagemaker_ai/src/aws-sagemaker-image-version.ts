@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerImageVersionConfig extends cdktn.TerraformMetaArguments {
+export interface TfImageVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#aliases AwsSagemakerImageVersion#aliases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#aliases TfImageVersion#aliases}
   */
   readonly aliases?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#base_image AwsSagemakerImageVersion#base_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#base_image TfImageVersion#base_image}
   */
   readonly baseImage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#horovod AwsSagemakerImageVersion#horovod}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#horovod TfImageVersion#horovod}
   */
   readonly horovod?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#id AwsSagemakerImageVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#id TfImageVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#image_name AwsSagemakerImageVersion#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#image_name TfImageVersion#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#job_type AwsSagemakerImageVersion#job_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#job_type TfImageVersion#job_type}
   */
   readonly jobType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#ml_framework AwsSagemakerImageVersion#ml_framework}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#ml_framework TfImageVersion#ml_framework}
   */
   readonly mlFramework?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#processor AwsSagemakerImageVersion#processor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#processor TfImageVersion#processor}
   */
   readonly processor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#programming_lang AwsSagemakerImageVersion#programming_lang}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#programming_lang TfImageVersion#programming_lang}
   */
   readonly programmingLang?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#region AwsSagemakerImageVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#region TfImageVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#release_notes AwsSagemakerImageVersion#release_notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#release_notes TfImageVersion#release_notes}
   */
   readonly releaseNotes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#vendor_guidance AwsSagemakerImageVersion#vendor_guidance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#vendor_guidance TfImageVersion#vendor_guidance}
   */
   readonly vendorGuidance?: string;
 }
@@ -64,7 +64,7 @@ export interface AwsSagemakerImageVersionConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version aws_sagemaker_image_version}
 */
-export class AwsSagemakerImageVersion extends cdktn.TerraformResource {
+export class TfImageVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsSagemakerImageVersion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerImageVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfImageVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerImageVersion to import
-  * @param importFromId The id of the existing AwsSagemakerImageVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerImageVersion to import is found
+  * @param importToId The construct id used in the generated config for the TfImageVersion to import
+  * @param importFromId The id of the existing TfImageVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_image_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfImageVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_image_version", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsSagemakerImageVersion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerImageVersionConfig
+  * @param options TfImageVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerImageVersionConfig) {
+  public constructor(scope: Construct, id: string, config: TfImageVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_image_version',
       terraformGeneratorMetadata: {

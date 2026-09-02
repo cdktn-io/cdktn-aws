@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLocationPlaceIndexConfig extends cdktn.TerraformMetaArguments {
+export interface TfPlaceIndexConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#data_source AwsLocationPlaceIndex#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#data_source TfPlaceIndex#data_source}
   */
   readonly dataSource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#description AwsLocationPlaceIndex#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#description TfPlaceIndex#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#id AwsLocationPlaceIndex#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#id TfPlaceIndex#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#index_name AwsLocationPlaceIndex#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#index_name TfPlaceIndex#index_name}
   */
   readonly indexName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#region AwsLocationPlaceIndex#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#region TfPlaceIndex#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#tags AwsLocationPlaceIndex#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#tags TfPlaceIndex#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#tags_all AwsLocationPlaceIndex#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#tags_all TfPlaceIndex#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * data_source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#data_source_configuration AwsLocationPlaceIndex#data_source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#data_source_configuration TfPlaceIndex#data_source_configuration}
   */
-  readonly dataSourceConfiguration?: AwsLocationPlaceIndex.DataSourceConfigurationProperty;
+  readonly dataSourceConfiguration?: TfPlaceIndex.DataSourceConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index aws_location_place_index}
 */
-export class AwsLocationPlaceIndex extends cdktn.TerraformResource {
+export class TfPlaceIndex extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsLocationPlaceIndex extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLocationPlaceIndex resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPlaceIndex resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLocationPlaceIndex to import
-  * @param importFromId The id of the existing AwsLocationPlaceIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLocationPlaceIndex to import is found
+  * @param importToId The construct id used in the generated config for the TfPlaceIndex to import
+  * @param importFromId The id of the existing TfPlaceIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPlaceIndex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_location_place_index", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsLocationPlaceIndex extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLocationPlaceIndexConfig
+  * @param options TfPlaceIndexConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLocationPlaceIndexConfig) {
+  public constructor(scope: Construct, id: string, config: TfPlaceIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_location_place_index',
       terraformGeneratorMetadata: {
@@ -234,11 +234,11 @@ export class AwsLocationPlaceIndex extends cdktn.TerraformResource {
   }
 
   // data_source_configuration - computed: false, optional: true, required: false
-  private _dataSourceConfiguration = new AwsLocationPlaceIndex.DataSourceConfigurationPropertyOutputReference(this, "data_source_configuration");
+  private _dataSourceConfiguration = new TfPlaceIndex.DataSourceConfigurationPropertyOutputReference(this, "data_source_configuration");
   public get dataSourceConfiguration() {
     return this._dataSourceConfiguration;
   }
-  public putDataSourceConfiguration(value: AwsLocationPlaceIndex.DataSourceConfigurationProperty) {
+  public putDataSourceConfiguration(value: TfPlaceIndex.DataSourceConfigurationProperty) {
     this._dataSourceConfiguration.internalValue = value;
   }
   public resetDataSourceConfiguration() {
@@ -262,7 +262,7 @@ export class AwsLocationPlaceIndex extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      data_source_configuration: awsLocationPlaceIndexDataSourceConfigurationPropertyToTerraform(this._dataSourceConfiguration.internalValue),
+      data_source_configuration: tfPlaceIndexDataSourceConfigurationPropertyToTerraform(this._dataSourceConfiguration.internalValue),
     };
   }
 
@@ -311,10 +311,10 @@ export class AwsLocationPlaceIndex extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_source_configuration: {
-        value: awsLocationPlaceIndexDataSourceConfigurationPropertyToHclTerraform(this._dataSourceConfiguration.internalValue),
+        value: tfPlaceIndexDataSourceConfigurationPropertyToHclTerraform(this._dataSourceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLocationPlaceIndex.DataSourceConfigurationPropertyList",
+        storageClassType: "TfPlaceIndex.DataSourceConfigurationPropertyList",
       },
     };
 
@@ -323,7 +323,7 @@ export class AwsLocationPlaceIndex extends cdktn.TerraformResource {
   }
 }
 
-export function awsLocationPlaceIndexDataSourceConfigurationPropertyToTerraform(struct?: AwsLocationPlaceIndex.DataSourceConfigurationPropertyOutputReference | AwsLocationPlaceIndex.DataSourceConfigurationProperty): any {
+export function tfPlaceIndexDataSourceConfigurationPropertyToTerraform(struct?: TfPlaceIndex.DataSourceConfigurationPropertyOutputReference | TfPlaceIndex.DataSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function awsLocationPlaceIndexDataSourceConfigurationPropertyToTerraform(
 }
 
 
-export function awsLocationPlaceIndexDataSourceConfigurationPropertyToHclTerraform(struct?: AwsLocationPlaceIndex.DataSourceConfigurationPropertyOutputReference | AwsLocationPlaceIndex.DataSourceConfigurationProperty): any {
+export function tfPlaceIndexDataSourceConfigurationPropertyToHclTerraform(struct?: TfPlaceIndex.DataSourceConfigurationPropertyOutputReference | TfPlaceIndex.DataSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,10 +353,10 @@ export function awsLocationPlaceIndexDataSourceConfigurationPropertyToHclTerrafo
 }
 
 
-export namespace AwsLocationPlaceIndex {
+export namespace TfPlaceIndex {
 export interface DataSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#intended_use AwsLocationPlaceIndex#intended_use}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_place_index#intended_use TfPlaceIndex#intended_use}
   */
   readonly intendedUse?: string;
 }

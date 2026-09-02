@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGuarddutyOrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#auto_enable_organization_members AwsGuarddutyOrganizationConfiguration#auto_enable_organization_members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#auto_enable_organization_members TfOrganizationConfiguration#auto_enable_organization_members}
   */
   readonly autoEnableOrganizationMembers: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#detector_id AwsGuarddutyOrganizationConfiguration#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#detector_id TfOrganizationConfiguration#detector_id}
   */
   readonly detectorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#id AwsGuarddutyOrganizationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#id TfOrganizationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface AwsGuarddutyOrganizationConfigurationConfig extends cdktn.Terra
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#region AwsGuarddutyOrganizationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#region TfOrganizationConfiguration#region}
   */
   readonly region?: string;
   /**
   * datasources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#datasources AwsGuarddutyOrganizationConfiguration#datasources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#datasources TfOrganizationConfiguration#datasources}
   */
-  readonly datasources?: AwsGuarddutyOrganizationConfiguration.DatasourcesProperty;
+  readonly datasources?: TfOrganizationConfiguration.DatasourcesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration aws_guardduty_organization_configuration}
 */
-export class AwsGuarddutyOrganizationConfiguration extends cdktn.TerraformResource {
+export class TfOrganizationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsGuarddutyOrganizationConfiguration extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGuarddutyOrganizationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGuarddutyOrganizationConfiguration to import
-  * @param importFromId The id of the existing AwsGuarddutyOrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGuarddutyOrganizationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationConfiguration to import
+  * @param importFromId The id of the existing TfOrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_organization_configuration", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsGuarddutyOrganizationConfiguration extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGuarddutyOrganizationConfigurationConfig
+  * @param options TfOrganizationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGuarddutyOrganizationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_organization_configuration',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsGuarddutyOrganizationConfiguration extends cdktn.TerraformResour
   }
 
   // datasources - computed: false, optional: true, required: false
-  private _datasources = new AwsGuarddutyOrganizationConfiguration.DatasourcesPropertyOutputReference(this, "datasources");
+  private _datasources = new TfOrganizationConfiguration.DatasourcesPropertyOutputReference(this, "datasources");
   public get datasources() {
     return this._datasources;
   }
-  public putDatasources(value: AwsGuarddutyOrganizationConfiguration.DatasourcesProperty) {
+  public putDatasources(value: TfOrganizationConfiguration.DatasourcesProperty) {
     this._datasources.internalValue = value;
   }
   public resetDatasources() {
@@ -181,7 +181,7 @@ export class AwsGuarddutyOrganizationConfiguration extends cdktn.TerraformResour
       detector_id: cdktn.stringToTerraform(this._detectorId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      datasources: awsGuarddutyOrganizationConfigurationDatasourcesPropertyToTerraform(this._datasources.internalValue),
+      datasources: tfOrganizationConfigurationDatasourcesPropertyToTerraform(this._datasources.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsGuarddutyOrganizationConfiguration extends cdktn.TerraformResour
         storageClassType: "string",
       },
       datasources: {
-        value: awsGuarddutyOrganizationConfigurationDatasourcesPropertyToHclTerraform(this._datasources.internalValue),
+        value: tfOrganizationConfigurationDatasourcesPropertyToHclTerraform(this._datasources.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGuarddutyOrganizationConfiguration.DatasourcesPropertyList",
+        storageClassType: "TfOrganizationConfiguration.DatasourcesPropertyList",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsGuarddutyOrganizationConfiguration extends cdktn.TerraformResour
   }
 }
 
-export function awsGuarddutyOrganizationConfigurationAuditLogsPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfiguration.AuditLogsPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.AuditLogsProperty): any {
+export function tfOrganizationConfigurationAuditLogsPropertyToTerraform(struct?: TfOrganizationConfiguration.AuditLogsPropertyOutputReference | TfOrganizationConfiguration.AuditLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function awsGuarddutyOrganizationConfigurationAuditLogsPropertyToTerrafor
 }
 
 
-export function awsGuarddutyOrganizationConfigurationAuditLogsPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfiguration.AuditLogsPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.AuditLogsProperty): any {
+export function tfOrganizationConfigurationAuditLogsPropertyToHclTerraform(struct?: TfOrganizationConfiguration.AuditLogsPropertyOutputReference | TfOrganizationConfiguration.AuditLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,25 +254,25 @@ export function awsGuarddutyOrganizationConfigurationAuditLogsPropertyToHclTerra
 }
 
 
-export function awsGuarddutyOrganizationConfigurationKubernetesPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfiguration.KubernetesPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.KubernetesProperty): any {
+export function tfOrganizationConfigurationKubernetesPropertyToTerraform(struct?: TfOrganizationConfiguration.KubernetesPropertyOutputReference | TfOrganizationConfiguration.KubernetesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audit_logs: awsGuarddutyOrganizationConfigurationAuditLogsPropertyToTerraform(struct!.auditLogs),
+    audit_logs: tfOrganizationConfigurationAuditLogsPropertyToTerraform(struct!.auditLogs),
   }
 }
 
 
-export function awsGuarddutyOrganizationConfigurationKubernetesPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfiguration.KubernetesPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.KubernetesProperty): any {
+export function tfOrganizationConfigurationKubernetesPropertyToHclTerraform(struct?: TfOrganizationConfiguration.KubernetesPropertyOutputReference | TfOrganizationConfiguration.KubernetesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audit_logs: {
-      value: awsGuarddutyOrganizationConfigurationAuditLogsPropertyToHclTerraform(struct!.auditLogs),
+      value: tfOrganizationConfigurationAuditLogsPropertyToHclTerraform(struct!.auditLogs),
       isBlock: true,
       type: "list",
       storageClassType: "AuditLogsPropertyList",
@@ -284,7 +284,7 @@ export function awsGuarddutyOrganizationConfigurationKubernetesPropertyToHclTerr
 }
 
 
-export function awsGuarddutyOrganizationConfigurationEbsVolumesPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfiguration.EbsVolumesPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.EbsVolumesProperty): any {
+export function tfOrganizationConfigurationEbsVolumesPropertyToTerraform(struct?: TfOrganizationConfiguration.EbsVolumesPropertyOutputReference | TfOrganizationConfiguration.EbsVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function awsGuarddutyOrganizationConfigurationEbsVolumesPropertyToTerrafo
 }
 
 
-export function awsGuarddutyOrganizationConfigurationEbsVolumesPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfiguration.EbsVolumesPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.EbsVolumesProperty): any {
+export function tfOrganizationConfigurationEbsVolumesPropertyToHclTerraform(struct?: TfOrganizationConfiguration.EbsVolumesPropertyOutputReference | TfOrganizationConfiguration.EbsVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,25 +314,25 @@ export function awsGuarddutyOrganizationConfigurationEbsVolumesPropertyToHclTerr
 }
 
 
-export function awsGuarddutyOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfiguration.ScanEc2InstanceWithFindingsPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.ScanEc2InstanceWithFindingsProperty): any {
+export function tfOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToTerraform(struct?: TfOrganizationConfiguration.ScanEc2InstanceWithFindingsPropertyOutputReference | TfOrganizationConfiguration.ScanEc2InstanceWithFindingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ebs_volumes: awsGuarddutyOrganizationConfigurationEbsVolumesPropertyToTerraform(struct!.ebsVolumes),
+    ebs_volumes: tfOrganizationConfigurationEbsVolumesPropertyToTerraform(struct!.ebsVolumes),
   }
 }
 
 
-export function awsGuarddutyOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfiguration.ScanEc2InstanceWithFindingsPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.ScanEc2InstanceWithFindingsProperty): any {
+export function tfOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToHclTerraform(struct?: TfOrganizationConfiguration.ScanEc2InstanceWithFindingsPropertyOutputReference | TfOrganizationConfiguration.ScanEc2InstanceWithFindingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ebs_volumes: {
-      value: awsGuarddutyOrganizationConfigurationEbsVolumesPropertyToHclTerraform(struct!.ebsVolumes),
+      value: tfOrganizationConfigurationEbsVolumesPropertyToHclTerraform(struct!.ebsVolumes),
       isBlock: true,
       type: "list",
       storageClassType: "EbsVolumesPropertyList",
@@ -344,25 +344,25 @@ export function awsGuarddutyOrganizationConfigurationScanEc2InstanceWithFindings
 }
 
 
-export function awsGuarddutyOrganizationConfigurationMalwareProtectionPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfiguration.MalwareProtectionPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.MalwareProtectionProperty): any {
+export function tfOrganizationConfigurationMalwareProtectionPropertyToTerraform(struct?: TfOrganizationConfiguration.MalwareProtectionPropertyOutputReference | TfOrganizationConfiguration.MalwareProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    scan_ec2_instance_with_findings: awsGuarddutyOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToTerraform(struct!.scanEc2InstanceWithFindings),
+    scan_ec2_instance_with_findings: tfOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToTerraform(struct!.scanEc2InstanceWithFindings),
   }
 }
 
 
-export function awsGuarddutyOrganizationConfigurationMalwareProtectionPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfiguration.MalwareProtectionPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.MalwareProtectionProperty): any {
+export function tfOrganizationConfigurationMalwareProtectionPropertyToHclTerraform(struct?: TfOrganizationConfiguration.MalwareProtectionPropertyOutputReference | TfOrganizationConfiguration.MalwareProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     scan_ec2_instance_with_findings: {
-      value: awsGuarddutyOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToHclTerraform(struct!.scanEc2InstanceWithFindings),
+      value: tfOrganizationConfigurationScanEc2InstanceWithFindingsPropertyToHclTerraform(struct!.scanEc2InstanceWithFindings),
       isBlock: true,
       type: "list",
       storageClassType: "ScanEc2InstanceWithFindingsPropertyList",
@@ -374,7 +374,7 @@ export function awsGuarddutyOrganizationConfigurationMalwareProtectionPropertyTo
 }
 
 
-export function awsGuarddutyOrganizationConfigurationS3LogsPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfiguration.S3LogsPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.S3LogsProperty): any {
+export function tfOrganizationConfigurationS3LogsPropertyToTerraform(struct?: TfOrganizationConfiguration.S3LogsPropertyOutputReference | TfOrganizationConfiguration.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsGuarddutyOrganizationConfigurationS3LogsPropertyToTerraform(s
 }
 
 
-export function awsGuarddutyOrganizationConfigurationS3LogsPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfiguration.S3LogsPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.S3LogsProperty): any {
+export function tfOrganizationConfigurationS3LogsPropertyToHclTerraform(struct?: TfOrganizationConfiguration.S3LogsPropertyOutputReference | TfOrganizationConfiguration.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,39 +404,39 @@ export function awsGuarddutyOrganizationConfigurationS3LogsPropertyToHclTerrafor
 }
 
 
-export function awsGuarddutyOrganizationConfigurationDatasourcesPropertyToTerraform(struct?: AwsGuarddutyOrganizationConfiguration.DatasourcesPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.DatasourcesProperty): any {
+export function tfOrganizationConfigurationDatasourcesPropertyToTerraform(struct?: TfOrganizationConfiguration.DatasourcesPropertyOutputReference | TfOrganizationConfiguration.DatasourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    kubernetes: awsGuarddutyOrganizationConfigurationKubernetesPropertyToTerraform(struct!.kubernetes),
-    malware_protection: awsGuarddutyOrganizationConfigurationMalwareProtectionPropertyToTerraform(struct!.malwareProtection),
-    s3_logs: awsGuarddutyOrganizationConfigurationS3LogsPropertyToTerraform(struct!.s3Logs),
+    kubernetes: tfOrganizationConfigurationKubernetesPropertyToTerraform(struct!.kubernetes),
+    malware_protection: tfOrganizationConfigurationMalwareProtectionPropertyToTerraform(struct!.malwareProtection),
+    s3_logs: tfOrganizationConfigurationS3LogsPropertyToTerraform(struct!.s3Logs),
   }
 }
 
 
-export function awsGuarddutyOrganizationConfigurationDatasourcesPropertyToHclTerraform(struct?: AwsGuarddutyOrganizationConfiguration.DatasourcesPropertyOutputReference | AwsGuarddutyOrganizationConfiguration.DatasourcesProperty): any {
+export function tfOrganizationConfigurationDatasourcesPropertyToHclTerraform(struct?: TfOrganizationConfiguration.DatasourcesPropertyOutputReference | TfOrganizationConfiguration.DatasourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     kubernetes: {
-      value: awsGuarddutyOrganizationConfigurationKubernetesPropertyToHclTerraform(struct!.kubernetes),
+      value: tfOrganizationConfigurationKubernetesPropertyToHclTerraform(struct!.kubernetes),
       isBlock: true,
       type: "list",
       storageClassType: "KubernetesPropertyList",
     },
     malware_protection: {
-      value: awsGuarddutyOrganizationConfigurationMalwareProtectionPropertyToHclTerraform(struct!.malwareProtection),
+      value: tfOrganizationConfigurationMalwareProtectionPropertyToHclTerraform(struct!.malwareProtection),
       isBlock: true,
       type: "list",
       storageClassType: "MalwareProtectionPropertyList",
     },
     s3_logs: {
-      value: awsGuarddutyOrganizationConfigurationS3LogsPropertyToHclTerraform(struct!.s3Logs),
+      value: tfOrganizationConfigurationS3LogsPropertyToHclTerraform(struct!.s3Logs),
       isBlock: true,
       type: "list",
       storageClassType: "S3LogsPropertyList",
@@ -448,10 +448,10 @@ export function awsGuarddutyOrganizationConfigurationDatasourcesPropertyToHclTer
 }
 
 
-export namespace AwsGuarddutyOrganizationConfiguration {
+export namespace TfOrganizationConfiguration {
 export interface AuditLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#enable AwsGuarddutyOrganizationConfiguration#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#enable TfOrganizationConfiguration#enable}
   */
   readonly enable: boolean | cdktn.IResolvable;
 }
@@ -504,7 +504,7 @@ export interface KubernetesProperty {
   /**
   * audit_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#audit_logs AwsGuarddutyOrganizationConfiguration#audit_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#audit_logs TfOrganizationConfiguration#audit_logs}
   */
   readonly auditLogs: AuditLogsProperty;
 }
@@ -555,7 +555,7 @@ export class KubernetesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EbsVolumesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#auto_enable AwsGuarddutyOrganizationConfiguration#auto_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#auto_enable TfOrganizationConfiguration#auto_enable}
   */
   readonly autoEnable: boolean | cdktn.IResolvable;
 }
@@ -608,7 +608,7 @@ export interface ScanEc2InstanceWithFindingsProperty {
   /**
   * ebs_volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#ebs_volumes AwsGuarddutyOrganizationConfiguration#ebs_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#ebs_volumes TfOrganizationConfiguration#ebs_volumes}
   */
   readonly ebsVolumes: EbsVolumesProperty;
 }
@@ -661,7 +661,7 @@ export interface MalwareProtectionProperty {
   /**
   * scan_ec2_instance_with_findings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#scan_ec2_instance_with_findings AwsGuarddutyOrganizationConfiguration#scan_ec2_instance_with_findings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#scan_ec2_instance_with_findings TfOrganizationConfiguration#scan_ec2_instance_with_findings}
   */
   readonly scanEc2InstanceWithFindings: ScanEc2InstanceWithFindingsProperty;
 }
@@ -712,7 +712,7 @@ export class MalwareProtectionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface S3LogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#auto_enable AwsGuarddutyOrganizationConfiguration#auto_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#auto_enable TfOrganizationConfiguration#auto_enable}
   */
   readonly autoEnable: boolean | cdktn.IResolvable;
 }
@@ -765,19 +765,19 @@ export interface DatasourcesProperty {
   /**
   * kubernetes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#kubernetes AwsGuarddutyOrganizationConfiguration#kubernetes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#kubernetes TfOrganizationConfiguration#kubernetes}
   */
   readonly kubernetes?: KubernetesProperty;
   /**
   * malware_protection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#malware_protection AwsGuarddutyOrganizationConfiguration#malware_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#malware_protection TfOrganizationConfiguration#malware_protection}
   */
   readonly malwareProtection?: MalwareProtectionProperty;
   /**
   * s3_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#s3_logs AwsGuarddutyOrganizationConfiguration#s3_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_organization_configuration#s3_logs TfOrganizationConfiguration#s3_logs}
   */
   readonly s3Logs?: S3LogsProperty;
 }

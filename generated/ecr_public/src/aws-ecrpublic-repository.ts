@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcrpublicRepositoryConfig extends cdktn.TerraformMetaArguments {
+export interface TfRepositoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#force_destroy AwsEcrpublicRepository#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#force_destroy TfRepository#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#id AwsEcrpublicRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#id TfRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,39 +20,39 @@ export interface AwsEcrpublicRepositoryConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#region AwsEcrpublicRepository#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#region TfRepository#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#repository_name AwsEcrpublicRepository#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#repository_name TfRepository#repository_name}
   */
   readonly repositoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#tags AwsEcrpublicRepository#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#tags TfRepository#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#tags_all AwsEcrpublicRepository#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#tags_all TfRepository#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * catalog_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#catalog_data AwsEcrpublicRepository#catalog_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#catalog_data TfRepository#catalog_data}
   */
-  readonly catalogData?: AwsEcrpublicRepository.CatalogDataProperty;
+  readonly catalogData?: TfRepository.CatalogDataProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#timeouts AwsEcrpublicRepository#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#timeouts TfRepository#timeouts}
   */
-  readonly timeouts?: AwsEcrpublicRepository.TimeoutsProperty;
+  readonly timeouts?: TfRepository.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository aws_ecrpublic_repository}
 */
-export class AwsEcrpublicRepository extends cdktn.TerraformResource {
+export class TfRepository extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsEcrpublicRepository extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcrpublicRepository resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRepository resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcrpublicRepository to import
-  * @param importFromId The id of the existing AwsEcrpublicRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcrpublicRepository to import is found
+  * @param importToId The construct id used in the generated config for the TfRepository to import
+  * @param importFromId The id of the existing TfRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecrpublic_repository", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsEcrpublicRepository extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcrpublicRepositoryConfig
+  * @param options TfRepositoryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcrpublicRepositoryConfig) {
+  public constructor(scope: Construct, id: string, config: TfRepositoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecrpublic_repository',
       terraformGeneratorMetadata: {
@@ -223,11 +223,11 @@ export class AwsEcrpublicRepository extends cdktn.TerraformResource {
   }
 
   // catalog_data - computed: false, optional: true, required: false
-  private _catalogData = new AwsEcrpublicRepository.CatalogDataPropertyOutputReference(this, "catalog_data");
+  private _catalogData = new TfRepository.CatalogDataPropertyOutputReference(this, "catalog_data");
   public get catalogData() {
     return this._catalogData;
   }
-  public putCatalogData(value: AwsEcrpublicRepository.CatalogDataProperty) {
+  public putCatalogData(value: TfRepository.CatalogDataProperty) {
     this._catalogData.internalValue = value;
   }
   public resetCatalogData() {
@@ -239,11 +239,11 @@ export class AwsEcrpublicRepository extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEcrpublicRepository.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRepository.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEcrpublicRepository.TimeoutsProperty) {
+  public putTimeouts(value: TfRepository.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -266,8 +266,8 @@ export class AwsEcrpublicRepository extends cdktn.TerraformResource {
       repository_name: cdktn.stringToTerraform(this._repositoryName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      catalog_data: awsEcrpublicRepositoryCatalogDataPropertyToTerraform(this._catalogData.internalValue),
-      timeouts: awsEcrpublicRepositoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      catalog_data: tfRepositoryCatalogDataPropertyToTerraform(this._catalogData.internalValue),
+      timeouts: tfRepositoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -310,16 +310,16 @@ export class AwsEcrpublicRepository extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       catalog_data: {
-        value: awsEcrpublicRepositoryCatalogDataPropertyToHclTerraform(this._catalogData.internalValue),
+        value: tfRepositoryCatalogDataPropertyToHclTerraform(this._catalogData.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcrpublicRepository.CatalogDataPropertyList",
+        storageClassType: "TfRepository.CatalogDataPropertyList",
       },
       timeouts: {
-        value: awsEcrpublicRepositoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRepositoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEcrpublicRepository.TimeoutsProperty",
+        storageClassType: "TfRepository.TimeoutsProperty",
       },
     };
 
@@ -328,7 +328,7 @@ export class AwsEcrpublicRepository extends cdktn.TerraformResource {
   }
 }
 
-export function awsEcrpublicRepositoryCatalogDataPropertyToTerraform(struct?: AwsEcrpublicRepository.CatalogDataPropertyOutputReference | AwsEcrpublicRepository.CatalogDataProperty): any {
+export function tfRepositoryCatalogDataPropertyToTerraform(struct?: TfRepository.CatalogDataPropertyOutputReference | TfRepository.CatalogDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function awsEcrpublicRepositoryCatalogDataPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsEcrpublicRepositoryCatalogDataPropertyToHclTerraform(struct?: AwsEcrpublicRepository.CatalogDataPropertyOutputReference | AwsEcrpublicRepository.CatalogDataProperty): any {
+export function tfRepositoryCatalogDataPropertyToHclTerraform(struct?: TfRepository.CatalogDataPropertyOutputReference | TfRepository.CatalogDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function awsEcrpublicRepositoryCatalogDataPropertyToHclTerraform(struct?:
 }
 
 
-export function awsEcrpublicRepositoryTimeoutsPropertyToTerraform(struct?: AwsEcrpublicRepository.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRepositoryTimeoutsPropertyToTerraform(struct?: TfRepository.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function awsEcrpublicRepositoryTimeoutsPropertyToTerraform(struct?: AwsEc
 }
 
 
-export function awsEcrpublicRepositoryTimeoutsPropertyToHclTerraform(struct?: AwsEcrpublicRepository.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRepositoryTimeoutsPropertyToHclTerraform(struct?: TfRepository.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,30 +423,30 @@ export function awsEcrpublicRepositoryTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsEcrpublicRepository {
+export namespace TfRepository {
 export interface CatalogDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#about_text AwsEcrpublicRepository#about_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#about_text TfRepository#about_text}
   */
   readonly aboutText?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#architectures AwsEcrpublicRepository#architectures}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#architectures TfRepository#architectures}
   */
   readonly architectures?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#description AwsEcrpublicRepository#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#description TfRepository#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#logo_image_blob AwsEcrpublicRepository#logo_image_blob}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#logo_image_blob TfRepository#logo_image_blob}
   */
   readonly logoImageBlob?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#operating_systems AwsEcrpublicRepository#operating_systems}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#operating_systems TfRepository#operating_systems}
   */
   readonly operatingSystems?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#usage_text AwsEcrpublicRepository#usage_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#usage_text TfRepository#usage_text}
   */
   readonly usageText?: string;
 }
@@ -610,7 +610,7 @@ export class CatalogDataPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#delete AwsEcrpublicRepository#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository#delete TfRepository#delete}
   */
   readonly delete?: string;
 }

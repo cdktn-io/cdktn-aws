@@ -5,49 +5,49 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppfabricIngestionDestinationConfig extends cdktn.TerraformMetaArguments {
+export interface TfIngestionDestinationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#app_bundle_arn AwsAppfabricIngestionDestination#app_bundle_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#app_bundle_arn TfIngestionDestination#app_bundle_arn}
   */
   readonly appBundleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#ingestion_arn AwsAppfabricIngestionDestination#ingestion_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#ingestion_arn TfIngestionDestination#ingestion_arn}
   */
   readonly ingestionArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#region AwsAppfabricIngestionDestination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#region TfIngestionDestination#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#tags AwsAppfabricIngestionDestination#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#tags TfIngestionDestination#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * destination_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#destination_configuration AwsAppfabricIngestionDestination#destination_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#destination_configuration TfIngestionDestination#destination_configuration}
   */
-  readonly destinationConfiguration?: AwsAppfabricIngestionDestination.DestinationConfigurationProperty[] | cdktn.IResolvable;
+  readonly destinationConfiguration?: TfIngestionDestination.DestinationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#processing_configuration AwsAppfabricIngestionDestination#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#processing_configuration TfIngestionDestination#processing_configuration}
   */
-  readonly processingConfiguration?: AwsAppfabricIngestionDestination.ProcessingConfigurationProperty[] | cdktn.IResolvable;
+  readonly processingConfiguration?: TfIngestionDestination.ProcessingConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#timeouts AwsAppfabricIngestionDestination#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#timeouts TfIngestionDestination#timeouts}
   */
-  readonly timeouts?: AwsAppfabricIngestionDestination.TimeoutsProperty;
+  readonly timeouts?: TfIngestionDestination.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination aws_appfabric_ingestion_destination}
 */
-export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
+export class TfIngestionDestination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -58,11 +58,11 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppfabricIngestionDestination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIngestionDestination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppfabricIngestionDestination to import
-  * @param importFromId The id of the existing AwsAppfabricIngestionDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppfabricIngestionDestination to import is found
+  * @param importToId The construct id used in the generated config for the TfIngestionDestination to import
+  * @param importFromId The id of the existing TfIngestionDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIngestionDestination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appfabric_ingestion_destination", importId: importFromId, provider });
@@ -77,9 +77,9 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppfabricIngestionDestinationConfig
+  * @param options TfIngestionDestinationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppfabricIngestionDestinationConfig) {
+  public constructor(scope: Construct, id: string, config: TfIngestionDestinationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appfabric_ingestion_destination',
       terraformGeneratorMetadata: {
@@ -183,11 +183,11 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
   }
 
   // destination_configuration - computed: false, optional: true, required: false
-  private _destinationConfiguration = new AwsAppfabricIngestionDestination.DestinationConfigurationPropertyList(this, "destination_configuration", false);
+  private _destinationConfiguration = new TfIngestionDestination.DestinationConfigurationPropertyList(this, "destination_configuration", false);
   public get destinationConfiguration() {
     return this._destinationConfiguration;
   }
-  public putDestinationConfiguration(value: AwsAppfabricIngestionDestination.DestinationConfigurationProperty[] | cdktn.IResolvable) {
+  public putDestinationConfiguration(value: TfIngestionDestination.DestinationConfigurationProperty[] | cdktn.IResolvable) {
     this._destinationConfiguration.internalValue = value;
   }
   public resetDestinationConfiguration() {
@@ -199,11 +199,11 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
   }
 
   // processing_configuration - computed: false, optional: true, required: false
-  private _processingConfiguration = new AwsAppfabricIngestionDestination.ProcessingConfigurationPropertyList(this, "processing_configuration", false);
+  private _processingConfiguration = new TfIngestionDestination.ProcessingConfigurationPropertyList(this, "processing_configuration", false);
   public get processingConfiguration() {
     return this._processingConfiguration;
   }
-  public putProcessingConfiguration(value: AwsAppfabricIngestionDestination.ProcessingConfigurationProperty[] | cdktn.IResolvable) {
+  public putProcessingConfiguration(value: TfIngestionDestination.ProcessingConfigurationProperty[] | cdktn.IResolvable) {
     this._processingConfiguration.internalValue = value;
   }
   public resetProcessingConfiguration() {
@@ -215,11 +215,11 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsAppfabricIngestionDestination.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfIngestionDestination.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsAppfabricIngestionDestination.TimeoutsProperty) {
+  public putTimeouts(value: TfIngestionDestination.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -240,9 +240,9 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
       ingestion_arn: cdktn.stringToTerraform(this._ingestionArn),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      destination_configuration: cdktn.listMapper(awsAppfabricIngestionDestinationDestinationConfigurationPropertyToTerraform, true)(this._destinationConfiguration.internalValue),
-      processing_configuration: cdktn.listMapper(awsAppfabricIngestionDestinationProcessingConfigurationPropertyToTerraform, true)(this._processingConfiguration.internalValue),
-      timeouts: awsAppfabricIngestionDestinationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      destination_configuration: cdktn.listMapper(tfIngestionDestinationDestinationConfigurationPropertyToTerraform, true)(this._destinationConfiguration.internalValue),
+      processing_configuration: cdktn.listMapper(tfIngestionDestinationProcessingConfigurationPropertyToTerraform, true)(this._processingConfiguration.internalValue),
+      timeouts: tfIngestionDestinationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -273,22 +273,22 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       destination_configuration: {
-        value: cdktn.listMapperHcl(awsAppfabricIngestionDestinationDestinationConfigurationPropertyToHclTerraform, true)(this._destinationConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfIngestionDestinationDestinationConfigurationPropertyToHclTerraform, true)(this._destinationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppfabricIngestionDestination.DestinationConfigurationPropertyList",
+        storageClassType: "TfIngestionDestination.DestinationConfigurationPropertyList",
       },
       processing_configuration: {
-        value: cdktn.listMapperHcl(awsAppfabricIngestionDestinationProcessingConfigurationPropertyToHclTerraform, true)(this._processingConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfIngestionDestinationProcessingConfigurationPropertyToHclTerraform, true)(this._processingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppfabricIngestionDestination.ProcessingConfigurationPropertyList",
+        storageClassType: "TfIngestionDestination.ProcessingConfigurationPropertyList",
       },
       timeouts: {
-        value: awsAppfabricIngestionDestinationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfIngestionDestinationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsAppfabricIngestionDestination.TimeoutsProperty",
+        storageClassType: "TfIngestionDestination.TimeoutsProperty",
       },
     };
 
@@ -297,7 +297,7 @@ export class AwsAppfabricIngestionDestination extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppfabricIngestionDestinationFirehoseStreamPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.FirehoseStreamProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationFirehoseStreamPropertyToTerraform(struct?: TfIngestionDestination.FirehoseStreamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function awsAppfabricIngestionDestinationFirehoseStreamPropertyToTerrafor
 }
 
 
-export function awsAppfabricIngestionDestinationFirehoseStreamPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.FirehoseStreamProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationFirehoseStreamPropertyToHclTerraform(struct?: TfIngestionDestination.FirehoseStreamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function awsAppfabricIngestionDestinationFirehoseStreamPropertyToHclTerra
 }
 
 
-export function awsAppfabricIngestionDestinationS3BucketPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.S3BucketProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationS3BucketPropertyToTerraform(struct?: TfIngestionDestination.S3BucketProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function awsAppfabricIngestionDestinationS3BucketPropertyToTerraform(stru
 }
 
 
-export function awsAppfabricIngestionDestinationS3BucketPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.S3BucketProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationS3BucketPropertyToHclTerraform(struct?: TfIngestionDestination.S3BucketProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,32 +364,32 @@ export function awsAppfabricIngestionDestinationS3BucketPropertyToHclTerraform(s
 }
 
 
-export function awsAppfabricIngestionDestinationDestinationPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.DestinationProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationDestinationPropertyToTerraform(struct?: TfIngestionDestination.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    firehose_stream: cdktn.listMapper(awsAppfabricIngestionDestinationFirehoseStreamPropertyToTerraform, true)(struct!.firehoseStream),
-    s3_bucket: cdktn.listMapper(awsAppfabricIngestionDestinationS3BucketPropertyToTerraform, true)(struct!.s3Bucket),
+    firehose_stream: cdktn.listMapper(tfIngestionDestinationFirehoseStreamPropertyToTerraform, true)(struct!.firehoseStream),
+    s3_bucket: cdktn.listMapper(tfIngestionDestinationS3BucketPropertyToTerraform, true)(struct!.s3Bucket),
   }
 }
 
 
-export function awsAppfabricIngestionDestinationDestinationPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.DestinationProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationDestinationPropertyToHclTerraform(struct?: TfIngestionDestination.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     firehose_stream: {
-      value: cdktn.listMapperHcl(awsAppfabricIngestionDestinationFirehoseStreamPropertyToHclTerraform, true)(struct!.firehoseStream),
+      value: cdktn.listMapperHcl(tfIngestionDestinationFirehoseStreamPropertyToHclTerraform, true)(struct!.firehoseStream),
       isBlock: true,
       type: "list",
       storageClassType: "FirehoseStreamPropertyList",
     },
     s3_bucket: {
-      value: cdktn.listMapperHcl(awsAppfabricIngestionDestinationS3BucketPropertyToHclTerraform, true)(struct!.s3Bucket),
+      value: cdktn.listMapperHcl(tfIngestionDestinationS3BucketPropertyToHclTerraform, true)(struct!.s3Bucket),
       isBlock: true,
       type: "list",
       storageClassType: "S3BucketPropertyList",
@@ -401,25 +401,25 @@ export function awsAppfabricIngestionDestinationDestinationPropertyToHclTerrafor
 }
 
 
-export function awsAppfabricIngestionDestinationDestinationConfigurationAuditLogPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.DestinationConfigurationAuditLogProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationDestinationConfigurationAuditLogPropertyToTerraform(struct?: TfIngestionDestination.DestinationConfigurationAuditLogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: cdktn.listMapper(awsAppfabricIngestionDestinationDestinationPropertyToTerraform, true)(struct!.destination),
+    destination: cdktn.listMapper(tfIngestionDestinationDestinationPropertyToTerraform, true)(struct!.destination),
   }
 }
 
 
-export function awsAppfabricIngestionDestinationDestinationConfigurationAuditLogPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.DestinationConfigurationAuditLogProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationDestinationConfigurationAuditLogPropertyToHclTerraform(struct?: TfIngestionDestination.DestinationConfigurationAuditLogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: cdktn.listMapperHcl(awsAppfabricIngestionDestinationDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(tfIngestionDestinationDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationPropertyList",
@@ -431,25 +431,25 @@ export function awsAppfabricIngestionDestinationDestinationConfigurationAuditLog
 }
 
 
-export function awsAppfabricIngestionDestinationDestinationConfigurationPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.DestinationConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationDestinationConfigurationPropertyToTerraform(struct?: TfIngestionDestination.DestinationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audit_log: cdktn.listMapper(awsAppfabricIngestionDestinationDestinationConfigurationAuditLogPropertyToTerraform, true)(struct!.auditLog),
+    audit_log: cdktn.listMapper(tfIngestionDestinationDestinationConfigurationAuditLogPropertyToTerraform, true)(struct!.auditLog),
   }
 }
 
 
-export function awsAppfabricIngestionDestinationDestinationConfigurationPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.DestinationConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationDestinationConfigurationPropertyToHclTerraform(struct?: TfIngestionDestination.DestinationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audit_log: {
-      value: cdktn.listMapperHcl(awsAppfabricIngestionDestinationDestinationConfigurationAuditLogPropertyToHclTerraform, true)(struct!.auditLog),
+      value: cdktn.listMapperHcl(tfIngestionDestinationDestinationConfigurationAuditLogPropertyToHclTerraform, true)(struct!.auditLog),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationConfigurationAuditLogPropertyList",
@@ -461,7 +461,7 @@ export function awsAppfabricIngestionDestinationDestinationConfigurationProperty
 }
 
 
-export function awsAppfabricIngestionDestinationProcessingConfigurationAuditLogPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.ProcessingConfigurationAuditLogProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationProcessingConfigurationAuditLogPropertyToTerraform(struct?: TfIngestionDestination.ProcessingConfigurationAuditLogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsAppfabricIngestionDestinationProcessingConfigurationAuditLogP
 }
 
 
-export function awsAppfabricIngestionDestinationProcessingConfigurationAuditLogPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.ProcessingConfigurationAuditLogProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationProcessingConfigurationAuditLogPropertyToHclTerraform(struct?: TfIngestionDestination.ProcessingConfigurationAuditLogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,25 +498,25 @@ export function awsAppfabricIngestionDestinationProcessingConfigurationAuditLogP
 }
 
 
-export function awsAppfabricIngestionDestinationProcessingConfigurationPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.ProcessingConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationProcessingConfigurationPropertyToTerraform(struct?: TfIngestionDestination.ProcessingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audit_log: cdktn.listMapper(awsAppfabricIngestionDestinationProcessingConfigurationAuditLogPropertyToTerraform, true)(struct!.auditLog),
+    audit_log: cdktn.listMapper(tfIngestionDestinationProcessingConfigurationAuditLogPropertyToTerraform, true)(struct!.auditLog),
   }
 }
 
 
-export function awsAppfabricIngestionDestinationProcessingConfigurationPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.ProcessingConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationProcessingConfigurationPropertyToHclTerraform(struct?: TfIngestionDestination.ProcessingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audit_log: {
-      value: cdktn.listMapperHcl(awsAppfabricIngestionDestinationProcessingConfigurationAuditLogPropertyToHclTerraform, true)(struct!.auditLog),
+      value: cdktn.listMapperHcl(tfIngestionDestinationProcessingConfigurationAuditLogPropertyToHclTerraform, true)(struct!.auditLog),
       isBlock: true,
       type: "list",
       storageClassType: "ProcessingConfigurationAuditLogPropertyList",
@@ -528,7 +528,7 @@ export function awsAppfabricIngestionDestinationProcessingConfigurationPropertyT
 }
 
 
-export function awsAppfabricIngestionDestinationTimeoutsPropertyToTerraform(struct?: AwsAppfabricIngestionDestination.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationTimeoutsPropertyToTerraform(struct?: TfIngestionDestination.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,7 +541,7 @@ export function awsAppfabricIngestionDestinationTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsAppfabricIngestionDestinationTimeoutsPropertyToHclTerraform(struct?: AwsAppfabricIngestionDestination.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIngestionDestinationTimeoutsPropertyToHclTerraform(struct?: TfIngestionDestination.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -572,10 +572,10 @@ export function awsAppfabricIngestionDestinationTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsAppfabricIngestionDestination {
+export namespace TfIngestionDestination {
 export interface FirehoseStreamProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#stream_name AwsAppfabricIngestionDestination#stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#stream_name TfIngestionDestination#stream_name}
   */
   readonly streamName: string;
 }
@@ -658,11 +658,11 @@ export class FirehoseStreamPropertyList extends cdktn.ComplexList {
 }
 export interface S3BucketProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#bucket_name AwsAppfabricIngestionDestination#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#bucket_name TfIngestionDestination#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#prefix AwsAppfabricIngestionDestination#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#prefix TfIngestionDestination#prefix}
   */
   readonly prefix?: string;
 }
@@ -769,13 +769,13 @@ export interface DestinationProperty {
   /**
   * firehose_stream block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#firehose_stream AwsAppfabricIngestionDestination#firehose_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#firehose_stream TfIngestionDestination#firehose_stream}
   */
   readonly firehoseStream?: FirehoseStreamProperty[] | cdktn.IResolvable;
   /**
   * s3_bucket block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#s3_bucket AwsAppfabricIngestionDestination#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#s3_bucket TfIngestionDestination#s3_bucket}
   */
   readonly s3Bucket?: S3BucketProperty[] | cdktn.IResolvable;
 }
@@ -885,7 +885,7 @@ export interface DestinationConfigurationAuditLogProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#destination AwsAppfabricIngestionDestination#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#destination TfIngestionDestination#destination}
   */
   readonly destination?: DestinationProperty[] | cdktn.IResolvable;
 }
@@ -973,7 +973,7 @@ export interface DestinationConfigurationProperty {
   /**
   * audit_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#audit_log AwsAppfabricIngestionDestination#audit_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#audit_log TfIngestionDestination#audit_log}
   */
   readonly auditLog?: DestinationConfigurationAuditLogProperty[] | cdktn.IResolvable;
 }
@@ -1059,11 +1059,11 @@ export class DestinationConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ProcessingConfigurationAuditLogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#format AwsAppfabricIngestionDestination#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#format TfIngestionDestination#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#schema AwsAppfabricIngestionDestination#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#schema TfIngestionDestination#schema}
   */
   readonly schema: string;
 }
@@ -1167,7 +1167,7 @@ export interface ProcessingConfigurationProperty {
   /**
   * audit_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#audit_log AwsAppfabricIngestionDestination#audit_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#audit_log TfIngestionDestination#audit_log}
   */
   readonly auditLog?: ProcessingConfigurationAuditLogProperty[] | cdktn.IResolvable;
 }
@@ -1255,19 +1255,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#create AwsAppfabricIngestionDestination#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#create TfIngestionDestination#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#delete AwsAppfabricIngestionDestination#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#delete TfIngestionDestination#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#update AwsAppfabricIngestionDestination#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion_destination#update TfIngestionDestination#update}
   */
   readonly update?: string;
 }

@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecuritylakeDataLakeConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataLakeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#meta_store_manager_role_arn AwsSecuritylakeDataLake#meta_store_manager_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#meta_store_manager_role_arn TfDataLake#meta_store_manager_role_arn}
   */
   readonly metaStoreManagerRoleArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#region AwsSecuritylakeDataLake#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#region TfDataLake#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#tags AwsSecuritylakeDataLake#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#tags TfDataLake#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#configuration AwsSecuritylakeDataLake#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#configuration TfDataLake#configuration}
   */
-  readonly configuration?: AwsSecuritylakeDataLake.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: TfDataLake.ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#timeouts AwsSecuritylakeDataLake#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#timeouts TfDataLake#timeouts}
   */
-  readonly timeouts?: AwsSecuritylakeDataLake.TimeoutsProperty;
+  readonly timeouts?: TfDataLake.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake aws_securitylake_data_lake}
 */
-export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
+export class TfDataLake extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecuritylakeDataLake resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataLake resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecuritylakeDataLake to import
-  * @param importFromId The id of the existing AwsSecuritylakeDataLake that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecuritylakeDataLake to import is found
+  * @param importToId The construct id used in the generated config for the TfDataLake to import
+  * @param importFromId The id of the existing TfDataLake that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataLake to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securitylake_data_lake", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecuritylakeDataLakeConfig
+  * @param options TfDataLakeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSecuritylakeDataLakeConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataLakeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securitylake_data_lake',
       terraformGeneratorMetadata: {
@@ -163,11 +163,11 @@ export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsSecuritylakeDataLake.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new TfDataLake.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsSecuritylakeDataLake.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: TfDataLake.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -179,11 +179,11 @@ export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSecuritylakeDataLake.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataLake.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSecuritylakeDataLake.TimeoutsProperty) {
+  public putTimeouts(value: TfDataLake.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -203,8 +203,8 @@ export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
       meta_store_manager_role_arn: cdktn.stringToTerraform(this._metaStoreManagerRoleArn),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      configuration: cdktn.listMapper(awsSecuritylakeDataLakeConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
-      timeouts: awsSecuritylakeDataLakeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: cdktn.listMapper(tfDataLakeConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      timeouts: tfDataLakeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -229,16 +229,16 @@ export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration: {
-        value: cdktn.listMapperHcl(awsSecuritylakeDataLakeConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(tfDataLakeConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecuritylakeDataLake.ConfigurationPropertyList",
+        storageClassType: "TfDataLake.ConfigurationPropertyList",
       },
       timeouts: {
-        value: awsSecuritylakeDataLakeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataLakeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSecuritylakeDataLake.TimeoutsProperty",
+        storageClassType: "TfDataLake.TimeoutsProperty",
       },
     };
 
@@ -247,7 +247,7 @@ export class AwsSecuritylakeDataLake extends cdktn.TerraformResource {
   }
 }
 
-export function awsSecuritylakeDataLakeEncryptionConfigurationPropertyToTerraform(struct?: AwsSecuritylakeDataLake.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeEncryptionConfigurationPropertyToTerraform(struct?: TfDataLake.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -258,7 +258,7 @@ export function awsSecuritylakeDataLakeEncryptionConfigurationPropertyToTerrafor
 }
 
 
-export function awsSecuritylakeDataLakeEncryptionConfigurationPropertyToHclTerraform(struct?: AwsSecuritylakeDataLake.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeEncryptionConfigurationPropertyToHclTerraform(struct?: TfDataLake.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function awsSecuritylakeDataLakeEncryptionConfigurationPropertyToHclTerra
 }
 
 
-export function awsSecuritylakeDataLakeExpirationPropertyToTerraform(struct?: AwsSecuritylakeDataLake.ExpirationProperty | cdktn.IResolvable): any {
+export function tfDataLakeExpirationPropertyToTerraform(struct?: TfDataLake.ExpirationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function awsSecuritylakeDataLakeExpirationPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSecuritylakeDataLakeExpirationPropertyToHclTerraform(struct?: AwsSecuritylakeDataLake.ExpirationProperty | cdktn.IResolvable): any {
+export function tfDataLakeExpirationPropertyToHclTerraform(struct?: TfDataLake.ExpirationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function awsSecuritylakeDataLakeExpirationPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSecuritylakeDataLakeTransitionPropertyToTerraform(struct?: AwsSecuritylakeDataLake.TransitionProperty | cdktn.IResolvable): any {
+export function tfDataLakeTransitionPropertyToTerraform(struct?: TfDataLake.TransitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function awsSecuritylakeDataLakeTransitionPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSecuritylakeDataLakeTransitionPropertyToHclTerraform(struct?: AwsSecuritylakeDataLake.TransitionProperty | cdktn.IResolvable): any {
+export function tfDataLakeTransitionPropertyToHclTerraform(struct?: TfDataLake.TransitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,32 +344,32 @@ export function awsSecuritylakeDataLakeTransitionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSecuritylakeDataLakeLifecycleConfigurationPropertyToTerraform(struct?: AwsSecuritylakeDataLake.LifecycleConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeLifecycleConfigurationPropertyToTerraform(struct?: TfDataLake.LifecycleConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    expiration: cdktn.listMapper(awsSecuritylakeDataLakeExpirationPropertyToTerraform, true)(struct!.expiration),
-    transition: cdktn.listMapper(awsSecuritylakeDataLakeTransitionPropertyToTerraform, true)(struct!.transition),
+    expiration: cdktn.listMapper(tfDataLakeExpirationPropertyToTerraform, true)(struct!.expiration),
+    transition: cdktn.listMapper(tfDataLakeTransitionPropertyToTerraform, true)(struct!.transition),
   }
 }
 
 
-export function awsSecuritylakeDataLakeLifecycleConfigurationPropertyToHclTerraform(struct?: AwsSecuritylakeDataLake.LifecycleConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeLifecycleConfigurationPropertyToHclTerraform(struct?: TfDataLake.LifecycleConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     expiration: {
-      value: cdktn.listMapperHcl(awsSecuritylakeDataLakeExpirationPropertyToHclTerraform, true)(struct!.expiration),
+      value: cdktn.listMapperHcl(tfDataLakeExpirationPropertyToHclTerraform, true)(struct!.expiration),
       isBlock: true,
       type: "list",
       storageClassType: "ExpirationPropertyList",
     },
     transition: {
-      value: cdktn.listMapperHcl(awsSecuritylakeDataLakeTransitionPropertyToHclTerraform, true)(struct!.transition),
+      value: cdktn.listMapperHcl(tfDataLakeTransitionPropertyToHclTerraform, true)(struct!.transition),
       isBlock: true,
       type: "set",
       storageClassType: "TransitionPropertyList",
@@ -381,7 +381,7 @@ export function awsSecuritylakeDataLakeLifecycleConfigurationPropertyToHclTerraf
 }
 
 
-export function awsSecuritylakeDataLakeReplicationConfigurationPropertyToTerraform(struct?: AwsSecuritylakeDataLake.ReplicationConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeReplicationConfigurationPropertyToTerraform(struct?: TfDataLake.ReplicationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function awsSecuritylakeDataLakeReplicationConfigurationPropertyToTerrafo
 }
 
 
-export function awsSecuritylakeDataLakeReplicationConfigurationPropertyToHclTerraform(struct?: AwsSecuritylakeDataLake.ReplicationConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeReplicationConfigurationPropertyToHclTerraform(struct?: TfDataLake.ReplicationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,28 +418,28 @@ export function awsSecuritylakeDataLakeReplicationConfigurationPropertyToHclTerr
 }
 
 
-export function awsSecuritylakeDataLakeConfigurationPropertyToTerraform(struct?: AwsSecuritylakeDataLake.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeConfigurationPropertyToTerraform(struct?: TfDataLake.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    encryption_configuration: cdktn.listMapper(awsSecuritylakeDataLakeEncryptionConfigurationPropertyToTerraform, false)(struct!.encryptionConfiguration),
+    encryption_configuration: cdktn.listMapper(tfDataLakeEncryptionConfigurationPropertyToTerraform, false)(struct!.encryptionConfiguration),
     region: cdktn.stringToTerraform(struct!.region),
-    lifecycle_configuration: cdktn.listMapper(awsSecuritylakeDataLakeLifecycleConfigurationPropertyToTerraform, true)(struct!.lifecycleConfiguration),
-    replication_configuration: cdktn.listMapper(awsSecuritylakeDataLakeReplicationConfigurationPropertyToTerraform, true)(struct!.replicationConfiguration),
+    lifecycle_configuration: cdktn.listMapper(tfDataLakeLifecycleConfigurationPropertyToTerraform, true)(struct!.lifecycleConfiguration),
+    replication_configuration: cdktn.listMapper(tfDataLakeReplicationConfigurationPropertyToTerraform, true)(struct!.replicationConfiguration),
   }
 }
 
 
-export function awsSecuritylakeDataLakeConfigurationPropertyToHclTerraform(struct?: AwsSecuritylakeDataLake.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataLakeConfigurationPropertyToHclTerraform(struct?: TfDataLake.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     encryption_configuration: {
-      value: cdktn.listMapperHcl(awsSecuritylakeDataLakeEncryptionConfigurationPropertyToHclTerraform, false)(struct!.encryptionConfiguration),
+      value: cdktn.listMapperHcl(tfDataLakeEncryptionConfigurationPropertyToHclTerraform, false)(struct!.encryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionConfigurationPropertyList",
@@ -451,13 +451,13 @@ export function awsSecuritylakeDataLakeConfigurationPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     lifecycle_configuration: {
-      value: cdktn.listMapperHcl(awsSecuritylakeDataLakeLifecycleConfigurationPropertyToHclTerraform, true)(struct!.lifecycleConfiguration),
+      value: cdktn.listMapperHcl(tfDataLakeLifecycleConfigurationPropertyToHclTerraform, true)(struct!.lifecycleConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LifecycleConfigurationPropertyList",
     },
     replication_configuration: {
-      value: cdktn.listMapperHcl(awsSecuritylakeDataLakeReplicationConfigurationPropertyToHclTerraform, true)(struct!.replicationConfiguration),
+      value: cdktn.listMapperHcl(tfDataLakeReplicationConfigurationPropertyToHclTerraform, true)(struct!.replicationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ReplicationConfigurationPropertyList",
@@ -469,7 +469,7 @@ export function awsSecuritylakeDataLakeConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function awsSecuritylakeDataLakeTimeoutsPropertyToTerraform(struct?: AwsSecuritylakeDataLake.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataLakeTimeoutsPropertyToTerraform(struct?: TfDataLake.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function awsSecuritylakeDataLakeTimeoutsPropertyToTerraform(struct?: AwsS
 }
 
 
-export function awsSecuritylakeDataLakeTimeoutsPropertyToHclTerraform(struct?: AwsSecuritylakeDataLake.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataLakeTimeoutsPropertyToHclTerraform(struct?: TfDataLake.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -513,10 +513,10 @@ export function awsSecuritylakeDataLakeTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsSecuritylakeDataLake {
+export namespace TfDataLake {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#kms_key_id AwsSecuritylakeDataLake#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#kms_key_id TfDataLake#kms_key_id}
   */
   readonly kmsKeyId?: string;
 }
@@ -602,7 +602,7 @@ export class EncryptionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ExpirationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#days AwsSecuritylakeDataLake#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#days TfDataLake#days}
   */
   readonly days?: number;
 }
@@ -688,11 +688,11 @@ export class ExpirationPropertyList extends cdktn.ComplexList {
 }
 export interface TransitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#days AwsSecuritylakeDataLake#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#days TfDataLake#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#storage_class AwsSecuritylakeDataLake#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#storage_class TfDataLake#storage_class}
   */
   readonly storageClass?: string;
 }
@@ -802,13 +802,13 @@ export interface LifecycleConfigurationProperty {
   /**
   * expiration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#expiration AwsSecuritylakeDataLake#expiration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#expiration TfDataLake#expiration}
   */
   readonly expiration?: ExpirationProperty[] | cdktn.IResolvable;
   /**
   * transition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#transition AwsSecuritylakeDataLake#transition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#transition TfDataLake#transition}
   */
   readonly transition?: TransitionProperty[] | cdktn.IResolvable;
 }
@@ -916,11 +916,11 @@ export class LifecycleConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ReplicationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#regions AwsSecuritylakeDataLake#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#regions TfDataLake#regions}
   */
   readonly regions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#role_arn AwsSecuritylakeDataLake#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#role_arn TfDataLake#role_arn}
   */
   readonly roleArn?: string;
 }
@@ -1028,23 +1028,23 @@ export class ReplicationConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#encryption_configuration AwsSecuritylakeDataLake#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#encryption_configuration TfDataLake#encryption_configuration}
   */
   readonly encryptionConfiguration?: EncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#region AwsSecuritylakeDataLake#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#region TfDataLake#region}
   */
   readonly region: string;
   /**
   * lifecycle_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#lifecycle_configuration AwsSecuritylakeDataLake#lifecycle_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#lifecycle_configuration TfDataLake#lifecycle_configuration}
   */
   readonly lifecycleConfiguration?: LifecycleConfigurationProperty[] | cdktn.IResolvable;
   /**
   * replication_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#replication_configuration AwsSecuritylakeDataLake#replication_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#replication_configuration TfDataLake#replication_configuration}
   */
   readonly replicationConfiguration?: ReplicationConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1195,19 +1195,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#create AwsSecuritylakeDataLake#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#create TfDataLake#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#delete AwsSecuritylakeDataLake#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#delete TfDataLake#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#update AwsSecuritylakeDataLake#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_data_lake#update TfDataLake#update}
   */
   readonly update?: string;
 }

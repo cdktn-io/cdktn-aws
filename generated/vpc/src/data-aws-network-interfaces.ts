@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsNetworkInterfacesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfNetworkInterfacesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#id DataAwsNetworkInterfaces#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#id DataTfNetworkInterfaces#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface DataAwsNetworkInterfacesConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#region DataAwsNetworkInterfaces#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#region DataTfNetworkInterfaces#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#tags DataAwsNetworkInterfaces#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#tags DataTfNetworkInterfaces#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#filter DataAwsNetworkInterfaces#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#filter DataTfNetworkInterfaces#filter}
   */
-  readonly filter?: DataAwsNetworkInterfaces.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfNetworkInterfaces.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#timeouts DataAwsNetworkInterfaces#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#timeouts DataTfNetworkInterfaces#timeouts}
   */
-  readonly timeouts?: DataAwsNetworkInterfaces.TimeoutsProperty;
+  readonly timeouts?: DataTfNetworkInterfaces.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces aws_network_interfaces}
 */
-export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
+export class DataTfNetworkInterfaces extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsNetworkInterfaces resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfNetworkInterfaces resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsNetworkInterfaces to import
-  * @param importFromId The id of the existing DataAwsNetworkInterfaces that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsNetworkInterfaces to import is found
+  * @param importToId The construct id used in the generated config for the DataTfNetworkInterfaces to import
+  * @param importFromId The id of the existing DataTfNetworkInterfaces that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfNetworkInterfaces to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_network_interfaces", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsNetworkInterfacesConfig = {}
+  * @param options DataTfNetworkInterfacesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsNetworkInterfacesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfNetworkInterfacesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_network_interfaces',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsNetworkInterfaces.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfNetworkInterfaces.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsNetworkInterfaces.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfNetworkInterfaces.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -169,11 +169,11 @@ export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsNetworkInterfaces.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfNetworkInterfaces.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsNetworkInterfaces.TimeoutsProperty) {
+  public putTimeouts(value: DataTfNetworkInterfaces.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -193,8 +193,8 @@ export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsNetworkInterfacesFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsNetworkInterfacesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfNetworkInterfacesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfNetworkInterfacesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -219,16 +219,16 @@ export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsNetworkInterfacesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfNetworkInterfacesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsNetworkInterfaces.FilterPropertyList",
+        storageClassType: "DataTfNetworkInterfaces.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsNetworkInterfacesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfNetworkInterfacesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsNetworkInterfaces.TimeoutsProperty",
+        storageClassType: "DataTfNetworkInterfaces.TimeoutsProperty",
       },
     };
 
@@ -237,7 +237,7 @@ export class DataAwsNetworkInterfaces extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsNetworkInterfacesFilterPropertyToTerraform(struct?: DataAwsNetworkInterfaces.FilterProperty | cdktn.IResolvable): any {
+export function dataTfNetworkInterfacesFilterPropertyToTerraform(struct?: DataTfNetworkInterfaces.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function dataAwsNetworkInterfacesFilterPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsNetworkInterfacesFilterPropertyToHclTerraform(struct?: DataAwsNetworkInterfaces.FilterProperty | cdktn.IResolvable): any {
+export function dataTfNetworkInterfacesFilterPropertyToHclTerraform(struct?: DataTfNetworkInterfaces.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataAwsNetworkInterfacesFilterPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataAwsNetworkInterfacesTimeoutsPropertyToTerraform(struct?: DataAwsNetworkInterfaces.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfNetworkInterfacesTimeoutsPropertyToTerraform(struct?: DataTfNetworkInterfaces.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function dataAwsNetworkInterfacesTimeoutsPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsNetworkInterfacesTimeoutsPropertyToHclTerraform(struct?: DataAwsNetworkInterfaces.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfNetworkInterfacesTimeoutsPropertyToHclTerraform(struct?: DataTfNetworkInterfaces.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,14 +304,14 @@ export function dataAwsNetworkInterfacesTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace DataAwsNetworkInterfaces {
+export namespace DataTfNetworkInterfaces {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#name DataAwsNetworkInterfaces#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#name DataTfNetworkInterfaces#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#values DataAwsNetworkInterfaces#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#values DataTfNetworkInterfaces#values}
   */
   readonly values: string[];
 }
@@ -413,7 +413,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#read DataAwsNetworkInterfaces#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_interfaces#read DataTfNetworkInterfaces#read}
   */
   readonly read?: string;
 }

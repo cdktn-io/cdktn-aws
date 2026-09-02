@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApiGatewayMethodSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface TfMethodSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#id AwsApiGatewayMethodSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#id TfMethodSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#method_path AwsApiGatewayMethodSettings#method_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#method_path TfMethodSettings#method_path}
   */
   readonly methodPath: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#region AwsApiGatewayMethodSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#region TfMethodSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#rest_api_id AwsApiGatewayMethodSettings#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#rest_api_id TfMethodSettings#rest_api_id}
   */
   readonly restApiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#stage_name AwsApiGatewayMethodSettings#stage_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#stage_name TfMethodSettings#stage_name}
   */
   readonly stageName: string;
   /**
   * settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#settings AwsApiGatewayMethodSettings#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#settings TfMethodSettings#settings}
   */
-  readonly settings: AwsApiGatewayMethodSettings.SettingsProperty;
+  readonly settings: TfMethodSettings.SettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings aws_api_gateway_method_settings}
 */
-export class AwsApiGatewayMethodSettings extends cdktn.TerraformResource {
+export class TfMethodSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsApiGatewayMethodSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApiGatewayMethodSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMethodSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApiGatewayMethodSettings to import
-  * @param importFromId The id of the existing AwsApiGatewayMethodSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApiGatewayMethodSettings to import is found
+  * @param importToId The construct id used in the generated config for the TfMethodSettings to import
+  * @param importFromId The id of the existing TfMethodSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMethodSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_method_settings", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsApiGatewayMethodSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApiGatewayMethodSettingsConfig
+  * @param options TfMethodSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApiGatewayMethodSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: TfMethodSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_method_settings',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class AwsApiGatewayMethodSettings extends cdktn.TerraformResource {
   }
 
   // settings - computed: false, optional: false, required: true
-  private _settings = new AwsApiGatewayMethodSettings.SettingsPropertyOutputReference(this, "settings");
+  private _settings = new TfMethodSettings.SettingsPropertyOutputReference(this, "settings");
   public get settings() {
     return this._settings;
   }
-  public putSettings(value: AwsApiGatewayMethodSettings.SettingsProperty) {
+  public putSettings(value: TfMethodSettings.SettingsProperty) {
     this._settings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -197,7 +197,7 @@ export class AwsApiGatewayMethodSettings extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       rest_api_id: cdktn.stringToTerraform(this._restApiId),
       stage_name: cdktn.stringToTerraform(this._stageName),
-      settings: awsApiGatewayMethodSettingsSettingsPropertyToTerraform(this._settings.internalValue),
+      settings: tfMethodSettingsSettingsPropertyToTerraform(this._settings.internalValue),
     };
   }
 
@@ -234,10 +234,10 @@ export class AwsApiGatewayMethodSettings extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       settings: {
-        value: awsApiGatewayMethodSettingsSettingsPropertyToHclTerraform(this._settings.internalValue),
+        value: tfMethodSettingsSettingsPropertyToHclTerraform(this._settings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApiGatewayMethodSettings.SettingsPropertyList",
+        storageClassType: "TfMethodSettings.SettingsPropertyList",
       },
     };
 
@@ -246,7 +246,7 @@ export class AwsApiGatewayMethodSettings extends cdktn.TerraformResource {
   }
 }
 
-export function awsApiGatewayMethodSettingsSettingsPropertyToTerraform(struct?: AwsApiGatewayMethodSettings.SettingsPropertyOutputReference | AwsApiGatewayMethodSettings.SettingsProperty): any {
+export function tfMethodSettingsSettingsPropertyToTerraform(struct?: TfMethodSettings.SettingsPropertyOutputReference | TfMethodSettings.SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function awsApiGatewayMethodSettingsSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function awsApiGatewayMethodSettingsSettingsPropertyToHclTerraform(struct?: AwsApiGatewayMethodSettings.SettingsPropertyOutputReference | AwsApiGatewayMethodSettings.SettingsProperty): any {
+export function tfMethodSettingsSettingsPropertyToHclTerraform(struct?: TfMethodSettings.SettingsPropertyOutputReference | TfMethodSettings.SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,46 +339,46 @@ export function awsApiGatewayMethodSettingsSettingsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsApiGatewayMethodSettings {
+export namespace TfMethodSettings {
 export interface SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#cache_data_encrypted AwsApiGatewayMethodSettings#cache_data_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#cache_data_encrypted TfMethodSettings#cache_data_encrypted}
   */
   readonly cacheDataEncrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#cache_ttl_in_seconds AwsApiGatewayMethodSettings#cache_ttl_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#cache_ttl_in_seconds TfMethodSettings#cache_ttl_in_seconds}
   */
   readonly cacheTtlInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#caching_enabled AwsApiGatewayMethodSettings#caching_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#caching_enabled TfMethodSettings#caching_enabled}
   */
   readonly cachingEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#data_trace_enabled AwsApiGatewayMethodSettings#data_trace_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#data_trace_enabled TfMethodSettings#data_trace_enabled}
   */
   readonly dataTraceEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#logging_level AwsApiGatewayMethodSettings#logging_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#logging_level TfMethodSettings#logging_level}
   */
   readonly loggingLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#metrics_enabled AwsApiGatewayMethodSettings#metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#metrics_enabled TfMethodSettings#metrics_enabled}
   */
   readonly metricsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#require_authorization_for_cache_control AwsApiGatewayMethodSettings#require_authorization_for_cache_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#require_authorization_for_cache_control TfMethodSettings#require_authorization_for_cache_control}
   */
   readonly requireAuthorizationForCacheControl?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#throttling_burst_limit AwsApiGatewayMethodSettings#throttling_burst_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#throttling_burst_limit TfMethodSettings#throttling_burst_limit}
   */
   readonly throttlingBurstLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#throttling_rate_limit AwsApiGatewayMethodSettings#throttling_rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#throttling_rate_limit TfMethodSettings#throttling_rate_limit}
   */
   readonly throttlingRateLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#unauthorized_cache_control_header_strategy AwsApiGatewayMethodSettings#unauthorized_cache_control_header_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method_settings#unauthorized_cache_control_header_strategy TfMethodSettings#unauthorized_cache_control_header_strategy}
   */
   readonly unauthorizedCacheControlHeaderStrategy?: string;
 }

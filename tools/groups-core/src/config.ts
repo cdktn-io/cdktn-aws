@@ -26,6 +26,7 @@ export function readMineConfig(file = mineConfigPath): MineConfig {
     providerRepo: cfg.providerRepo!,
     providerTag: cfg.providerTag!,
     slugOverrides: cfg.slugOverrides ?? {},
+    stripPrefixOverrides: cfg.stripPrefixOverrides ?? {},
     aliases: cfg.aliases ?? {},
     manualAssignments: manual,
   };

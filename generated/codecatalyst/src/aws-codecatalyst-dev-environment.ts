@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCodecatalystDevEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDevEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#alias AwsCodecatalystDevEnvironment#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#alias TfDevEnvironment#alias}
   */
   readonly alias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#id AwsCodecatalystDevEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#id TfDevEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#inactivity_timeout_minutes AwsCodecatalystDevEnvironment#inactivity_timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#inactivity_timeout_minutes TfDevEnvironment#inactivity_timeout_minutes}
   */
   readonly inactivityTimeoutMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#instance_type AwsCodecatalystDevEnvironment#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#instance_type TfDevEnvironment#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#project_name AwsCodecatalystDevEnvironment#project_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#project_name TfDevEnvironment#project_name}
   */
   readonly projectName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#region AwsCodecatalystDevEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#region TfDevEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#space_name AwsCodecatalystDevEnvironment#space_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#space_name TfDevEnvironment#space_name}
   */
   readonly spaceName: string;
   /**
   * ides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#ides AwsCodecatalystDevEnvironment#ides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#ides TfDevEnvironment#ides}
   */
-  readonly ides: AwsCodecatalystDevEnvironment.IdesProperty;
+  readonly ides: TfDevEnvironment.IdesProperty;
   /**
   * persistent_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#persistent_storage AwsCodecatalystDevEnvironment#persistent_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#persistent_storage TfDevEnvironment#persistent_storage}
   */
-  readonly persistentStorage: AwsCodecatalystDevEnvironment.PersistentStorageProperty;
+  readonly persistentStorage: TfDevEnvironment.PersistentStorageProperty;
   /**
   * repositories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#repositories AwsCodecatalystDevEnvironment#repositories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#repositories TfDevEnvironment#repositories}
   */
-  readonly repositories?: AwsCodecatalystDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable;
+  readonly repositories?: TfDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#timeouts AwsCodecatalystDevEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#timeouts TfDevEnvironment#timeouts}
   */
-  readonly timeouts?: AwsCodecatalystDevEnvironment.TimeoutsProperty;
+  readonly timeouts?: TfDevEnvironment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment aws_codecatalyst_dev_environment}
 */
-export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
+export class TfDevEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCodecatalystDevEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDevEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCodecatalystDevEnvironment to import
-  * @param importFromId The id of the existing AwsCodecatalystDevEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCodecatalystDevEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the TfDevEnvironment to import
+  * @param importFromId The id of the existing TfDevEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDevEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecatalyst_dev_environment", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCodecatalystDevEnvironmentConfig
+  * @param options TfDevEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCodecatalystDevEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDevEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecatalyst_dev_environment',
       terraformGeneratorMetadata: {
@@ -237,11 +237,11 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
   }
 
   // ides - computed: false, optional: false, required: true
-  private _ides = new AwsCodecatalystDevEnvironment.IdesPropertyOutputReference(this, "ides");
+  private _ides = new TfDevEnvironment.IdesPropertyOutputReference(this, "ides");
   public get ides() {
     return this._ides;
   }
-  public putIdes(value: AwsCodecatalystDevEnvironment.IdesProperty) {
+  public putIdes(value: TfDevEnvironment.IdesProperty) {
     this._ides.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -250,11 +250,11 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
   }
 
   // persistent_storage - computed: false, optional: false, required: true
-  private _persistentStorage = new AwsCodecatalystDevEnvironment.PersistentStoragePropertyOutputReference(this, "persistent_storage");
+  private _persistentStorage = new TfDevEnvironment.PersistentStoragePropertyOutputReference(this, "persistent_storage");
   public get persistentStorage() {
     return this._persistentStorage;
   }
-  public putPersistentStorage(value: AwsCodecatalystDevEnvironment.PersistentStorageProperty) {
+  public putPersistentStorage(value: TfDevEnvironment.PersistentStorageProperty) {
     this._persistentStorage.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -263,11 +263,11 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
   }
 
   // repositories - computed: false, optional: true, required: false
-  private _repositories = new AwsCodecatalystDevEnvironment.RepositoriesPropertyList(this, "repositories", false);
+  private _repositories = new TfDevEnvironment.RepositoriesPropertyList(this, "repositories", false);
   public get repositories() {
     return this._repositories;
   }
-  public putRepositories(value: AwsCodecatalystDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable) {
+  public putRepositories(value: TfDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable) {
     this._repositories.internalValue = value;
   }
   public resetRepositories() {
@@ -279,11 +279,11 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCodecatalystDevEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDevEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCodecatalystDevEnvironment.TimeoutsProperty) {
+  public putTimeouts(value: TfDevEnvironment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -307,10 +307,10 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
       project_name: cdktn.stringToTerraform(this._projectName),
       region: cdktn.stringToTerraform(this._region),
       space_name: cdktn.stringToTerraform(this._spaceName),
-      ides: awsCodecatalystDevEnvironmentIdesPropertyToTerraform(this._ides.internalValue),
-      persistent_storage: awsCodecatalystDevEnvironmentPersistentStoragePropertyToTerraform(this._persistentStorage.internalValue),
-      repositories: cdktn.listMapper(awsCodecatalystDevEnvironmentRepositoriesPropertyToTerraform, true)(this._repositories.internalValue),
-      timeouts: awsCodecatalystDevEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      ides: tfDevEnvironmentIdesPropertyToTerraform(this._ides.internalValue),
+      persistent_storage: tfDevEnvironmentPersistentStoragePropertyToTerraform(this._persistentStorage.internalValue),
+      repositories: cdktn.listMapper(tfDevEnvironmentRepositoriesPropertyToTerraform, true)(this._repositories.internalValue),
+      timeouts: tfDevEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -359,28 +359,28 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       ides: {
-        value: awsCodecatalystDevEnvironmentIdesPropertyToHclTerraform(this._ides.internalValue),
+        value: tfDevEnvironmentIdesPropertyToHclTerraform(this._ides.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodecatalystDevEnvironment.IdesPropertyList",
+        storageClassType: "TfDevEnvironment.IdesPropertyList",
       },
       persistent_storage: {
-        value: awsCodecatalystDevEnvironmentPersistentStoragePropertyToHclTerraform(this._persistentStorage.internalValue),
+        value: tfDevEnvironmentPersistentStoragePropertyToHclTerraform(this._persistentStorage.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodecatalystDevEnvironment.PersistentStoragePropertyList",
+        storageClassType: "TfDevEnvironment.PersistentStoragePropertyList",
       },
       repositories: {
-        value: cdktn.listMapperHcl(awsCodecatalystDevEnvironmentRepositoriesPropertyToHclTerraform, true)(this._repositories.internalValue),
+        value: cdktn.listMapperHcl(tfDevEnvironmentRepositoriesPropertyToHclTerraform, true)(this._repositories.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodecatalystDevEnvironment.RepositoriesPropertyList",
+        storageClassType: "TfDevEnvironment.RepositoriesPropertyList",
       },
       timeouts: {
-        value: awsCodecatalystDevEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDevEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCodecatalystDevEnvironment.TimeoutsProperty",
+        storageClassType: "TfDevEnvironment.TimeoutsProperty",
       },
     };
 
@@ -389,7 +389,7 @@ export class AwsCodecatalystDevEnvironment extends cdktn.TerraformResource {
   }
 }
 
-export function awsCodecatalystDevEnvironmentIdesPropertyToTerraform(struct?: AwsCodecatalystDevEnvironment.IdesPropertyOutputReference | AwsCodecatalystDevEnvironment.IdesProperty): any {
+export function tfDevEnvironmentIdesPropertyToTerraform(struct?: TfDevEnvironment.IdesPropertyOutputReference | TfDevEnvironment.IdesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function awsCodecatalystDevEnvironmentIdesPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsCodecatalystDevEnvironmentIdesPropertyToHclTerraform(struct?: AwsCodecatalystDevEnvironment.IdesPropertyOutputReference | AwsCodecatalystDevEnvironment.IdesProperty): any {
+export function tfDevEnvironmentIdesPropertyToHclTerraform(struct?: TfDevEnvironment.IdesPropertyOutputReference | TfDevEnvironment.IdesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function awsCodecatalystDevEnvironmentIdesPropertyToHclTerraform(struct?:
 }
 
 
-export function awsCodecatalystDevEnvironmentPersistentStoragePropertyToTerraform(struct?: AwsCodecatalystDevEnvironment.PersistentStoragePropertyOutputReference | AwsCodecatalystDevEnvironment.PersistentStorageProperty): any {
+export function tfDevEnvironmentPersistentStoragePropertyToTerraform(struct?: TfDevEnvironment.PersistentStoragePropertyOutputReference | TfDevEnvironment.PersistentStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,7 +437,7 @@ export function awsCodecatalystDevEnvironmentPersistentStoragePropertyToTerrafor
 }
 
 
-export function awsCodecatalystDevEnvironmentPersistentStoragePropertyToHclTerraform(struct?: AwsCodecatalystDevEnvironment.PersistentStoragePropertyOutputReference | AwsCodecatalystDevEnvironment.PersistentStorageProperty): any {
+export function tfDevEnvironmentPersistentStoragePropertyToHclTerraform(struct?: TfDevEnvironment.PersistentStoragePropertyOutputReference | TfDevEnvironment.PersistentStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function awsCodecatalystDevEnvironmentPersistentStoragePropertyToHclTerra
 }
 
 
-export function awsCodecatalystDevEnvironmentRepositoriesPropertyToTerraform(struct?: AwsCodecatalystDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
+export function tfDevEnvironmentRepositoriesPropertyToTerraform(struct?: TfDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,7 +468,7 @@ export function awsCodecatalystDevEnvironmentRepositoriesPropertyToTerraform(str
 }
 
 
-export function awsCodecatalystDevEnvironmentRepositoriesPropertyToHclTerraform(struct?: AwsCodecatalystDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
+export function tfDevEnvironmentRepositoriesPropertyToHclTerraform(struct?: TfDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function awsCodecatalystDevEnvironmentRepositoriesPropertyToHclTerraform(
 }
 
 
-export function awsCodecatalystDevEnvironmentTimeoutsPropertyToTerraform(struct?: AwsCodecatalystDevEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDevEnvironmentTimeoutsPropertyToTerraform(struct?: TfDevEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function awsCodecatalystDevEnvironmentTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsCodecatalystDevEnvironmentTimeoutsPropertyToHclTerraform(struct?: AwsCodecatalystDevEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDevEnvironmentTimeoutsPropertyToHclTerraform(struct?: TfDevEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,14 +537,14 @@ export function awsCodecatalystDevEnvironmentTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsCodecatalystDevEnvironment {
+export namespace TfDevEnvironment {
 export interface IdesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#name AwsCodecatalystDevEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#name TfDevEnvironment#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#runtime AwsCodecatalystDevEnvironment#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#runtime TfDevEnvironment#runtime}
   */
   readonly runtime?: string;
 }
@@ -620,7 +620,7 @@ export class IdesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PersistentStorageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#size AwsCodecatalystDevEnvironment#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#size TfDevEnvironment#size}
   */
   readonly size: number;
 }
@@ -671,11 +671,11 @@ export class PersistentStoragePropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface RepositoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#branch_name AwsCodecatalystDevEnvironment#branch_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#branch_name TfDevEnvironment#branch_name}
   */
   readonly branchName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#repository_name AwsCodecatalystDevEnvironment#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#repository_name TfDevEnvironment#repository_name}
   */
   readonly repositoryName: string;
 }
@@ -780,15 +780,15 @@ export class RepositoriesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#create AwsCodecatalystDevEnvironment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#create TfDevEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#delete AwsCodecatalystDevEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#delete TfDevEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#update AwsCodecatalystDevEnvironment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_dev_environment#update TfDevEnvironment#update}
   */
   readonly update?: string;
 }

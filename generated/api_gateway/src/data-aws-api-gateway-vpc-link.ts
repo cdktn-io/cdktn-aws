@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsApiGatewayVpcLinkConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfVpcLinkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#name DataAwsApiGatewayVpcLink#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#name DataTfVpcLink#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#region DataAwsApiGatewayVpcLink#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#region DataTfVpcLink#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#tags DataAwsApiGatewayVpcLink#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#tags DataTfVpcLink#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -25,7 +25,7 @@ export interface DataAwsApiGatewayVpcLinkConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link aws_api_gateway_vpc_link}
 */
-export class DataAwsApiGatewayVpcLink extends cdktn.TerraformDataSource {
+export class DataTfVpcLink extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataAwsApiGatewayVpcLink extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsApiGatewayVpcLink resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfVpcLink resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsApiGatewayVpcLink to import
-  * @param importFromId The id of the existing DataAwsApiGatewayVpcLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsApiGatewayVpcLink to import is found
+  * @param importToId The construct id used in the generated config for the DataTfVpcLink to import
+  * @param importFromId The id of the existing DataTfVpcLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_vpc_link#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfVpcLink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_vpc_link", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataAwsApiGatewayVpcLink extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsApiGatewayVpcLinkConfig
+  * @param options DataTfVpcLinkConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsApiGatewayVpcLinkConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfVpcLinkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_vpc_link',
       terraformGeneratorMetadata: {

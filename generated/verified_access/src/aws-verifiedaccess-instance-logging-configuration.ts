@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVerifiedaccessInstanceLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfInstanceLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#id AwsVerifiedaccessInstanceLoggingConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#id TfInstanceLoggingConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface AwsVerifiedaccessInstanceLoggingConfigurationConfig extends cdk
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#region AwsVerifiedaccessInstanceLoggingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#region TfInstanceLoggingConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#verifiedaccess_instance_id AwsVerifiedaccessInstanceLoggingConfiguration#verifiedaccess_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#verifiedaccess_instance_id TfInstanceLoggingConfiguration#verifiedaccess_instance_id}
   */
   readonly verifiedaccessInstanceId: string;
   /**
   * access_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#access_logs AwsVerifiedaccessInstanceLoggingConfiguration#access_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#access_logs TfInstanceLoggingConfiguration#access_logs}
   */
-  readonly accessLogs: AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsProperty;
+  readonly accessLogs: TfInstanceLoggingConfiguration.AccessLogsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration aws_verifiedaccess_instance_logging_configuration}
 */
-export class AwsVerifiedaccessInstanceLoggingConfiguration extends cdktn.TerraformResource {
+export class TfInstanceLoggingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsVerifiedaccessInstanceLoggingConfiguration extends cdktn.Terrafo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVerifiedaccessInstanceLoggingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInstanceLoggingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVerifiedaccessInstanceLoggingConfiguration to import
-  * @param importFromId The id of the existing AwsVerifiedaccessInstanceLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVerifiedaccessInstanceLoggingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfInstanceLoggingConfiguration to import
+  * @param importFromId The id of the existing TfInstanceLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInstanceLoggingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedaccess_instance_logging_configuration", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsVerifiedaccessInstanceLoggingConfiguration extends cdktn.Terrafo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVerifiedaccessInstanceLoggingConfigurationConfig
+  * @param options TfInstanceLoggingConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVerifiedaccessInstanceLoggingConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfInstanceLoggingConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedaccess_instance_logging_configuration',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class AwsVerifiedaccessInstanceLoggingConfiguration extends cdktn.Terrafo
   }
 
   // access_logs - computed: false, optional: false, required: true
-  private _accessLogs = new AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsPropertyOutputReference(this, "access_logs");
+  private _accessLogs = new TfInstanceLoggingConfiguration.AccessLogsPropertyOutputReference(this, "access_logs");
   public get accessLogs() {
     return this._accessLogs;
   }
-  public putAccessLogs(value: AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsProperty) {
+  public putAccessLogs(value: TfInstanceLoggingConfiguration.AccessLogsProperty) {
     this._accessLogs.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class AwsVerifiedaccessInstanceLoggingConfiguration extends cdktn.Terrafo
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       verifiedaccess_instance_id: cdktn.stringToTerraform(this._verifiedaccessInstanceId),
-      access_logs: awsVerifiedaccessInstanceLoggingConfigurationAccessLogsPropertyToTerraform(this._accessLogs.internalValue),
+      access_logs: tfInstanceLoggingConfigurationAccessLogsPropertyToTerraform(this._accessLogs.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class AwsVerifiedaccessInstanceLoggingConfiguration extends cdktn.Terrafo
         storageClassType: "string",
       },
       access_logs: {
-        value: awsVerifiedaccessInstanceLoggingConfigurationAccessLogsPropertyToHclTerraform(this._accessLogs.internalValue),
+        value: tfInstanceLoggingConfigurationAccessLogsPropertyToHclTerraform(this._accessLogs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsPropertyList",
+        storageClassType: "TfInstanceLoggingConfiguration.AccessLogsPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class AwsVerifiedaccessInstanceLoggingConfiguration extends cdktn.Terrafo
   }
 }
 
-export function awsVerifiedaccessInstanceLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.CloudwatchLogsPropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.CloudwatchLogsProperty): any {
+export function tfInstanceLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct?: TfInstanceLoggingConfiguration.CloudwatchLogsPropertyOutputReference | TfInstanceLoggingConfiguration.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function awsVerifiedaccessInstanceLoggingConfigurationCloudwatchLogsPrope
 }
 
 
-export function awsVerifiedaccessInstanceLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.CloudwatchLogsPropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.CloudwatchLogsProperty): any {
+export function tfInstanceLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct?: TfInstanceLoggingConfiguration.CloudwatchLogsPropertyOutputReference | TfInstanceLoggingConfiguration.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function awsVerifiedaccessInstanceLoggingConfigurationCloudwatchLogsPrope
 }
 
 
-export function awsVerifiedaccessInstanceLoggingConfigurationKinesisDataFirehosePropertyToTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.KinesisDataFirehosePropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.KinesisDataFirehoseProperty): any {
+export function tfInstanceLoggingConfigurationKinesisDataFirehosePropertyToTerraform(struct?: TfInstanceLoggingConfiguration.KinesisDataFirehosePropertyOutputReference | TfInstanceLoggingConfiguration.KinesisDataFirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function awsVerifiedaccessInstanceLoggingConfigurationKinesisDataFirehose
 }
 
 
-export function awsVerifiedaccessInstanceLoggingConfigurationKinesisDataFirehosePropertyToHclTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.KinesisDataFirehosePropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.KinesisDataFirehoseProperty): any {
+export function tfInstanceLoggingConfigurationKinesisDataFirehosePropertyToHclTerraform(struct?: TfInstanceLoggingConfiguration.KinesisDataFirehosePropertyOutputReference | TfInstanceLoggingConfiguration.KinesisDataFirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function awsVerifiedaccessInstanceLoggingConfigurationKinesisDataFirehose
 }
 
 
-export function awsVerifiedaccessInstanceLoggingConfigurationS3PropertyToTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.S3PropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.S3Property): any {
+export function tfInstanceLoggingConfigurationS3PropertyToTerraform(struct?: TfInstanceLoggingConfiguration.S3PropertyOutputReference | TfInstanceLoggingConfiguration.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function awsVerifiedaccessInstanceLoggingConfigurationS3PropertyToTerrafo
 }
 
 
-export function awsVerifiedaccessInstanceLoggingConfigurationS3PropertyToHclTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.S3PropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.S3Property): any {
+export function tfInstanceLoggingConfigurationS3PropertyToHclTerraform(struct?: TfInstanceLoggingConfiguration.S3PropertyOutputReference | TfInstanceLoggingConfiguration.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function awsVerifiedaccessInstanceLoggingConfigurationS3PropertyToHclTerr
 }
 
 
-export function awsVerifiedaccessInstanceLoggingConfigurationAccessLogsPropertyToTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsPropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsProperty): any {
+export function tfInstanceLoggingConfigurationAccessLogsPropertyToTerraform(struct?: TfInstanceLoggingConfiguration.AccessLogsPropertyOutputReference | TfInstanceLoggingConfiguration.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,14 +329,14 @@ export function awsVerifiedaccessInstanceLoggingConfigurationAccessLogsPropertyT
   return {
     include_trust_context: cdktn.booleanToTerraform(struct!.includeTrustContext),
     log_version: cdktn.stringToTerraform(struct!.logVersion),
-    cloudwatch_logs: awsVerifiedaccessInstanceLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    kinesis_data_firehose: awsVerifiedaccessInstanceLoggingConfigurationKinesisDataFirehosePropertyToTerraform(struct!.kinesisDataFirehose),
-    s3: awsVerifiedaccessInstanceLoggingConfigurationS3PropertyToTerraform(struct!.s3),
+    cloudwatch_logs: tfInstanceLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    kinesis_data_firehose: tfInstanceLoggingConfigurationKinesisDataFirehosePropertyToTerraform(struct!.kinesisDataFirehose),
+    s3: tfInstanceLoggingConfigurationS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function awsVerifiedaccessInstanceLoggingConfigurationAccessLogsPropertyToHclTerraform(struct?: AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsPropertyOutputReference | AwsVerifiedaccessInstanceLoggingConfiguration.AccessLogsProperty): any {
+export function tfInstanceLoggingConfigurationAccessLogsPropertyToHclTerraform(struct?: TfInstanceLoggingConfiguration.AccessLogsPropertyOutputReference | TfInstanceLoggingConfiguration.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,19 +355,19 @@ export function awsVerifiedaccessInstanceLoggingConfigurationAccessLogsPropertyT
       storageClassType: "string",
     },
     cloudwatch_logs: {
-      value: awsVerifiedaccessInstanceLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: tfInstanceLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     kinesis_data_firehose: {
-      value: awsVerifiedaccessInstanceLoggingConfigurationKinesisDataFirehosePropertyToHclTerraform(struct!.kinesisDataFirehose),
+      value: tfInstanceLoggingConfigurationKinesisDataFirehosePropertyToHclTerraform(struct!.kinesisDataFirehose),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisDataFirehosePropertyList",
     },
     s3: {
-      value: awsVerifiedaccessInstanceLoggingConfigurationS3PropertyToHclTerraform(struct!.s3),
+      value: tfInstanceLoggingConfigurationS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -379,14 +379,14 @@ export function awsVerifiedaccessInstanceLoggingConfigurationAccessLogsPropertyT
 }
 
 
-export namespace AwsVerifiedaccessInstanceLoggingConfiguration {
+export namespace TfInstanceLoggingConfiguration {
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#enabled AwsVerifiedaccessInstanceLoggingConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#enabled TfInstanceLoggingConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#log_group AwsVerifiedaccessInstanceLoggingConfiguration#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#log_group TfInstanceLoggingConfiguration#log_group}
   */
   readonly logGroup?: string;
 }
@@ -459,11 +459,11 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface KinesisDataFirehoseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#delivery_stream AwsVerifiedaccessInstanceLoggingConfiguration#delivery_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#delivery_stream TfInstanceLoggingConfiguration#delivery_stream}
   */
   readonly deliveryStream?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#enabled AwsVerifiedaccessInstanceLoggingConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#enabled TfInstanceLoggingConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -536,19 +536,19 @@ export class KinesisDataFirehosePropertyOutputReference extends cdktn.ComplexObj
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#bucket_name AwsVerifiedaccessInstanceLoggingConfiguration#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#bucket_name TfInstanceLoggingConfiguration#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#bucket_owner AwsVerifiedaccessInstanceLoggingConfiguration#bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#bucket_owner TfInstanceLoggingConfiguration#bucket_owner}
   */
   readonly bucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#enabled AwsVerifiedaccessInstanceLoggingConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#enabled TfInstanceLoggingConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#prefix AwsVerifiedaccessInstanceLoggingConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#prefix TfInstanceLoggingConfiguration#prefix}
   */
   readonly prefix?: string;
 }
@@ -665,29 +665,29 @@ export class S3PropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AccessLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#include_trust_context AwsVerifiedaccessInstanceLoggingConfiguration#include_trust_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#include_trust_context TfInstanceLoggingConfiguration#include_trust_context}
   */
   readonly includeTrustContext?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#log_version AwsVerifiedaccessInstanceLoggingConfiguration#log_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#log_version TfInstanceLoggingConfiguration#log_version}
   */
   readonly logVersion?: string;
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#cloudwatch_logs AwsVerifiedaccessInstanceLoggingConfiguration#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#cloudwatch_logs TfInstanceLoggingConfiguration#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * kinesis_data_firehose block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#kinesis_data_firehose AwsVerifiedaccessInstanceLoggingConfiguration#kinesis_data_firehose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#kinesis_data_firehose TfInstanceLoggingConfiguration#kinesis_data_firehose}
   */
   readonly kinesisDataFirehose?: KinesisDataFirehoseProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#s3 AwsVerifiedaccessInstanceLoggingConfiguration#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_instance_logging_configuration#s3 TfInstanceLoggingConfiguration#s3}
   */
   readonly s3?: S3Property;
 }

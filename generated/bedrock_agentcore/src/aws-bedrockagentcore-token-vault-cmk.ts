@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreTokenVaultCmkConfig extends cdktn.TerraformMetaArguments {
+export interface TfTokenVaultCmkConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#region AwsBedrockagentcoreTokenVaultCmk#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#region TfTokenVaultCmk#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#token_vault_id AwsBedrockagentcoreTokenVaultCmk#token_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#token_vault_id TfTokenVaultCmk#token_vault_id}
   */
   readonly tokenVaultId?: string;
   /**
   * kms_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#kms_configuration AwsBedrockagentcoreTokenVaultCmk#kms_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#kms_configuration TfTokenVaultCmk#kms_configuration}
   */
-  readonly kmsConfiguration?: AwsBedrockagentcoreTokenVaultCmk.KmsConfigurationProperty[] | cdktn.IResolvable;
+  readonly kmsConfiguration?: TfTokenVaultCmk.KmsConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk aws_bedrockagentcore_token_vault_cmk}
 */
-export class AwsBedrockagentcoreTokenVaultCmk extends cdktn.TerraformResource {
+export class TfTokenVaultCmk extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsBedrockagentcoreTokenVaultCmk extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreTokenVaultCmk resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTokenVaultCmk resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreTokenVaultCmk to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreTokenVaultCmk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreTokenVaultCmk to import is found
+  * @param importToId The construct id used in the generated config for the TfTokenVaultCmk to import
+  * @param importFromId The id of the existing TfTokenVaultCmk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTokenVaultCmk to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_token_vault_cmk", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsBedrockagentcoreTokenVaultCmk extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreTokenVaultCmkConfig = {}
+  * @param options TfTokenVaultCmkConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreTokenVaultCmkConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfTokenVaultCmkConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_token_vault_cmk',
       terraformGeneratorMetadata: {
@@ -117,11 +117,11 @@ export class AwsBedrockagentcoreTokenVaultCmk extends cdktn.TerraformResource {
   }
 
   // kms_configuration - computed: false, optional: true, required: false
-  private _kmsConfiguration = new AwsBedrockagentcoreTokenVaultCmk.KmsConfigurationPropertyList(this, "kms_configuration", false);
+  private _kmsConfiguration = new TfTokenVaultCmk.KmsConfigurationPropertyList(this, "kms_configuration", false);
   public get kmsConfiguration() {
     return this._kmsConfiguration;
   }
-  public putKmsConfiguration(value: AwsBedrockagentcoreTokenVaultCmk.KmsConfigurationProperty[] | cdktn.IResolvable) {
+  public putKmsConfiguration(value: TfTokenVaultCmk.KmsConfigurationProperty[] | cdktn.IResolvable) {
     this._kmsConfiguration.internalValue = value;
   }
   public resetKmsConfiguration() {
@@ -140,7 +140,7 @@ export class AwsBedrockagentcoreTokenVaultCmk extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       token_vault_id: cdktn.stringToTerraform(this._tokenVaultId),
-      kms_configuration: cdktn.listMapper(awsBedrockagentcoreTokenVaultCmkKmsConfigurationPropertyToTerraform, true)(this._kmsConfiguration.internalValue),
+      kms_configuration: cdktn.listMapper(tfTokenVaultCmkKmsConfigurationPropertyToTerraform, true)(this._kmsConfiguration.internalValue),
     };
   }
 
@@ -159,10 +159,10 @@ export class AwsBedrockagentcoreTokenVaultCmk extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       kms_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreTokenVaultCmkKmsConfigurationPropertyToHclTerraform, true)(this._kmsConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfTokenVaultCmkKmsConfigurationPropertyToHclTerraform, true)(this._kmsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreTokenVaultCmk.KmsConfigurationPropertyList",
+        storageClassType: "TfTokenVaultCmk.KmsConfigurationPropertyList",
       },
     };
 
@@ -171,7 +171,7 @@ export class AwsBedrockagentcoreTokenVaultCmk extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcoreTokenVaultCmkKmsConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreTokenVaultCmk.KmsConfigurationProperty | cdktn.IResolvable): any {
+export function tfTokenVaultCmkKmsConfigurationPropertyToTerraform(struct?: TfTokenVaultCmk.KmsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -183,7 +183,7 @@ export function awsBedrockagentcoreTokenVaultCmkKmsConfigurationPropertyToTerraf
 }
 
 
-export function awsBedrockagentcoreTokenVaultCmkKmsConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreTokenVaultCmk.KmsConfigurationProperty | cdktn.IResolvable): any {
+export function tfTokenVaultCmkKmsConfigurationPropertyToHclTerraform(struct?: TfTokenVaultCmk.KmsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,14 +208,14 @@ export function awsBedrockagentcoreTokenVaultCmkKmsConfigurationPropertyToHclTer
 }
 
 
-export namespace AwsBedrockagentcoreTokenVaultCmk {
+export namespace TfTokenVaultCmk {
 export interface KmsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#key_type AwsBedrockagentcoreTokenVaultCmk#key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#key_type TfTokenVaultCmk#key_type}
   */
   readonly keyType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#kms_key_arn AwsBedrockagentcoreTokenVaultCmk#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_token_vault_cmk#kms_key_arn TfTokenVaultCmk#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }

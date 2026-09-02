@@ -5,89 +5,89 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsM2EnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#apply_changes_during_maintenance_window AwsM2Environment#apply_changes_during_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#apply_changes_during_maintenance_window TfEnvironment#apply_changes_during_maintenance_window}
   */
   readonly applyChangesDuringMaintenanceWindow?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#description AwsM2Environment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#description TfEnvironment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#engine_type AwsM2Environment#engine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#engine_type TfEnvironment#engine_type}
   */
   readonly engineType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#engine_version AwsM2Environment#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#engine_version TfEnvironment#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#force_update AwsM2Environment#force_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#force_update TfEnvironment#force_update}
   */
   readonly forceUpdate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#instance_type AwsM2Environment#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#instance_type TfEnvironment#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#kms_key_id AwsM2Environment#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#kms_key_id TfEnvironment#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#name AwsM2Environment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#name TfEnvironment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#preferred_maintenance_window AwsM2Environment#preferred_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#preferred_maintenance_window TfEnvironment#preferred_maintenance_window}
   */
   readonly preferredMaintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#publicly_accessible AwsM2Environment#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#publicly_accessible TfEnvironment#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#region AwsM2Environment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#region TfEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#security_group_ids AwsM2Environment#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#security_group_ids TfEnvironment#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#subnet_ids AwsM2Environment#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#subnet_ids TfEnvironment#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#tags AwsM2Environment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#tags TfEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * high_availability_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#high_availability_config AwsM2Environment#high_availability_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#high_availability_config TfEnvironment#high_availability_config}
   */
-  readonly highAvailabilityConfig?: AwsM2Environment.HighAvailabilityConfigProperty[] | cdktn.IResolvable;
+  readonly highAvailabilityConfig?: TfEnvironment.HighAvailabilityConfigProperty[] | cdktn.IResolvable;
   /**
   * storage_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#storage_configuration AwsM2Environment#storage_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#storage_configuration TfEnvironment#storage_configuration}
   */
-  readonly storageConfiguration?: AwsM2Environment.StorageConfigurationProperty[] | cdktn.IResolvable;
+  readonly storageConfiguration?: TfEnvironment.StorageConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#timeouts AwsM2Environment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#timeouts TfEnvironment#timeouts}
   */
-  readonly timeouts?: AwsM2Environment.TimeoutsProperty;
+  readonly timeouts?: TfEnvironment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment aws_m2_environment}
 */
-export class AwsM2Environment extends cdktn.TerraformResource {
+export class TfEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -98,11 +98,11 @@ export class AwsM2Environment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsM2Environment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsM2Environment to import
-  * @param importFromId The id of the existing AwsM2Environment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsM2Environment to import is found
+  * @param importToId The construct id used in the generated config for the TfEnvironment to import
+  * @param importFromId The id of the existing TfEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_m2_environment", importId: importFromId, provider });
@@ -117,9 +117,9 @@ export class AwsM2Environment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsM2EnvironmentConfig
+  * @param options TfEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsM2EnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_m2_environment',
       terraformGeneratorMetadata: {
@@ -400,11 +400,11 @@ export class AwsM2Environment extends cdktn.TerraformResource {
   }
 
   // high_availability_config - computed: false, optional: true, required: false
-  private _highAvailabilityConfig = new AwsM2Environment.HighAvailabilityConfigPropertyList(this, "high_availability_config", false);
+  private _highAvailabilityConfig = new TfEnvironment.HighAvailabilityConfigPropertyList(this, "high_availability_config", false);
   public get highAvailabilityConfig() {
     return this._highAvailabilityConfig;
   }
-  public putHighAvailabilityConfig(value: AwsM2Environment.HighAvailabilityConfigProperty[] | cdktn.IResolvable) {
+  public putHighAvailabilityConfig(value: TfEnvironment.HighAvailabilityConfigProperty[] | cdktn.IResolvable) {
     this._highAvailabilityConfig.internalValue = value;
   }
   public resetHighAvailabilityConfig() {
@@ -416,11 +416,11 @@ export class AwsM2Environment extends cdktn.TerraformResource {
   }
 
   // storage_configuration - computed: false, optional: true, required: false
-  private _storageConfiguration = new AwsM2Environment.StorageConfigurationPropertyList(this, "storage_configuration", false);
+  private _storageConfiguration = new TfEnvironment.StorageConfigurationPropertyList(this, "storage_configuration", false);
   public get storageConfiguration() {
     return this._storageConfiguration;
   }
-  public putStorageConfiguration(value: AwsM2Environment.StorageConfigurationProperty[] | cdktn.IResolvable) {
+  public putStorageConfiguration(value: TfEnvironment.StorageConfigurationProperty[] | cdktn.IResolvable) {
     this._storageConfiguration.internalValue = value;
   }
   public resetStorageConfiguration() {
@@ -432,11 +432,11 @@ export class AwsM2Environment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsM2Environment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsM2Environment.TimeoutsProperty) {
+  public putTimeouts(value: TfEnvironment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -467,9 +467,9 @@ export class AwsM2Environment extends cdktn.TerraformResource {
       security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupIds),
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      high_availability_config: cdktn.listMapper(awsM2EnvironmentHighAvailabilityConfigPropertyToTerraform, true)(this._highAvailabilityConfig.internalValue),
-      storage_configuration: cdktn.listMapper(awsM2EnvironmentStorageConfigurationPropertyToTerraform, true)(this._storageConfiguration.internalValue),
-      timeouts: awsM2EnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      high_availability_config: cdktn.listMapper(tfEnvironmentHighAvailabilityConfigPropertyToTerraform, true)(this._highAvailabilityConfig.internalValue),
+      storage_configuration: cdktn.listMapper(tfEnvironmentStorageConfigurationPropertyToTerraform, true)(this._storageConfiguration.internalValue),
+      timeouts: tfEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -560,22 +560,22 @@ export class AwsM2Environment extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       high_availability_config: {
-        value: cdktn.listMapperHcl(awsM2EnvironmentHighAvailabilityConfigPropertyToHclTerraform, true)(this._highAvailabilityConfig.internalValue),
+        value: cdktn.listMapperHcl(tfEnvironmentHighAvailabilityConfigPropertyToHclTerraform, true)(this._highAvailabilityConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsM2Environment.HighAvailabilityConfigPropertyList",
+        storageClassType: "TfEnvironment.HighAvailabilityConfigPropertyList",
       },
       storage_configuration: {
-        value: cdktn.listMapperHcl(awsM2EnvironmentStorageConfigurationPropertyToHclTerraform, true)(this._storageConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfEnvironmentStorageConfigurationPropertyToHclTerraform, true)(this._storageConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsM2Environment.StorageConfigurationPropertyList",
+        storageClassType: "TfEnvironment.StorageConfigurationPropertyList",
       },
       timeouts: {
-        value: awsM2EnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsM2Environment.TimeoutsProperty",
+        storageClassType: "TfEnvironment.TimeoutsProperty",
       },
     };
 
@@ -584,7 +584,7 @@ export class AwsM2Environment extends cdktn.TerraformResource {
   }
 }
 
-export function awsM2EnvironmentHighAvailabilityConfigPropertyToTerraform(struct?: AwsM2Environment.HighAvailabilityConfigProperty | cdktn.IResolvable): any {
+export function tfEnvironmentHighAvailabilityConfigPropertyToTerraform(struct?: TfEnvironment.HighAvailabilityConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function awsM2EnvironmentHighAvailabilityConfigPropertyToTerraform(struct
 }
 
 
-export function awsM2EnvironmentHighAvailabilityConfigPropertyToHclTerraform(struct?: AwsM2Environment.HighAvailabilityConfigProperty | cdktn.IResolvable): any {
+export function tfEnvironmentHighAvailabilityConfigPropertyToHclTerraform(struct?: TfEnvironment.HighAvailabilityConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function awsM2EnvironmentHighAvailabilityConfigPropertyToHclTerraform(str
 }
 
 
-export function awsM2EnvironmentEfsPropertyToTerraform(struct?: AwsM2Environment.EfsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentEfsPropertyToTerraform(struct?: TfEnvironment.EfsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function awsM2EnvironmentEfsPropertyToTerraform(struct?: AwsM2Environment
 }
 
 
-export function awsM2EnvironmentEfsPropertyToHclTerraform(struct?: AwsM2Environment.EfsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentEfsPropertyToHclTerraform(struct?: TfEnvironment.EfsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,7 +651,7 @@ export function awsM2EnvironmentEfsPropertyToHclTerraform(struct?: AwsM2Environm
 }
 
 
-export function awsM2EnvironmentFsxPropertyToTerraform(struct?: AwsM2Environment.FsxProperty | cdktn.IResolvable): any {
+export function tfEnvironmentFsxPropertyToTerraform(struct?: TfEnvironment.FsxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function awsM2EnvironmentFsxPropertyToTerraform(struct?: AwsM2Environment
 }
 
 
-export function awsM2EnvironmentFsxPropertyToHclTerraform(struct?: AwsM2Environment.FsxProperty | cdktn.IResolvable): any {
+export function tfEnvironmentFsxPropertyToHclTerraform(struct?: TfEnvironment.FsxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,32 +688,32 @@ export function awsM2EnvironmentFsxPropertyToHclTerraform(struct?: AwsM2Environm
 }
 
 
-export function awsM2EnvironmentStorageConfigurationPropertyToTerraform(struct?: AwsM2Environment.StorageConfigurationProperty | cdktn.IResolvable): any {
+export function tfEnvironmentStorageConfigurationPropertyToTerraform(struct?: TfEnvironment.StorageConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs: cdktn.listMapper(awsM2EnvironmentEfsPropertyToTerraform, true)(struct!.efs),
-    fsx: cdktn.listMapper(awsM2EnvironmentFsxPropertyToTerraform, true)(struct!.fsx),
+    efs: cdktn.listMapper(tfEnvironmentEfsPropertyToTerraform, true)(struct!.efs),
+    fsx: cdktn.listMapper(tfEnvironmentFsxPropertyToTerraform, true)(struct!.fsx),
   }
 }
 
 
-export function awsM2EnvironmentStorageConfigurationPropertyToHclTerraform(struct?: AwsM2Environment.StorageConfigurationProperty | cdktn.IResolvable): any {
+export function tfEnvironmentStorageConfigurationPropertyToHclTerraform(struct?: TfEnvironment.StorageConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs: {
-      value: cdktn.listMapperHcl(awsM2EnvironmentEfsPropertyToHclTerraform, true)(struct!.efs),
+      value: cdktn.listMapperHcl(tfEnvironmentEfsPropertyToHclTerraform, true)(struct!.efs),
       isBlock: true,
       type: "list",
       storageClassType: "EfsPropertyList",
     },
     fsx: {
-      value: cdktn.listMapperHcl(awsM2EnvironmentFsxPropertyToHclTerraform, true)(struct!.fsx),
+      value: cdktn.listMapperHcl(tfEnvironmentFsxPropertyToHclTerraform, true)(struct!.fsx),
       isBlock: true,
       type: "list",
       storageClassType: "FsxPropertyList",
@@ -725,7 +725,7 @@ export function awsM2EnvironmentStorageConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function awsM2EnvironmentTimeoutsPropertyToTerraform(struct?: AwsM2Environment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentTimeoutsPropertyToTerraform(struct?: TfEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -738,7 +738,7 @@ export function awsM2EnvironmentTimeoutsPropertyToTerraform(struct?: AwsM2Enviro
 }
 
 
-export function awsM2EnvironmentTimeoutsPropertyToHclTerraform(struct?: AwsM2Environment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentTimeoutsPropertyToHclTerraform(struct?: TfEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,10 +769,10 @@ export function awsM2EnvironmentTimeoutsPropertyToHclTerraform(struct?: AwsM2Env
 }
 
 
-export namespace AwsM2Environment {
+export namespace TfEnvironment {
 export interface HighAvailabilityConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#desired_capacity AwsM2Environment#desired_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#desired_capacity TfEnvironment#desired_capacity}
   */
   readonly desiredCapacity: number;
 }
@@ -855,11 +855,11 @@ export class HighAvailabilityConfigPropertyList extends cdktn.ComplexList {
 }
 export interface EfsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#file_system_id AwsM2Environment#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#file_system_id TfEnvironment#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#mount_point AwsM2Environment#mount_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#mount_point TfEnvironment#mount_point}
   */
   readonly mountPoint: string;
 }
@@ -961,11 +961,11 @@ export class EfsPropertyList extends cdktn.ComplexList {
 }
 export interface FsxProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#file_system_id AwsM2Environment#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#file_system_id TfEnvironment#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#mount_point AwsM2Environment#mount_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#mount_point TfEnvironment#mount_point}
   */
   readonly mountPoint: string;
 }
@@ -1069,13 +1069,13 @@ export interface StorageConfigurationProperty {
   /**
   * efs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#efs AwsM2Environment#efs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#efs TfEnvironment#efs}
   */
   readonly efs?: EfsProperty[] | cdktn.IResolvable;
   /**
   * fsx block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#fsx AwsM2Environment#fsx}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#fsx TfEnvironment#fsx}
   */
   readonly fsx?: FsxProperty[] | cdktn.IResolvable;
 }
@@ -1185,19 +1185,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#create AwsM2Environment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#create TfEnvironment#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#delete AwsM2Environment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#delete TfEnvironment#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#update AwsM2Environment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_environment#update TfEnvironment#update}
   */
   readonly update?: string;
 }

@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSnsTopicSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfTopicSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#confirmation_timeout_in_minutes AwsSnsTopicSubscription#confirmation_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#confirmation_timeout_in_minutes TfTopicSubscription#confirmation_timeout_in_minutes}
   */
   readonly confirmationTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#delivery_policy AwsSnsTopicSubscription#delivery_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#delivery_policy TfTopicSubscription#delivery_policy}
   */
   readonly deliveryPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#endpoint AwsSnsTopicSubscription#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#endpoint TfTopicSubscription#endpoint}
   */
   readonly endpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#endpoint_auto_confirms AwsSnsTopicSubscription#endpoint_auto_confirms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#endpoint_auto_confirms TfTopicSubscription#endpoint_auto_confirms}
   */
   readonly endpointAutoConfirms?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#filter_policy AwsSnsTopicSubscription#filter_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#filter_policy TfTopicSubscription#filter_policy}
   */
   readonly filterPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#filter_policy_scope AwsSnsTopicSubscription#filter_policy_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#filter_policy_scope TfTopicSubscription#filter_policy_scope}
   */
   readonly filterPolicyScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#id AwsSnsTopicSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#id TfTopicSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#protocol AwsSnsTopicSubscription#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#protocol TfTopicSubscription#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#raw_message_delivery AwsSnsTopicSubscription#raw_message_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#raw_message_delivery TfTopicSubscription#raw_message_delivery}
   */
   readonly rawMessageDelivery?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#redrive_policy AwsSnsTopicSubscription#redrive_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#redrive_policy TfTopicSubscription#redrive_policy}
   */
   readonly redrivePolicy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#region AwsSnsTopicSubscription#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#region TfTopicSubscription#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#replay_policy AwsSnsTopicSubscription#replay_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#replay_policy TfTopicSubscription#replay_policy}
   */
   readonly replayPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#subscription_role_arn AwsSnsTopicSubscription#subscription_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#subscription_role_arn TfTopicSubscription#subscription_role_arn}
   */
   readonly subscriptionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#topic_arn AwsSnsTopicSubscription#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#topic_arn TfTopicSubscription#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -72,7 +72,7 @@ export interface AwsSnsTopicSubscriptionConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription aws_sns_topic_subscription}
 */
-export class AwsSnsTopicSubscription extends cdktn.TerraformResource {
+export class TfTopicSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class AwsSnsTopicSubscription extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSnsTopicSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTopicSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSnsTopicSubscription to import
-  * @param importFromId The id of the existing AwsSnsTopicSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSnsTopicSubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfTopicSubscription to import
+  * @param importFromId The id of the existing TfTopicSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTopicSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sns_topic_subscription", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class AwsSnsTopicSubscription extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSnsTopicSubscriptionConfig
+  * @param options TfTopicSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSnsTopicSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfTopicSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sns_topic_subscription',
       terraformGeneratorMetadata: {

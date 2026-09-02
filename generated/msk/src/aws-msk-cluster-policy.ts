@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMskClusterPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#cluster_arn AwsMskClusterPolicy#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#cluster_arn TfClusterPolicy#cluster_arn}
   */
   readonly clusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#id AwsMskClusterPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#id TfClusterPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#policy AwsMskClusterPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#policy TfClusterPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#region AwsMskClusterPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#region TfClusterPolicy#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsMskClusterPolicyConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy aws_msk_cluster_policy}
 */
-export class AwsMskClusterPolicy extends cdktn.TerraformResource {
+export class TfClusterPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsMskClusterPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMskClusterPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfClusterPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMskClusterPolicy to import
-  * @param importFromId The id of the existing AwsMskClusterPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMskClusterPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfClusterPolicy to import
+  * @param importFromId The id of the existing TfClusterPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfClusterPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_cluster_policy", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsMskClusterPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMskClusterPolicyConfig
+  * @param options TfClusterPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMskClusterPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfClusterPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_cluster_policy',
       terraformGeneratorMetadata: {

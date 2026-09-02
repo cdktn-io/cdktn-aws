@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamSamlProviderConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSamlProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#arn DataAwsIamSamlProvider#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#arn DataTfSamlProvider#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#id DataAwsIamSamlProvider#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#id DataTfSamlProvider#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#tags DataAwsIamSamlProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#tags DataTfSamlProvider#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -26,7 +26,7 @@ export interface DataAwsIamSamlProviderConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider aws_iam_saml_provider}
 */
-export class DataAwsIamSamlProvider extends cdktn.TerraformDataSource {
+export class DataTfSamlProvider extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class DataAwsIamSamlProvider extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamSamlProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSamlProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamSamlProvider to import
-  * @param importFromId The id of the existing DataAwsIamSamlProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamSamlProvider to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSamlProvider to import
+  * @param importFromId The id of the existing DataTfSamlProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_saml_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSamlProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_saml_provider", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class DataAwsIamSamlProvider extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamSamlProviderConfig
+  * @param options DataTfSamlProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamSamlProviderConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSamlProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_saml_provider',
       terraformGeneratorMetadata: {

@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsPinpointAppConfig extends cdktn.TerraformMetaArguments {
+export interface TfAppConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#id AwsPinpointApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#id TfApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name AwsPinpointApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name TfApp#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name_prefix AwsPinpointApp#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name_prefix TfApp#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#region AwsPinpointApp#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#region TfApp#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags AwsPinpointApp#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags TfApp#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags_all AwsPinpointApp#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags_all TfApp#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * campaign_hook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#campaign_hook AwsPinpointApp#campaign_hook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#campaign_hook TfApp#campaign_hook}
   */
-  readonly campaignHook?: AwsPinpointApp.CampaignHookProperty;
+  readonly campaignHook?: TfApp.CampaignHookProperty;
   /**
   * limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#limits AwsPinpointApp#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#limits TfApp#limits}
   */
-  readonly limits?: AwsPinpointApp.LimitsProperty;
+  readonly limits?: TfApp.LimitsProperty;
   /**
   * quiet_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#quiet_time AwsPinpointApp#quiet_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#quiet_time TfApp#quiet_time}
   */
-  readonly quietTime?: AwsPinpointApp.QuietTimeProperty;
+  readonly quietTime?: TfApp.QuietTimeProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app aws_pinpoint_app}
 */
-export class AwsPinpointApp extends cdktn.TerraformResource {
+export class TfApp extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsPinpointApp resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApp resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsPinpointApp to import
-  * @param importFromId The id of the existing AwsPinpointApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsPinpointApp to import is found
+  * @param importToId The construct id used in the generated config for the TfApp to import
+  * @param importFromId The id of the existing TfApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_app", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsPinpointAppConfig = {}
+  * @param options TfAppConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsPinpointAppConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfAppConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpoint_app',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
   }
 
   // campaign_hook - computed: false, optional: true, required: false
-  private _campaignHook = new AwsPinpointApp.CampaignHookPropertyOutputReference(this, "campaign_hook");
+  private _campaignHook = new TfApp.CampaignHookPropertyOutputReference(this, "campaign_hook");
   public get campaignHook() {
     return this._campaignHook;
   }
-  public putCampaignHook(value: AwsPinpointApp.CampaignHookProperty) {
+  public putCampaignHook(value: TfApp.CampaignHookProperty) {
     this._campaignHook.internalValue = value;
   }
   public resetCampaignHook() {
@@ -244,11 +244,11 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
   }
 
   // limits - computed: false, optional: true, required: false
-  private _limits = new AwsPinpointApp.LimitsPropertyOutputReference(this, "limits");
+  private _limits = new TfApp.LimitsPropertyOutputReference(this, "limits");
   public get limits() {
     return this._limits;
   }
-  public putLimits(value: AwsPinpointApp.LimitsProperty) {
+  public putLimits(value: TfApp.LimitsProperty) {
     this._limits.internalValue = value;
   }
   public resetLimits() {
@@ -260,11 +260,11 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
   }
 
   // quiet_time - computed: false, optional: true, required: false
-  private _quietTime = new AwsPinpointApp.QuietTimePropertyOutputReference(this, "quiet_time");
+  private _quietTime = new TfApp.QuietTimePropertyOutputReference(this, "quiet_time");
   public get quietTime() {
     return this._quietTime;
   }
-  public putQuietTime(value: AwsPinpointApp.QuietTimeProperty) {
+  public putQuietTime(value: TfApp.QuietTimeProperty) {
     this._quietTime.internalValue = value;
   }
   public resetQuietTime() {
@@ -287,9 +287,9 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      campaign_hook: awsPinpointAppCampaignHookPropertyToTerraform(this._campaignHook.internalValue),
-      limits: awsPinpointAppLimitsPropertyToTerraform(this._limits.internalValue),
-      quiet_time: awsPinpointAppQuietTimePropertyToTerraform(this._quietTime.internalValue),
+      campaign_hook: tfAppCampaignHookPropertyToTerraform(this._campaignHook.internalValue),
+      limits: tfAppLimitsPropertyToTerraform(this._limits.internalValue),
+      quiet_time: tfAppQuietTimePropertyToTerraform(this._quietTime.internalValue),
     };
   }
 
@@ -332,22 +332,22 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       campaign_hook: {
-        value: awsPinpointAppCampaignHookPropertyToHclTerraform(this._campaignHook.internalValue),
+        value: tfAppCampaignHookPropertyToHclTerraform(this._campaignHook.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsPinpointApp.CampaignHookPropertyList",
+        storageClassType: "TfApp.CampaignHookPropertyList",
       },
       limits: {
-        value: awsPinpointAppLimitsPropertyToHclTerraform(this._limits.internalValue),
+        value: tfAppLimitsPropertyToHclTerraform(this._limits.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsPinpointApp.LimitsPropertyList",
+        storageClassType: "TfApp.LimitsPropertyList",
       },
       quiet_time: {
-        value: awsPinpointAppQuietTimePropertyToHclTerraform(this._quietTime.internalValue),
+        value: tfAppQuietTimePropertyToHclTerraform(this._quietTime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsPinpointApp.QuietTimePropertyList",
+        storageClassType: "TfApp.QuietTimePropertyList",
       },
     };
 
@@ -356,7 +356,7 @@ export class AwsPinpointApp extends cdktn.TerraformResource {
   }
 }
 
-export function awsPinpointAppCampaignHookPropertyToTerraform(struct?: AwsPinpointApp.CampaignHookPropertyOutputReference | AwsPinpointApp.CampaignHookProperty): any {
+export function tfAppCampaignHookPropertyToTerraform(struct?: TfApp.CampaignHookPropertyOutputReference | TfApp.CampaignHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function awsPinpointAppCampaignHookPropertyToTerraform(struct?: AwsPinpoi
 }
 
 
-export function awsPinpointAppCampaignHookPropertyToHclTerraform(struct?: AwsPinpointApp.CampaignHookPropertyOutputReference | AwsPinpointApp.CampaignHookProperty): any {
+export function tfAppCampaignHookPropertyToHclTerraform(struct?: TfApp.CampaignHookPropertyOutputReference | TfApp.CampaignHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function awsPinpointAppCampaignHookPropertyToHclTerraform(struct?: AwsPin
 }
 
 
-export function awsPinpointAppLimitsPropertyToTerraform(struct?: AwsPinpointApp.LimitsPropertyOutputReference | AwsPinpointApp.LimitsProperty): any {
+export function tfAppLimitsPropertyToTerraform(struct?: TfApp.LimitsPropertyOutputReference | TfApp.LimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function awsPinpointAppLimitsPropertyToTerraform(struct?: AwsPinpointApp.
 }
 
 
-export function awsPinpointAppLimitsPropertyToHclTerraform(struct?: AwsPinpointApp.LimitsPropertyOutputReference | AwsPinpointApp.LimitsProperty): any {
+export function tfAppLimitsPropertyToHclTerraform(struct?: TfApp.LimitsPropertyOutputReference | TfApp.LimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function awsPinpointAppLimitsPropertyToHclTerraform(struct?: AwsPinpointA
 }
 
 
-export function awsPinpointAppQuietTimePropertyToTerraform(struct?: AwsPinpointApp.QuietTimePropertyOutputReference | AwsPinpointApp.QuietTimeProperty): any {
+export function tfAppQuietTimePropertyToTerraform(struct?: TfApp.QuietTimePropertyOutputReference | TfApp.QuietTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function awsPinpointAppQuietTimePropertyToTerraform(struct?: AwsPinpointA
 }
 
 
-export function awsPinpointAppQuietTimePropertyToHclTerraform(struct?: AwsPinpointApp.QuietTimePropertyOutputReference | AwsPinpointApp.QuietTimeProperty): any {
+export function tfAppQuietTimePropertyToHclTerraform(struct?: TfApp.QuietTimePropertyOutputReference | TfApp.QuietTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,18 +488,18 @@ export function awsPinpointAppQuietTimePropertyToHclTerraform(struct?: AwsPinpoi
 }
 
 
-export namespace AwsPinpointApp {
+export namespace TfApp {
 export interface CampaignHookProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#lambda_function_name AwsPinpointApp#lambda_function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#lambda_function_name TfApp#lambda_function_name}
   */
   readonly lambdaFunctionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#mode AwsPinpointApp#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#mode TfApp#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#web_url AwsPinpointApp#web_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#web_url TfApp#web_url}
   */
   readonly webUrl?: string;
 }
@@ -597,19 +597,19 @@ export class CampaignHookPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LimitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#daily AwsPinpointApp#daily}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#daily TfApp#daily}
   */
   readonly daily?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#maximum_duration AwsPinpointApp#maximum_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#maximum_duration TfApp#maximum_duration}
   */
   readonly maximumDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#messages_per_second AwsPinpointApp#messages_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#messages_per_second TfApp#messages_per_second}
   */
   readonly messagesPerSecond?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#total AwsPinpointApp#total}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#total TfApp#total}
   */
   readonly total?: number;
 }
@@ -729,11 +729,11 @@ export class LimitsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface QuietTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#end AwsPinpointApp#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#end TfApp#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#start AwsPinpointApp#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#start TfApp#start}
   */
   readonly start?: string;
 }

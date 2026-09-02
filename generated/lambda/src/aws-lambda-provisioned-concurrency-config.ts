@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLambdaProvisionedConcurrencyConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfProvisionedConcurrencyConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#function_name AwsLambdaProvisionedConcurrencyConfig#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#function_name TfProvisionedConcurrencyConfig#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#id AwsLambdaProvisionedConcurrencyConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#id TfProvisionedConcurrencyConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#provisioned_concurrent_executions AwsLambdaProvisionedConcurrencyConfig#provisioned_concurrent_executions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#provisioned_concurrent_executions TfProvisionedConcurrencyConfig#provisioned_concurrent_executions}
   */
   readonly provisionedConcurrentExecutions: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#qualifier AwsLambdaProvisionedConcurrencyConfig#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#qualifier TfProvisionedConcurrencyConfig#qualifier}
   */
   readonly qualifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#region AwsLambdaProvisionedConcurrencyConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#region TfProvisionedConcurrencyConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#skip_destroy AwsLambdaProvisionedConcurrencyConfig#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#skip_destroy TfProvisionedConcurrencyConfig#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#timeouts AwsLambdaProvisionedConcurrencyConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#timeouts TfProvisionedConcurrencyConfig#timeouts}
   */
-  readonly timeouts?: AwsLambdaProvisionedConcurrencyConfig.TimeoutsProperty;
+  readonly timeouts?: TfProvisionedConcurrencyConfig.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config aws_lambda_provisioned_concurrency_config}
 */
-export class AwsLambdaProvisionedConcurrencyConfig extends cdktn.TerraformResource {
+export class TfProvisionedConcurrencyConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsLambdaProvisionedConcurrencyConfig extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLambdaProvisionedConcurrencyConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProvisionedConcurrencyConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLambdaProvisionedConcurrencyConfig to import
-  * @param importFromId The id of the existing AwsLambdaProvisionedConcurrencyConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLambdaProvisionedConcurrencyConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfProvisionedConcurrencyConfig to import
+  * @param importFromId The id of the existing TfProvisionedConcurrencyConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProvisionedConcurrencyConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_provisioned_concurrency_config", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsLambdaProvisionedConcurrencyConfig extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLambdaProvisionedConcurrencyConfigConfig
+  * @param options TfProvisionedConcurrencyConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLambdaProvisionedConcurrencyConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfProvisionedConcurrencyConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_provisioned_concurrency_config',
       terraformGeneratorMetadata: {
@@ -195,11 +195,11 @@ export class AwsLambdaProvisionedConcurrencyConfig extends cdktn.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLambdaProvisionedConcurrencyConfig.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfProvisionedConcurrencyConfig.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLambdaProvisionedConcurrencyConfig.TimeoutsProperty) {
+  public putTimeouts(value: TfProvisionedConcurrencyConfig.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -222,7 +222,7 @@ export class AwsLambdaProvisionedConcurrencyConfig extends cdktn.TerraformResour
       qualifier: cdktn.stringToTerraform(this._qualifier),
       region: cdktn.stringToTerraform(this._region),
       skip_destroy: cdktn.booleanToTerraform(this._skipDestroy),
-      timeouts: awsLambdaProvisionedConcurrencyConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfProvisionedConcurrencyConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -265,10 +265,10 @@ export class AwsLambdaProvisionedConcurrencyConfig extends cdktn.TerraformResour
         storageClassType: "boolean",
       },
       timeouts: {
-        value: awsLambdaProvisionedConcurrencyConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfProvisionedConcurrencyConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLambdaProvisionedConcurrencyConfig.TimeoutsProperty",
+        storageClassType: "TfProvisionedConcurrencyConfig.TimeoutsProperty",
       },
     };
 
@@ -277,7 +277,7 @@ export class AwsLambdaProvisionedConcurrencyConfig extends cdktn.TerraformResour
   }
 }
 
-export function awsLambdaProvisionedConcurrencyConfigTimeoutsPropertyToTerraform(struct?: AwsLambdaProvisionedConcurrencyConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProvisionedConcurrencyConfigTimeoutsPropertyToTerraform(struct?: TfProvisionedConcurrencyConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function awsLambdaProvisionedConcurrencyConfigTimeoutsPropertyToTerraform
 }
 
 
-export function awsLambdaProvisionedConcurrencyConfigTimeoutsPropertyToHclTerraform(struct?: AwsLambdaProvisionedConcurrencyConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProvisionedConcurrencyConfigTimeoutsPropertyToHclTerraform(struct?: TfProvisionedConcurrencyConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,14 +314,14 @@ export function awsLambdaProvisionedConcurrencyConfigTimeoutsPropertyToHclTerraf
 }
 
 
-export namespace AwsLambdaProvisionedConcurrencyConfig {
+export namespace TfProvisionedConcurrencyConfig {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#create AwsLambdaProvisionedConcurrencyConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#create TfProvisionedConcurrencyConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#update AwsLambdaProvisionedConcurrencyConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_provisioned_concurrency_config#update TfProvisionedConcurrencyConfig#update}
   */
   readonly update?: string;
 }

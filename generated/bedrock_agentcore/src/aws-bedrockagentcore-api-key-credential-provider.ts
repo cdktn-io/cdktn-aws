@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreApiKeyCredentialProviderConfig extends cdktn.TerraformMetaArguments {
+export interface TfApiKeyCredentialProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#api_key AwsBedrockagentcoreApiKeyCredentialProvider#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#api_key TfApiKeyCredentialProvider#api_key}
   */
   readonly apiKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#api_key_wo AwsBedrockagentcoreApiKeyCredentialProvider#api_key_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#api_key_wo TfApiKeyCredentialProvider#api_key_wo}
   */
   readonly apiKeyWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#api_key_wo_version AwsBedrockagentcoreApiKeyCredentialProvider#api_key_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#api_key_wo_version TfApiKeyCredentialProvider#api_key_wo_version}
   */
   readonly apiKeyWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#name AwsBedrockagentcoreApiKeyCredentialProvider#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#name TfApiKeyCredentialProvider#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#region AwsBedrockagentcoreApiKeyCredentialProvider#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#region TfApiKeyCredentialProvider#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#tags AwsBedrockagentcoreApiKeyCredentialProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#tags TfApiKeyCredentialProvider#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -37,7 +37,7 @@ export interface AwsBedrockagentcoreApiKeyCredentialProviderConfig extends cdktn
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider aws_bedrockagentcore_api_key_credential_provider}
 */
-export class AwsBedrockagentcoreApiKeyCredentialProvider extends cdktn.TerraformResource {
+export class TfApiKeyCredentialProvider extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsBedrockagentcoreApiKeyCredentialProvider extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreApiKeyCredentialProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApiKeyCredentialProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreApiKeyCredentialProvider to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreApiKeyCredentialProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreApiKeyCredentialProvider to import is found
+  * @param importToId The construct id used in the generated config for the TfApiKeyCredentialProvider to import
+  * @param importFromId The id of the existing TfApiKeyCredentialProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_api_key_credential_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApiKeyCredentialProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_api_key_credential_provider", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsBedrockagentcoreApiKeyCredentialProvider extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreApiKeyCredentialProviderConfig
+  * @param options TfApiKeyCredentialProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreApiKeyCredentialProviderConfig) {
+  public constructor(scope: Construct, id: string, config: TfApiKeyCredentialProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_api_key_credential_provider',
       terraformGeneratorMetadata: {
@@ -114,7 +114,7 @@ export class AwsBedrockagentcoreApiKeyCredentialProvider extends cdktn.Terraform
   }
 
   // api_key_secret_arn - computed: true, optional: false, required: false
-  private _apiKeySecretArn = new AwsBedrockagentcoreApiKeyCredentialProvider.ApiKeySecretArnPropertyList(this, "api_key_secret_arn", false);
+  private _apiKeySecretArn = new TfApiKeyCredentialProvider.ApiKeySecretArnPropertyList(this, "api_key_secret_arn", false);
   public get apiKeySecretArn() {
     return this._apiKeySecretArn;
   }
@@ -270,7 +270,7 @@ export class AwsBedrockagentcoreApiKeyCredentialProvider extends cdktn.Terraform
   }
 }
 
-export function awsBedrockagentcoreApiKeyCredentialProviderApiKeySecretArnPropertyToTerraform(struct?: AwsBedrockagentcoreApiKeyCredentialProvider.ApiKeySecretArnProperty): any {
+export function tfApiKeyCredentialProviderApiKeySecretArnPropertyToTerraform(struct?: TfApiKeyCredentialProvider.ApiKeySecretArnProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function awsBedrockagentcoreApiKeyCredentialProviderApiKeySecretArnProper
 }
 
 
-export function awsBedrockagentcoreApiKeyCredentialProviderApiKeySecretArnPropertyToHclTerraform(struct?: AwsBedrockagentcoreApiKeyCredentialProvider.ApiKeySecretArnProperty): any {
+export function tfApiKeyCredentialProviderApiKeySecretArnPropertyToHclTerraform(struct?: TfApiKeyCredentialProvider.ApiKeySecretArnProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function awsBedrockagentcoreApiKeyCredentialProviderApiKeySecretArnProper
 }
 
 
-export namespace AwsBedrockagentcoreApiKeyCredentialProvider {
+export namespace TfApiKeyCredentialProvider {
 export interface ApiKeySecretArnProperty {
 }
 export class ApiKeySecretArnPropertyOutputReference extends cdktn.ComplexObject {

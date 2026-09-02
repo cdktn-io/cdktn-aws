@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamRolePolicyAttachmentsExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface TfRolePolicyAttachmentsExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachments_exclusive#policy_arns AwsIamRolePolicyAttachmentsExclusive#policy_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachments_exclusive#policy_arns TfRolePolicyAttachmentsExclusive#policy_arns}
   */
   readonly policyArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachments_exclusive#role_name AwsIamRolePolicyAttachmentsExclusive#role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachments_exclusive#role_name TfRolePolicyAttachmentsExclusive#role_name}
   */
   readonly roleName: string;
 }
@@ -19,7 +19,7 @@ export interface AwsIamRolePolicyAttachmentsExclusiveConfig extends cdktn.Terraf
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachments_exclusive aws_iam_role_policy_attachments_exclusive}
 */
-export class AwsIamRolePolicyAttachmentsExclusive extends cdktn.TerraformResource {
+export class TfRolePolicyAttachmentsExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class AwsIamRolePolicyAttachmentsExclusive extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamRolePolicyAttachmentsExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRolePolicyAttachmentsExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamRolePolicyAttachmentsExclusive to import
-  * @param importFromId The id of the existing AwsIamRolePolicyAttachmentsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachments_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamRolePolicyAttachmentsExclusive to import is found
+  * @param importToId The construct id used in the generated config for the TfRolePolicyAttachmentsExclusive to import
+  * @param importFromId The id of the existing TfRolePolicyAttachmentsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachments_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRolePolicyAttachmentsExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role_policy_attachments_exclusive", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class AwsIamRolePolicyAttachmentsExclusive extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamRolePolicyAttachmentsExclusiveConfig
+  * @param options TfRolePolicyAttachmentsExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamRolePolicyAttachmentsExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: TfRolePolicyAttachmentsExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_role_policy_attachments_exclusive',
       terraformGeneratorMetadata: {

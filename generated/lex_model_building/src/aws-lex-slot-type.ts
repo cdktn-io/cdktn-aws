@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLexSlotTypeConfig extends cdktn.TerraformMetaArguments {
+export interface TfSlotTypeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#create_version AwsLexSlotType#create_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#create_version TfSlotType#create_version}
   */
   readonly createVersion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#description AwsLexSlotType#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#description TfSlotType#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#id AwsLexSlotType#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#id TfSlotType#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#name AwsLexSlotType#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#name TfSlotType#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#region AwsLexSlotType#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#region TfSlotType#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#value_selection_strategy AwsLexSlotType#value_selection_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#value_selection_strategy TfSlotType#value_selection_strategy}
   */
   readonly valueSelectionStrategy?: string;
   /**
   * enumeration_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#enumeration_value AwsLexSlotType#enumeration_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#enumeration_value TfSlotType#enumeration_value}
   */
-  readonly enumerationValue: AwsLexSlotType.EnumerationValueProperty[] | cdktn.IResolvable;
+  readonly enumerationValue: TfSlotType.EnumerationValueProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#timeouts AwsLexSlotType#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#timeouts TfSlotType#timeouts}
   */
-  readonly timeouts?: AwsLexSlotType.TimeoutsProperty;
+  readonly timeouts?: TfSlotType.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type aws_lex_slot_type}
 */
-export class AwsLexSlotType extends cdktn.TerraformResource {
+export class TfSlotType extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsLexSlotType extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLexSlotType resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSlotType resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLexSlotType to import
-  * @param importFromId The id of the existing AwsLexSlotType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLexSlotType to import is found
+  * @param importToId The construct id used in the generated config for the TfSlotType to import
+  * @param importFromId The id of the existing TfSlotType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSlotType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lex_slot_type", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsLexSlotType extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLexSlotTypeConfig
+  * @param options TfSlotTypeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLexSlotTypeConfig) {
+  public constructor(scope: Construct, id: string, config: TfSlotTypeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lex_slot_type',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class AwsLexSlotType extends cdktn.TerraformResource {
   }
 
   // enumeration_value - computed: false, optional: false, required: true
-  private _enumerationValue = new AwsLexSlotType.EnumerationValuePropertyList(this, "enumeration_value", true);
+  private _enumerationValue = new TfSlotType.EnumerationValuePropertyList(this, "enumeration_value", true);
   public get enumerationValue() {
     return this._enumerationValue;
   }
-  public putEnumerationValue(value: AwsLexSlotType.EnumerationValueProperty[] | cdktn.IResolvable) {
+  public putEnumerationValue(value: TfSlotType.EnumerationValueProperty[] | cdktn.IResolvable) {
     this._enumerationValue.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -241,11 +241,11 @@ export class AwsLexSlotType extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLexSlotType.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSlotType.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLexSlotType.TimeoutsProperty) {
+  public putTimeouts(value: TfSlotType.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -268,8 +268,8 @@ export class AwsLexSlotType extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       value_selection_strategy: cdktn.stringToTerraform(this._valueSelectionStrategy),
-      enumeration_value: cdktn.listMapper(awsLexSlotTypeEnumerationValuePropertyToTerraform, true)(this._enumerationValue.internalValue),
-      timeouts: awsLexSlotTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      enumeration_value: cdktn.listMapper(tfSlotTypeEnumerationValuePropertyToTerraform, true)(this._enumerationValue.internalValue),
+      timeouts: tfSlotTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -312,16 +312,16 @@ export class AwsLexSlotType extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       enumeration_value: {
-        value: cdktn.listMapperHcl(awsLexSlotTypeEnumerationValuePropertyToHclTerraform, true)(this._enumerationValue.internalValue),
+        value: cdktn.listMapperHcl(tfSlotTypeEnumerationValuePropertyToHclTerraform, true)(this._enumerationValue.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsLexSlotType.EnumerationValuePropertyList",
+        storageClassType: "TfSlotType.EnumerationValuePropertyList",
       },
       timeouts: {
-        value: awsLexSlotTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSlotTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLexSlotType.TimeoutsProperty",
+        storageClassType: "TfSlotType.TimeoutsProperty",
       },
     };
 
@@ -330,7 +330,7 @@ export class AwsLexSlotType extends cdktn.TerraformResource {
   }
 }
 
-export function awsLexSlotTypeEnumerationValuePropertyToTerraform(struct?: AwsLexSlotType.EnumerationValueProperty | cdktn.IResolvable): any {
+export function tfSlotTypeEnumerationValuePropertyToTerraform(struct?: TfSlotType.EnumerationValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function awsLexSlotTypeEnumerationValuePropertyToTerraform(struct?: AwsLe
 }
 
 
-export function awsLexSlotTypeEnumerationValuePropertyToHclTerraform(struct?: AwsLexSlotType.EnumerationValueProperty | cdktn.IResolvable): any {
+export function tfSlotTypeEnumerationValuePropertyToHclTerraform(struct?: TfSlotType.EnumerationValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function awsLexSlotTypeEnumerationValuePropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsLexSlotTypeTimeoutsPropertyToTerraform(struct?: AwsLexSlotType.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSlotTypeTimeoutsPropertyToTerraform(struct?: TfSlotType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function awsLexSlotTypeTimeoutsPropertyToTerraform(struct?: AwsLexSlotTyp
 }
 
 
-export function awsLexSlotTypeTimeoutsPropertyToHclTerraform(struct?: AwsLexSlotType.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSlotTypeTimeoutsPropertyToHclTerraform(struct?: TfSlotType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,14 +411,14 @@ export function awsLexSlotTypeTimeoutsPropertyToHclTerraform(struct?: AwsLexSlot
 }
 
 
-export namespace AwsLexSlotType {
+export namespace TfSlotType {
 export interface EnumerationValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#synonyms AwsLexSlotType#synonyms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#synonyms TfSlotType#synonyms}
   */
   readonly synonyms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#value AwsLexSlotType#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#value TfSlotType#value}
   */
   readonly value: string;
 }
@@ -523,15 +523,15 @@ export class EnumerationValuePropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#create AwsLexSlotType#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#create TfSlotType#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#delete AwsLexSlotType#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#delete TfSlotType#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#update AwsLexSlotType#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_slot_type#update TfSlotType#update}
   */
   readonly update?: string;
 }

@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVerifiedpermissionsIdentitySourceConfig extends cdktn.TerraformMetaArguments {
+export interface TfIdentitySourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#policy_store_id AwsVerifiedpermissionsIdentitySource#policy_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#policy_store_id TfIdentitySource#policy_store_id}
   */
   readonly policyStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#principal_entity_type AwsVerifiedpermissionsIdentitySource#principal_entity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#principal_entity_type TfIdentitySource#principal_entity_type}
   */
   readonly principalEntityType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#region AwsVerifiedpermissionsIdentitySource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#region TfIdentitySource#region}
   */
   readonly region?: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#configuration AwsVerifiedpermissionsIdentitySource#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#configuration TfIdentitySource#configuration}
   */
-  readonly configuration?: AwsVerifiedpermissionsIdentitySource.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: TfIdentitySource.ConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source aws_verifiedpermissions_identity_source}
 */
-export class AwsVerifiedpermissionsIdentitySource extends cdktn.TerraformResource {
+export class TfIdentitySource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsVerifiedpermissionsIdentitySource extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVerifiedpermissionsIdentitySource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIdentitySource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVerifiedpermissionsIdentitySource to import
-  * @param importFromId The id of the existing AwsVerifiedpermissionsIdentitySource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVerifiedpermissionsIdentitySource to import is found
+  * @param importToId The construct id used in the generated config for the TfIdentitySource to import
+  * @param importFromId The id of the existing TfIdentitySource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIdentitySource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedpermissions_identity_source", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsVerifiedpermissionsIdentitySource extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVerifiedpermissionsIdentitySourceConfig
+  * @param options TfIdentitySourceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVerifiedpermissionsIdentitySourceConfig) {
+  public constructor(scope: Construct, id: string, config: TfIdentitySourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedpermissions_identity_source',
       terraformGeneratorMetadata: {
@@ -140,11 +140,11 @@ export class AwsVerifiedpermissionsIdentitySource extends cdktn.TerraformResourc
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsVerifiedpermissionsIdentitySource.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new TfIdentitySource.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsVerifiedpermissionsIdentitySource.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: TfIdentitySource.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -164,7 +164,7 @@ export class AwsVerifiedpermissionsIdentitySource extends cdktn.TerraformResourc
       policy_store_id: cdktn.stringToTerraform(this._policyStoreId),
       principal_entity_type: cdktn.stringToTerraform(this._principalEntityType),
       region: cdktn.stringToTerraform(this._region),
-      configuration: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      configuration: cdktn.listMapper(tfIdentitySourceConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
     };
   }
 
@@ -189,10 +189,10 @@ export class AwsVerifiedpermissionsIdentitySource extends cdktn.TerraformResourc
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(tfIdentitySourceConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedpermissionsIdentitySource.ConfigurationPropertyList",
+        storageClassType: "TfIdentitySource.ConfigurationPropertyList",
       },
     };
 
@@ -201,7 +201,7 @@ export class AwsVerifiedpermissionsIdentitySource extends cdktn.TerraformResourc
   }
 }
 
-export function awsVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.ConfigurationCognitoUserPoolConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToTerraform(struct?: TfIdentitySource.ConfigurationCognitoUserPoolConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,7 +212,7 @@ export function awsVerifiedpermissionsIdentitySourceConfigurationCognitoUserPool
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.ConfigurationCognitoUserPoolConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToHclTerraform(struct?: TfIdentitySource.ConfigurationCognitoUserPoolConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function awsVerifiedpermissionsIdentitySourceConfigurationCognitoUserPool
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceCognitoUserPoolConfigurationPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.CognitoUserPoolConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceCognitoUserPoolConfigurationPropertyToTerraform(struct?: TfIdentitySource.CognitoUserPoolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,12 +239,12 @@ export function awsVerifiedpermissionsIdentitySourceCognitoUserPoolConfiguration
   return {
     client_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.clientIds),
     user_pool_arn: cdktn.stringToTerraform(struct!.userPoolArn),
-    group_configuration: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToTerraform, true)(struct!.groupConfiguration),
+    group_configuration: cdktn.listMapper(tfIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToTerraform, true)(struct!.groupConfiguration),
   }
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceCognitoUserPoolConfigurationPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.CognitoUserPoolConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceCognitoUserPoolConfigurationPropertyToHclTerraform(struct?: TfIdentitySource.CognitoUserPoolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function awsVerifiedpermissionsIdentitySourceCognitoUserPoolConfiguration
       storageClassType: "string",
     },
     group_configuration: {
-      value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToHclTerraform, true)(struct!.groupConfiguration),
+      value: cdktn.listMapperHcl(tfIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyToHclTerraform, true)(struct!.groupConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationCognitoUserPoolConfigurationGroupConfigurationPropertyList",
@@ -275,7 +275,7 @@ export function awsVerifiedpermissionsIdentitySourceCognitoUserPoolConfiguration
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.ConfigurationOpenIdConnectConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToTerraform(struct?: TfIdentitySource.ConfigurationOpenIdConnectConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function awsVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectCo
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.ConfigurationOpenIdConnectConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToHclTerraform(struct?: TfIdentitySource.ConfigurationOpenIdConnectConfigurationGroupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function awsVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectCo
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceAccessTokenOnlyPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.AccessTokenOnlyProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceAccessTokenOnlyPropertyToTerraform(struct?: TfIdentitySource.AccessTokenOnlyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function awsVerifiedpermissionsIdentitySourceAccessTokenOnlyPropertyToTer
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceAccessTokenOnlyPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.AccessTokenOnlyProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceAccessTokenOnlyPropertyToHclTerraform(struct?: TfIdentitySource.AccessTokenOnlyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function awsVerifiedpermissionsIdentitySourceAccessTokenOnlyPropertyToHcl
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceIdentityTokenOnlyPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.IdentityTokenOnlyProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceIdentityTokenOnlyPropertyToTerraform(struct?: TfIdentitySource.IdentityTokenOnlyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function awsVerifiedpermissionsIdentitySourceIdentityTokenOnlyPropertyToT
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceIdentityTokenOnlyPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.IdentityTokenOnlyProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceIdentityTokenOnlyPropertyToHclTerraform(struct?: TfIdentitySource.IdentityTokenOnlyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,32 +386,32 @@ export function awsVerifiedpermissionsIdentitySourceIdentityTokenOnlyPropertyToH
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceTokenSelectionPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.TokenSelectionProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceTokenSelectionPropertyToTerraform(struct?: TfIdentitySource.TokenSelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    access_token_only: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceAccessTokenOnlyPropertyToTerraform, true)(struct!.accessTokenOnly),
-    identity_token_only: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceIdentityTokenOnlyPropertyToTerraform, true)(struct!.identityTokenOnly),
+    access_token_only: cdktn.listMapper(tfIdentitySourceAccessTokenOnlyPropertyToTerraform, true)(struct!.accessTokenOnly),
+    identity_token_only: cdktn.listMapper(tfIdentitySourceIdentityTokenOnlyPropertyToTerraform, true)(struct!.identityTokenOnly),
   }
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceTokenSelectionPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.TokenSelectionProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceTokenSelectionPropertyToHclTerraform(struct?: TfIdentitySource.TokenSelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     access_token_only: {
-      value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceAccessTokenOnlyPropertyToHclTerraform, true)(struct!.accessTokenOnly),
+      value: cdktn.listMapperHcl(tfIdentitySourceAccessTokenOnlyPropertyToHclTerraform, true)(struct!.accessTokenOnly),
       isBlock: true,
       type: "list",
       storageClassType: "AccessTokenOnlyPropertyList",
     },
     identity_token_only: {
-      value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceIdentityTokenOnlyPropertyToHclTerraform, true)(struct!.identityTokenOnly),
+      value: cdktn.listMapperHcl(tfIdentitySourceIdentityTokenOnlyPropertyToHclTerraform, true)(struct!.identityTokenOnly),
       isBlock: true,
       type: "list",
       storageClassType: "IdentityTokenOnlyPropertyList",
@@ -423,7 +423,7 @@ export function awsVerifiedpermissionsIdentitySourceTokenSelectionPropertyToHclT
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceOpenIdConnectConfigurationPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.OpenIdConnectConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceOpenIdConnectConfigurationPropertyToTerraform(struct?: TfIdentitySource.OpenIdConnectConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,13 +431,13 @@ export function awsVerifiedpermissionsIdentitySourceOpenIdConnectConfigurationPr
   return {
     entity_id_prefix: cdktn.stringToTerraform(struct!.entityIdPrefix),
     issuer: cdktn.stringToTerraform(struct!.issuer),
-    group_configuration: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToTerraform, true)(struct!.groupConfiguration),
-    token_selection: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceTokenSelectionPropertyToTerraform, true)(struct!.tokenSelection),
+    group_configuration: cdktn.listMapper(tfIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToTerraform, true)(struct!.groupConfiguration),
+    token_selection: cdktn.listMapper(tfIdentitySourceTokenSelectionPropertyToTerraform, true)(struct!.tokenSelection),
   }
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceOpenIdConnectConfigurationPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.OpenIdConnectConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceOpenIdConnectConfigurationPropertyToHclTerraform(struct?: TfIdentitySource.OpenIdConnectConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,13 +456,13 @@ export function awsVerifiedpermissionsIdentitySourceOpenIdConnectConfigurationPr
       storageClassType: "string",
     },
     group_configuration: {
-      value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToHclTerraform, true)(struct!.groupConfiguration),
+      value: cdktn.listMapperHcl(tfIdentitySourceConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyToHclTerraform, true)(struct!.groupConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyList",
     },
     token_selection: {
-      value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceTokenSelectionPropertyToHclTerraform, true)(struct!.tokenSelection),
+      value: cdktn.listMapperHcl(tfIdentitySourceTokenSelectionPropertyToHclTerraform, true)(struct!.tokenSelection),
       isBlock: true,
       type: "list",
       storageClassType: "TokenSelectionPropertyList",
@@ -474,32 +474,32 @@ export function awsVerifiedpermissionsIdentitySourceOpenIdConnectConfigurationPr
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceConfigurationPropertyToTerraform(struct?: AwsVerifiedpermissionsIdentitySource.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceConfigurationPropertyToTerraform(struct?: TfIdentitySource.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cognito_user_pool_configuration: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceCognitoUserPoolConfigurationPropertyToTerraform, true)(struct!.cognitoUserPoolConfiguration),
-    open_id_connect_configuration: cdktn.listMapper(awsVerifiedpermissionsIdentitySourceOpenIdConnectConfigurationPropertyToTerraform, true)(struct!.openIdConnectConfiguration),
+    cognito_user_pool_configuration: cdktn.listMapper(tfIdentitySourceCognitoUserPoolConfigurationPropertyToTerraform, true)(struct!.cognitoUserPoolConfiguration),
+    open_id_connect_configuration: cdktn.listMapper(tfIdentitySourceOpenIdConnectConfigurationPropertyToTerraform, true)(struct!.openIdConnectConfiguration),
   }
 }
 
 
-export function awsVerifiedpermissionsIdentitySourceConfigurationPropertyToHclTerraform(struct?: AwsVerifiedpermissionsIdentitySource.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfIdentitySourceConfigurationPropertyToHclTerraform(struct?: TfIdentitySource.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cognito_user_pool_configuration: {
-      value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceCognitoUserPoolConfigurationPropertyToHclTerraform, true)(struct!.cognitoUserPoolConfiguration),
+      value: cdktn.listMapperHcl(tfIdentitySourceCognitoUserPoolConfigurationPropertyToHclTerraform, true)(struct!.cognitoUserPoolConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CognitoUserPoolConfigurationPropertyList",
     },
     open_id_connect_configuration: {
-      value: cdktn.listMapperHcl(awsVerifiedpermissionsIdentitySourceOpenIdConnectConfigurationPropertyToHclTerraform, true)(struct!.openIdConnectConfiguration),
+      value: cdktn.listMapperHcl(tfIdentitySourceOpenIdConnectConfigurationPropertyToHclTerraform, true)(struct!.openIdConnectConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OpenIdConnectConfigurationPropertyList",
@@ -511,10 +511,10 @@ export function awsVerifiedpermissionsIdentitySourceConfigurationPropertyToHclTe
 }
 
 
-export namespace AwsVerifiedpermissionsIdentitySource {
+export namespace TfIdentitySource {
 export interface ConfigurationCognitoUserPoolConfigurationGroupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_entity_type AwsVerifiedpermissionsIdentitySource#group_entity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_entity_type TfIdentitySource#group_entity_type}
   */
   readonly groupEntityType: string;
 }
@@ -597,17 +597,17 @@ export class ConfigurationCognitoUserPoolConfigurationGroupConfigurationProperty
 }
 export interface CognitoUserPoolConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#client_ids AwsVerifiedpermissionsIdentitySource#client_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#client_ids TfIdentitySource#client_ids}
   */
   readonly clientIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#user_pool_arn AwsVerifiedpermissionsIdentitySource#user_pool_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#user_pool_arn TfIdentitySource#user_pool_arn}
   */
   readonly userPoolArn: string;
   /**
   * group_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_configuration AwsVerifiedpermissionsIdentitySource#group_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_configuration TfIdentitySource#group_configuration}
   */
   readonly groupConfiguration?: ConfigurationCognitoUserPoolConfigurationGroupConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -734,11 +734,11 @@ export class CognitoUserPoolConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface ConfigurationOpenIdConnectConfigurationGroupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_claim AwsVerifiedpermissionsIdentitySource#group_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_claim TfIdentitySource#group_claim}
   */
   readonly groupClaim: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_entity_type AwsVerifiedpermissionsIdentitySource#group_entity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_entity_type TfIdentitySource#group_entity_type}
   */
   readonly groupEntityType: string;
 }
@@ -840,11 +840,11 @@ export class ConfigurationOpenIdConnectConfigurationGroupConfigurationPropertyLi
 }
 export interface AccessTokenOnlyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#audiences AwsVerifiedpermissionsIdentitySource#audiences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#audiences TfIdentitySource#audiences}
   */
   readonly audiences?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#principal_id_claim AwsVerifiedpermissionsIdentitySource#principal_id_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#principal_id_claim TfIdentitySource#principal_id_claim}
   */
   readonly principalIdClaim?: string;
 }
@@ -952,11 +952,11 @@ export class AccessTokenOnlyPropertyList extends cdktn.ComplexList {
 }
 export interface IdentityTokenOnlyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#client_ids AwsVerifiedpermissionsIdentitySource#client_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#client_ids TfIdentitySource#client_ids}
   */
   readonly clientIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#principal_id_claim AwsVerifiedpermissionsIdentitySource#principal_id_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#principal_id_claim TfIdentitySource#principal_id_claim}
   */
   readonly principalIdClaim?: string;
 }
@@ -1066,13 +1066,13 @@ export interface TokenSelectionProperty {
   /**
   * access_token_only block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#access_token_only AwsVerifiedpermissionsIdentitySource#access_token_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#access_token_only TfIdentitySource#access_token_only}
   */
   readonly accessTokenOnly?: AccessTokenOnlyProperty[] | cdktn.IResolvable;
   /**
   * identity_token_only block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#identity_token_only AwsVerifiedpermissionsIdentitySource#identity_token_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#identity_token_only TfIdentitySource#identity_token_only}
   */
   readonly identityTokenOnly?: IdentityTokenOnlyProperty[] | cdktn.IResolvable;
 }
@@ -1180,23 +1180,23 @@ export class TokenSelectionPropertyList extends cdktn.ComplexList {
 }
 export interface OpenIdConnectConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#entity_id_prefix AwsVerifiedpermissionsIdentitySource#entity_id_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#entity_id_prefix TfIdentitySource#entity_id_prefix}
   */
   readonly entityIdPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#issuer AwsVerifiedpermissionsIdentitySource#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#issuer TfIdentitySource#issuer}
   */
   readonly issuer: string;
   /**
   * group_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_configuration AwsVerifiedpermissionsIdentitySource#group_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#group_configuration TfIdentitySource#group_configuration}
   */
   readonly groupConfiguration?: ConfigurationOpenIdConnectConfigurationGroupConfigurationProperty[] | cdktn.IResolvable;
   /**
   * token_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#token_selection AwsVerifiedpermissionsIdentitySource#token_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#token_selection TfIdentitySource#token_selection}
   */
   readonly tokenSelection?: TokenSelectionProperty[] | cdktn.IResolvable;
 }
@@ -1347,13 +1347,13 @@ export interface ConfigurationProperty {
   /**
   * cognito_user_pool_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#cognito_user_pool_configuration AwsVerifiedpermissionsIdentitySource#cognito_user_pool_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#cognito_user_pool_configuration TfIdentitySource#cognito_user_pool_configuration}
   */
   readonly cognitoUserPoolConfiguration?: CognitoUserPoolConfigurationProperty[] | cdktn.IResolvable;
   /**
   * open_id_connect_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#open_id_connect_configuration AwsVerifiedpermissionsIdentitySource#open_id_connect_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_identity_source#open_id_connect_configuration TfIdentitySource#open_id_connect_configuration}
   */
   readonly openIdConnectConfiguration?: OpenIdConnectConfigurationProperty[] | cdktn.IResolvable;
 }

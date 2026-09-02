@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3BucketObjectLockConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketObjectLockConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#bucket AwsS3BucketObjectLockConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#bucket TfBucketObjectLockConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#expected_bucket_owner AwsS3BucketObjectLockConfiguration#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#expected_bucket_owner TfBucketObjectLockConfiguration#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#id AwsS3BucketObjectLockConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#id TfBucketObjectLockConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#object_lock_enabled AwsS3BucketObjectLockConfiguration#object_lock_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#object_lock_enabled TfBucketObjectLockConfiguration#object_lock_enabled}
   */
   readonly objectLockEnabled?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#region AwsS3BucketObjectLockConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#region TfBucketObjectLockConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#token AwsS3BucketObjectLockConfiguration#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#token TfBucketObjectLockConfiguration#token}
   */
   readonly token?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#rule AwsS3BucketObjectLockConfiguration#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#rule TfBucketObjectLockConfiguration#rule}
   */
-  readonly rule?: AwsS3BucketObjectLockConfiguration.RuleProperty;
+  readonly rule?: TfBucketObjectLockConfiguration.RuleProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration aws_s3_bucket_object_lock_configuration}
 */
-export class AwsS3BucketObjectLockConfiguration extends cdktn.TerraformResource {
+export class TfBucketObjectLockConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsS3BucketObjectLockConfiguration extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3BucketObjectLockConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketObjectLockConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3BucketObjectLockConfiguration to import
-  * @param importFromId The id of the existing AwsS3BucketObjectLockConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3BucketObjectLockConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketObjectLockConfiguration to import
+  * @param importFromId The id of the existing TfBucketObjectLockConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketObjectLockConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_object_lock_configuration", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsS3BucketObjectLockConfiguration extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3BucketObjectLockConfigurationConfig
+  * @param options TfBucketObjectLockConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3BucketObjectLockConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketObjectLockConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_object_lock_configuration',
       terraformGeneratorMetadata: {
@@ -201,11 +201,11 @@ export class AwsS3BucketObjectLockConfiguration extends cdktn.TerraformResource 
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsS3BucketObjectLockConfiguration.RulePropertyOutputReference(this, "rule");
+  private _rule = new TfBucketObjectLockConfiguration.RulePropertyOutputReference(this, "rule");
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsS3BucketObjectLockConfiguration.RuleProperty) {
+  public putRule(value: TfBucketObjectLockConfiguration.RuleProperty) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -228,7 +228,7 @@ export class AwsS3BucketObjectLockConfiguration extends cdktn.TerraformResource 
       object_lock_enabled: cdktn.stringToTerraform(this._objectLockEnabled),
       region: cdktn.stringToTerraform(this._region),
       token: cdktn.stringToTerraform(this._token),
-      rule: awsS3BucketObjectLockConfigurationMapperRulePropertyToTerraform(this._rule.internalValue),
+      rule: tfBucketObjectLockConfigurationMapperRulePropertyToTerraform(this._rule.internalValue),
     };
   }
 
@@ -271,10 +271,10 @@ export class AwsS3BucketObjectLockConfiguration extends cdktn.TerraformResource 
         storageClassType: "string",
       },
       rule: {
-        value: awsS3BucketObjectLockConfigurationMapperRulePropertyToHclTerraform(this._rule.internalValue),
+        value: tfBucketObjectLockConfigurationMapperRulePropertyToHclTerraform(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketObjectLockConfiguration.RulePropertyList",
+        storageClassType: "TfBucketObjectLockConfiguration.RulePropertyList",
       },
     };
 
@@ -283,7 +283,7 @@ export class AwsS3BucketObjectLockConfiguration extends cdktn.TerraformResource 
   }
 }
 
-export function awsS3BucketObjectLockConfigurationMapperDefaultRetentionPropertyToTerraform(struct?: AwsS3BucketObjectLockConfiguration.DefaultRetentionPropertyOutputReference | AwsS3BucketObjectLockConfiguration.DefaultRetentionProperty): any {
+export function tfBucketObjectLockConfigurationMapperDefaultRetentionPropertyToTerraform(struct?: TfBucketObjectLockConfiguration.DefaultRetentionPropertyOutputReference | TfBucketObjectLockConfiguration.DefaultRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function awsS3BucketObjectLockConfigurationMapperDefaultRetentionProperty
 }
 
 
-export function awsS3BucketObjectLockConfigurationMapperDefaultRetentionPropertyToHclTerraform(struct?: AwsS3BucketObjectLockConfiguration.DefaultRetentionPropertyOutputReference | AwsS3BucketObjectLockConfiguration.DefaultRetentionProperty): any {
+export function tfBucketObjectLockConfigurationMapperDefaultRetentionPropertyToHclTerraform(struct?: TfBucketObjectLockConfiguration.DefaultRetentionPropertyOutputReference | TfBucketObjectLockConfiguration.DefaultRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,25 +327,25 @@ export function awsS3BucketObjectLockConfigurationMapperDefaultRetentionProperty
 }
 
 
-export function awsS3BucketObjectLockConfigurationMapperRulePropertyToTerraform(struct?: AwsS3BucketObjectLockConfiguration.RulePropertyOutputReference | AwsS3BucketObjectLockConfiguration.RuleProperty): any {
+export function tfBucketObjectLockConfigurationMapperRulePropertyToTerraform(struct?: TfBucketObjectLockConfiguration.RulePropertyOutputReference | TfBucketObjectLockConfiguration.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_retention: awsS3BucketObjectLockConfigurationMapperDefaultRetentionPropertyToTerraform(struct!.defaultRetention),
+    default_retention: tfBucketObjectLockConfigurationMapperDefaultRetentionPropertyToTerraform(struct!.defaultRetention),
   }
 }
 
 
-export function awsS3BucketObjectLockConfigurationMapperRulePropertyToHclTerraform(struct?: AwsS3BucketObjectLockConfiguration.RulePropertyOutputReference | AwsS3BucketObjectLockConfiguration.RuleProperty): any {
+export function tfBucketObjectLockConfigurationMapperRulePropertyToHclTerraform(struct?: TfBucketObjectLockConfiguration.RulePropertyOutputReference | TfBucketObjectLockConfiguration.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_retention: {
-      value: awsS3BucketObjectLockConfigurationMapperDefaultRetentionPropertyToHclTerraform(struct!.defaultRetention),
+      value: tfBucketObjectLockConfigurationMapperDefaultRetentionPropertyToHclTerraform(struct!.defaultRetention),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultRetentionPropertyList",
@@ -357,18 +357,18 @@ export function awsS3BucketObjectLockConfigurationMapperRulePropertyToHclTerrafo
 }
 
 
-export namespace AwsS3BucketObjectLockConfiguration {
+export namespace TfBucketObjectLockConfiguration {
 export interface DefaultRetentionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#days AwsS3BucketObjectLockConfiguration#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#days TfBucketObjectLockConfiguration#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#mode AwsS3BucketObjectLockConfiguration#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#mode TfBucketObjectLockConfiguration#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#years AwsS3BucketObjectLockConfiguration#years}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#years TfBucketObjectLockConfiguration#years}
   */
   readonly years?: number;
 }
@@ -468,7 +468,7 @@ export interface RuleProperty {
   /**
   * default_retention block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#default_retention AwsS3BucketObjectLockConfiguration#default_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_object_lock_configuration#default_retention TfBucketObjectLockConfiguration#default_retention}
   */
   readonly defaultRetention: DefaultRetentionProperty;
 }

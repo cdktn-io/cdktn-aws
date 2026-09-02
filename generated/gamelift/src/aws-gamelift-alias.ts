@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGameliftAliasConfig extends cdktn.TerraformMetaArguments {
+export interface TfAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#description AwsGameliftAlias#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#description TfAlias#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#id AwsGameliftAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#id TfAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#name AwsGameliftAlias#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#name TfAlias#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#region AwsGameliftAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#region TfAlias#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#tags AwsGameliftAlias#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#tags TfAlias#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#tags_all AwsGameliftAlias#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#tags_all TfAlias#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * routing_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#routing_strategy AwsGameliftAlias#routing_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#routing_strategy TfAlias#routing_strategy}
   */
-  readonly routingStrategy: AwsGameliftAlias.RoutingStrategyProperty;
+  readonly routingStrategy: TfAlias.RoutingStrategyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias aws_gamelift_alias}
 */
-export class AwsGameliftAlias extends cdktn.TerraformResource {
+export class TfAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsGameliftAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGameliftAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGameliftAlias to import
-  * @param importFromId The id of the existing AwsGameliftAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGameliftAlias to import is found
+  * @param importToId The construct id used in the generated config for the TfAlias to import
+  * @param importFromId The id of the existing TfAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_gamelift_alias", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsGameliftAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGameliftAliasConfig
+  * @param options TfAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGameliftAliasConfig) {
+  public constructor(scope: Construct, id: string, config: TfAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_gamelift_alias',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class AwsGameliftAlias extends cdktn.TerraformResource {
   }
 
   // routing_strategy - computed: false, optional: false, required: true
-  private _routingStrategy = new AwsGameliftAlias.RoutingStrategyPropertyOutputReference(this, "routing_strategy");
+  private _routingStrategy = new TfAlias.RoutingStrategyPropertyOutputReference(this, "routing_strategy");
   public get routingStrategy() {
     return this._routingStrategy;
   }
-  public putRoutingStrategy(value: AwsGameliftAlias.RoutingStrategyProperty) {
+  public putRoutingStrategy(value: TfAlias.RoutingStrategyProperty) {
     this._routingStrategy.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -230,7 +230,7 @@ export class AwsGameliftAlias extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      routing_strategy: awsGameliftAliasRoutingStrategyPropertyToTerraform(this._routingStrategy.internalValue),
+      routing_strategy: tfAliasRoutingStrategyPropertyToTerraform(this._routingStrategy.internalValue),
     };
   }
 
@@ -273,10 +273,10 @@ export class AwsGameliftAlias extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       routing_strategy: {
-        value: awsGameliftAliasRoutingStrategyPropertyToHclTerraform(this._routingStrategy.internalValue),
+        value: tfAliasRoutingStrategyPropertyToHclTerraform(this._routingStrategy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGameliftAlias.RoutingStrategyPropertyList",
+        storageClassType: "TfAlias.RoutingStrategyPropertyList",
       },
     };
 
@@ -285,7 +285,7 @@ export class AwsGameliftAlias extends cdktn.TerraformResource {
   }
 }
 
-export function awsGameliftAliasRoutingStrategyPropertyToTerraform(struct?: AwsGameliftAlias.RoutingStrategyPropertyOutputReference | AwsGameliftAlias.RoutingStrategyProperty): any {
+export function tfAliasRoutingStrategyPropertyToTerraform(struct?: TfAlias.RoutingStrategyPropertyOutputReference | TfAlias.RoutingStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function awsGameliftAliasRoutingStrategyPropertyToTerraform(struct?: AwsG
 }
 
 
-export function awsGameliftAliasRoutingStrategyPropertyToHclTerraform(struct?: AwsGameliftAlias.RoutingStrategyPropertyOutputReference | AwsGameliftAlias.RoutingStrategyProperty): any {
+export function tfAliasRoutingStrategyPropertyToHclTerraform(struct?: TfAlias.RoutingStrategyPropertyOutputReference | TfAlias.RoutingStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,18 +329,18 @@ export function awsGameliftAliasRoutingStrategyPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsGameliftAlias {
+export namespace TfAlias {
 export interface RoutingStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#fleet_id AwsGameliftAlias#fleet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#fleet_id TfAlias#fleet_id}
   */
   readonly fleetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#message AwsGameliftAlias#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#message TfAlias#message}
   */
   readonly message?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#type AwsGameliftAlias#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_alias#type TfAlias#type}
   */
   readonly type: string;
 }

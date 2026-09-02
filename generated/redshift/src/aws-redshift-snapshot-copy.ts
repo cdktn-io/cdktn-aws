@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRedshiftSnapshotCopyConfig extends cdktn.TerraformMetaArguments {
+export interface TfSnapshotCopyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#cluster_identifier AwsRedshiftSnapshotCopy#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#cluster_identifier TfSnapshotCopy#cluster_identifier}
   */
   readonly clusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#destination_region AwsRedshiftSnapshotCopy#destination_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#destination_region TfSnapshotCopy#destination_region}
   */
   readonly destinationRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#manual_snapshot_retention_period AwsRedshiftSnapshotCopy#manual_snapshot_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#manual_snapshot_retention_period TfSnapshotCopy#manual_snapshot_retention_period}
   */
   readonly manualSnapshotRetentionPeriod?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#region AwsRedshiftSnapshotCopy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#region TfSnapshotCopy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#retention_period AwsRedshiftSnapshotCopy#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#retention_period TfSnapshotCopy#retention_period}
   */
   readonly retentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#snapshot_copy_grant_name AwsRedshiftSnapshotCopy#snapshot_copy_grant_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#snapshot_copy_grant_name TfSnapshotCopy#snapshot_copy_grant_name}
   */
   readonly snapshotCopyGrantName?: string;
 }
@@ -37,7 +37,7 @@ export interface AwsRedshiftSnapshotCopyConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy aws_redshift_snapshot_copy}
 */
-export class AwsRedshiftSnapshotCopy extends cdktn.TerraformResource {
+export class TfSnapshotCopy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsRedshiftSnapshotCopy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRedshiftSnapshotCopy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSnapshotCopy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRedshiftSnapshotCopy to import
-  * @param importFromId The id of the existing AwsRedshiftSnapshotCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRedshiftSnapshotCopy to import is found
+  * @param importToId The construct id used in the generated config for the TfSnapshotCopy to import
+  * @param importFromId The id of the existing TfSnapshotCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_copy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSnapshotCopy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_snapshot_copy", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsRedshiftSnapshotCopy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRedshiftSnapshotCopyConfig
+  * @param options TfSnapshotCopyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRedshiftSnapshotCopyConfig) {
+  public constructor(scope: Construct, id: string, config: TfSnapshotCopyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_snapshot_copy',
       terraformGeneratorMetadata: {

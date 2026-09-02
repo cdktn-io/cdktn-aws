@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerModelConfig extends cdktn.TerraformMetaArguments {
+export interface TfModelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#enable_network_isolation AwsSagemakerModel#enable_network_isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#enable_network_isolation TfModel#enable_network_isolation}
   */
   readonly enableNetworkIsolation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#execution_role_arn AwsSagemakerModel#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#execution_role_arn TfModel#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#id AwsSagemakerModel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#id TfModel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#name AwsSagemakerModel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#name TfModel#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#region AwsSagemakerModel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#region TfModel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#tags AwsSagemakerModel#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#tags TfModel#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#tags_all AwsSagemakerModel#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#tags_all TfModel#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * container block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#container AwsSagemakerModel#container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#container TfModel#container}
   */
-  readonly container?: AwsSagemakerModel.ContainerProperty[] | cdktn.IResolvable;
+  readonly container?: TfModel.ContainerProperty[] | cdktn.IResolvable;
   /**
   * inference_execution_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#inference_execution_config AwsSagemakerModel#inference_execution_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#inference_execution_config TfModel#inference_execution_config}
   */
-  readonly inferenceExecutionConfig?: AwsSagemakerModel.InferenceExecutionConfigProperty;
+  readonly inferenceExecutionConfig?: TfModel.InferenceExecutionConfigProperty;
   /**
   * primary_container block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#primary_container AwsSagemakerModel#primary_container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#primary_container TfModel#primary_container}
   */
-  readonly primaryContainer?: AwsSagemakerModel.PrimaryContainerProperty;
+  readonly primaryContainer?: TfModel.PrimaryContainerProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#vpc_config AwsSagemakerModel#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#vpc_config TfModel#vpc_config}
   */
-  readonly vpcConfig?: AwsSagemakerModel.VpcConfigProperty;
+  readonly vpcConfig?: TfModel.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model aws_sagemaker_model}
 */
-export class AwsSagemakerModel extends cdktn.TerraformResource {
+export class TfModel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerModel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfModel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerModel to import
-  * @param importFromId The id of the existing AwsSagemakerModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerModel to import is found
+  * @param importToId The construct id used in the generated config for the TfModel to import
+  * @param importFromId The id of the existing TfModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfModel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_model", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerModelConfig
+  * @param options TfModelConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerModelConfig) {
+  public constructor(scope: Construct, id: string, config: TfModelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_model',
       terraformGeneratorMetadata: {
@@ -248,11 +248,11 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
   }
 
   // container - computed: false, optional: true, required: false
-  private _container = new AwsSagemakerModel.ContainerPropertyList(this, "container", false);
+  private _container = new TfModel.ContainerPropertyList(this, "container", false);
   public get container() {
     return this._container;
   }
-  public putContainer(value: AwsSagemakerModel.ContainerProperty[] | cdktn.IResolvable) {
+  public putContainer(value: TfModel.ContainerProperty[] | cdktn.IResolvable) {
     this._container.internalValue = value;
   }
   public resetContainer() {
@@ -264,11 +264,11 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
   }
 
   // inference_execution_config - computed: false, optional: true, required: false
-  private _inferenceExecutionConfig = new AwsSagemakerModel.InferenceExecutionConfigPropertyOutputReference(this, "inference_execution_config");
+  private _inferenceExecutionConfig = new TfModel.InferenceExecutionConfigPropertyOutputReference(this, "inference_execution_config");
   public get inferenceExecutionConfig() {
     return this._inferenceExecutionConfig;
   }
-  public putInferenceExecutionConfig(value: AwsSagemakerModel.InferenceExecutionConfigProperty) {
+  public putInferenceExecutionConfig(value: TfModel.InferenceExecutionConfigProperty) {
     this._inferenceExecutionConfig.internalValue = value;
   }
   public resetInferenceExecutionConfig() {
@@ -280,11 +280,11 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
   }
 
   // primary_container - computed: false, optional: true, required: false
-  private _primaryContainer = new AwsSagemakerModel.PrimaryContainerPropertyOutputReference(this, "primary_container");
+  private _primaryContainer = new TfModel.PrimaryContainerPropertyOutputReference(this, "primary_container");
   public get primaryContainer() {
     return this._primaryContainer;
   }
-  public putPrimaryContainer(value: AwsSagemakerModel.PrimaryContainerProperty) {
+  public putPrimaryContainer(value: TfModel.PrimaryContainerProperty) {
     this._primaryContainer.internalValue = value;
   }
   public resetPrimaryContainer() {
@@ -296,11 +296,11 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new AwsSagemakerModel.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new TfModel.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: AwsSagemakerModel.VpcConfigProperty) {
+  public putVpcConfig(value: TfModel.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -324,10 +324,10 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      container: cdktn.listMapper(awsSagemakerModelContainerPropertyToTerraform, true)(this._container.internalValue),
-      inference_execution_config: awsSagemakerModelInferenceExecutionConfigPropertyToTerraform(this._inferenceExecutionConfig.internalValue),
-      primary_container: awsSagemakerModelPrimaryContainerPropertyToTerraform(this._primaryContainer.internalValue),
-      vpc_config: awsSagemakerModelVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      container: cdktn.listMapper(tfModelContainerPropertyToTerraform, true)(this._container.internalValue),
+      inference_execution_config: tfModelInferenceExecutionConfigPropertyToTerraform(this._inferenceExecutionConfig.internalValue),
+      primary_container: tfModelPrimaryContainerPropertyToTerraform(this._primaryContainer.internalValue),
+      vpc_config: tfModelVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -376,28 +376,28 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       container: {
-        value: cdktn.listMapperHcl(awsSagemakerModelContainerPropertyToHclTerraform, true)(this._container.internalValue),
+        value: cdktn.listMapperHcl(tfModelContainerPropertyToHclTerraform, true)(this._container.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerModel.ContainerPropertyList",
+        storageClassType: "TfModel.ContainerPropertyList",
       },
       inference_execution_config: {
-        value: awsSagemakerModelInferenceExecutionConfigPropertyToHclTerraform(this._inferenceExecutionConfig.internalValue),
+        value: tfModelInferenceExecutionConfigPropertyToHclTerraform(this._inferenceExecutionConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerModel.InferenceExecutionConfigPropertyList",
+        storageClassType: "TfModel.InferenceExecutionConfigPropertyList",
       },
       primary_container: {
-        value: awsSagemakerModelPrimaryContainerPropertyToHclTerraform(this._primaryContainer.internalValue),
+        value: tfModelPrimaryContainerPropertyToHclTerraform(this._primaryContainer.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerModel.PrimaryContainerPropertyList",
+        storageClassType: "TfModel.PrimaryContainerPropertyList",
       },
       vpc_config: {
-        value: awsSagemakerModelVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: tfModelVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerModel.VpcConfigPropertyList",
+        storageClassType: "TfModel.VpcConfigPropertyList",
       },
     };
 
@@ -406,7 +406,7 @@ export class AwsSagemakerModel extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsSagemakerModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceM
 }
 
 
-export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceM
 }
 
 
-export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform(struct?: AwsSagemakerModel.ContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform(struct?: TfModel.ContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,12 +445,12 @@ export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceP
     compression_type: cdktn.stringToTerraform(struct!.compressionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    model_access_config: awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
+    model_access_config: tfModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
   }
 }
 
 
-export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfModel.ContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceP
       storageClassType: "string",
     },
     model_access_config: {
-      value: awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
+      value: tfModelContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -487,19 +487,19 @@ export function awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourceP
 }
 
 
-export function awsSagemakerModelContainerAdditionalModelDataSourcePropertyToTerraform(struct?: AwsSagemakerModel.ContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
+export function tfModelContainerAdditionalModelDataSourcePropertyToTerraform(struct?: TfModel.ContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     channel_name: cdktn.stringToTerraform(struct!.channelName),
-    s3_data_source: cdktn.listMapper(awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    s3_data_source: cdktn.listMapper(tfModelContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function awsSagemakerModelContainerAdditionalModelDataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
+export function tfModelContainerAdditionalModelDataSourcePropertyToHclTerraform(struct?: TfModel.ContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,7 +512,7 @@ export function awsSagemakerModelContainerAdditionalModelDataSourcePropertyToHcl
       storageClassType: "string",
     },
     s3_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerModelContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(tfModelContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerAdditionalModelDataSourceS3DataSourcePropertyList",
@@ -524,7 +524,7 @@ export function awsSagemakerModelContainerAdditionalModelDataSourcePropertyToHcl
 }
 
 
-export function awsSagemakerModelContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct?: AwsSagemakerModel.ContainerImageConfigRepositoryAuthConfigPropertyOutputReference | AwsSagemakerModel.ContainerImageConfigRepositoryAuthConfigProperty): any {
+export function tfModelContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct?: TfModel.ContainerImageConfigRepositoryAuthConfigPropertyOutputReference | TfModel.ContainerImageConfigRepositoryAuthConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function awsSagemakerModelContainerImageConfigRepositoryAuthConfigPropert
 }
 
 
-export function awsSagemakerModelContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerImageConfigRepositoryAuthConfigPropertyOutputReference | AwsSagemakerModel.ContainerImageConfigRepositoryAuthConfigProperty): any {
+export function tfModelContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct?: TfModel.ContainerImageConfigRepositoryAuthConfigPropertyOutputReference | TfModel.ContainerImageConfigRepositoryAuthConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -554,19 +554,19 @@ export function awsSagemakerModelContainerImageConfigRepositoryAuthConfigPropert
 }
 
 
-export function awsSagemakerModelContainerImageConfigPropertyToTerraform(struct?: AwsSagemakerModel.ContainerImageConfigPropertyOutputReference | AwsSagemakerModel.ContainerImageConfigProperty): any {
+export function tfModelContainerImageConfigPropertyToTerraform(struct?: TfModel.ContainerImageConfigPropertyOutputReference | TfModel.ContainerImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     repository_access_mode: cdktn.stringToTerraform(struct!.repositoryAccessMode),
-    repository_auth_config: awsSagemakerModelContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct!.repositoryAuthConfig),
+    repository_auth_config: tfModelContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct!.repositoryAuthConfig),
   }
 }
 
 
-export function awsSagemakerModelContainerImageConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerImageConfigPropertyOutputReference | AwsSagemakerModel.ContainerImageConfigProperty): any {
+export function tfModelContainerImageConfigPropertyToHclTerraform(struct?: TfModel.ContainerImageConfigPropertyOutputReference | TfModel.ContainerImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -579,7 +579,7 @@ export function awsSagemakerModelContainerImageConfigPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     repository_auth_config: {
-      value: awsSagemakerModelContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct!.repositoryAuthConfig),
+      value: tfModelContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct!.repositoryAuthConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerImageConfigRepositoryAuthConfigPropertyList",
@@ -591,7 +591,7 @@ export function awsSagemakerModelContainerImageConfigPropertyToHclTerraform(stru
 }
 
 
-export function awsSagemakerModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsSagemakerModel.ContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.ContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfModel.ContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.ContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function awsSagemakerModelContainerModelDataSourceS3DataSourceModelAccess
 }
 
 
-export function awsSagemakerModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.ContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfModel.ContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.ContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -621,7 +621,7 @@ export function awsSagemakerModelContainerModelDataSourceS3DataSourceModelAccess
 }
 
 
-export function awsSagemakerModelContainerModelDataSourceS3DataSourcePropertyToTerraform(struct?: AwsSagemakerModel.ContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelContainerModelDataSourceS3DataSourcePropertyToTerraform(struct?: TfModel.ContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,12 +630,12 @@ export function awsSagemakerModelContainerModelDataSourceS3DataSourcePropertyToT
     compression_type: cdktn.stringToTerraform(struct!.compressionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    model_access_config: awsSagemakerModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
+    model_access_config: tfModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
   }
 }
 
 
-export function awsSagemakerModelContainerModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelContainerModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfModel.ContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function awsSagemakerModelContainerModelDataSourceS3DataSourcePropertyToH
       storageClassType: "string",
     },
     model_access_config: {
-      value: awsSagemakerModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
+      value: tfModelContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerModelDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -672,25 +672,25 @@ export function awsSagemakerModelContainerModelDataSourceS3DataSourcePropertyToH
 }
 
 
-export function awsSagemakerModelContainerModelDataSourcePropertyToTerraform(struct?: AwsSagemakerModel.ContainerModelDataSourcePropertyOutputReference | AwsSagemakerModel.ContainerModelDataSourceProperty): any {
+export function tfModelContainerModelDataSourcePropertyToTerraform(struct?: TfModel.ContainerModelDataSourcePropertyOutputReference | TfModel.ContainerModelDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_data_source: cdktn.listMapper(awsSagemakerModelContainerModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    s3_data_source: cdktn.listMapper(tfModelContainerModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function awsSagemakerModelContainerModelDataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerModelDataSourcePropertyOutputReference | AwsSagemakerModel.ContainerModelDataSourceProperty): any {
+export function tfModelContainerModelDataSourcePropertyToHclTerraform(struct?: TfModel.ContainerModelDataSourcePropertyOutputReference | TfModel.ContainerModelDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerModelContainerModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(tfModelContainerModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerModelDataSourceS3DataSourcePropertyList",
@@ -702,7 +702,7 @@ export function awsSagemakerModelContainerModelDataSourcePropertyToHclTerraform(
 }
 
 
-export function awsSagemakerModelContainerMultiModelConfigPropertyToTerraform(struct?: AwsSagemakerModel.ContainerMultiModelConfigPropertyOutputReference | AwsSagemakerModel.ContainerMultiModelConfigProperty): any {
+export function tfModelContainerMultiModelConfigPropertyToTerraform(struct?: TfModel.ContainerMultiModelConfigPropertyOutputReference | TfModel.ContainerMultiModelConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -713,7 +713,7 @@ export function awsSagemakerModelContainerMultiModelConfigPropertyToTerraform(st
 }
 
 
-export function awsSagemakerModelContainerMultiModelConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerMultiModelConfigPropertyOutputReference | AwsSagemakerModel.ContainerMultiModelConfigProperty): any {
+export function tfModelContainerMultiModelConfigPropertyToHclTerraform(struct?: TfModel.ContainerMultiModelConfigPropertyOutputReference | TfModel.ContainerMultiModelConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function awsSagemakerModelContainerMultiModelConfigPropertyToHclTerraform
 }
 
 
-export function awsSagemakerModelContainerPropertyToTerraform(struct?: AwsSagemakerModel.ContainerProperty | cdktn.IResolvable): any {
+export function tfModelContainerPropertyToTerraform(struct?: TfModel.ContainerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -745,15 +745,15 @@ export function awsSagemakerModelContainerPropertyToTerraform(struct?: AwsSagema
     mode: cdktn.stringToTerraform(struct!.mode),
     model_data_url: cdktn.stringToTerraform(struct!.modelDataUrl),
     model_package_name: cdktn.stringToTerraform(struct!.modelPackageName),
-    additional_model_data_source: cdktn.listMapper(awsSagemakerModelContainerAdditionalModelDataSourcePropertyToTerraform, true)(struct!.additionalModelDataSource),
-    image_config: awsSagemakerModelContainerImageConfigPropertyToTerraform(struct!.imageConfig),
-    model_data_source: awsSagemakerModelContainerModelDataSourcePropertyToTerraform(struct!.modelDataSource),
-    multi_model_config: awsSagemakerModelContainerMultiModelConfigPropertyToTerraform(struct!.multiModelConfig),
+    additional_model_data_source: cdktn.listMapper(tfModelContainerAdditionalModelDataSourcePropertyToTerraform, true)(struct!.additionalModelDataSource),
+    image_config: tfModelContainerImageConfigPropertyToTerraform(struct!.imageConfig),
+    model_data_source: tfModelContainerModelDataSourcePropertyToTerraform(struct!.modelDataSource),
+    multi_model_config: tfModelContainerMultiModelConfigPropertyToTerraform(struct!.multiModelConfig),
   }
 }
 
 
-export function awsSagemakerModelContainerPropertyToHclTerraform(struct?: AwsSagemakerModel.ContainerProperty | cdktn.IResolvable): any {
+export function tfModelContainerPropertyToHclTerraform(struct?: TfModel.ContainerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -802,25 +802,25 @@ export function awsSagemakerModelContainerPropertyToHclTerraform(struct?: AwsSag
       storageClassType: "string",
     },
     additional_model_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerModelContainerAdditionalModelDataSourcePropertyToHclTerraform, true)(struct!.additionalModelDataSource),
+      value: cdktn.listMapperHcl(tfModelContainerAdditionalModelDataSourcePropertyToHclTerraform, true)(struct!.additionalModelDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerAdditionalModelDataSourcePropertyList",
     },
     image_config: {
-      value: awsSagemakerModelContainerImageConfigPropertyToHclTerraform(struct!.imageConfig),
+      value: tfModelContainerImageConfigPropertyToHclTerraform(struct!.imageConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerImageConfigPropertyList",
     },
     model_data_source: {
-      value: awsSagemakerModelContainerModelDataSourcePropertyToHclTerraform(struct!.modelDataSource),
+      value: tfModelContainerModelDataSourcePropertyToHclTerraform(struct!.modelDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerModelDataSourcePropertyList",
     },
     multi_model_config: {
-      value: awsSagemakerModelContainerMultiModelConfigPropertyToHclTerraform(struct!.multiModelConfig),
+      value: tfModelContainerMultiModelConfigPropertyToHclTerraform(struct!.multiModelConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerMultiModelConfigPropertyList",
@@ -832,7 +832,7 @@ export function awsSagemakerModelContainerPropertyToHclTerraform(struct?: AwsSag
 }
 
 
-export function awsSagemakerModelInferenceExecutionConfigPropertyToTerraform(struct?: AwsSagemakerModel.InferenceExecutionConfigPropertyOutputReference | AwsSagemakerModel.InferenceExecutionConfigProperty): any {
+export function tfModelInferenceExecutionConfigPropertyToTerraform(struct?: TfModel.InferenceExecutionConfigPropertyOutputReference | TfModel.InferenceExecutionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -843,7 +843,7 @@ export function awsSagemakerModelInferenceExecutionConfigPropertyToTerraform(str
 }
 
 
-export function awsSagemakerModelInferenceExecutionConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.InferenceExecutionConfigPropertyOutputReference | AwsSagemakerModel.InferenceExecutionConfigProperty): any {
+export function tfModelInferenceExecutionConfigPropertyToHclTerraform(struct?: TfModel.InferenceExecutionConfigPropertyOutputReference | TfModel.InferenceExecutionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,7 +862,7 @@ export function awsSagemakerModelInferenceExecutionConfigPropertyToHclTerraform(
 }
 
 
-export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -873,7 +873,7 @@ export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3Data
 }
 
 
-export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -892,7 +892,7 @@ export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3Data
 }
 
 
-export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform(struct?: TfModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -901,12 +901,12 @@ export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3Data
     compression_type: cdktn.stringToTerraform(struct!.compressionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    model_access_config: awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
+    model_access_config: tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
   }
 }
 
 
-export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfModel.PrimaryContainerAdditionalModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3Data
       storageClassType: "string",
     },
     model_access_config: {
-      value: awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
+      value: tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -943,19 +943,19 @@ export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3Data
 }
 
 
-export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourcePropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
+export function tfModelPrimaryContainerAdditionalModelDataSourcePropertyToTerraform(struct?: TfModel.PrimaryContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     channel_name: cdktn.stringToTerraform(struct!.channelName),
-    s3_data_source: cdktn.listMapper(awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    s3_data_source: cdktn.listMapper(tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
+export function tfModelPrimaryContainerAdditionalModelDataSourcePropertyToHclTerraform(struct?: TfModel.PrimaryContainerAdditionalModelDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceProper
       storageClassType: "string",
     },
     s3_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(tfModelPrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyList",
@@ -980,7 +980,7 @@ export function awsSagemakerModelPrimaryContainerAdditionalModelDataSourceProper
 }
 
 
-export function awsSagemakerModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerImageConfigRepositoryAuthConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerImageConfigRepositoryAuthConfigProperty): any {
+export function tfModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct?: TfModel.PrimaryContainerImageConfigRepositoryAuthConfigPropertyOutputReference | TfModel.PrimaryContainerImageConfigRepositoryAuthConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -991,7 +991,7 @@ export function awsSagemakerModelPrimaryContainerImageConfigRepositoryAuthConfig
 }
 
 
-export function awsSagemakerModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerImageConfigRepositoryAuthConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerImageConfigRepositoryAuthConfigProperty): any {
+export function tfModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct?: TfModel.PrimaryContainerImageConfigRepositoryAuthConfigPropertyOutputReference | TfModel.PrimaryContainerImageConfigRepositoryAuthConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1010,19 +1010,19 @@ export function awsSagemakerModelPrimaryContainerImageConfigRepositoryAuthConfig
 }
 
 
-export function awsSagemakerModelPrimaryContainerImageConfigPropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerImageConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerImageConfigProperty): any {
+export function tfModelPrimaryContainerImageConfigPropertyToTerraform(struct?: TfModel.PrimaryContainerImageConfigPropertyOutputReference | TfModel.PrimaryContainerImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     repository_access_mode: cdktn.stringToTerraform(struct!.repositoryAccessMode),
-    repository_auth_config: awsSagemakerModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct!.repositoryAuthConfig),
+    repository_auth_config: tfModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToTerraform(struct!.repositoryAuthConfig),
   }
 }
 
 
-export function awsSagemakerModelPrimaryContainerImageConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerImageConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerImageConfigProperty): any {
+export function tfModelPrimaryContainerImageConfigPropertyToHclTerraform(struct?: TfModel.PrimaryContainerImageConfigPropertyOutputReference | TfModel.PrimaryContainerImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1035,7 +1035,7 @@ export function awsSagemakerModelPrimaryContainerImageConfigPropertyToHclTerrafo
       storageClassType: "string",
     },
     repository_auth_config: {
-      value: awsSagemakerModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct!.repositoryAuthConfig),
+      value: tfModelPrimaryContainerImageConfigRepositoryAuthConfigPropertyToHclTerraform(struct!.repositoryAuthConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerImageConfigRepositoryAuthConfigPropertyList",
@@ -1047,7 +1047,7 @@ export function awsSagemakerModelPrimaryContainerImageConfigPropertyToHclTerrafo
 }
 
 
-export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1058,7 +1058,7 @@ export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceMode
 }
 
 
-export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
+export function tfModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutputReference | TfModel.PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1077,7 +1077,7 @@ export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceMode
 }
 
 
-export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourcePropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelPrimaryContainerModelDataSourceS3DataSourcePropertyToTerraform(struct?: TfModel.PrimaryContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1086,12 +1086,12 @@ export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceProp
     compression_type: cdktn.stringToTerraform(struct!.compressionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    model_access_config: awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
+    model_access_config: tfModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct!.modelAccessConfig),
   }
 }
 
 
-export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfModelPrimaryContainerModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfModel.PrimaryContainerModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1116,7 +1116,7 @@ export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceProp
       storageClassType: "string",
     },
     model_access_config: {
-      value: awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
+      value: tfModelPrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -1128,25 +1128,25 @@ export function awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourceProp
 }
 
 
-export function awsSagemakerModelPrimaryContainerModelDataSourcePropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerModelDataSourcePropertyOutputReference | AwsSagemakerModel.PrimaryContainerModelDataSourceProperty): any {
+export function tfModelPrimaryContainerModelDataSourcePropertyToTerraform(struct?: TfModel.PrimaryContainerModelDataSourcePropertyOutputReference | TfModel.PrimaryContainerModelDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_data_source: cdktn.listMapper(awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    s3_data_source: cdktn.listMapper(tfModelPrimaryContainerModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function awsSagemakerModelPrimaryContainerModelDataSourcePropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerModelDataSourcePropertyOutputReference | AwsSagemakerModel.PrimaryContainerModelDataSourceProperty): any {
+export function tfModelPrimaryContainerModelDataSourcePropertyToHclTerraform(struct?: TfModel.PrimaryContainerModelDataSourcePropertyOutputReference | TfModel.PrimaryContainerModelDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerModelPrimaryContainerModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(tfModelPrimaryContainerModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerModelDataSourceS3DataSourcePropertyList",
@@ -1158,7 +1158,7 @@ export function awsSagemakerModelPrimaryContainerModelDataSourcePropertyToHclTer
 }
 
 
-export function awsSagemakerModelPrimaryContainerMultiModelConfigPropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerMultiModelConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerMultiModelConfigProperty): any {
+export function tfModelPrimaryContainerMultiModelConfigPropertyToTerraform(struct?: TfModel.PrimaryContainerMultiModelConfigPropertyOutputReference | TfModel.PrimaryContainerMultiModelConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,7 +1169,7 @@ export function awsSagemakerModelPrimaryContainerMultiModelConfigPropertyToTerra
 }
 
 
-export function awsSagemakerModelPrimaryContainerMultiModelConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerMultiModelConfigPropertyOutputReference | AwsSagemakerModel.PrimaryContainerMultiModelConfigProperty): any {
+export function tfModelPrimaryContainerMultiModelConfigPropertyToHclTerraform(struct?: TfModel.PrimaryContainerMultiModelConfigPropertyOutputReference | TfModel.PrimaryContainerMultiModelConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1188,7 +1188,7 @@ export function awsSagemakerModelPrimaryContainerMultiModelConfigPropertyToHclTe
 }
 
 
-export function awsSagemakerModelPrimaryContainerPropertyToTerraform(struct?: AwsSagemakerModel.PrimaryContainerPropertyOutputReference | AwsSagemakerModel.PrimaryContainerProperty): any {
+export function tfModelPrimaryContainerPropertyToTerraform(struct?: TfModel.PrimaryContainerPropertyOutputReference | TfModel.PrimaryContainerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1201,15 +1201,15 @@ export function awsSagemakerModelPrimaryContainerPropertyToTerraform(struct?: Aw
     mode: cdktn.stringToTerraform(struct!.mode),
     model_data_url: cdktn.stringToTerraform(struct!.modelDataUrl),
     model_package_name: cdktn.stringToTerraform(struct!.modelPackageName),
-    additional_model_data_source: cdktn.listMapper(awsSagemakerModelPrimaryContainerAdditionalModelDataSourcePropertyToTerraform, true)(struct!.additionalModelDataSource),
-    image_config: awsSagemakerModelPrimaryContainerImageConfigPropertyToTerraform(struct!.imageConfig),
-    model_data_source: awsSagemakerModelPrimaryContainerModelDataSourcePropertyToTerraform(struct!.modelDataSource),
-    multi_model_config: awsSagemakerModelPrimaryContainerMultiModelConfigPropertyToTerraform(struct!.multiModelConfig),
+    additional_model_data_source: cdktn.listMapper(tfModelPrimaryContainerAdditionalModelDataSourcePropertyToTerraform, true)(struct!.additionalModelDataSource),
+    image_config: tfModelPrimaryContainerImageConfigPropertyToTerraform(struct!.imageConfig),
+    model_data_source: tfModelPrimaryContainerModelDataSourcePropertyToTerraform(struct!.modelDataSource),
+    multi_model_config: tfModelPrimaryContainerMultiModelConfigPropertyToTerraform(struct!.multiModelConfig),
   }
 }
 
 
-export function awsSagemakerModelPrimaryContainerPropertyToHclTerraform(struct?: AwsSagemakerModel.PrimaryContainerPropertyOutputReference | AwsSagemakerModel.PrimaryContainerProperty): any {
+export function tfModelPrimaryContainerPropertyToHclTerraform(struct?: TfModel.PrimaryContainerPropertyOutputReference | TfModel.PrimaryContainerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1258,25 +1258,25 @@ export function awsSagemakerModelPrimaryContainerPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     additional_model_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerModelPrimaryContainerAdditionalModelDataSourcePropertyToHclTerraform, true)(struct!.additionalModelDataSource),
+      value: cdktn.listMapperHcl(tfModelPrimaryContainerAdditionalModelDataSourcePropertyToHclTerraform, true)(struct!.additionalModelDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerAdditionalModelDataSourcePropertyList",
     },
     image_config: {
-      value: awsSagemakerModelPrimaryContainerImageConfigPropertyToHclTerraform(struct!.imageConfig),
+      value: tfModelPrimaryContainerImageConfigPropertyToHclTerraform(struct!.imageConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerImageConfigPropertyList",
     },
     model_data_source: {
-      value: awsSagemakerModelPrimaryContainerModelDataSourcePropertyToHclTerraform(struct!.modelDataSource),
+      value: tfModelPrimaryContainerModelDataSourcePropertyToHclTerraform(struct!.modelDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerModelDataSourcePropertyList",
     },
     multi_model_config: {
-      value: awsSagemakerModelPrimaryContainerMultiModelConfigPropertyToHclTerraform(struct!.multiModelConfig),
+      value: tfModelPrimaryContainerMultiModelConfigPropertyToHclTerraform(struct!.multiModelConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryContainerMultiModelConfigPropertyList",
@@ -1288,7 +1288,7 @@ export function awsSagemakerModelPrimaryContainerPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSagemakerModelVpcConfigPropertyToTerraform(struct?: AwsSagemakerModel.VpcConfigPropertyOutputReference | AwsSagemakerModel.VpcConfigProperty): any {
+export function tfModelVpcConfigPropertyToTerraform(struct?: TfModel.VpcConfigPropertyOutputReference | TfModel.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1300,7 +1300,7 @@ export function awsSagemakerModelVpcConfigPropertyToTerraform(struct?: AwsSagema
 }
 
 
-export function awsSagemakerModelVpcConfigPropertyToHclTerraform(struct?: AwsSagemakerModel.VpcConfigPropertyOutputReference | AwsSagemakerModel.VpcConfigProperty): any {
+export function tfModelVpcConfigPropertyToHclTerraform(struct?: TfModel.VpcConfigPropertyOutputReference | TfModel.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1325,10 +1325,10 @@ export function awsSagemakerModelVpcConfigPropertyToHclTerraform(struct?: AwsSag
 }
 
 
-export namespace AwsSagemakerModel {
+export namespace TfModel {
 export interface ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula AwsSagemakerModel#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula TfModel#accept_eula}
   */
   readonly acceptEula: boolean | cdktn.IResolvable;
 }
@@ -1379,21 +1379,21 @@ export class ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProp
 }
 export interface ContainerAdditionalModelDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type AwsSagemakerModel#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type TfModel#compression_type}
   */
   readonly compressionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type AwsSagemakerModel#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type TfModel#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri AwsSagemakerModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri TfModel#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config AwsSagemakerModel#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config TfModel#model_access_config}
   */
   readonly modelAccessConfig?: ContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty;
 }
@@ -1536,13 +1536,13 @@ export class ContainerAdditionalModelDataSourceS3DataSourcePropertyList extends 
 }
 export interface ContainerAdditionalModelDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#channel_name AwsSagemakerModel#channel_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#channel_name TfModel#channel_name}
   */
   readonly channelName: string;
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source AwsSagemakerModel#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source TfModel#s3_data_source}
   */
   readonly s3DataSource: ContainerAdditionalModelDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -1644,7 +1644,7 @@ export class ContainerAdditionalModelDataSourcePropertyList extends cdktn.Comple
 }
 export interface ContainerImageConfigRepositoryAuthConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_credentials_provider_arn AwsSagemakerModel#repository_credentials_provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_credentials_provider_arn TfModel#repository_credentials_provider_arn}
   */
   readonly repositoryCredentialsProviderArn: string;
 }
@@ -1695,13 +1695,13 @@ export class ContainerImageConfigRepositoryAuthConfigPropertyOutputReference ext
 }
 export interface ContainerImageConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_access_mode AwsSagemakerModel#repository_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_access_mode TfModel#repository_access_mode}
   */
   readonly repositoryAccessMode: string;
   /**
   * repository_auth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_auth_config AwsSagemakerModel#repository_auth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_auth_config TfModel#repository_auth_config}
   */
   readonly repositoryAuthConfig?: ContainerImageConfigRepositoryAuthConfigProperty;
 }
@@ -1774,7 +1774,7 @@ export class ContainerImageConfigPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ContainerModelDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula AwsSagemakerModel#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula TfModel#accept_eula}
   */
   readonly acceptEula: boolean | cdktn.IResolvable;
 }
@@ -1825,21 +1825,21 @@ export class ContainerModelDataSourceS3DataSourceModelAccessConfigPropertyOutput
 }
 export interface ContainerModelDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type AwsSagemakerModel#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type TfModel#compression_type}
   */
   readonly compressionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type AwsSagemakerModel#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type TfModel#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri AwsSagemakerModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri TfModel#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config AwsSagemakerModel#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config TfModel#model_access_config}
   */
   readonly modelAccessConfig?: ContainerModelDataSourceS3DataSourceModelAccessConfigProperty;
 }
@@ -1984,7 +1984,7 @@ export interface ContainerModelDataSourceProperty {
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source AwsSagemakerModel#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source TfModel#s3_data_source}
   */
   readonly s3DataSource: ContainerModelDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -2035,7 +2035,7 @@ export class ContainerModelDataSourcePropertyOutputReference extends cdktn.Compl
 }
 export interface ContainerMultiModelConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_cache_setting AwsSagemakerModel#model_cache_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_cache_setting TfModel#model_cache_setting}
   */
   readonly modelCacheSetting?: string;
 }
@@ -2089,55 +2089,55 @@ export class ContainerMultiModelConfigPropertyOutputReference extends cdktn.Comp
 }
 export interface ContainerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#container_hostname AwsSagemakerModel#container_hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#container_hostname TfModel#container_hostname}
   */
   readonly containerHostname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#environment AwsSagemakerModel#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#environment TfModel#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image AwsSagemakerModel#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image TfModel#image}
   */
   readonly image?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#inference_specification_name AwsSagemakerModel#inference_specification_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#inference_specification_name TfModel#inference_specification_name}
   */
   readonly inferenceSpecificationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#mode AwsSagemakerModel#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#mode TfModel#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_url AwsSagemakerModel#model_data_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_url TfModel#model_data_url}
   */
   readonly modelDataUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_package_name AwsSagemakerModel#model_package_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_package_name TfModel#model_package_name}
   */
   readonly modelPackageName?: string;
   /**
   * additional_model_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#additional_model_data_source AwsSagemakerModel#additional_model_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#additional_model_data_source TfModel#additional_model_data_source}
   */
   readonly additionalModelDataSource?: ContainerAdditionalModelDataSourceProperty[] | cdktn.IResolvable;
   /**
   * image_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image_config AwsSagemakerModel#image_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image_config TfModel#image_config}
   */
   readonly imageConfig?: ContainerImageConfigProperty;
   /**
   * model_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_source AwsSagemakerModel#model_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_source TfModel#model_data_source}
   */
   readonly modelDataSource?: ContainerModelDataSourceProperty;
   /**
   * multi_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#multi_model_config AwsSagemakerModel#multi_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#multi_model_config TfModel#multi_model_config}
   */
   readonly multiModelConfig?: ContainerMultiModelConfigProperty;
 }
@@ -2443,7 +2443,7 @@ export class ContainerPropertyList extends cdktn.ComplexList {
 }
 export interface InferenceExecutionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#mode AwsSagemakerModel#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#mode TfModel#mode}
   */
   readonly mode: string;
 }
@@ -2494,7 +2494,7 @@ export class InferenceExecutionConfigPropertyOutputReference extends cdktn.Compl
 }
 export interface PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula AwsSagemakerModel#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula TfModel#accept_eula}
   */
   readonly acceptEula: boolean | cdktn.IResolvable;
 }
@@ -2545,21 +2545,21 @@ export class PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessCon
 }
 export interface PrimaryContainerAdditionalModelDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type AwsSagemakerModel#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type TfModel#compression_type}
   */
   readonly compressionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type AwsSagemakerModel#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type TfModel#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri AwsSagemakerModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri TfModel#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config AwsSagemakerModel#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config TfModel#model_access_config}
   */
   readonly modelAccessConfig?: PrimaryContainerAdditionalModelDataSourceS3DataSourceModelAccessConfigProperty;
 }
@@ -2702,13 +2702,13 @@ export class PrimaryContainerAdditionalModelDataSourceS3DataSourcePropertyList e
 }
 export interface PrimaryContainerAdditionalModelDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#channel_name AwsSagemakerModel#channel_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#channel_name TfModel#channel_name}
   */
   readonly channelName: string;
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source AwsSagemakerModel#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source TfModel#s3_data_source}
   */
   readonly s3DataSource: PrimaryContainerAdditionalModelDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -2810,7 +2810,7 @@ export class PrimaryContainerAdditionalModelDataSourcePropertyList extends cdktn
 }
 export interface PrimaryContainerImageConfigRepositoryAuthConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_credentials_provider_arn AwsSagemakerModel#repository_credentials_provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_credentials_provider_arn TfModel#repository_credentials_provider_arn}
   */
   readonly repositoryCredentialsProviderArn: string;
 }
@@ -2861,13 +2861,13 @@ export class PrimaryContainerImageConfigRepositoryAuthConfigPropertyOutputRefere
 }
 export interface PrimaryContainerImageConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_access_mode AwsSagemakerModel#repository_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_access_mode TfModel#repository_access_mode}
   */
   readonly repositoryAccessMode: string;
   /**
   * repository_auth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_auth_config AwsSagemakerModel#repository_auth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#repository_auth_config TfModel#repository_auth_config}
   */
   readonly repositoryAuthConfig?: PrimaryContainerImageConfigRepositoryAuthConfigProperty;
 }
@@ -2940,7 +2940,7 @@ export class PrimaryContainerImageConfigPropertyOutputReference extends cdktn.Co
 }
 export interface PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula AwsSagemakerModel#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#accept_eula TfModel#accept_eula}
   */
   readonly acceptEula: boolean | cdktn.IResolvable;
 }
@@ -2991,21 +2991,21 @@ export class PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigPropert
 }
 export interface PrimaryContainerModelDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type AwsSagemakerModel#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#compression_type TfModel#compression_type}
   */
   readonly compressionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type AwsSagemakerModel#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_type TfModel#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri AwsSagemakerModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_uri TfModel#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config AwsSagemakerModel#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_access_config TfModel#model_access_config}
   */
   readonly modelAccessConfig?: PrimaryContainerModelDataSourceS3DataSourceModelAccessConfigProperty;
 }
@@ -3150,7 +3150,7 @@ export interface PrimaryContainerModelDataSourceProperty {
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source AwsSagemakerModel#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#s3_data_source TfModel#s3_data_source}
   */
   readonly s3DataSource: PrimaryContainerModelDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -3201,7 +3201,7 @@ export class PrimaryContainerModelDataSourcePropertyOutputReference extends cdkt
 }
 export interface PrimaryContainerMultiModelConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_cache_setting AwsSagemakerModel#model_cache_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_cache_setting TfModel#model_cache_setting}
   */
   readonly modelCacheSetting?: string;
 }
@@ -3255,55 +3255,55 @@ export class PrimaryContainerMultiModelConfigPropertyOutputReference extends cdk
 }
 export interface PrimaryContainerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#container_hostname AwsSagemakerModel#container_hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#container_hostname TfModel#container_hostname}
   */
   readonly containerHostname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#environment AwsSagemakerModel#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#environment TfModel#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image AwsSagemakerModel#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image TfModel#image}
   */
   readonly image?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#inference_specification_name AwsSagemakerModel#inference_specification_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#inference_specification_name TfModel#inference_specification_name}
   */
   readonly inferenceSpecificationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#mode AwsSagemakerModel#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#mode TfModel#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_url AwsSagemakerModel#model_data_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_url TfModel#model_data_url}
   */
   readonly modelDataUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_package_name AwsSagemakerModel#model_package_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_package_name TfModel#model_package_name}
   */
   readonly modelPackageName?: string;
   /**
   * additional_model_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#additional_model_data_source AwsSagemakerModel#additional_model_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#additional_model_data_source TfModel#additional_model_data_source}
   */
   readonly additionalModelDataSource?: PrimaryContainerAdditionalModelDataSourceProperty[] | cdktn.IResolvable;
   /**
   * image_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image_config AwsSagemakerModel#image_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#image_config TfModel#image_config}
   */
   readonly imageConfig?: PrimaryContainerImageConfigProperty;
   /**
   * model_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_source AwsSagemakerModel#model_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#model_data_source TfModel#model_data_source}
   */
   readonly modelDataSource?: PrimaryContainerModelDataSourceProperty;
   /**
   * multi_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#multi_model_config AwsSagemakerModel#multi_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#multi_model_config TfModel#multi_model_config}
   */
   readonly multiModelConfig?: PrimaryContainerMultiModelConfigProperty;
 }
@@ -3577,11 +3577,11 @@ export class PrimaryContainerPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#security_group_ids AwsSagemakerModel#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#security_group_ids TfModel#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#subnets AwsSagemakerModel#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model#subnets TfModel#subnets}
   */
   readonly subnets: string[];
 }

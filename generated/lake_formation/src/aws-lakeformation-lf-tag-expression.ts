@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLakeformationLfTagExpressionConfig extends cdktn.TerraformMetaArguments {
+export interface TfLfTagExpressionConfig extends cdktn.TerraformMetaArguments {
   /**
   * The ID of the Data Catalog.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#catalog_id AwsLakeformationLfTagExpression#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#catalog_id TfLfTagExpression#catalog_id}
   */
   readonly catalogId?: string;
   /**
   * A description of the LF-Tag Expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#description AwsLakeformationLfTagExpression#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#description TfLfTagExpression#description}
   */
   readonly description?: string;
   /**
   * The name of the LF-Tag Expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#name AwsLakeformationLfTagExpression#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#name TfLfTagExpression#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#region AwsLakeformationLfTagExpression#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#region TfLfTagExpression#region}
   */
   readonly region?: string;
   /**
   * expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#expression AwsLakeformationLfTagExpression#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#expression TfLfTagExpression#expression}
   */
-  readonly expression?: AwsLakeformationLfTagExpression.ExpressionProperty[] | cdktn.IResolvable;
+  readonly expression?: TfLfTagExpression.ExpressionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression aws_lakeformation_lf_tag_expression}
 */
-export class AwsLakeformationLfTagExpression extends cdktn.TerraformResource {
+export class TfLfTagExpression extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class AwsLakeformationLfTagExpression extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLakeformationLfTagExpression resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLfTagExpression resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLakeformationLfTagExpression to import
-  * @param importFromId The id of the existing AwsLakeformationLfTagExpression that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLakeformationLfTagExpression to import is found
+  * @param importToId The construct id used in the generated config for the TfLfTagExpression to import
+  * @param importFromId The id of the existing TfLfTagExpression that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLfTagExpression to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_lf_tag_expression", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class AwsLakeformationLfTagExpression extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLakeformationLfTagExpressionConfig
+  * @param options TfLfTagExpressionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLakeformationLfTagExpressionConfig) {
+  public constructor(scope: Construct, id: string, config: TfLfTagExpressionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_lf_tag_expression',
       terraformGeneratorMetadata: {
@@ -162,11 +162,11 @@ export class AwsLakeformationLfTagExpression extends cdktn.TerraformResource {
   }
 
   // expression - computed: false, optional: true, required: false
-  private _expression = new AwsLakeformationLfTagExpression.ExpressionPropertyList(this, "expression", true);
+  private _expression = new TfLfTagExpression.ExpressionPropertyList(this, "expression", true);
   public get expression() {
     return this._expression;
   }
-  public putExpression(value: AwsLakeformationLfTagExpression.ExpressionProperty[] | cdktn.IResolvable) {
+  public putExpression(value: TfLfTagExpression.ExpressionProperty[] | cdktn.IResolvable) {
     this._expression.internalValue = value;
   }
   public resetExpression() {
@@ -187,7 +187,7 @@ export class AwsLakeformationLfTagExpression extends cdktn.TerraformResource {
       description: cdktn.stringToTerraform(this._description),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      expression: cdktn.listMapper(awsLakeformationLfTagExpressionExpressionPropertyToTerraform, true)(this._expression.internalValue),
+      expression: cdktn.listMapper(tfLfTagExpressionExpressionPropertyToTerraform, true)(this._expression.internalValue),
     };
   }
 
@@ -218,10 +218,10 @@ export class AwsLakeformationLfTagExpression extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       expression: {
-        value: cdktn.listMapperHcl(awsLakeformationLfTagExpressionExpressionPropertyToHclTerraform, true)(this._expression.internalValue),
+        value: cdktn.listMapperHcl(tfLfTagExpressionExpressionPropertyToHclTerraform, true)(this._expression.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsLakeformationLfTagExpression.ExpressionPropertyList",
+        storageClassType: "TfLfTagExpression.ExpressionPropertyList",
       },
     };
 
@@ -230,7 +230,7 @@ export class AwsLakeformationLfTagExpression extends cdktn.TerraformResource {
   }
 }
 
-export function awsLakeformationLfTagExpressionExpressionPropertyToTerraform(struct?: AwsLakeformationLfTagExpression.ExpressionProperty | cdktn.IResolvable): any {
+export function tfLfTagExpressionExpressionPropertyToTerraform(struct?: TfLfTagExpression.ExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function awsLakeformationLfTagExpressionExpressionPropertyToTerraform(str
 }
 
 
-export function awsLakeformationLfTagExpressionExpressionPropertyToHclTerraform(struct?: AwsLakeformationLfTagExpression.ExpressionProperty | cdktn.IResolvable): any {
+export function tfLfTagExpressionExpressionPropertyToHclTerraform(struct?: TfLfTagExpression.ExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,14 +267,14 @@ export function awsLakeformationLfTagExpressionExpressionPropertyToHclTerraform(
 }
 
 
-export namespace AwsLakeformationLfTagExpression {
+export namespace TfLfTagExpression {
 export interface ExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#tag_key AwsLakeformationLfTagExpression#tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#tag_key TfLfTagExpression#tag_key}
   */
   readonly tagKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#tag_values AwsLakeformationLfTagExpression#tag_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_lf_tag_expression#tag_values TfLfTagExpression#tag_values}
   */
   readonly tagValues: string[];
 }

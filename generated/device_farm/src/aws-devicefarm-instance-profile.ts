@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDevicefarmInstanceProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfInstanceProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#description AwsDevicefarmInstanceProfile#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#description TfInstanceProfile#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#exclude_app_packages_from_cleanup AwsDevicefarmInstanceProfile#exclude_app_packages_from_cleanup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#exclude_app_packages_from_cleanup TfInstanceProfile#exclude_app_packages_from_cleanup}
   */
   readonly excludeAppPackagesFromCleanup?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#id AwsDevicefarmInstanceProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#id TfInstanceProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#name AwsDevicefarmInstanceProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#name TfInstanceProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#package_cleanup AwsDevicefarmInstanceProfile#package_cleanup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#package_cleanup TfInstanceProfile#package_cleanup}
   */
   readonly packageCleanup?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#reboot_after_use AwsDevicefarmInstanceProfile#reboot_after_use}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#reboot_after_use TfInstanceProfile#reboot_after_use}
   */
   readonly rebootAfterUse?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#region AwsDevicefarmInstanceProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#region TfInstanceProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#tags AwsDevicefarmInstanceProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#tags TfInstanceProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#tags_all AwsDevicefarmInstanceProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#tags_all TfInstanceProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -52,7 +52,7 @@ export interface AwsDevicefarmInstanceProfileConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile aws_devicefarm_instance_profile}
 */
-export class AwsDevicefarmInstanceProfile extends cdktn.TerraformResource {
+export class TfInstanceProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsDevicefarmInstanceProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDevicefarmInstanceProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInstanceProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDevicefarmInstanceProfile to import
-  * @param importFromId The id of the existing AwsDevicefarmInstanceProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDevicefarmInstanceProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfInstanceProfile to import
+  * @param importFromId The id of the existing TfInstanceProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_instance_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInstanceProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devicefarm_instance_profile", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsDevicefarmInstanceProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDevicefarmInstanceProfileConfig
+  * @param options TfInstanceProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDevicefarmInstanceProfileConfig) {
+  public constructor(scope: Construct, id: string, config: TfInstanceProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_devicefarm_instance_profile',
       terraformGeneratorMetadata: {

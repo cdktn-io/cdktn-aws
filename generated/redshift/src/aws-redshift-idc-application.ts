@@ -5,59 +5,59 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRedshiftIdcApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfIdcApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#application_type AwsRedshiftIdcApplication#application_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#application_type TfIdcApplication#application_type}
   */
   readonly applicationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#iam_role_arn AwsRedshiftIdcApplication#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#iam_role_arn TfIdcApplication#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#idc_display_name AwsRedshiftIdcApplication#idc_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#idc_display_name TfIdcApplication#idc_display_name}
   */
   readonly idcDisplayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#idc_instance_arn AwsRedshiftIdcApplication#idc_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#idc_instance_arn TfIdcApplication#idc_instance_arn}
   */
   readonly idcInstanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#identity_namespace AwsRedshiftIdcApplication#identity_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#identity_namespace TfIdcApplication#identity_namespace}
   */
   readonly identityNamespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#redshift_idc_application_name AwsRedshiftIdcApplication#redshift_idc_application_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#redshift_idc_application_name TfIdcApplication#redshift_idc_application_name}
   */
   readonly redshiftIdcApplicationName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#region AwsRedshiftIdcApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#region TfIdcApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#tags AwsRedshiftIdcApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#tags TfIdcApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * authorized_token_issuer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorized_token_issuer AwsRedshiftIdcApplication#authorized_token_issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorized_token_issuer TfIdcApplication#authorized_token_issuer}
   */
-  readonly authorizedTokenIssuer?: AwsRedshiftIdcApplication.AuthorizedTokenIssuerProperty[] | cdktn.IResolvable;
+  readonly authorizedTokenIssuer?: TfIdcApplication.AuthorizedTokenIssuerProperty[] | cdktn.IResolvable;
   /**
   * service_integration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#service_integration AwsRedshiftIdcApplication#service_integration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#service_integration TfIdcApplication#service_integration}
   */
-  readonly serviceIntegration?: AwsRedshiftIdcApplication.ServiceIntegrationProperty[] | cdktn.IResolvable;
+  readonly serviceIntegration?: TfIdcApplication.ServiceIntegrationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application aws_redshift_idc_application}
 */
-export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
+export class TfIdcApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRedshiftIdcApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIdcApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRedshiftIdcApplication to import
-  * @param importFromId The id of the existing AwsRedshiftIdcApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRedshiftIdcApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfIdcApplication to import
+  * @param importFromId The id of the existing TfIdcApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIdcApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_idc_application", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRedshiftIdcApplicationConfig
+  * @param options TfIdcApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRedshiftIdcApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfIdcApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_idc_application',
       terraformGeneratorMetadata: {
@@ -254,11 +254,11 @@ export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
   }
 
   // authorized_token_issuer - computed: false, optional: true, required: false
-  private _authorizedTokenIssuer = new AwsRedshiftIdcApplication.AuthorizedTokenIssuerPropertyList(this, "authorized_token_issuer", false);
+  private _authorizedTokenIssuer = new TfIdcApplication.AuthorizedTokenIssuerPropertyList(this, "authorized_token_issuer", false);
   public get authorizedTokenIssuer() {
     return this._authorizedTokenIssuer;
   }
-  public putAuthorizedTokenIssuer(value: AwsRedshiftIdcApplication.AuthorizedTokenIssuerProperty[] | cdktn.IResolvable) {
+  public putAuthorizedTokenIssuer(value: TfIdcApplication.AuthorizedTokenIssuerProperty[] | cdktn.IResolvable) {
     this._authorizedTokenIssuer.internalValue = value;
   }
   public resetAuthorizedTokenIssuer() {
@@ -270,11 +270,11 @@ export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
   }
 
   // service_integration - computed: false, optional: true, required: false
-  private _serviceIntegration = new AwsRedshiftIdcApplication.ServiceIntegrationPropertyList(this, "service_integration", false);
+  private _serviceIntegration = new TfIdcApplication.ServiceIntegrationPropertyList(this, "service_integration", false);
   public get serviceIntegration() {
     return this._serviceIntegration;
   }
-  public putServiceIntegration(value: AwsRedshiftIdcApplication.ServiceIntegrationProperty[] | cdktn.IResolvable) {
+  public putServiceIntegration(value: TfIdcApplication.ServiceIntegrationProperty[] | cdktn.IResolvable) {
     this._serviceIntegration.internalValue = value;
   }
   public resetServiceIntegration() {
@@ -299,8 +299,8 @@ export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
       redshift_idc_application_name: cdktn.stringToTerraform(this._redshiftIdcApplicationName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      authorized_token_issuer: cdktn.listMapper(awsRedshiftIdcApplicationAuthorizedTokenIssuerPropertyToTerraform, true)(this._authorizedTokenIssuer.internalValue),
-      service_integration: cdktn.listMapper(awsRedshiftIdcApplicationServiceIntegrationPropertyToTerraform, true)(this._serviceIntegration.internalValue),
+      authorized_token_issuer: cdktn.listMapper(tfIdcApplicationAuthorizedTokenIssuerPropertyToTerraform, true)(this._authorizedTokenIssuer.internalValue),
+      service_integration: cdktn.listMapper(tfIdcApplicationServiceIntegrationPropertyToTerraform, true)(this._serviceIntegration.internalValue),
     };
   }
 
@@ -355,16 +355,16 @@ export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       authorized_token_issuer: {
-        value: cdktn.listMapperHcl(awsRedshiftIdcApplicationAuthorizedTokenIssuerPropertyToHclTerraform, true)(this._authorizedTokenIssuer.internalValue),
+        value: cdktn.listMapperHcl(tfIdcApplicationAuthorizedTokenIssuerPropertyToHclTerraform, true)(this._authorizedTokenIssuer.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRedshiftIdcApplication.AuthorizedTokenIssuerPropertyList",
+        storageClassType: "TfIdcApplication.AuthorizedTokenIssuerPropertyList",
       },
       service_integration: {
-        value: cdktn.listMapperHcl(awsRedshiftIdcApplicationServiceIntegrationPropertyToHclTerraform, true)(this._serviceIntegration.internalValue),
+        value: cdktn.listMapperHcl(tfIdcApplicationServiceIntegrationPropertyToHclTerraform, true)(this._serviceIntegration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRedshiftIdcApplication.ServiceIntegrationPropertyList",
+        storageClassType: "TfIdcApplication.ServiceIntegrationPropertyList",
       },
     };
 
@@ -373,7 +373,7 @@ export class AwsRedshiftIdcApplication extends cdktn.TerraformResource {
   }
 }
 
-export function awsRedshiftIdcApplicationAuthorizedTokenIssuerPropertyToTerraform(struct?: AwsRedshiftIdcApplication.AuthorizedTokenIssuerProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationAuthorizedTokenIssuerPropertyToTerraform(struct?: TfIdcApplication.AuthorizedTokenIssuerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsRedshiftIdcApplicationAuthorizedTokenIssuerPropertyToTerrafor
 }
 
 
-export function awsRedshiftIdcApplicationAuthorizedTokenIssuerPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.AuthorizedTokenIssuerProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationAuthorizedTokenIssuerPropertyToHclTerraform(struct?: TfIdcApplication.AuthorizedTokenIssuerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function awsRedshiftIdcApplicationAuthorizedTokenIssuerPropertyToHclTerra
 }
 
 
-export function awsRedshiftIdcApplicationLakeFormationQueryPropertyToTerraform(struct?: AwsRedshiftIdcApplication.LakeFormationQueryProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationLakeFormationQueryPropertyToTerraform(struct?: TfIdcApplication.LakeFormationQueryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function awsRedshiftIdcApplicationLakeFormationQueryPropertyToTerraform(s
 }
 
 
-export function awsRedshiftIdcApplicationLakeFormationQueryPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.LakeFormationQueryProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationLakeFormationQueryPropertyToHclTerraform(struct?: TfIdcApplication.LakeFormationQueryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,25 +440,25 @@ export function awsRedshiftIdcApplicationLakeFormationQueryPropertyToHclTerrafor
 }
 
 
-export function awsRedshiftIdcApplicationLakeFormationPropertyToTerraform(struct?: AwsRedshiftIdcApplication.LakeFormationProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationLakeFormationPropertyToTerraform(struct?: TfIdcApplication.LakeFormationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    lake_formation_query: cdktn.listMapper(awsRedshiftIdcApplicationLakeFormationQueryPropertyToTerraform, true)(struct!.lakeFormationQuery),
+    lake_formation_query: cdktn.listMapper(tfIdcApplicationLakeFormationQueryPropertyToTerraform, true)(struct!.lakeFormationQuery),
   }
 }
 
 
-export function awsRedshiftIdcApplicationLakeFormationPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.LakeFormationProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationLakeFormationPropertyToHclTerraform(struct?: TfIdcApplication.LakeFormationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     lake_formation_query: {
-      value: cdktn.listMapperHcl(awsRedshiftIdcApplicationLakeFormationQueryPropertyToHclTerraform, true)(struct!.lakeFormationQuery),
+      value: cdktn.listMapperHcl(tfIdcApplicationLakeFormationQueryPropertyToHclTerraform, true)(struct!.lakeFormationQuery),
       isBlock: true,
       type: "list",
       storageClassType: "LakeFormationQueryPropertyList",
@@ -470,7 +470,7 @@ export function awsRedshiftIdcApplicationLakeFormationPropertyToHclTerraform(str
 }
 
 
-export function awsRedshiftIdcApplicationConnectPropertyToTerraform(struct?: AwsRedshiftIdcApplication.ConnectProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationConnectPropertyToTerraform(struct?: TfIdcApplication.ConnectProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function awsRedshiftIdcApplicationConnectPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsRedshiftIdcApplicationConnectPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.ConnectProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationConnectPropertyToHclTerraform(struct?: TfIdcApplication.ConnectProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,25 +500,25 @@ export function awsRedshiftIdcApplicationConnectPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsRedshiftIdcApplicationRedshiftPropertyToTerraform(struct?: AwsRedshiftIdcApplication.RedshiftProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationRedshiftPropertyToTerraform(struct?: TfIdcApplication.RedshiftProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    connect: cdktn.listMapper(awsRedshiftIdcApplicationConnectPropertyToTerraform, true)(struct!.connect),
+    connect: cdktn.listMapper(tfIdcApplicationConnectPropertyToTerraform, true)(struct!.connect),
   }
 }
 
 
-export function awsRedshiftIdcApplicationRedshiftPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.RedshiftProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationRedshiftPropertyToHclTerraform(struct?: TfIdcApplication.RedshiftProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     connect: {
-      value: cdktn.listMapperHcl(awsRedshiftIdcApplicationConnectPropertyToHclTerraform, true)(struct!.connect),
+      value: cdktn.listMapperHcl(tfIdcApplicationConnectPropertyToHclTerraform, true)(struct!.connect),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectPropertyList",
@@ -530,7 +530,7 @@ export function awsRedshiftIdcApplicationRedshiftPropertyToHclTerraform(struct?:
 }
 
 
-export function awsRedshiftIdcApplicationReadWriteAccessPropertyToTerraform(struct?: AwsRedshiftIdcApplication.ReadWriteAccessProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationReadWriteAccessPropertyToTerraform(struct?: TfIdcApplication.ReadWriteAccessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,7 +541,7 @@ export function awsRedshiftIdcApplicationReadWriteAccessPropertyToTerraform(stru
 }
 
 
-export function awsRedshiftIdcApplicationReadWriteAccessPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.ReadWriteAccessProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationReadWriteAccessPropertyToHclTerraform(struct?: TfIdcApplication.ReadWriteAccessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,25 +560,25 @@ export function awsRedshiftIdcApplicationReadWriteAccessPropertyToHclTerraform(s
 }
 
 
-export function awsRedshiftIdcApplicationS3AccessGrantsPropertyToTerraform(struct?: AwsRedshiftIdcApplication.S3AccessGrantsProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationS3AccessGrantsPropertyToTerraform(struct?: TfIdcApplication.S3AccessGrantsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    read_write_access: cdktn.listMapper(awsRedshiftIdcApplicationReadWriteAccessPropertyToTerraform, true)(struct!.readWriteAccess),
+    read_write_access: cdktn.listMapper(tfIdcApplicationReadWriteAccessPropertyToTerraform, true)(struct!.readWriteAccess),
   }
 }
 
 
-export function awsRedshiftIdcApplicationS3AccessGrantsPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.S3AccessGrantsProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationS3AccessGrantsPropertyToHclTerraform(struct?: TfIdcApplication.S3AccessGrantsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     read_write_access: {
-      value: cdktn.listMapperHcl(awsRedshiftIdcApplicationReadWriteAccessPropertyToHclTerraform, true)(struct!.readWriteAccess),
+      value: cdktn.listMapperHcl(tfIdcApplicationReadWriteAccessPropertyToHclTerraform, true)(struct!.readWriteAccess),
       isBlock: true,
       type: "list",
       storageClassType: "ReadWriteAccessPropertyList",
@@ -590,39 +590,39 @@ export function awsRedshiftIdcApplicationS3AccessGrantsPropertyToHclTerraform(st
 }
 
 
-export function awsRedshiftIdcApplicationServiceIntegrationPropertyToTerraform(struct?: AwsRedshiftIdcApplication.ServiceIntegrationProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationServiceIntegrationPropertyToTerraform(struct?: TfIdcApplication.ServiceIntegrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    lake_formation: cdktn.listMapper(awsRedshiftIdcApplicationLakeFormationPropertyToTerraform, true)(struct!.lakeFormation),
-    redshift: cdktn.listMapper(awsRedshiftIdcApplicationRedshiftPropertyToTerraform, true)(struct!.redshift),
-    s3_access_grants: cdktn.listMapper(awsRedshiftIdcApplicationS3AccessGrantsPropertyToTerraform, true)(struct!.s3AccessGrants),
+    lake_formation: cdktn.listMapper(tfIdcApplicationLakeFormationPropertyToTerraform, true)(struct!.lakeFormation),
+    redshift: cdktn.listMapper(tfIdcApplicationRedshiftPropertyToTerraform, true)(struct!.redshift),
+    s3_access_grants: cdktn.listMapper(tfIdcApplicationS3AccessGrantsPropertyToTerraform, true)(struct!.s3AccessGrants),
   }
 }
 
 
-export function awsRedshiftIdcApplicationServiceIntegrationPropertyToHclTerraform(struct?: AwsRedshiftIdcApplication.ServiceIntegrationProperty | cdktn.IResolvable): any {
+export function tfIdcApplicationServiceIntegrationPropertyToHclTerraform(struct?: TfIdcApplication.ServiceIntegrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     lake_formation: {
-      value: cdktn.listMapperHcl(awsRedshiftIdcApplicationLakeFormationPropertyToHclTerraform, true)(struct!.lakeFormation),
+      value: cdktn.listMapperHcl(tfIdcApplicationLakeFormationPropertyToHclTerraform, true)(struct!.lakeFormation),
       isBlock: true,
       type: "list",
       storageClassType: "LakeFormationPropertyList",
     },
     redshift: {
-      value: cdktn.listMapperHcl(awsRedshiftIdcApplicationRedshiftPropertyToHclTerraform, true)(struct!.redshift),
+      value: cdktn.listMapperHcl(tfIdcApplicationRedshiftPropertyToHclTerraform, true)(struct!.redshift),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftPropertyList",
     },
     s3_access_grants: {
-      value: cdktn.listMapperHcl(awsRedshiftIdcApplicationS3AccessGrantsPropertyToHclTerraform, true)(struct!.s3AccessGrants),
+      value: cdktn.listMapperHcl(tfIdcApplicationS3AccessGrantsPropertyToHclTerraform, true)(struct!.s3AccessGrants),
       isBlock: true,
       type: "list",
       storageClassType: "S3AccessGrantsPropertyList",
@@ -634,14 +634,14 @@ export function awsRedshiftIdcApplicationServiceIntegrationPropertyToHclTerrafor
 }
 
 
-export namespace AwsRedshiftIdcApplication {
+export namespace TfIdcApplication {
 export interface AuthorizedTokenIssuerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorized_audiences_list AwsRedshiftIdcApplication#authorized_audiences_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorized_audiences_list TfIdcApplication#authorized_audiences_list}
   */
   readonly authorizedAudiencesList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#trusted_token_issuer_arn AwsRedshiftIdcApplication#trusted_token_issuer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#trusted_token_issuer_arn TfIdcApplication#trusted_token_issuer_arn}
   */
   readonly trustedTokenIssuerArn?: string;
 }
@@ -749,7 +749,7 @@ export class AuthorizedTokenIssuerPropertyList extends cdktn.ComplexList {
 }
 export interface LakeFormationQueryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorization AwsRedshiftIdcApplication#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorization TfIdcApplication#authorization}
   */
   readonly authorization: string;
 }
@@ -834,7 +834,7 @@ export interface LakeFormationProperty {
   /**
   * lake_formation_query block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#lake_formation_query AwsRedshiftIdcApplication#lake_formation_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#lake_formation_query TfIdcApplication#lake_formation_query}
   */
   readonly lakeFormationQuery?: LakeFormationQueryProperty[] | cdktn.IResolvable;
 }
@@ -920,7 +920,7 @@ export class LakeFormationPropertyList extends cdktn.ComplexList {
 }
 export interface ConnectProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorization AwsRedshiftIdcApplication#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorization TfIdcApplication#authorization}
   */
   readonly authorization: string;
 }
@@ -1005,7 +1005,7 @@ export interface RedshiftProperty {
   /**
   * connect block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#connect AwsRedshiftIdcApplication#connect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#connect TfIdcApplication#connect}
   */
   readonly connect?: ConnectProperty[] | cdktn.IResolvable;
 }
@@ -1091,7 +1091,7 @@ export class RedshiftPropertyList extends cdktn.ComplexList {
 }
 export interface ReadWriteAccessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorization AwsRedshiftIdcApplication#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#authorization TfIdcApplication#authorization}
   */
   readonly authorization: string;
 }
@@ -1176,7 +1176,7 @@ export interface S3AccessGrantsProperty {
   /**
   * read_write_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#read_write_access AwsRedshiftIdcApplication#read_write_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#read_write_access TfIdcApplication#read_write_access}
   */
   readonly readWriteAccess?: ReadWriteAccessProperty[] | cdktn.IResolvable;
 }
@@ -1264,19 +1264,19 @@ export interface ServiceIntegrationProperty {
   /**
   * lake_formation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#lake_formation AwsRedshiftIdcApplication#lake_formation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#lake_formation TfIdcApplication#lake_formation}
   */
   readonly lakeFormation?: LakeFormationProperty[] | cdktn.IResolvable;
   /**
   * redshift block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#redshift AwsRedshiftIdcApplication#redshift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#redshift TfIdcApplication#redshift}
   */
   readonly redshift?: RedshiftProperty[] | cdktn.IResolvable;
   /**
   * s3_access_grants block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#s3_access_grants AwsRedshiftIdcApplication#s3_access_grants}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_idc_application#s3_access_grants TfIdcApplication#s3_access_grants}
   */
   readonly s3AccessGrants?: S3AccessGrantsProperty[] | cdktn.IResolvable;
 }

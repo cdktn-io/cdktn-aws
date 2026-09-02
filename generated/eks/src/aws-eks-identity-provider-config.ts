@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEksIdentityProviderConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfIdentityProviderConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#cluster_name AwsEksIdentityProviderConfig#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#cluster_name TfIdentityProviderConfig#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#id AwsEksIdentityProviderConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#id TfIdentityProviderConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,35 +20,35 @@ export interface AwsEksIdentityProviderConfigConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#region AwsEksIdentityProviderConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#region TfIdentityProviderConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#tags AwsEksIdentityProviderConfig#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#tags TfIdentityProviderConfig#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#tags_all AwsEksIdentityProviderConfig#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#tags_all TfIdentityProviderConfig#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * oidc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#oidc AwsEksIdentityProviderConfig#oidc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#oidc TfIdentityProviderConfig#oidc}
   */
-  readonly oidc: AwsEksIdentityProviderConfig.OidcProperty;
+  readonly oidc: TfIdentityProviderConfig.OidcProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#timeouts AwsEksIdentityProviderConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#timeouts TfIdentityProviderConfig#timeouts}
   */
-  readonly timeouts?: AwsEksIdentityProviderConfig.TimeoutsProperty;
+  readonly timeouts?: TfIdentityProviderConfig.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config aws_eks_identity_provider_config}
 */
-export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
+export class TfIdentityProviderConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEksIdentityProviderConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIdentityProviderConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEksIdentityProviderConfig to import
-  * @param importFromId The id of the existing AwsEksIdentityProviderConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEksIdentityProviderConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfIdentityProviderConfig to import
+  * @param importFromId The id of the existing TfIdentityProviderConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIdentityProviderConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_identity_provider_config", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEksIdentityProviderConfigConfig
+  * @param options TfIdentityProviderConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEksIdentityProviderConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfIdentityProviderConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_identity_provider_config',
       terraformGeneratorMetadata: {
@@ -202,11 +202,11 @@ export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
   }
 
   // oidc - computed: false, optional: false, required: true
-  private _oidc = new AwsEksIdentityProviderConfig.OidcPropertyOutputReference(this, "oidc");
+  private _oidc = new TfIdentityProviderConfig.OidcPropertyOutputReference(this, "oidc");
   public get oidc() {
     return this._oidc;
   }
-  public putOidc(value: AwsEksIdentityProviderConfig.OidcProperty) {
+  public putOidc(value: TfIdentityProviderConfig.OidcProperty) {
     this._oidc.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -215,11 +215,11 @@ export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEksIdentityProviderConfig.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfIdentityProviderConfig.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEksIdentityProviderConfig.TimeoutsProperty) {
+  public putTimeouts(value: TfIdentityProviderConfig.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -241,8 +241,8 @@ export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      oidc: awsEksIdentityProviderConfigOidcPropertyToTerraform(this._oidc.internalValue),
-      timeouts: awsEksIdentityProviderConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      oidc: tfIdentityProviderConfigOidcPropertyToTerraform(this._oidc.internalValue),
+      timeouts: tfIdentityProviderConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -279,16 +279,16 @@ export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       oidc: {
-        value: awsEksIdentityProviderConfigOidcPropertyToHclTerraform(this._oidc.internalValue),
+        value: tfIdentityProviderConfigOidcPropertyToHclTerraform(this._oidc.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksIdentityProviderConfig.OidcPropertyList",
+        storageClassType: "TfIdentityProviderConfig.OidcPropertyList",
       },
       timeouts: {
-        value: awsEksIdentityProviderConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfIdentityProviderConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEksIdentityProviderConfig.TimeoutsProperty",
+        storageClassType: "TfIdentityProviderConfig.TimeoutsProperty",
       },
     };
 
@@ -297,7 +297,7 @@ export class AwsEksIdentityProviderConfig extends cdktn.TerraformResource {
   }
 }
 
-export function awsEksIdentityProviderConfigOidcPropertyToTerraform(struct?: AwsEksIdentityProviderConfig.OidcPropertyOutputReference | AwsEksIdentityProviderConfig.OidcProperty): any {
+export function tfIdentityProviderConfigOidcPropertyToTerraform(struct?: TfIdentityProviderConfig.OidcPropertyOutputReference | TfIdentityProviderConfig.OidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function awsEksIdentityProviderConfigOidcPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsEksIdentityProviderConfigOidcPropertyToHclTerraform(struct?: AwsEksIdentityProviderConfig.OidcPropertyOutputReference | AwsEksIdentityProviderConfig.OidcProperty): any {
+export function tfIdentityProviderConfigOidcPropertyToHclTerraform(struct?: TfIdentityProviderConfig.OidcPropertyOutputReference | TfIdentityProviderConfig.OidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,7 +376,7 @@ export function awsEksIdentityProviderConfigOidcPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEksIdentityProviderConfigTimeoutsPropertyToTerraform(struct?: AwsEksIdentityProviderConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIdentityProviderConfigTimeoutsPropertyToTerraform(struct?: TfIdentityProviderConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function awsEksIdentityProviderConfigTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsEksIdentityProviderConfigTimeoutsPropertyToHclTerraform(struct?: AwsEksIdentityProviderConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIdentityProviderConfigTimeoutsPropertyToHclTerraform(struct?: TfIdentityProviderConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,38 +413,38 @@ export function awsEksIdentityProviderConfigTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsEksIdentityProviderConfig {
+export namespace TfIdentityProviderConfig {
 export interface OidcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#client_id AwsEksIdentityProviderConfig#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#client_id TfIdentityProviderConfig#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#groups_claim AwsEksIdentityProviderConfig#groups_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#groups_claim TfIdentityProviderConfig#groups_claim}
   */
   readonly groupsClaim?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#groups_prefix AwsEksIdentityProviderConfig#groups_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#groups_prefix TfIdentityProviderConfig#groups_prefix}
   */
   readonly groupsPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#identity_provider_config_name AwsEksIdentityProviderConfig#identity_provider_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#identity_provider_config_name TfIdentityProviderConfig#identity_provider_config_name}
   */
   readonly identityProviderConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#issuer_url AwsEksIdentityProviderConfig#issuer_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#issuer_url TfIdentityProviderConfig#issuer_url}
   */
   readonly issuerUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#required_claims AwsEksIdentityProviderConfig#required_claims}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#required_claims TfIdentityProviderConfig#required_claims}
   */
   readonly requiredClaims?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#username_claim AwsEksIdentityProviderConfig#username_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#username_claim TfIdentityProviderConfig#username_claim}
   */
   readonly usernameClaim?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#username_prefix AwsEksIdentityProviderConfig#username_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#username_prefix TfIdentityProviderConfig#username_prefix}
   */
   readonly usernamePrefix?: string;
 }
@@ -643,11 +643,11 @@ export class OidcPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#create AwsEksIdentityProviderConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#create TfIdentityProviderConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#delete AwsEksIdentityProviderConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_identity_provider_config#delete TfIdentityProviderConfig#delete}
   */
   readonly delete?: string;
 }

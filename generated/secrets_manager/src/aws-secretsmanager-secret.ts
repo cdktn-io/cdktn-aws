@@ -5,72 +5,72 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecretsmanagerSecretConfig extends cdktn.TerraformMetaArguments {
+export interface TfSecretConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#description AwsSecretsmanagerSecret#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#description TfSecret#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#force_overwrite_replica_secret AwsSecretsmanagerSecret#force_overwrite_replica_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#force_overwrite_replica_secret TfSecret#force_overwrite_replica_secret}
   */
   readonly forceOverwriteReplicaSecret?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#id AwsSecretsmanagerSecret#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#id TfSecret#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#kms_key_id AwsSecretsmanagerSecret#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#kms_key_id TfSecret#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#name AwsSecretsmanagerSecret#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#name TfSecret#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#name_prefix AwsSecretsmanagerSecret#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#name_prefix TfSecret#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#policy AwsSecretsmanagerSecret#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#policy TfSecret#policy}
   */
   readonly policy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#recovery_window_in_days AwsSecretsmanagerSecret#recovery_window_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#recovery_window_in_days TfSecret#recovery_window_in_days}
   */
   readonly recoveryWindowInDays?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#region AwsSecretsmanagerSecret#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#region TfSecret#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#tags AwsSecretsmanagerSecret#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#tags TfSecret#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#tags_all AwsSecretsmanagerSecret#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#tags_all TfSecret#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#type AwsSecretsmanagerSecret#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#type TfSecret#type}
   */
   readonly type?: string;
   /**
   * replica block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#replica AwsSecretsmanagerSecret#replica}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#replica TfSecret#replica}
   */
-  readonly replica?: AwsSecretsmanagerSecret.ReplicaProperty[] | cdktn.IResolvable;
+  readonly replica?: TfSecret.ReplicaProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret aws_secretsmanager_secret}
 */
-export class AwsSecretsmanagerSecret extends cdktn.TerraformResource {
+export class TfSecret extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class AwsSecretsmanagerSecret extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecretsmanagerSecret resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSecret resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecretsmanagerSecret to import
-  * @param importFromId The id of the existing AwsSecretsmanagerSecret that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecretsmanagerSecret to import is found
+  * @param importToId The construct id used in the generated config for the TfSecret to import
+  * @param importFromId The id of the existing TfSecret that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSecret to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_secretsmanager_secret", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class AwsSecretsmanagerSecret extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecretsmanagerSecretConfig = {}
+  * @param options TfSecretConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsSecretsmanagerSecretConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfSecretConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_secret',
       terraformGeneratorMetadata: {
@@ -335,11 +335,11 @@ export class AwsSecretsmanagerSecret extends cdktn.TerraformResource {
   }
 
   // replica - computed: false, optional: true, required: false
-  private _replica = new AwsSecretsmanagerSecret.ReplicaPropertyList(this, "replica", true);
+  private _replica = new TfSecret.ReplicaPropertyList(this, "replica", true);
   public get replica() {
     return this._replica;
   }
-  public putReplica(value: AwsSecretsmanagerSecret.ReplicaProperty[] | cdktn.IResolvable) {
+  public putReplica(value: TfSecret.ReplicaProperty[] | cdktn.IResolvable) {
     this._replica.internalValue = value;
   }
   public resetReplica() {
@@ -368,7 +368,7 @@ export class AwsSecretsmanagerSecret extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      replica: cdktn.listMapper(awsSecretsmanagerSecretReplicaPropertyToTerraform, true)(this._replica.internalValue),
+      replica: cdktn.listMapper(tfSecretReplicaPropertyToTerraform, true)(this._replica.internalValue),
     };
   }
 
@@ -447,10 +447,10 @@ export class AwsSecretsmanagerSecret extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       replica: {
-        value: cdktn.listMapperHcl(awsSecretsmanagerSecretReplicaPropertyToHclTerraform, true)(this._replica.internalValue),
+        value: cdktn.listMapperHcl(tfSecretReplicaPropertyToHclTerraform, true)(this._replica.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSecretsmanagerSecret.ReplicaPropertyList",
+        storageClassType: "TfSecret.ReplicaPropertyList",
       },
     };
 
@@ -459,7 +459,7 @@ export class AwsSecretsmanagerSecret extends cdktn.TerraformResource {
   }
 }
 
-export function awsSecretsmanagerSecretReplicaPropertyToTerraform(struct?: AwsSecretsmanagerSecret.ReplicaProperty | cdktn.IResolvable): any {
+export function tfSecretReplicaPropertyToTerraform(struct?: TfSecret.ReplicaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function awsSecretsmanagerSecretReplicaPropertyToTerraform(struct?: AwsSe
 }
 
 
-export function awsSecretsmanagerSecretReplicaPropertyToHclTerraform(struct?: AwsSecretsmanagerSecret.ReplicaProperty | cdktn.IResolvable): any {
+export function tfSecretReplicaPropertyToHclTerraform(struct?: TfSecret.ReplicaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,14 +496,14 @@ export function awsSecretsmanagerSecretReplicaPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsSecretsmanagerSecret {
+export namespace TfSecret {
 export interface ReplicaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#kms_key_id AwsSecretsmanagerSecret#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#kms_key_id TfSecret#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#region AwsSecretsmanagerSecret#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret#region TfSecret#region}
   */
   readonly region: string;
 }

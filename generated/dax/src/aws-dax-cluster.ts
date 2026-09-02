@@ -5,94 +5,94 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDaxClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#availability_zones AwsDaxCluster#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#availability_zones TfCluster#availability_zones}
   */
   readonly availabilityZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#cluster_endpoint_encryption_type AwsDaxCluster#cluster_endpoint_encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#cluster_endpoint_encryption_type TfCluster#cluster_endpoint_encryption_type}
   */
   readonly clusterEndpointEncryptionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#cluster_name AwsDaxCluster#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#cluster_name TfCluster#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#description AwsDaxCluster#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#description TfCluster#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#iam_role_arn AwsDaxCluster#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#iam_role_arn TfCluster#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#id AwsDaxCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#id TfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#maintenance_window AwsDaxCluster#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#maintenance_window TfCluster#maintenance_window}
   */
   readonly maintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#node_type AwsDaxCluster#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#node_type TfCluster#node_type}
   */
   readonly nodeType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#notification_topic_arn AwsDaxCluster#notification_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#notification_topic_arn TfCluster#notification_topic_arn}
   */
   readonly notificationTopicArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#parameter_group_name AwsDaxCluster#parameter_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#parameter_group_name TfCluster#parameter_group_name}
   */
   readonly parameterGroupName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#region AwsDaxCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#region TfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#replication_factor AwsDaxCluster#replication_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#replication_factor TfCluster#replication_factor}
   */
   readonly replicationFactor: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#security_group_ids AwsDaxCluster#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#security_group_ids TfCluster#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#subnet_group_name AwsDaxCluster#subnet_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#subnet_group_name TfCluster#subnet_group_name}
   */
   readonly subnetGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#tags AwsDaxCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#tags TfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#tags_all AwsDaxCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#tags_all TfCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * server_side_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#server_side_encryption AwsDaxCluster#server_side_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#server_side_encryption TfCluster#server_side_encryption}
   */
-  readonly serverSideEncryption?: AwsDaxCluster.ServerSideEncryptionProperty;
+  readonly serverSideEncryption?: TfCluster.ServerSideEncryptionProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#timeouts AwsDaxCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#timeouts TfCluster#timeouts}
   */
-  readonly timeouts?: AwsDaxCluster.TimeoutsProperty;
+  readonly timeouts?: TfCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster aws_dax_cluster}
 */
-export class AwsDaxCluster extends cdktn.TerraformResource {
+export class TfCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -103,11 +103,11 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDaxCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDaxCluster to import
-  * @param importFromId The id of the existing AwsDaxCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDaxCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCluster to import
+  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dax_cluster", importId: importFromId, provider });
@@ -122,9 +122,9 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDaxClusterConfig
+  * @param options TfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDaxClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dax_cluster',
       terraformGeneratorMetadata: {
@@ -299,7 +299,7 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
   }
 
   // nodes - computed: true, optional: false, required: false
-  private _nodes = new AwsDaxCluster.NodesPropertyList(this, "nodes", false);
+  private _nodes = new TfCluster.NodesPropertyList(this, "nodes", false);
   public get nodes() {
     return this._nodes;
   }
@@ -435,11 +435,11 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
   }
 
   // server_side_encryption - computed: false, optional: true, required: false
-  private _serverSideEncryption = new AwsDaxCluster.ServerSideEncryptionPropertyOutputReference(this, "server_side_encryption");
+  private _serverSideEncryption = new TfCluster.ServerSideEncryptionPropertyOutputReference(this, "server_side_encryption");
   public get serverSideEncryption() {
     return this._serverSideEncryption;
   }
-  public putServerSideEncryption(value: AwsDaxCluster.ServerSideEncryptionProperty) {
+  public putServerSideEncryption(value: TfCluster.ServerSideEncryptionProperty) {
     this._serverSideEncryption.internalValue = value;
   }
   public resetServerSideEncryption() {
@@ -451,11 +451,11 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDaxCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDaxCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -488,8 +488,8 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
       subnet_group_name: cdktn.stringToTerraform(this._subnetGroupName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      server_side_encryption: awsDaxClusterServerSideEncryptionPropertyToTerraform(this._serverSideEncryption.internalValue),
-      timeouts: awsDaxClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      server_side_encryption: tfClusterServerSideEncryptionPropertyToTerraform(this._serverSideEncryption.internalValue),
+      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -592,16 +592,16 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       server_side_encryption: {
-        value: awsDaxClusterServerSideEncryptionPropertyToHclTerraform(this._serverSideEncryption.internalValue),
+        value: tfClusterServerSideEncryptionPropertyToHclTerraform(this._serverSideEncryption.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDaxCluster.ServerSideEncryptionPropertyList",
+        storageClassType: "TfCluster.ServerSideEncryptionPropertyList",
       },
       timeouts: {
-        value: awsDaxClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDaxCluster.TimeoutsProperty",
+        storageClassType: "TfCluster.TimeoutsProperty",
       },
     };
 
@@ -610,7 +610,7 @@ export class AwsDaxCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsDaxClusterNodesPropertyToTerraform(struct?: AwsDaxCluster.NodesProperty): any {
+export function tfClusterNodesPropertyToTerraform(struct?: TfCluster.NodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function awsDaxClusterNodesPropertyToTerraform(struct?: AwsDaxCluster.Nod
 }
 
 
-export function awsDaxClusterNodesPropertyToHclTerraform(struct?: AwsDaxCluster.NodesProperty): any {
+export function tfClusterNodesPropertyToHclTerraform(struct?: TfCluster.NodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function awsDaxClusterNodesPropertyToHclTerraform(struct?: AwsDaxCluster.
 }
 
 
-export function awsDaxClusterServerSideEncryptionPropertyToTerraform(struct?: AwsDaxCluster.ServerSideEncryptionPropertyOutputReference | AwsDaxCluster.ServerSideEncryptionProperty): any {
+export function tfClusterServerSideEncryptionPropertyToTerraform(struct?: TfCluster.ServerSideEncryptionPropertyOutputReference | TfCluster.ServerSideEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -642,7 +642,7 @@ export function awsDaxClusterServerSideEncryptionPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsDaxClusterServerSideEncryptionPropertyToHclTerraform(struct?: AwsDaxCluster.ServerSideEncryptionPropertyOutputReference | AwsDaxCluster.ServerSideEncryptionProperty): any {
+export function tfClusterServerSideEncryptionPropertyToHclTerraform(struct?: TfCluster.ServerSideEncryptionPropertyOutputReference | TfCluster.ServerSideEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function awsDaxClusterServerSideEncryptionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsDaxClusterTimeoutsPropertyToTerraform(struct?: AwsDaxCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function awsDaxClusterTimeoutsPropertyToTerraform(struct?: AwsDaxCluster.
 }
 
 
-export function awsDaxClusterTimeoutsPropertyToHclTerraform(struct?: AwsDaxCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,7 +705,7 @@ export function awsDaxClusterTimeoutsPropertyToHclTerraform(struct?: AwsDaxClust
 }
 
 
-export namespace AwsDaxCluster {
+export namespace TfCluster {
 export interface NodesProperty {
 }
 export class NodesPropertyOutputReference extends cdktn.ComplexObject {
@@ -777,7 +777,7 @@ export class NodesPropertyList extends cdktn.ComplexList {
 }
 export interface ServerSideEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#enabled AwsDaxCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#enabled TfCluster#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -831,15 +831,15 @@ export class ServerSideEncryptionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#create AwsDaxCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#create TfCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#delete AwsDaxCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#delete TfCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#update AwsDaxCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_cluster#update TfCluster#update}
   */
   readonly update?: string;
 }

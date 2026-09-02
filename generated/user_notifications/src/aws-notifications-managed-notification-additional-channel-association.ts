@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNotificationsManagedNotificationAdditionalChannelAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfManagedNotificationAdditionalChannelAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_additional_channel_association#channel_arn AwsNotificationsManagedNotificationAdditionalChannelAssociation#channel_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_additional_channel_association#channel_arn TfManagedNotificationAdditionalChannelAssociation#channel_arn}
   */
   readonly channelArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_additional_channel_association#managed_notification_arn AwsNotificationsManagedNotificationAdditionalChannelAssociation#managed_notification_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_additional_channel_association#managed_notification_arn TfManagedNotificationAdditionalChannelAssociation#managed_notification_arn}
   */
   readonly managedNotificationArn: string;
 }
@@ -19,7 +19,7 @@ export interface AwsNotificationsManagedNotificationAdditionalChannelAssociation
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_additional_channel_association aws_notifications_managed_notification_additional_channel_association}
 */
-export class AwsNotificationsManagedNotificationAdditionalChannelAssociation extends cdktn.TerraformResource {
+export class TfManagedNotificationAdditionalChannelAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class AwsNotificationsManagedNotificationAdditionalChannelAssociation ext
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNotificationsManagedNotificationAdditionalChannelAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfManagedNotificationAdditionalChannelAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNotificationsManagedNotificationAdditionalChannelAssociation to import
-  * @param importFromId The id of the existing AwsNotificationsManagedNotificationAdditionalChannelAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_additional_channel_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNotificationsManagedNotificationAdditionalChannelAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfManagedNotificationAdditionalChannelAssociation to import
+  * @param importFromId The id of the existing TfManagedNotificationAdditionalChannelAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_additional_channel_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfManagedNotificationAdditionalChannelAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_notifications_managed_notification_additional_channel_association", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class AwsNotificationsManagedNotificationAdditionalChannelAssociation ext
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNotificationsManagedNotificationAdditionalChannelAssociationConfig
+  * @param options TfManagedNotificationAdditionalChannelAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNotificationsManagedNotificationAdditionalChannelAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfManagedNotificationAdditionalChannelAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_notifications_managed_notification_additional_channel_association',
       terraformGeneratorMetadata: {

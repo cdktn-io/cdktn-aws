@@ -5,116 +5,116 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEmrserverlessApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#architecture AwsEmrserverlessApplication#architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#architecture TfApplication#architecture}
   */
   readonly architecture?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#id AwsEmrserverlessApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#id TfApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#name AwsEmrserverlessApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#name TfApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#region AwsEmrserverlessApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#region TfApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#release_label AwsEmrserverlessApplication#release_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#release_label TfApplication#release_label}
   */
   readonly releaseLabel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#tags AwsEmrserverlessApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#tags TfApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#tags_all AwsEmrserverlessApplication#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#tags_all TfApplication#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#type AwsEmrserverlessApplication#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#type TfApplication#type}
   */
   readonly type: string;
   /**
   * auto_start_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#auto_start_configuration AwsEmrserverlessApplication#auto_start_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#auto_start_configuration TfApplication#auto_start_configuration}
   */
-  readonly autoStartConfiguration?: AwsEmrserverlessApplication.AutoStartConfigurationProperty;
+  readonly autoStartConfiguration?: TfApplication.AutoStartConfigurationProperty;
   /**
   * auto_stop_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#auto_stop_configuration AwsEmrserverlessApplication#auto_stop_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#auto_stop_configuration TfApplication#auto_stop_configuration}
   */
-  readonly autoStopConfiguration?: AwsEmrserverlessApplication.AutoStopConfigurationProperty;
+  readonly autoStopConfiguration?: TfApplication.AutoStopConfigurationProperty;
   /**
   * image_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#image_configuration AwsEmrserverlessApplication#image_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#image_configuration TfApplication#image_configuration}
   */
-  readonly imageConfiguration?: AwsEmrserverlessApplication.ImageConfigurationProperty;
+  readonly imageConfiguration?: TfApplication.ImageConfigurationProperty;
   /**
   * initial_capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#initial_capacity AwsEmrserverlessApplication#initial_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#initial_capacity TfApplication#initial_capacity}
   */
-  readonly initialCapacity?: AwsEmrserverlessApplication.InitialCapacityProperty[] | cdktn.IResolvable;
+  readonly initialCapacity?: TfApplication.InitialCapacityProperty[] | cdktn.IResolvable;
   /**
   * interactive_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#interactive_configuration AwsEmrserverlessApplication#interactive_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#interactive_configuration TfApplication#interactive_configuration}
   */
-  readonly interactiveConfiguration?: AwsEmrserverlessApplication.InteractiveConfigurationProperty;
+  readonly interactiveConfiguration?: TfApplication.InteractiveConfigurationProperty;
   /**
   * job_level_cost_allocation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#job_level_cost_allocation_configuration AwsEmrserverlessApplication#job_level_cost_allocation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#job_level_cost_allocation_configuration TfApplication#job_level_cost_allocation_configuration}
   */
-  readonly jobLevelCostAllocationConfiguration?: AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationProperty;
+  readonly jobLevelCostAllocationConfiguration?: TfApplication.JobLevelCostAllocationConfigurationProperty;
   /**
   * maximum_capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#maximum_capacity AwsEmrserverlessApplication#maximum_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#maximum_capacity TfApplication#maximum_capacity}
   */
-  readonly maximumCapacity?: AwsEmrserverlessApplication.MaximumCapacityProperty;
+  readonly maximumCapacity?: TfApplication.MaximumCapacityProperty;
   /**
   * monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#monitoring_configuration AwsEmrserverlessApplication#monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#monitoring_configuration TfApplication#monitoring_configuration}
   */
-  readonly monitoringConfiguration?: AwsEmrserverlessApplication.MonitoringConfigurationProperty;
+  readonly monitoringConfiguration?: TfApplication.MonitoringConfigurationProperty;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#network_configuration AwsEmrserverlessApplication#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#network_configuration TfApplication#network_configuration}
   */
-  readonly networkConfiguration?: AwsEmrserverlessApplication.NetworkConfigurationProperty;
+  readonly networkConfiguration?: TfApplication.NetworkConfigurationProperty;
   /**
   * runtime_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#runtime_configuration AwsEmrserverlessApplication#runtime_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#runtime_configuration TfApplication#runtime_configuration}
   */
-  readonly runtimeConfiguration?: AwsEmrserverlessApplication.RuntimeConfigurationProperty[] | cdktn.IResolvable;
+  readonly runtimeConfiguration?: TfApplication.RuntimeConfigurationProperty[] | cdktn.IResolvable;
   /**
   * scheduler_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#scheduler_configuration AwsEmrserverlessApplication#scheduler_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#scheduler_configuration TfApplication#scheduler_configuration}
   */
-  readonly schedulerConfiguration?: AwsEmrserverlessApplication.SchedulerConfigurationProperty;
+  readonly schedulerConfiguration?: TfApplication.SchedulerConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application aws_emrserverless_application}
 */
-export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
+export class TfApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -125,11 +125,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEmrserverlessApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEmrserverlessApplication to import
-  * @param importFromId The id of the existing AwsEmrserverlessApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEmrserverlessApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfApplication to import
+  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emrserverless_application", importId: importFromId, provider });
@@ -144,9 +144,9 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEmrserverlessApplicationConfig
+  * @param options TfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEmrserverlessApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emrserverless_application',
       terraformGeneratorMetadata: {
@@ -312,11 +312,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // auto_start_configuration - computed: false, optional: true, required: false
-  private _autoStartConfiguration = new AwsEmrserverlessApplication.AutoStartConfigurationPropertyOutputReference(this, "auto_start_configuration");
+  private _autoStartConfiguration = new TfApplication.AutoStartConfigurationPropertyOutputReference(this, "auto_start_configuration");
   public get autoStartConfiguration() {
     return this._autoStartConfiguration;
   }
-  public putAutoStartConfiguration(value: AwsEmrserverlessApplication.AutoStartConfigurationProperty) {
+  public putAutoStartConfiguration(value: TfApplication.AutoStartConfigurationProperty) {
     this._autoStartConfiguration.internalValue = value;
   }
   public resetAutoStartConfiguration() {
@@ -328,11 +328,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // auto_stop_configuration - computed: false, optional: true, required: false
-  private _autoStopConfiguration = new AwsEmrserverlessApplication.AutoStopConfigurationPropertyOutputReference(this, "auto_stop_configuration");
+  private _autoStopConfiguration = new TfApplication.AutoStopConfigurationPropertyOutputReference(this, "auto_stop_configuration");
   public get autoStopConfiguration() {
     return this._autoStopConfiguration;
   }
-  public putAutoStopConfiguration(value: AwsEmrserverlessApplication.AutoStopConfigurationProperty) {
+  public putAutoStopConfiguration(value: TfApplication.AutoStopConfigurationProperty) {
     this._autoStopConfiguration.internalValue = value;
   }
   public resetAutoStopConfiguration() {
@@ -344,11 +344,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // image_configuration - computed: false, optional: true, required: false
-  private _imageConfiguration = new AwsEmrserverlessApplication.ImageConfigurationPropertyOutputReference(this, "image_configuration");
+  private _imageConfiguration = new TfApplication.ImageConfigurationPropertyOutputReference(this, "image_configuration");
   public get imageConfiguration() {
     return this._imageConfiguration;
   }
-  public putImageConfiguration(value: AwsEmrserverlessApplication.ImageConfigurationProperty) {
+  public putImageConfiguration(value: TfApplication.ImageConfigurationProperty) {
     this._imageConfiguration.internalValue = value;
   }
   public resetImageConfiguration() {
@@ -360,11 +360,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // initial_capacity - computed: false, optional: true, required: false
-  private _initialCapacity = new AwsEmrserverlessApplication.InitialCapacityPropertyList(this, "initial_capacity", true);
+  private _initialCapacity = new TfApplication.InitialCapacityPropertyList(this, "initial_capacity", true);
   public get initialCapacity() {
     return this._initialCapacity;
   }
-  public putInitialCapacity(value: AwsEmrserverlessApplication.InitialCapacityProperty[] | cdktn.IResolvable) {
+  public putInitialCapacity(value: TfApplication.InitialCapacityProperty[] | cdktn.IResolvable) {
     this._initialCapacity.internalValue = value;
   }
   public resetInitialCapacity() {
@@ -376,11 +376,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // interactive_configuration - computed: false, optional: true, required: false
-  private _interactiveConfiguration = new AwsEmrserverlessApplication.InteractiveConfigurationPropertyOutputReference(this, "interactive_configuration");
+  private _interactiveConfiguration = new TfApplication.InteractiveConfigurationPropertyOutputReference(this, "interactive_configuration");
   public get interactiveConfiguration() {
     return this._interactiveConfiguration;
   }
-  public putInteractiveConfiguration(value: AwsEmrserverlessApplication.InteractiveConfigurationProperty) {
+  public putInteractiveConfiguration(value: TfApplication.InteractiveConfigurationProperty) {
     this._interactiveConfiguration.internalValue = value;
   }
   public resetInteractiveConfiguration() {
@@ -392,11 +392,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // job_level_cost_allocation_configuration - computed: false, optional: true, required: false
-  private _jobLevelCostAllocationConfiguration = new AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationPropertyOutputReference(this, "job_level_cost_allocation_configuration");
+  private _jobLevelCostAllocationConfiguration = new TfApplication.JobLevelCostAllocationConfigurationPropertyOutputReference(this, "job_level_cost_allocation_configuration");
   public get jobLevelCostAllocationConfiguration() {
     return this._jobLevelCostAllocationConfiguration;
   }
-  public putJobLevelCostAllocationConfiguration(value: AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationProperty) {
+  public putJobLevelCostAllocationConfiguration(value: TfApplication.JobLevelCostAllocationConfigurationProperty) {
     this._jobLevelCostAllocationConfiguration.internalValue = value;
   }
   public resetJobLevelCostAllocationConfiguration() {
@@ -408,11 +408,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // maximum_capacity - computed: false, optional: true, required: false
-  private _maximumCapacity = new AwsEmrserverlessApplication.MaximumCapacityPropertyOutputReference(this, "maximum_capacity");
+  private _maximumCapacity = new TfApplication.MaximumCapacityPropertyOutputReference(this, "maximum_capacity");
   public get maximumCapacity() {
     return this._maximumCapacity;
   }
-  public putMaximumCapacity(value: AwsEmrserverlessApplication.MaximumCapacityProperty) {
+  public putMaximumCapacity(value: TfApplication.MaximumCapacityProperty) {
     this._maximumCapacity.internalValue = value;
   }
   public resetMaximumCapacity() {
@@ -424,11 +424,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // monitoring_configuration - computed: false, optional: true, required: false
-  private _monitoringConfiguration = new AwsEmrserverlessApplication.MonitoringConfigurationPropertyOutputReference(this, "monitoring_configuration");
+  private _monitoringConfiguration = new TfApplication.MonitoringConfigurationPropertyOutputReference(this, "monitoring_configuration");
   public get monitoringConfiguration() {
     return this._monitoringConfiguration;
   }
-  public putMonitoringConfiguration(value: AwsEmrserverlessApplication.MonitoringConfigurationProperty) {
+  public putMonitoringConfiguration(value: TfApplication.MonitoringConfigurationProperty) {
     this._monitoringConfiguration.internalValue = value;
   }
   public resetMonitoringConfiguration() {
@@ -440,11 +440,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new AwsEmrserverlessApplication.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
+  private _networkConfiguration = new TfApplication.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: AwsEmrserverlessApplication.NetworkConfigurationProperty) {
+  public putNetworkConfiguration(value: TfApplication.NetworkConfigurationProperty) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -456,11 +456,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // runtime_configuration - computed: false, optional: true, required: false
-  private _runtimeConfiguration = new AwsEmrserverlessApplication.RuntimeConfigurationPropertyList(this, "runtime_configuration", false);
+  private _runtimeConfiguration = new TfApplication.RuntimeConfigurationPropertyList(this, "runtime_configuration", false);
   public get runtimeConfiguration() {
     return this._runtimeConfiguration;
   }
-  public putRuntimeConfiguration(value: AwsEmrserverlessApplication.RuntimeConfigurationProperty[] | cdktn.IResolvable) {
+  public putRuntimeConfiguration(value: TfApplication.RuntimeConfigurationProperty[] | cdktn.IResolvable) {
     this._runtimeConfiguration.internalValue = value;
   }
   public resetRuntimeConfiguration() {
@@ -472,11 +472,11 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 
   // scheduler_configuration - computed: false, optional: true, required: false
-  private _schedulerConfiguration = new AwsEmrserverlessApplication.SchedulerConfigurationPropertyOutputReference(this, "scheduler_configuration");
+  private _schedulerConfiguration = new TfApplication.SchedulerConfigurationPropertyOutputReference(this, "scheduler_configuration");
   public get schedulerConfiguration() {
     return this._schedulerConfiguration;
   }
-  public putSchedulerConfiguration(value: AwsEmrserverlessApplication.SchedulerConfigurationProperty) {
+  public putSchedulerConfiguration(value: TfApplication.SchedulerConfigurationProperty) {
     this._schedulerConfiguration.internalValue = value;
   }
   public resetSchedulerConfiguration() {
@@ -501,17 +501,17 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      auto_start_configuration: awsEmrserverlessApplicationAutoStartConfigurationPropertyToTerraform(this._autoStartConfiguration.internalValue),
-      auto_stop_configuration: awsEmrserverlessApplicationAutoStopConfigurationPropertyToTerraform(this._autoStopConfiguration.internalValue),
-      image_configuration: awsEmrserverlessApplicationImageConfigurationPropertyToTerraform(this._imageConfiguration.internalValue),
-      initial_capacity: cdktn.listMapper(awsEmrserverlessApplicationInitialCapacityPropertyToTerraform, true)(this._initialCapacity.internalValue),
-      interactive_configuration: awsEmrserverlessApplicationInteractiveConfigurationPropertyToTerraform(this._interactiveConfiguration.internalValue),
-      job_level_cost_allocation_configuration: awsEmrserverlessApplicationJobLevelCostAllocationConfigurationPropertyToTerraform(this._jobLevelCostAllocationConfiguration.internalValue),
-      maximum_capacity: awsEmrserverlessApplicationMaximumCapacityPropertyToTerraform(this._maximumCapacity.internalValue),
-      monitoring_configuration: awsEmrserverlessApplicationMonitoringConfigurationPropertyToTerraform(this._monitoringConfiguration.internalValue),
-      network_configuration: awsEmrserverlessApplicationNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
-      runtime_configuration: cdktn.listMapper(awsEmrserverlessApplicationRuntimeConfigurationPropertyToTerraform, true)(this._runtimeConfiguration.internalValue),
-      scheduler_configuration: awsEmrserverlessApplicationSchedulerConfigurationPropertyToTerraform(this._schedulerConfiguration.internalValue),
+      auto_start_configuration: tfApplicationAutoStartConfigurationPropertyToTerraform(this._autoStartConfiguration.internalValue),
+      auto_stop_configuration: tfApplicationAutoStopConfigurationPropertyToTerraform(this._autoStopConfiguration.internalValue),
+      image_configuration: tfApplicationImageConfigurationPropertyToTerraform(this._imageConfiguration.internalValue),
+      initial_capacity: cdktn.listMapper(tfApplicationInitialCapacityPropertyToTerraform, true)(this._initialCapacity.internalValue),
+      interactive_configuration: tfApplicationInteractiveConfigurationPropertyToTerraform(this._interactiveConfiguration.internalValue),
+      job_level_cost_allocation_configuration: tfApplicationJobLevelCostAllocationConfigurationPropertyToTerraform(this._jobLevelCostAllocationConfiguration.internalValue),
+      maximum_capacity: tfApplicationMaximumCapacityPropertyToTerraform(this._maximumCapacity.internalValue),
+      monitoring_configuration: tfApplicationMonitoringConfigurationPropertyToTerraform(this._monitoringConfiguration.internalValue),
+      network_configuration: tfApplicationNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
+      runtime_configuration: cdktn.listMapper(tfApplicationRuntimeConfigurationPropertyToTerraform, true)(this._runtimeConfiguration.internalValue),
+      scheduler_configuration: tfApplicationSchedulerConfigurationPropertyToTerraform(this._schedulerConfiguration.internalValue),
     };
   }
 
@@ -566,70 +566,70 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       auto_start_configuration: {
-        value: awsEmrserverlessApplicationAutoStartConfigurationPropertyToHclTerraform(this._autoStartConfiguration.internalValue),
+        value: tfApplicationAutoStartConfigurationPropertyToHclTerraform(this._autoStartConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.AutoStartConfigurationPropertyList",
+        storageClassType: "TfApplication.AutoStartConfigurationPropertyList",
       },
       auto_stop_configuration: {
-        value: awsEmrserverlessApplicationAutoStopConfigurationPropertyToHclTerraform(this._autoStopConfiguration.internalValue),
+        value: tfApplicationAutoStopConfigurationPropertyToHclTerraform(this._autoStopConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.AutoStopConfigurationPropertyList",
+        storageClassType: "TfApplication.AutoStopConfigurationPropertyList",
       },
       image_configuration: {
-        value: awsEmrserverlessApplicationImageConfigurationPropertyToHclTerraform(this._imageConfiguration.internalValue),
+        value: tfApplicationImageConfigurationPropertyToHclTerraform(this._imageConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.ImageConfigurationPropertyList",
+        storageClassType: "TfApplication.ImageConfigurationPropertyList",
       },
       initial_capacity: {
-        value: cdktn.listMapperHcl(awsEmrserverlessApplicationInitialCapacityPropertyToHclTerraform, true)(this._initialCapacity.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationInitialCapacityPropertyToHclTerraform, true)(this._initialCapacity.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsEmrserverlessApplication.InitialCapacityPropertyList",
+        storageClassType: "TfApplication.InitialCapacityPropertyList",
       },
       interactive_configuration: {
-        value: awsEmrserverlessApplicationInteractiveConfigurationPropertyToHclTerraform(this._interactiveConfiguration.internalValue),
+        value: tfApplicationInteractiveConfigurationPropertyToHclTerraform(this._interactiveConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.InteractiveConfigurationPropertyList",
+        storageClassType: "TfApplication.InteractiveConfigurationPropertyList",
       },
       job_level_cost_allocation_configuration: {
-        value: awsEmrserverlessApplicationJobLevelCostAllocationConfigurationPropertyToHclTerraform(this._jobLevelCostAllocationConfiguration.internalValue),
+        value: tfApplicationJobLevelCostAllocationConfigurationPropertyToHclTerraform(this._jobLevelCostAllocationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationPropertyList",
+        storageClassType: "TfApplication.JobLevelCostAllocationConfigurationPropertyList",
       },
       maximum_capacity: {
-        value: awsEmrserverlessApplicationMaximumCapacityPropertyToHclTerraform(this._maximumCapacity.internalValue),
+        value: tfApplicationMaximumCapacityPropertyToHclTerraform(this._maximumCapacity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.MaximumCapacityPropertyList",
+        storageClassType: "TfApplication.MaximumCapacityPropertyList",
       },
       monitoring_configuration: {
-        value: awsEmrserverlessApplicationMonitoringConfigurationPropertyToHclTerraform(this._monitoringConfiguration.internalValue),
+        value: tfApplicationMonitoringConfigurationPropertyToHclTerraform(this._monitoringConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.MonitoringConfigurationPropertyList",
+        storageClassType: "TfApplication.MonitoringConfigurationPropertyList",
       },
       network_configuration: {
-        value: awsEmrserverlessApplicationNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
+        value: tfApplicationNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.NetworkConfigurationPropertyList",
+        storageClassType: "TfApplication.NetworkConfigurationPropertyList",
       },
       runtime_configuration: {
-        value: cdktn.listMapperHcl(awsEmrserverlessApplicationRuntimeConfigurationPropertyToHclTerraform, true)(this._runtimeConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationRuntimeConfigurationPropertyToHclTerraform, true)(this._runtimeConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.RuntimeConfigurationPropertyList",
+        storageClassType: "TfApplication.RuntimeConfigurationPropertyList",
       },
       scheduler_configuration: {
-        value: awsEmrserverlessApplicationSchedulerConfigurationPropertyToHclTerraform(this._schedulerConfiguration.internalValue),
+        value: tfApplicationSchedulerConfigurationPropertyToHclTerraform(this._schedulerConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrserverlessApplication.SchedulerConfigurationPropertyList",
+        storageClassType: "TfApplication.SchedulerConfigurationPropertyList",
       },
     };
 
@@ -638,7 +638,7 @@ export class AwsEmrserverlessApplication extends cdktn.TerraformResource {
   }
 }
 
-export function awsEmrserverlessApplicationAutoStartConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.AutoStartConfigurationPropertyOutputReference | AwsEmrserverlessApplication.AutoStartConfigurationProperty): any {
+export function tfApplicationAutoStartConfigurationPropertyToTerraform(struct?: TfApplication.AutoStartConfigurationPropertyOutputReference | TfApplication.AutoStartConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,7 +649,7 @@ export function awsEmrserverlessApplicationAutoStartConfigurationPropertyToTerra
 }
 
 
-export function awsEmrserverlessApplicationAutoStartConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.AutoStartConfigurationPropertyOutputReference | AwsEmrserverlessApplication.AutoStartConfigurationProperty): any {
+export function tfApplicationAutoStartConfigurationPropertyToHclTerraform(struct?: TfApplication.AutoStartConfigurationPropertyOutputReference | TfApplication.AutoStartConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function awsEmrserverlessApplicationAutoStartConfigurationPropertyToHclTe
 }
 
 
-export function awsEmrserverlessApplicationAutoStopConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.AutoStopConfigurationPropertyOutputReference | AwsEmrserverlessApplication.AutoStopConfigurationProperty): any {
+export function tfApplicationAutoStopConfigurationPropertyToTerraform(struct?: TfApplication.AutoStopConfigurationPropertyOutputReference | TfApplication.AutoStopConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function awsEmrserverlessApplicationAutoStopConfigurationPropertyToTerraf
 }
 
 
-export function awsEmrserverlessApplicationAutoStopConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.AutoStopConfigurationPropertyOutputReference | AwsEmrserverlessApplication.AutoStopConfigurationProperty): any {
+export function tfApplicationAutoStopConfigurationPropertyToHclTerraform(struct?: TfApplication.AutoStopConfigurationPropertyOutputReference | TfApplication.AutoStopConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,7 +705,7 @@ export function awsEmrserverlessApplicationAutoStopConfigurationPropertyToHclTer
 }
 
 
-export function awsEmrserverlessApplicationImageConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.ImageConfigurationPropertyOutputReference | AwsEmrserverlessApplication.ImageConfigurationProperty): any {
+export function tfApplicationImageConfigurationPropertyToTerraform(struct?: TfApplication.ImageConfigurationPropertyOutputReference | TfApplication.ImageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -716,7 +716,7 @@ export function awsEmrserverlessApplicationImageConfigurationPropertyToTerraform
 }
 
 
-export function awsEmrserverlessApplicationImageConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.ImageConfigurationPropertyOutputReference | AwsEmrserverlessApplication.ImageConfigurationProperty): any {
+export function tfApplicationImageConfigurationPropertyToHclTerraform(struct?: TfApplication.ImageConfigurationPropertyOutputReference | TfApplication.ImageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -735,7 +735,7 @@ export function awsEmrserverlessApplicationImageConfigurationPropertyToHclTerraf
 }
 
 
-export function awsEmrserverlessApplicationWorkerConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.WorkerConfigurationPropertyOutputReference | AwsEmrserverlessApplication.WorkerConfigurationProperty): any {
+export function tfApplicationWorkerConfigurationPropertyToTerraform(struct?: TfApplication.WorkerConfigurationPropertyOutputReference | TfApplication.WorkerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -748,7 +748,7 @@ export function awsEmrserverlessApplicationWorkerConfigurationPropertyToTerrafor
 }
 
 
-export function awsEmrserverlessApplicationWorkerConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.WorkerConfigurationPropertyOutputReference | AwsEmrserverlessApplication.WorkerConfigurationProperty): any {
+export function tfApplicationWorkerConfigurationPropertyToHclTerraform(struct?: TfApplication.WorkerConfigurationPropertyOutputReference | TfApplication.WorkerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -779,19 +779,19 @@ export function awsEmrserverlessApplicationWorkerConfigurationPropertyToHclTerra
 }
 
 
-export function awsEmrserverlessApplicationInitialCapacityConfigPropertyToTerraform(struct?: AwsEmrserverlessApplication.InitialCapacityConfigPropertyOutputReference | AwsEmrserverlessApplication.InitialCapacityConfigProperty): any {
+export function tfApplicationInitialCapacityConfigPropertyToTerraform(struct?: TfApplication.InitialCapacityConfigPropertyOutputReference | TfApplication.InitialCapacityConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     worker_count: cdktn.numberToTerraform(struct!.workerCount),
-    worker_configuration: awsEmrserverlessApplicationWorkerConfigurationPropertyToTerraform(struct!.workerConfiguration),
+    worker_configuration: tfApplicationWorkerConfigurationPropertyToTerraform(struct!.workerConfiguration),
   }
 }
 
 
-export function awsEmrserverlessApplicationInitialCapacityConfigPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.InitialCapacityConfigPropertyOutputReference | AwsEmrserverlessApplication.InitialCapacityConfigProperty): any {
+export function tfApplicationInitialCapacityConfigPropertyToHclTerraform(struct?: TfApplication.InitialCapacityConfigPropertyOutputReference | TfApplication.InitialCapacityConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -804,7 +804,7 @@ export function awsEmrserverlessApplicationInitialCapacityConfigPropertyToHclTer
       storageClassType: "number",
     },
     worker_configuration: {
-      value: awsEmrserverlessApplicationWorkerConfigurationPropertyToHclTerraform(struct!.workerConfiguration),
+      value: tfApplicationWorkerConfigurationPropertyToHclTerraform(struct!.workerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "WorkerConfigurationPropertyList",
@@ -816,19 +816,19 @@ export function awsEmrserverlessApplicationInitialCapacityConfigPropertyToHclTer
 }
 
 
-export function awsEmrserverlessApplicationInitialCapacityPropertyToTerraform(struct?: AwsEmrserverlessApplication.InitialCapacityProperty | cdktn.IResolvable): any {
+export function tfApplicationInitialCapacityPropertyToTerraform(struct?: TfApplication.InitialCapacityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     initial_capacity_type: cdktn.stringToTerraform(struct!.initialCapacityType),
-    initial_capacity_config: awsEmrserverlessApplicationInitialCapacityConfigPropertyToTerraform(struct!.initialCapacityConfig),
+    initial_capacity_config: tfApplicationInitialCapacityConfigPropertyToTerraform(struct!.initialCapacityConfig),
   }
 }
 
 
-export function awsEmrserverlessApplicationInitialCapacityPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.InitialCapacityProperty | cdktn.IResolvable): any {
+export function tfApplicationInitialCapacityPropertyToHclTerraform(struct?: TfApplication.InitialCapacityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -841,7 +841,7 @@ export function awsEmrserverlessApplicationInitialCapacityPropertyToHclTerraform
       storageClassType: "string",
     },
     initial_capacity_config: {
-      value: awsEmrserverlessApplicationInitialCapacityConfigPropertyToHclTerraform(struct!.initialCapacityConfig),
+      value: tfApplicationInitialCapacityConfigPropertyToHclTerraform(struct!.initialCapacityConfig),
       isBlock: true,
       type: "list",
       storageClassType: "InitialCapacityConfigPropertyList",
@@ -853,7 +853,7 @@ export function awsEmrserverlessApplicationInitialCapacityPropertyToHclTerraform
 }
 
 
-export function awsEmrserverlessApplicationInteractiveConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.InteractiveConfigurationPropertyOutputReference | AwsEmrserverlessApplication.InteractiveConfigurationProperty): any {
+export function tfApplicationInteractiveConfigurationPropertyToTerraform(struct?: TfApplication.InteractiveConfigurationPropertyOutputReference | TfApplication.InteractiveConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -865,7 +865,7 @@ export function awsEmrserverlessApplicationInteractiveConfigurationPropertyToTer
 }
 
 
-export function awsEmrserverlessApplicationInteractiveConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.InteractiveConfigurationPropertyOutputReference | AwsEmrserverlessApplication.InteractiveConfigurationProperty): any {
+export function tfApplicationInteractiveConfigurationPropertyToHclTerraform(struct?: TfApplication.InteractiveConfigurationPropertyOutputReference | TfApplication.InteractiveConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -890,7 +890,7 @@ export function awsEmrserverlessApplicationInteractiveConfigurationPropertyToHcl
 }
 
 
-export function awsEmrserverlessApplicationJobLevelCostAllocationConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationPropertyOutputReference | AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationProperty): any {
+export function tfApplicationJobLevelCostAllocationConfigurationPropertyToTerraform(struct?: TfApplication.JobLevelCostAllocationConfigurationPropertyOutputReference | TfApplication.JobLevelCostAllocationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -901,7 +901,7 @@ export function awsEmrserverlessApplicationJobLevelCostAllocationConfigurationPr
 }
 
 
-export function awsEmrserverlessApplicationJobLevelCostAllocationConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationPropertyOutputReference | AwsEmrserverlessApplication.JobLevelCostAllocationConfigurationProperty): any {
+export function tfApplicationJobLevelCostAllocationConfigurationPropertyToHclTerraform(struct?: TfApplication.JobLevelCostAllocationConfigurationPropertyOutputReference | TfApplication.JobLevelCostAllocationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function awsEmrserverlessApplicationJobLevelCostAllocationConfigurationPr
 }
 
 
-export function awsEmrserverlessApplicationMaximumCapacityPropertyToTerraform(struct?: AwsEmrserverlessApplication.MaximumCapacityPropertyOutputReference | AwsEmrserverlessApplication.MaximumCapacityProperty): any {
+export function tfApplicationMaximumCapacityPropertyToTerraform(struct?: TfApplication.MaximumCapacityPropertyOutputReference | TfApplication.MaximumCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -933,7 +933,7 @@ export function awsEmrserverlessApplicationMaximumCapacityPropertyToTerraform(st
 }
 
 
-export function awsEmrserverlessApplicationMaximumCapacityPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.MaximumCapacityPropertyOutputReference | AwsEmrserverlessApplication.MaximumCapacityProperty): any {
+export function tfApplicationMaximumCapacityPropertyToHclTerraform(struct?: TfApplication.MaximumCapacityPropertyOutputReference | TfApplication.MaximumCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -964,7 +964,7 @@ export function awsEmrserverlessApplicationMaximumCapacityPropertyToHclTerraform
 }
 
 
-export function awsEmrserverlessApplicationLogTypesPropertyToTerraform(struct?: AwsEmrserverlessApplication.LogTypesProperty | cdktn.IResolvable): any {
+export function tfApplicationLogTypesPropertyToTerraform(struct?: TfApplication.LogTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,7 +976,7 @@ export function awsEmrserverlessApplicationLogTypesPropertyToTerraform(struct?: 
 }
 
 
-export function awsEmrserverlessApplicationLogTypesPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.LogTypesProperty | cdktn.IResolvable): any {
+export function tfApplicationLogTypesPropertyToHclTerraform(struct?: TfApplication.LogTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1001,7 +1001,7 @@ export function awsEmrserverlessApplicationLogTypesPropertyToHclTerraform(struct
 }
 
 
-export function awsEmrserverlessApplicationCloudwatchLoggingConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.CloudwatchLoggingConfigurationPropertyOutputReference | AwsEmrserverlessApplication.CloudwatchLoggingConfigurationProperty): any {
+export function tfApplicationCloudwatchLoggingConfigurationPropertyToTerraform(struct?: TfApplication.CloudwatchLoggingConfigurationPropertyOutputReference | TfApplication.CloudwatchLoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1011,12 +1011,12 @@ export function awsEmrserverlessApplicationCloudwatchLoggingConfigurationPropert
     encryption_key_arn: cdktn.stringToTerraform(struct!.encryptionKeyArn),
     log_group_name: cdktn.stringToTerraform(struct!.logGroupName),
     log_stream_name_prefix: cdktn.stringToTerraform(struct!.logStreamNamePrefix),
-    log_types: cdktn.listMapper(awsEmrserverlessApplicationLogTypesPropertyToTerraform, true)(struct!.logTypes),
+    log_types: cdktn.listMapper(tfApplicationLogTypesPropertyToTerraform, true)(struct!.logTypes),
   }
 }
 
 
-export function awsEmrserverlessApplicationCloudwatchLoggingConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.CloudwatchLoggingConfigurationPropertyOutputReference | AwsEmrserverlessApplication.CloudwatchLoggingConfigurationProperty): any {
+export function tfApplicationCloudwatchLoggingConfigurationPropertyToHclTerraform(struct?: TfApplication.CloudwatchLoggingConfigurationPropertyOutputReference | TfApplication.CloudwatchLoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1047,7 +1047,7 @@ export function awsEmrserverlessApplicationCloudwatchLoggingConfigurationPropert
       storageClassType: "string",
     },
     log_types: {
-      value: cdktn.listMapperHcl(awsEmrserverlessApplicationLogTypesPropertyToHclTerraform, true)(struct!.logTypes),
+      value: cdktn.listMapperHcl(tfApplicationLogTypesPropertyToHclTerraform, true)(struct!.logTypes),
       isBlock: true,
       type: "set",
       storageClassType: "LogTypesPropertyList",
@@ -1059,7 +1059,7 @@ export function awsEmrserverlessApplicationCloudwatchLoggingConfigurationPropert
 }
 
 
-export function awsEmrserverlessApplicationManagedPersistenceMonitoringConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.ManagedPersistenceMonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.ManagedPersistenceMonitoringConfigurationProperty): any {
+export function tfApplicationManagedPersistenceMonitoringConfigurationPropertyToTerraform(struct?: TfApplication.ManagedPersistenceMonitoringConfigurationPropertyOutputReference | TfApplication.ManagedPersistenceMonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1071,7 +1071,7 @@ export function awsEmrserverlessApplicationManagedPersistenceMonitoringConfigura
 }
 
 
-export function awsEmrserverlessApplicationManagedPersistenceMonitoringConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.ManagedPersistenceMonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.ManagedPersistenceMonitoringConfigurationProperty): any {
+export function tfApplicationManagedPersistenceMonitoringConfigurationPropertyToHclTerraform(struct?: TfApplication.ManagedPersistenceMonitoringConfigurationPropertyOutputReference | TfApplication.ManagedPersistenceMonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1096,7 +1096,7 @@ export function awsEmrserverlessApplicationManagedPersistenceMonitoringConfigura
 }
 
 
-export function awsEmrserverlessApplicationPrometheusMonitoringConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.PrometheusMonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.PrometheusMonitoringConfigurationProperty): any {
+export function tfApplicationPrometheusMonitoringConfigurationPropertyToTerraform(struct?: TfApplication.PrometheusMonitoringConfigurationPropertyOutputReference | TfApplication.PrometheusMonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1107,7 +1107,7 @@ export function awsEmrserverlessApplicationPrometheusMonitoringConfigurationProp
 }
 
 
-export function awsEmrserverlessApplicationPrometheusMonitoringConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.PrometheusMonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.PrometheusMonitoringConfigurationProperty): any {
+export function tfApplicationPrometheusMonitoringConfigurationPropertyToHclTerraform(struct?: TfApplication.PrometheusMonitoringConfigurationPropertyOutputReference | TfApplication.PrometheusMonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1126,7 +1126,7 @@ export function awsEmrserverlessApplicationPrometheusMonitoringConfigurationProp
 }
 
 
-export function awsEmrserverlessApplicationS3MonitoringConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.S3MonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.S3MonitoringConfigurationProperty): any {
+export function tfApplicationS3MonitoringConfigurationPropertyToTerraform(struct?: TfApplication.S3MonitoringConfigurationPropertyOutputReference | TfApplication.S3MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,7 +1138,7 @@ export function awsEmrserverlessApplicationS3MonitoringConfigurationPropertyToTe
 }
 
 
-export function awsEmrserverlessApplicationS3MonitoringConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.S3MonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.S3MonitoringConfigurationProperty): any {
+export function tfApplicationS3MonitoringConfigurationPropertyToHclTerraform(struct?: TfApplication.S3MonitoringConfigurationPropertyOutputReference | TfApplication.S3MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1163,46 +1163,46 @@ export function awsEmrserverlessApplicationS3MonitoringConfigurationPropertyToHc
 }
 
 
-export function awsEmrserverlessApplicationMonitoringConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.MonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.MonitoringConfigurationProperty): any {
+export function tfApplicationMonitoringConfigurationPropertyToTerraform(struct?: TfApplication.MonitoringConfigurationPropertyOutputReference | TfApplication.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logging_configuration: awsEmrserverlessApplicationCloudwatchLoggingConfigurationPropertyToTerraform(struct!.cloudwatchLoggingConfiguration),
-    managed_persistence_monitoring_configuration: awsEmrserverlessApplicationManagedPersistenceMonitoringConfigurationPropertyToTerraform(struct!.managedPersistenceMonitoringConfiguration),
-    prometheus_monitoring_configuration: awsEmrserverlessApplicationPrometheusMonitoringConfigurationPropertyToTerraform(struct!.prometheusMonitoringConfiguration),
-    s3_monitoring_configuration: awsEmrserverlessApplicationS3MonitoringConfigurationPropertyToTerraform(struct!.s3MonitoringConfiguration),
+    cloudwatch_logging_configuration: tfApplicationCloudwatchLoggingConfigurationPropertyToTerraform(struct!.cloudwatchLoggingConfiguration),
+    managed_persistence_monitoring_configuration: tfApplicationManagedPersistenceMonitoringConfigurationPropertyToTerraform(struct!.managedPersistenceMonitoringConfiguration),
+    prometheus_monitoring_configuration: tfApplicationPrometheusMonitoringConfigurationPropertyToTerraform(struct!.prometheusMonitoringConfiguration),
+    s3_monitoring_configuration: tfApplicationS3MonitoringConfigurationPropertyToTerraform(struct!.s3MonitoringConfiguration),
   }
 }
 
 
-export function awsEmrserverlessApplicationMonitoringConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.MonitoringConfigurationPropertyOutputReference | AwsEmrserverlessApplication.MonitoringConfigurationProperty): any {
+export function tfApplicationMonitoringConfigurationPropertyToHclTerraform(struct?: TfApplication.MonitoringConfigurationPropertyOutputReference | TfApplication.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logging_configuration: {
-      value: awsEmrserverlessApplicationCloudwatchLoggingConfigurationPropertyToHclTerraform(struct!.cloudwatchLoggingConfiguration),
+      value: tfApplicationCloudwatchLoggingConfigurationPropertyToHclTerraform(struct!.cloudwatchLoggingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLoggingConfigurationPropertyList",
     },
     managed_persistence_monitoring_configuration: {
-      value: awsEmrserverlessApplicationManagedPersistenceMonitoringConfigurationPropertyToHclTerraform(struct!.managedPersistenceMonitoringConfiguration),
+      value: tfApplicationManagedPersistenceMonitoringConfigurationPropertyToHclTerraform(struct!.managedPersistenceMonitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedPersistenceMonitoringConfigurationPropertyList",
     },
     prometheus_monitoring_configuration: {
-      value: awsEmrserverlessApplicationPrometheusMonitoringConfigurationPropertyToHclTerraform(struct!.prometheusMonitoringConfiguration),
+      value: tfApplicationPrometheusMonitoringConfigurationPropertyToHclTerraform(struct!.prometheusMonitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "PrometheusMonitoringConfigurationPropertyList",
     },
     s3_monitoring_configuration: {
-      value: awsEmrserverlessApplicationS3MonitoringConfigurationPropertyToHclTerraform(struct!.s3MonitoringConfiguration),
+      value: tfApplicationS3MonitoringConfigurationPropertyToHclTerraform(struct!.s3MonitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "S3MonitoringConfigurationPropertyList",
@@ -1214,7 +1214,7 @@ export function awsEmrserverlessApplicationMonitoringConfigurationPropertyToHclT
 }
 
 
-export function awsEmrserverlessApplicationNetworkConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.NetworkConfigurationPropertyOutputReference | AwsEmrserverlessApplication.NetworkConfigurationProperty): any {
+export function tfApplicationNetworkConfigurationPropertyToTerraform(struct?: TfApplication.NetworkConfigurationPropertyOutputReference | TfApplication.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1226,7 +1226,7 @@ export function awsEmrserverlessApplicationNetworkConfigurationPropertyToTerrafo
 }
 
 
-export function awsEmrserverlessApplicationNetworkConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.NetworkConfigurationPropertyOutputReference | AwsEmrserverlessApplication.NetworkConfigurationProperty): any {
+export function tfApplicationNetworkConfigurationPropertyToHclTerraform(struct?: TfApplication.NetworkConfigurationPropertyOutputReference | TfApplication.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1251,7 +1251,7 @@ export function awsEmrserverlessApplicationNetworkConfigurationPropertyToHclTerr
 }
 
 
-export function awsEmrserverlessApplicationRuntimeConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.RuntimeConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationRuntimeConfigurationPropertyToTerraform(struct?: TfApplication.RuntimeConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1263,7 +1263,7 @@ export function awsEmrserverlessApplicationRuntimeConfigurationPropertyToTerrafo
 }
 
 
-export function awsEmrserverlessApplicationRuntimeConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.RuntimeConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationRuntimeConfigurationPropertyToHclTerraform(struct?: TfApplication.RuntimeConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1288,7 +1288,7 @@ export function awsEmrserverlessApplicationRuntimeConfigurationPropertyToHclTerr
 }
 
 
-export function awsEmrserverlessApplicationSchedulerConfigurationPropertyToTerraform(struct?: AwsEmrserverlessApplication.SchedulerConfigurationPropertyOutputReference | AwsEmrserverlessApplication.SchedulerConfigurationProperty): any {
+export function tfApplicationSchedulerConfigurationPropertyToTerraform(struct?: TfApplication.SchedulerConfigurationPropertyOutputReference | TfApplication.SchedulerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1300,7 +1300,7 @@ export function awsEmrserverlessApplicationSchedulerConfigurationPropertyToTerra
 }
 
 
-export function awsEmrserverlessApplicationSchedulerConfigurationPropertyToHclTerraform(struct?: AwsEmrserverlessApplication.SchedulerConfigurationPropertyOutputReference | AwsEmrserverlessApplication.SchedulerConfigurationProperty): any {
+export function tfApplicationSchedulerConfigurationPropertyToHclTerraform(struct?: TfApplication.SchedulerConfigurationPropertyOutputReference | TfApplication.SchedulerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1325,10 +1325,10 @@ export function awsEmrserverlessApplicationSchedulerConfigurationPropertyToHclTe
 }
 
 
-export namespace AwsEmrserverlessApplication {
+export namespace TfApplication {
 export interface AutoStartConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled AwsEmrserverlessApplication#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled TfApplication#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1382,11 +1382,11 @@ export class AutoStartConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface AutoStopConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled AwsEmrserverlessApplication#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled TfApplication#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#idle_timeout_minutes AwsEmrserverlessApplication#idle_timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#idle_timeout_minutes TfApplication#idle_timeout_minutes}
   */
   readonly idleTimeoutMinutes?: number;
 }
@@ -1462,7 +1462,7 @@ export class AutoStopConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ImageConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#image_uri AwsEmrserverlessApplication#image_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#image_uri TfApplication#image_uri}
   */
   readonly imageUri: string;
 }
@@ -1513,15 +1513,15 @@ export class ImageConfigurationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface WorkerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#cpu AwsEmrserverlessApplication#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#cpu TfApplication#cpu}
   */
   readonly cpu: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#disk AwsEmrserverlessApplication#disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#disk TfApplication#disk}
   */
   readonly disk?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#memory AwsEmrserverlessApplication#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#memory TfApplication#memory}
   */
   readonly memory: string;
 }
@@ -1613,13 +1613,13 @@ export class WorkerConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface InitialCapacityConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#worker_count AwsEmrserverlessApplication#worker_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#worker_count TfApplication#worker_count}
   */
   readonly workerCount: number;
   /**
   * worker_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#worker_configuration AwsEmrserverlessApplication#worker_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#worker_configuration TfApplication#worker_configuration}
   */
   readonly workerConfiguration?: WorkerConfigurationProperty;
 }
@@ -1692,13 +1692,13 @@ export class InitialCapacityConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface InitialCapacityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#initial_capacity_type AwsEmrserverlessApplication#initial_capacity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#initial_capacity_type TfApplication#initial_capacity_type}
   */
   readonly initialCapacityType: string;
   /**
   * initial_capacity_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#initial_capacity_config AwsEmrserverlessApplication#initial_capacity_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#initial_capacity_config TfApplication#initial_capacity_config}
   */
   readonly initialCapacityConfig?: InitialCapacityConfigProperty;
 }
@@ -1803,11 +1803,11 @@ export class InitialCapacityPropertyList extends cdktn.ComplexList {
 }
 export interface InteractiveConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#livy_endpoint_enabled AwsEmrserverlessApplication#livy_endpoint_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#livy_endpoint_enabled TfApplication#livy_endpoint_enabled}
   */
   readonly livyEndpointEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#studio_enabled AwsEmrserverlessApplication#studio_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#studio_enabled TfApplication#studio_enabled}
   */
   readonly studioEnabled?: boolean | cdktn.IResolvable;
 }
@@ -1883,7 +1883,7 @@ export class InteractiveConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface JobLevelCostAllocationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled AwsEmrserverlessApplication#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled TfApplication#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1937,15 +1937,15 @@ export class JobLevelCostAllocationConfigurationPropertyOutputReference extends 
 }
 export interface MaximumCapacityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#cpu AwsEmrserverlessApplication#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#cpu TfApplication#cpu}
   */
   readonly cpu: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#disk AwsEmrserverlessApplication#disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#disk TfApplication#disk}
   */
   readonly disk?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#memory AwsEmrserverlessApplication#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#memory TfApplication#memory}
   */
   readonly memory: string;
 }
@@ -2037,11 +2037,11 @@ export class MaximumCapacityPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface LogTypesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#name AwsEmrserverlessApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#name TfApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#values AwsEmrserverlessApplication#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#values TfApplication#values}
   */
   readonly values: string[];
 }
@@ -2143,25 +2143,25 @@ export class LogTypesPropertyList extends cdktn.ComplexList {
 }
 export interface CloudwatchLoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled AwsEmrserverlessApplication#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled TfApplication#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#encryption_key_arn AwsEmrserverlessApplication#encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#encryption_key_arn TfApplication#encryption_key_arn}
   */
   readonly encryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_group_name AwsEmrserverlessApplication#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_group_name TfApplication#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_stream_name_prefix AwsEmrserverlessApplication#log_stream_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_stream_name_prefix TfApplication#log_stream_name_prefix}
   */
   readonly logStreamNamePrefix?: string;
   /**
   * log_types block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_types AwsEmrserverlessApplication#log_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_types TfApplication#log_types}
   */
   readonly logTypes?: LogTypesProperty[] | cdktn.IResolvable;
 }
@@ -2300,11 +2300,11 @@ export class CloudwatchLoggingConfigurationPropertyOutputReference extends cdktn
 }
 export interface ManagedPersistenceMonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled AwsEmrserverlessApplication#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#enabled TfApplication#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#encryption_key_arn AwsEmrserverlessApplication#encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#encryption_key_arn TfApplication#encryption_key_arn}
   */
   readonly encryptionKeyArn?: string;
 }
@@ -2380,7 +2380,7 @@ export class ManagedPersistenceMonitoringConfigurationPropertyOutputReference ex
 }
 export interface PrometheusMonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#remote_write_url AwsEmrserverlessApplication#remote_write_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#remote_write_url TfApplication#remote_write_url}
   */
   readonly remoteWriteUrl?: string;
 }
@@ -2434,11 +2434,11 @@ export class PrometheusMonitoringConfigurationPropertyOutputReference extends cd
 }
 export interface S3MonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#encryption_key_arn AwsEmrserverlessApplication#encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#encryption_key_arn TfApplication#encryption_key_arn}
   */
   readonly encryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_uri AwsEmrserverlessApplication#log_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#log_uri TfApplication#log_uri}
   */
   readonly logUri?: string;
 }
@@ -2516,25 +2516,25 @@ export interface MonitoringConfigurationProperty {
   /**
   * cloudwatch_logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#cloudwatch_logging_configuration AwsEmrserverlessApplication#cloudwatch_logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#cloudwatch_logging_configuration TfApplication#cloudwatch_logging_configuration}
   */
   readonly cloudwatchLoggingConfiguration?: CloudwatchLoggingConfigurationProperty;
   /**
   * managed_persistence_monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#managed_persistence_monitoring_configuration AwsEmrserverlessApplication#managed_persistence_monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#managed_persistence_monitoring_configuration TfApplication#managed_persistence_monitoring_configuration}
   */
   readonly managedPersistenceMonitoringConfiguration?: ManagedPersistenceMonitoringConfigurationProperty;
   /**
   * prometheus_monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#prometheus_monitoring_configuration AwsEmrserverlessApplication#prometheus_monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#prometheus_monitoring_configuration TfApplication#prometheus_monitoring_configuration}
   */
   readonly prometheusMonitoringConfiguration?: PrometheusMonitoringConfigurationProperty;
   /**
   * s3_monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#s3_monitoring_configuration AwsEmrserverlessApplication#s3_monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#s3_monitoring_configuration TfApplication#s3_monitoring_configuration}
   */
   readonly s3MonitoringConfiguration?: S3MonitoringConfigurationProperty;
 }
@@ -2654,11 +2654,11 @@ export class MonitoringConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#security_group_ids AwsEmrserverlessApplication#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#security_group_ids TfApplication#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#subnet_ids AwsEmrserverlessApplication#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#subnet_ids TfApplication#subnet_ids}
   */
   readonly subnetIds?: string[];
 }
@@ -2734,11 +2734,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface RuntimeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#classification AwsEmrserverlessApplication#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#classification TfApplication#classification}
   */
   readonly classification: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#properties AwsEmrserverlessApplication#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#properties TfApplication#properties}
   */
   readonly properties?: { [key: string]: string };
 }
@@ -2843,11 +2843,11 @@ export class RuntimeConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface SchedulerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#max_concurrent_runs AwsEmrserverlessApplication#max_concurrent_runs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#max_concurrent_runs TfApplication#max_concurrent_runs}
   */
   readonly maxConcurrentRuns?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#queue_timeout_minutes AwsEmrserverlessApplication#queue_timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrserverless_application#queue_timeout_minutes TfApplication#queue_timeout_minutes}
   */
   readonly queueTimeoutMinutes?: number;
 }

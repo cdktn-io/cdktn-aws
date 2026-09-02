@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcEndpointPrivateDnsConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointPrivateDnsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#private_dns_enabled AwsVpcEndpointPrivateDns#private_dns_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#private_dns_enabled TfEndpointPrivateDns#private_dns_enabled}
   */
   readonly privateDnsEnabled: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#region AwsVpcEndpointPrivateDns#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#region TfEndpointPrivateDns#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#vpc_endpoint_id AwsVpcEndpointPrivateDns#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#vpc_endpoint_id TfEndpointPrivateDns#vpc_endpoint_id}
   */
   readonly vpcEndpointId: string;
 }
@@ -25,7 +25,7 @@ export interface AwsVpcEndpointPrivateDnsConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns aws_vpc_endpoint_private_dns}
 */
-export class AwsVpcEndpointPrivateDns extends cdktn.TerraformResource {
+export class TfEndpointPrivateDns extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsVpcEndpointPrivateDns extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcEndpointPrivateDns resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpointPrivateDns resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcEndpointPrivateDns to import
-  * @param importFromId The id of the existing AwsVpcEndpointPrivateDns that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcEndpointPrivateDns to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpointPrivateDns to import
+  * @param importFromId The id of the existing TfEndpointPrivateDns that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpointPrivateDns to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_private_dns", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsVpcEndpointPrivateDns extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcEndpointPrivateDnsConfig
+  * @param options TfEndpointPrivateDnsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcEndpointPrivateDnsConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointPrivateDnsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint_private_dns',
       terraformGeneratorMetadata: {

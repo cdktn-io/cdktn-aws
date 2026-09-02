@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerLinkConfig extends cdktn.TerraformMetaArguments {
+export interface TfLinkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#description AwsNetworkmanagerLink#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#description TfLink#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#global_network_id AwsNetworkmanagerLink#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#global_network_id TfLink#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#id AwsNetworkmanagerLink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#id TfLink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#provider_name AwsNetworkmanagerLink#provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#provider_name TfLink#provider_name}
   */
   readonly providerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#site_id AwsNetworkmanagerLink#site_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#site_id TfLink#site_id}
   */
   readonly siteId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#tags AwsNetworkmanagerLink#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#tags TfLink#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#tags_all AwsNetworkmanagerLink#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#tags_all TfLink#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#type AwsNetworkmanagerLink#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#type TfLink#type}
   */
   readonly type?: string;
   /**
   * bandwidth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#bandwidth AwsNetworkmanagerLink#bandwidth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#bandwidth TfLink#bandwidth}
   */
-  readonly bandwidth: AwsNetworkmanagerLink.BandwidthProperty;
+  readonly bandwidth: TfLink.BandwidthProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#timeouts AwsNetworkmanagerLink#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#timeouts TfLink#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerLink.TimeoutsProperty;
+  readonly timeouts?: TfLink.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link aws_networkmanager_link}
 */
-export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
+export class TfLink extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerLink resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLink resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerLink to import
-  * @param importFromId The id of the existing AwsNetworkmanagerLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerLink to import is found
+  * @param importToId The construct id used in the generated config for the TfLink to import
+  * @param importFromId The id of the existing TfLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_link", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerLinkConfig
+  * @param options TfLinkConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerLinkConfig) {
+  public constructor(scope: Construct, id: string, config: TfLinkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_link',
       terraformGeneratorMetadata: {
@@ -250,11 +250,11 @@ export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
   }
 
   // bandwidth - computed: false, optional: false, required: true
-  private _bandwidth = new AwsNetworkmanagerLink.BandwidthPropertyOutputReference(this, "bandwidth");
+  private _bandwidth = new TfLink.BandwidthPropertyOutputReference(this, "bandwidth");
   public get bandwidth() {
     return this._bandwidth;
   }
-  public putBandwidth(value: AwsNetworkmanagerLink.BandwidthProperty) {
+  public putBandwidth(value: TfLink.BandwidthProperty) {
     this._bandwidth.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -263,11 +263,11 @@ export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerLink.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfLink.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerLink.TimeoutsProperty) {
+  public putTimeouts(value: TfLink.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -292,8 +292,8 @@ export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      bandwidth: awsNetworkmanagerLinkBandwidthPropertyToTerraform(this._bandwidth.internalValue),
-      timeouts: awsNetworkmanagerLinkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      bandwidth: tfLinkBandwidthPropertyToTerraform(this._bandwidth.internalValue),
+      timeouts: tfLinkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -348,16 +348,16 @@ export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       bandwidth: {
-        value: awsNetworkmanagerLinkBandwidthPropertyToHclTerraform(this._bandwidth.internalValue),
+        value: tfLinkBandwidthPropertyToHclTerraform(this._bandwidth.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkmanagerLink.BandwidthPropertyList",
+        storageClassType: "TfLink.BandwidthPropertyList",
       },
       timeouts: {
-        value: awsNetworkmanagerLinkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfLinkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerLink.TimeoutsProperty",
+        storageClassType: "TfLink.TimeoutsProperty",
       },
     };
 
@@ -366,7 +366,7 @@ export class AwsNetworkmanagerLink extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkmanagerLinkBandwidthPropertyToTerraform(struct?: AwsNetworkmanagerLink.BandwidthPropertyOutputReference | AwsNetworkmanagerLink.BandwidthProperty): any {
+export function tfLinkBandwidthPropertyToTerraform(struct?: TfLink.BandwidthPropertyOutputReference | TfLink.BandwidthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function awsNetworkmanagerLinkBandwidthPropertyToTerraform(struct?: AwsNe
 }
 
 
-export function awsNetworkmanagerLinkBandwidthPropertyToHclTerraform(struct?: AwsNetworkmanagerLink.BandwidthPropertyOutputReference | AwsNetworkmanagerLink.BandwidthProperty): any {
+export function tfLinkBandwidthPropertyToHclTerraform(struct?: TfLink.BandwidthPropertyOutputReference | TfLink.BandwidthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function awsNetworkmanagerLinkBandwidthPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsNetworkmanagerLinkTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerLink.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLinkTimeoutsPropertyToTerraform(struct?: TfLink.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function awsNetworkmanagerLinkTimeoutsPropertyToTerraform(struct?: AwsNet
 }
 
 
-export function awsNetworkmanagerLinkTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerLink.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLinkTimeoutsPropertyToHclTerraform(struct?: TfLink.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,14 +447,14 @@ export function awsNetworkmanagerLinkTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsNetworkmanagerLink {
+export namespace TfLink {
 export interface BandwidthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#download_speed AwsNetworkmanagerLink#download_speed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#download_speed TfLink#download_speed}
   */
   readonly downloadSpeed?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#upload_speed AwsNetworkmanagerLink#upload_speed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#upload_speed TfLink#upload_speed}
   */
   readonly uploadSpeed?: number;
 }
@@ -530,15 +530,15 @@ export class BandwidthPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#create AwsNetworkmanagerLink#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#create TfLink#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#delete AwsNetworkmanagerLink#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#delete TfLink#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#update AwsNetworkmanagerLink#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link#update TfLink#update}
   */
   readonly update?: string;
 }

@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsNetworkmanagerDeviceConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDeviceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#device_id DataAwsNetworkmanagerDevice#device_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#device_id DataTfDevice#device_id}
   */
   readonly deviceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#global_network_id DataAwsNetworkmanagerDevice#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#global_network_id DataTfDevice#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#id DataAwsNetworkmanagerDevice#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#id DataTfDevice#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#tags DataAwsNetworkmanagerDevice#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#tags DataTfDevice#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -30,7 +30,7 @@ export interface DataAwsNetworkmanagerDeviceConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device aws_networkmanager_device}
 */
-export class DataAwsNetworkmanagerDevice extends cdktn.TerraformDataSource {
+export class DataTfDevice extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataAwsNetworkmanagerDevice extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsNetworkmanagerDevice resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDevice resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsNetworkmanagerDevice to import
-  * @param importFromId The id of the existing DataAwsNetworkmanagerDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsNetworkmanagerDevice to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDevice to import
+  * @param importFromId The id of the existing DataTfDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_device#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDevice to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_device", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataAwsNetworkmanagerDevice extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsNetworkmanagerDeviceConfig
+  * @param options DataTfDeviceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsNetworkmanagerDeviceConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDeviceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_device',
       terraformGeneratorMetadata: {
@@ -94,7 +94,7 @@ export class DataAwsNetworkmanagerDevice extends cdktn.TerraformDataSource {
   }
 
   // aws_location - computed: true, optional: false, required: false
-  private _awsLocation = new DataAwsNetworkmanagerDevice.AwsLocationPropertyList(this, "aws_location", false);
+  private _awsLocation = new DataTfDevice.AwsLocationPropertyList(this, "aws_location", false);
   public get awsLocation() {
     return this._awsLocation;
   }
@@ -147,7 +147,7 @@ export class DataAwsNetworkmanagerDevice extends cdktn.TerraformDataSource {
   }
 
   // location - computed: true, optional: false, required: false
-  private _location = new DataAwsNetworkmanagerDevice.LocationPropertyList(this, "location", false);
+  private _location = new DataTfDevice.LocationPropertyList(this, "location", false);
   public get location() {
     return this._location;
   }
@@ -239,7 +239,7 @@ export class DataAwsNetworkmanagerDevice extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsNetworkmanagerDeviceAwsLocationPropertyToTerraform(struct?: DataAwsNetworkmanagerDevice.AwsLocationProperty): any {
+export function dataTfDeviceAwsLocationPropertyToTerraform(struct?: DataTfDevice.AwsLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function dataAwsNetworkmanagerDeviceAwsLocationPropertyToTerraform(struct
 }
 
 
-export function dataAwsNetworkmanagerDeviceAwsLocationPropertyToHclTerraform(struct?: DataAwsNetworkmanagerDevice.AwsLocationProperty): any {
+export function dataTfDeviceAwsLocationPropertyToHclTerraform(struct?: DataTfDevice.AwsLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function dataAwsNetworkmanagerDeviceAwsLocationPropertyToHclTerraform(str
 }
 
 
-export function dataAwsNetworkmanagerDeviceLocationPropertyToTerraform(struct?: DataAwsNetworkmanagerDevice.LocationProperty): any {
+export function dataTfDeviceLocationPropertyToTerraform(struct?: DataTfDevice.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function dataAwsNetworkmanagerDeviceLocationPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsNetworkmanagerDeviceLocationPropertyToHclTerraform(struct?: DataAwsNetworkmanagerDevice.LocationProperty): any {
+export function dataTfDeviceLocationPropertyToHclTerraform(struct?: DataTfDevice.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function dataAwsNetworkmanagerDeviceLocationPropertyToHclTerraform(struct
 }
 
 
-export namespace DataAwsNetworkmanagerDevice {
+export namespace DataTfDevice {
 export interface AwsLocationProperty {
 }
 export class AwsLocationPropertyOutputReference extends cdktn.ComplexObject {

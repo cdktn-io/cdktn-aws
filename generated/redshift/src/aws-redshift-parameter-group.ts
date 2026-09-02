@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRedshiftParameterGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfParameterGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#description AwsRedshiftParameterGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#description TfParameterGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#family AwsRedshiftParameterGroup#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#family TfParameterGroup#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#id AwsRedshiftParameterGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#id TfParameterGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#name AwsRedshiftParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#name TfParameterGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#region AwsRedshiftParameterGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#region TfParameterGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#tags AwsRedshiftParameterGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#tags TfParameterGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#tags_all AwsRedshiftParameterGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#tags_all TfParameterGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#parameter AwsRedshiftParameterGroup#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#parameter TfParameterGroup#parameter}
   */
-  readonly parameter?: AwsRedshiftParameterGroup.ParameterProperty[] | cdktn.IResolvable;
+  readonly parameter?: TfParameterGroup.ParameterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group aws_redshift_parameter_group}
 */
-export class AwsRedshiftParameterGroup extends cdktn.TerraformResource {
+export class TfParameterGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsRedshiftParameterGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRedshiftParameterGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfParameterGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRedshiftParameterGroup to import
-  * @param importFromId The id of the existing AwsRedshiftParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRedshiftParameterGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfParameterGroup to import
+  * @param importFromId The id of the existing TfParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfParameterGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_parameter_group", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsRedshiftParameterGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRedshiftParameterGroupConfig
+  * @param options TfParameterGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRedshiftParameterGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfParameterGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_parameter_group',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class AwsRedshiftParameterGroup extends cdktn.TerraformResource {
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter = new AwsRedshiftParameterGroup.ParameterPropertyList(this, "parameter", true);
+  private _parameter = new TfParameterGroup.ParameterPropertyList(this, "parameter", true);
   public get parameter() {
     return this._parameter;
   }
-  public putParameter(value: AwsRedshiftParameterGroup.ParameterProperty[] | cdktn.IResolvable) {
+  public putParameter(value: TfParameterGroup.ParameterProperty[] | cdktn.IResolvable) {
     this._parameter.internalValue = value;
   }
   public resetParameter() {
@@ -252,7 +252,7 @@ export class AwsRedshiftParameterGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      parameter: cdktn.listMapper(awsRedshiftParameterGroupParameterPropertyToTerraform, true)(this._parameter.internalValue),
+      parameter: cdktn.listMapper(tfParameterGroupParameterPropertyToTerraform, true)(this._parameter.internalValue),
     };
   }
 
@@ -301,10 +301,10 @@ export class AwsRedshiftParameterGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       parameter: {
-        value: cdktn.listMapperHcl(awsRedshiftParameterGroupParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
+        value: cdktn.listMapperHcl(tfParameterGroupParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsRedshiftParameterGroup.ParameterPropertyList",
+        storageClassType: "TfParameterGroup.ParameterPropertyList",
       },
     };
 
@@ -313,7 +313,7 @@ export class AwsRedshiftParameterGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsRedshiftParameterGroupParameterPropertyToTerraform(struct?: AwsRedshiftParameterGroup.ParameterProperty | cdktn.IResolvable): any {
+export function tfParameterGroupParameterPropertyToTerraform(struct?: TfParameterGroup.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function awsRedshiftParameterGroupParameterPropertyToTerraform(struct?: A
 }
 
 
-export function awsRedshiftParameterGroupParameterPropertyToHclTerraform(struct?: AwsRedshiftParameterGroup.ParameterProperty | cdktn.IResolvable): any {
+export function tfParameterGroupParameterPropertyToHclTerraform(struct?: TfParameterGroup.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,14 +350,14 @@ export function awsRedshiftParameterGroupParameterPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsRedshiftParameterGroup {
+export namespace TfParameterGroup {
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#name AwsRedshiftParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#name TfParameterGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#value AwsRedshiftParameterGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_parameter_group#value TfParameterGroup#value}
   */
   readonly value: string;
 }

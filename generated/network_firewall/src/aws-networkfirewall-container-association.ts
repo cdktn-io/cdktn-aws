@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkfirewallContainerAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfContainerAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#container_association_name AwsNetworkfirewallContainerAssociation#container_association_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#container_association_name TfContainerAssociation#container_association_name}
   */
   readonly containerAssociationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#description AwsNetworkfirewallContainerAssociation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#description TfContainerAssociation#description}
   */
   readonly description?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#region AwsNetworkfirewallContainerAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#region TfContainerAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#tags AwsNetworkfirewallContainerAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#tags TfContainerAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#type AwsNetworkfirewallContainerAssociation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#type TfContainerAssociation#type}
   */
   readonly type: string;
   /**
   * container_monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#container_monitoring_configuration AwsNetworkfirewallContainerAssociation#container_monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#container_monitoring_configuration TfContainerAssociation#container_monitoring_configuration}
   */
-  readonly containerMonitoringConfiguration?: AwsNetworkfirewallContainerAssociation.ContainerMonitoringConfigurationProperty[] | cdktn.IResolvable;
+  readonly containerMonitoringConfiguration?: TfContainerAssociation.ContainerMonitoringConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#timeouts AwsNetworkfirewallContainerAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#timeouts TfContainerAssociation#timeouts}
   */
-  readonly timeouts?: AwsNetworkfirewallContainerAssociation.TimeoutsProperty;
+  readonly timeouts?: TfContainerAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association aws_networkfirewall_container_association}
 */
-export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResource {
+export class TfContainerAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkfirewallContainerAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfContainerAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkfirewallContainerAssociation to import
-  * @param importFromId The id of the existing AwsNetworkfirewallContainerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkfirewallContainerAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfContainerAssociation to import
+  * @param importFromId The id of the existing TfContainerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfContainerAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_container_association", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkfirewallContainerAssociationConfig
+  * @param options TfContainerAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkfirewallContainerAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfContainerAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_container_association',
       terraformGeneratorMetadata: {
@@ -202,11 +202,11 @@ export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResou
   }
 
   // container_monitoring_configuration - computed: false, optional: true, required: false
-  private _containerMonitoringConfiguration = new AwsNetworkfirewallContainerAssociation.ContainerMonitoringConfigurationPropertyList(this, "container_monitoring_configuration", false);
+  private _containerMonitoringConfiguration = new TfContainerAssociation.ContainerMonitoringConfigurationPropertyList(this, "container_monitoring_configuration", false);
   public get containerMonitoringConfiguration() {
     return this._containerMonitoringConfiguration;
   }
-  public putContainerMonitoringConfiguration(value: AwsNetworkfirewallContainerAssociation.ContainerMonitoringConfigurationProperty[] | cdktn.IResolvable) {
+  public putContainerMonitoringConfiguration(value: TfContainerAssociation.ContainerMonitoringConfigurationProperty[] | cdktn.IResolvable) {
     this._containerMonitoringConfiguration.internalValue = value;
   }
   public resetContainerMonitoringConfiguration() {
@@ -218,11 +218,11 @@ export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkfirewallContainerAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfContainerAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkfirewallContainerAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfContainerAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -244,8 +244,8 @@ export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResou
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       type: cdktn.stringToTerraform(this._type),
-      container_monitoring_configuration: cdktn.listMapper(awsNetworkfirewallContainerAssociationContainerMonitoringConfigurationPropertyToTerraform, true)(this._containerMonitoringConfiguration.internalValue),
-      timeouts: awsNetworkfirewallContainerAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      container_monitoring_configuration: cdktn.listMapper(tfContainerAssociationContainerMonitoringConfigurationPropertyToTerraform, true)(this._containerMonitoringConfiguration.internalValue),
+      timeouts: tfContainerAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -282,16 +282,16 @@ export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResou
         storageClassType: "string",
       },
       container_monitoring_configuration: {
-        value: cdktn.listMapperHcl(awsNetworkfirewallContainerAssociationContainerMonitoringConfigurationPropertyToHclTerraform, true)(this._containerMonitoringConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfContainerAssociationContainerMonitoringConfigurationPropertyToHclTerraform, true)(this._containerMonitoringConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkfirewallContainerAssociation.ContainerMonitoringConfigurationPropertyList",
+        storageClassType: "TfContainerAssociation.ContainerMonitoringConfigurationPropertyList",
       },
       timeouts: {
-        value: awsNetworkfirewallContainerAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfContainerAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkfirewallContainerAssociation.TimeoutsProperty",
+        storageClassType: "TfContainerAssociation.TimeoutsProperty",
       },
     };
 
@@ -300,7 +300,7 @@ export class AwsNetworkfirewallContainerAssociation extends cdktn.TerraformResou
   }
 }
 
-export function awsNetworkfirewallContainerAssociationAttributeFilterPropertyToTerraform(struct?: AwsNetworkfirewallContainerAssociation.AttributeFilterProperty | cdktn.IResolvable): any {
+export function tfContainerAssociationAttributeFilterPropertyToTerraform(struct?: TfContainerAssociation.AttributeFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function awsNetworkfirewallContainerAssociationAttributeFilterPropertyToT
 }
 
 
-export function awsNetworkfirewallContainerAssociationAttributeFilterPropertyToHclTerraform(struct?: AwsNetworkfirewallContainerAssociation.AttributeFilterProperty | cdktn.IResolvable): any {
+export function tfContainerAssociationAttributeFilterPropertyToHclTerraform(struct?: TfContainerAssociation.AttributeFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,19 +337,19 @@ export function awsNetworkfirewallContainerAssociationAttributeFilterPropertyToH
 }
 
 
-export function awsNetworkfirewallContainerAssociationContainerMonitoringConfigurationPropertyToTerraform(struct?: AwsNetworkfirewallContainerAssociation.ContainerMonitoringConfigurationProperty | cdktn.IResolvable): any {
+export function tfContainerAssociationContainerMonitoringConfigurationPropertyToTerraform(struct?: TfContainerAssociation.ContainerMonitoringConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     cluster_arn: cdktn.stringToTerraform(struct!.clusterArn),
-    attribute_filter: cdktn.listMapper(awsNetworkfirewallContainerAssociationAttributeFilterPropertyToTerraform, true)(struct!.attributeFilter),
+    attribute_filter: cdktn.listMapper(tfContainerAssociationAttributeFilterPropertyToTerraform, true)(struct!.attributeFilter),
   }
 }
 
 
-export function awsNetworkfirewallContainerAssociationContainerMonitoringConfigurationPropertyToHclTerraform(struct?: AwsNetworkfirewallContainerAssociation.ContainerMonitoringConfigurationProperty | cdktn.IResolvable): any {
+export function tfContainerAssociationContainerMonitoringConfigurationPropertyToHclTerraform(struct?: TfContainerAssociation.ContainerMonitoringConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function awsNetworkfirewallContainerAssociationContainerMonitoringConfigu
       storageClassType: "string",
     },
     attribute_filter: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallContainerAssociationAttributeFilterPropertyToHclTerraform, true)(struct!.attributeFilter),
+      value: cdktn.listMapperHcl(tfContainerAssociationAttributeFilterPropertyToHclTerraform, true)(struct!.attributeFilter),
       isBlock: true,
       type: "list",
       storageClassType: "AttributeFilterPropertyList",
@@ -374,7 +374,7 @@ export function awsNetworkfirewallContainerAssociationContainerMonitoringConfigu
 }
 
 
-export function awsNetworkfirewallContainerAssociationTimeoutsPropertyToTerraform(struct?: AwsNetworkfirewallContainerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfContainerAssociationTimeoutsPropertyToTerraform(struct?: TfContainerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function awsNetworkfirewallContainerAssociationTimeoutsPropertyToTerrafor
 }
 
 
-export function awsNetworkfirewallContainerAssociationTimeoutsPropertyToHclTerraform(struct?: AwsNetworkfirewallContainerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfContainerAssociationTimeoutsPropertyToHclTerraform(struct?: TfContainerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,14 +418,14 @@ export function awsNetworkfirewallContainerAssociationTimeoutsPropertyToHclTerra
 }
 
 
-export namespace AwsNetworkfirewallContainerAssociation {
+export namespace TfContainerAssociation {
 export interface AttributeFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#key AwsNetworkfirewallContainerAssociation#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#key TfContainerAssociation#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#value AwsNetworkfirewallContainerAssociation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#value TfContainerAssociation#value}
   */
   readonly value: string;
 }
@@ -527,13 +527,13 @@ export class AttributeFilterPropertyList extends cdktn.ComplexList {
 }
 export interface ContainerMonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#cluster_arn AwsNetworkfirewallContainerAssociation#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#cluster_arn TfContainerAssociation#cluster_arn}
   */
   readonly clusterArn: string;
   /**
   * attribute_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#attribute_filter AwsNetworkfirewallContainerAssociation#attribute_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#attribute_filter TfContainerAssociation#attribute_filter}
   */
   readonly attributeFilter?: AttributeFilterProperty[] | cdktn.IResolvable;
 }
@@ -640,19 +640,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#create AwsNetworkfirewallContainerAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#create TfContainerAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#delete AwsNetworkfirewallContainerAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#delete TfContainerAssociation#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#update AwsNetworkfirewallContainerAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_container_association#update TfContainerAssociation#update}
   */
   readonly update?: string;
 }

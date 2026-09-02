@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLbTargetGroupAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfTargetGroupAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#availability_zone AwsLbTargetGroupAttachment#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#availability_zone TfTargetGroupAttachment#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#id AwsLbTargetGroupAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#id TfTargetGroupAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#port AwsLbTargetGroupAttachment#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#port TfTargetGroupAttachment#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#quic_server_id AwsLbTargetGroupAttachment#quic_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#quic_server_id TfTargetGroupAttachment#quic_server_id}
   */
   readonly quicServerId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#region AwsLbTargetGroupAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#region TfTargetGroupAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#target_group_arn AwsLbTargetGroupAttachment#target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#target_group_arn TfTargetGroupAttachment#target_group_arn}
   */
   readonly targetGroupArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#target_id AwsLbTargetGroupAttachment#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#target_id TfTargetGroupAttachment#target_id}
   */
   readonly targetId: string;
 }
@@ -44,7 +44,7 @@ export interface AwsLbTargetGroupAttachmentConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment aws_lb_target_group_attachment}
 */
-export class AwsLbTargetGroupAttachment extends cdktn.TerraformResource {
+export class TfTargetGroupAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsLbTargetGroupAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLbTargetGroupAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTargetGroupAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLbTargetGroupAttachment to import
-  * @param importFromId The id of the existing AwsLbTargetGroupAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLbTargetGroupAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfTargetGroupAttachment to import
+  * @param importFromId The id of the existing TfTargetGroupAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTargetGroupAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb_target_group_attachment", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsLbTargetGroupAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLbTargetGroupAttachmentConfig
+  * @param options TfTargetGroupAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLbTargetGroupAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfTargetGroupAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lb_target_group_attachment',
       terraformGeneratorMetadata: {

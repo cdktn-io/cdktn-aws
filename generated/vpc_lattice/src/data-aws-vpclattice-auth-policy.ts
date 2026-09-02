@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsVpclatticeAuthPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfAuthPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#id DataAwsVpclatticeAuthPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#id DataTfAuthPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#policy DataAwsVpclatticeAuthPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#policy DataTfAuthPolicy#policy}
   */
   readonly policy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#region DataAwsVpclatticeAuthPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#region DataTfAuthPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#resource_identifier DataAwsVpclatticeAuthPolicy#resource_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#resource_identifier DataTfAuthPolicy#resource_identifier}
   */
   readonly resourceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#state DataAwsVpclatticeAuthPolicy#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#state DataTfAuthPolicy#state}
   */
   readonly state?: string;
 }
@@ -36,7 +36,7 @@ export interface DataAwsVpclatticeAuthPolicyConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy aws_vpclattice_auth_policy}
 */
-export class DataAwsVpclatticeAuthPolicy extends cdktn.TerraformDataSource {
+export class DataTfAuthPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsVpclatticeAuthPolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsVpclatticeAuthPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfAuthPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsVpclatticeAuthPolicy to import
-  * @param importFromId The id of the existing DataAwsVpclatticeAuthPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsVpclatticeAuthPolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataTfAuthPolicy to import
+  * @param importFromId The id of the existing DataTfAuthPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_auth_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfAuthPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_auth_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsVpclatticeAuthPolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsVpclatticeAuthPolicyConfig
+  * @param options DataTfAuthPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsVpclatticeAuthPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfAuthPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_auth_policy',
       terraformGeneratorMetadata: {

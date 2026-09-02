@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlueCatalogTableOptimizerConfig extends cdktn.TerraformMetaArguments {
+export interface TfCatalogTableOptimizerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#catalog_id AwsGlueCatalogTableOptimizer#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#catalog_id TfCatalogTableOptimizer#catalog_id}
   */
   readonly catalogId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#database_name AwsGlueCatalogTableOptimizer#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#database_name TfCatalogTableOptimizer#database_name}
   */
   readonly databaseName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#region AwsGlueCatalogTableOptimizer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#region TfCatalogTableOptimizer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#table_name AwsGlueCatalogTableOptimizer#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#table_name TfCatalogTableOptimizer#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#type AwsGlueCatalogTableOptimizer#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#type TfCatalogTableOptimizer#type}
   */
   readonly type: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#configuration AwsGlueCatalogTableOptimizer#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#configuration TfCatalogTableOptimizer#configuration}
   */
-  readonly configuration?: AwsGlueCatalogTableOptimizer.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: TfCatalogTableOptimizer.ConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer aws_glue_catalog_table_optimizer}
 */
-export class AwsGlueCatalogTableOptimizer extends cdktn.TerraformResource {
+export class TfCatalogTableOptimizer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class AwsGlueCatalogTableOptimizer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlueCatalogTableOptimizer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCatalogTableOptimizer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlueCatalogTableOptimizer to import
-  * @param importFromId The id of the existing AwsGlueCatalogTableOptimizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlueCatalogTableOptimizer to import is found
+  * @param importToId The construct id used in the generated config for the TfCatalogTableOptimizer to import
+  * @param importFromId The id of the existing TfCatalogTableOptimizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCatalogTableOptimizer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog_table_optimizer", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class AwsGlueCatalogTableOptimizer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlueCatalogTableOptimizerConfig
+  * @param options TfCatalogTableOptimizerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlueCatalogTableOptimizerConfig) {
+  public constructor(scope: Construct, id: string, config: TfCatalogTableOptimizerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_catalog_table_optimizer',
       terraformGeneratorMetadata: {
@@ -168,11 +168,11 @@ export class AwsGlueCatalogTableOptimizer extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsGlueCatalogTableOptimizer.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new TfCatalogTableOptimizer.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsGlueCatalogTableOptimizer.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: TfCatalogTableOptimizer.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -194,7 +194,7 @@ export class AwsGlueCatalogTableOptimizer extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       table_name: cdktn.stringToTerraform(this._tableName),
       type: cdktn.stringToTerraform(this._type),
-      configuration: cdktn.listMapper(awsGlueCatalogTableOptimizerConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      configuration: cdktn.listMapper(tfCatalogTableOptimizerConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
     };
   }
 
@@ -231,10 +231,10 @@ export class AwsGlueCatalogTableOptimizer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(awsGlueCatalogTableOptimizerConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(tfCatalogTableOptimizerConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalogTableOptimizer.ConfigurationPropertyList",
+        storageClassType: "TfCatalogTableOptimizer.ConfigurationPropertyList",
       },
     };
 
@@ -243,7 +243,7 @@ export class AwsGlueCatalogTableOptimizer extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlueCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationCompactionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToTerraform(struct?: TfCatalogTableOptimizer.ConfigurationCompactionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function awsGlueCatalogTableOptimizerConfigurationCompactionConfiguration
 }
 
 
-export function awsGlueCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToHclTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationCompactionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToHclTerraform(struct?: TfCatalogTableOptimizer.ConfigurationCompactionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,25 +287,25 @@ export function awsGlueCatalogTableOptimizerConfigurationCompactionConfiguration
 }
 
 
-export function awsGlueCatalogTableOptimizerCompactionConfigurationPropertyToTerraform(struct?: AwsGlueCatalogTableOptimizer.CompactionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerCompactionConfigurationPropertyToTerraform(struct?: TfCatalogTableOptimizer.CompactionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iceberg_configuration: cdktn.listMapper(awsGlueCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToTerraform, true)(struct!.icebergConfiguration),
+    iceberg_configuration: cdktn.listMapper(tfCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToTerraform, true)(struct!.icebergConfiguration),
   }
 }
 
 
-export function awsGlueCatalogTableOptimizerCompactionConfigurationPropertyToHclTerraform(struct?: AwsGlueCatalogTableOptimizer.CompactionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerCompactionConfigurationPropertyToHclTerraform(struct?: TfCatalogTableOptimizer.CompactionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iceberg_configuration: {
-      value: cdktn.listMapperHcl(awsGlueCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToHclTerraform, true)(struct!.icebergConfiguration),
+      value: cdktn.listMapperHcl(tfCatalogTableOptimizerConfigurationCompactionConfigurationIcebergConfigurationPropertyToHclTerraform, true)(struct!.icebergConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationCompactionConfigurationIcebergConfigurationPropertyList",
@@ -317,7 +317,7 @@ export function awsGlueCatalogTableOptimizerCompactionConfigurationPropertyToHcl
 }
 
 
-export function awsGlueCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationOrphanFileDeletionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToTerraform(struct?: TfCatalogTableOptimizer.ConfigurationOrphanFileDeletionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function awsGlueCatalogTableOptimizerConfigurationOrphanFileDeletionConfi
 }
 
 
-export function awsGlueCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToHclTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationOrphanFileDeletionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToHclTerraform(struct?: TfCatalogTableOptimizer.ConfigurationOrphanFileDeletionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,25 +361,25 @@ export function awsGlueCatalogTableOptimizerConfigurationOrphanFileDeletionConfi
 }
 
 
-export function awsGlueCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToTerraform(struct?: AwsGlueCatalogTableOptimizer.OrphanFileDeletionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToTerraform(struct?: TfCatalogTableOptimizer.OrphanFileDeletionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iceberg_configuration: cdktn.listMapper(awsGlueCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToTerraform, true)(struct!.icebergConfiguration),
+    iceberg_configuration: cdktn.listMapper(tfCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToTerraform, true)(struct!.icebergConfiguration),
   }
 }
 
 
-export function awsGlueCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToHclTerraform(struct?: AwsGlueCatalogTableOptimizer.OrphanFileDeletionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToHclTerraform(struct?: TfCatalogTableOptimizer.OrphanFileDeletionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iceberg_configuration: {
-      value: cdktn.listMapperHcl(awsGlueCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToHclTerraform, true)(struct!.icebergConfiguration),
+      value: cdktn.listMapperHcl(tfCatalogTableOptimizerConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyToHclTerraform, true)(struct!.icebergConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationOrphanFileDeletionConfigurationIcebergConfigurationPropertyList",
@@ -391,7 +391,7 @@ export function awsGlueCatalogTableOptimizerOrphanFileDeletionConfigurationPrope
 }
 
 
-export function awsGlueCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationRetentionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToTerraform(struct?: TfCatalogTableOptimizer.ConfigurationRetentionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function awsGlueCatalogTableOptimizerConfigurationRetentionConfigurationI
 }
 
 
-export function awsGlueCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToHclTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationRetentionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToHclTerraform(struct?: TfCatalogTableOptimizer.ConfigurationRetentionConfigurationIcebergConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,25 +442,25 @@ export function awsGlueCatalogTableOptimizerConfigurationRetentionConfigurationI
 }
 
 
-export function awsGlueCatalogTableOptimizerRetentionConfigurationPropertyToTerraform(struct?: AwsGlueCatalogTableOptimizer.RetentionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerRetentionConfigurationPropertyToTerraform(struct?: TfCatalogTableOptimizer.RetentionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iceberg_configuration: cdktn.listMapper(awsGlueCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToTerraform, true)(struct!.icebergConfiguration),
+    iceberg_configuration: cdktn.listMapper(tfCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToTerraform, true)(struct!.icebergConfiguration),
   }
 }
 
 
-export function awsGlueCatalogTableOptimizerRetentionConfigurationPropertyToHclTerraform(struct?: AwsGlueCatalogTableOptimizer.RetentionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerRetentionConfigurationPropertyToHclTerraform(struct?: TfCatalogTableOptimizer.RetentionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iceberg_configuration: {
-      value: cdktn.listMapperHcl(awsGlueCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToHclTerraform, true)(struct!.icebergConfiguration),
+      value: cdktn.listMapperHcl(tfCatalogTableOptimizerConfigurationRetentionConfigurationIcebergConfigurationPropertyToHclTerraform, true)(struct!.icebergConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationRetentionConfigurationIcebergConfigurationPropertyList",
@@ -472,7 +472,7 @@ export function awsGlueCatalogTableOptimizerRetentionConfigurationPropertyToHclT
 }
 
 
-export function awsGlueCatalogTableOptimizerConfigurationPropertyToTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationPropertyToTerraform(struct?: TfCatalogTableOptimizer.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,14 +480,14 @@ export function awsGlueCatalogTableOptimizerConfigurationPropertyToTerraform(str
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    compaction_configuration: cdktn.listMapper(awsGlueCatalogTableOptimizerCompactionConfigurationPropertyToTerraform, true)(struct!.compactionConfiguration),
-    orphan_file_deletion_configuration: cdktn.listMapper(awsGlueCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToTerraform, true)(struct!.orphanFileDeletionConfiguration),
-    retention_configuration: cdktn.listMapper(awsGlueCatalogTableOptimizerRetentionConfigurationPropertyToTerraform, true)(struct!.retentionConfiguration),
+    compaction_configuration: cdktn.listMapper(tfCatalogTableOptimizerCompactionConfigurationPropertyToTerraform, true)(struct!.compactionConfiguration),
+    orphan_file_deletion_configuration: cdktn.listMapper(tfCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToTerraform, true)(struct!.orphanFileDeletionConfiguration),
+    retention_configuration: cdktn.listMapper(tfCatalogTableOptimizerRetentionConfigurationPropertyToTerraform, true)(struct!.retentionConfiguration),
   }
 }
 
 
-export function awsGlueCatalogTableOptimizerConfigurationPropertyToHclTerraform(struct?: AwsGlueCatalogTableOptimizer.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfCatalogTableOptimizerConfigurationPropertyToHclTerraform(struct?: TfCatalogTableOptimizer.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,19 +506,19 @@ export function awsGlueCatalogTableOptimizerConfigurationPropertyToHclTerraform(
       storageClassType: "string",
     },
     compaction_configuration: {
-      value: cdktn.listMapperHcl(awsGlueCatalogTableOptimizerCompactionConfigurationPropertyToHclTerraform, true)(struct!.compactionConfiguration),
+      value: cdktn.listMapperHcl(tfCatalogTableOptimizerCompactionConfigurationPropertyToHclTerraform, true)(struct!.compactionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CompactionConfigurationPropertyList",
     },
     orphan_file_deletion_configuration: {
-      value: cdktn.listMapperHcl(awsGlueCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToHclTerraform, true)(struct!.orphanFileDeletionConfiguration),
+      value: cdktn.listMapperHcl(tfCatalogTableOptimizerOrphanFileDeletionConfigurationPropertyToHclTerraform, true)(struct!.orphanFileDeletionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OrphanFileDeletionConfigurationPropertyList",
     },
     retention_configuration: {
-      value: cdktn.listMapperHcl(awsGlueCatalogTableOptimizerRetentionConfigurationPropertyToHclTerraform, true)(struct!.retentionConfiguration),
+      value: cdktn.listMapperHcl(tfCatalogTableOptimizerRetentionConfigurationPropertyToHclTerraform, true)(struct!.retentionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RetentionConfigurationPropertyList",
@@ -530,18 +530,18 @@ export function awsGlueCatalogTableOptimizerConfigurationPropertyToHclTerraform(
 }
 
 
-export namespace AwsGlueCatalogTableOptimizer {
+export namespace TfCatalogTableOptimizer {
 export interface ConfigurationCompactionConfigurationIcebergConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#delete_file_threshold AwsGlueCatalogTableOptimizer#delete_file_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#delete_file_threshold TfCatalogTableOptimizer#delete_file_threshold}
   */
   readonly deleteFileThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#min_input_files AwsGlueCatalogTableOptimizer#min_input_files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#min_input_files TfCatalogTableOptimizer#min_input_files}
   */
   readonly minInputFiles?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#strategy AwsGlueCatalogTableOptimizer#strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#strategy TfCatalogTableOptimizer#strategy}
   */
   readonly strategy?: string;
 }
@@ -673,7 +673,7 @@ export interface CompactionConfigurationProperty {
   /**
   * iceberg_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#iceberg_configuration AwsGlueCatalogTableOptimizer#iceberg_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#iceberg_configuration TfCatalogTableOptimizer#iceberg_configuration}
   */
   readonly icebergConfiguration?: ConfigurationCompactionConfigurationIcebergConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -759,15 +759,15 @@ export class CompactionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationOrphanFileDeletionConfigurationIcebergConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#location AwsGlueCatalogTableOptimizer#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#location TfCatalogTableOptimizer#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#orphan_file_retention_period_in_days AwsGlueCatalogTableOptimizer#orphan_file_retention_period_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#orphan_file_retention_period_in_days TfCatalogTableOptimizer#orphan_file_retention_period_in_days}
   */
   readonly orphanFileRetentionPeriodInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#run_rate_in_hours AwsGlueCatalogTableOptimizer#run_rate_in_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#run_rate_in_hours TfCatalogTableOptimizer#run_rate_in_hours}
   */
   readonly runRateInHours?: number;
 }
@@ -899,7 +899,7 @@ export interface OrphanFileDeletionConfigurationProperty {
   /**
   * iceberg_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#iceberg_configuration AwsGlueCatalogTableOptimizer#iceberg_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#iceberg_configuration TfCatalogTableOptimizer#iceberg_configuration}
   */
   readonly icebergConfiguration?: ConfigurationOrphanFileDeletionConfigurationIcebergConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -985,19 +985,19 @@ export class OrphanFileDeletionConfigurationPropertyList extends cdktn.ComplexLi
 }
 export interface ConfigurationRetentionConfigurationIcebergConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#clean_expired_files AwsGlueCatalogTableOptimizer#clean_expired_files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#clean_expired_files TfCatalogTableOptimizer#clean_expired_files}
   */
   readonly cleanExpiredFiles?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#number_of_snapshots_to_retain AwsGlueCatalogTableOptimizer#number_of_snapshots_to_retain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#number_of_snapshots_to_retain TfCatalogTableOptimizer#number_of_snapshots_to_retain}
   */
   readonly numberOfSnapshotsToRetain?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#run_rate_in_hours AwsGlueCatalogTableOptimizer#run_rate_in_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#run_rate_in_hours TfCatalogTableOptimizer#run_rate_in_hours}
   */
   readonly runRateInHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#snapshot_retention_period_in_days AwsGlueCatalogTableOptimizer#snapshot_retention_period_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#snapshot_retention_period_in_days TfCatalogTableOptimizer#snapshot_retention_period_in_days}
   */
   readonly snapshotRetentionPeriodInDays?: number;
 }
@@ -1151,7 +1151,7 @@ export interface RetentionConfigurationProperty {
   /**
   * iceberg_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#iceberg_configuration AwsGlueCatalogTableOptimizer#iceberg_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#iceberg_configuration TfCatalogTableOptimizer#iceberg_configuration}
   */
   readonly icebergConfiguration?: ConfigurationRetentionConfigurationIcebergConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1237,29 +1237,29 @@ export class RetentionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#enabled AwsGlueCatalogTableOptimizer#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#enabled TfCatalogTableOptimizer#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#role_arn AwsGlueCatalogTableOptimizer#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#role_arn TfCatalogTableOptimizer#role_arn}
   */
   readonly roleArn: string;
   /**
   * compaction_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#compaction_configuration AwsGlueCatalogTableOptimizer#compaction_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#compaction_configuration TfCatalogTableOptimizer#compaction_configuration}
   */
   readonly compactionConfiguration?: CompactionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * orphan_file_deletion_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#orphan_file_deletion_configuration AwsGlueCatalogTableOptimizer#orphan_file_deletion_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#orphan_file_deletion_configuration TfCatalogTableOptimizer#orphan_file_deletion_configuration}
   */
   readonly orphanFileDeletionConfiguration?: OrphanFileDeletionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * retention_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#retention_configuration AwsGlueCatalogTableOptimizer#retention_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table_optimizer#retention_configuration TfCatalogTableOptimizer#retention_configuration}
   */
   readonly retentionConfiguration?: RetentionConfigurationProperty[] | cdktn.IResolvable;
 }

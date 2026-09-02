@@ -5,51 +5,51 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsInvoicingInvoiceUnitConfig extends cdktn.TerraformMetaArguments {
+export interface TfInvoiceUnitConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#description AwsInvoicingInvoiceUnit#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#description TfInvoiceUnit#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#invoice_receiver AwsInvoicingInvoiceUnit#invoice_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#invoice_receiver TfInvoiceUnit#invoice_receiver}
   */
   readonly invoiceReceiver: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#name AwsInvoicingInvoiceUnit#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#name TfInvoiceUnit#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#region AwsInvoicingInvoiceUnit#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#region TfInvoiceUnit#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#tags AwsInvoicingInvoiceUnit#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#tags TfInvoiceUnit#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#tax_inheritance_disabled AwsInvoicingInvoiceUnit#tax_inheritance_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#tax_inheritance_disabled TfInvoiceUnit#tax_inheritance_disabled}
   */
   readonly taxInheritanceDisabled?: boolean | cdktn.IResolvable;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#rule AwsInvoicingInvoiceUnit#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#rule TfInvoiceUnit#rule}
   */
-  readonly rule?: AwsInvoicingInvoiceUnit.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfInvoiceUnit.RuleProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#timeouts AwsInvoicingInvoiceUnit#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#timeouts TfInvoiceUnit#timeouts}
   */
-  readonly timeouts?: AwsInvoicingInvoiceUnit.TimeoutsProperty;
+  readonly timeouts?: TfInvoiceUnit.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit aws_invoicing_invoice_unit}
 */
-export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
+export class TfInvoiceUnit extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsInvoicingInvoiceUnit resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInvoiceUnit resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsInvoicingInvoiceUnit to import
-  * @param importFromId The id of the existing AwsInvoicingInvoiceUnit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsInvoicingInvoiceUnit to import is found
+  * @param importToId The construct id used in the generated config for the TfInvoiceUnit to import
+  * @param importFromId The id of the existing TfInvoiceUnit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInvoiceUnit to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_invoicing_invoice_unit", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsInvoicingInvoiceUnitConfig
+  * @param options TfInvoiceUnitConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsInvoicingInvoiceUnitConfig) {
+  public constructor(scope: Construct, id: string, config: TfInvoiceUnitConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_invoicing_invoice_unit',
       terraformGeneratorMetadata: {
@@ -218,11 +218,11 @@ export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsInvoicingInvoiceUnit.RulePropertyList(this, "rule", false);
+  private _rule = new TfInvoiceUnit.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsInvoicingInvoiceUnit.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfInvoiceUnit.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -234,11 +234,11 @@ export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsInvoicingInvoiceUnit.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfInvoiceUnit.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsInvoicingInvoiceUnit.TimeoutsProperty) {
+  public putTimeouts(value: TfInvoiceUnit.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -261,8 +261,8 @@ export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tax_inheritance_disabled: cdktn.booleanToTerraform(this._taxInheritanceDisabled),
-      rule: cdktn.listMapper(awsInvoicingInvoiceUnitRulePropertyToTerraform, true)(this._rule.internalValue),
-      timeouts: awsInvoicingInvoiceUnitTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      rule: cdktn.listMapper(tfInvoiceUnitRulePropertyToTerraform, true)(this._rule.internalValue),
+      timeouts: tfInvoiceUnitTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -305,16 +305,16 @@ export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsInvoicingInvoiceUnitRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfInvoiceUnitRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInvoicingInvoiceUnit.RulePropertyList",
+        storageClassType: "TfInvoiceUnit.RulePropertyList",
       },
       timeouts: {
-        value: awsInvoicingInvoiceUnitTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfInvoiceUnitTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsInvoicingInvoiceUnit.TimeoutsProperty",
+        storageClassType: "TfInvoiceUnit.TimeoutsProperty",
       },
     };
 
@@ -323,7 +323,7 @@ export class AwsInvoicingInvoiceUnit extends cdktn.TerraformResource {
   }
 }
 
-export function awsInvoicingInvoiceUnitRulePropertyToTerraform(struct?: AwsInvoicingInvoiceUnit.RuleProperty | cdktn.IResolvable): any {
+export function tfInvoiceUnitRulePropertyToTerraform(struct?: TfInvoiceUnit.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function awsInvoicingInvoiceUnitRulePropertyToTerraform(struct?: AwsInvoi
 }
 
 
-export function awsInvoicingInvoiceUnitRulePropertyToHclTerraform(struct?: AwsInvoicingInvoiceUnit.RuleProperty | cdktn.IResolvable): any {
+export function tfInvoiceUnitRulePropertyToHclTerraform(struct?: TfInvoiceUnit.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function awsInvoicingInvoiceUnitRulePropertyToHclTerraform(struct?: AwsIn
 }
 
 
-export function awsInvoicingInvoiceUnitTimeoutsPropertyToTerraform(struct?: AwsInvoicingInvoiceUnit.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInvoiceUnitTimeoutsPropertyToTerraform(struct?: TfInvoiceUnit.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function awsInvoicingInvoiceUnitTimeoutsPropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInvoicingInvoiceUnitTimeoutsPropertyToHclTerraform(struct?: AwsInvoicingInvoiceUnit.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInvoiceUnitTimeoutsPropertyToHclTerraform(struct?: TfInvoiceUnit.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,10 +397,10 @@ export function awsInvoicingInvoiceUnitTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsInvoicingInvoiceUnit {
+export namespace TfInvoiceUnit {
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#linked_accounts AwsInvoicingInvoiceUnit#linked_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#linked_accounts TfInvoiceUnit#linked_accounts}
   */
   readonly linkedAccounts: string[];
 }
@@ -485,19 +485,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#create AwsInvoicingInvoiceUnit#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#create TfInvoiceUnit#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#delete AwsInvoicingInvoiceUnit#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#delete TfInvoiceUnit#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#update AwsInvoicingInvoiceUnit#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/invoicing_invoice_unit#update TfInvoiceUnit#update}
   */
   readonly update?: string;
 }

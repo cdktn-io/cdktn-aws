@@ -5,120 +5,120 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsStoragegatewayNfsFileShareConfig extends cdktn.TerraformMetaArguments {
+export interface TfNfsFileShareConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#audit_destination_arn AwsStoragegatewayNfsFileShare#audit_destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#audit_destination_arn TfNfsFileShare#audit_destination_arn}
   */
   readonly auditDestinationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#bucket_region AwsStoragegatewayNfsFileShare#bucket_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#bucket_region TfNfsFileShare#bucket_region}
   */
   readonly bucketRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#client_list AwsStoragegatewayNfsFileShare#client_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#client_list TfNfsFileShare#client_list}
   */
   readonly clientList: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#default_storage_class AwsStoragegatewayNfsFileShare#default_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#default_storage_class TfNfsFileShare#default_storage_class}
   */
   readonly defaultStorageClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#file_share_name AwsStoragegatewayNfsFileShare#file_share_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#file_share_name TfNfsFileShare#file_share_name}
   */
   readonly fileShareName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#gateway_arn AwsStoragegatewayNfsFileShare#gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#gateway_arn TfNfsFileShare#gateway_arn}
   */
   readonly gatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#guess_mime_type_enabled AwsStoragegatewayNfsFileShare#guess_mime_type_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#guess_mime_type_enabled TfNfsFileShare#guess_mime_type_enabled}
   */
   readonly guessMimeTypeEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#id AwsStoragegatewayNfsFileShare#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#id TfNfsFileShare#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#kms_encrypted AwsStoragegatewayNfsFileShare#kms_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#kms_encrypted TfNfsFileShare#kms_encrypted}
   */
   readonly kmsEncrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#kms_key_arn AwsStoragegatewayNfsFileShare#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#kms_key_arn TfNfsFileShare#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#location_arn AwsStoragegatewayNfsFileShare#location_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#location_arn TfNfsFileShare#location_arn}
   */
   readonly locationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#notification_policy AwsStoragegatewayNfsFileShare#notification_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#notification_policy TfNfsFileShare#notification_policy}
   */
   readonly notificationPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#object_acl AwsStoragegatewayNfsFileShare#object_acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#object_acl TfNfsFileShare#object_acl}
   */
   readonly objectAcl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#read_only AwsStoragegatewayNfsFileShare#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#read_only TfNfsFileShare#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#region AwsStoragegatewayNfsFileShare#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#region TfNfsFileShare#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#requester_pays AwsStoragegatewayNfsFileShare#requester_pays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#requester_pays TfNfsFileShare#requester_pays}
   */
   readonly requesterPays?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#role_arn AwsStoragegatewayNfsFileShare#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#role_arn TfNfsFileShare#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#squash AwsStoragegatewayNfsFileShare#squash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#squash TfNfsFileShare#squash}
   */
   readonly squash?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#tags AwsStoragegatewayNfsFileShare#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#tags TfNfsFileShare#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#tags_all AwsStoragegatewayNfsFileShare#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#tags_all TfNfsFileShare#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#vpc_endpoint_dns_name AwsStoragegatewayNfsFileShare#vpc_endpoint_dns_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#vpc_endpoint_dns_name TfNfsFileShare#vpc_endpoint_dns_name}
   */
   readonly vpcEndpointDnsName?: string;
   /**
   * cache_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#cache_attributes AwsStoragegatewayNfsFileShare#cache_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#cache_attributes TfNfsFileShare#cache_attributes}
   */
-  readonly cacheAttributes?: AwsStoragegatewayNfsFileShare.CacheAttributesProperty;
+  readonly cacheAttributes?: TfNfsFileShare.CacheAttributesProperty;
   /**
   * nfs_file_share_defaults block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#nfs_file_share_defaults AwsStoragegatewayNfsFileShare#nfs_file_share_defaults}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#nfs_file_share_defaults TfNfsFileShare#nfs_file_share_defaults}
   */
-  readonly nfsFileShareDefaults?: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty;
+  readonly nfsFileShareDefaults?: TfNfsFileShare.NfsFileShareDefaultsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#timeouts AwsStoragegatewayNfsFileShare#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#timeouts TfNfsFileShare#timeouts}
   */
-  readonly timeouts?: AwsStoragegatewayNfsFileShare.TimeoutsProperty;
+  readonly timeouts?: TfNfsFileShare.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share aws_storagegateway_nfs_file_share}
 */
-export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
+export class TfNfsFileShare extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -129,11 +129,11 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsStoragegatewayNfsFileShare resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNfsFileShare resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsStoragegatewayNfsFileShare to import
-  * @param importFromId The id of the existing AwsStoragegatewayNfsFileShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsStoragegatewayNfsFileShare to import is found
+  * @param importToId The construct id used in the generated config for the TfNfsFileShare to import
+  * @param importFromId The id of the existing TfNfsFileShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNfsFileShare to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_nfs_file_share", importId: importFromId, provider });
@@ -148,9 +148,9 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsStoragegatewayNfsFileShareConfig
+  * @param options TfNfsFileShareConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsStoragegatewayNfsFileShareConfig) {
+  public constructor(scope: Construct, id: string, config: TfNfsFileShareConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_storagegateway_nfs_file_share',
       terraformGeneratorMetadata: {
@@ -536,11 +536,11 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
   }
 
   // cache_attributes - computed: false, optional: true, required: false
-  private _cacheAttributes = new AwsStoragegatewayNfsFileShare.CacheAttributesPropertyOutputReference(this, "cache_attributes");
+  private _cacheAttributes = new TfNfsFileShare.CacheAttributesPropertyOutputReference(this, "cache_attributes");
   public get cacheAttributes() {
     return this._cacheAttributes;
   }
-  public putCacheAttributes(value: AwsStoragegatewayNfsFileShare.CacheAttributesProperty) {
+  public putCacheAttributes(value: TfNfsFileShare.CacheAttributesProperty) {
     this._cacheAttributes.internalValue = value;
   }
   public resetCacheAttributes() {
@@ -552,11 +552,11 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
   }
 
   // nfs_file_share_defaults - computed: false, optional: true, required: false
-  private _nfsFileShareDefaults = new AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyOutputReference(this, "nfs_file_share_defaults");
+  private _nfsFileShareDefaults = new TfNfsFileShare.NfsFileShareDefaultsPropertyOutputReference(this, "nfs_file_share_defaults");
   public get nfsFileShareDefaults() {
     return this._nfsFileShareDefaults;
   }
-  public putNfsFileShareDefaults(value: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty) {
+  public putNfsFileShareDefaults(value: TfNfsFileShare.NfsFileShareDefaultsProperty) {
     this._nfsFileShareDefaults.internalValue = value;
   }
   public resetNfsFileShareDefaults() {
@@ -568,11 +568,11 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsStoragegatewayNfsFileShare.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfNfsFileShare.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsStoragegatewayNfsFileShare.TimeoutsProperty) {
+  public putTimeouts(value: TfNfsFileShare.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -610,9 +610,9 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_endpoint_dns_name: cdktn.stringToTerraform(this._vpcEndpointDnsName),
-      cache_attributes: awsStoragegatewayNfsFileShareCacheAttributesPropertyToTerraform(this._cacheAttributes.internalValue),
-      nfs_file_share_defaults: awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToTerraform(this._nfsFileShareDefaults.internalValue),
-      timeouts: awsStoragegatewayNfsFileShareTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      cache_attributes: tfNfsFileShareCacheAttributesPropertyToTerraform(this._cacheAttributes.internalValue),
+      nfs_file_share_defaults: tfNfsFileShareNfsFileShareDefaultsPropertyToTerraform(this._nfsFileShareDefaults.internalValue),
+      timeouts: tfNfsFileShareTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -745,22 +745,22 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cache_attributes: {
-        value: awsStoragegatewayNfsFileShareCacheAttributesPropertyToHclTerraform(this._cacheAttributes.internalValue),
+        value: tfNfsFileShareCacheAttributesPropertyToHclTerraform(this._cacheAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsStoragegatewayNfsFileShare.CacheAttributesPropertyList",
+        storageClassType: "TfNfsFileShare.CacheAttributesPropertyList",
       },
       nfs_file_share_defaults: {
-        value: awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToHclTerraform(this._nfsFileShareDefaults.internalValue),
+        value: tfNfsFileShareNfsFileShareDefaultsPropertyToHclTerraform(this._nfsFileShareDefaults.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyList",
+        storageClassType: "TfNfsFileShare.NfsFileShareDefaultsPropertyList",
       },
       timeouts: {
-        value: awsStoragegatewayNfsFileShareTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfNfsFileShareTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsStoragegatewayNfsFileShare.TimeoutsProperty",
+        storageClassType: "TfNfsFileShare.TimeoutsProperty",
       },
     };
 
@@ -769,7 +769,7 @@ export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
   }
 }
 
-export function awsStoragegatewayNfsFileShareCacheAttributesPropertyToTerraform(struct?: AwsStoragegatewayNfsFileShare.CacheAttributesPropertyOutputReference | AwsStoragegatewayNfsFileShare.CacheAttributesProperty): any {
+export function tfNfsFileShareCacheAttributesPropertyToTerraform(struct?: TfNfsFileShare.CacheAttributesPropertyOutputReference | TfNfsFileShare.CacheAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -780,7 +780,7 @@ export function awsStoragegatewayNfsFileShareCacheAttributesPropertyToTerraform(
 }
 
 
-export function awsStoragegatewayNfsFileShareCacheAttributesPropertyToHclTerraform(struct?: AwsStoragegatewayNfsFileShare.CacheAttributesPropertyOutputReference | AwsStoragegatewayNfsFileShare.CacheAttributesProperty): any {
+export function tfNfsFileShareCacheAttributesPropertyToHclTerraform(struct?: TfNfsFileShare.CacheAttributesPropertyOutputReference | TfNfsFileShare.CacheAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -799,7 +799,7 @@ export function awsStoragegatewayNfsFileShareCacheAttributesPropertyToHclTerrafo
 }
 
 
-export function awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToTerraform(struct?: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyOutputReference | AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty): any {
+export function tfNfsFileShareNfsFileShareDefaultsPropertyToTerraform(struct?: TfNfsFileShare.NfsFileShareDefaultsPropertyOutputReference | TfNfsFileShare.NfsFileShareDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -813,7 +813,7 @@ export function awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToTerra
 }
 
 
-export function awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToHclTerraform(struct?: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyOutputReference | AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty): any {
+export function tfNfsFileShareNfsFileShareDefaultsPropertyToHclTerraform(struct?: TfNfsFileShare.NfsFileShareDefaultsPropertyOutputReference | TfNfsFileShare.NfsFileShareDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToHclTe
 }
 
 
-export function awsStoragegatewayNfsFileShareTimeoutsPropertyToTerraform(struct?: AwsStoragegatewayNfsFileShare.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfNfsFileShareTimeoutsPropertyToTerraform(struct?: TfNfsFileShare.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -863,7 +863,7 @@ export function awsStoragegatewayNfsFileShareTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsStoragegatewayNfsFileShareTimeoutsPropertyToHclTerraform(struct?: AwsStoragegatewayNfsFileShare.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfNfsFileShareTimeoutsPropertyToHclTerraform(struct?: TfNfsFileShare.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -894,10 +894,10 @@ export function awsStoragegatewayNfsFileShareTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsStoragegatewayNfsFileShare {
+export namespace TfNfsFileShare {
 export interface CacheAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#cache_stale_timeout_in_seconds AwsStoragegatewayNfsFileShare#cache_stale_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#cache_stale_timeout_in_seconds TfNfsFileShare#cache_stale_timeout_in_seconds}
   */
   readonly cacheStaleTimeoutInSeconds?: number;
 }
@@ -951,19 +951,19 @@ export class CacheAttributesPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface NfsFileShareDefaultsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#directory_mode AwsStoragegatewayNfsFileShare#directory_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#directory_mode TfNfsFileShare#directory_mode}
   */
   readonly directoryMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#file_mode AwsStoragegatewayNfsFileShare#file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#file_mode TfNfsFileShare#file_mode}
   */
   readonly fileMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#group_id AwsStoragegatewayNfsFileShare#group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#group_id TfNfsFileShare#group_id}
   */
   readonly groupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#owner_id AwsStoragegatewayNfsFileShare#owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#owner_id TfNfsFileShare#owner_id}
   */
   readonly ownerId?: string;
 }
@@ -1083,15 +1083,15 @@ export class NfsFileShareDefaultsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#create AwsStoragegatewayNfsFileShare#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#create TfNfsFileShare#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#delete AwsStoragegatewayNfsFileShare#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#delete TfNfsFileShare#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#update AwsStoragegatewayNfsFileShare#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#update TfNfsFileShare#update}
   */
   readonly update?: string;
 }

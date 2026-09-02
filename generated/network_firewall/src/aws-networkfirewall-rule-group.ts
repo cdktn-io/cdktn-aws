@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkfirewallRuleGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfRuleGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#capacity AwsNetworkfirewallRuleGroup#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#capacity TfRuleGroup#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#description AwsNetworkfirewallRuleGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#description TfRuleGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#id AwsNetworkfirewallRuleGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#id TfRuleGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#name AwsNetworkfirewallRuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#region AwsNetworkfirewallRuleGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#region TfRuleGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules AwsNetworkfirewallRuleGroup#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules TfRuleGroup#rules}
   */
   readonly rules?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#tags AwsNetworkfirewallRuleGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#tags TfRuleGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#tags_all AwsNetworkfirewallRuleGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#tags_all TfRuleGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#type AwsNetworkfirewallRuleGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#type TfRuleGroup#type}
   */
   readonly type: string;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#encryption_configuration AwsNetworkfirewallRuleGroup#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#encryption_configuration TfRuleGroup#encryption_configuration}
   */
-  readonly encryptionConfiguration?: AwsNetworkfirewallRuleGroup.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: TfRuleGroup.EncryptionConfigurationProperty;
   /**
   * rule_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_group AwsNetworkfirewallRuleGroup#rule_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_group TfRuleGroup#rule_group}
   */
-  readonly ruleGroup?: AwsNetworkfirewallRuleGroup.RuleGroupProperty;
+  readonly ruleGroup?: TfRuleGroup.RuleGroupProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group aws_networkfirewall_rule_group}
 */
-export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
+export class TfRuleGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkfirewallRuleGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRuleGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkfirewallRuleGroup to import
-  * @param importFromId The id of the existing AwsNetworkfirewallRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkfirewallRuleGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfRuleGroup to import
+  * @param importFromId The id of the existing TfRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRuleGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_rule_group", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkfirewallRuleGroupConfig
+  * @param options TfRuleGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkfirewallRuleGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfRuleGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_rule_group',
       terraformGeneratorMetadata: {
@@ -275,11 +275,11 @@ export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new AwsNetworkfirewallRuleGroup.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new TfRuleGroup.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: AwsNetworkfirewallRuleGroup.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: TfRuleGroup.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -291,11 +291,11 @@ export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
   }
 
   // rule_group - computed: false, optional: true, required: false
-  private _ruleGroup = new AwsNetworkfirewallRuleGroup.RuleGroupPropertyOutputReference(this, "rule_group");
+  private _ruleGroup = new TfRuleGroup.RuleGroupPropertyOutputReference(this, "rule_group");
   public get ruleGroup() {
     return this._ruleGroup;
   }
-  public putRuleGroup(value: AwsNetworkfirewallRuleGroup.RuleGroupProperty) {
+  public putRuleGroup(value: TfRuleGroup.RuleGroupProperty) {
     this._ruleGroup.internalValue = value;
   }
   public resetRuleGroup() {
@@ -321,8 +321,8 @@ export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      encryption_configuration: awsNetworkfirewallRuleGroupEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
-      rule_group: awsNetworkfirewallRuleGroupRuleGroupPropertyToTerraform(this._ruleGroup.internalValue),
+      encryption_configuration: tfRuleGroupEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      rule_group: tfRuleGroupRuleGroupPropertyToTerraform(this._ruleGroup.internalValue),
     };
   }
 
@@ -383,16 +383,16 @@ export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       encryption_configuration: {
-        value: awsNetworkfirewallRuleGroupEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: tfRuleGroupEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkfirewallRuleGroup.EncryptionConfigurationPropertyList",
+        storageClassType: "TfRuleGroup.EncryptionConfigurationPropertyList",
       },
       rule_group: {
-        value: awsNetworkfirewallRuleGroupRuleGroupPropertyToHclTerraform(this._ruleGroup.internalValue),
+        value: tfRuleGroupRuleGroupPropertyToHclTerraform(this._ruleGroup.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkfirewallRuleGroup.RuleGroupPropertyList",
+        storageClassType: "TfRuleGroup.RuleGroupPropertyList",
       },
     };
 
@@ -401,7 +401,7 @@ export class AwsNetworkfirewallRuleGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkfirewallRuleGroupEncryptionConfigurationPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.EncryptionConfigurationPropertyOutputReference | AwsNetworkfirewallRuleGroup.EncryptionConfigurationProperty): any {
+export function tfRuleGroupEncryptionConfigurationPropertyToTerraform(struct?: TfRuleGroup.EncryptionConfigurationPropertyOutputReference | TfRuleGroup.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function awsNetworkfirewallRuleGroupEncryptionConfigurationPropertyToTerr
 }
 
 
-export function awsNetworkfirewallRuleGroupEncryptionConfigurationPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.EncryptionConfigurationPropertyOutputReference | AwsNetworkfirewallRuleGroup.EncryptionConfigurationProperty): any {
+export function tfRuleGroupEncryptionConfigurationPropertyToHclTerraform(struct?: TfRuleGroup.EncryptionConfigurationPropertyOutputReference | TfRuleGroup.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function awsNetworkfirewallRuleGroupEncryptionConfigurationPropertyToHclT
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetReferencePropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetReferenceProperty | cdktn.IResolvable): any {
+export function tfRuleGroupIpSetReferencePropertyToTerraform(struct?: TfRuleGroup.IpSetReferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function awsNetworkfirewallRuleGroupIpSetReferencePropertyToTerraform(str
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetReferencePropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetReferenceProperty | cdktn.IResolvable): any {
+export function tfRuleGroupIpSetReferencePropertyToHclTerraform(struct?: TfRuleGroup.IpSetReferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,19 +468,19 @@ export function awsNetworkfirewallRuleGroupIpSetReferencePropertyToHclTerraform(
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetReferencesPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetReferencesProperty | cdktn.IResolvable): any {
+export function tfRuleGroupIpSetReferencesPropertyToTerraform(struct?: TfRuleGroup.IpSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     key: cdktn.stringToTerraform(struct!.key),
-    ip_set_reference: cdktn.listMapper(awsNetworkfirewallRuleGroupIpSetReferencePropertyToTerraform, true)(struct!.ipSetReference),
+    ip_set_reference: cdktn.listMapper(tfRuleGroupIpSetReferencePropertyToTerraform, true)(struct!.ipSetReference),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetReferencesPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetReferencesProperty | cdktn.IResolvable): any {
+export function tfRuleGroupIpSetReferencesPropertyToHclTerraform(struct?: TfRuleGroup.IpSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function awsNetworkfirewallRuleGroupIpSetReferencesPropertyToHclTerraform
       storageClassType: "string",
     },
     ip_set_reference: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupIpSetReferencePropertyToHclTerraform, true)(struct!.ipSetReference),
+      value: cdktn.listMapperHcl(tfRuleGroupIpSetReferencePropertyToHclTerraform, true)(struct!.ipSetReference),
       isBlock: true,
       type: "list",
       storageClassType: "IpSetReferencePropertyList",
@@ -505,25 +505,25 @@ export function awsNetworkfirewallRuleGroupIpSetReferencesPropertyToHclTerraform
 }
 
 
-export function awsNetworkfirewallRuleGroupReferenceSetsPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.ReferenceSetsPropertyOutputReference | AwsNetworkfirewallRuleGroup.ReferenceSetsProperty): any {
+export function tfRuleGroupReferenceSetsPropertyToTerraform(struct?: TfRuleGroup.ReferenceSetsPropertyOutputReference | TfRuleGroup.ReferenceSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ip_set_references: cdktn.listMapper(awsNetworkfirewallRuleGroupIpSetReferencesPropertyToTerraform, true)(struct!.ipSetReferences),
+    ip_set_references: cdktn.listMapper(tfRuleGroupIpSetReferencesPropertyToTerraform, true)(struct!.ipSetReferences),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupReferenceSetsPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.ReferenceSetsPropertyOutputReference | AwsNetworkfirewallRuleGroup.ReferenceSetsProperty): any {
+export function tfRuleGroupReferenceSetsPropertyToHclTerraform(struct?: TfRuleGroup.ReferenceSetsPropertyOutputReference | TfRuleGroup.ReferenceSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ip_set_references: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupIpSetReferencesPropertyToHclTerraform, true)(struct!.ipSetReferences),
+      value: cdktn.listMapperHcl(tfRuleGroupIpSetReferencesPropertyToHclTerraform, true)(struct!.ipSetReferences),
       isBlock: true,
       type: "set",
       storageClassType: "IpSetReferencesPropertyList",
@@ -535,7 +535,7 @@ export function awsNetworkfirewallRuleGroupReferenceSetsPropertyToHclTerraform(s
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetPropertyOutputReference | AwsNetworkfirewallRuleGroup.IpSetProperty): any {
+export function tfRuleGroupIpSetPropertyToTerraform(struct?: TfRuleGroup.IpSetPropertyOutputReference | TfRuleGroup.IpSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function awsNetworkfirewallRuleGroupIpSetPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetPropertyOutputReference | AwsNetworkfirewallRuleGroup.IpSetProperty): any {
+export function tfRuleGroupIpSetPropertyToHclTerraform(struct?: TfRuleGroup.IpSetPropertyOutputReference | TfRuleGroup.IpSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,19 +565,19 @@ export function awsNetworkfirewallRuleGroupIpSetPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetsPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetsProperty | cdktn.IResolvable): any {
+export function tfRuleGroupIpSetsPropertyToTerraform(struct?: TfRuleGroup.IpSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     key: cdktn.stringToTerraform(struct!.key),
-    ip_set: awsNetworkfirewallRuleGroupIpSetPropertyToTerraform(struct!.ipSet),
+    ip_set: tfRuleGroupIpSetPropertyToTerraform(struct!.ipSet),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupIpSetsPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.IpSetsProperty | cdktn.IResolvable): any {
+export function tfRuleGroupIpSetsPropertyToHclTerraform(struct?: TfRuleGroup.IpSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -590,7 +590,7 @@ export function awsNetworkfirewallRuleGroupIpSetsPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     ip_set: {
-      value: awsNetworkfirewallRuleGroupIpSetPropertyToHclTerraform(struct!.ipSet),
+      value: tfRuleGroupIpSetPropertyToHclTerraform(struct!.ipSet),
       isBlock: true,
       type: "list",
       storageClassType: "IpSetPropertyList",
@@ -602,7 +602,7 @@ export function awsNetworkfirewallRuleGroupIpSetsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsNetworkfirewallRuleGroupPortSetPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.PortSetPropertyOutputReference | AwsNetworkfirewallRuleGroup.PortSetProperty): any {
+export function tfRuleGroupPortSetPropertyToTerraform(struct?: TfRuleGroup.PortSetPropertyOutputReference | TfRuleGroup.PortSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function awsNetworkfirewallRuleGroupPortSetPropertyToTerraform(struct?: A
 }
 
 
-export function awsNetworkfirewallRuleGroupPortSetPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.PortSetPropertyOutputReference | AwsNetworkfirewallRuleGroup.PortSetProperty): any {
+export function tfRuleGroupPortSetPropertyToHclTerraform(struct?: TfRuleGroup.PortSetPropertyOutputReference | TfRuleGroup.PortSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,19 +632,19 @@ export function awsNetworkfirewallRuleGroupPortSetPropertyToHclTerraform(struct?
 }
 
 
-export function awsNetworkfirewallRuleGroupPortSetsPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.PortSetsProperty | cdktn.IResolvable): any {
+export function tfRuleGroupPortSetsPropertyToTerraform(struct?: TfRuleGroup.PortSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     key: cdktn.stringToTerraform(struct!.key),
-    port_set: awsNetworkfirewallRuleGroupPortSetPropertyToTerraform(struct!.portSet),
+    port_set: tfRuleGroupPortSetPropertyToTerraform(struct!.portSet),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupPortSetsPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.PortSetsProperty | cdktn.IResolvable): any {
+export function tfRuleGroupPortSetsPropertyToHclTerraform(struct?: TfRuleGroup.PortSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -657,7 +657,7 @@ export function awsNetworkfirewallRuleGroupPortSetsPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     port_set: {
-      value: awsNetworkfirewallRuleGroupPortSetPropertyToHclTerraform(struct!.portSet),
+      value: tfRuleGroupPortSetPropertyToHclTerraform(struct!.portSet),
       isBlock: true,
       type: "list",
       storageClassType: "PortSetPropertyList",
@@ -669,32 +669,32 @@ export function awsNetworkfirewallRuleGroupPortSetsPropertyToHclTerraform(struct
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleVariablesPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleVariablesPropertyOutputReference | AwsNetworkfirewallRuleGroup.RuleVariablesProperty): any {
+export function tfRuleGroupRuleVariablesPropertyToTerraform(struct?: TfRuleGroup.RuleVariablesPropertyOutputReference | TfRuleGroup.RuleVariablesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ip_sets: cdktn.listMapper(awsNetworkfirewallRuleGroupIpSetsPropertyToTerraform, true)(struct!.ipSets),
-    port_sets: cdktn.listMapper(awsNetworkfirewallRuleGroupPortSetsPropertyToTerraform, true)(struct!.portSets),
+    ip_sets: cdktn.listMapper(tfRuleGroupIpSetsPropertyToTerraform, true)(struct!.ipSets),
+    port_sets: cdktn.listMapper(tfRuleGroupPortSetsPropertyToTerraform, true)(struct!.portSets),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleVariablesPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleVariablesPropertyOutputReference | AwsNetworkfirewallRuleGroup.RuleVariablesProperty): any {
+export function tfRuleGroupRuleVariablesPropertyToHclTerraform(struct?: TfRuleGroup.RuleVariablesPropertyOutputReference | TfRuleGroup.RuleVariablesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ip_sets: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupIpSetsPropertyToHclTerraform, true)(struct!.ipSets),
+      value: cdktn.listMapperHcl(tfRuleGroupIpSetsPropertyToHclTerraform, true)(struct!.ipSets),
       isBlock: true,
       type: "set",
       storageClassType: "IpSetsPropertyList",
     },
     port_sets: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupPortSetsPropertyToHclTerraform, true)(struct!.portSets),
+      value: cdktn.listMapperHcl(tfRuleGroupPortSetsPropertyToHclTerraform, true)(struct!.portSets),
       isBlock: true,
       type: "set",
       storageClassType: "PortSetsPropertyList",
@@ -706,7 +706,7 @@ export function awsNetworkfirewallRuleGroupRuleVariablesPropertyToHclTerraform(s
 }
 
 
-export function awsNetworkfirewallRuleGroupRulesSourceListPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.RulesSourceListPropertyOutputReference | AwsNetworkfirewallRuleGroup.RulesSourceListProperty): any {
+export function tfRuleGroupRulesSourceListPropertyToTerraform(struct?: TfRuleGroup.RulesSourceListPropertyOutputReference | TfRuleGroup.RulesSourceListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -719,7 +719,7 @@ export function awsNetworkfirewallRuleGroupRulesSourceListPropertyToTerraform(st
 }
 
 
-export function awsNetworkfirewallRuleGroupRulesSourceListPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.RulesSourceListPropertyOutputReference | AwsNetworkfirewallRuleGroup.RulesSourceListProperty): any {
+export function tfRuleGroupRulesSourceListPropertyToHclTerraform(struct?: TfRuleGroup.RulesSourceListPropertyOutputReference | TfRuleGroup.RulesSourceListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,7 +750,7 @@ export function awsNetworkfirewallRuleGroupRulesSourceListPropertyToHclTerraform
 }
 
 
-export function awsNetworkfirewallRuleGroupHeaderPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.HeaderPropertyOutputReference | AwsNetworkfirewallRuleGroup.HeaderProperty): any {
+export function tfRuleGroupHeaderPropertyToTerraform(struct?: TfRuleGroup.HeaderPropertyOutputReference | TfRuleGroup.HeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -766,7 +766,7 @@ export function awsNetworkfirewallRuleGroupHeaderPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsNetworkfirewallRuleGroupHeaderPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.HeaderPropertyOutputReference | AwsNetworkfirewallRuleGroup.HeaderProperty): any {
+export function tfRuleGroupHeaderPropertyToHclTerraform(struct?: TfRuleGroup.HeaderPropertyOutputReference | TfRuleGroup.HeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,7 +815,7 @@ export function awsNetworkfirewallRuleGroupHeaderPropertyToHclTerraform(struct?:
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleOptionPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleOptionProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleOptionPropertyToTerraform(struct?: TfRuleGroup.RuleOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -827,7 +827,7 @@ export function awsNetworkfirewallRuleGroupRuleOptionPropertyToTerraform(struct?
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleOptionPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleOptionProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleOptionPropertyToHclTerraform(struct?: TfRuleGroup.RuleOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -852,20 +852,20 @@ export function awsNetworkfirewallRuleGroupRuleOptionPropertyToHclTerraform(stru
 }
 
 
-export function awsNetworkfirewallRuleGroupStatefulRulePropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.StatefulRuleProperty | cdktn.IResolvable): any {
+export function tfRuleGroupStatefulRulePropertyToTerraform(struct?: TfRuleGroup.StatefulRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     action: cdktn.stringToTerraform(struct!.action),
-    header: awsNetworkfirewallRuleGroupHeaderPropertyToTerraform(struct!.header),
-    rule_option: cdktn.listMapper(awsNetworkfirewallRuleGroupRuleOptionPropertyToTerraform, true)(struct!.ruleOption),
+    header: tfRuleGroupHeaderPropertyToTerraform(struct!.header),
+    rule_option: cdktn.listMapper(tfRuleGroupRuleOptionPropertyToTerraform, true)(struct!.ruleOption),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupStatefulRulePropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.StatefulRuleProperty | cdktn.IResolvable): any {
+export function tfRuleGroupStatefulRulePropertyToHclTerraform(struct?: TfRuleGroup.StatefulRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,13 +878,13 @@ export function awsNetworkfirewallRuleGroupStatefulRulePropertyToHclTerraform(st
       storageClassType: "string",
     },
     header: {
-      value: awsNetworkfirewallRuleGroupHeaderPropertyToHclTerraform(struct!.header),
+      value: tfRuleGroupHeaderPropertyToHclTerraform(struct!.header),
       isBlock: true,
       type: "list",
       storageClassType: "HeaderPropertyList",
     },
     rule_option: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupRuleOptionPropertyToHclTerraform, true)(struct!.ruleOption),
+      value: cdktn.listMapperHcl(tfRuleGroupRuleOptionPropertyToHclTerraform, true)(struct!.ruleOption),
       isBlock: true,
       type: "set",
       storageClassType: "RuleOptionPropertyList",
@@ -896,7 +896,7 @@ export function awsNetworkfirewallRuleGroupStatefulRulePropertyToHclTerraform(st
 }
 
 
-export function awsNetworkfirewallRuleGroupDimensionPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.DimensionProperty | cdktn.IResolvable): any {
+export function tfRuleGroupDimensionPropertyToTerraform(struct?: TfRuleGroup.DimensionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -907,7 +907,7 @@ export function awsNetworkfirewallRuleGroupDimensionPropertyToTerraform(struct?:
 }
 
 
-export function awsNetworkfirewallRuleGroupDimensionPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.DimensionProperty | cdktn.IResolvable): any {
+export function tfRuleGroupDimensionPropertyToHclTerraform(struct?: TfRuleGroup.DimensionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -926,25 +926,25 @@ export function awsNetworkfirewallRuleGroupDimensionPropertyToHclTerraform(struc
 }
 
 
-export function awsNetworkfirewallRuleGroupPublishMetricActionPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.PublishMetricActionPropertyOutputReference | AwsNetworkfirewallRuleGroup.PublishMetricActionProperty): any {
+export function tfRuleGroupPublishMetricActionPropertyToTerraform(struct?: TfRuleGroup.PublishMetricActionPropertyOutputReference | TfRuleGroup.PublishMetricActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    dimension: cdktn.listMapper(awsNetworkfirewallRuleGroupDimensionPropertyToTerraform, true)(struct!.dimension),
+    dimension: cdktn.listMapper(tfRuleGroupDimensionPropertyToTerraform, true)(struct!.dimension),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupPublishMetricActionPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.PublishMetricActionPropertyOutputReference | AwsNetworkfirewallRuleGroup.PublishMetricActionProperty): any {
+export function tfRuleGroupPublishMetricActionPropertyToHclTerraform(struct?: TfRuleGroup.PublishMetricActionPropertyOutputReference | TfRuleGroup.PublishMetricActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     dimension: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupDimensionPropertyToHclTerraform, true)(struct!.dimension),
+      value: cdktn.listMapperHcl(tfRuleGroupDimensionPropertyToHclTerraform, true)(struct!.dimension),
       isBlock: true,
       type: "set",
       storageClassType: "DimensionPropertyList",
@@ -956,25 +956,25 @@ export function awsNetworkfirewallRuleGroupPublishMetricActionPropertyToHclTerra
 }
 
 
-export function awsNetworkfirewallRuleGroupActionDefinitionPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.ActionDefinitionPropertyOutputReference | AwsNetworkfirewallRuleGroup.ActionDefinitionProperty): any {
+export function tfRuleGroupActionDefinitionPropertyToTerraform(struct?: TfRuleGroup.ActionDefinitionPropertyOutputReference | TfRuleGroup.ActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    publish_metric_action: awsNetworkfirewallRuleGroupPublishMetricActionPropertyToTerraform(struct!.publishMetricAction),
+    publish_metric_action: tfRuleGroupPublishMetricActionPropertyToTerraform(struct!.publishMetricAction),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupActionDefinitionPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.ActionDefinitionPropertyOutputReference | AwsNetworkfirewallRuleGroup.ActionDefinitionProperty): any {
+export function tfRuleGroupActionDefinitionPropertyToHclTerraform(struct?: TfRuleGroup.ActionDefinitionPropertyOutputReference | TfRuleGroup.ActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     publish_metric_action: {
-      value: awsNetworkfirewallRuleGroupPublishMetricActionPropertyToHclTerraform(struct!.publishMetricAction),
+      value: tfRuleGroupPublishMetricActionPropertyToHclTerraform(struct!.publishMetricAction),
       isBlock: true,
       type: "list",
       storageClassType: "PublishMetricActionPropertyList",
@@ -986,19 +986,19 @@ export function awsNetworkfirewallRuleGroupActionDefinitionPropertyToHclTerrafor
 }
 
 
-export function awsNetworkfirewallRuleGroupCustomActionPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.CustomActionProperty | cdktn.IResolvable): any {
+export function tfRuleGroupCustomActionPropertyToTerraform(struct?: TfRuleGroup.CustomActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     action_name: cdktn.stringToTerraform(struct!.actionName),
-    action_definition: awsNetworkfirewallRuleGroupActionDefinitionPropertyToTerraform(struct!.actionDefinition),
+    action_definition: tfRuleGroupActionDefinitionPropertyToTerraform(struct!.actionDefinition),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupCustomActionPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.CustomActionProperty | cdktn.IResolvable): any {
+export function tfRuleGroupCustomActionPropertyToHclTerraform(struct?: TfRuleGroup.CustomActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1011,7 +1011,7 @@ export function awsNetworkfirewallRuleGroupCustomActionPropertyToHclTerraform(st
       storageClassType: "string",
     },
     action_definition: {
-      value: awsNetworkfirewallRuleGroupActionDefinitionPropertyToHclTerraform(struct!.actionDefinition),
+      value: tfRuleGroupActionDefinitionPropertyToHclTerraform(struct!.actionDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "ActionDefinitionPropertyList",
@@ -1023,7 +1023,7 @@ export function awsNetworkfirewallRuleGroupCustomActionPropertyToHclTerraform(st
 }
 
 
-export function awsNetworkfirewallRuleGroupDestinationPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.DestinationProperty | cdktn.IResolvable): any {
+export function tfRuleGroupDestinationPropertyToTerraform(struct?: TfRuleGroup.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1034,7 +1034,7 @@ export function awsNetworkfirewallRuleGroupDestinationPropertyToTerraform(struct
 }
 
 
-export function awsNetworkfirewallRuleGroupDestinationPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.DestinationProperty | cdktn.IResolvable): any {
+export function tfRuleGroupDestinationPropertyToHclTerraform(struct?: TfRuleGroup.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1053,7 +1053,7 @@ export function awsNetworkfirewallRuleGroupDestinationPropertyToHclTerraform(str
 }
 
 
-export function awsNetworkfirewallRuleGroupDestinationPortPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.DestinationPortProperty | cdktn.IResolvable): any {
+export function tfRuleGroupDestinationPortPropertyToTerraform(struct?: TfRuleGroup.DestinationPortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1065,7 +1065,7 @@ export function awsNetworkfirewallRuleGroupDestinationPortPropertyToTerraform(st
 }
 
 
-export function awsNetworkfirewallRuleGroupDestinationPortPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.DestinationPortProperty | cdktn.IResolvable): any {
+export function tfRuleGroupDestinationPortPropertyToHclTerraform(struct?: TfRuleGroup.DestinationPortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1090,7 +1090,7 @@ export function awsNetworkfirewallRuleGroupDestinationPortPropertyToHclTerraform
 }
 
 
-export function awsNetworkfirewallRuleGroupSourcePropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.SourceProperty | cdktn.IResolvable): any {
+export function tfRuleGroupSourcePropertyToTerraform(struct?: TfRuleGroup.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1101,7 +1101,7 @@ export function awsNetworkfirewallRuleGroupSourcePropertyToTerraform(struct?: Aw
 }
 
 
-export function awsNetworkfirewallRuleGroupSourcePropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.SourceProperty | cdktn.IResolvable): any {
+export function tfRuleGroupSourcePropertyToHclTerraform(struct?: TfRuleGroup.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1120,7 +1120,7 @@ export function awsNetworkfirewallRuleGroupSourcePropertyToHclTerraform(struct?:
 }
 
 
-export function awsNetworkfirewallRuleGroupSourcePortPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.SourcePortProperty | cdktn.IResolvable): any {
+export function tfRuleGroupSourcePortPropertyToTerraform(struct?: TfRuleGroup.SourcePortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1132,7 +1132,7 @@ export function awsNetworkfirewallRuleGroupSourcePortPropertyToTerraform(struct?
 }
 
 
-export function awsNetworkfirewallRuleGroupSourcePortPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.SourcePortProperty | cdktn.IResolvable): any {
+export function tfRuleGroupSourcePortPropertyToHclTerraform(struct?: TfRuleGroup.SourcePortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1157,7 +1157,7 @@ export function awsNetworkfirewallRuleGroupSourcePortPropertyToHclTerraform(stru
 }
 
 
-export function awsNetworkfirewallRuleGroupTcpFlagPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.TcpFlagProperty | cdktn.IResolvable): any {
+export function tfRuleGroupTcpFlagPropertyToTerraform(struct?: TfRuleGroup.TcpFlagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,7 +1169,7 @@ export function awsNetworkfirewallRuleGroupTcpFlagPropertyToTerraform(struct?: A
 }
 
 
-export function awsNetworkfirewallRuleGroupTcpFlagPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.TcpFlagProperty | cdktn.IResolvable): any {
+export function tfRuleGroupTcpFlagPropertyToHclTerraform(struct?: TfRuleGroup.TcpFlagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1194,23 +1194,23 @@ export function awsNetworkfirewallRuleGroupTcpFlagPropertyToHclTerraform(struct?
 }
 
 
-export function awsNetworkfirewallRuleGroupMatchAttributesPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.MatchAttributesPropertyOutputReference | AwsNetworkfirewallRuleGroup.MatchAttributesProperty): any {
+export function tfRuleGroupMatchAttributesPropertyToTerraform(struct?: TfRuleGroup.MatchAttributesPropertyOutputReference | TfRuleGroup.MatchAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     protocols: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.protocols),
-    destination: cdktn.listMapper(awsNetworkfirewallRuleGroupDestinationPropertyToTerraform, true)(struct!.destination),
-    destination_port: cdktn.listMapper(awsNetworkfirewallRuleGroupDestinationPortPropertyToTerraform, true)(struct!.destinationPort),
-    source: cdktn.listMapper(awsNetworkfirewallRuleGroupSourcePropertyToTerraform, true)(struct!.source),
-    source_port: cdktn.listMapper(awsNetworkfirewallRuleGroupSourcePortPropertyToTerraform, true)(struct!.sourcePort),
-    tcp_flag: cdktn.listMapper(awsNetworkfirewallRuleGroupTcpFlagPropertyToTerraform, true)(struct!.tcpFlag),
+    destination: cdktn.listMapper(tfRuleGroupDestinationPropertyToTerraform, true)(struct!.destination),
+    destination_port: cdktn.listMapper(tfRuleGroupDestinationPortPropertyToTerraform, true)(struct!.destinationPort),
+    source: cdktn.listMapper(tfRuleGroupSourcePropertyToTerraform, true)(struct!.source),
+    source_port: cdktn.listMapper(tfRuleGroupSourcePortPropertyToTerraform, true)(struct!.sourcePort),
+    tcp_flag: cdktn.listMapper(tfRuleGroupTcpFlagPropertyToTerraform, true)(struct!.tcpFlag),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupMatchAttributesPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.MatchAttributesPropertyOutputReference | AwsNetworkfirewallRuleGroup.MatchAttributesProperty): any {
+export function tfRuleGroupMatchAttributesPropertyToHclTerraform(struct?: TfRuleGroup.MatchAttributesPropertyOutputReference | TfRuleGroup.MatchAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1223,31 +1223,31 @@ export function awsNetworkfirewallRuleGroupMatchAttributesPropertyToHclTerraform
       storageClassType: "numberList",
     },
     destination: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(tfRuleGroupDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "set",
       storageClassType: "DestinationPropertyList",
     },
     destination_port: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupDestinationPortPropertyToHclTerraform, true)(struct!.destinationPort),
+      value: cdktn.listMapperHcl(tfRuleGroupDestinationPortPropertyToHclTerraform, true)(struct!.destinationPort),
       isBlock: true,
       type: "set",
       storageClassType: "DestinationPortPropertyList",
     },
     source: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupSourcePropertyToHclTerraform, true)(struct!.source),
+      value: cdktn.listMapperHcl(tfRuleGroupSourcePropertyToHclTerraform, true)(struct!.source),
       isBlock: true,
       type: "set",
       storageClassType: "SourcePropertyList",
     },
     source_port: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupSourcePortPropertyToHclTerraform, true)(struct!.sourcePort),
+      value: cdktn.listMapperHcl(tfRuleGroupSourcePortPropertyToHclTerraform, true)(struct!.sourcePort),
       isBlock: true,
       type: "set",
       storageClassType: "SourcePortPropertyList",
     },
     tcp_flag: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupTcpFlagPropertyToHclTerraform, true)(struct!.tcpFlag),
+      value: cdktn.listMapperHcl(tfRuleGroupTcpFlagPropertyToHclTerraform, true)(struct!.tcpFlag),
       isBlock: true,
       type: "set",
       storageClassType: "TcpFlagPropertyList",
@@ -1259,19 +1259,19 @@ export function awsNetworkfirewallRuleGroupMatchAttributesPropertyToHclTerraform
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleDefinitionPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleDefinitionPropertyOutputReference | AwsNetworkfirewallRuleGroup.RuleDefinitionProperty): any {
+export function tfRuleGroupRuleDefinitionPropertyToTerraform(struct?: TfRuleGroup.RuleDefinitionPropertyOutputReference | TfRuleGroup.RuleDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     actions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.actions),
-    match_attributes: awsNetworkfirewallRuleGroupMatchAttributesPropertyToTerraform(struct!.matchAttributes),
+    match_attributes: tfRuleGroupMatchAttributesPropertyToTerraform(struct!.matchAttributes),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleDefinitionPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleDefinitionPropertyOutputReference | AwsNetworkfirewallRuleGroup.RuleDefinitionProperty): any {
+export function tfRuleGroupRuleDefinitionPropertyToHclTerraform(struct?: TfRuleGroup.RuleDefinitionPropertyOutputReference | TfRuleGroup.RuleDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1284,7 +1284,7 @@ export function awsNetworkfirewallRuleGroupRuleDefinitionPropertyToHclTerraform(
       storageClassType: "stringList",
     },
     match_attributes: {
-      value: awsNetworkfirewallRuleGroupMatchAttributesPropertyToHclTerraform(struct!.matchAttributes),
+      value: tfRuleGroupMatchAttributesPropertyToHclTerraform(struct!.matchAttributes),
       isBlock: true,
       type: "list",
       storageClassType: "MatchAttributesPropertyList",
@@ -1296,19 +1296,19 @@ export function awsNetworkfirewallRuleGroupRuleDefinitionPropertyToHclTerraform(
 }
 
 
-export function awsNetworkfirewallRuleGroupStatelessRulePropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.StatelessRuleProperty | cdktn.IResolvable): any {
+export function tfRuleGroupStatelessRulePropertyToTerraform(struct?: TfRuleGroup.StatelessRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     priority: cdktn.numberToTerraform(struct!.priority),
-    rule_definition: awsNetworkfirewallRuleGroupRuleDefinitionPropertyToTerraform(struct!.ruleDefinition),
+    rule_definition: tfRuleGroupRuleDefinitionPropertyToTerraform(struct!.ruleDefinition),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupStatelessRulePropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.StatelessRuleProperty | cdktn.IResolvable): any {
+export function tfRuleGroupStatelessRulePropertyToHclTerraform(struct?: TfRuleGroup.StatelessRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1321,7 +1321,7 @@ export function awsNetworkfirewallRuleGroupStatelessRulePropertyToHclTerraform(s
       storageClassType: "number",
     },
     rule_definition: {
-      value: awsNetworkfirewallRuleGroupRuleDefinitionPropertyToHclTerraform(struct!.ruleDefinition),
+      value: tfRuleGroupRuleDefinitionPropertyToHclTerraform(struct!.ruleDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "RuleDefinitionPropertyList",
@@ -1333,32 +1333,32 @@ export function awsNetworkfirewallRuleGroupStatelessRulePropertyToHclTerraform(s
 }
 
 
-export function awsNetworkfirewallRuleGroupStatelessRulesAndCustomActionsPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.StatelessRulesAndCustomActionsPropertyOutputReference | AwsNetworkfirewallRuleGroup.StatelessRulesAndCustomActionsProperty): any {
+export function tfRuleGroupStatelessRulesAndCustomActionsPropertyToTerraform(struct?: TfRuleGroup.StatelessRulesAndCustomActionsPropertyOutputReference | TfRuleGroup.StatelessRulesAndCustomActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_action: cdktn.listMapper(awsNetworkfirewallRuleGroupCustomActionPropertyToTerraform, true)(struct!.customAction),
-    stateless_rule: cdktn.listMapper(awsNetworkfirewallRuleGroupStatelessRulePropertyToTerraform, true)(struct!.statelessRule),
+    custom_action: cdktn.listMapper(tfRuleGroupCustomActionPropertyToTerraform, true)(struct!.customAction),
+    stateless_rule: cdktn.listMapper(tfRuleGroupStatelessRulePropertyToTerraform, true)(struct!.statelessRule),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupStatelessRulesAndCustomActionsPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.StatelessRulesAndCustomActionsPropertyOutputReference | AwsNetworkfirewallRuleGroup.StatelessRulesAndCustomActionsProperty): any {
+export function tfRuleGroupStatelessRulesAndCustomActionsPropertyToHclTerraform(struct?: TfRuleGroup.StatelessRulesAndCustomActionsPropertyOutputReference | TfRuleGroup.StatelessRulesAndCustomActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_action: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupCustomActionPropertyToHclTerraform, true)(struct!.customAction),
+      value: cdktn.listMapperHcl(tfRuleGroupCustomActionPropertyToHclTerraform, true)(struct!.customAction),
       isBlock: true,
       type: "set",
       storageClassType: "CustomActionPropertyList",
     },
     stateless_rule: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupStatelessRulePropertyToHclTerraform, true)(struct!.statelessRule),
+      value: cdktn.listMapperHcl(tfRuleGroupStatelessRulePropertyToHclTerraform, true)(struct!.statelessRule),
       isBlock: true,
       type: "set",
       storageClassType: "StatelessRulePropertyList",
@@ -1370,21 +1370,21 @@ export function awsNetworkfirewallRuleGroupStatelessRulesAndCustomActionsPropert
 }
 
 
-export function awsNetworkfirewallRuleGroupRulesSourcePropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.RulesSourcePropertyOutputReference | AwsNetworkfirewallRuleGroup.RulesSourceProperty): any {
+export function tfRuleGroupRulesSourcePropertyToTerraform(struct?: TfRuleGroup.RulesSourcePropertyOutputReference | TfRuleGroup.RulesSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     rules_string: cdktn.stringToTerraform(struct!.rulesString),
-    rules_source_list: awsNetworkfirewallRuleGroupRulesSourceListPropertyToTerraform(struct!.rulesSourceList),
-    stateful_rule: cdktn.listMapper(awsNetworkfirewallRuleGroupStatefulRulePropertyToTerraform, true)(struct!.statefulRule),
-    stateless_rules_and_custom_actions: awsNetworkfirewallRuleGroupStatelessRulesAndCustomActionsPropertyToTerraform(struct!.statelessRulesAndCustomActions),
+    rules_source_list: tfRuleGroupRulesSourceListPropertyToTerraform(struct!.rulesSourceList),
+    stateful_rule: cdktn.listMapper(tfRuleGroupStatefulRulePropertyToTerraform, true)(struct!.statefulRule),
+    stateless_rules_and_custom_actions: tfRuleGroupStatelessRulesAndCustomActionsPropertyToTerraform(struct!.statelessRulesAndCustomActions),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupRulesSourcePropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.RulesSourcePropertyOutputReference | AwsNetworkfirewallRuleGroup.RulesSourceProperty): any {
+export function tfRuleGroupRulesSourcePropertyToHclTerraform(struct?: TfRuleGroup.RulesSourcePropertyOutputReference | TfRuleGroup.RulesSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1397,19 +1397,19 @@ export function awsNetworkfirewallRuleGroupRulesSourcePropertyToHclTerraform(str
       storageClassType: "string",
     },
     rules_source_list: {
-      value: awsNetworkfirewallRuleGroupRulesSourceListPropertyToHclTerraform(struct!.rulesSourceList),
+      value: tfRuleGroupRulesSourceListPropertyToHclTerraform(struct!.rulesSourceList),
       isBlock: true,
       type: "list",
       storageClassType: "RulesSourceListPropertyList",
     },
     stateful_rule: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallRuleGroupStatefulRulePropertyToHclTerraform, true)(struct!.statefulRule),
+      value: cdktn.listMapperHcl(tfRuleGroupStatefulRulePropertyToHclTerraform, true)(struct!.statefulRule),
       isBlock: true,
       type: "list",
       storageClassType: "StatefulRulePropertyList",
     },
     stateless_rules_and_custom_actions: {
-      value: awsNetworkfirewallRuleGroupStatelessRulesAndCustomActionsPropertyToHclTerraform(struct!.statelessRulesAndCustomActions),
+      value: tfRuleGroupStatelessRulesAndCustomActionsPropertyToHclTerraform(struct!.statelessRulesAndCustomActions),
       isBlock: true,
       type: "list",
       storageClassType: "StatelessRulesAndCustomActionsPropertyList",
@@ -1421,7 +1421,7 @@ export function awsNetworkfirewallRuleGroupRulesSourcePropertyToHclTerraform(str
 }
 
 
-export function awsNetworkfirewallRuleGroupStatefulRuleOptionsPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.StatefulRuleOptionsPropertyOutputReference | AwsNetworkfirewallRuleGroup.StatefulRuleOptionsProperty): any {
+export function tfRuleGroupStatefulRuleOptionsPropertyToTerraform(struct?: TfRuleGroup.StatefulRuleOptionsPropertyOutputReference | TfRuleGroup.StatefulRuleOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1432,7 +1432,7 @@ export function awsNetworkfirewallRuleGroupStatefulRuleOptionsPropertyToTerrafor
 }
 
 
-export function awsNetworkfirewallRuleGroupStatefulRuleOptionsPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.StatefulRuleOptionsPropertyOutputReference | AwsNetworkfirewallRuleGroup.StatefulRuleOptionsProperty): any {
+export function tfRuleGroupStatefulRuleOptionsPropertyToHclTerraform(struct?: TfRuleGroup.StatefulRuleOptionsPropertyOutputReference | TfRuleGroup.StatefulRuleOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1451,46 +1451,46 @@ export function awsNetworkfirewallRuleGroupStatefulRuleOptionsPropertyToHclTerra
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleGroupPropertyToTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleGroupPropertyOutputReference | AwsNetworkfirewallRuleGroup.RuleGroupProperty): any {
+export function tfRuleGroupRuleGroupPropertyToTerraform(struct?: TfRuleGroup.RuleGroupPropertyOutputReference | TfRuleGroup.RuleGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    reference_sets: awsNetworkfirewallRuleGroupReferenceSetsPropertyToTerraform(struct!.referenceSets),
-    rule_variables: awsNetworkfirewallRuleGroupRuleVariablesPropertyToTerraform(struct!.ruleVariables),
-    rules_source: awsNetworkfirewallRuleGroupRulesSourcePropertyToTerraform(struct!.rulesSource),
-    stateful_rule_options: awsNetworkfirewallRuleGroupStatefulRuleOptionsPropertyToTerraform(struct!.statefulRuleOptions),
+    reference_sets: tfRuleGroupReferenceSetsPropertyToTerraform(struct!.referenceSets),
+    rule_variables: tfRuleGroupRuleVariablesPropertyToTerraform(struct!.ruleVariables),
+    rules_source: tfRuleGroupRulesSourcePropertyToTerraform(struct!.rulesSource),
+    stateful_rule_options: tfRuleGroupStatefulRuleOptionsPropertyToTerraform(struct!.statefulRuleOptions),
   }
 }
 
 
-export function awsNetworkfirewallRuleGroupRuleGroupPropertyToHclTerraform(struct?: AwsNetworkfirewallRuleGroup.RuleGroupPropertyOutputReference | AwsNetworkfirewallRuleGroup.RuleGroupProperty): any {
+export function tfRuleGroupRuleGroupPropertyToHclTerraform(struct?: TfRuleGroup.RuleGroupPropertyOutputReference | TfRuleGroup.RuleGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     reference_sets: {
-      value: awsNetworkfirewallRuleGroupReferenceSetsPropertyToHclTerraform(struct!.referenceSets),
+      value: tfRuleGroupReferenceSetsPropertyToHclTerraform(struct!.referenceSets),
       isBlock: true,
       type: "list",
       storageClassType: "ReferenceSetsPropertyList",
     },
     rule_variables: {
-      value: awsNetworkfirewallRuleGroupRuleVariablesPropertyToHclTerraform(struct!.ruleVariables),
+      value: tfRuleGroupRuleVariablesPropertyToHclTerraform(struct!.ruleVariables),
       isBlock: true,
       type: "list",
       storageClassType: "RuleVariablesPropertyList",
     },
     rules_source: {
-      value: awsNetworkfirewallRuleGroupRulesSourcePropertyToHclTerraform(struct!.rulesSource),
+      value: tfRuleGroupRulesSourcePropertyToHclTerraform(struct!.rulesSource),
       isBlock: true,
       type: "list",
       storageClassType: "RulesSourcePropertyList",
     },
     stateful_rule_options: {
-      value: awsNetworkfirewallRuleGroupStatefulRuleOptionsPropertyToHclTerraform(struct!.statefulRuleOptions),
+      value: tfRuleGroupStatefulRuleOptionsPropertyToHclTerraform(struct!.statefulRuleOptions),
       isBlock: true,
       type: "list",
       storageClassType: "StatefulRuleOptionsPropertyList",
@@ -1502,14 +1502,14 @@ export function awsNetworkfirewallRuleGroupRuleGroupPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsNetworkfirewallRuleGroup {
+export namespace TfRuleGroup {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key_id AwsNetworkfirewallRuleGroup#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key_id TfRuleGroup#key_id}
   */
   readonly keyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#type AwsNetworkfirewallRuleGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#type TfRuleGroup#type}
   */
   readonly type: string;
 }
@@ -1582,7 +1582,7 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface IpSetReferenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#reference_arn AwsNetworkfirewallRuleGroup#reference_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#reference_arn TfRuleGroup#reference_arn}
   */
   readonly referenceArn: string;
 }
@@ -1665,13 +1665,13 @@ export class IpSetReferencePropertyList extends cdktn.ComplexList {
 }
 export interface IpSetReferencesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key AwsNetworkfirewallRuleGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key TfRuleGroup#key}
   */
   readonly key: string;
   /**
   * ip_set_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_set_reference AwsNetworkfirewallRuleGroup#ip_set_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_set_reference TfRuleGroup#ip_set_reference}
   */
   readonly ipSetReference: IpSetReferenceProperty[] | cdktn.IResolvable;
 }
@@ -1775,7 +1775,7 @@ export interface ReferenceSetsProperty {
   /**
   * ip_set_references block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_set_references AwsNetworkfirewallRuleGroup#ip_set_references}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_set_references TfRuleGroup#ip_set_references}
   */
   readonly ipSetReferences?: IpSetReferencesProperty[] | cdktn.IResolvable;
 }
@@ -1829,7 +1829,7 @@ export class ReferenceSetsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IpSetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#definition AwsNetworkfirewallRuleGroup#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#definition TfRuleGroup#definition}
   */
   readonly definition: string[];
 }
@@ -1880,13 +1880,13 @@ export class IpSetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IpSetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key AwsNetworkfirewallRuleGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key TfRuleGroup#key}
   */
   readonly key: string;
   /**
   * ip_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_set AwsNetworkfirewallRuleGroup#ip_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_set TfRuleGroup#ip_set}
   */
   readonly ipSet: IpSetProperty;
 }
@@ -1988,7 +1988,7 @@ export class IpSetsPropertyList extends cdktn.ComplexList {
 }
 export interface PortSetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#definition AwsNetworkfirewallRuleGroup#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#definition TfRuleGroup#definition}
   */
   readonly definition: string[];
 }
@@ -2039,13 +2039,13 @@ export class PortSetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PortSetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key AwsNetworkfirewallRuleGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#key TfRuleGroup#key}
   */
   readonly key: string;
   /**
   * port_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#port_set AwsNetworkfirewallRuleGroup#port_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#port_set TfRuleGroup#port_set}
   */
   readonly portSet: PortSetProperty;
 }
@@ -2149,13 +2149,13 @@ export interface RuleVariablesProperty {
   /**
   * ip_sets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_sets AwsNetworkfirewallRuleGroup#ip_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#ip_sets TfRuleGroup#ip_sets}
   */
   readonly ipSets?: IpSetsProperty[] | cdktn.IResolvable;
   /**
   * port_sets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#port_sets AwsNetworkfirewallRuleGroup#port_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#port_sets TfRuleGroup#port_sets}
   */
   readonly portSets?: PortSetsProperty[] | cdktn.IResolvable;
 }
@@ -2231,15 +2231,15 @@ export class RuleVariablesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RulesSourceListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#generated_rules_type AwsNetworkfirewallRuleGroup#generated_rules_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#generated_rules_type TfRuleGroup#generated_rules_type}
   */
   readonly generatedRulesType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#target_types AwsNetworkfirewallRuleGroup#target_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#target_types TfRuleGroup#target_types}
   */
   readonly targetTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#targets AwsNetworkfirewallRuleGroup#targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#targets TfRuleGroup#targets}
   */
   readonly targets: string[];
 }
@@ -2328,27 +2328,27 @@ export class RulesSourceListPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface HeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination AwsNetworkfirewallRuleGroup#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination TfRuleGroup#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination_port AwsNetworkfirewallRuleGroup#destination_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination_port TfRuleGroup#destination_port}
   */
   readonly destinationPort: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#direction AwsNetworkfirewallRuleGroup#direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#direction TfRuleGroup#direction}
   */
   readonly direction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#protocol AwsNetworkfirewallRuleGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#protocol TfRuleGroup#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source AwsNetworkfirewallRuleGroup#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source TfRuleGroup#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source_port AwsNetworkfirewallRuleGroup#source_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source_port TfRuleGroup#source_port}
   */
   readonly sourcePort: string;
 }
@@ -2494,11 +2494,11 @@ export class HeaderPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#keyword AwsNetworkfirewallRuleGroup#keyword}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#keyword TfRuleGroup#keyword}
   */
   readonly keyword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#settings AwsNetworkfirewallRuleGroup#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#settings TfRuleGroup#settings}
   */
   readonly settings?: string[];
 }
@@ -2603,19 +2603,19 @@ export class RuleOptionPropertyList extends cdktn.ComplexList {
 }
 export interface StatefulRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#action AwsNetworkfirewallRuleGroup#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#action TfRuleGroup#action}
   */
   readonly action: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#header AwsNetworkfirewallRuleGroup#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#header TfRuleGroup#header}
   */
   readonly header: HeaderProperty;
   /**
   * rule_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_option AwsNetworkfirewallRuleGroup#rule_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_option TfRuleGroup#rule_option}
   */
   readonly ruleOption: RuleOptionProperty[] | cdktn.IResolvable;
 }
@@ -2736,7 +2736,7 @@ export class StatefulRulePropertyList extends cdktn.ComplexList {
 }
 export interface DimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#value AwsNetworkfirewallRuleGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#value TfRuleGroup#value}
   */
   readonly value: string;
 }
@@ -2821,7 +2821,7 @@ export interface PublishMetricActionProperty {
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#dimension AwsNetworkfirewallRuleGroup#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#dimension TfRuleGroup#dimension}
   */
   readonly dimension: DimensionProperty[] | cdktn.IResolvable;
 }
@@ -2874,7 +2874,7 @@ export interface ActionDefinitionProperty {
   /**
   * publish_metric_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#publish_metric_action AwsNetworkfirewallRuleGroup#publish_metric_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#publish_metric_action TfRuleGroup#publish_metric_action}
   */
   readonly publishMetricAction: PublishMetricActionProperty;
 }
@@ -2925,13 +2925,13 @@ export class ActionDefinitionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface CustomActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#action_name AwsNetworkfirewallRuleGroup#action_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#action_name TfRuleGroup#action_name}
   */
   readonly actionName: string;
   /**
   * action_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#action_definition AwsNetworkfirewallRuleGroup#action_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#action_definition TfRuleGroup#action_definition}
   */
   readonly actionDefinition: ActionDefinitionProperty;
 }
@@ -3033,7 +3033,7 @@ export class CustomActionPropertyList extends cdktn.ComplexList {
 }
 export interface DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#address_definition AwsNetworkfirewallRuleGroup#address_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#address_definition TfRuleGroup#address_definition}
   */
   readonly addressDefinition: string;
 }
@@ -3116,11 +3116,11 @@ export class DestinationPropertyList extends cdktn.ComplexList {
 }
 export interface DestinationPortProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#from_port AwsNetworkfirewallRuleGroup#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#from_port TfRuleGroup#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#to_port AwsNetworkfirewallRuleGroup#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#to_port TfRuleGroup#to_port}
   */
   readonly toPort?: number;
 }
@@ -3225,7 +3225,7 @@ export class DestinationPortPropertyList extends cdktn.ComplexList {
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#address_definition AwsNetworkfirewallRuleGroup#address_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#address_definition TfRuleGroup#address_definition}
   */
   readonly addressDefinition: string;
 }
@@ -3308,11 +3308,11 @@ export class SourcePropertyList extends cdktn.ComplexList {
 }
 export interface SourcePortProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#from_port AwsNetworkfirewallRuleGroup#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#from_port TfRuleGroup#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#to_port AwsNetworkfirewallRuleGroup#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#to_port TfRuleGroup#to_port}
   */
   readonly toPort?: number;
 }
@@ -3417,11 +3417,11 @@ export class SourcePortPropertyList extends cdktn.ComplexList {
 }
 export interface TcpFlagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#flags AwsNetworkfirewallRuleGroup#flags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#flags TfRuleGroup#flags}
   */
   readonly flags: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#masks AwsNetworkfirewallRuleGroup#masks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#masks TfRuleGroup#masks}
   */
   readonly masks?: string[];
 }
@@ -3526,37 +3526,37 @@ export class TcpFlagPropertyList extends cdktn.ComplexList {
 }
 export interface MatchAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#protocols AwsNetworkfirewallRuleGroup#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#protocols TfRuleGroup#protocols}
   */
   readonly protocols?: number[];
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination AwsNetworkfirewallRuleGroup#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination TfRuleGroup#destination}
   */
   readonly destination?: DestinationProperty[] | cdktn.IResolvable;
   /**
   * destination_port block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination_port AwsNetworkfirewallRuleGroup#destination_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#destination_port TfRuleGroup#destination_port}
   */
   readonly destinationPort?: DestinationPortProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source AwsNetworkfirewallRuleGroup#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source TfRuleGroup#source}
   */
   readonly source?: SourceProperty[] | cdktn.IResolvable;
   /**
   * source_port block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source_port AwsNetworkfirewallRuleGroup#source_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#source_port TfRuleGroup#source_port}
   */
   readonly sourcePort?: SourcePortProperty[] | cdktn.IResolvable;
   /**
   * tcp_flag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#tcp_flag AwsNetworkfirewallRuleGroup#tcp_flag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#tcp_flag TfRuleGroup#tcp_flag}
   */
   readonly tcpFlag?: TcpFlagProperty[] | cdktn.IResolvable;
 }
@@ -3720,13 +3720,13 @@ export class MatchAttributesPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface RuleDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#actions AwsNetworkfirewallRuleGroup#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#actions TfRuleGroup#actions}
   */
   readonly actions: string[];
   /**
   * match_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#match_attributes AwsNetworkfirewallRuleGroup#match_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#match_attributes TfRuleGroup#match_attributes}
   */
   readonly matchAttributes: MatchAttributesProperty;
 }
@@ -3796,13 +3796,13 @@ export class RuleDefinitionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StatelessRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#priority AwsNetworkfirewallRuleGroup#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#priority TfRuleGroup#priority}
   */
   readonly priority: number;
   /**
   * rule_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_definition AwsNetworkfirewallRuleGroup#rule_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_definition TfRuleGroup#rule_definition}
   */
   readonly ruleDefinition: RuleDefinitionProperty;
 }
@@ -3906,13 +3906,13 @@ export interface StatelessRulesAndCustomActionsProperty {
   /**
   * custom_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#custom_action AwsNetworkfirewallRuleGroup#custom_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#custom_action TfRuleGroup#custom_action}
   */
   readonly customAction?: CustomActionProperty[] | cdktn.IResolvable;
   /**
   * stateless_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateless_rule AwsNetworkfirewallRuleGroup#stateless_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateless_rule TfRuleGroup#stateless_rule}
   */
   readonly statelessRule: StatelessRuleProperty[] | cdktn.IResolvable;
 }
@@ -3985,25 +3985,25 @@ export class StatelessRulesAndCustomActionsPropertyOutputReference extends cdktn
 }
 export interface RulesSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules_string AwsNetworkfirewallRuleGroup#rules_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules_string TfRuleGroup#rules_string}
   */
   readonly rulesString?: string;
   /**
   * rules_source_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules_source_list AwsNetworkfirewallRuleGroup#rules_source_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules_source_list TfRuleGroup#rules_source_list}
   */
   readonly rulesSourceList?: RulesSourceListProperty;
   /**
   * stateful_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateful_rule AwsNetworkfirewallRuleGroup#stateful_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateful_rule TfRuleGroup#stateful_rule}
   */
   readonly statefulRule?: StatefulRuleProperty[] | cdktn.IResolvable;
   /**
   * stateless_rules_and_custom_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateless_rules_and_custom_actions AwsNetworkfirewallRuleGroup#stateless_rules_and_custom_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateless_rules_and_custom_actions TfRuleGroup#stateless_rules_and_custom_actions}
   */
   readonly statelessRulesAndCustomActions?: StatelessRulesAndCustomActionsProperty;
 }
@@ -4123,7 +4123,7 @@ export class RulesSourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StatefulRuleOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_order AwsNetworkfirewallRuleGroup#rule_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_order TfRuleGroup#rule_order}
   */
   readonly ruleOrder: string;
 }
@@ -4176,25 +4176,25 @@ export interface RuleGroupProperty {
   /**
   * reference_sets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#reference_sets AwsNetworkfirewallRuleGroup#reference_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#reference_sets TfRuleGroup#reference_sets}
   */
   readonly referenceSets?: ReferenceSetsProperty;
   /**
   * rule_variables block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_variables AwsNetworkfirewallRuleGroup#rule_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rule_variables TfRuleGroup#rule_variables}
   */
   readonly ruleVariables?: RuleVariablesProperty;
   /**
   * rules_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules_source AwsNetworkfirewallRuleGroup#rules_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#rules_source TfRuleGroup#rules_source}
   */
   readonly rulesSource: RulesSourceProperty;
   /**
   * stateful_rule_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateful_rule_options AwsNetworkfirewallRuleGroup#stateful_rule_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_rule_group#stateful_rule_options TfRuleGroup#stateful_rule_options}
   */
   readonly statefulRuleOptions?: StatefulRuleOptionsProperty;
 }

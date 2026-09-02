@@ -5,78 +5,78 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotDomainConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#application_protocol AwsIotDomainConfiguration#application_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#application_protocol TfDomainConfiguration#application_protocol}
   */
   readonly applicationProtocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#authentication_type AwsIotDomainConfiguration#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#authentication_type TfDomainConfiguration#authentication_type}
   */
   readonly authenticationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#domain_name AwsIotDomainConfiguration#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#domain_name TfDomainConfiguration#domain_name}
   */
   readonly domainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#id AwsIotDomainConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#id TfDomainConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#name AwsIotDomainConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#name TfDomainConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#region AwsIotDomainConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#region TfDomainConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#server_certificate_arns AwsIotDomainConfiguration#server_certificate_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#server_certificate_arns TfDomainConfiguration#server_certificate_arns}
   */
   readonly serverCertificateArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#service_type AwsIotDomainConfiguration#service_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#service_type TfDomainConfiguration#service_type}
   */
   readonly serviceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#status AwsIotDomainConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#status TfDomainConfiguration#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#tags AwsIotDomainConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#tags TfDomainConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#tags_all AwsIotDomainConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#tags_all TfDomainConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#validation_certificate_arn AwsIotDomainConfiguration#validation_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#validation_certificate_arn TfDomainConfiguration#validation_certificate_arn}
   */
   readonly validationCertificateArn?: string;
   /**
   * authorizer_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#authorizer_config AwsIotDomainConfiguration#authorizer_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#authorizer_config TfDomainConfiguration#authorizer_config}
   */
-  readonly authorizerConfig?: AwsIotDomainConfiguration.AuthorizerConfigProperty;
+  readonly authorizerConfig?: TfDomainConfiguration.AuthorizerConfigProperty;
   /**
   * tls_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#tls_config AwsIotDomainConfiguration#tls_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#tls_config TfDomainConfiguration#tls_config}
   */
-  readonly tlsConfig?: AwsIotDomainConfiguration.TlsConfigProperty;
+  readonly tlsConfig?: TfDomainConfiguration.TlsConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration aws_iot_domain_configuration}
 */
-export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
+export class TfDomainConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -87,11 +87,11 @@ export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotDomainConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotDomainConfiguration to import
-  * @param importFromId The id of the existing AwsIotDomainConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotDomainConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainConfiguration to import
+  * @param importFromId The id of the existing TfDomainConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_domain_configuration", importId: importFromId, provider });
@@ -106,9 +106,9 @@ export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotDomainConfigurationConfig
+  * @param options TfDomainConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotDomainConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_domain_configuration',
       terraformGeneratorMetadata: {
@@ -344,11 +344,11 @@ export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
   }
 
   // authorizer_config - computed: false, optional: true, required: false
-  private _authorizerConfig = new AwsIotDomainConfiguration.AuthorizerConfigPropertyOutputReference(this, "authorizer_config");
+  private _authorizerConfig = new TfDomainConfiguration.AuthorizerConfigPropertyOutputReference(this, "authorizer_config");
   public get authorizerConfig() {
     return this._authorizerConfig;
   }
-  public putAuthorizerConfig(value: AwsIotDomainConfiguration.AuthorizerConfigProperty) {
+  public putAuthorizerConfig(value: TfDomainConfiguration.AuthorizerConfigProperty) {
     this._authorizerConfig.internalValue = value;
   }
   public resetAuthorizerConfig() {
@@ -360,11 +360,11 @@ export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
   }
 
   // tls_config - computed: false, optional: true, required: false
-  private _tlsConfig = new AwsIotDomainConfiguration.TlsConfigPropertyOutputReference(this, "tls_config");
+  private _tlsConfig = new TfDomainConfiguration.TlsConfigPropertyOutputReference(this, "tls_config");
   public get tlsConfig() {
     return this._tlsConfig;
   }
-  public putTlsConfig(value: AwsIotDomainConfiguration.TlsConfigProperty) {
+  public putTlsConfig(value: TfDomainConfiguration.TlsConfigProperty) {
     this._tlsConfig.internalValue = value;
   }
   public resetTlsConfig() {
@@ -393,8 +393,8 @@ export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       validation_certificate_arn: cdktn.stringToTerraform(this._validationCertificateArn),
-      authorizer_config: awsIotDomainConfigurationAuthorizerConfigPropertyToTerraform(this._authorizerConfig.internalValue),
-      tls_config: awsIotDomainConfigurationTlsConfigPropertyToTerraform(this._tlsConfig.internalValue),
+      authorizer_config: tfDomainConfigurationAuthorizerConfigPropertyToTerraform(this._authorizerConfig.internalValue),
+      tls_config: tfDomainConfigurationTlsConfigPropertyToTerraform(this._tlsConfig.internalValue),
     };
   }
 
@@ -473,16 +473,16 @@ export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       authorizer_config: {
-        value: awsIotDomainConfigurationAuthorizerConfigPropertyToHclTerraform(this._authorizerConfig.internalValue),
+        value: tfDomainConfigurationAuthorizerConfigPropertyToHclTerraform(this._authorizerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIotDomainConfiguration.AuthorizerConfigPropertyList",
+        storageClassType: "TfDomainConfiguration.AuthorizerConfigPropertyList",
       },
       tls_config: {
-        value: awsIotDomainConfigurationTlsConfigPropertyToHclTerraform(this._tlsConfig.internalValue),
+        value: tfDomainConfigurationTlsConfigPropertyToHclTerraform(this._tlsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIotDomainConfiguration.TlsConfigPropertyList",
+        storageClassType: "TfDomainConfiguration.TlsConfigPropertyList",
       },
     };
 
@@ -491,7 +491,7 @@ export class AwsIotDomainConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function awsIotDomainConfigurationAuthorizerConfigPropertyToTerraform(struct?: AwsIotDomainConfiguration.AuthorizerConfigPropertyOutputReference | AwsIotDomainConfiguration.AuthorizerConfigProperty): any {
+export function tfDomainConfigurationAuthorizerConfigPropertyToTerraform(struct?: TfDomainConfiguration.AuthorizerConfigPropertyOutputReference | TfDomainConfiguration.AuthorizerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function awsIotDomainConfigurationAuthorizerConfigPropertyToTerraform(str
 }
 
 
-export function awsIotDomainConfigurationAuthorizerConfigPropertyToHclTerraform(struct?: AwsIotDomainConfiguration.AuthorizerConfigPropertyOutputReference | AwsIotDomainConfiguration.AuthorizerConfigProperty): any {
+export function tfDomainConfigurationAuthorizerConfigPropertyToHclTerraform(struct?: TfDomainConfiguration.AuthorizerConfigPropertyOutputReference | TfDomainConfiguration.AuthorizerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function awsIotDomainConfigurationAuthorizerConfigPropertyToHclTerraform(
 }
 
 
-export function awsIotDomainConfigurationTlsConfigPropertyToTerraform(struct?: AwsIotDomainConfiguration.TlsConfigPropertyOutputReference | AwsIotDomainConfiguration.TlsConfigProperty): any {
+export function tfDomainConfigurationTlsConfigPropertyToTerraform(struct?: TfDomainConfiguration.TlsConfigPropertyOutputReference | TfDomainConfiguration.TlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function awsIotDomainConfigurationTlsConfigPropertyToTerraform(struct?: A
 }
 
 
-export function awsIotDomainConfigurationTlsConfigPropertyToHclTerraform(struct?: AwsIotDomainConfiguration.TlsConfigPropertyOutputReference | AwsIotDomainConfiguration.TlsConfigProperty): any {
+export function tfDomainConfigurationTlsConfigPropertyToHclTerraform(struct?: TfDomainConfiguration.TlsConfigPropertyOutputReference | TfDomainConfiguration.TlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,14 +558,14 @@ export function awsIotDomainConfigurationTlsConfigPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsIotDomainConfiguration {
+export namespace TfDomainConfiguration {
 export interface AuthorizerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#allow_authorizer_override AwsIotDomainConfiguration#allow_authorizer_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#allow_authorizer_override TfDomainConfiguration#allow_authorizer_override}
   */
   readonly allowAuthorizerOverride?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#default_authorizer_name AwsIotDomainConfiguration#default_authorizer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#default_authorizer_name TfDomainConfiguration#default_authorizer_name}
   */
   readonly defaultAuthorizerName?: string;
 }
@@ -641,7 +641,7 @@ export class AuthorizerConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TlsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#security_policy AwsIotDomainConfiguration#security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_domain_configuration#security_policy TfDomainConfiguration#security_policy}
   */
   readonly securityPolicy?: string;
 }

@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSsoadminApplicationProvidersConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfApplicationProvidersConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_providers#region DataAwsSsoadminApplicationProviders#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_providers#region DataTfApplicationProviders#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataAwsSsoadminApplicationProvidersConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_providers aws_ssoadmin_application_providers}
 */
-export class DataAwsSsoadminApplicationProviders extends cdktn.TerraformDataSource {
+export class DataTfApplicationProviders extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataAwsSsoadminApplicationProviders extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSsoadminApplicationProviders resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfApplicationProviders resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSsoadminApplicationProviders to import
-  * @param importFromId The id of the existing DataAwsSsoadminApplicationProviders that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_providers#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSsoadminApplicationProviders to import is found
+  * @param importToId The construct id used in the generated config for the DataTfApplicationProviders to import
+  * @param importFromId The id of the existing DataTfApplicationProviders that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_providers#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfApplicationProviders to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_application_providers", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataAwsSsoadminApplicationProviders extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSsoadminApplicationProvidersConfig = {}
+  * @param options DataTfApplicationProvidersConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSsoadminApplicationProvidersConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfApplicationProvidersConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_application_providers',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class DataAwsSsoadminApplicationProviders extends cdktn.TerraformDataSour
   // ==========
 
   // application_providers - computed: true, optional: false, required: false
-  private _applicationProviders = new DataAwsSsoadminApplicationProviders.ApplicationProvidersPropertyList(this, "application_providers", false);
+  private _applicationProviders = new DataTfApplicationProviders.ApplicationProvidersPropertyList(this, "application_providers", false);
   public get applicationProviders() {
     return this._applicationProviders;
   }
@@ -124,7 +124,7 @@ export class DataAwsSsoadminApplicationProviders extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsSsoadminApplicationProvidersDisplayDataPropertyToTerraform(struct?: DataAwsSsoadminApplicationProviders.DisplayDataProperty): any {
+export function dataTfApplicationProvidersDisplayDataPropertyToTerraform(struct?: DataTfApplicationProviders.DisplayDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -134,7 +134,7 @@ export function dataAwsSsoadminApplicationProvidersDisplayDataPropertyToTerrafor
 }
 
 
-export function dataAwsSsoadminApplicationProvidersDisplayDataPropertyToHclTerraform(struct?: DataAwsSsoadminApplicationProviders.DisplayDataProperty): any {
+export function dataTfApplicationProvidersDisplayDataPropertyToHclTerraform(struct?: DataTfApplicationProviders.DisplayDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -145,7 +145,7 @@ export function dataAwsSsoadminApplicationProvidersDisplayDataPropertyToHclTerra
 }
 
 
-export function dataAwsSsoadminApplicationProvidersApplicationProvidersPropertyToTerraform(struct?: DataAwsSsoadminApplicationProviders.ApplicationProvidersProperty): any {
+export function dataTfApplicationProvidersApplicationProvidersPropertyToTerraform(struct?: DataTfApplicationProviders.ApplicationProvidersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -155,7 +155,7 @@ export function dataAwsSsoadminApplicationProvidersApplicationProvidersPropertyT
 }
 
 
-export function dataAwsSsoadminApplicationProvidersApplicationProvidersPropertyToHclTerraform(struct?: DataAwsSsoadminApplicationProviders.ApplicationProvidersProperty): any {
+export function dataTfApplicationProvidersApplicationProvidersPropertyToHclTerraform(struct?: DataTfApplicationProviders.ApplicationProvidersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -166,7 +166,7 @@ export function dataAwsSsoadminApplicationProvidersApplicationProvidersPropertyT
 }
 
 
-export namespace DataAwsSsoadminApplicationProviders {
+export namespace DataTfApplicationProviders {
 export interface DisplayDataProperty {
 }
 export class DisplayDataPropertyOutputReference extends cdktn.ComplexObject {

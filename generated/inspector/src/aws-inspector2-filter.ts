@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsInspector2FilterConfig extends cdktn.TerraformMetaArguments {
+export interface TfFilterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#action AwsInspector2Filter#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#action TfFilter#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#description AwsInspector2Filter#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#description TfFilter#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#name AwsInspector2Filter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#name TfFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#reason AwsInspector2Filter#reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#reason TfFilter#reason}
   */
   readonly reason?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#region AwsInspector2Filter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#region TfFilter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#tags AwsInspector2Filter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#tags TfFilter#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#filter_criteria AwsInspector2Filter#filter_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#filter_criteria TfFilter#filter_criteria}
   */
-  readonly filterCriteria?: AwsInspector2Filter.FilterCriteriaProperty[] | cdktn.IResolvable;
+  readonly filterCriteria?: TfFilter.FilterCriteriaProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter aws_inspector2_filter}
 */
-export class AwsInspector2Filter extends cdktn.TerraformResource {
+export class TfFilter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsInspector2Filter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsInspector2Filter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFilter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsInspector2Filter to import
-  * @param importFromId The id of the existing AwsInspector2Filter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsInspector2Filter to import is found
+  * @param importToId The construct id used in the generated config for the TfFilter to import
+  * @param importFromId The id of the existing TfFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_inspector2_filter", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsInspector2Filter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsInspector2FilterConfig
+  * @param options TfFilterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsInspector2FilterConfig) {
+  public constructor(scope: Construct, id: string, config: TfFilterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_inspector2_filter',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class AwsInspector2Filter extends cdktn.TerraformResource {
   }
 
   // filter_criteria - computed: false, optional: true, required: false
-  private _filterCriteria = new AwsInspector2Filter.FilterCriteriaPropertyList(this, "filter_criteria", false);
+  private _filterCriteria = new TfFilter.FilterCriteriaPropertyList(this, "filter_criteria", false);
   public get filterCriteria() {
     return this._filterCriteria;
   }
-  public putFilterCriteria(value: AwsInspector2Filter.FilterCriteriaProperty[] | cdktn.IResolvable) {
+  public putFilterCriteria(value: TfFilter.FilterCriteriaProperty[] | cdktn.IResolvable) {
     this._filterCriteria.internalValue = value;
   }
   public resetFilterCriteria() {
@@ -233,7 +233,7 @@ export class AwsInspector2Filter extends cdktn.TerraformResource {
       reason: cdktn.stringToTerraform(this._reason),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter_criteria: cdktn.listMapper(awsInspector2FilterFilterCriteriaPropertyToTerraform, true)(this._filterCriteria.internalValue),
+      filter_criteria: cdktn.listMapper(tfFilterFilterCriteriaPropertyToTerraform, true)(this._filterCriteria.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class AwsInspector2Filter extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       filter_criteria: {
-        value: cdktn.listMapperHcl(awsInspector2FilterFilterCriteriaPropertyToHclTerraform, true)(this._filterCriteria.internalValue),
+        value: cdktn.listMapperHcl(tfFilterFilterCriteriaPropertyToHclTerraform, true)(this._filterCriteria.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInspector2Filter.FilterCriteriaPropertyList",
+        storageClassType: "TfFilter.FilterCriteriaPropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class AwsInspector2Filter extends cdktn.TerraformResource {
   }
 }
 
-export function awsInspector2FilterAwsAccountIdPropertyToTerraform(struct?: AwsInspector2Filter.AwsAccountIdProperty | cdktn.IResolvable): any {
+export function tfFilterAwsAccountIdPropertyToTerraform(struct?: TfFilter.AwsAccountIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function awsInspector2FilterAwsAccountIdPropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterAwsAccountIdPropertyToHclTerraform(struct?: AwsInspector2Filter.AwsAccountIdProperty | cdktn.IResolvable): any {
+export function tfFilterAwsAccountIdPropertyToHclTerraform(struct?: TfFilter.AwsAccountIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function awsInspector2FilterAwsAccountIdPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterCodeRepositoryProjectNamePropertyToTerraform(struct?: AwsInspector2Filter.CodeRepositoryProjectNameProperty | cdktn.IResolvable): any {
+export function tfFilterCodeRepositoryProjectNamePropertyToTerraform(struct?: TfFilter.CodeRepositoryProjectNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function awsInspector2FilterCodeRepositoryProjectNamePropertyToTerraform(
 }
 
 
-export function awsInspector2FilterCodeRepositoryProjectNamePropertyToHclTerraform(struct?: AwsInspector2Filter.CodeRepositoryProjectNameProperty | cdktn.IResolvable): any {
+export function tfFilterCodeRepositoryProjectNamePropertyToHclTerraform(struct?: TfFilter.CodeRepositoryProjectNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function awsInspector2FilterCodeRepositoryProjectNamePropertyToHclTerrafo
 }
 
 
-export function awsInspector2FilterCodeRepositoryProviderTypePropertyToTerraform(struct?: AwsInspector2Filter.CodeRepositoryProviderTypeProperty | cdktn.IResolvable): any {
+export function tfFilterCodeRepositoryProviderTypePropertyToTerraform(struct?: TfFilter.CodeRepositoryProviderTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function awsInspector2FilterCodeRepositoryProviderTypePropertyToTerraform
 }
 
 
-export function awsInspector2FilterCodeRepositoryProviderTypePropertyToHclTerraform(struct?: AwsInspector2Filter.CodeRepositoryProviderTypeProperty | cdktn.IResolvable): any {
+export function tfFilterCodeRepositoryProviderTypePropertyToHclTerraform(struct?: TfFilter.CodeRepositoryProviderTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function awsInspector2FilterCodeRepositoryProviderTypePropertyToHclTerraf
 }
 
 
-export function awsInspector2FilterCodeVulnerabilityDetectorNamePropertyToTerraform(struct?: AwsInspector2Filter.CodeVulnerabilityDetectorNameProperty | cdktn.IResolvable): any {
+export function tfFilterCodeVulnerabilityDetectorNamePropertyToTerraform(struct?: TfFilter.CodeVulnerabilityDetectorNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function awsInspector2FilterCodeVulnerabilityDetectorNamePropertyToTerraf
 }
 
 
-export function awsInspector2FilterCodeVulnerabilityDetectorNamePropertyToHclTerraform(struct?: AwsInspector2Filter.CodeVulnerabilityDetectorNameProperty | cdktn.IResolvable): any {
+export function tfFilterCodeVulnerabilityDetectorNamePropertyToHclTerraform(struct?: TfFilter.CodeVulnerabilityDetectorNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsInspector2FilterCodeVulnerabilityDetectorNamePropertyToHclTer
 }
 
 
-export function awsInspector2FilterCodeVulnerabilityDetectorTagsPropertyToTerraform(struct?: AwsInspector2Filter.CodeVulnerabilityDetectorTagsProperty | cdktn.IResolvable): any {
+export function tfFilterCodeVulnerabilityDetectorTagsPropertyToTerraform(struct?: TfFilter.CodeVulnerabilityDetectorTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function awsInspector2FilterCodeVulnerabilityDetectorTagsPropertyToTerraf
 }
 
 
-export function awsInspector2FilterCodeVulnerabilityDetectorTagsPropertyToHclTerraform(struct?: AwsInspector2Filter.CodeVulnerabilityDetectorTagsProperty | cdktn.IResolvable): any {
+export function tfFilterCodeVulnerabilityDetectorTagsPropertyToHclTerraform(struct?: TfFilter.CodeVulnerabilityDetectorTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsInspector2FilterCodeVulnerabilityDetectorTagsPropertyToHclTer
 }
 
 
-export function awsInspector2FilterCodeVulnerabilityFilePathPropertyToTerraform(struct?: AwsInspector2Filter.CodeVulnerabilityFilePathProperty | cdktn.IResolvable): any {
+export function tfFilterCodeVulnerabilityFilePathPropertyToTerraform(struct?: TfFilter.CodeVulnerabilityFilePathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function awsInspector2FilterCodeVulnerabilityFilePathPropertyToTerraform(
 }
 
 
-export function awsInspector2FilterCodeVulnerabilityFilePathPropertyToHclTerraform(struct?: AwsInspector2Filter.CodeVulnerabilityFilePathProperty | cdktn.IResolvable): any {
+export function tfFilterCodeVulnerabilityFilePathPropertyToHclTerraform(struct?: TfFilter.CodeVulnerabilityFilePathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -510,7 +510,7 @@ export function awsInspector2FilterCodeVulnerabilityFilePathPropertyToHclTerrafo
 }
 
 
-export function awsInspector2FilterComponentIdPropertyToTerraform(struct?: AwsInspector2Filter.ComponentIdProperty | cdktn.IResolvable): any {
+export function tfFilterComponentIdPropertyToTerraform(struct?: TfFilter.ComponentIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function awsInspector2FilterComponentIdPropertyToTerraform(struct?: AwsIn
 }
 
 
-export function awsInspector2FilterComponentIdPropertyToHclTerraform(struct?: AwsInspector2Filter.ComponentIdProperty | cdktn.IResolvable): any {
+export function tfFilterComponentIdPropertyToHclTerraform(struct?: TfFilter.ComponentIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function awsInspector2FilterComponentIdPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsInspector2FilterComponentTypePropertyToTerraform(struct?: AwsInspector2Filter.ComponentTypeProperty | cdktn.IResolvable): any {
+export function tfFilterComponentTypePropertyToTerraform(struct?: TfFilter.ComponentTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,7 +559,7 @@ export function awsInspector2FilterComponentTypePropertyToTerraform(struct?: Aws
 }
 
 
-export function awsInspector2FilterComponentTypePropertyToHclTerraform(struct?: AwsInspector2Filter.ComponentTypeProperty | cdktn.IResolvable): any {
+export function tfFilterComponentTypePropertyToHclTerraform(struct?: TfFilter.ComponentTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,7 +584,7 @@ export function awsInspector2FilterComponentTypePropertyToHclTerraform(struct?: 
 }
 
 
-export function awsInspector2FilterEc2InstanceImageIdPropertyToTerraform(struct?: AwsInspector2Filter.Ec2InstanceImageIdProperty | cdktn.IResolvable): any {
+export function tfFilterEc2InstanceImageIdPropertyToTerraform(struct?: TfFilter.Ec2InstanceImageIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -596,7 +596,7 @@ export function awsInspector2FilterEc2InstanceImageIdPropertyToTerraform(struct?
 }
 
 
-export function awsInspector2FilterEc2InstanceImageIdPropertyToHclTerraform(struct?: AwsInspector2Filter.Ec2InstanceImageIdProperty | cdktn.IResolvable): any {
+export function tfFilterEc2InstanceImageIdPropertyToHclTerraform(struct?: TfFilter.Ec2InstanceImageIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -621,7 +621,7 @@ export function awsInspector2FilterEc2InstanceImageIdPropertyToHclTerraform(stru
 }
 
 
-export function awsInspector2FilterEc2InstanceSubnetIdPropertyToTerraform(struct?: AwsInspector2Filter.Ec2InstanceSubnetIdProperty | cdktn.IResolvable): any {
+export function tfFilterEc2InstanceSubnetIdPropertyToTerraform(struct?: TfFilter.Ec2InstanceSubnetIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function awsInspector2FilterEc2InstanceSubnetIdPropertyToTerraform(struct
 }
 
 
-export function awsInspector2FilterEc2InstanceSubnetIdPropertyToHclTerraform(struct?: AwsInspector2Filter.Ec2InstanceSubnetIdProperty | cdktn.IResolvable): any {
+export function tfFilterEc2InstanceSubnetIdPropertyToHclTerraform(struct?: TfFilter.Ec2InstanceSubnetIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function awsInspector2FilterEc2InstanceSubnetIdPropertyToHclTerraform(str
 }
 
 
-export function awsInspector2FilterEc2InstanceVpcIdPropertyToTerraform(struct?: AwsInspector2Filter.Ec2InstanceVpcIdProperty | cdktn.IResolvable): any {
+export function tfFilterEc2InstanceVpcIdPropertyToTerraform(struct?: TfFilter.Ec2InstanceVpcIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -670,7 +670,7 @@ export function awsInspector2FilterEc2InstanceVpcIdPropertyToTerraform(struct?: 
 }
 
 
-export function awsInspector2FilterEc2InstanceVpcIdPropertyToHclTerraform(struct?: AwsInspector2Filter.Ec2InstanceVpcIdProperty | cdktn.IResolvable): any {
+export function tfFilterEc2InstanceVpcIdPropertyToHclTerraform(struct?: TfFilter.Ec2InstanceVpcIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -695,7 +695,7 @@ export function awsInspector2FilterEc2InstanceVpcIdPropertyToHclTerraform(struct
 }
 
 
-export function awsInspector2FilterEcrImageArchitecturePropertyToTerraform(struct?: AwsInspector2Filter.EcrImageArchitectureProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageArchitecturePropertyToTerraform(struct?: TfFilter.EcrImageArchitectureProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -707,7 +707,7 @@ export function awsInspector2FilterEcrImageArchitecturePropertyToTerraform(struc
 }
 
 
-export function awsInspector2FilterEcrImageArchitecturePropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImageArchitectureProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageArchitecturePropertyToHclTerraform(struct?: TfFilter.EcrImageArchitectureProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function awsInspector2FilterEcrImageArchitecturePropertyToHclTerraform(st
 }
 
 
-export function awsInspector2FilterEcrImageHashPropertyToTerraform(struct?: AwsInspector2Filter.EcrImageHashProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageHashPropertyToTerraform(struct?: TfFilter.EcrImageHashProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -744,7 +744,7 @@ export function awsInspector2FilterEcrImageHashPropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterEcrImageHashPropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImageHashProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageHashPropertyToHclTerraform(struct?: TfFilter.EcrImageHashProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,7 +769,7 @@ export function awsInspector2FilterEcrImageHashPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterEcrImageInUseCountPropertyToTerraform(struct?: AwsInspector2Filter.EcrImageInUseCountProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageInUseCountPropertyToTerraform(struct?: TfFilter.EcrImageInUseCountProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -781,7 +781,7 @@ export function awsInspector2FilterEcrImageInUseCountPropertyToTerraform(struct?
 }
 
 
-export function awsInspector2FilterEcrImageInUseCountPropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImageInUseCountProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageInUseCountPropertyToHclTerraform(struct?: TfFilter.EcrImageInUseCountProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -806,7 +806,7 @@ export function awsInspector2FilterEcrImageInUseCountPropertyToHclTerraform(stru
 }
 
 
-export function awsInspector2FilterEcrImageLastInUseAtPropertyToTerraform(struct?: AwsInspector2Filter.EcrImageLastInUseAtProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageLastInUseAtPropertyToTerraform(struct?: TfFilter.EcrImageLastInUseAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function awsInspector2FilterEcrImageLastInUseAtPropertyToTerraform(struct
 }
 
 
-export function awsInspector2FilterEcrImageLastInUseAtPropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImageLastInUseAtProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageLastInUseAtPropertyToHclTerraform(struct?: TfFilter.EcrImageLastInUseAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -843,7 +843,7 @@ export function awsInspector2FilterEcrImageLastInUseAtPropertyToHclTerraform(str
 }
 
 
-export function awsInspector2FilterEcrImagePushedAtPropertyToTerraform(struct?: AwsInspector2Filter.EcrImagePushedAtProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImagePushedAtPropertyToTerraform(struct?: TfFilter.EcrImagePushedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,7 +855,7 @@ export function awsInspector2FilterEcrImagePushedAtPropertyToTerraform(struct?: 
 }
 
 
-export function awsInspector2FilterEcrImagePushedAtPropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImagePushedAtProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImagePushedAtPropertyToHclTerraform(struct?: TfFilter.EcrImagePushedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -880,7 +880,7 @@ export function awsInspector2FilterEcrImagePushedAtPropertyToHclTerraform(struct
 }
 
 
-export function awsInspector2FilterEcrImageRegistryPropertyToTerraform(struct?: AwsInspector2Filter.EcrImageRegistryProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageRegistryPropertyToTerraform(struct?: TfFilter.EcrImageRegistryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -892,7 +892,7 @@ export function awsInspector2FilterEcrImageRegistryPropertyToTerraform(struct?: 
 }
 
 
-export function awsInspector2FilterEcrImageRegistryPropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImageRegistryProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageRegistryPropertyToHclTerraform(struct?: TfFilter.EcrImageRegistryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -917,7 +917,7 @@ export function awsInspector2FilterEcrImageRegistryPropertyToHclTerraform(struct
 }
 
 
-export function awsInspector2FilterEcrImageRepositoryNamePropertyToTerraform(struct?: AwsInspector2Filter.EcrImageRepositoryNameProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageRepositoryNamePropertyToTerraform(struct?: TfFilter.EcrImageRepositoryNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -929,7 +929,7 @@ export function awsInspector2FilterEcrImageRepositoryNamePropertyToTerraform(str
 }
 
 
-export function awsInspector2FilterEcrImageRepositoryNamePropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImageRepositoryNameProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageRepositoryNamePropertyToHclTerraform(struct?: TfFilter.EcrImageRepositoryNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -954,7 +954,7 @@ export function awsInspector2FilterEcrImageRepositoryNamePropertyToHclTerraform(
 }
 
 
-export function awsInspector2FilterEcrImageTagsPropertyToTerraform(struct?: AwsInspector2Filter.EcrImageTagsProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageTagsPropertyToTerraform(struct?: TfFilter.EcrImageTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -966,7 +966,7 @@ export function awsInspector2FilterEcrImageTagsPropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterEcrImageTagsPropertyToHclTerraform(struct?: AwsInspector2Filter.EcrImageTagsProperty | cdktn.IResolvable): any {
+export function tfFilterEcrImageTagsPropertyToHclTerraform(struct?: TfFilter.EcrImageTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -991,7 +991,7 @@ export function awsInspector2FilterEcrImageTagsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterEpssScorePropertyToTerraform(struct?: AwsInspector2Filter.EpssScoreProperty | cdktn.IResolvable): any {
+export function tfFilterEpssScorePropertyToTerraform(struct?: TfFilter.EpssScoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1003,7 +1003,7 @@ export function awsInspector2FilterEpssScorePropertyToTerraform(struct?: AwsInsp
 }
 
 
-export function awsInspector2FilterEpssScorePropertyToHclTerraform(struct?: AwsInspector2Filter.EpssScoreProperty | cdktn.IResolvable): any {
+export function tfFilterEpssScorePropertyToHclTerraform(struct?: TfFilter.EpssScoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1028,7 +1028,7 @@ export function awsInspector2FilterEpssScorePropertyToHclTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterExploitAvailablePropertyToTerraform(struct?: AwsInspector2Filter.ExploitAvailableProperty | cdktn.IResolvable): any {
+export function tfFilterExploitAvailablePropertyToTerraform(struct?: TfFilter.ExploitAvailableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1040,7 +1040,7 @@ export function awsInspector2FilterExploitAvailablePropertyToTerraform(struct?: 
 }
 
 
-export function awsInspector2FilterExploitAvailablePropertyToHclTerraform(struct?: AwsInspector2Filter.ExploitAvailableProperty | cdktn.IResolvable): any {
+export function tfFilterExploitAvailablePropertyToHclTerraform(struct?: TfFilter.ExploitAvailableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1065,7 +1065,7 @@ export function awsInspector2FilterExploitAvailablePropertyToHclTerraform(struct
 }
 
 
-export function awsInspector2FilterFindingArnPropertyToTerraform(struct?: AwsInspector2Filter.FindingArnProperty | cdktn.IResolvable): any {
+export function tfFilterFindingArnPropertyToTerraform(struct?: TfFilter.FindingArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1077,7 +1077,7 @@ export function awsInspector2FilterFindingArnPropertyToTerraform(struct?: AwsIns
 }
 
 
-export function awsInspector2FilterFindingArnPropertyToHclTerraform(struct?: AwsInspector2Filter.FindingArnProperty | cdktn.IResolvable): any {
+export function tfFilterFindingArnPropertyToHclTerraform(struct?: TfFilter.FindingArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1102,7 +1102,7 @@ export function awsInspector2FilterFindingArnPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsInspector2FilterFindingStatusPropertyToTerraform(struct?: AwsInspector2Filter.FindingStatusProperty | cdktn.IResolvable): any {
+export function tfFilterFindingStatusPropertyToTerraform(struct?: TfFilter.FindingStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1114,7 +1114,7 @@ export function awsInspector2FilterFindingStatusPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsInspector2FilterFindingStatusPropertyToHclTerraform(struct?: AwsInspector2Filter.FindingStatusProperty | cdktn.IResolvable): any {
+export function tfFilterFindingStatusPropertyToHclTerraform(struct?: TfFilter.FindingStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1139,7 +1139,7 @@ export function awsInspector2FilterFindingStatusPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsInspector2FilterFindingTypePropertyToTerraform(struct?: AwsInspector2Filter.FindingTypeProperty | cdktn.IResolvable): any {
+export function tfFilterFindingTypePropertyToTerraform(struct?: TfFilter.FindingTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1151,7 +1151,7 @@ export function awsInspector2FilterFindingTypePropertyToTerraform(struct?: AwsIn
 }
 
 
-export function awsInspector2FilterFindingTypePropertyToHclTerraform(struct?: AwsInspector2Filter.FindingTypeProperty | cdktn.IResolvable): any {
+export function tfFilterFindingTypePropertyToHclTerraform(struct?: TfFilter.FindingTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1176,7 +1176,7 @@ export function awsInspector2FilterFindingTypePropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsInspector2FilterFirstObservedAtPropertyToTerraform(struct?: AwsInspector2Filter.FirstObservedAtProperty | cdktn.IResolvable): any {
+export function tfFilterFirstObservedAtPropertyToTerraform(struct?: TfFilter.FirstObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1188,7 +1188,7 @@ export function awsInspector2FilterFirstObservedAtPropertyToTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterFirstObservedAtPropertyToHclTerraform(struct?: AwsInspector2Filter.FirstObservedAtProperty | cdktn.IResolvable): any {
+export function tfFilterFirstObservedAtPropertyToHclTerraform(struct?: TfFilter.FirstObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1213,7 +1213,7 @@ export function awsInspector2FilterFirstObservedAtPropertyToHclTerraform(struct?
 }
 
 
-export function awsInspector2FilterFixAvailablePropertyToTerraform(struct?: AwsInspector2Filter.FixAvailableProperty | cdktn.IResolvable): any {
+export function tfFilterFixAvailablePropertyToTerraform(struct?: TfFilter.FixAvailableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function awsInspector2FilterFixAvailablePropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterFixAvailablePropertyToHclTerraform(struct?: AwsInspector2Filter.FixAvailableProperty | cdktn.IResolvable): any {
+export function tfFilterFixAvailablePropertyToHclTerraform(struct?: TfFilter.FixAvailableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1250,7 +1250,7 @@ export function awsInspector2FilterFixAvailablePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterInspectorScorePropertyToTerraform(struct?: AwsInspector2Filter.InspectorScoreProperty | cdktn.IResolvable): any {
+export function tfFilterInspectorScorePropertyToTerraform(struct?: TfFilter.InspectorScoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1262,7 +1262,7 @@ export function awsInspector2FilterInspectorScorePropertyToTerraform(struct?: Aw
 }
 
 
-export function awsInspector2FilterInspectorScorePropertyToHclTerraform(struct?: AwsInspector2Filter.InspectorScoreProperty | cdktn.IResolvable): any {
+export function tfFilterInspectorScorePropertyToHclTerraform(struct?: TfFilter.InspectorScoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1287,7 +1287,7 @@ export function awsInspector2FilterInspectorScorePropertyToHclTerraform(struct?:
 }
 
 
-export function awsInspector2FilterLambdaFunctionExecutionRoleArnPropertyToTerraform(struct?: AwsInspector2Filter.LambdaFunctionExecutionRoleArnProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionExecutionRoleArnPropertyToTerraform(struct?: TfFilter.LambdaFunctionExecutionRoleArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1299,7 +1299,7 @@ export function awsInspector2FilterLambdaFunctionExecutionRoleArnPropertyToTerra
 }
 
 
-export function awsInspector2FilterLambdaFunctionExecutionRoleArnPropertyToHclTerraform(struct?: AwsInspector2Filter.LambdaFunctionExecutionRoleArnProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionExecutionRoleArnPropertyToHclTerraform(struct?: TfFilter.LambdaFunctionExecutionRoleArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1324,7 +1324,7 @@ export function awsInspector2FilterLambdaFunctionExecutionRoleArnPropertyToHclTe
 }
 
 
-export function awsInspector2FilterLambdaFunctionLastModifiedAtPropertyToTerraform(struct?: AwsInspector2Filter.LambdaFunctionLastModifiedAtProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionLastModifiedAtPropertyToTerraform(struct?: TfFilter.LambdaFunctionLastModifiedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1336,7 +1336,7 @@ export function awsInspector2FilterLambdaFunctionLastModifiedAtPropertyToTerrafo
 }
 
 
-export function awsInspector2FilterLambdaFunctionLastModifiedAtPropertyToHclTerraform(struct?: AwsInspector2Filter.LambdaFunctionLastModifiedAtProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionLastModifiedAtPropertyToHclTerraform(struct?: TfFilter.LambdaFunctionLastModifiedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1361,7 +1361,7 @@ export function awsInspector2FilterLambdaFunctionLastModifiedAtPropertyToHclTerr
 }
 
 
-export function awsInspector2FilterLambdaFunctionLayersPropertyToTerraform(struct?: AwsInspector2Filter.LambdaFunctionLayersProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionLayersPropertyToTerraform(struct?: TfFilter.LambdaFunctionLayersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1373,7 +1373,7 @@ export function awsInspector2FilterLambdaFunctionLayersPropertyToTerraform(struc
 }
 
 
-export function awsInspector2FilterLambdaFunctionLayersPropertyToHclTerraform(struct?: AwsInspector2Filter.LambdaFunctionLayersProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionLayersPropertyToHclTerraform(struct?: TfFilter.LambdaFunctionLayersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1398,7 +1398,7 @@ export function awsInspector2FilterLambdaFunctionLayersPropertyToHclTerraform(st
 }
 
 
-export function awsInspector2FilterLambdaFunctionNamePropertyToTerraform(struct?: AwsInspector2Filter.LambdaFunctionNameProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionNamePropertyToTerraform(struct?: TfFilter.LambdaFunctionNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1410,7 +1410,7 @@ export function awsInspector2FilterLambdaFunctionNamePropertyToTerraform(struct?
 }
 
 
-export function awsInspector2FilterLambdaFunctionNamePropertyToHclTerraform(struct?: AwsInspector2Filter.LambdaFunctionNameProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionNamePropertyToHclTerraform(struct?: TfFilter.LambdaFunctionNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1435,7 +1435,7 @@ export function awsInspector2FilterLambdaFunctionNamePropertyToHclTerraform(stru
 }
 
 
-export function awsInspector2FilterLambdaFunctionRuntimePropertyToTerraform(struct?: AwsInspector2Filter.LambdaFunctionRuntimeProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionRuntimePropertyToTerraform(struct?: TfFilter.LambdaFunctionRuntimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1447,7 +1447,7 @@ export function awsInspector2FilterLambdaFunctionRuntimePropertyToTerraform(stru
 }
 
 
-export function awsInspector2FilterLambdaFunctionRuntimePropertyToHclTerraform(struct?: AwsInspector2Filter.LambdaFunctionRuntimeProperty | cdktn.IResolvable): any {
+export function tfFilterLambdaFunctionRuntimePropertyToHclTerraform(struct?: TfFilter.LambdaFunctionRuntimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1472,7 +1472,7 @@ export function awsInspector2FilterLambdaFunctionRuntimePropertyToHclTerraform(s
 }
 
 
-export function awsInspector2FilterLastObservedAtPropertyToTerraform(struct?: AwsInspector2Filter.LastObservedAtProperty | cdktn.IResolvable): any {
+export function tfFilterLastObservedAtPropertyToTerraform(struct?: TfFilter.LastObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1484,7 +1484,7 @@ export function awsInspector2FilterLastObservedAtPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsInspector2FilterLastObservedAtPropertyToHclTerraform(struct?: AwsInspector2Filter.LastObservedAtProperty | cdktn.IResolvable): any {
+export function tfFilterLastObservedAtPropertyToHclTerraform(struct?: TfFilter.LastObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1509,7 +1509,7 @@ export function awsInspector2FilterLastObservedAtPropertyToHclTerraform(struct?:
 }
 
 
-export function awsInspector2FilterNetworkProtocolPropertyToTerraform(struct?: AwsInspector2Filter.NetworkProtocolProperty | cdktn.IResolvable): any {
+export function tfFilterNetworkProtocolPropertyToTerraform(struct?: TfFilter.NetworkProtocolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1521,7 +1521,7 @@ export function awsInspector2FilterNetworkProtocolPropertyToTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterNetworkProtocolPropertyToHclTerraform(struct?: AwsInspector2Filter.NetworkProtocolProperty | cdktn.IResolvable): any {
+export function tfFilterNetworkProtocolPropertyToHclTerraform(struct?: TfFilter.NetworkProtocolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1546,7 +1546,7 @@ export function awsInspector2FilterNetworkProtocolPropertyToHclTerraform(struct?
 }
 
 
-export function awsInspector2FilterPortRangePropertyToTerraform(struct?: AwsInspector2Filter.PortRangeProperty | cdktn.IResolvable): any {
+export function tfFilterPortRangePropertyToTerraform(struct?: TfFilter.PortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1558,7 +1558,7 @@ export function awsInspector2FilterPortRangePropertyToTerraform(struct?: AwsInsp
 }
 
 
-export function awsInspector2FilterPortRangePropertyToHclTerraform(struct?: AwsInspector2Filter.PortRangeProperty | cdktn.IResolvable): any {
+export function tfFilterPortRangePropertyToHclTerraform(struct?: TfFilter.PortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1583,7 +1583,7 @@ export function awsInspector2FilterPortRangePropertyToHclTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterRelatedVulnerabilitiesPropertyToTerraform(struct?: AwsInspector2Filter.RelatedVulnerabilitiesProperty | cdktn.IResolvable): any {
+export function tfFilterRelatedVulnerabilitiesPropertyToTerraform(struct?: TfFilter.RelatedVulnerabilitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1595,7 +1595,7 @@ export function awsInspector2FilterRelatedVulnerabilitiesPropertyToTerraform(str
 }
 
 
-export function awsInspector2FilterRelatedVulnerabilitiesPropertyToHclTerraform(struct?: AwsInspector2Filter.RelatedVulnerabilitiesProperty | cdktn.IResolvable): any {
+export function tfFilterRelatedVulnerabilitiesPropertyToHclTerraform(struct?: TfFilter.RelatedVulnerabilitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1620,7 +1620,7 @@ export function awsInspector2FilterRelatedVulnerabilitiesPropertyToHclTerraform(
 }
 
 
-export function awsInspector2FilterResourceIdPropertyToTerraform(struct?: AwsInspector2Filter.ResourceIdProperty | cdktn.IResolvable): any {
+export function tfFilterResourceIdPropertyToTerraform(struct?: TfFilter.ResourceIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1632,7 +1632,7 @@ export function awsInspector2FilterResourceIdPropertyToTerraform(struct?: AwsIns
 }
 
 
-export function awsInspector2FilterResourceIdPropertyToHclTerraform(struct?: AwsInspector2Filter.ResourceIdProperty | cdktn.IResolvable): any {
+export function tfFilterResourceIdPropertyToHclTerraform(struct?: TfFilter.ResourceIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1657,7 +1657,7 @@ export function awsInspector2FilterResourceIdPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsInspector2FilterResourceTagsPropertyToTerraform(struct?: AwsInspector2Filter.ResourceTagsProperty | cdktn.IResolvable): any {
+export function tfFilterResourceTagsPropertyToTerraform(struct?: TfFilter.ResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1670,7 +1670,7 @@ export function awsInspector2FilterResourceTagsPropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterResourceTagsPropertyToHclTerraform(struct?: AwsInspector2Filter.ResourceTagsProperty | cdktn.IResolvable): any {
+export function tfFilterResourceTagsPropertyToHclTerraform(struct?: TfFilter.ResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1701,7 +1701,7 @@ export function awsInspector2FilterResourceTagsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterResourceTypePropertyToTerraform(struct?: AwsInspector2Filter.ResourceTypeProperty | cdktn.IResolvable): any {
+export function tfFilterResourceTypePropertyToTerraform(struct?: TfFilter.ResourceTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1713,7 +1713,7 @@ export function awsInspector2FilterResourceTypePropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterResourceTypePropertyToHclTerraform(struct?: AwsInspector2Filter.ResourceTypeProperty | cdktn.IResolvable): any {
+export function tfFilterResourceTypePropertyToHclTerraform(struct?: TfFilter.ResourceTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1738,7 +1738,7 @@ export function awsInspector2FilterResourceTypePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterSeverityPropertyToTerraform(struct?: AwsInspector2Filter.SeverityProperty | cdktn.IResolvable): any {
+export function tfFilterSeverityPropertyToTerraform(struct?: TfFilter.SeverityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1750,7 +1750,7 @@ export function awsInspector2FilterSeverityPropertyToTerraform(struct?: AwsInspe
 }
 
 
-export function awsInspector2FilterSeverityPropertyToHclTerraform(struct?: AwsInspector2Filter.SeverityProperty | cdktn.IResolvable): any {
+export function tfFilterSeverityPropertyToHclTerraform(struct?: TfFilter.SeverityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1775,7 +1775,7 @@ export function awsInspector2FilterSeverityPropertyToHclTerraform(struct?: AwsIn
 }
 
 
-export function awsInspector2FilterTitlePropertyToTerraform(struct?: AwsInspector2Filter.TitleProperty | cdktn.IResolvable): any {
+export function tfFilterTitlePropertyToTerraform(struct?: TfFilter.TitleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1787,7 +1787,7 @@ export function awsInspector2FilterTitlePropertyToTerraform(struct?: AwsInspecto
 }
 
 
-export function awsInspector2FilterTitlePropertyToHclTerraform(struct?: AwsInspector2Filter.TitleProperty | cdktn.IResolvable): any {
+export function tfFilterTitlePropertyToHclTerraform(struct?: TfFilter.TitleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1812,7 +1812,7 @@ export function awsInspector2FilterTitlePropertyToHclTerraform(struct?: AwsInspe
 }
 
 
-export function awsInspector2FilterUpdatedAtPropertyToTerraform(struct?: AwsInspector2Filter.UpdatedAtProperty | cdktn.IResolvable): any {
+export function tfFilterUpdatedAtPropertyToTerraform(struct?: TfFilter.UpdatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1824,7 +1824,7 @@ export function awsInspector2FilterUpdatedAtPropertyToTerraform(struct?: AwsInsp
 }
 
 
-export function awsInspector2FilterUpdatedAtPropertyToHclTerraform(struct?: AwsInspector2Filter.UpdatedAtProperty | cdktn.IResolvable): any {
+export function tfFilterUpdatedAtPropertyToHclTerraform(struct?: TfFilter.UpdatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1849,7 +1849,7 @@ export function awsInspector2FilterUpdatedAtPropertyToHclTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterVendorSeverityPropertyToTerraform(struct?: AwsInspector2Filter.VendorSeverityProperty | cdktn.IResolvable): any {
+export function tfFilterVendorSeverityPropertyToTerraform(struct?: TfFilter.VendorSeverityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1861,7 +1861,7 @@ export function awsInspector2FilterVendorSeverityPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsInspector2FilterVendorSeverityPropertyToHclTerraform(struct?: AwsInspector2Filter.VendorSeverityProperty | cdktn.IResolvable): any {
+export function tfFilterVendorSeverityPropertyToHclTerraform(struct?: TfFilter.VendorSeverityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1886,7 +1886,7 @@ export function awsInspector2FilterVendorSeverityPropertyToHclTerraform(struct?:
 }
 
 
-export function awsInspector2FilterVulnerabilityIdPropertyToTerraform(struct?: AwsInspector2Filter.VulnerabilityIdProperty | cdktn.IResolvable): any {
+export function tfFilterVulnerabilityIdPropertyToTerraform(struct?: TfFilter.VulnerabilityIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1898,7 +1898,7 @@ export function awsInspector2FilterVulnerabilityIdPropertyToTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterVulnerabilityIdPropertyToHclTerraform(struct?: AwsInspector2Filter.VulnerabilityIdProperty | cdktn.IResolvable): any {
+export function tfFilterVulnerabilityIdPropertyToHclTerraform(struct?: TfFilter.VulnerabilityIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1923,7 +1923,7 @@ export function awsInspector2FilterVulnerabilityIdPropertyToHclTerraform(struct?
 }
 
 
-export function awsInspector2FilterVulnerabilitySourcePropertyToTerraform(struct?: AwsInspector2Filter.VulnerabilitySourceProperty | cdktn.IResolvable): any {
+export function tfFilterVulnerabilitySourcePropertyToTerraform(struct?: TfFilter.VulnerabilitySourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1935,7 +1935,7 @@ export function awsInspector2FilterVulnerabilitySourcePropertyToTerraform(struct
 }
 
 
-export function awsInspector2FilterVulnerabilitySourcePropertyToHclTerraform(struct?: AwsInspector2Filter.VulnerabilitySourceProperty | cdktn.IResolvable): any {
+export function tfFilterVulnerabilitySourcePropertyToHclTerraform(struct?: TfFilter.VulnerabilitySourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1960,7 +1960,7 @@ export function awsInspector2FilterVulnerabilitySourcePropertyToHclTerraform(str
 }
 
 
-export function awsInspector2FilterArchitecturePropertyToTerraform(struct?: AwsInspector2Filter.ArchitectureProperty | cdktn.IResolvable): any {
+export function tfFilterArchitecturePropertyToTerraform(struct?: TfFilter.ArchitectureProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1972,7 +1972,7 @@ export function awsInspector2FilterArchitecturePropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInspector2FilterArchitecturePropertyToHclTerraform(struct?: AwsInspector2Filter.ArchitectureProperty | cdktn.IResolvable): any {
+export function tfFilterArchitecturePropertyToHclTerraform(struct?: TfFilter.ArchitectureProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1997,7 +1997,7 @@ export function awsInspector2FilterArchitecturePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterEpochPropertyToTerraform(struct?: AwsInspector2Filter.EpochProperty | cdktn.IResolvable): any {
+export function tfFilterEpochPropertyToTerraform(struct?: TfFilter.EpochProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2009,7 +2009,7 @@ export function awsInspector2FilterEpochPropertyToTerraform(struct?: AwsInspecto
 }
 
 
-export function awsInspector2FilterEpochPropertyToHclTerraform(struct?: AwsInspector2Filter.EpochProperty | cdktn.IResolvable): any {
+export function tfFilterEpochPropertyToHclTerraform(struct?: TfFilter.EpochProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2034,7 +2034,7 @@ export function awsInspector2FilterEpochPropertyToHclTerraform(struct?: AwsInspe
 }
 
 
-export function awsInspector2FilterFilePathPropertyToTerraform(struct?: AwsInspector2Filter.FilePathProperty | cdktn.IResolvable): any {
+export function tfFilterFilePathPropertyToTerraform(struct?: TfFilter.FilePathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2046,7 +2046,7 @@ export function awsInspector2FilterFilePathPropertyToTerraform(struct?: AwsInspe
 }
 
 
-export function awsInspector2FilterFilePathPropertyToHclTerraform(struct?: AwsInspector2Filter.FilePathProperty | cdktn.IResolvable): any {
+export function tfFilterFilePathPropertyToHclTerraform(struct?: TfFilter.FilePathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2071,7 +2071,7 @@ export function awsInspector2FilterFilePathPropertyToHclTerraform(struct?: AwsIn
 }
 
 
-export function awsInspector2FilterNamePropertyToTerraform(struct?: AwsInspector2Filter.NameProperty | cdktn.IResolvable): any {
+export function tfFilterNamePropertyToTerraform(struct?: TfFilter.NameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2083,7 +2083,7 @@ export function awsInspector2FilterNamePropertyToTerraform(struct?: AwsInspector
 }
 
 
-export function awsInspector2FilterNamePropertyToHclTerraform(struct?: AwsInspector2Filter.NameProperty | cdktn.IResolvable): any {
+export function tfFilterNamePropertyToHclTerraform(struct?: TfFilter.NameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2108,7 +2108,7 @@ export function awsInspector2FilterNamePropertyToHclTerraform(struct?: AwsInspec
 }
 
 
-export function awsInspector2FilterReleasePropertyToTerraform(struct?: AwsInspector2Filter.ReleaseProperty | cdktn.IResolvable): any {
+export function tfFilterReleasePropertyToTerraform(struct?: TfFilter.ReleaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2120,7 +2120,7 @@ export function awsInspector2FilterReleasePropertyToTerraform(struct?: AwsInspec
 }
 
 
-export function awsInspector2FilterReleasePropertyToHclTerraform(struct?: AwsInspector2Filter.ReleaseProperty | cdktn.IResolvable): any {
+export function tfFilterReleasePropertyToHclTerraform(struct?: TfFilter.ReleaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2145,7 +2145,7 @@ export function awsInspector2FilterReleasePropertyToHclTerraform(struct?: AwsIns
 }
 
 
-export function awsInspector2FilterSourceLambdaLayerArnPropertyToTerraform(struct?: AwsInspector2Filter.SourceLambdaLayerArnProperty | cdktn.IResolvable): any {
+export function tfFilterSourceLambdaLayerArnPropertyToTerraform(struct?: TfFilter.SourceLambdaLayerArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2157,7 +2157,7 @@ export function awsInspector2FilterSourceLambdaLayerArnPropertyToTerraform(struc
 }
 
 
-export function awsInspector2FilterSourceLambdaLayerArnPropertyToHclTerraform(struct?: AwsInspector2Filter.SourceLambdaLayerArnProperty | cdktn.IResolvable): any {
+export function tfFilterSourceLambdaLayerArnPropertyToHclTerraform(struct?: TfFilter.SourceLambdaLayerArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2182,7 +2182,7 @@ export function awsInspector2FilterSourceLambdaLayerArnPropertyToHclTerraform(st
 }
 
 
-export function awsInspector2FilterSourceLayerHashPropertyToTerraform(struct?: AwsInspector2Filter.SourceLayerHashProperty | cdktn.IResolvable): any {
+export function tfFilterSourceLayerHashPropertyToTerraform(struct?: TfFilter.SourceLayerHashProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2194,7 +2194,7 @@ export function awsInspector2FilterSourceLayerHashPropertyToTerraform(struct?: A
 }
 
 
-export function awsInspector2FilterSourceLayerHashPropertyToHclTerraform(struct?: AwsInspector2Filter.SourceLayerHashProperty | cdktn.IResolvable): any {
+export function tfFilterSourceLayerHashPropertyToHclTerraform(struct?: TfFilter.SourceLayerHashProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2219,7 +2219,7 @@ export function awsInspector2FilterSourceLayerHashPropertyToHclTerraform(struct?
 }
 
 
-export function awsInspector2FilterVersionPropertyToTerraform(struct?: AwsInspector2Filter.VersionProperty | cdktn.IResolvable): any {
+export function tfFilterVersionPropertyToTerraform(struct?: TfFilter.VersionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2231,7 +2231,7 @@ export function awsInspector2FilterVersionPropertyToTerraform(struct?: AwsInspec
 }
 
 
-export function awsInspector2FilterVersionPropertyToHclTerraform(struct?: AwsInspector2Filter.VersionProperty | cdktn.IResolvable): any {
+export function tfFilterVersionPropertyToHclTerraform(struct?: TfFilter.VersionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2256,74 +2256,74 @@ export function awsInspector2FilterVersionPropertyToHclTerraform(struct?: AwsIns
 }
 
 
-export function awsInspector2FilterVulnerablePackagesPropertyToTerraform(struct?: AwsInspector2Filter.VulnerablePackagesProperty | cdktn.IResolvable): any {
+export function tfFilterVulnerablePackagesPropertyToTerraform(struct?: TfFilter.VulnerablePackagesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    architecture: cdktn.listMapper(awsInspector2FilterArchitecturePropertyToTerraform, true)(struct!.architecture),
-    epoch: cdktn.listMapper(awsInspector2FilterEpochPropertyToTerraform, true)(struct!.epoch),
-    file_path: cdktn.listMapper(awsInspector2FilterFilePathPropertyToTerraform, true)(struct!.filePath),
-    name: cdktn.listMapper(awsInspector2FilterNamePropertyToTerraform, true)(struct!.name),
-    release: cdktn.listMapper(awsInspector2FilterReleasePropertyToTerraform, true)(struct!.release),
-    source_lambda_layer_arn: cdktn.listMapper(awsInspector2FilterSourceLambdaLayerArnPropertyToTerraform, true)(struct!.sourceLambdaLayerArn),
-    source_layer_hash: cdktn.listMapper(awsInspector2FilterSourceLayerHashPropertyToTerraform, true)(struct!.sourceLayerHash),
-    version: cdktn.listMapper(awsInspector2FilterVersionPropertyToTerraform, true)(struct!.version),
+    architecture: cdktn.listMapper(tfFilterArchitecturePropertyToTerraform, true)(struct!.architecture),
+    epoch: cdktn.listMapper(tfFilterEpochPropertyToTerraform, true)(struct!.epoch),
+    file_path: cdktn.listMapper(tfFilterFilePathPropertyToTerraform, true)(struct!.filePath),
+    name: cdktn.listMapper(tfFilterNamePropertyToTerraform, true)(struct!.name),
+    release: cdktn.listMapper(tfFilterReleasePropertyToTerraform, true)(struct!.release),
+    source_lambda_layer_arn: cdktn.listMapper(tfFilterSourceLambdaLayerArnPropertyToTerraform, true)(struct!.sourceLambdaLayerArn),
+    source_layer_hash: cdktn.listMapper(tfFilterSourceLayerHashPropertyToTerraform, true)(struct!.sourceLayerHash),
+    version: cdktn.listMapper(tfFilterVersionPropertyToTerraform, true)(struct!.version),
   }
 }
 
 
-export function awsInspector2FilterVulnerablePackagesPropertyToHclTerraform(struct?: AwsInspector2Filter.VulnerablePackagesProperty | cdktn.IResolvable): any {
+export function tfFilterVulnerablePackagesPropertyToHclTerraform(struct?: TfFilter.VulnerablePackagesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     architecture: {
-      value: cdktn.listMapperHcl(awsInspector2FilterArchitecturePropertyToHclTerraform, true)(struct!.architecture),
+      value: cdktn.listMapperHcl(tfFilterArchitecturePropertyToHclTerraform, true)(struct!.architecture),
       isBlock: true,
       type: "list",
       storageClassType: "ArchitecturePropertyList",
     },
     epoch: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEpochPropertyToHclTerraform, true)(struct!.epoch),
+      value: cdktn.listMapperHcl(tfFilterEpochPropertyToHclTerraform, true)(struct!.epoch),
       isBlock: true,
       type: "list",
       storageClassType: "EpochPropertyList",
     },
     file_path: {
-      value: cdktn.listMapperHcl(awsInspector2FilterFilePathPropertyToHclTerraform, true)(struct!.filePath),
+      value: cdktn.listMapperHcl(tfFilterFilePathPropertyToHclTerraform, true)(struct!.filePath),
       isBlock: true,
       type: "list",
       storageClassType: "FilePathPropertyList",
     },
     name: {
-      value: cdktn.listMapperHcl(awsInspector2FilterNamePropertyToHclTerraform, true)(struct!.name),
+      value: cdktn.listMapperHcl(tfFilterNamePropertyToHclTerraform, true)(struct!.name),
       isBlock: true,
       type: "list",
       storageClassType: "NamePropertyList",
     },
     release: {
-      value: cdktn.listMapperHcl(awsInspector2FilterReleasePropertyToHclTerraform, true)(struct!.release),
+      value: cdktn.listMapperHcl(tfFilterReleasePropertyToHclTerraform, true)(struct!.release),
       isBlock: true,
       type: "list",
       storageClassType: "ReleasePropertyList",
     },
     source_lambda_layer_arn: {
-      value: cdktn.listMapperHcl(awsInspector2FilterSourceLambdaLayerArnPropertyToHclTerraform, true)(struct!.sourceLambdaLayerArn),
+      value: cdktn.listMapperHcl(tfFilterSourceLambdaLayerArnPropertyToHclTerraform, true)(struct!.sourceLambdaLayerArn),
       isBlock: true,
       type: "list",
       storageClassType: "SourceLambdaLayerArnPropertyList",
     },
     source_layer_hash: {
-      value: cdktn.listMapperHcl(awsInspector2FilterSourceLayerHashPropertyToHclTerraform, true)(struct!.sourceLayerHash),
+      value: cdktn.listMapperHcl(tfFilterSourceLayerHashPropertyToHclTerraform, true)(struct!.sourceLayerHash),
       isBlock: true,
       type: "list",
       storageClassType: "SourceLayerHashPropertyList",
     },
     version: {
-      value: cdktn.listMapperHcl(awsInspector2FilterVersionPropertyToHclTerraform, true)(struct!.version),
+      value: cdktn.listMapperHcl(tfFilterVersionPropertyToHclTerraform, true)(struct!.version),
       isBlock: true,
       type: "list",
       storageClassType: "VersionPropertyList",
@@ -2335,340 +2335,340 @@ export function awsInspector2FilterVulnerablePackagesPropertyToHclTerraform(stru
 }
 
 
-export function awsInspector2FilterFilterCriteriaPropertyToTerraform(struct?: AwsInspector2Filter.FilterCriteriaProperty | cdktn.IResolvable): any {
+export function tfFilterFilterCriteriaPropertyToTerraform(struct?: TfFilter.FilterCriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aws_account_id: cdktn.listMapper(awsInspector2FilterAwsAccountIdPropertyToTerraform, true)(struct!.awsAccountId),
-    code_repository_project_name: cdktn.listMapper(awsInspector2FilterCodeRepositoryProjectNamePropertyToTerraform, true)(struct!.codeRepositoryProjectName),
-    code_repository_provider_type: cdktn.listMapper(awsInspector2FilterCodeRepositoryProviderTypePropertyToTerraform, true)(struct!.codeRepositoryProviderType),
-    code_vulnerability_detector_name: cdktn.listMapper(awsInspector2FilterCodeVulnerabilityDetectorNamePropertyToTerraform, true)(struct!.codeVulnerabilityDetectorName),
-    code_vulnerability_detector_tags: cdktn.listMapper(awsInspector2FilterCodeVulnerabilityDetectorTagsPropertyToTerraform, true)(struct!.codeVulnerabilityDetectorTags),
-    code_vulnerability_file_path: cdktn.listMapper(awsInspector2FilterCodeVulnerabilityFilePathPropertyToTerraform, true)(struct!.codeVulnerabilityFilePath),
-    component_id: cdktn.listMapper(awsInspector2FilterComponentIdPropertyToTerraform, true)(struct!.componentId),
-    component_type: cdktn.listMapper(awsInspector2FilterComponentTypePropertyToTerraform, true)(struct!.componentType),
-    ec2_instance_image_id: cdktn.listMapper(awsInspector2FilterEc2InstanceImageIdPropertyToTerraform, true)(struct!.ec2InstanceImageId),
-    ec2_instance_subnet_id: cdktn.listMapper(awsInspector2FilterEc2InstanceSubnetIdPropertyToTerraform, true)(struct!.ec2InstanceSubnetId),
-    ec2_instance_vpc_id: cdktn.listMapper(awsInspector2FilterEc2InstanceVpcIdPropertyToTerraform, true)(struct!.ec2InstanceVpcId),
-    ecr_image_architecture: cdktn.listMapper(awsInspector2FilterEcrImageArchitecturePropertyToTerraform, true)(struct!.ecrImageArchitecture),
-    ecr_image_hash: cdktn.listMapper(awsInspector2FilterEcrImageHashPropertyToTerraform, true)(struct!.ecrImageHash),
-    ecr_image_in_use_count: cdktn.listMapper(awsInspector2FilterEcrImageInUseCountPropertyToTerraform, true)(struct!.ecrImageInUseCount),
-    ecr_image_last_in_use_at: cdktn.listMapper(awsInspector2FilterEcrImageLastInUseAtPropertyToTerraform, true)(struct!.ecrImageLastInUseAt),
-    ecr_image_pushed_at: cdktn.listMapper(awsInspector2FilterEcrImagePushedAtPropertyToTerraform, true)(struct!.ecrImagePushedAt),
-    ecr_image_registry: cdktn.listMapper(awsInspector2FilterEcrImageRegistryPropertyToTerraform, true)(struct!.ecrImageRegistry),
-    ecr_image_repository_name: cdktn.listMapper(awsInspector2FilterEcrImageRepositoryNamePropertyToTerraform, true)(struct!.ecrImageRepositoryName),
-    ecr_image_tags: cdktn.listMapper(awsInspector2FilterEcrImageTagsPropertyToTerraform, true)(struct!.ecrImageTags),
-    epss_score: cdktn.listMapper(awsInspector2FilterEpssScorePropertyToTerraform, true)(struct!.epssScore),
-    exploit_available: cdktn.listMapper(awsInspector2FilterExploitAvailablePropertyToTerraform, true)(struct!.exploitAvailable),
-    finding_arn: cdktn.listMapper(awsInspector2FilterFindingArnPropertyToTerraform, true)(struct!.findingArn),
-    finding_status: cdktn.listMapper(awsInspector2FilterFindingStatusPropertyToTerraform, true)(struct!.findingStatus),
-    finding_type: cdktn.listMapper(awsInspector2FilterFindingTypePropertyToTerraform, true)(struct!.findingType),
-    first_observed_at: cdktn.listMapper(awsInspector2FilterFirstObservedAtPropertyToTerraform, true)(struct!.firstObservedAt),
-    fix_available: cdktn.listMapper(awsInspector2FilterFixAvailablePropertyToTerraform, true)(struct!.fixAvailable),
-    inspector_score: cdktn.listMapper(awsInspector2FilterInspectorScorePropertyToTerraform, true)(struct!.inspectorScore),
-    lambda_function_execution_role_arn: cdktn.listMapper(awsInspector2FilterLambdaFunctionExecutionRoleArnPropertyToTerraform, true)(struct!.lambdaFunctionExecutionRoleArn),
-    lambda_function_last_modified_at: cdktn.listMapper(awsInspector2FilterLambdaFunctionLastModifiedAtPropertyToTerraform, true)(struct!.lambdaFunctionLastModifiedAt),
-    lambda_function_layers: cdktn.listMapper(awsInspector2FilterLambdaFunctionLayersPropertyToTerraform, true)(struct!.lambdaFunctionLayers),
-    lambda_function_name: cdktn.listMapper(awsInspector2FilterLambdaFunctionNamePropertyToTerraform, true)(struct!.lambdaFunctionName),
-    lambda_function_runtime: cdktn.listMapper(awsInspector2FilterLambdaFunctionRuntimePropertyToTerraform, true)(struct!.lambdaFunctionRuntime),
-    last_observed_at: cdktn.listMapper(awsInspector2FilterLastObservedAtPropertyToTerraform, true)(struct!.lastObservedAt),
-    network_protocol: cdktn.listMapper(awsInspector2FilterNetworkProtocolPropertyToTerraform, true)(struct!.networkProtocol),
-    port_range: cdktn.listMapper(awsInspector2FilterPortRangePropertyToTerraform, true)(struct!.portRange),
-    related_vulnerabilities: cdktn.listMapper(awsInspector2FilterRelatedVulnerabilitiesPropertyToTerraform, true)(struct!.relatedVulnerabilities),
-    resource_id: cdktn.listMapper(awsInspector2FilterResourceIdPropertyToTerraform, true)(struct!.resourceId),
-    resource_tags: cdktn.listMapper(awsInspector2FilterResourceTagsPropertyToTerraform, true)(struct!.resourceTags),
-    resource_type: cdktn.listMapper(awsInspector2FilterResourceTypePropertyToTerraform, true)(struct!.resourceType),
-    severity: cdktn.listMapper(awsInspector2FilterSeverityPropertyToTerraform, true)(struct!.severity),
-    title: cdktn.listMapper(awsInspector2FilterTitlePropertyToTerraform, true)(struct!.title),
-    updated_at: cdktn.listMapper(awsInspector2FilterUpdatedAtPropertyToTerraform, true)(struct!.updatedAt),
-    vendor_severity: cdktn.listMapper(awsInspector2FilterVendorSeverityPropertyToTerraform, true)(struct!.vendorSeverity),
-    vulnerability_id: cdktn.listMapper(awsInspector2FilterVulnerabilityIdPropertyToTerraform, true)(struct!.vulnerabilityId),
-    vulnerability_source: cdktn.listMapper(awsInspector2FilterVulnerabilitySourcePropertyToTerraform, true)(struct!.vulnerabilitySource),
-    vulnerable_packages: cdktn.listMapper(awsInspector2FilterVulnerablePackagesPropertyToTerraform, true)(struct!.vulnerablePackages),
+    aws_account_id: cdktn.listMapper(tfFilterAwsAccountIdPropertyToTerraform, true)(struct!.awsAccountId),
+    code_repository_project_name: cdktn.listMapper(tfFilterCodeRepositoryProjectNamePropertyToTerraform, true)(struct!.codeRepositoryProjectName),
+    code_repository_provider_type: cdktn.listMapper(tfFilterCodeRepositoryProviderTypePropertyToTerraform, true)(struct!.codeRepositoryProviderType),
+    code_vulnerability_detector_name: cdktn.listMapper(tfFilterCodeVulnerabilityDetectorNamePropertyToTerraform, true)(struct!.codeVulnerabilityDetectorName),
+    code_vulnerability_detector_tags: cdktn.listMapper(tfFilterCodeVulnerabilityDetectorTagsPropertyToTerraform, true)(struct!.codeVulnerabilityDetectorTags),
+    code_vulnerability_file_path: cdktn.listMapper(tfFilterCodeVulnerabilityFilePathPropertyToTerraform, true)(struct!.codeVulnerabilityFilePath),
+    component_id: cdktn.listMapper(tfFilterComponentIdPropertyToTerraform, true)(struct!.componentId),
+    component_type: cdktn.listMapper(tfFilterComponentTypePropertyToTerraform, true)(struct!.componentType),
+    ec2_instance_image_id: cdktn.listMapper(tfFilterEc2InstanceImageIdPropertyToTerraform, true)(struct!.ec2InstanceImageId),
+    ec2_instance_subnet_id: cdktn.listMapper(tfFilterEc2InstanceSubnetIdPropertyToTerraform, true)(struct!.ec2InstanceSubnetId),
+    ec2_instance_vpc_id: cdktn.listMapper(tfFilterEc2InstanceVpcIdPropertyToTerraform, true)(struct!.ec2InstanceVpcId),
+    ecr_image_architecture: cdktn.listMapper(tfFilterEcrImageArchitecturePropertyToTerraform, true)(struct!.ecrImageArchitecture),
+    ecr_image_hash: cdktn.listMapper(tfFilterEcrImageHashPropertyToTerraform, true)(struct!.ecrImageHash),
+    ecr_image_in_use_count: cdktn.listMapper(tfFilterEcrImageInUseCountPropertyToTerraform, true)(struct!.ecrImageInUseCount),
+    ecr_image_last_in_use_at: cdktn.listMapper(tfFilterEcrImageLastInUseAtPropertyToTerraform, true)(struct!.ecrImageLastInUseAt),
+    ecr_image_pushed_at: cdktn.listMapper(tfFilterEcrImagePushedAtPropertyToTerraform, true)(struct!.ecrImagePushedAt),
+    ecr_image_registry: cdktn.listMapper(tfFilterEcrImageRegistryPropertyToTerraform, true)(struct!.ecrImageRegistry),
+    ecr_image_repository_name: cdktn.listMapper(tfFilterEcrImageRepositoryNamePropertyToTerraform, true)(struct!.ecrImageRepositoryName),
+    ecr_image_tags: cdktn.listMapper(tfFilterEcrImageTagsPropertyToTerraform, true)(struct!.ecrImageTags),
+    epss_score: cdktn.listMapper(tfFilterEpssScorePropertyToTerraform, true)(struct!.epssScore),
+    exploit_available: cdktn.listMapper(tfFilterExploitAvailablePropertyToTerraform, true)(struct!.exploitAvailable),
+    finding_arn: cdktn.listMapper(tfFilterFindingArnPropertyToTerraform, true)(struct!.findingArn),
+    finding_status: cdktn.listMapper(tfFilterFindingStatusPropertyToTerraform, true)(struct!.findingStatus),
+    finding_type: cdktn.listMapper(tfFilterFindingTypePropertyToTerraform, true)(struct!.findingType),
+    first_observed_at: cdktn.listMapper(tfFilterFirstObservedAtPropertyToTerraform, true)(struct!.firstObservedAt),
+    fix_available: cdktn.listMapper(tfFilterFixAvailablePropertyToTerraform, true)(struct!.fixAvailable),
+    inspector_score: cdktn.listMapper(tfFilterInspectorScorePropertyToTerraform, true)(struct!.inspectorScore),
+    lambda_function_execution_role_arn: cdktn.listMapper(tfFilterLambdaFunctionExecutionRoleArnPropertyToTerraform, true)(struct!.lambdaFunctionExecutionRoleArn),
+    lambda_function_last_modified_at: cdktn.listMapper(tfFilterLambdaFunctionLastModifiedAtPropertyToTerraform, true)(struct!.lambdaFunctionLastModifiedAt),
+    lambda_function_layers: cdktn.listMapper(tfFilterLambdaFunctionLayersPropertyToTerraform, true)(struct!.lambdaFunctionLayers),
+    lambda_function_name: cdktn.listMapper(tfFilterLambdaFunctionNamePropertyToTerraform, true)(struct!.lambdaFunctionName),
+    lambda_function_runtime: cdktn.listMapper(tfFilterLambdaFunctionRuntimePropertyToTerraform, true)(struct!.lambdaFunctionRuntime),
+    last_observed_at: cdktn.listMapper(tfFilterLastObservedAtPropertyToTerraform, true)(struct!.lastObservedAt),
+    network_protocol: cdktn.listMapper(tfFilterNetworkProtocolPropertyToTerraform, true)(struct!.networkProtocol),
+    port_range: cdktn.listMapper(tfFilterPortRangePropertyToTerraform, true)(struct!.portRange),
+    related_vulnerabilities: cdktn.listMapper(tfFilterRelatedVulnerabilitiesPropertyToTerraform, true)(struct!.relatedVulnerabilities),
+    resource_id: cdktn.listMapper(tfFilterResourceIdPropertyToTerraform, true)(struct!.resourceId),
+    resource_tags: cdktn.listMapper(tfFilterResourceTagsPropertyToTerraform, true)(struct!.resourceTags),
+    resource_type: cdktn.listMapper(tfFilterResourceTypePropertyToTerraform, true)(struct!.resourceType),
+    severity: cdktn.listMapper(tfFilterSeverityPropertyToTerraform, true)(struct!.severity),
+    title: cdktn.listMapper(tfFilterTitlePropertyToTerraform, true)(struct!.title),
+    updated_at: cdktn.listMapper(tfFilterUpdatedAtPropertyToTerraform, true)(struct!.updatedAt),
+    vendor_severity: cdktn.listMapper(tfFilterVendorSeverityPropertyToTerraform, true)(struct!.vendorSeverity),
+    vulnerability_id: cdktn.listMapper(tfFilterVulnerabilityIdPropertyToTerraform, true)(struct!.vulnerabilityId),
+    vulnerability_source: cdktn.listMapper(tfFilterVulnerabilitySourcePropertyToTerraform, true)(struct!.vulnerabilitySource),
+    vulnerable_packages: cdktn.listMapper(tfFilterVulnerablePackagesPropertyToTerraform, true)(struct!.vulnerablePackages),
   }
 }
 
 
-export function awsInspector2FilterFilterCriteriaPropertyToHclTerraform(struct?: AwsInspector2Filter.FilterCriteriaProperty | cdktn.IResolvable): any {
+export function tfFilterFilterCriteriaPropertyToHclTerraform(struct?: TfFilter.FilterCriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aws_account_id: {
-      value: cdktn.listMapperHcl(awsInspector2FilterAwsAccountIdPropertyToHclTerraform, true)(struct!.awsAccountId),
+      value: cdktn.listMapperHcl(tfFilterAwsAccountIdPropertyToHclTerraform, true)(struct!.awsAccountId),
       isBlock: true,
       type: "set",
       storageClassType: "AwsAccountIdPropertyList",
     },
     code_repository_project_name: {
-      value: cdktn.listMapperHcl(awsInspector2FilterCodeRepositoryProjectNamePropertyToHclTerraform, true)(struct!.codeRepositoryProjectName),
+      value: cdktn.listMapperHcl(tfFilterCodeRepositoryProjectNamePropertyToHclTerraform, true)(struct!.codeRepositoryProjectName),
       isBlock: true,
       type: "set",
       storageClassType: "CodeRepositoryProjectNamePropertyList",
     },
     code_repository_provider_type: {
-      value: cdktn.listMapperHcl(awsInspector2FilterCodeRepositoryProviderTypePropertyToHclTerraform, true)(struct!.codeRepositoryProviderType),
+      value: cdktn.listMapperHcl(tfFilterCodeRepositoryProviderTypePropertyToHclTerraform, true)(struct!.codeRepositoryProviderType),
       isBlock: true,
       type: "set",
       storageClassType: "CodeRepositoryProviderTypePropertyList",
     },
     code_vulnerability_detector_name: {
-      value: cdktn.listMapperHcl(awsInspector2FilterCodeVulnerabilityDetectorNamePropertyToHclTerraform, true)(struct!.codeVulnerabilityDetectorName),
+      value: cdktn.listMapperHcl(tfFilterCodeVulnerabilityDetectorNamePropertyToHclTerraform, true)(struct!.codeVulnerabilityDetectorName),
       isBlock: true,
       type: "set",
       storageClassType: "CodeVulnerabilityDetectorNamePropertyList",
     },
     code_vulnerability_detector_tags: {
-      value: cdktn.listMapperHcl(awsInspector2FilterCodeVulnerabilityDetectorTagsPropertyToHclTerraform, true)(struct!.codeVulnerabilityDetectorTags),
+      value: cdktn.listMapperHcl(tfFilterCodeVulnerabilityDetectorTagsPropertyToHclTerraform, true)(struct!.codeVulnerabilityDetectorTags),
       isBlock: true,
       type: "set",
       storageClassType: "CodeVulnerabilityDetectorTagsPropertyList",
     },
     code_vulnerability_file_path: {
-      value: cdktn.listMapperHcl(awsInspector2FilterCodeVulnerabilityFilePathPropertyToHclTerraform, true)(struct!.codeVulnerabilityFilePath),
+      value: cdktn.listMapperHcl(tfFilterCodeVulnerabilityFilePathPropertyToHclTerraform, true)(struct!.codeVulnerabilityFilePath),
       isBlock: true,
       type: "set",
       storageClassType: "CodeVulnerabilityFilePathPropertyList",
     },
     component_id: {
-      value: cdktn.listMapperHcl(awsInspector2FilterComponentIdPropertyToHclTerraform, true)(struct!.componentId),
+      value: cdktn.listMapperHcl(tfFilterComponentIdPropertyToHclTerraform, true)(struct!.componentId),
       isBlock: true,
       type: "set",
       storageClassType: "ComponentIdPropertyList",
     },
     component_type: {
-      value: cdktn.listMapperHcl(awsInspector2FilterComponentTypePropertyToHclTerraform, true)(struct!.componentType),
+      value: cdktn.listMapperHcl(tfFilterComponentTypePropertyToHclTerraform, true)(struct!.componentType),
       isBlock: true,
       type: "set",
       storageClassType: "ComponentTypePropertyList",
     },
     ec2_instance_image_id: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEc2InstanceImageIdPropertyToHclTerraform, true)(struct!.ec2InstanceImageId),
+      value: cdktn.listMapperHcl(tfFilterEc2InstanceImageIdPropertyToHclTerraform, true)(struct!.ec2InstanceImageId),
       isBlock: true,
       type: "set",
       storageClassType: "Ec2InstanceImageIdPropertyList",
     },
     ec2_instance_subnet_id: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEc2InstanceSubnetIdPropertyToHclTerraform, true)(struct!.ec2InstanceSubnetId),
+      value: cdktn.listMapperHcl(tfFilterEc2InstanceSubnetIdPropertyToHclTerraform, true)(struct!.ec2InstanceSubnetId),
       isBlock: true,
       type: "set",
       storageClassType: "Ec2InstanceSubnetIdPropertyList",
     },
     ec2_instance_vpc_id: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEc2InstanceVpcIdPropertyToHclTerraform, true)(struct!.ec2InstanceVpcId),
+      value: cdktn.listMapperHcl(tfFilterEc2InstanceVpcIdPropertyToHclTerraform, true)(struct!.ec2InstanceVpcId),
       isBlock: true,
       type: "set",
       storageClassType: "Ec2InstanceVpcIdPropertyList",
     },
     ecr_image_architecture: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImageArchitecturePropertyToHclTerraform, true)(struct!.ecrImageArchitecture),
+      value: cdktn.listMapperHcl(tfFilterEcrImageArchitecturePropertyToHclTerraform, true)(struct!.ecrImageArchitecture),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImageArchitecturePropertyList",
     },
     ecr_image_hash: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImageHashPropertyToHclTerraform, true)(struct!.ecrImageHash),
+      value: cdktn.listMapperHcl(tfFilterEcrImageHashPropertyToHclTerraform, true)(struct!.ecrImageHash),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImageHashPropertyList",
     },
     ecr_image_in_use_count: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImageInUseCountPropertyToHclTerraform, true)(struct!.ecrImageInUseCount),
+      value: cdktn.listMapperHcl(tfFilterEcrImageInUseCountPropertyToHclTerraform, true)(struct!.ecrImageInUseCount),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImageInUseCountPropertyList",
     },
     ecr_image_last_in_use_at: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImageLastInUseAtPropertyToHclTerraform, true)(struct!.ecrImageLastInUseAt),
+      value: cdktn.listMapperHcl(tfFilterEcrImageLastInUseAtPropertyToHclTerraform, true)(struct!.ecrImageLastInUseAt),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImageLastInUseAtPropertyList",
     },
     ecr_image_pushed_at: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImagePushedAtPropertyToHclTerraform, true)(struct!.ecrImagePushedAt),
+      value: cdktn.listMapperHcl(tfFilterEcrImagePushedAtPropertyToHclTerraform, true)(struct!.ecrImagePushedAt),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImagePushedAtPropertyList",
     },
     ecr_image_registry: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImageRegistryPropertyToHclTerraform, true)(struct!.ecrImageRegistry),
+      value: cdktn.listMapperHcl(tfFilterEcrImageRegistryPropertyToHclTerraform, true)(struct!.ecrImageRegistry),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImageRegistryPropertyList",
     },
     ecr_image_repository_name: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImageRepositoryNamePropertyToHclTerraform, true)(struct!.ecrImageRepositoryName),
+      value: cdktn.listMapperHcl(tfFilterEcrImageRepositoryNamePropertyToHclTerraform, true)(struct!.ecrImageRepositoryName),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImageRepositoryNamePropertyList",
     },
     ecr_image_tags: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEcrImageTagsPropertyToHclTerraform, true)(struct!.ecrImageTags),
+      value: cdktn.listMapperHcl(tfFilterEcrImageTagsPropertyToHclTerraform, true)(struct!.ecrImageTags),
       isBlock: true,
       type: "set",
       storageClassType: "EcrImageTagsPropertyList",
     },
     epss_score: {
-      value: cdktn.listMapperHcl(awsInspector2FilterEpssScorePropertyToHclTerraform, true)(struct!.epssScore),
+      value: cdktn.listMapperHcl(tfFilterEpssScorePropertyToHclTerraform, true)(struct!.epssScore),
       isBlock: true,
       type: "set",
       storageClassType: "EpssScorePropertyList",
     },
     exploit_available: {
-      value: cdktn.listMapperHcl(awsInspector2FilterExploitAvailablePropertyToHclTerraform, true)(struct!.exploitAvailable),
+      value: cdktn.listMapperHcl(tfFilterExploitAvailablePropertyToHclTerraform, true)(struct!.exploitAvailable),
       isBlock: true,
       type: "set",
       storageClassType: "ExploitAvailablePropertyList",
     },
     finding_arn: {
-      value: cdktn.listMapperHcl(awsInspector2FilterFindingArnPropertyToHclTerraform, true)(struct!.findingArn),
+      value: cdktn.listMapperHcl(tfFilterFindingArnPropertyToHclTerraform, true)(struct!.findingArn),
       isBlock: true,
       type: "set",
       storageClassType: "FindingArnPropertyList",
     },
     finding_status: {
-      value: cdktn.listMapperHcl(awsInspector2FilterFindingStatusPropertyToHclTerraform, true)(struct!.findingStatus),
+      value: cdktn.listMapperHcl(tfFilterFindingStatusPropertyToHclTerraform, true)(struct!.findingStatus),
       isBlock: true,
       type: "set",
       storageClassType: "FindingStatusPropertyList",
     },
     finding_type: {
-      value: cdktn.listMapperHcl(awsInspector2FilterFindingTypePropertyToHclTerraform, true)(struct!.findingType),
+      value: cdktn.listMapperHcl(tfFilterFindingTypePropertyToHclTerraform, true)(struct!.findingType),
       isBlock: true,
       type: "set",
       storageClassType: "FindingTypePropertyList",
     },
     first_observed_at: {
-      value: cdktn.listMapperHcl(awsInspector2FilterFirstObservedAtPropertyToHclTerraform, true)(struct!.firstObservedAt),
+      value: cdktn.listMapperHcl(tfFilterFirstObservedAtPropertyToHclTerraform, true)(struct!.firstObservedAt),
       isBlock: true,
       type: "set",
       storageClassType: "FirstObservedAtPropertyList",
     },
     fix_available: {
-      value: cdktn.listMapperHcl(awsInspector2FilterFixAvailablePropertyToHclTerraform, true)(struct!.fixAvailable),
+      value: cdktn.listMapperHcl(tfFilterFixAvailablePropertyToHclTerraform, true)(struct!.fixAvailable),
       isBlock: true,
       type: "set",
       storageClassType: "FixAvailablePropertyList",
     },
     inspector_score: {
-      value: cdktn.listMapperHcl(awsInspector2FilterInspectorScorePropertyToHclTerraform, true)(struct!.inspectorScore),
+      value: cdktn.listMapperHcl(tfFilterInspectorScorePropertyToHclTerraform, true)(struct!.inspectorScore),
       isBlock: true,
       type: "set",
       storageClassType: "InspectorScorePropertyList",
     },
     lambda_function_execution_role_arn: {
-      value: cdktn.listMapperHcl(awsInspector2FilterLambdaFunctionExecutionRoleArnPropertyToHclTerraform, true)(struct!.lambdaFunctionExecutionRoleArn),
+      value: cdktn.listMapperHcl(tfFilterLambdaFunctionExecutionRoleArnPropertyToHclTerraform, true)(struct!.lambdaFunctionExecutionRoleArn),
       isBlock: true,
       type: "set",
       storageClassType: "LambdaFunctionExecutionRoleArnPropertyList",
     },
     lambda_function_last_modified_at: {
-      value: cdktn.listMapperHcl(awsInspector2FilterLambdaFunctionLastModifiedAtPropertyToHclTerraform, true)(struct!.lambdaFunctionLastModifiedAt),
+      value: cdktn.listMapperHcl(tfFilterLambdaFunctionLastModifiedAtPropertyToHclTerraform, true)(struct!.lambdaFunctionLastModifiedAt),
       isBlock: true,
       type: "set",
       storageClassType: "LambdaFunctionLastModifiedAtPropertyList",
     },
     lambda_function_layers: {
-      value: cdktn.listMapperHcl(awsInspector2FilterLambdaFunctionLayersPropertyToHclTerraform, true)(struct!.lambdaFunctionLayers),
+      value: cdktn.listMapperHcl(tfFilterLambdaFunctionLayersPropertyToHclTerraform, true)(struct!.lambdaFunctionLayers),
       isBlock: true,
       type: "set",
       storageClassType: "LambdaFunctionLayersPropertyList",
     },
     lambda_function_name: {
-      value: cdktn.listMapperHcl(awsInspector2FilterLambdaFunctionNamePropertyToHclTerraform, true)(struct!.lambdaFunctionName),
+      value: cdktn.listMapperHcl(tfFilterLambdaFunctionNamePropertyToHclTerraform, true)(struct!.lambdaFunctionName),
       isBlock: true,
       type: "set",
       storageClassType: "LambdaFunctionNamePropertyList",
     },
     lambda_function_runtime: {
-      value: cdktn.listMapperHcl(awsInspector2FilterLambdaFunctionRuntimePropertyToHclTerraform, true)(struct!.lambdaFunctionRuntime),
+      value: cdktn.listMapperHcl(tfFilterLambdaFunctionRuntimePropertyToHclTerraform, true)(struct!.lambdaFunctionRuntime),
       isBlock: true,
       type: "set",
       storageClassType: "LambdaFunctionRuntimePropertyList",
     },
     last_observed_at: {
-      value: cdktn.listMapperHcl(awsInspector2FilterLastObservedAtPropertyToHclTerraform, true)(struct!.lastObservedAt),
+      value: cdktn.listMapperHcl(tfFilterLastObservedAtPropertyToHclTerraform, true)(struct!.lastObservedAt),
       isBlock: true,
       type: "set",
       storageClassType: "LastObservedAtPropertyList",
     },
     network_protocol: {
-      value: cdktn.listMapperHcl(awsInspector2FilterNetworkProtocolPropertyToHclTerraform, true)(struct!.networkProtocol),
+      value: cdktn.listMapperHcl(tfFilterNetworkProtocolPropertyToHclTerraform, true)(struct!.networkProtocol),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkProtocolPropertyList",
     },
     port_range: {
-      value: cdktn.listMapperHcl(awsInspector2FilterPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      value: cdktn.listMapperHcl(tfFilterPortRangePropertyToHclTerraform, true)(struct!.portRange),
       isBlock: true,
       type: "set",
       storageClassType: "PortRangePropertyList",
     },
     related_vulnerabilities: {
-      value: cdktn.listMapperHcl(awsInspector2FilterRelatedVulnerabilitiesPropertyToHclTerraform, true)(struct!.relatedVulnerabilities),
+      value: cdktn.listMapperHcl(tfFilterRelatedVulnerabilitiesPropertyToHclTerraform, true)(struct!.relatedVulnerabilities),
       isBlock: true,
       type: "set",
       storageClassType: "RelatedVulnerabilitiesPropertyList",
     },
     resource_id: {
-      value: cdktn.listMapperHcl(awsInspector2FilterResourceIdPropertyToHclTerraform, true)(struct!.resourceId),
+      value: cdktn.listMapperHcl(tfFilterResourceIdPropertyToHclTerraform, true)(struct!.resourceId),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceIdPropertyList",
     },
     resource_tags: {
-      value: cdktn.listMapperHcl(awsInspector2FilterResourceTagsPropertyToHclTerraform, true)(struct!.resourceTags),
+      value: cdktn.listMapperHcl(tfFilterResourceTagsPropertyToHclTerraform, true)(struct!.resourceTags),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceTagsPropertyList",
     },
     resource_type: {
-      value: cdktn.listMapperHcl(awsInspector2FilterResourceTypePropertyToHclTerraform, true)(struct!.resourceType),
+      value: cdktn.listMapperHcl(tfFilterResourceTypePropertyToHclTerraform, true)(struct!.resourceType),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceTypePropertyList",
     },
     severity: {
-      value: cdktn.listMapperHcl(awsInspector2FilterSeverityPropertyToHclTerraform, true)(struct!.severity),
+      value: cdktn.listMapperHcl(tfFilterSeverityPropertyToHclTerraform, true)(struct!.severity),
       isBlock: true,
       type: "set",
       storageClassType: "SeverityPropertyList",
     },
     title: {
-      value: cdktn.listMapperHcl(awsInspector2FilterTitlePropertyToHclTerraform, true)(struct!.title),
+      value: cdktn.listMapperHcl(tfFilterTitlePropertyToHclTerraform, true)(struct!.title),
       isBlock: true,
       type: "set",
       storageClassType: "TitlePropertyList",
     },
     updated_at: {
-      value: cdktn.listMapperHcl(awsInspector2FilterUpdatedAtPropertyToHclTerraform, true)(struct!.updatedAt),
+      value: cdktn.listMapperHcl(tfFilterUpdatedAtPropertyToHclTerraform, true)(struct!.updatedAt),
       isBlock: true,
       type: "set",
       storageClassType: "UpdatedAtPropertyList",
     },
     vendor_severity: {
-      value: cdktn.listMapperHcl(awsInspector2FilterVendorSeverityPropertyToHclTerraform, true)(struct!.vendorSeverity),
+      value: cdktn.listMapperHcl(tfFilterVendorSeverityPropertyToHclTerraform, true)(struct!.vendorSeverity),
       isBlock: true,
       type: "set",
       storageClassType: "VendorSeverityPropertyList",
     },
     vulnerability_id: {
-      value: cdktn.listMapperHcl(awsInspector2FilterVulnerabilityIdPropertyToHclTerraform, true)(struct!.vulnerabilityId),
+      value: cdktn.listMapperHcl(tfFilterVulnerabilityIdPropertyToHclTerraform, true)(struct!.vulnerabilityId),
       isBlock: true,
       type: "set",
       storageClassType: "VulnerabilityIdPropertyList",
     },
     vulnerability_source: {
-      value: cdktn.listMapperHcl(awsInspector2FilterVulnerabilitySourcePropertyToHclTerraform, true)(struct!.vulnerabilitySource),
+      value: cdktn.listMapperHcl(tfFilterVulnerabilitySourcePropertyToHclTerraform, true)(struct!.vulnerabilitySource),
       isBlock: true,
       type: "set",
       storageClassType: "VulnerabilitySourcePropertyList",
     },
     vulnerable_packages: {
-      value: cdktn.listMapperHcl(awsInspector2FilterVulnerablePackagesPropertyToHclTerraform, true)(struct!.vulnerablePackages),
+      value: cdktn.listMapperHcl(tfFilterVulnerablePackagesPropertyToHclTerraform, true)(struct!.vulnerablePackages),
       isBlock: true,
       type: "set",
       storageClassType: "VulnerablePackagesPropertyList",
@@ -2680,14 +2680,14 @@ export function awsInspector2FilterFilterCriteriaPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsInspector2Filter {
+export namespace TfFilter {
 export interface AwsAccountIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -2789,11 +2789,11 @@ export class AwsAccountIdPropertyList extends cdktn.ComplexList {
 }
 export interface CodeRepositoryProjectNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -2895,11 +2895,11 @@ export class CodeRepositoryProjectNamePropertyList extends cdktn.ComplexList {
 }
 export interface CodeRepositoryProviderTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3001,11 +3001,11 @@ export class CodeRepositoryProviderTypePropertyList extends cdktn.ComplexList {
 }
 export interface CodeVulnerabilityDetectorNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3107,11 +3107,11 @@ export class CodeVulnerabilityDetectorNamePropertyList extends cdktn.ComplexList
 }
 export interface CodeVulnerabilityDetectorTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3213,11 +3213,11 @@ export class CodeVulnerabilityDetectorTagsPropertyList extends cdktn.ComplexList
 }
 export interface CodeVulnerabilityFilePathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3319,11 +3319,11 @@ export class CodeVulnerabilityFilePathPropertyList extends cdktn.ComplexList {
 }
 export interface ComponentIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3425,11 +3425,11 @@ export class ComponentIdPropertyList extends cdktn.ComplexList {
 }
 export interface ComponentTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3531,11 +3531,11 @@ export class ComponentTypePropertyList extends cdktn.ComplexList {
 }
 export interface Ec2InstanceImageIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3637,11 +3637,11 @@ export class Ec2InstanceImageIdPropertyList extends cdktn.ComplexList {
 }
 export interface Ec2InstanceSubnetIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3743,11 +3743,11 @@ export class Ec2InstanceSubnetIdPropertyList extends cdktn.ComplexList {
 }
 export interface Ec2InstanceVpcIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3849,11 +3849,11 @@ export class Ec2InstanceVpcIdPropertyList extends cdktn.ComplexList {
 }
 export interface EcrImageArchitectureProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -3955,11 +3955,11 @@ export class EcrImageArchitecturePropertyList extends cdktn.ComplexList {
 }
 export interface EcrImageHashProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -4061,11 +4061,11 @@ export class EcrImageHashPropertyList extends cdktn.ComplexList {
 }
 export interface EcrImageInUseCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive AwsInspector2Filter#lower_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive TfFilter#lower_inclusive}
   */
   readonly lowerInclusive: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive AwsInspector2Filter#upper_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive TfFilter#upper_inclusive}
   */
   readonly upperInclusive: number;
 }
@@ -4167,11 +4167,11 @@ export class EcrImageInUseCountPropertyList extends cdktn.ComplexList {
 }
 export interface EcrImageLastInUseAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive AwsInspector2Filter#end_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive TfFilter#end_inclusive}
   */
   readonly endInclusive?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive AwsInspector2Filter#start_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive TfFilter#start_inclusive}
   */
   readonly startInclusive?: string;
 }
@@ -4279,11 +4279,11 @@ export class EcrImageLastInUseAtPropertyList extends cdktn.ComplexList {
 }
 export interface EcrImagePushedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive AwsInspector2Filter#end_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive TfFilter#end_inclusive}
   */
   readonly endInclusive?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive AwsInspector2Filter#start_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive TfFilter#start_inclusive}
   */
   readonly startInclusive?: string;
 }
@@ -4391,11 +4391,11 @@ export class EcrImagePushedAtPropertyList extends cdktn.ComplexList {
 }
 export interface EcrImageRegistryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -4497,11 +4497,11 @@ export class EcrImageRegistryPropertyList extends cdktn.ComplexList {
 }
 export interface EcrImageRepositoryNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -4603,11 +4603,11 @@ export class EcrImageRepositoryNamePropertyList extends cdktn.ComplexList {
 }
 export interface EcrImageTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -4709,11 +4709,11 @@ export class EcrImageTagsPropertyList extends cdktn.ComplexList {
 }
 export interface EpssScoreProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive AwsInspector2Filter#lower_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive TfFilter#lower_inclusive}
   */
   readonly lowerInclusive: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive AwsInspector2Filter#upper_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive TfFilter#upper_inclusive}
   */
   readonly upperInclusive: number;
 }
@@ -4815,11 +4815,11 @@ export class EpssScorePropertyList extends cdktn.ComplexList {
 }
 export interface ExploitAvailableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -4921,11 +4921,11 @@ export class ExploitAvailablePropertyList extends cdktn.ComplexList {
 }
 export interface FindingArnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -5027,11 +5027,11 @@ export class FindingArnPropertyList extends cdktn.ComplexList {
 }
 export interface FindingStatusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -5133,11 +5133,11 @@ export class FindingStatusPropertyList extends cdktn.ComplexList {
 }
 export interface FindingTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -5239,11 +5239,11 @@ export class FindingTypePropertyList extends cdktn.ComplexList {
 }
 export interface FirstObservedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive AwsInspector2Filter#end_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive TfFilter#end_inclusive}
   */
   readonly endInclusive?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive AwsInspector2Filter#start_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive TfFilter#start_inclusive}
   */
   readonly startInclusive?: string;
 }
@@ -5351,11 +5351,11 @@ export class FirstObservedAtPropertyList extends cdktn.ComplexList {
 }
 export interface FixAvailableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -5457,11 +5457,11 @@ export class FixAvailablePropertyList extends cdktn.ComplexList {
 }
 export interface InspectorScoreProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive AwsInspector2Filter#lower_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive TfFilter#lower_inclusive}
   */
   readonly lowerInclusive: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive AwsInspector2Filter#upper_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive TfFilter#upper_inclusive}
   */
   readonly upperInclusive: number;
 }
@@ -5563,11 +5563,11 @@ export class InspectorScorePropertyList extends cdktn.ComplexList {
 }
 export interface LambdaFunctionExecutionRoleArnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -5669,11 +5669,11 @@ export class LambdaFunctionExecutionRoleArnPropertyList extends cdktn.ComplexLis
 }
 export interface LambdaFunctionLastModifiedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive AwsInspector2Filter#end_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive TfFilter#end_inclusive}
   */
   readonly endInclusive?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive AwsInspector2Filter#start_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive TfFilter#start_inclusive}
   */
   readonly startInclusive?: string;
 }
@@ -5781,11 +5781,11 @@ export class LambdaFunctionLastModifiedAtPropertyList extends cdktn.ComplexList 
 }
 export interface LambdaFunctionLayersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -5887,11 +5887,11 @@ export class LambdaFunctionLayersPropertyList extends cdktn.ComplexList {
 }
 export interface LambdaFunctionNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -5993,11 +5993,11 @@ export class LambdaFunctionNamePropertyList extends cdktn.ComplexList {
 }
 export interface LambdaFunctionRuntimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -6099,11 +6099,11 @@ export class LambdaFunctionRuntimePropertyList extends cdktn.ComplexList {
 }
 export interface LastObservedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive AwsInspector2Filter#end_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive TfFilter#end_inclusive}
   */
   readonly endInclusive?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive AwsInspector2Filter#start_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive TfFilter#start_inclusive}
   */
   readonly startInclusive?: string;
 }
@@ -6211,11 +6211,11 @@ export class LastObservedAtPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkProtocolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -6317,11 +6317,11 @@ export class NetworkProtocolPropertyList extends cdktn.ComplexList {
 }
 export interface PortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#begin_inclusive AwsInspector2Filter#begin_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#begin_inclusive TfFilter#begin_inclusive}
   */
   readonly beginInclusive: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive AwsInspector2Filter#end_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive TfFilter#end_inclusive}
   */
   readonly endInclusive: number;
 }
@@ -6423,11 +6423,11 @@ export class PortRangePropertyList extends cdktn.ComplexList {
 }
 export interface RelatedVulnerabilitiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -6529,11 +6529,11 @@ export class RelatedVulnerabilitiesPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -6635,15 +6635,15 @@ export class ResourceIdPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#key AwsInspector2Filter#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#key TfFilter#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -6764,11 +6764,11 @@ export class ResourceTagsPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -6870,11 +6870,11 @@ export class ResourceTypePropertyList extends cdktn.ComplexList {
 }
 export interface SeverityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -6976,11 +6976,11 @@ export class SeverityPropertyList extends cdktn.ComplexList {
 }
 export interface TitleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -7082,11 +7082,11 @@ export class TitlePropertyList extends cdktn.ComplexList {
 }
 export interface UpdatedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive AwsInspector2Filter#end_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#end_inclusive TfFilter#end_inclusive}
   */
   readonly endInclusive?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive AwsInspector2Filter#start_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#start_inclusive TfFilter#start_inclusive}
   */
   readonly startInclusive?: string;
 }
@@ -7194,11 +7194,11 @@ export class UpdatedAtPropertyList extends cdktn.ComplexList {
 }
 export interface VendorSeverityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -7300,11 +7300,11 @@ export class VendorSeverityPropertyList extends cdktn.ComplexList {
 }
 export interface VulnerabilityIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -7406,11 +7406,11 @@ export class VulnerabilityIdPropertyList extends cdktn.ComplexList {
 }
 export interface VulnerabilitySourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -7512,11 +7512,11 @@ export class VulnerabilitySourcePropertyList extends cdktn.ComplexList {
 }
 export interface ArchitectureProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -7618,11 +7618,11 @@ export class ArchitecturePropertyList extends cdktn.ComplexList {
 }
 export interface EpochProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive AwsInspector2Filter#lower_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lower_inclusive TfFilter#lower_inclusive}
   */
   readonly lowerInclusive: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive AwsInspector2Filter#upper_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#upper_inclusive TfFilter#upper_inclusive}
   */
   readonly upperInclusive: number;
 }
@@ -7724,11 +7724,11 @@ export class EpochPropertyList extends cdktn.ComplexList {
 }
 export interface FilePathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -7830,11 +7830,11 @@ export class FilePathPropertyList extends cdktn.ComplexList {
 }
 export interface NameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -7936,11 +7936,11 @@ export class NamePropertyList extends cdktn.ComplexList {
 }
 export interface ReleaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -8042,11 +8042,11 @@ export class ReleasePropertyList extends cdktn.ComplexList {
 }
 export interface SourceLambdaLayerArnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -8148,11 +8148,11 @@ export class SourceLambdaLayerArnPropertyList extends cdktn.ComplexList {
 }
 export interface SourceLayerHashProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -8254,11 +8254,11 @@ export class SourceLayerHashPropertyList extends cdktn.ComplexList {
 }
 export interface VersionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison AwsInspector2Filter#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#comparison TfFilter#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value AwsInspector2Filter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#value TfFilter#value}
   */
   readonly value: string;
 }
@@ -8362,49 +8362,49 @@ export interface VulnerablePackagesProperty {
   /**
   * architecture block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#architecture AwsInspector2Filter#architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#architecture TfFilter#architecture}
   */
   readonly architecture?: ArchitectureProperty[] | cdktn.IResolvable;
   /**
   * epoch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#epoch AwsInspector2Filter#epoch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#epoch TfFilter#epoch}
   */
   readonly epoch?: EpochProperty[] | cdktn.IResolvable;
   /**
   * file_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#file_path AwsInspector2Filter#file_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#file_path TfFilter#file_path}
   */
   readonly filePath?: FilePathProperty[] | cdktn.IResolvable;
   /**
   * name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#name AwsInspector2Filter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#name TfFilter#name}
   */
   readonly name?: NameProperty[] | cdktn.IResolvable;
   /**
   * release block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#release AwsInspector2Filter#release}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#release TfFilter#release}
   */
   readonly release?: ReleaseProperty[] | cdktn.IResolvable;
   /**
   * source_lambda_layer_arn block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#source_lambda_layer_arn AwsInspector2Filter#source_lambda_layer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#source_lambda_layer_arn TfFilter#source_lambda_layer_arn}
   */
   readonly sourceLambdaLayerArn?: SourceLambdaLayerArnProperty[] | cdktn.IResolvable;
   /**
   * source_layer_hash block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#source_layer_hash AwsInspector2Filter#source_layer_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#source_layer_hash TfFilter#source_layer_hash}
   */
   readonly sourceLayerHash?: SourceLayerHashProperty[] | cdktn.IResolvable;
   /**
   * version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#version AwsInspector2Filter#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#version TfFilter#version}
   */
   readonly version?: VersionProperty[] | cdktn.IResolvable;
 }
@@ -8646,277 +8646,277 @@ export interface FilterCriteriaProperty {
   /**
   * aws_account_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#aws_account_id AwsInspector2Filter#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#aws_account_id TfFilter#aws_account_id}
   */
   readonly awsAccountId?: AwsAccountIdProperty[] | cdktn.IResolvable;
   /**
   * code_repository_project_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_repository_project_name AwsInspector2Filter#code_repository_project_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_repository_project_name TfFilter#code_repository_project_name}
   */
   readonly codeRepositoryProjectName?: CodeRepositoryProjectNameProperty[] | cdktn.IResolvable;
   /**
   * code_repository_provider_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_repository_provider_type AwsInspector2Filter#code_repository_provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_repository_provider_type TfFilter#code_repository_provider_type}
   */
   readonly codeRepositoryProviderType?: CodeRepositoryProviderTypeProperty[] | cdktn.IResolvable;
   /**
   * code_vulnerability_detector_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_vulnerability_detector_name AwsInspector2Filter#code_vulnerability_detector_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_vulnerability_detector_name TfFilter#code_vulnerability_detector_name}
   */
   readonly codeVulnerabilityDetectorName?: CodeVulnerabilityDetectorNameProperty[] | cdktn.IResolvable;
   /**
   * code_vulnerability_detector_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_vulnerability_detector_tags AwsInspector2Filter#code_vulnerability_detector_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_vulnerability_detector_tags TfFilter#code_vulnerability_detector_tags}
   */
   readonly codeVulnerabilityDetectorTags?: CodeVulnerabilityDetectorTagsProperty[] | cdktn.IResolvable;
   /**
   * code_vulnerability_file_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_vulnerability_file_path AwsInspector2Filter#code_vulnerability_file_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#code_vulnerability_file_path TfFilter#code_vulnerability_file_path}
   */
   readonly codeVulnerabilityFilePath?: CodeVulnerabilityFilePathProperty[] | cdktn.IResolvable;
   /**
   * component_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#component_id AwsInspector2Filter#component_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#component_id TfFilter#component_id}
   */
   readonly componentId?: ComponentIdProperty[] | cdktn.IResolvable;
   /**
   * component_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#component_type AwsInspector2Filter#component_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#component_type TfFilter#component_type}
   */
   readonly componentType?: ComponentTypeProperty[] | cdktn.IResolvable;
   /**
   * ec2_instance_image_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ec2_instance_image_id AwsInspector2Filter#ec2_instance_image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ec2_instance_image_id TfFilter#ec2_instance_image_id}
   */
   readonly ec2InstanceImageId?: Ec2InstanceImageIdProperty[] | cdktn.IResolvable;
   /**
   * ec2_instance_subnet_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ec2_instance_subnet_id AwsInspector2Filter#ec2_instance_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ec2_instance_subnet_id TfFilter#ec2_instance_subnet_id}
   */
   readonly ec2InstanceSubnetId?: Ec2InstanceSubnetIdProperty[] | cdktn.IResolvable;
   /**
   * ec2_instance_vpc_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ec2_instance_vpc_id AwsInspector2Filter#ec2_instance_vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ec2_instance_vpc_id TfFilter#ec2_instance_vpc_id}
   */
   readonly ec2InstanceVpcId?: Ec2InstanceVpcIdProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_architecture block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_architecture AwsInspector2Filter#ecr_image_architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_architecture TfFilter#ecr_image_architecture}
   */
   readonly ecrImageArchitecture?: EcrImageArchitectureProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_hash block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_hash AwsInspector2Filter#ecr_image_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_hash TfFilter#ecr_image_hash}
   */
   readonly ecrImageHash?: EcrImageHashProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_in_use_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_in_use_count AwsInspector2Filter#ecr_image_in_use_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_in_use_count TfFilter#ecr_image_in_use_count}
   */
   readonly ecrImageInUseCount?: EcrImageInUseCountProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_last_in_use_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_last_in_use_at AwsInspector2Filter#ecr_image_last_in_use_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_last_in_use_at TfFilter#ecr_image_last_in_use_at}
   */
   readonly ecrImageLastInUseAt?: EcrImageLastInUseAtProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_pushed_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_pushed_at AwsInspector2Filter#ecr_image_pushed_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_pushed_at TfFilter#ecr_image_pushed_at}
   */
   readonly ecrImagePushedAt?: EcrImagePushedAtProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_registry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_registry AwsInspector2Filter#ecr_image_registry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_registry TfFilter#ecr_image_registry}
   */
   readonly ecrImageRegistry?: EcrImageRegistryProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_repository_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_repository_name AwsInspector2Filter#ecr_image_repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_repository_name TfFilter#ecr_image_repository_name}
   */
   readonly ecrImageRepositoryName?: EcrImageRepositoryNameProperty[] | cdktn.IResolvable;
   /**
   * ecr_image_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_tags AwsInspector2Filter#ecr_image_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#ecr_image_tags TfFilter#ecr_image_tags}
   */
   readonly ecrImageTags?: EcrImageTagsProperty[] | cdktn.IResolvable;
   /**
   * epss_score block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#epss_score AwsInspector2Filter#epss_score}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#epss_score TfFilter#epss_score}
   */
   readonly epssScore?: EpssScoreProperty[] | cdktn.IResolvable;
   /**
   * exploit_available block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#exploit_available AwsInspector2Filter#exploit_available}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#exploit_available TfFilter#exploit_available}
   */
   readonly exploitAvailable?: ExploitAvailableProperty[] | cdktn.IResolvable;
   /**
   * finding_arn block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#finding_arn AwsInspector2Filter#finding_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#finding_arn TfFilter#finding_arn}
   */
   readonly findingArn?: FindingArnProperty[] | cdktn.IResolvable;
   /**
   * finding_status block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#finding_status AwsInspector2Filter#finding_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#finding_status TfFilter#finding_status}
   */
   readonly findingStatus?: FindingStatusProperty[] | cdktn.IResolvable;
   /**
   * finding_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#finding_type AwsInspector2Filter#finding_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#finding_type TfFilter#finding_type}
   */
   readonly findingType?: FindingTypeProperty[] | cdktn.IResolvable;
   /**
   * first_observed_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#first_observed_at AwsInspector2Filter#first_observed_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#first_observed_at TfFilter#first_observed_at}
   */
   readonly firstObservedAt?: FirstObservedAtProperty[] | cdktn.IResolvable;
   /**
   * fix_available block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#fix_available AwsInspector2Filter#fix_available}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#fix_available TfFilter#fix_available}
   */
   readonly fixAvailable?: FixAvailableProperty[] | cdktn.IResolvable;
   /**
   * inspector_score block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#inspector_score AwsInspector2Filter#inspector_score}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#inspector_score TfFilter#inspector_score}
   */
   readonly inspectorScore?: InspectorScoreProperty[] | cdktn.IResolvable;
   /**
   * lambda_function_execution_role_arn block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_execution_role_arn AwsInspector2Filter#lambda_function_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_execution_role_arn TfFilter#lambda_function_execution_role_arn}
   */
   readonly lambdaFunctionExecutionRoleArn?: LambdaFunctionExecutionRoleArnProperty[] | cdktn.IResolvable;
   /**
   * lambda_function_last_modified_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_last_modified_at AwsInspector2Filter#lambda_function_last_modified_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_last_modified_at TfFilter#lambda_function_last_modified_at}
   */
   readonly lambdaFunctionLastModifiedAt?: LambdaFunctionLastModifiedAtProperty[] | cdktn.IResolvable;
   /**
   * lambda_function_layers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_layers AwsInspector2Filter#lambda_function_layers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_layers TfFilter#lambda_function_layers}
   */
   readonly lambdaFunctionLayers?: LambdaFunctionLayersProperty[] | cdktn.IResolvable;
   /**
   * lambda_function_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_name AwsInspector2Filter#lambda_function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_name TfFilter#lambda_function_name}
   */
   readonly lambdaFunctionName?: LambdaFunctionNameProperty[] | cdktn.IResolvable;
   /**
   * lambda_function_runtime block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_runtime AwsInspector2Filter#lambda_function_runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#lambda_function_runtime TfFilter#lambda_function_runtime}
   */
   readonly lambdaFunctionRuntime?: LambdaFunctionRuntimeProperty[] | cdktn.IResolvable;
   /**
   * last_observed_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#last_observed_at AwsInspector2Filter#last_observed_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#last_observed_at TfFilter#last_observed_at}
   */
   readonly lastObservedAt?: LastObservedAtProperty[] | cdktn.IResolvable;
   /**
   * network_protocol block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#network_protocol AwsInspector2Filter#network_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#network_protocol TfFilter#network_protocol}
   */
   readonly networkProtocol?: NetworkProtocolProperty[] | cdktn.IResolvable;
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#port_range AwsInspector2Filter#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#port_range TfFilter#port_range}
   */
   readonly portRange?: PortRangeProperty[] | cdktn.IResolvable;
   /**
   * related_vulnerabilities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#related_vulnerabilities AwsInspector2Filter#related_vulnerabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#related_vulnerabilities TfFilter#related_vulnerabilities}
   */
   readonly relatedVulnerabilities?: RelatedVulnerabilitiesProperty[] | cdktn.IResolvable;
   /**
   * resource_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#resource_id AwsInspector2Filter#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#resource_id TfFilter#resource_id}
   */
   readonly resourceId?: ResourceIdProperty[] | cdktn.IResolvable;
   /**
   * resource_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#resource_tags AwsInspector2Filter#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#resource_tags TfFilter#resource_tags}
   */
   readonly resourceTags?: ResourceTagsProperty[] | cdktn.IResolvable;
   /**
   * resource_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#resource_type AwsInspector2Filter#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#resource_type TfFilter#resource_type}
   */
   readonly resourceType?: ResourceTypeProperty[] | cdktn.IResolvable;
   /**
   * severity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#severity AwsInspector2Filter#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#severity TfFilter#severity}
   */
   readonly severity?: SeverityProperty[] | cdktn.IResolvable;
   /**
   * title block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#title AwsInspector2Filter#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#title TfFilter#title}
   */
   readonly title?: TitleProperty[] | cdktn.IResolvable;
   /**
   * updated_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#updated_at AwsInspector2Filter#updated_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#updated_at TfFilter#updated_at}
   */
   readonly updatedAt?: UpdatedAtProperty[] | cdktn.IResolvable;
   /**
   * vendor_severity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vendor_severity AwsInspector2Filter#vendor_severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vendor_severity TfFilter#vendor_severity}
   */
   readonly vendorSeverity?: VendorSeverityProperty[] | cdktn.IResolvable;
   /**
   * vulnerability_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vulnerability_id AwsInspector2Filter#vulnerability_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vulnerability_id TfFilter#vulnerability_id}
   */
   readonly vulnerabilityId?: VulnerabilityIdProperty[] | cdktn.IResolvable;
   /**
   * vulnerability_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vulnerability_source AwsInspector2Filter#vulnerability_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vulnerability_source TfFilter#vulnerability_source}
   */
   readonly vulnerabilitySource?: VulnerabilitySourceProperty[] | cdktn.IResolvable;
   /**
   * vulnerable_packages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vulnerable_packages AwsInspector2Filter#vulnerable_packages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_filter#vulnerable_packages TfFilter#vulnerable_packages}
   */
   readonly vulnerablePackages?: VulnerablePackagesProperty[] | cdktn.IResolvable;
 }

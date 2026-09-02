@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApiGatewayMethodConfig extends cdktn.TerraformMetaArguments {
+export interface TfMethodConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#api_key_required AwsApiGatewayMethod#api_key_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#api_key_required TfMethod#api_key_required}
   */
   readonly apiKeyRequired?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#authorization AwsApiGatewayMethod#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#authorization TfMethod#authorization}
   */
   readonly authorization: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#authorization_scopes AwsApiGatewayMethod#authorization_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#authorization_scopes TfMethod#authorization_scopes}
   */
   readonly authorizationScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#authorizer_id AwsApiGatewayMethod#authorizer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#authorizer_id TfMethod#authorizer_id}
   */
   readonly authorizerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#http_method AwsApiGatewayMethod#http_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#http_method TfMethod#http_method}
   */
   readonly httpMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#id AwsApiGatewayMethod#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#id TfMethod#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#operation_name AwsApiGatewayMethod#operation_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#operation_name TfMethod#operation_name}
   */
   readonly operationName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#region AwsApiGatewayMethod#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#region TfMethod#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#request_models AwsApiGatewayMethod#request_models}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#request_models TfMethod#request_models}
   */
   readonly requestModels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#request_parameters AwsApiGatewayMethod#request_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#request_parameters TfMethod#request_parameters}
   */
   readonly requestParameters?: { [key: string]: (boolean | cdktn.IResolvable) };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#request_validator_id AwsApiGatewayMethod#request_validator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#request_validator_id TfMethod#request_validator_id}
   */
   readonly requestValidatorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#resource_id AwsApiGatewayMethod#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#resource_id TfMethod#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#rest_api_id AwsApiGatewayMethod#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#rest_api_id TfMethod#rest_api_id}
   */
   readonly restApiId: string;
 }
@@ -68,7 +68,7 @@ export interface AwsApiGatewayMethodConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method aws_api_gateway_method}
 */
-export class AwsApiGatewayMethod extends cdktn.TerraformResource {
+export class TfMethod extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsApiGatewayMethod extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApiGatewayMethod resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMethod resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApiGatewayMethod to import
-  * @param importFromId The id of the existing AwsApiGatewayMethod that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApiGatewayMethod to import is found
+  * @param importToId The construct id used in the generated config for the TfMethod to import
+  * @param importFromId The id of the existing TfMethod that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_method#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMethod to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_method", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsApiGatewayMethod extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApiGatewayMethodConfig
+  * @param options TfMethodConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApiGatewayMethodConfig) {
+  public constructor(scope: Construct, id: string, config: TfMethodConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_method',
       terraformGeneratorMetadata: {

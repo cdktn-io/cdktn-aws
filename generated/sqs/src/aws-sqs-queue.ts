@@ -5,108 +5,108 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSqsQueueConfig extends cdktn.TerraformMetaArguments {
+export interface TfQueueConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#content_based_deduplication AwsSqsQueue#content_based_deduplication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#content_based_deduplication TfQueue#content_based_deduplication}
   */
   readonly contentBasedDeduplication?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#deduplication_scope AwsSqsQueue#deduplication_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#deduplication_scope TfQueue#deduplication_scope}
   */
   readonly deduplicationScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#delay_seconds AwsSqsQueue#delay_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#delay_seconds TfQueue#delay_seconds}
   */
   readonly delaySeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#fifo_queue AwsSqsQueue#fifo_queue}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#fifo_queue TfQueue#fifo_queue}
   */
   readonly fifoQueue?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#fifo_throughput_limit AwsSqsQueue#fifo_throughput_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#fifo_throughput_limit TfQueue#fifo_throughput_limit}
   */
   readonly fifoThroughputLimit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#id AwsSqsQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#id TfQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#kms_data_key_reuse_period_seconds AwsSqsQueue#kms_data_key_reuse_period_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#kms_data_key_reuse_period_seconds TfQueue#kms_data_key_reuse_period_seconds}
   */
   readonly kmsDataKeyReusePeriodSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#kms_master_key_id AwsSqsQueue#kms_master_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#kms_master_key_id TfQueue#kms_master_key_id}
   */
   readonly kmsMasterKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#max_message_size AwsSqsQueue#max_message_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#max_message_size TfQueue#max_message_size}
   */
   readonly maxMessageSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#message_retention_seconds AwsSqsQueue#message_retention_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#message_retention_seconds TfQueue#message_retention_seconds}
   */
   readonly messageRetentionSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#name AwsSqsQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#name TfQueue#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#name_prefix AwsSqsQueue#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#name_prefix TfQueue#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#policy AwsSqsQueue#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#policy TfQueue#policy}
   */
   readonly policy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#receive_wait_time_seconds AwsSqsQueue#receive_wait_time_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#receive_wait_time_seconds TfQueue#receive_wait_time_seconds}
   */
   readonly receiveWaitTimeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#redrive_allow_policy AwsSqsQueue#redrive_allow_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#redrive_allow_policy TfQueue#redrive_allow_policy}
   */
   readonly redriveAllowPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#redrive_policy AwsSqsQueue#redrive_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#redrive_policy TfQueue#redrive_policy}
   */
   readonly redrivePolicy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#region AwsSqsQueue#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#region TfQueue#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#sqs_managed_sse_enabled AwsSqsQueue#sqs_managed_sse_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#sqs_managed_sse_enabled TfQueue#sqs_managed_sse_enabled}
   */
   readonly sqsManagedSseEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#tags AwsSqsQueue#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#tags TfQueue#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#tags_all AwsSqsQueue#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#tags_all TfQueue#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#visibility_timeout_seconds AwsSqsQueue#visibility_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#visibility_timeout_seconds TfQueue#visibility_timeout_seconds}
   */
   readonly visibilityTimeoutSeconds?: number;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#timeouts AwsSqsQueue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#timeouts TfQueue#timeouts}
   */
-  readonly timeouts?: AwsSqsQueue.TimeoutsProperty;
+  readonly timeouts?: TfQueue.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue aws_sqs_queue}
 */
-export class AwsSqsQueue extends cdktn.TerraformResource {
+export class TfQueue extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -117,11 +117,11 @@ export class AwsSqsQueue extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSqsQueue resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfQueue resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSqsQueue to import
-  * @param importFromId The id of the existing AwsSqsQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSqsQueue to import is found
+  * @param importToId The construct id used in the generated config for the TfQueue to import
+  * @param importFromId The id of the existing TfQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sqs_queue", importId: importFromId, provider });
@@ -136,9 +136,9 @@ export class AwsSqsQueue extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSqsQueueConfig = {}
+  * @param options TfQueueConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsSqsQueueConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfQueueConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_sqs_queue',
       terraformGeneratorMetadata: {
@@ -529,11 +529,11 @@ export class AwsSqsQueue extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSqsQueue.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfQueue.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSqsQueue.TimeoutsProperty) {
+  public putTimeouts(value: TfQueue.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -571,7 +571,7 @@ export class AwsSqsQueue extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       visibility_timeout_seconds: cdktn.numberToTerraform(this._visibilityTimeoutSeconds),
-      timeouts: awsSqsQueueTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfQueueTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -704,10 +704,10 @@ export class AwsSqsQueue extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       timeouts: {
-        value: awsSqsQueueTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfQueueTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSqsQueue.TimeoutsProperty",
+        storageClassType: "TfQueue.TimeoutsProperty",
       },
     };
 
@@ -716,7 +716,7 @@ export class AwsSqsQueue extends cdktn.TerraformResource {
   }
 }
 
-export function awsSqsQueueTimeoutsPropertyToTerraform(struct?: AwsSqsQueue.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfQueueTimeoutsPropertyToTerraform(struct?: TfQueue.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -729,7 +729,7 @@ export function awsSqsQueueTimeoutsPropertyToTerraform(struct?: AwsSqsQueue.Time
 }
 
 
-export function awsSqsQueueTimeoutsPropertyToHclTerraform(struct?: AwsSqsQueue.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfQueueTimeoutsPropertyToHclTerraform(struct?: TfQueue.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -760,18 +760,18 @@ export function awsSqsQueueTimeoutsPropertyToHclTerraform(struct?: AwsSqsQueue.T
 }
 
 
-export namespace AwsSqsQueue {
+export namespace TfQueue {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#create AwsSqsQueue#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#create TfQueue#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#delete AwsSqsQueue#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#delete TfQueue#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#update AwsSqsQueue#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#update TfQueue#update}
   */
   readonly update?: string;
 }

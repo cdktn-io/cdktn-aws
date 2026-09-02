@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNotificationsOrganizationalUnitAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationalUnitAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_organizational_unit_association#notification_configuration_arn AwsNotificationsOrganizationalUnitAssociation#notification_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_organizational_unit_association#notification_configuration_arn TfOrganizationalUnitAssociation#notification_configuration_arn}
   */
   readonly notificationConfigurationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_organizational_unit_association#organizational_unit_id AwsNotificationsOrganizationalUnitAssociation#organizational_unit_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_organizational_unit_association#organizational_unit_id TfOrganizationalUnitAssociation#organizational_unit_id}
   */
   readonly organizationalUnitId: string;
 }
@@ -19,7 +19,7 @@ export interface AwsNotificationsOrganizationalUnitAssociationConfig extends cdk
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_organizational_unit_association aws_notifications_organizational_unit_association}
 */
-export class AwsNotificationsOrganizationalUnitAssociation extends cdktn.TerraformResource {
+export class TfOrganizationalUnitAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class AwsNotificationsOrganizationalUnitAssociation extends cdktn.Terrafo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNotificationsOrganizationalUnitAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationalUnitAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNotificationsOrganizationalUnitAssociation to import
-  * @param importFromId The id of the existing AwsNotificationsOrganizationalUnitAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_organizational_unit_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNotificationsOrganizationalUnitAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationalUnitAssociation to import
+  * @param importFromId The id of the existing TfOrganizationalUnitAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_organizational_unit_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationalUnitAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_notifications_organizational_unit_association", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class AwsNotificationsOrganizationalUnitAssociation extends cdktn.Terrafo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNotificationsOrganizationalUnitAssociationConfig
+  * @param options TfOrganizationalUnitAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNotificationsOrganizationalUnitAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationalUnitAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_notifications_organizational_unit_association',
       terraformGeneratorMetadata: {

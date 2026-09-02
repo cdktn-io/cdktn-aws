@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpnGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface TfGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#amazon_side_asn AwsVpnGateway#amazon_side_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#amazon_side_asn TfGateway#amazon_side_asn}
   */
   readonly amazonSideAsn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#availability_zone AwsVpnGateway#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#availability_zone TfGateway#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#id AwsVpnGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#id TfGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,19 +24,19 @@ export interface AwsVpnGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#region AwsVpnGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#region TfGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#tags AwsVpnGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#tags TfGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#tags_all AwsVpnGateway#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#tags_all TfGateway#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#vpc_id AwsVpnGateway#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#vpc_id TfGateway#vpc_id}
   */
   readonly vpcId?: string;
 }
@@ -44,7 +44,7 @@ export interface AwsVpnGatewayConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway aws_vpn_gateway}
 */
-export class AwsVpnGateway extends cdktn.TerraformResource {
+export class TfGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsVpnGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpnGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpnGateway to import
-  * @param importFromId The id of the existing AwsVpnGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpnGateway to import is found
+  * @param importToId The construct id used in the generated config for the TfGateway to import
+  * @param importFromId The id of the existing TfGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpn_gateway", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsVpnGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpnGatewayConfig = {}
+  * @param options TfGatewayConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsVpnGatewayConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfGatewayConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpn_gateway',
       terraformGeneratorMetadata: {

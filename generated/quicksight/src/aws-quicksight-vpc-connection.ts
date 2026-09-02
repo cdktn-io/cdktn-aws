@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightVpcConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface TfVpcConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#aws_account_id AwsQuicksightVpcConnection#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#aws_account_id TfVpcConnection#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#dns_resolvers AwsQuicksightVpcConnection#dns_resolvers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#dns_resolvers TfVpcConnection#dns_resolvers}
   */
   readonly dnsResolvers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#name AwsQuicksightVpcConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#name TfVpcConnection#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#region AwsQuicksightVpcConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#region TfVpcConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#role_arn AwsQuicksightVpcConnection#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#role_arn TfVpcConnection#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#security_group_ids AwsQuicksightVpcConnection#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#security_group_ids TfVpcConnection#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#subnet_ids AwsQuicksightVpcConnection#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#subnet_ids TfVpcConnection#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#tags AwsQuicksightVpcConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#tags TfVpcConnection#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#vpc_connection_id AwsQuicksightVpcConnection#vpc_connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#vpc_connection_id TfVpcConnection#vpc_connection_id}
   */
   readonly vpcConnectionId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#timeouts AwsQuicksightVpcConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#timeouts TfVpcConnection#timeouts}
   */
-  readonly timeouts?: AwsQuicksightVpcConnection.TimeoutsProperty;
+  readonly timeouts?: TfVpcConnection.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection aws_quicksight_vpc_connection}
 */
-export class AwsQuicksightVpcConnection extends cdktn.TerraformResource {
+export class TfVpcConnection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class AwsQuicksightVpcConnection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightVpcConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVpcConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightVpcConnection to import
-  * @param importFromId The id of the existing AwsQuicksightVpcConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightVpcConnection to import is found
+  * @param importToId The construct id used in the generated config for the TfVpcConnection to import
+  * @param importFromId The id of the existing TfVpcConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVpcConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_vpc_connection", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class AwsQuicksightVpcConnection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightVpcConnectionConfig
+  * @param options TfVpcConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightVpcConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: TfVpcConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_vpc_connection',
       terraformGeneratorMetadata: {
@@ -270,11 +270,11 @@ export class AwsQuicksightVpcConnection extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsQuicksightVpcConnection.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVpcConnection.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsQuicksightVpcConnection.TimeoutsProperty) {
+  public putTimeouts(value: TfVpcConnection.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -300,7 +300,7 @@ export class AwsQuicksightVpcConnection extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_connection_id: cdktn.stringToTerraform(this._vpcConnectionId),
-      timeouts: awsQuicksightVpcConnectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfVpcConnectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -361,10 +361,10 @@ export class AwsQuicksightVpcConnection extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsQuicksightVpcConnectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVpcConnectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsQuicksightVpcConnection.TimeoutsProperty",
+        storageClassType: "TfVpcConnection.TimeoutsProperty",
       },
     };
 
@@ -373,7 +373,7 @@ export class AwsQuicksightVpcConnection extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightVpcConnectionTimeoutsPropertyToTerraform(struct?: AwsQuicksightVpcConnection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcConnectionTimeoutsPropertyToTerraform(struct?: TfVpcConnection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function awsQuicksightVpcConnectionTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsQuicksightVpcConnectionTimeoutsPropertyToHclTerraform(struct?: AwsQuicksightVpcConnection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcConnectionTimeoutsPropertyToHclTerraform(struct?: TfVpcConnection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,24 +417,24 @@ export function awsQuicksightVpcConnectionTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsQuicksightVpcConnection {
+export namespace TfVpcConnection {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#create AwsQuicksightVpcConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#create TfVpcConnection#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#delete AwsQuicksightVpcConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#delete TfVpcConnection#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#update AwsQuicksightVpcConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_vpc_connection#update TfVpcConnection#update}
   */
   readonly update?: string;
 }

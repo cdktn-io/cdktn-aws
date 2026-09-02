@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRdsInstanceStateConfig extends cdktn.TerraformMetaArguments {
+export interface TfInstanceStateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#identifier AwsRdsInstanceState#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#identifier TfInstanceState#identifier}
   */
   readonly identifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#region AwsRdsInstanceState#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#region TfInstanceState#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#state AwsRdsInstanceState#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#state TfInstanceState#state}
   */
   readonly state: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#timeouts AwsRdsInstanceState#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#timeouts TfInstanceState#timeouts}
   */
-  readonly timeouts?: AwsRdsInstanceState.TimeoutsProperty;
+  readonly timeouts?: TfInstanceState.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state aws_rds_instance_state}
 */
-export class AwsRdsInstanceState extends cdktn.TerraformResource {
+export class TfInstanceState extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsRdsInstanceState extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRdsInstanceState resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInstanceState resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRdsInstanceState to import
-  * @param importFromId The id of the existing AwsRdsInstanceState that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRdsInstanceState to import is found
+  * @param importToId The construct id used in the generated config for the TfInstanceState to import
+  * @param importFromId The id of the existing TfInstanceState that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInstanceState to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_instance_state", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsRdsInstanceState extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRdsInstanceStateConfig
+  * @param options TfInstanceStateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRdsInstanceStateConfig) {
+  public constructor(scope: Construct, id: string, config: TfInstanceStateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_instance_state',
       terraformGeneratorMetadata: {
@@ -132,11 +132,11 @@ export class AwsRdsInstanceState extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRdsInstanceState.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfInstanceState.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRdsInstanceState.TimeoutsProperty) {
+  public putTimeouts(value: TfInstanceState.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -156,7 +156,7 @@ export class AwsRdsInstanceState extends cdktn.TerraformResource {
       identifier: cdktn.stringToTerraform(this._identifier),
       region: cdktn.stringToTerraform(this._region),
       state: cdktn.stringToTerraform(this._state),
-      timeouts: awsRdsInstanceStateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfInstanceStateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -181,10 +181,10 @@ export class AwsRdsInstanceState extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsRdsInstanceStateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfInstanceStateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRdsInstanceState.TimeoutsProperty",
+        storageClassType: "TfInstanceState.TimeoutsProperty",
       },
     };
 
@@ -193,7 +193,7 @@ export class AwsRdsInstanceState extends cdktn.TerraformResource {
   }
 }
 
-export function awsRdsInstanceStateTimeoutsPropertyToTerraform(struct?: AwsRdsInstanceState.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInstanceStateTimeoutsPropertyToTerraform(struct?: TfInstanceState.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function awsRdsInstanceStateTimeoutsPropertyToTerraform(struct?: AwsRdsIn
 }
 
 
-export function awsRdsInstanceStateTimeoutsPropertyToHclTerraform(struct?: AwsRdsInstanceState.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInstanceStateTimeoutsPropertyToHclTerraform(struct?: TfInstanceState.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,18 +230,18 @@ export function awsRdsInstanceStateTimeoutsPropertyToHclTerraform(struct?: AwsRd
 }
 
 
-export namespace AwsRdsInstanceState {
+export namespace TfInstanceState {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#create AwsRdsInstanceState#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#create TfInstanceState#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#update AwsRdsInstanceState#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_instance_state#update TfInstanceState#update}
   */
   readonly update?: string;
 }

@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTransferWebAppCustomizationConfig extends cdktn.TerraformMetaArguments {
+export interface TfWebAppCustomizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#favicon_file AwsTransferWebAppCustomization#favicon_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#favicon_file TfWebAppCustomization#favicon_file}
   */
   readonly faviconFile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#logo_file AwsTransferWebAppCustomization#logo_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#logo_file TfWebAppCustomization#logo_file}
   */
   readonly logoFile?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#region AwsTransferWebAppCustomization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#region TfWebAppCustomization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#title AwsTransferWebAppCustomization#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#title TfWebAppCustomization#title}
   */
   readonly title?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#web_app_id AwsTransferWebAppCustomization#web_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#web_app_id TfWebAppCustomization#web_app_id}
   */
   readonly webAppId: string;
 }
@@ -33,7 +33,7 @@ export interface AwsTransferWebAppCustomizationConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization aws_transfer_web_app_customization}
 */
-export class AwsTransferWebAppCustomization extends cdktn.TerraformResource {
+export class TfWebAppCustomization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsTransferWebAppCustomization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTransferWebAppCustomization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWebAppCustomization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTransferWebAppCustomization to import
-  * @param importFromId The id of the existing AwsTransferWebAppCustomization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTransferWebAppCustomization to import is found
+  * @param importToId The construct id used in the generated config for the TfWebAppCustomization to import
+  * @param importFromId The id of the existing TfWebAppCustomization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_web_app_customization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWebAppCustomization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_web_app_customization", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsTransferWebAppCustomization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTransferWebAppCustomizationConfig
+  * @param options TfWebAppCustomizationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTransferWebAppCustomizationConfig) {
+  public constructor(scope: Construct, id: string, config: TfWebAppCustomizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_web_app_customization',
       terraformGeneratorMetadata: {

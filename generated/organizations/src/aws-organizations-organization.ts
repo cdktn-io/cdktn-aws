@@ -5,28 +5,28 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOrganizationsOrganizationConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#aws_service_access_principals AwsOrganizationsOrganization#aws_service_access_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#aws_service_access_principals TfOrganization#aws_service_access_principals}
   */
   readonly awsServiceAccessPrincipals?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#enabled_policy_types AwsOrganizationsOrganization#enabled_policy_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#enabled_policy_types TfOrganization#enabled_policy_types}
   */
   readonly enabledPolicyTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#feature_set AwsOrganizationsOrganization#feature_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#feature_set TfOrganization#feature_set}
   */
   readonly featureSet?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#id AwsOrganizationsOrganization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#id TfOrganization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#return_organization_only AwsOrganizationsOrganization#return_organization_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#return_organization_only TfOrganization#return_organization_only}
   */
   readonly returnOrganizationOnly?: boolean | cdktn.IResolvable;
 }
@@ -34,7 +34,7 @@ export interface AwsOrganizationsOrganizationConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization aws_organizations_organization}
 */
-export class AwsOrganizationsOrganization extends cdktn.TerraformResource {
+export class TfOrganization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsOrganizationsOrganization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOrganizationsOrganization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOrganizationsOrganization to import
-  * @param importFromId The id of the existing AwsOrganizationsOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOrganizationsOrganization to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganization to import
+  * @param importFromId The id of the existing TfOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_organization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_organization", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsOrganizationsOrganization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOrganizationsOrganizationConfig = {}
+  * @param options TfOrganizationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsOrganizationsOrganizationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_organization',
       terraformGeneratorMetadata: {
@@ -94,7 +94,7 @@ export class AwsOrganizationsOrganization extends cdktn.TerraformResource {
   // ==========
 
   // accounts - computed: true, optional: false, required: false
-  private _accounts = new AwsOrganizationsOrganization.AccountsPropertyList(this, "accounts", false);
+  private _accounts = new TfOrganization.AccountsPropertyList(this, "accounts", false);
   public get accounts() {
     return this._accounts;
   }
@@ -189,7 +189,7 @@ export class AwsOrganizationsOrganization extends cdktn.TerraformResource {
   }
 
   // non_master_accounts - computed: true, optional: false, required: false
-  private _nonMasterAccounts = new AwsOrganizationsOrganization.NonMasterAccountsPropertyList(this, "non_master_accounts", false);
+  private _nonMasterAccounts = new TfOrganization.NonMasterAccountsPropertyList(this, "non_master_accounts", false);
   public get nonMasterAccounts() {
     return this._nonMasterAccounts;
   }
@@ -211,7 +211,7 @@ export class AwsOrganizationsOrganization extends cdktn.TerraformResource {
   }
 
   // roots - computed: true, optional: false, required: false
-  private _roots = new AwsOrganizationsOrganization.RootsPropertyList(this, "roots", false);
+  private _roots = new TfOrganization.RootsPropertyList(this, "roots", false);
   public get roots() {
     return this._roots;
   }
@@ -269,7 +269,7 @@ export class AwsOrganizationsOrganization extends cdktn.TerraformResource {
   }
 }
 
-export function awsOrganizationsOrganizationAccountsPropertyToTerraform(struct?: AwsOrganizationsOrganization.AccountsProperty): any {
+export function tfOrganizationAccountsPropertyToTerraform(struct?: TfOrganization.AccountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function awsOrganizationsOrganizationAccountsPropertyToTerraform(struct?:
 }
 
 
-export function awsOrganizationsOrganizationAccountsPropertyToHclTerraform(struct?: AwsOrganizationsOrganization.AccountsProperty): any {
+export function tfOrganizationAccountsPropertyToHclTerraform(struct?: TfOrganization.AccountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function awsOrganizationsOrganizationAccountsPropertyToHclTerraform(struc
 }
 
 
-export function awsOrganizationsOrganizationNonMasterAccountsPropertyToTerraform(struct?: AwsOrganizationsOrganization.NonMasterAccountsProperty): any {
+export function tfOrganizationNonMasterAccountsPropertyToTerraform(struct?: TfOrganization.NonMasterAccountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function awsOrganizationsOrganizationNonMasterAccountsPropertyToTerraform
 }
 
 
-export function awsOrganizationsOrganizationNonMasterAccountsPropertyToHclTerraform(struct?: AwsOrganizationsOrganization.NonMasterAccountsProperty): any {
+export function tfOrganizationNonMasterAccountsPropertyToHclTerraform(struct?: TfOrganization.NonMasterAccountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function awsOrganizationsOrganizationNonMasterAccountsPropertyToHclTerraf
 }
 
 
-export function awsOrganizationsOrganizationPolicyTypesPropertyToTerraform(struct?: AwsOrganizationsOrganization.PolicyTypesProperty): any {
+export function tfOrganizationPolicyTypesPropertyToTerraform(struct?: TfOrganization.PolicyTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function awsOrganizationsOrganizationPolicyTypesPropertyToTerraform(struc
 }
 
 
-export function awsOrganizationsOrganizationPolicyTypesPropertyToHclTerraform(struct?: AwsOrganizationsOrganization.PolicyTypesProperty): any {
+export function tfOrganizationPolicyTypesPropertyToHclTerraform(struct?: TfOrganization.PolicyTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function awsOrganizationsOrganizationPolicyTypesPropertyToHclTerraform(st
 }
 
 
-export function awsOrganizationsOrganizationRootsPropertyToTerraform(struct?: AwsOrganizationsOrganization.RootsProperty): any {
+export function tfOrganizationRootsPropertyToTerraform(struct?: TfOrganization.RootsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function awsOrganizationsOrganizationRootsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsOrganizationsOrganizationRootsPropertyToHclTerraform(struct?: AwsOrganizationsOrganization.RootsProperty): any {
+export function tfOrganizationRootsPropertyToHclTerraform(struct?: TfOrganization.RootsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function awsOrganizationsOrganizationRootsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsOrganizationsOrganization {
+export namespace TfOrganization {
 export interface AccountsProperty {
 }
 export class AccountsPropertyOutputReference extends cdktn.ComplexObject {

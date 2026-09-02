@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsComputeoptimizerEnrollmentStatusConfig extends cdktn.TerraformMetaArguments {
+export interface TfEnrollmentStatusConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#include_member_accounts AwsComputeoptimizerEnrollmentStatus#include_member_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#include_member_accounts TfEnrollmentStatus#include_member_accounts}
   */
   readonly includeMemberAccounts?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#region AwsComputeoptimizerEnrollmentStatus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#region TfEnrollmentStatus#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#status AwsComputeoptimizerEnrollmentStatus#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#status TfEnrollmentStatus#status}
   */
   readonly status: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#timeouts AwsComputeoptimizerEnrollmentStatus#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#timeouts TfEnrollmentStatus#timeouts}
   */
-  readonly timeouts?: AwsComputeoptimizerEnrollmentStatus.TimeoutsProperty;
+  readonly timeouts?: TfEnrollmentStatus.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status aws_computeoptimizer_enrollment_status}
 */
-export class AwsComputeoptimizerEnrollmentStatus extends cdktn.TerraformResource {
+export class TfEnrollmentStatus extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsComputeoptimizerEnrollmentStatus extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsComputeoptimizerEnrollmentStatus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEnrollmentStatus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsComputeoptimizerEnrollmentStatus to import
-  * @param importFromId The id of the existing AwsComputeoptimizerEnrollmentStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsComputeoptimizerEnrollmentStatus to import is found
+  * @param importToId The construct id used in the generated config for the TfEnrollmentStatus to import
+  * @param importFromId The id of the existing TfEnrollmentStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEnrollmentStatus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_computeoptimizer_enrollment_status", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsComputeoptimizerEnrollmentStatus extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsComputeoptimizerEnrollmentStatusConfig
+  * @param options TfEnrollmentStatusConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsComputeoptimizerEnrollmentStatusConfig) {
+  public constructor(scope: Construct, id: string, config: TfEnrollmentStatusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_computeoptimizer_enrollment_status',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class AwsComputeoptimizerEnrollmentStatus extends cdktn.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsComputeoptimizerEnrollmentStatus.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEnrollmentStatus.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsComputeoptimizerEnrollmentStatus.TimeoutsProperty) {
+  public putTimeouts(value: TfEnrollmentStatus.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -169,7 +169,7 @@ export class AwsComputeoptimizerEnrollmentStatus extends cdktn.TerraformResource
       include_member_accounts: cdktn.booleanToTerraform(this._includeMemberAccounts),
       region: cdktn.stringToTerraform(this._region),
       status: cdktn.stringToTerraform(this._status),
-      timeouts: awsComputeoptimizerEnrollmentStatusTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfEnrollmentStatusTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -194,10 +194,10 @@ export class AwsComputeoptimizerEnrollmentStatus extends cdktn.TerraformResource
         storageClassType: "string",
       },
       timeouts: {
-        value: awsComputeoptimizerEnrollmentStatusTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEnrollmentStatusTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsComputeoptimizerEnrollmentStatus.TimeoutsProperty",
+        storageClassType: "TfEnrollmentStatus.TimeoutsProperty",
       },
     };
 
@@ -206,7 +206,7 @@ export class AwsComputeoptimizerEnrollmentStatus extends cdktn.TerraformResource
   }
 }
 
-export function awsComputeoptimizerEnrollmentStatusTimeoutsPropertyToTerraform(struct?: AwsComputeoptimizerEnrollmentStatus.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnrollmentStatusTimeoutsPropertyToTerraform(struct?: TfEnrollmentStatus.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -218,7 +218,7 @@ export function awsComputeoptimizerEnrollmentStatusTimeoutsPropertyToTerraform(s
 }
 
 
-export function awsComputeoptimizerEnrollmentStatusTimeoutsPropertyToHclTerraform(struct?: AwsComputeoptimizerEnrollmentStatus.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnrollmentStatusTimeoutsPropertyToHclTerraform(struct?: TfEnrollmentStatus.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,18 +243,18 @@ export function awsComputeoptimizerEnrollmentStatusTimeoutsPropertyToHclTerrafor
 }
 
 
-export namespace AwsComputeoptimizerEnrollmentStatus {
+export namespace TfEnrollmentStatus {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#create AwsComputeoptimizerEnrollmentStatus#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#create TfEnrollmentStatus#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#update AwsComputeoptimizerEnrollmentStatus#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_enrollment_status#update TfEnrollmentStatus#update}
   */
   readonly update?: string;
 }

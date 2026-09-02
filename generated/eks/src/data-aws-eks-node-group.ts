@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEksNodeGroupConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfNodeGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#cluster_name DataAwsEksNodeGroup#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#cluster_name DataTfNodeGroup#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#id DataAwsEksNodeGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#id DataTfNodeGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#node_group_name DataAwsEksNodeGroup#node_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#node_group_name DataTfNodeGroup#node_group_name}
   */
   readonly nodeGroupName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#region DataAwsEksNodeGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#region DataTfNodeGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#tags DataAwsEksNodeGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#tags DataTfNodeGroup#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataAwsEksNodeGroupConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group aws_eks_node_group}
 */
-export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
+export class DataTfNodeGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEksNodeGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfNodeGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEksNodeGroup to import
-  * @param importFromId The id of the existing DataAwsEksNodeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEksNodeGroup to import is found
+  * @param importToId The construct id used in the generated config for the DataTfNodeGroup to import
+  * @param importFromId The id of the existing DataTfNodeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfNodeGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_node_group", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEksNodeGroupConfig
+  * @param options DataTfNodeGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEksNodeGroupConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfNodeGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_node_group',
       terraformGeneratorMetadata: {
@@ -156,7 +156,7 @@ export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
   }
 
   // launch_template - computed: true, optional: false, required: false
-  private _launchTemplate = new DataAwsEksNodeGroup.LaunchTemplatePropertyList(this, "launch_template", false);
+  private _launchTemplate = new DataTfNodeGroup.LaunchTemplatePropertyList(this, "launch_template", false);
   public get launchTemplate() {
     return this._launchTemplate;
   }
@@ -201,19 +201,19 @@ export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
   }
 
   // remote_access - computed: true, optional: false, required: false
-  private _remoteAccess = new DataAwsEksNodeGroup.RemoteAccessPropertyList(this, "remote_access", false);
+  private _remoteAccess = new DataTfNodeGroup.RemoteAccessPropertyList(this, "remote_access", false);
   public get remoteAccess() {
     return this._remoteAccess;
   }
 
   // resources - computed: true, optional: false, required: false
-  private _resources = new DataAwsEksNodeGroup.ResourcesPropertyList(this, "resources", false);
+  private _resources = new DataTfNodeGroup.ResourcesPropertyList(this, "resources", false);
   public get resources() {
     return this._resources;
   }
 
   // scaling_config - computed: true, optional: false, required: false
-  private _scalingConfig = new DataAwsEksNodeGroup.ScalingConfigPropertyList(this, "scaling_config", false);
+  private _scalingConfig = new DataTfNodeGroup.ScalingConfigPropertyList(this, "scaling_config", false);
   public get scalingConfig() {
     return this._scalingConfig;
   }
@@ -245,13 +245,13 @@ export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
   }
 
   // taints - computed: true, optional: false, required: false
-  private _taints = new DataAwsEksNodeGroup.TaintsPropertyList(this, "taints", false);
+  private _taints = new DataTfNodeGroup.TaintsPropertyList(this, "taints", false);
   public get taints() {
     return this._taints;
   }
 
   // update_config - computed: true, optional: false, required: false
-  private _updateConfig = new DataAwsEksNodeGroup.UpdateConfigPropertyList(this, "update_config", false);
+  private _updateConfig = new DataTfNodeGroup.UpdateConfigPropertyList(this, "update_config", false);
   public get updateConfig() {
     return this._updateConfig;
   }
@@ -262,7 +262,7 @@ export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
   }
 
   // warm_pool_config - computed: true, optional: false, required: false
-  private _warmPoolConfig = new DataAwsEksNodeGroup.WarmPoolConfigPropertyList(this, "warm_pool_config", false);
+  private _warmPoolConfig = new DataTfNodeGroup.WarmPoolConfigPropertyList(this, "warm_pool_config", false);
   public get warmPoolConfig() {
     return this._warmPoolConfig;
   }
@@ -320,7 +320,7 @@ export class DataAwsEksNodeGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsEksNodeGroupLaunchTemplatePropertyToTerraform(struct?: DataAwsEksNodeGroup.LaunchTemplateProperty): any {
+export function dataTfNodeGroupLaunchTemplatePropertyToTerraform(struct?: DataTfNodeGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function dataAwsEksNodeGroupLaunchTemplatePropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsEksNodeGroupLaunchTemplatePropertyToHclTerraform(struct?: DataAwsEksNodeGroup.LaunchTemplateProperty): any {
+export function dataTfNodeGroupLaunchTemplatePropertyToHclTerraform(struct?: DataTfNodeGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function dataAwsEksNodeGroupLaunchTemplatePropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsEksNodeGroupRemoteAccessPropertyToTerraform(struct?: DataAwsEksNodeGroup.RemoteAccessProperty): any {
+export function dataTfNodeGroupRemoteAccessPropertyToTerraform(struct?: DataTfNodeGroup.RemoteAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function dataAwsEksNodeGroupRemoteAccessPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsEksNodeGroupRemoteAccessPropertyToHclTerraform(struct?: DataAwsEksNodeGroup.RemoteAccessProperty): any {
+export function dataTfNodeGroupRemoteAccessPropertyToHclTerraform(struct?: DataTfNodeGroup.RemoteAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function dataAwsEksNodeGroupRemoteAccessPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataAwsEksNodeGroupAutoscalingGroupsPropertyToTerraform(struct?: DataAwsEksNodeGroup.AutoscalingGroupsProperty): any {
+export function dataTfNodeGroupAutoscalingGroupsPropertyToTerraform(struct?: DataTfNodeGroup.AutoscalingGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function dataAwsEksNodeGroupAutoscalingGroupsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsEksNodeGroupAutoscalingGroupsPropertyToHclTerraform(struct?: DataAwsEksNodeGroup.AutoscalingGroupsProperty): any {
+export function dataTfNodeGroupAutoscalingGroupsPropertyToHclTerraform(struct?: DataTfNodeGroup.AutoscalingGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function dataAwsEksNodeGroupAutoscalingGroupsPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsEksNodeGroupResourcesPropertyToTerraform(struct?: DataAwsEksNodeGroup.ResourcesProperty): any {
+export function dataTfNodeGroupResourcesPropertyToTerraform(struct?: DataTfNodeGroup.ResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function dataAwsEksNodeGroupResourcesPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsEksNodeGroupResourcesPropertyToHclTerraform(struct?: DataAwsEksNodeGroup.ResourcesProperty): any {
+export function dataTfNodeGroupResourcesPropertyToHclTerraform(struct?: DataTfNodeGroup.ResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function dataAwsEksNodeGroupResourcesPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsEksNodeGroupScalingConfigPropertyToTerraform(struct?: DataAwsEksNodeGroup.ScalingConfigProperty): any {
+export function dataTfNodeGroupScalingConfigPropertyToTerraform(struct?: DataTfNodeGroup.ScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function dataAwsEksNodeGroupScalingConfigPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsEksNodeGroupScalingConfigPropertyToHclTerraform(struct?: DataAwsEksNodeGroup.ScalingConfigProperty): any {
+export function dataTfNodeGroupScalingConfigPropertyToHclTerraform(struct?: DataTfNodeGroup.ScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function dataAwsEksNodeGroupScalingConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsEksNodeGroupTaintsPropertyToTerraform(struct?: DataAwsEksNodeGroup.TaintsProperty): any {
+export function dataTfNodeGroupTaintsPropertyToTerraform(struct?: DataTfNodeGroup.TaintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function dataAwsEksNodeGroupTaintsPropertyToTerraform(struct?: DataAwsEks
 }
 
 
-export function dataAwsEksNodeGroupTaintsPropertyToHclTerraform(struct?: DataAwsEksNodeGroup.TaintsProperty): any {
+export function dataTfNodeGroupTaintsPropertyToHclTerraform(struct?: DataTfNodeGroup.TaintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function dataAwsEksNodeGroupTaintsPropertyToHclTerraform(struct?: DataAws
 }
 
 
-export function dataAwsEksNodeGroupUpdateConfigPropertyToTerraform(struct?: DataAwsEksNodeGroup.UpdateConfigProperty): any {
+export function dataTfNodeGroupUpdateConfigPropertyToTerraform(struct?: DataTfNodeGroup.UpdateConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function dataAwsEksNodeGroupUpdateConfigPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsEksNodeGroupUpdateConfigPropertyToHclTerraform(struct?: DataAwsEksNodeGroup.UpdateConfigProperty): any {
+export function dataTfNodeGroupUpdateConfigPropertyToHclTerraform(struct?: DataTfNodeGroup.UpdateConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function dataAwsEksNodeGroupUpdateConfigPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataAwsEksNodeGroupWarmPoolConfigPropertyToTerraform(struct?: DataAwsEksNodeGroup.WarmPoolConfigProperty): any {
+export function dataTfNodeGroupWarmPoolConfigPropertyToTerraform(struct?: DataTfNodeGroup.WarmPoolConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function dataAwsEksNodeGroupWarmPoolConfigPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsEksNodeGroupWarmPoolConfigPropertyToHclTerraform(struct?: DataAwsEksNodeGroup.WarmPoolConfigProperty): any {
+export function dataTfNodeGroupWarmPoolConfigPropertyToHclTerraform(struct?: DataTfNodeGroup.WarmPoolConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,7 +488,7 @@ export function dataAwsEksNodeGroupWarmPoolConfigPropertyToHclTerraform(struct?:
 }
 
 
-export namespace DataAwsEksNodeGroup {
+export namespace DataTfNodeGroup {
 export interface LaunchTemplateProperty {
 }
 export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {

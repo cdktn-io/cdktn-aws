@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAutoscalingGroupConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#id DataAwsAutoscalingGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#id DataTfGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#name DataAwsAutoscalingGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#name DataTfGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#region DataAwsAutoscalingGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#region DataTfGroup#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsAutoscalingGroupConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group aws_autoscaling_group}
 */
-export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
+export class DataTfGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAutoscalingGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAutoscalingGroup to import
-  * @param importFromId The id of the existing DataAwsAutoscalingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAutoscalingGroup to import is found
+  * @param importToId The construct id used in the generated config for the DataTfGroup to import
+  * @param importFromId The id of the existing DataTfGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscaling_group", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAutoscalingGroupConfig
+  * @param options DataTfGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAutoscalingGroupConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscaling_group',
       terraformGeneratorMetadata: {
@@ -142,7 +142,7 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   }
 
   // instance_maintenance_policy - computed: true, optional: false, required: false
-  private _instanceMaintenancePolicy = new DataAwsAutoscalingGroup.InstanceMaintenancePolicyPropertyList(this, "instance_maintenance_policy", false);
+  private _instanceMaintenancePolicy = new DataTfGroup.InstanceMaintenancePolicyPropertyList(this, "instance_maintenance_policy", false);
   public get instanceMaintenancePolicy() {
     return this._instanceMaintenancePolicy;
   }
@@ -153,7 +153,7 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   }
 
   // launch_template - computed: true, optional: false, required: false
-  private _launchTemplate = new DataAwsAutoscalingGroup.LaunchTemplatePropertyList(this, "launch_template", false);
+  private _launchTemplate = new DataTfGroup.LaunchTemplatePropertyList(this, "launch_template", false);
   public get launchTemplate() {
     return this._launchTemplate;
   }
@@ -179,7 +179,7 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   }
 
   // mixed_instances_policy - computed: true, optional: false, required: false
-  private _mixedInstancesPolicy = new DataAwsAutoscalingGroup.MixedInstancesPolicyPropertyList(this, "mixed_instances_policy", false);
+  private _mixedInstancesPolicy = new DataTfGroup.MixedInstancesPolicyPropertyList(this, "mixed_instances_policy", false);
   public get mixedInstancesPolicy() {
     return this._mixedInstancesPolicy;
   }
@@ -244,7 +244,7 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   }
 
   // tag - computed: true, optional: false, required: false
-  private _tag = new DataAwsAutoscalingGroup.TagPropertyList(this, "tag", true);
+  private _tag = new DataTfGroup.TagPropertyList(this, "tag", true);
   public get tag() {
     return this._tag;
   }
@@ -260,7 +260,7 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   }
 
   // traffic_source - computed: true, optional: false, required: false
-  private _trafficSource = new DataAwsAutoscalingGroup.TrafficSourcePropertyList(this, "traffic_source", true);
+  private _trafficSource = new DataTfGroup.TrafficSourcePropertyList(this, "traffic_source", true);
   public get trafficSource() {
     return this._trafficSource;
   }
@@ -271,7 +271,7 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   }
 
   // warm_pool - computed: true, optional: false, required: false
-  private _warmPool = new DataAwsAutoscalingGroup.WarmPoolPropertyList(this, "warm_pool", false);
+  private _warmPool = new DataTfGroup.WarmPoolPropertyList(this, "warm_pool", false);
   public get warmPool() {
     return this._warmPool;
   }
@@ -320,7 +320,7 @@ export class DataAwsAutoscalingGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsAutoscalingGroupInstanceMaintenancePolicyPropertyToTerraform(struct?: DataAwsAutoscalingGroup.InstanceMaintenancePolicyProperty): any {
+export function dataTfGroupInstanceMaintenancePolicyPropertyToTerraform(struct?: DataTfGroup.InstanceMaintenancePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function dataAwsAutoscalingGroupInstanceMaintenancePolicyPropertyToTerraf
 }
 
 
-export function dataAwsAutoscalingGroupInstanceMaintenancePolicyPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.InstanceMaintenancePolicyProperty): any {
+export function dataTfGroupInstanceMaintenancePolicyPropertyToHclTerraform(struct?: DataTfGroup.InstanceMaintenancePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function dataAwsAutoscalingGroupInstanceMaintenancePolicyPropertyToHclTer
 }
 
 
-export function dataAwsAutoscalingGroupLaunchTemplatePropertyToTerraform(struct?: DataAwsAutoscalingGroup.LaunchTemplateProperty): any {
+export function dataTfGroupLaunchTemplatePropertyToTerraform(struct?: DataTfGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function dataAwsAutoscalingGroupLaunchTemplatePropertyToTerraform(struct?
 }
 
 
-export function dataAwsAutoscalingGroupLaunchTemplatePropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.LaunchTemplateProperty): any {
+export function dataTfGroupLaunchTemplatePropertyToHclTerraform(struct?: DataTfGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function dataAwsAutoscalingGroupLaunchTemplatePropertyToHclTerraform(stru
 }
 
 
-export function dataAwsAutoscalingGroupInstancesDistributionPropertyToTerraform(struct?: DataAwsAutoscalingGroup.InstancesDistributionProperty): any {
+export function dataTfGroupInstancesDistributionPropertyToTerraform(struct?: DataTfGroup.InstancesDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function dataAwsAutoscalingGroupInstancesDistributionPropertyToTerraform(
 }
 
 
-export function dataAwsAutoscalingGroupInstancesDistributionPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.InstancesDistributionProperty): any {
+export function dataTfGroupInstancesDistributionPropertyToHclTerraform(struct?: DataTfGroup.InstancesDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function dataAwsAutoscalingGroupInstancesDistributionPropertyToHclTerrafo
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
+export function dataTfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToTerraform(struct?: DataTfGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateLaunchT
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
+export function dataTfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToHclTerraform(struct?: DataTfGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateLaunchT
 }
 
 
-export function dataAwsAutoscalingGroupAcceleratorCountPropertyToTerraform(struct?: DataAwsAutoscalingGroup.AcceleratorCountProperty): any {
+export function dataTfGroupAcceleratorCountPropertyToTerraform(struct?: DataTfGroup.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function dataAwsAutoscalingGroupAcceleratorCountPropertyToTerraform(struc
 }
 
 
-export function dataAwsAutoscalingGroupAcceleratorCountPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.AcceleratorCountProperty): any {
+export function dataTfGroupAcceleratorCountPropertyToHclTerraform(struct?: DataTfGroup.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function dataAwsAutoscalingGroupAcceleratorCountPropertyToHclTerraform(st
 }
 
 
-export function dataAwsAutoscalingGroupAcceleratorTotalMemoryMibPropertyToTerraform(struct?: DataAwsAutoscalingGroup.AcceleratorTotalMemoryMibProperty): any {
+export function dataTfGroupAcceleratorTotalMemoryMibPropertyToTerraform(struct?: DataTfGroup.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function dataAwsAutoscalingGroupAcceleratorTotalMemoryMibPropertyToTerraf
 }
 
 
-export function dataAwsAutoscalingGroupAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.AcceleratorTotalMemoryMibProperty): any {
+export function dataTfGroupAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: DataTfGroup.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function dataAwsAutoscalingGroupAcceleratorTotalMemoryMibPropertyToHclTer
 }
 
 
-export function dataAwsAutoscalingGroupBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: DataAwsAutoscalingGroup.BaselineEbsBandwidthMbpsProperty): any {
+export function dataTfGroupBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: DataTfGroup.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function dataAwsAutoscalingGroupBaselineEbsBandwidthMbpsPropertyToTerrafo
 }
 
 
-export function dataAwsAutoscalingGroupBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.BaselineEbsBandwidthMbpsProperty): any {
+export function dataTfGroupBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: DataTfGroup.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function dataAwsAutoscalingGroupBaselineEbsBandwidthMbpsPropertyToHclTerr
 }
 
 
-export function dataAwsAutoscalingGroupMemoryGibPerVcpuPropertyToTerraform(struct?: DataAwsAutoscalingGroup.MemoryGibPerVcpuProperty): any {
+export function dataTfGroupMemoryGibPerVcpuPropertyToTerraform(struct?: DataTfGroup.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function dataAwsAutoscalingGroupMemoryGibPerVcpuPropertyToTerraform(struc
 }
 
 
-export function dataAwsAutoscalingGroupMemoryGibPerVcpuPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.MemoryGibPerVcpuProperty): any {
+export function dataTfGroupMemoryGibPerVcpuPropertyToHclTerraform(struct?: DataTfGroup.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,7 +488,7 @@ export function dataAwsAutoscalingGroupMemoryGibPerVcpuPropertyToHclTerraform(st
 }
 
 
-export function dataAwsAutoscalingGroupMemoryMibPropertyToTerraform(struct?: DataAwsAutoscalingGroup.MemoryMibProperty): any {
+export function dataTfGroupMemoryMibPropertyToTerraform(struct?: DataTfGroup.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function dataAwsAutoscalingGroupMemoryMibPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsAutoscalingGroupMemoryMibPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.MemoryMibProperty): any {
+export function dataTfGroupMemoryMibPropertyToHclTerraform(struct?: DataTfGroup.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -509,7 +509,7 @@ export function dataAwsAutoscalingGroupMemoryMibPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsAutoscalingGroupNetworkBandwidthGbpsPropertyToTerraform(struct?: DataAwsAutoscalingGroup.NetworkBandwidthGbpsProperty): any {
+export function dataTfGroupNetworkBandwidthGbpsPropertyToTerraform(struct?: DataTfGroup.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function dataAwsAutoscalingGroupNetworkBandwidthGbpsPropertyToTerraform(s
 }
 
 
-export function dataAwsAutoscalingGroupNetworkBandwidthGbpsPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.NetworkBandwidthGbpsProperty): any {
+export function dataTfGroupNetworkBandwidthGbpsPropertyToHclTerraform(struct?: DataTfGroup.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function dataAwsAutoscalingGroupNetworkBandwidthGbpsPropertyToHclTerrafor
 }
 
 
-export function dataAwsAutoscalingGroupNetworkInterfaceCountPropertyToTerraform(struct?: DataAwsAutoscalingGroup.NetworkInterfaceCountProperty): any {
+export function dataTfGroupNetworkInterfaceCountPropertyToTerraform(struct?: DataTfGroup.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,7 +540,7 @@ export function dataAwsAutoscalingGroupNetworkInterfaceCountPropertyToTerraform(
 }
 
 
-export function dataAwsAutoscalingGroupNetworkInterfaceCountPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.NetworkInterfaceCountProperty): any {
+export function dataTfGroupNetworkInterfaceCountPropertyToHclTerraform(struct?: DataTfGroup.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function dataAwsAutoscalingGroupNetworkInterfaceCountPropertyToHclTerrafo
 }
 
 
-export function dataAwsAutoscalingGroupTotalLocalStorageGbPropertyToTerraform(struct?: DataAwsAutoscalingGroup.TotalLocalStorageGbProperty): any {
+export function dataTfGroupTotalLocalStorageGbPropertyToTerraform(struct?: DataTfGroup.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function dataAwsAutoscalingGroupTotalLocalStorageGbPropertyToTerraform(st
 }
 
 
-export function dataAwsAutoscalingGroupTotalLocalStorageGbPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.TotalLocalStorageGbProperty): any {
+export function dataTfGroupTotalLocalStorageGbPropertyToHclTerraform(struct?: DataTfGroup.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -572,7 +572,7 @@ export function dataAwsAutoscalingGroupTotalLocalStorageGbPropertyToHclTerraform
 }
 
 
-export function dataAwsAutoscalingGroupVcpuCountPropertyToTerraform(struct?: DataAwsAutoscalingGroup.VcpuCountProperty): any {
+export function dataTfGroupVcpuCountPropertyToTerraform(struct?: DataTfGroup.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function dataAwsAutoscalingGroupVcpuCountPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsAutoscalingGroupVcpuCountPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.VcpuCountProperty): any {
+export function dataTfGroupVcpuCountPropertyToHclTerraform(struct?: DataTfGroup.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function dataAwsAutoscalingGroupVcpuCountPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsAutoscalingGroupInstanceRequirementsPropertyToTerraform(struct?: DataAwsAutoscalingGroup.InstanceRequirementsProperty): any {
+export function dataTfGroupInstanceRequirementsPropertyToTerraform(struct?: DataTfGroup.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -603,7 +603,7 @@ export function dataAwsAutoscalingGroupInstanceRequirementsPropertyToTerraform(s
 }
 
 
-export function dataAwsAutoscalingGroupInstanceRequirementsPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.InstanceRequirementsProperty): any {
+export function dataTfGroupInstanceRequirementsPropertyToHclTerraform(struct?: DataTfGroup.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function dataAwsAutoscalingGroupInstanceRequirementsPropertyToHclTerrafor
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
+export function dataTfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToTerraform(struct?: DataTfGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateOverrid
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
+export function dataTfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToHclTerraform(struct?: DataTfGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -635,7 +635,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplateOverrid
 }
 
 
-export function dataAwsAutoscalingGroupOverridePropertyToTerraform(struct?: DataAwsAutoscalingGroup.OverrideProperty): any {
+export function dataTfGroupOverridePropertyToTerraform(struct?: DataTfGroup.OverrideProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,7 +645,7 @@ export function dataAwsAutoscalingGroupOverridePropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsAutoscalingGroupOverridePropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.OverrideProperty): any {
+export function dataTfGroupOverridePropertyToHclTerraform(struct?: DataTfGroup.OverrideProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function dataAwsAutoscalingGroupOverridePropertyToHclTerraform(struct?: D
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplatePropertyToTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
+export function dataTfGroupMixedInstancesPolicyLaunchTemplatePropertyToTerraform(struct?: DataTfGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -666,7 +666,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplatePropert
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplatePropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
+export function dataTfGroupMixedInstancesPolicyLaunchTemplatePropertyToHclTerraform(struct?: DataTfGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyLaunchTemplatePropert
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyPropertyToTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyProperty): any {
+export function dataTfGroupMixedInstancesPolicyPropertyToTerraform(struct?: DataTfGroup.MixedInstancesPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -687,7 +687,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyPropertyToTerraform(s
 }
 
 
-export function dataAwsAutoscalingGroupMixedInstancesPolicyPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.MixedInstancesPolicyProperty): any {
+export function dataTfGroupMixedInstancesPolicyPropertyToHclTerraform(struct?: DataTfGroup.MixedInstancesPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -698,7 +698,7 @@ export function dataAwsAutoscalingGroupMixedInstancesPolicyPropertyToHclTerrafor
 }
 
 
-export function dataAwsAutoscalingGroupTagPropertyToTerraform(struct?: DataAwsAutoscalingGroup.TagProperty): any {
+export function dataTfGroupTagPropertyToTerraform(struct?: DataTfGroup.TagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function dataAwsAutoscalingGroupTagPropertyToTerraform(struct?: DataAwsAu
 }
 
 
-export function dataAwsAutoscalingGroupTagPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.TagProperty): any {
+export function dataTfGroupTagPropertyToHclTerraform(struct?: DataTfGroup.TagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -719,7 +719,7 @@ export function dataAwsAutoscalingGroupTagPropertyToHclTerraform(struct?: DataAw
 }
 
 
-export function dataAwsAutoscalingGroupTrafficSourcePropertyToTerraform(struct?: DataAwsAutoscalingGroup.TrafficSourceProperty): any {
+export function dataTfGroupTrafficSourcePropertyToTerraform(struct?: DataTfGroup.TrafficSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -729,7 +729,7 @@ export function dataAwsAutoscalingGroupTrafficSourcePropertyToTerraform(struct?:
 }
 
 
-export function dataAwsAutoscalingGroupTrafficSourcePropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.TrafficSourceProperty): any {
+export function dataTfGroupTrafficSourcePropertyToHclTerraform(struct?: DataTfGroup.TrafficSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -740,7 +740,7 @@ export function dataAwsAutoscalingGroupTrafficSourcePropertyToHclTerraform(struc
 }
 
 
-export function dataAwsAutoscalingGroupInstanceReusePolicyPropertyToTerraform(struct?: DataAwsAutoscalingGroup.InstanceReusePolicyProperty): any {
+export function dataTfGroupInstanceReusePolicyPropertyToTerraform(struct?: DataTfGroup.InstanceReusePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,7 +750,7 @@ export function dataAwsAutoscalingGroupInstanceReusePolicyPropertyToTerraform(st
 }
 
 
-export function dataAwsAutoscalingGroupInstanceReusePolicyPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.InstanceReusePolicyProperty): any {
+export function dataTfGroupInstanceReusePolicyPropertyToHclTerraform(struct?: DataTfGroup.InstanceReusePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -761,7 +761,7 @@ export function dataAwsAutoscalingGroupInstanceReusePolicyPropertyToHclTerraform
 }
 
 
-export function dataAwsAutoscalingGroupWarmPoolPropertyToTerraform(struct?: DataAwsAutoscalingGroup.WarmPoolProperty): any {
+export function dataTfGroupWarmPoolPropertyToTerraform(struct?: DataTfGroup.WarmPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -771,7 +771,7 @@ export function dataAwsAutoscalingGroupWarmPoolPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsAutoscalingGroupWarmPoolPropertyToHclTerraform(struct?: DataAwsAutoscalingGroup.WarmPoolProperty): any {
+export function dataTfGroupWarmPoolPropertyToHclTerraform(struct?: DataTfGroup.WarmPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function dataAwsAutoscalingGroupWarmPoolPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataAwsAutoscalingGroup {
+export namespace DataTfGroup {
 export interface InstanceMaintenancePolicyProperty {
 }
 export class InstanceMaintenancePolicyPropertyOutputReference extends cdktn.ComplexObject {

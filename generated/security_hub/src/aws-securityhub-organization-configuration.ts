@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubOrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#auto_enable AwsSecurityhubOrganizationConfiguration#auto_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#auto_enable TfOrganizationConfiguration#auto_enable}
   */
   readonly autoEnable: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#auto_enable_standards AwsSecurityhubOrganizationConfiguration#auto_enable_standards}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#auto_enable_standards TfOrganizationConfiguration#auto_enable_standards}
   */
   readonly autoEnableStandards?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#id AwsSecurityhubOrganizationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#id TfOrganizationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,27 +24,27 @@ export interface AwsSecurityhubOrganizationConfigurationConfig extends cdktn.Ter
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#region AwsSecurityhubOrganizationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#region TfOrganizationConfiguration#region}
   */
   readonly region?: string;
   /**
   * organization_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#organization_configuration AwsSecurityhubOrganizationConfiguration#organization_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#organization_configuration TfOrganizationConfiguration#organization_configuration}
   */
-  readonly organizationConfiguration?: AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationProperty;
+  readonly organizationConfiguration?: TfOrganizationConfiguration.OrganizationConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#timeouts AwsSecurityhubOrganizationConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#timeouts TfOrganizationConfiguration#timeouts}
   */
-  readonly timeouts?: AwsSecurityhubOrganizationConfiguration.TimeoutsProperty;
+  readonly timeouts?: TfOrganizationConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration aws_securityhub_organization_configuration}
 */
-export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformResource {
+export class TfOrganizationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubOrganizationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubOrganizationConfiguration to import
-  * @param importFromId The id of the existing AwsSecurityhubOrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubOrganizationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationConfiguration to import
+  * @param importFromId The id of the existing TfOrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_organization_configuration", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubOrganizationConfigurationConfig
+  * @param options TfOrganizationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubOrganizationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_organization_configuration',
       terraformGeneratorMetadata: {
@@ -166,11 +166,11 @@ export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformReso
   }
 
   // organization_configuration - computed: false, optional: true, required: false
-  private _organizationConfiguration = new AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationPropertyOutputReference(this, "organization_configuration");
+  private _organizationConfiguration = new TfOrganizationConfiguration.OrganizationConfigurationPropertyOutputReference(this, "organization_configuration");
   public get organizationConfiguration() {
     return this._organizationConfiguration;
   }
-  public putOrganizationConfiguration(value: AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationProperty) {
+  public putOrganizationConfiguration(value: TfOrganizationConfiguration.OrganizationConfigurationProperty) {
     this._organizationConfiguration.internalValue = value;
   }
   public resetOrganizationConfiguration() {
@@ -182,11 +182,11 @@ export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSecurityhubOrganizationConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOrganizationConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSecurityhubOrganizationConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: TfOrganizationConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -207,8 +207,8 @@ export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformReso
       auto_enable_standards: cdktn.stringToTerraform(this._autoEnableStandards),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      organization_configuration: awsSecurityhubOrganizationConfigurationOrganizationConfigurationPropertyToTerraform(this._organizationConfiguration.internalValue),
-      timeouts: awsSecurityhubOrganizationConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      organization_configuration: tfOrganizationConfigurationOrganizationConfigurationPropertyToTerraform(this._organizationConfiguration.internalValue),
+      timeouts: tfOrganizationConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -239,16 +239,16 @@ export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformReso
         storageClassType: "string",
       },
       organization_configuration: {
-        value: awsSecurityhubOrganizationConfigurationOrganizationConfigurationPropertyToHclTerraform(this._organizationConfiguration.internalValue),
+        value: tfOrganizationConfigurationOrganizationConfigurationPropertyToHclTerraform(this._organizationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationPropertyList",
+        storageClassType: "TfOrganizationConfiguration.OrganizationConfigurationPropertyList",
       },
       timeouts: {
-        value: awsSecurityhubOrganizationConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOrganizationConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSecurityhubOrganizationConfiguration.TimeoutsProperty",
+        storageClassType: "TfOrganizationConfiguration.TimeoutsProperty",
       },
     };
 
@@ -257,7 +257,7 @@ export class AwsSecurityhubOrganizationConfiguration extends cdktn.TerraformReso
   }
 }
 
-export function awsSecurityhubOrganizationConfigurationOrganizationConfigurationPropertyToTerraform(struct?: AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationPropertyOutputReference | AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationProperty): any {
+export function tfOrganizationConfigurationOrganizationConfigurationPropertyToTerraform(struct?: TfOrganizationConfiguration.OrganizationConfigurationPropertyOutputReference | TfOrganizationConfiguration.OrganizationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function awsSecurityhubOrganizationConfigurationOrganizationConfiguration
 }
 
 
-export function awsSecurityhubOrganizationConfigurationOrganizationConfigurationPropertyToHclTerraform(struct?: AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationPropertyOutputReference | AwsSecurityhubOrganizationConfiguration.OrganizationConfigurationProperty): any {
+export function tfOrganizationConfigurationOrganizationConfigurationPropertyToHclTerraform(struct?: TfOrganizationConfiguration.OrganizationConfigurationPropertyOutputReference | TfOrganizationConfiguration.OrganizationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function awsSecurityhubOrganizationConfigurationOrganizationConfiguration
 }
 
 
-export function awsSecurityhubOrganizationConfigurationTimeoutsPropertyToTerraform(struct?: AwsSecurityhubOrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationConfigurationTimeoutsPropertyToTerraform(struct?: TfOrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function awsSecurityhubOrganizationConfigurationTimeoutsPropertyToTerrafo
 }
 
 
-export function awsSecurityhubOrganizationConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsSecurityhubOrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationConfigurationTimeoutsPropertyToHclTerraform(struct?: TfOrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,10 +331,10 @@ export function awsSecurityhubOrganizationConfigurationTimeoutsPropertyToHclTerr
 }
 
 
-export namespace AwsSecurityhubOrganizationConfiguration {
+export namespace TfOrganizationConfiguration {
 export interface OrganizationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#configuration_type AwsSecurityhubOrganizationConfiguration#configuration_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#configuration_type TfOrganizationConfiguration#configuration_type}
   */
   readonly configurationType: string;
 }
@@ -385,15 +385,15 @@ export class OrganizationConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#create AwsSecurityhubOrganizationConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#create TfOrganizationConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#delete AwsSecurityhubOrganizationConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#delete TfOrganizationConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#update AwsSecurityhubOrganizationConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_organization_configuration#update TfOrganizationConfiguration#update}
   */
   readonly update?: string;
 }

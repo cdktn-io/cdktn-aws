@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsElasticsearchDomainConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#access_policies AwsElasticsearchDomain#access_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#access_policies TfDomain#access_policies}
   */
   readonly accessPolicies?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#advanced_options AwsElasticsearchDomain#advanced_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#advanced_options TfDomain#advanced_options}
   */
   readonly advancedOptions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#domain_name AwsElasticsearchDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#domain_name TfDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#elasticsearch_version AwsElasticsearchDomain#elasticsearch_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#elasticsearch_version TfDomain#elasticsearch_version}
   */
   readonly elasticsearchVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#id AwsElasticsearchDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#id TfDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,95 +32,95 @@ export interface AwsElasticsearchDomainConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#region AwsElasticsearchDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#region TfDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#tags AwsElasticsearchDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#tags TfDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#tags_all AwsElasticsearchDomain#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#tags_all TfDomain#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * advanced_security_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#advanced_security_options AwsElasticsearchDomain#advanced_security_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#advanced_security_options TfDomain#advanced_security_options}
   */
-  readonly advancedSecurityOptions?: AwsElasticsearchDomain.AdvancedSecurityOptionsProperty;
+  readonly advancedSecurityOptions?: TfDomain.AdvancedSecurityOptionsProperty;
   /**
   * auto_tune_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#auto_tune_options AwsElasticsearchDomain#auto_tune_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#auto_tune_options TfDomain#auto_tune_options}
   */
-  readonly autoTuneOptions?: AwsElasticsearchDomain.AutoTuneOptionsProperty;
+  readonly autoTuneOptions?: TfDomain.AutoTuneOptionsProperty;
   /**
   * cluster_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cluster_config AwsElasticsearchDomain#cluster_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cluster_config TfDomain#cluster_config}
   */
-  readonly clusterConfig?: AwsElasticsearchDomain.ClusterConfigProperty;
+  readonly clusterConfig?: TfDomain.ClusterConfigProperty;
   /**
   * cognito_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cognito_options AwsElasticsearchDomain#cognito_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cognito_options TfDomain#cognito_options}
   */
-  readonly cognitoOptions?: AwsElasticsearchDomain.CognitoOptionsProperty;
+  readonly cognitoOptions?: TfDomain.CognitoOptionsProperty;
   /**
   * domain_endpoint_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#domain_endpoint_options AwsElasticsearchDomain#domain_endpoint_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#domain_endpoint_options TfDomain#domain_endpoint_options}
   */
-  readonly domainEndpointOptions?: AwsElasticsearchDomain.DomainEndpointOptionsProperty;
+  readonly domainEndpointOptions?: TfDomain.DomainEndpointOptionsProperty;
   /**
   * ebs_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#ebs_options AwsElasticsearchDomain#ebs_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#ebs_options TfDomain#ebs_options}
   */
-  readonly ebsOptions?: AwsElasticsearchDomain.EbsOptionsProperty;
+  readonly ebsOptions?: TfDomain.EbsOptionsProperty;
   /**
   * encrypt_at_rest block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#encrypt_at_rest AwsElasticsearchDomain#encrypt_at_rest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#encrypt_at_rest TfDomain#encrypt_at_rest}
   */
-  readonly encryptAtRest?: AwsElasticsearchDomain.EncryptAtRestProperty;
+  readonly encryptAtRest?: TfDomain.EncryptAtRestProperty;
   /**
   * log_publishing_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#log_publishing_options AwsElasticsearchDomain#log_publishing_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#log_publishing_options TfDomain#log_publishing_options}
   */
-  readonly logPublishingOptions?: AwsElasticsearchDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable;
+  readonly logPublishingOptions?: TfDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable;
   /**
   * node_to_node_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#node_to_node_encryption AwsElasticsearchDomain#node_to_node_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#node_to_node_encryption TfDomain#node_to_node_encryption}
   */
-  readonly nodeToNodeEncryption?: AwsElasticsearchDomain.NodeToNodeEncryptionProperty;
+  readonly nodeToNodeEncryption?: TfDomain.NodeToNodeEncryptionProperty;
   /**
   * snapshot_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#snapshot_options AwsElasticsearchDomain#snapshot_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#snapshot_options TfDomain#snapshot_options}
   */
-  readonly snapshotOptions?: AwsElasticsearchDomain.SnapshotOptionsProperty;
+  readonly snapshotOptions?: TfDomain.SnapshotOptionsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#timeouts AwsElasticsearchDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#timeouts TfDomain#timeouts}
   */
-  readonly timeouts?: AwsElasticsearchDomain.TimeoutsProperty;
+  readonly timeouts?: TfDomain.TimeoutsProperty;
   /**
   * vpc_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#vpc_options AwsElasticsearchDomain#vpc_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#vpc_options TfDomain#vpc_options}
   */
-  readonly vpcOptions?: AwsElasticsearchDomain.VpcOptionsProperty;
+  readonly vpcOptions?: TfDomain.VpcOptionsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain aws_elasticsearch_domain}
 */
-export class AwsElasticsearchDomain extends cdktn.TerraformResource {
+export class TfDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -131,11 +131,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsElasticsearchDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsElasticsearchDomain to import
-  * @param importFromId The id of the existing AwsElasticsearchDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsElasticsearchDomain to import is found
+  * @param importToId The construct id used in the generated config for the TfDomain to import
+  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticsearch_domain", importId: importFromId, provider });
@@ -150,9 +150,9 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsElasticsearchDomainConfig
+  * @param options TfDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsElasticsearchDomainConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticsearch_domain',
       terraformGeneratorMetadata: {
@@ -340,11 +340,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // advanced_security_options - computed: false, optional: true, required: false
-  private _advancedSecurityOptions = new AwsElasticsearchDomain.AdvancedSecurityOptionsPropertyOutputReference(this, "advanced_security_options");
+  private _advancedSecurityOptions = new TfDomain.AdvancedSecurityOptionsPropertyOutputReference(this, "advanced_security_options");
   public get advancedSecurityOptions() {
     return this._advancedSecurityOptions;
   }
-  public putAdvancedSecurityOptions(value: AwsElasticsearchDomain.AdvancedSecurityOptionsProperty) {
+  public putAdvancedSecurityOptions(value: TfDomain.AdvancedSecurityOptionsProperty) {
     this._advancedSecurityOptions.internalValue = value;
   }
   public resetAdvancedSecurityOptions() {
@@ -356,11 +356,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // auto_tune_options - computed: false, optional: true, required: false
-  private _autoTuneOptions = new AwsElasticsearchDomain.AutoTuneOptionsPropertyOutputReference(this, "auto_tune_options");
+  private _autoTuneOptions = new TfDomain.AutoTuneOptionsPropertyOutputReference(this, "auto_tune_options");
   public get autoTuneOptions() {
     return this._autoTuneOptions;
   }
-  public putAutoTuneOptions(value: AwsElasticsearchDomain.AutoTuneOptionsProperty) {
+  public putAutoTuneOptions(value: TfDomain.AutoTuneOptionsProperty) {
     this._autoTuneOptions.internalValue = value;
   }
   public resetAutoTuneOptions() {
@@ -372,11 +372,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // cluster_config - computed: false, optional: true, required: false
-  private _clusterConfig = new AwsElasticsearchDomain.ClusterConfigPropertyOutputReference(this, "cluster_config");
+  private _clusterConfig = new TfDomain.ClusterConfigPropertyOutputReference(this, "cluster_config");
   public get clusterConfig() {
     return this._clusterConfig;
   }
-  public putClusterConfig(value: AwsElasticsearchDomain.ClusterConfigProperty) {
+  public putClusterConfig(value: TfDomain.ClusterConfigProperty) {
     this._clusterConfig.internalValue = value;
   }
   public resetClusterConfig() {
@@ -388,11 +388,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // cognito_options - computed: false, optional: true, required: false
-  private _cognitoOptions = new AwsElasticsearchDomain.CognitoOptionsPropertyOutputReference(this, "cognito_options");
+  private _cognitoOptions = new TfDomain.CognitoOptionsPropertyOutputReference(this, "cognito_options");
   public get cognitoOptions() {
     return this._cognitoOptions;
   }
-  public putCognitoOptions(value: AwsElasticsearchDomain.CognitoOptionsProperty) {
+  public putCognitoOptions(value: TfDomain.CognitoOptionsProperty) {
     this._cognitoOptions.internalValue = value;
   }
   public resetCognitoOptions() {
@@ -404,11 +404,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // domain_endpoint_options - computed: false, optional: true, required: false
-  private _domainEndpointOptions = new AwsElasticsearchDomain.DomainEndpointOptionsPropertyOutputReference(this, "domain_endpoint_options");
+  private _domainEndpointOptions = new TfDomain.DomainEndpointOptionsPropertyOutputReference(this, "domain_endpoint_options");
   public get domainEndpointOptions() {
     return this._domainEndpointOptions;
   }
-  public putDomainEndpointOptions(value: AwsElasticsearchDomain.DomainEndpointOptionsProperty) {
+  public putDomainEndpointOptions(value: TfDomain.DomainEndpointOptionsProperty) {
     this._domainEndpointOptions.internalValue = value;
   }
   public resetDomainEndpointOptions() {
@@ -420,11 +420,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // ebs_options - computed: false, optional: true, required: false
-  private _ebsOptions = new AwsElasticsearchDomain.EbsOptionsPropertyOutputReference(this, "ebs_options");
+  private _ebsOptions = new TfDomain.EbsOptionsPropertyOutputReference(this, "ebs_options");
   public get ebsOptions() {
     return this._ebsOptions;
   }
-  public putEbsOptions(value: AwsElasticsearchDomain.EbsOptionsProperty) {
+  public putEbsOptions(value: TfDomain.EbsOptionsProperty) {
     this._ebsOptions.internalValue = value;
   }
   public resetEbsOptions() {
@@ -436,11 +436,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // encrypt_at_rest - computed: false, optional: true, required: false
-  private _encryptAtRest = new AwsElasticsearchDomain.EncryptAtRestPropertyOutputReference(this, "encrypt_at_rest");
+  private _encryptAtRest = new TfDomain.EncryptAtRestPropertyOutputReference(this, "encrypt_at_rest");
   public get encryptAtRest() {
     return this._encryptAtRest;
   }
-  public putEncryptAtRest(value: AwsElasticsearchDomain.EncryptAtRestProperty) {
+  public putEncryptAtRest(value: TfDomain.EncryptAtRestProperty) {
     this._encryptAtRest.internalValue = value;
   }
   public resetEncryptAtRest() {
@@ -452,11 +452,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // log_publishing_options - computed: false, optional: true, required: false
-  private _logPublishingOptions = new AwsElasticsearchDomain.LogPublishingOptionsPropertyList(this, "log_publishing_options", true);
+  private _logPublishingOptions = new TfDomain.LogPublishingOptionsPropertyList(this, "log_publishing_options", true);
   public get logPublishingOptions() {
     return this._logPublishingOptions;
   }
-  public putLogPublishingOptions(value: AwsElasticsearchDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable) {
+  public putLogPublishingOptions(value: TfDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable) {
     this._logPublishingOptions.internalValue = value;
   }
   public resetLogPublishingOptions() {
@@ -468,11 +468,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // node_to_node_encryption - computed: false, optional: true, required: false
-  private _nodeToNodeEncryption = new AwsElasticsearchDomain.NodeToNodeEncryptionPropertyOutputReference(this, "node_to_node_encryption");
+  private _nodeToNodeEncryption = new TfDomain.NodeToNodeEncryptionPropertyOutputReference(this, "node_to_node_encryption");
   public get nodeToNodeEncryption() {
     return this._nodeToNodeEncryption;
   }
-  public putNodeToNodeEncryption(value: AwsElasticsearchDomain.NodeToNodeEncryptionProperty) {
+  public putNodeToNodeEncryption(value: TfDomain.NodeToNodeEncryptionProperty) {
     this._nodeToNodeEncryption.internalValue = value;
   }
   public resetNodeToNodeEncryption() {
@@ -484,11 +484,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // snapshot_options - computed: false, optional: true, required: false
-  private _snapshotOptions = new AwsElasticsearchDomain.SnapshotOptionsPropertyOutputReference(this, "snapshot_options");
+  private _snapshotOptions = new TfDomain.SnapshotOptionsPropertyOutputReference(this, "snapshot_options");
   public get snapshotOptions() {
     return this._snapshotOptions;
   }
-  public putSnapshotOptions(value: AwsElasticsearchDomain.SnapshotOptionsProperty) {
+  public putSnapshotOptions(value: TfDomain.SnapshotOptionsProperty) {
     this._snapshotOptions.internalValue = value;
   }
   public resetSnapshotOptions() {
@@ -500,11 +500,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsElasticsearchDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsElasticsearchDomain.TimeoutsProperty) {
+  public putTimeouts(value: TfDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -516,11 +516,11 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 
   // vpc_options - computed: false, optional: true, required: false
-  private _vpcOptions = new AwsElasticsearchDomain.VpcOptionsPropertyOutputReference(this, "vpc_options");
+  private _vpcOptions = new TfDomain.VpcOptionsPropertyOutputReference(this, "vpc_options");
   public get vpcOptions() {
     return this._vpcOptions;
   }
-  public putVpcOptions(value: AwsElasticsearchDomain.VpcOptionsProperty) {
+  public putVpcOptions(value: TfDomain.VpcOptionsProperty) {
     this._vpcOptions.internalValue = value;
   }
   public resetVpcOptions() {
@@ -545,18 +545,18 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      advanced_security_options: awsElasticsearchDomainAdvancedSecurityOptionsPropertyToTerraform(this._advancedSecurityOptions.internalValue),
-      auto_tune_options: awsElasticsearchDomainAutoTuneOptionsPropertyToTerraform(this._autoTuneOptions.internalValue),
-      cluster_config: awsElasticsearchDomainClusterConfigPropertyToTerraform(this._clusterConfig.internalValue),
-      cognito_options: awsElasticsearchDomainCognitoOptionsPropertyToTerraform(this._cognitoOptions.internalValue),
-      domain_endpoint_options: awsElasticsearchDomainDomainEndpointOptionsPropertyToTerraform(this._domainEndpointOptions.internalValue),
-      ebs_options: awsElasticsearchDomainEbsOptionsPropertyToTerraform(this._ebsOptions.internalValue),
-      encrypt_at_rest: awsElasticsearchDomainEncryptAtRestPropertyToTerraform(this._encryptAtRest.internalValue),
-      log_publishing_options: cdktn.listMapper(awsElasticsearchDomainLogPublishingOptionsPropertyToTerraform, true)(this._logPublishingOptions.internalValue),
-      node_to_node_encryption: awsElasticsearchDomainNodeToNodeEncryptionPropertyToTerraform(this._nodeToNodeEncryption.internalValue),
-      snapshot_options: awsElasticsearchDomainSnapshotOptionsPropertyToTerraform(this._snapshotOptions.internalValue),
-      timeouts: awsElasticsearchDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_options: awsElasticsearchDomainVpcOptionsPropertyToTerraform(this._vpcOptions.internalValue),
+      advanced_security_options: tfDomainAdvancedSecurityOptionsPropertyToTerraform(this._advancedSecurityOptions.internalValue),
+      auto_tune_options: tfDomainAutoTuneOptionsPropertyToTerraform(this._autoTuneOptions.internalValue),
+      cluster_config: tfDomainClusterConfigPropertyToTerraform(this._clusterConfig.internalValue),
+      cognito_options: tfDomainCognitoOptionsPropertyToTerraform(this._cognitoOptions.internalValue),
+      domain_endpoint_options: tfDomainDomainEndpointOptionsPropertyToTerraform(this._domainEndpointOptions.internalValue),
+      ebs_options: tfDomainEbsOptionsPropertyToTerraform(this._ebsOptions.internalValue),
+      encrypt_at_rest: tfDomainEncryptAtRestPropertyToTerraform(this._encryptAtRest.internalValue),
+      log_publishing_options: cdktn.listMapper(tfDomainLogPublishingOptionsPropertyToTerraform, true)(this._logPublishingOptions.internalValue),
+      node_to_node_encryption: tfDomainNodeToNodeEncryptionPropertyToTerraform(this._nodeToNodeEncryption.internalValue),
+      snapshot_options: tfDomainSnapshotOptionsPropertyToTerraform(this._snapshotOptions.internalValue),
+      timeouts: tfDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_options: tfDomainVpcOptionsPropertyToTerraform(this._vpcOptions.internalValue),
     };
   }
 
@@ -611,76 +611,76 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       advanced_security_options: {
-        value: awsElasticsearchDomainAdvancedSecurityOptionsPropertyToHclTerraform(this._advancedSecurityOptions.internalValue),
+        value: tfDomainAdvancedSecurityOptionsPropertyToHclTerraform(this._advancedSecurityOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.AdvancedSecurityOptionsPropertyList",
+        storageClassType: "TfDomain.AdvancedSecurityOptionsPropertyList",
       },
       auto_tune_options: {
-        value: awsElasticsearchDomainAutoTuneOptionsPropertyToHclTerraform(this._autoTuneOptions.internalValue),
+        value: tfDomainAutoTuneOptionsPropertyToHclTerraform(this._autoTuneOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.AutoTuneOptionsPropertyList",
+        storageClassType: "TfDomain.AutoTuneOptionsPropertyList",
       },
       cluster_config: {
-        value: awsElasticsearchDomainClusterConfigPropertyToHclTerraform(this._clusterConfig.internalValue),
+        value: tfDomainClusterConfigPropertyToHclTerraform(this._clusterConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.ClusterConfigPropertyList",
+        storageClassType: "TfDomain.ClusterConfigPropertyList",
       },
       cognito_options: {
-        value: awsElasticsearchDomainCognitoOptionsPropertyToHclTerraform(this._cognitoOptions.internalValue),
+        value: tfDomainCognitoOptionsPropertyToHclTerraform(this._cognitoOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.CognitoOptionsPropertyList",
+        storageClassType: "TfDomain.CognitoOptionsPropertyList",
       },
       domain_endpoint_options: {
-        value: awsElasticsearchDomainDomainEndpointOptionsPropertyToHclTerraform(this._domainEndpointOptions.internalValue),
+        value: tfDomainDomainEndpointOptionsPropertyToHclTerraform(this._domainEndpointOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.DomainEndpointOptionsPropertyList",
+        storageClassType: "TfDomain.DomainEndpointOptionsPropertyList",
       },
       ebs_options: {
-        value: awsElasticsearchDomainEbsOptionsPropertyToHclTerraform(this._ebsOptions.internalValue),
+        value: tfDomainEbsOptionsPropertyToHclTerraform(this._ebsOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.EbsOptionsPropertyList",
+        storageClassType: "TfDomain.EbsOptionsPropertyList",
       },
       encrypt_at_rest: {
-        value: awsElasticsearchDomainEncryptAtRestPropertyToHclTerraform(this._encryptAtRest.internalValue),
+        value: tfDomainEncryptAtRestPropertyToHclTerraform(this._encryptAtRest.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.EncryptAtRestPropertyList",
+        storageClassType: "TfDomain.EncryptAtRestPropertyList",
       },
       log_publishing_options: {
-        value: cdktn.listMapperHcl(awsElasticsearchDomainLogPublishingOptionsPropertyToHclTerraform, true)(this._logPublishingOptions.internalValue),
+        value: cdktn.listMapperHcl(tfDomainLogPublishingOptionsPropertyToHclTerraform, true)(this._logPublishingOptions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsElasticsearchDomain.LogPublishingOptionsPropertyList",
+        storageClassType: "TfDomain.LogPublishingOptionsPropertyList",
       },
       node_to_node_encryption: {
-        value: awsElasticsearchDomainNodeToNodeEncryptionPropertyToHclTerraform(this._nodeToNodeEncryption.internalValue),
+        value: tfDomainNodeToNodeEncryptionPropertyToHclTerraform(this._nodeToNodeEncryption.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.NodeToNodeEncryptionPropertyList",
+        storageClassType: "TfDomain.NodeToNodeEncryptionPropertyList",
       },
       snapshot_options: {
-        value: awsElasticsearchDomainSnapshotOptionsPropertyToHclTerraform(this._snapshotOptions.internalValue),
+        value: tfDomainSnapshotOptionsPropertyToHclTerraform(this._snapshotOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.SnapshotOptionsPropertyList",
+        storageClassType: "TfDomain.SnapshotOptionsPropertyList",
       },
       timeouts: {
-        value: awsElasticsearchDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsElasticsearchDomain.TimeoutsProperty",
+        storageClassType: "TfDomain.TimeoutsProperty",
       },
       vpc_options: {
-        value: awsElasticsearchDomainVpcOptionsPropertyToHclTerraform(this._vpcOptions.internalValue),
+        value: tfDomainVpcOptionsPropertyToHclTerraform(this._vpcOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomain.VpcOptionsPropertyList",
+        storageClassType: "TfDomain.VpcOptionsPropertyList",
       },
     };
 
@@ -689,7 +689,7 @@ export class AwsElasticsearchDomain extends cdktn.TerraformResource {
   }
 }
 
-export function awsElasticsearchDomainMasterUserOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.MasterUserOptionsPropertyOutputReference | AwsElasticsearchDomain.MasterUserOptionsProperty): any {
+export function tfDomainMasterUserOptionsPropertyToTerraform(struct?: TfDomain.MasterUserOptionsPropertyOutputReference | TfDomain.MasterUserOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function awsElasticsearchDomainMasterUserOptionsPropertyToTerraform(struc
 }
 
 
-export function awsElasticsearchDomainMasterUserOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.MasterUserOptionsPropertyOutputReference | AwsElasticsearchDomain.MasterUserOptionsProperty): any {
+export function tfDomainMasterUserOptionsPropertyToHclTerraform(struct?: TfDomain.MasterUserOptionsPropertyOutputReference | TfDomain.MasterUserOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -733,7 +733,7 @@ export function awsElasticsearchDomainMasterUserOptionsPropertyToHclTerraform(st
 }
 
 
-export function awsElasticsearchDomainAdvancedSecurityOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.AdvancedSecurityOptionsPropertyOutputReference | AwsElasticsearchDomain.AdvancedSecurityOptionsProperty): any {
+export function tfDomainAdvancedSecurityOptionsPropertyToTerraform(struct?: TfDomain.AdvancedSecurityOptionsPropertyOutputReference | TfDomain.AdvancedSecurityOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,12 +741,12 @@ export function awsElasticsearchDomainAdvancedSecurityOptionsPropertyToTerraform
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     internal_user_database_enabled: cdktn.booleanToTerraform(struct!.internalUserDatabaseEnabled),
-    master_user_options: awsElasticsearchDomainMasterUserOptionsPropertyToTerraform(struct!.masterUserOptions),
+    master_user_options: tfDomainMasterUserOptionsPropertyToTerraform(struct!.masterUserOptions),
   }
 }
 
 
-export function awsElasticsearchDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.AdvancedSecurityOptionsPropertyOutputReference | AwsElasticsearchDomain.AdvancedSecurityOptionsProperty): any {
+export function tfDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: TfDomain.AdvancedSecurityOptionsPropertyOutputReference | TfDomain.AdvancedSecurityOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function awsElasticsearchDomainAdvancedSecurityOptionsPropertyToHclTerraf
       storageClassType: "boolean",
     },
     master_user_options: {
-      value: awsElasticsearchDomainMasterUserOptionsPropertyToHclTerraform(struct!.masterUserOptions),
+      value: tfDomainMasterUserOptionsPropertyToHclTerraform(struct!.masterUserOptions),
       isBlock: true,
       type: "list",
       storageClassType: "MasterUserOptionsPropertyList",
@@ -777,7 +777,7 @@ export function awsElasticsearchDomainAdvancedSecurityOptionsPropertyToHclTerraf
 }
 
 
-export function awsElasticsearchDomainDurationPropertyToTerraform(struct?: AwsElasticsearchDomain.DurationPropertyOutputReference | AwsElasticsearchDomain.DurationProperty): any {
+export function tfDomainDurationPropertyToTerraform(struct?: TfDomain.DurationPropertyOutputReference | TfDomain.DurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -789,7 +789,7 @@ export function awsElasticsearchDomainDurationPropertyToTerraform(struct?: AwsEl
 }
 
 
-export function awsElasticsearchDomainDurationPropertyToHclTerraform(struct?: AwsElasticsearchDomain.DurationPropertyOutputReference | AwsElasticsearchDomain.DurationProperty): any {
+export function tfDomainDurationPropertyToHclTerraform(struct?: TfDomain.DurationPropertyOutputReference | TfDomain.DurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -814,7 +814,7 @@ export function awsElasticsearchDomainDurationPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsElasticsearchDomainMaintenanceSchedulePropertyToTerraform(struct?: AwsElasticsearchDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+export function tfDomainMaintenanceSchedulePropertyToTerraform(struct?: TfDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -822,12 +822,12 @@ export function awsElasticsearchDomainMaintenanceSchedulePropertyToTerraform(str
   return {
     cron_expression_for_recurrence: cdktn.stringToTerraform(struct!.cronExpressionForRecurrence),
     start_at: cdktn.stringToTerraform(struct!.startAt),
-    duration: awsElasticsearchDomainDurationPropertyToTerraform(struct!.duration),
+    duration: tfDomainDurationPropertyToTerraform(struct!.duration),
   }
 }
 
 
-export function awsElasticsearchDomainMaintenanceSchedulePropertyToHclTerraform(struct?: AwsElasticsearchDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+export function tfDomainMaintenanceSchedulePropertyToHclTerraform(struct?: TfDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -846,7 +846,7 @@ export function awsElasticsearchDomainMaintenanceSchedulePropertyToHclTerraform(
       storageClassType: "string",
     },
     duration: {
-      value: awsElasticsearchDomainDurationPropertyToHclTerraform(struct!.duration),
+      value: tfDomainDurationPropertyToHclTerraform(struct!.duration),
       isBlock: true,
       type: "list",
       storageClassType: "DurationPropertyList",
@@ -858,7 +858,7 @@ export function awsElasticsearchDomainMaintenanceSchedulePropertyToHclTerraform(
 }
 
 
-export function awsElasticsearchDomainAutoTuneOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.AutoTuneOptionsPropertyOutputReference | AwsElasticsearchDomain.AutoTuneOptionsProperty): any {
+export function tfDomainAutoTuneOptionsPropertyToTerraform(struct?: TfDomain.AutoTuneOptionsPropertyOutputReference | TfDomain.AutoTuneOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -866,12 +866,12 @@ export function awsElasticsearchDomainAutoTuneOptionsPropertyToTerraform(struct?
   return {
     desired_state: cdktn.stringToTerraform(struct!.desiredState),
     rollback_on_disable: cdktn.stringToTerraform(struct!.rollbackOnDisable),
-    maintenance_schedule: cdktn.listMapper(awsElasticsearchDomainMaintenanceSchedulePropertyToTerraform, true)(struct!.maintenanceSchedule),
+    maintenance_schedule: cdktn.listMapper(tfDomainMaintenanceSchedulePropertyToTerraform, true)(struct!.maintenanceSchedule),
   }
 }
 
 
-export function awsElasticsearchDomainAutoTuneOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.AutoTuneOptionsPropertyOutputReference | AwsElasticsearchDomain.AutoTuneOptionsProperty): any {
+export function tfDomainAutoTuneOptionsPropertyToHclTerraform(struct?: TfDomain.AutoTuneOptionsPropertyOutputReference | TfDomain.AutoTuneOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -890,7 +890,7 @@ export function awsElasticsearchDomainAutoTuneOptionsPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     maintenance_schedule: {
-      value: cdktn.listMapperHcl(awsElasticsearchDomainMaintenanceSchedulePropertyToHclTerraform, true)(struct!.maintenanceSchedule),
+      value: cdktn.listMapperHcl(tfDomainMaintenanceSchedulePropertyToHclTerraform, true)(struct!.maintenanceSchedule),
       isBlock: true,
       type: "set",
       storageClassType: "MaintenanceSchedulePropertyList",
@@ -902,7 +902,7 @@ export function awsElasticsearchDomainAutoTuneOptionsPropertyToHclTerraform(stru
 }
 
 
-export function awsElasticsearchDomainColdStorageOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.ColdStorageOptionsPropertyOutputReference | AwsElasticsearchDomain.ColdStorageOptionsProperty): any {
+export function tfDomainColdStorageOptionsPropertyToTerraform(struct?: TfDomain.ColdStorageOptionsPropertyOutputReference | TfDomain.ColdStorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function awsElasticsearchDomainColdStorageOptionsPropertyToTerraform(stru
 }
 
 
-export function awsElasticsearchDomainColdStorageOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.ColdStorageOptionsPropertyOutputReference | AwsElasticsearchDomain.ColdStorageOptionsProperty): any {
+export function tfDomainColdStorageOptionsPropertyToHclTerraform(struct?: TfDomain.ColdStorageOptionsPropertyOutputReference | TfDomain.ColdStorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -932,7 +932,7 @@ export function awsElasticsearchDomainColdStorageOptionsPropertyToHclTerraform(s
 }
 
 
-export function awsElasticsearchDomainZoneAwarenessConfigPropertyToTerraform(struct?: AwsElasticsearchDomain.ZoneAwarenessConfigPropertyOutputReference | AwsElasticsearchDomain.ZoneAwarenessConfigProperty): any {
+export function tfDomainZoneAwarenessConfigPropertyToTerraform(struct?: TfDomain.ZoneAwarenessConfigPropertyOutputReference | TfDomain.ZoneAwarenessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -943,7 +943,7 @@ export function awsElasticsearchDomainZoneAwarenessConfigPropertyToTerraform(str
 }
 
 
-export function awsElasticsearchDomainZoneAwarenessConfigPropertyToHclTerraform(struct?: AwsElasticsearchDomain.ZoneAwarenessConfigPropertyOutputReference | AwsElasticsearchDomain.ZoneAwarenessConfigProperty): any {
+export function tfDomainZoneAwarenessConfigPropertyToHclTerraform(struct?: TfDomain.ZoneAwarenessConfigPropertyOutputReference | TfDomain.ZoneAwarenessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function awsElasticsearchDomainZoneAwarenessConfigPropertyToHclTerraform(
 }
 
 
-export function awsElasticsearchDomainClusterConfigPropertyToTerraform(struct?: AwsElasticsearchDomain.ClusterConfigPropertyOutputReference | AwsElasticsearchDomain.ClusterConfigProperty): any {
+export function tfDomainClusterConfigPropertyToTerraform(struct?: TfDomain.ClusterConfigPropertyOutputReference | TfDomain.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -977,13 +977,13 @@ export function awsElasticsearchDomainClusterConfigPropertyToTerraform(struct?: 
     warm_enabled: cdktn.booleanToTerraform(struct!.warmEnabled),
     warm_type: cdktn.stringToTerraform(struct!.warmType),
     zone_awareness_enabled: cdktn.booleanToTerraform(struct!.zoneAwarenessEnabled),
-    cold_storage_options: awsElasticsearchDomainColdStorageOptionsPropertyToTerraform(struct!.coldStorageOptions),
-    zone_awareness_config: awsElasticsearchDomainZoneAwarenessConfigPropertyToTerraform(struct!.zoneAwarenessConfig),
+    cold_storage_options: tfDomainColdStorageOptionsPropertyToTerraform(struct!.coldStorageOptions),
+    zone_awareness_config: tfDomainZoneAwarenessConfigPropertyToTerraform(struct!.zoneAwarenessConfig),
   }
 }
 
 
-export function awsElasticsearchDomainClusterConfigPropertyToHclTerraform(struct?: AwsElasticsearchDomain.ClusterConfigPropertyOutputReference | AwsElasticsearchDomain.ClusterConfigProperty): any {
+export function tfDomainClusterConfigPropertyToHclTerraform(struct?: TfDomain.ClusterConfigPropertyOutputReference | TfDomain.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1044,13 +1044,13 @@ export function awsElasticsearchDomainClusterConfigPropertyToHclTerraform(struct
       storageClassType: "boolean",
     },
     cold_storage_options: {
-      value: awsElasticsearchDomainColdStorageOptionsPropertyToHclTerraform(struct!.coldStorageOptions),
+      value: tfDomainColdStorageOptionsPropertyToHclTerraform(struct!.coldStorageOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ColdStorageOptionsPropertyList",
     },
     zone_awareness_config: {
-      value: awsElasticsearchDomainZoneAwarenessConfigPropertyToHclTerraform(struct!.zoneAwarenessConfig),
+      value: tfDomainZoneAwarenessConfigPropertyToHclTerraform(struct!.zoneAwarenessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ZoneAwarenessConfigPropertyList",
@@ -1062,7 +1062,7 @@ export function awsElasticsearchDomainClusterConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsElasticsearchDomainCognitoOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.CognitoOptionsPropertyOutputReference | AwsElasticsearchDomain.CognitoOptionsProperty): any {
+export function tfDomainCognitoOptionsPropertyToTerraform(struct?: TfDomain.CognitoOptionsPropertyOutputReference | TfDomain.CognitoOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1076,7 +1076,7 @@ export function awsElasticsearchDomainCognitoOptionsPropertyToTerraform(struct?:
 }
 
 
-export function awsElasticsearchDomainCognitoOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.CognitoOptionsPropertyOutputReference | AwsElasticsearchDomain.CognitoOptionsProperty): any {
+export function tfDomainCognitoOptionsPropertyToHclTerraform(struct?: TfDomain.CognitoOptionsPropertyOutputReference | TfDomain.CognitoOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1113,7 +1113,7 @@ export function awsElasticsearchDomainCognitoOptionsPropertyToHclTerraform(struc
 }
 
 
-export function awsElasticsearchDomainDomainEndpointOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.DomainEndpointOptionsPropertyOutputReference | AwsElasticsearchDomain.DomainEndpointOptionsProperty): any {
+export function tfDomainDomainEndpointOptionsPropertyToTerraform(struct?: TfDomain.DomainEndpointOptionsPropertyOutputReference | TfDomain.DomainEndpointOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1128,7 +1128,7 @@ export function awsElasticsearchDomainDomainEndpointOptionsPropertyToTerraform(s
 }
 
 
-export function awsElasticsearchDomainDomainEndpointOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.DomainEndpointOptionsPropertyOutputReference | AwsElasticsearchDomain.DomainEndpointOptionsProperty): any {
+export function tfDomainDomainEndpointOptionsPropertyToHclTerraform(struct?: TfDomain.DomainEndpointOptionsPropertyOutputReference | TfDomain.DomainEndpointOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1171,7 +1171,7 @@ export function awsElasticsearchDomainDomainEndpointOptionsPropertyToHclTerrafor
 }
 
 
-export function awsElasticsearchDomainEbsOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.EbsOptionsPropertyOutputReference | AwsElasticsearchDomain.EbsOptionsProperty): any {
+export function tfDomainEbsOptionsPropertyToTerraform(struct?: TfDomain.EbsOptionsPropertyOutputReference | TfDomain.EbsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1186,7 +1186,7 @@ export function awsElasticsearchDomainEbsOptionsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsElasticsearchDomainEbsOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.EbsOptionsPropertyOutputReference | AwsElasticsearchDomain.EbsOptionsProperty): any {
+export function tfDomainEbsOptionsPropertyToHclTerraform(struct?: TfDomain.EbsOptionsPropertyOutputReference | TfDomain.EbsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1229,7 +1229,7 @@ export function awsElasticsearchDomainEbsOptionsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsElasticsearchDomainEncryptAtRestPropertyToTerraform(struct?: AwsElasticsearchDomain.EncryptAtRestPropertyOutputReference | AwsElasticsearchDomain.EncryptAtRestProperty): any {
+export function tfDomainEncryptAtRestPropertyToTerraform(struct?: TfDomain.EncryptAtRestPropertyOutputReference | TfDomain.EncryptAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1241,7 +1241,7 @@ export function awsElasticsearchDomainEncryptAtRestPropertyToTerraform(struct?: 
 }
 
 
-export function awsElasticsearchDomainEncryptAtRestPropertyToHclTerraform(struct?: AwsElasticsearchDomain.EncryptAtRestPropertyOutputReference | AwsElasticsearchDomain.EncryptAtRestProperty): any {
+export function tfDomainEncryptAtRestPropertyToHclTerraform(struct?: TfDomain.EncryptAtRestPropertyOutputReference | TfDomain.EncryptAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1266,7 +1266,7 @@ export function awsElasticsearchDomainEncryptAtRestPropertyToHclTerraform(struct
 }
 
 
-export function awsElasticsearchDomainLogPublishingOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
+export function tfDomainLogPublishingOptionsPropertyToTerraform(struct?: TfDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1279,7 +1279,7 @@ export function awsElasticsearchDomainLogPublishingOptionsPropertyToTerraform(st
 }
 
 
-export function awsElasticsearchDomainLogPublishingOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
+export function tfDomainLogPublishingOptionsPropertyToHclTerraform(struct?: TfDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1310,7 +1310,7 @@ export function awsElasticsearchDomainLogPublishingOptionsPropertyToHclTerraform
 }
 
 
-export function awsElasticsearchDomainNodeToNodeEncryptionPropertyToTerraform(struct?: AwsElasticsearchDomain.NodeToNodeEncryptionPropertyOutputReference | AwsElasticsearchDomain.NodeToNodeEncryptionProperty): any {
+export function tfDomainNodeToNodeEncryptionPropertyToTerraform(struct?: TfDomain.NodeToNodeEncryptionPropertyOutputReference | TfDomain.NodeToNodeEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1321,7 +1321,7 @@ export function awsElasticsearchDomainNodeToNodeEncryptionPropertyToTerraform(st
 }
 
 
-export function awsElasticsearchDomainNodeToNodeEncryptionPropertyToHclTerraform(struct?: AwsElasticsearchDomain.NodeToNodeEncryptionPropertyOutputReference | AwsElasticsearchDomain.NodeToNodeEncryptionProperty): any {
+export function tfDomainNodeToNodeEncryptionPropertyToHclTerraform(struct?: TfDomain.NodeToNodeEncryptionPropertyOutputReference | TfDomain.NodeToNodeEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1340,7 +1340,7 @@ export function awsElasticsearchDomainNodeToNodeEncryptionPropertyToHclTerraform
 }
 
 
-export function awsElasticsearchDomainSnapshotOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.SnapshotOptionsPropertyOutputReference | AwsElasticsearchDomain.SnapshotOptionsProperty): any {
+export function tfDomainSnapshotOptionsPropertyToTerraform(struct?: TfDomain.SnapshotOptionsPropertyOutputReference | TfDomain.SnapshotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1351,7 +1351,7 @@ export function awsElasticsearchDomainSnapshotOptionsPropertyToTerraform(struct?
 }
 
 
-export function awsElasticsearchDomainSnapshotOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.SnapshotOptionsPropertyOutputReference | AwsElasticsearchDomain.SnapshotOptionsProperty): any {
+export function tfDomainSnapshotOptionsPropertyToHclTerraform(struct?: TfDomain.SnapshotOptionsPropertyOutputReference | TfDomain.SnapshotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1370,7 +1370,7 @@ export function awsElasticsearchDomainSnapshotOptionsPropertyToHclTerraform(stru
 }
 
 
-export function awsElasticsearchDomainTimeoutsPropertyToTerraform(struct?: AwsElasticsearchDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1383,7 +1383,7 @@ export function awsElasticsearchDomainTimeoutsPropertyToTerraform(struct?: AwsEl
 }
 
 
-export function awsElasticsearchDomainTimeoutsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1414,7 +1414,7 @@ export function awsElasticsearchDomainTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsElasticsearchDomainVpcOptionsPropertyToTerraform(struct?: AwsElasticsearchDomain.VpcOptionsPropertyOutputReference | AwsElasticsearchDomain.VpcOptionsProperty): any {
+export function tfDomainVpcOptionsPropertyToTerraform(struct?: TfDomain.VpcOptionsPropertyOutputReference | TfDomain.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1426,7 +1426,7 @@ export function awsElasticsearchDomainVpcOptionsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsElasticsearchDomainVpcOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomain.VpcOptionsPropertyOutputReference | AwsElasticsearchDomain.VpcOptionsProperty): any {
+export function tfDomainVpcOptionsPropertyToHclTerraform(struct?: TfDomain.VpcOptionsPropertyOutputReference | TfDomain.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1451,18 +1451,18 @@ export function awsElasticsearchDomainVpcOptionsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsElasticsearchDomain {
+export namespace TfDomain {
 export interface MasterUserOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_arn AwsElasticsearchDomain#master_user_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_arn TfDomain#master_user_arn}
   */
   readonly masterUserArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_name AwsElasticsearchDomain#master_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_name TfDomain#master_user_name}
   */
   readonly masterUserName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_password AwsElasticsearchDomain#master_user_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_password TfDomain#master_user_password}
   */
   readonly masterUserPassword?: string;
 }
@@ -1560,17 +1560,17 @@ export class MasterUserOptionsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface AdvancedSecurityOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled AwsElasticsearchDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled TfDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#internal_user_database_enabled AwsElasticsearchDomain#internal_user_database_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#internal_user_database_enabled TfDomain#internal_user_database_enabled}
   */
   readonly internalUserDatabaseEnabled?: boolean | cdktn.IResolvable;
   /**
   * master_user_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_options AwsElasticsearchDomain#master_user_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#master_user_options TfDomain#master_user_options}
   */
   readonly masterUserOptions?: MasterUserOptionsProperty;
 }
@@ -1665,11 +1665,11 @@ export class AdvancedSecurityOptionsPropertyOutputReference extends cdktn.Comple
 }
 export interface DurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#unit AwsElasticsearchDomain#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#unit TfDomain#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#value AwsElasticsearchDomain#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#value TfDomain#value}
   */
   readonly value: number;
 }
@@ -1739,17 +1739,17 @@ export class DurationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MaintenanceScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cron_expression_for_recurrence AwsElasticsearchDomain#cron_expression_for_recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cron_expression_for_recurrence TfDomain#cron_expression_for_recurrence}
   */
   readonly cronExpressionForRecurrence: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#start_at AwsElasticsearchDomain#start_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#start_at TfDomain#start_at}
   */
   readonly startAt: string;
   /**
   * duration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#duration AwsElasticsearchDomain#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#duration TfDomain#duration}
   */
   readonly duration: DurationProperty;
 }
@@ -1870,17 +1870,17 @@ export class MaintenanceSchedulePropertyList extends cdktn.ComplexList {
 }
 export interface AutoTuneOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#desired_state AwsElasticsearchDomain#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#desired_state TfDomain#desired_state}
   */
   readonly desiredState: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#rollback_on_disable AwsElasticsearchDomain#rollback_on_disable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#rollback_on_disable TfDomain#rollback_on_disable}
   */
   readonly rollbackOnDisable?: string;
   /**
   * maintenance_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#maintenance_schedule AwsElasticsearchDomain#maintenance_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#maintenance_schedule TfDomain#maintenance_schedule}
   */
   readonly maintenanceSchedule?: MaintenanceScheduleProperty[] | cdktn.IResolvable;
 }
@@ -1975,7 +1975,7 @@ export class AutoTuneOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ColdStorageOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled AwsElasticsearchDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled TfDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2029,7 +2029,7 @@ export class ColdStorageOptionsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface ZoneAwarenessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#availability_zone_count AwsElasticsearchDomain#availability_zone_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#availability_zone_count TfDomain#availability_zone_count}
   */
   readonly availabilityZoneCount?: number;
 }
@@ -2083,51 +2083,51 @@ export class ZoneAwarenessConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ClusterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#dedicated_master_count AwsElasticsearchDomain#dedicated_master_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#dedicated_master_count TfDomain#dedicated_master_count}
   */
   readonly dedicatedMasterCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#dedicated_master_enabled AwsElasticsearchDomain#dedicated_master_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#dedicated_master_enabled TfDomain#dedicated_master_enabled}
   */
   readonly dedicatedMasterEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#dedicated_master_type AwsElasticsearchDomain#dedicated_master_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#dedicated_master_type TfDomain#dedicated_master_type}
   */
   readonly dedicatedMasterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#instance_count AwsElasticsearchDomain#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#instance_count TfDomain#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#instance_type AwsElasticsearchDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#warm_count AwsElasticsearchDomain#warm_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#warm_count TfDomain#warm_count}
   */
   readonly warmCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#warm_enabled AwsElasticsearchDomain#warm_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#warm_enabled TfDomain#warm_enabled}
   */
   readonly warmEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#warm_type AwsElasticsearchDomain#warm_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#warm_type TfDomain#warm_type}
   */
   readonly warmType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#zone_awareness_enabled AwsElasticsearchDomain#zone_awareness_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#zone_awareness_enabled TfDomain#zone_awareness_enabled}
   */
   readonly zoneAwarenessEnabled?: boolean | cdktn.IResolvable;
   /**
   * cold_storage_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cold_storage_options AwsElasticsearchDomain#cold_storage_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cold_storage_options TfDomain#cold_storage_options}
   */
   readonly coldStorageOptions?: ColdStorageOptionsProperty;
   /**
   * zone_awareness_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#zone_awareness_config AwsElasticsearchDomain#zone_awareness_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#zone_awareness_config TfDomain#zone_awareness_config}
   */
   readonly zoneAwarenessConfig?: ZoneAwarenessConfigProperty;
 }
@@ -2401,19 +2401,19 @@ export class ClusterConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CognitoOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled AwsElasticsearchDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled TfDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#identity_pool_id AwsElasticsearchDomain#identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#identity_pool_id TfDomain#identity_pool_id}
   */
   readonly identityPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#role_arn AwsElasticsearchDomain#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#role_arn TfDomain#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#user_pool_id AwsElasticsearchDomain#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#user_pool_id TfDomain#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -2524,23 +2524,23 @@ export class CognitoOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DomainEndpointOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#custom_endpoint AwsElasticsearchDomain#custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#custom_endpoint TfDomain#custom_endpoint}
   */
   readonly customEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#custom_endpoint_certificate_arn AwsElasticsearchDomain#custom_endpoint_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#custom_endpoint_certificate_arn TfDomain#custom_endpoint_certificate_arn}
   */
   readonly customEndpointCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#custom_endpoint_enabled AwsElasticsearchDomain#custom_endpoint_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#custom_endpoint_enabled TfDomain#custom_endpoint_enabled}
   */
   readonly customEndpointEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enforce_https AwsElasticsearchDomain#enforce_https}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enforce_https TfDomain#enforce_https}
   */
   readonly enforceHttps?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#tls_security_policy AwsElasticsearchDomain#tls_security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#tls_security_policy TfDomain#tls_security_policy}
   */
   readonly tlsSecurityPolicy?: string;
 }
@@ -2682,23 +2682,23 @@ export class DomainEndpointOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface EbsOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#ebs_enabled AwsElasticsearchDomain#ebs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#ebs_enabled TfDomain#ebs_enabled}
   */
   readonly ebsEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#iops AwsElasticsearchDomain#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#iops TfDomain#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#throughput AwsElasticsearchDomain#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#throughput TfDomain#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#volume_size AwsElasticsearchDomain#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#volume_size TfDomain#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#volume_type AwsElasticsearchDomain#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#volume_type TfDomain#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -2837,11 +2837,11 @@ export class EbsOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EncryptAtRestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled AwsElasticsearchDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled TfDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#kms_key_id AwsElasticsearchDomain#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#kms_key_id TfDomain#kms_key_id}
   */
   readonly kmsKeyId?: string;
 }
@@ -2914,15 +2914,15 @@ export class EncryptAtRestPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LogPublishingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cloudwatch_log_group_arn AwsElasticsearchDomain#cloudwatch_log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#cloudwatch_log_group_arn TfDomain#cloudwatch_log_group_arn}
   */
   readonly cloudwatchLogGroupArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled AwsElasticsearchDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled TfDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#log_type AwsElasticsearchDomain#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#log_type TfDomain#log_type}
   */
   readonly logType: string;
 }
@@ -3046,7 +3046,7 @@ export class LogPublishingOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface NodeToNodeEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled AwsElasticsearchDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#enabled TfDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -3097,7 +3097,7 @@ export class NodeToNodeEncryptionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface SnapshotOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#automated_snapshot_start_hour AwsElasticsearchDomain#automated_snapshot_start_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#automated_snapshot_start_hour TfDomain#automated_snapshot_start_hour}
   */
   readonly automatedSnapshotStartHour: number;
 }
@@ -3148,15 +3148,15 @@ export class SnapshotOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#create AwsElasticsearchDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#create TfDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#delete AwsElasticsearchDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#delete TfDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#update AwsElasticsearchDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#update TfDomain#update}
   */
   readonly update?: string;
 }
@@ -3264,11 +3264,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#security_group_ids AwsElasticsearchDomain#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#security_group_ids TfDomain#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#subnet_ids AwsElasticsearchDomain#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain#subnet_ids TfDomain#subnet_ids}
   */
   readonly subnetIds?: string[];
 }

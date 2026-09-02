@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsLaunchConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLaunchConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#id DataAwsLaunchConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#id DataTfLaunchConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#name DataAwsLaunchConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#name DataTfLaunchConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#region DataAwsLaunchConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#region DataTfLaunchConfiguration#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsLaunchConfigurationConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration aws_launch_configuration}
 */
-export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
+export class DataTfLaunchConfiguration extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsLaunchConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLaunchConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsLaunchConfiguration to import
-  * @param importFromId The id of the existing DataAwsLaunchConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsLaunchConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLaunchConfiguration to import
+  * @param importFromId The id of the existing DataTfLaunchConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLaunchConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_launch_configuration", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsLaunchConfigurationConfig
+  * @param options DataTfLaunchConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsLaunchConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfLaunchConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_launch_configuration',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
   }
 
   // ebs_block_device - computed: true, optional: false, required: false
-  private _ebsBlockDevice = new DataAwsLaunchConfiguration.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
+  private _ebsBlockDevice = new DataTfLaunchConfiguration.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
   public get ebsBlockDevice() {
     return this._ebsBlockDevice;
   }
@@ -112,7 +112,7 @@ export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
   }
 
   // ephemeral_block_device - computed: true, optional: false, required: false
-  private _ephemeralBlockDevice = new DataAwsLaunchConfiguration.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
+  private _ephemeralBlockDevice = new DataTfLaunchConfiguration.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
   public get ephemeralBlockDevice() {
     return this._ephemeralBlockDevice;
   }
@@ -154,7 +154,7 @@ export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
   }
 
   // metadata_options - computed: true, optional: false, required: false
-  private _metadataOptions = new DataAwsLaunchConfiguration.MetadataOptionsPropertyList(this, "metadata_options", false);
+  private _metadataOptions = new DataTfLaunchConfiguration.MetadataOptionsPropertyList(this, "metadata_options", false);
   public get metadataOptions() {
     return this._metadataOptions;
   }
@@ -194,7 +194,7 @@ export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
   }
 
   // root_block_device - computed: true, optional: false, required: false
-  private _rootBlockDevice = new DataAwsLaunchConfiguration.RootBlockDevicePropertyList(this, "root_block_device", false);
+  private _rootBlockDevice = new DataTfLaunchConfiguration.RootBlockDevicePropertyList(this, "root_block_device", false);
   public get rootBlockDevice() {
     return this._rootBlockDevice;
   }
@@ -253,7 +253,7 @@ export class DataAwsLaunchConfiguration extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsLaunchConfigurationEbsBlockDevicePropertyToTerraform(struct?: DataAwsLaunchConfiguration.EbsBlockDeviceProperty): any {
+export function dataTfLaunchConfigurationEbsBlockDevicePropertyToTerraform(struct?: DataTfLaunchConfiguration.EbsBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function dataAwsLaunchConfigurationEbsBlockDevicePropertyToTerraform(stru
 }
 
 
-export function dataAwsLaunchConfigurationEbsBlockDevicePropertyToHclTerraform(struct?: DataAwsLaunchConfiguration.EbsBlockDeviceProperty): any {
+export function dataTfLaunchConfigurationEbsBlockDevicePropertyToHclTerraform(struct?: DataTfLaunchConfiguration.EbsBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataAwsLaunchConfigurationEbsBlockDevicePropertyToHclTerraform(s
 }
 
 
-export function dataAwsLaunchConfigurationEphemeralBlockDevicePropertyToTerraform(struct?: DataAwsLaunchConfiguration.EphemeralBlockDeviceProperty): any {
+export function dataTfLaunchConfigurationEphemeralBlockDevicePropertyToTerraform(struct?: DataTfLaunchConfiguration.EphemeralBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function dataAwsLaunchConfigurationEphemeralBlockDevicePropertyToTerrafor
 }
 
 
-export function dataAwsLaunchConfigurationEphemeralBlockDevicePropertyToHclTerraform(struct?: DataAwsLaunchConfiguration.EphemeralBlockDeviceProperty): any {
+export function dataTfLaunchConfigurationEphemeralBlockDevicePropertyToHclTerraform(struct?: DataTfLaunchConfiguration.EphemeralBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function dataAwsLaunchConfigurationEphemeralBlockDevicePropertyToHclTerra
 }
 
 
-export function dataAwsLaunchConfigurationMetadataOptionsPropertyToTerraform(struct?: DataAwsLaunchConfiguration.MetadataOptionsProperty): any {
+export function dataTfLaunchConfigurationMetadataOptionsPropertyToTerraform(struct?: DataTfLaunchConfiguration.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsLaunchConfigurationMetadataOptionsPropertyToTerraform(str
 }
 
 
-export function dataAwsLaunchConfigurationMetadataOptionsPropertyToHclTerraform(struct?: DataAwsLaunchConfiguration.MetadataOptionsProperty): any {
+export function dataTfLaunchConfigurationMetadataOptionsPropertyToHclTerraform(struct?: DataTfLaunchConfiguration.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function dataAwsLaunchConfigurationMetadataOptionsPropertyToHclTerraform(
 }
 
 
-export function dataAwsLaunchConfigurationRootBlockDevicePropertyToTerraform(struct?: DataAwsLaunchConfiguration.RootBlockDeviceProperty): any {
+export function dataTfLaunchConfigurationRootBlockDevicePropertyToTerraform(struct?: DataTfLaunchConfiguration.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function dataAwsLaunchConfigurationRootBlockDevicePropertyToTerraform(str
 }
 
 
-export function dataAwsLaunchConfigurationRootBlockDevicePropertyToHclTerraform(struct?: DataAwsLaunchConfiguration.RootBlockDeviceProperty): any {
+export function dataTfLaunchConfigurationRootBlockDevicePropertyToHclTerraform(struct?: DataTfLaunchConfiguration.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function dataAwsLaunchConfigurationRootBlockDevicePropertyToHclTerraform(
 }
 
 
-export namespace DataAwsLaunchConfiguration {
+export namespace DataTfLaunchConfiguration {
 export interface EbsBlockDeviceProperty {
 }
 export class EbsBlockDevicePropertyOutputReference extends cdktn.ComplexObject {

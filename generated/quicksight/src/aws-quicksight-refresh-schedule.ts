@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightRefreshScheduleConfig extends cdktn.TerraformMetaArguments {
+export interface TfRefreshScheduleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#aws_account_id AwsQuicksightRefreshSchedule#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#aws_account_id TfRefreshSchedule#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#data_set_id AwsQuicksightRefreshSchedule#data_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#data_set_id TfRefreshSchedule#data_set_id}
   */
   readonly dataSetId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#region AwsQuicksightRefreshSchedule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#region TfRefreshSchedule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#schedule_id AwsQuicksightRefreshSchedule#schedule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#schedule_id TfRefreshSchedule#schedule_id}
   */
   readonly scheduleId: string;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#schedule AwsQuicksightRefreshSchedule#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#schedule TfRefreshSchedule#schedule}
   */
-  readonly schedule?: AwsQuicksightRefreshSchedule.ScheduleProperty[] | cdktn.IResolvable;
+  readonly schedule?: TfRefreshSchedule.ScheduleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule aws_quicksight_refresh_schedule}
 */
-export class AwsQuicksightRefreshSchedule extends cdktn.TerraformResource {
+export class TfRefreshSchedule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsQuicksightRefreshSchedule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightRefreshSchedule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRefreshSchedule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightRefreshSchedule to import
-  * @param importFromId The id of the existing AwsQuicksightRefreshSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightRefreshSchedule to import is found
+  * @param importToId The construct id used in the generated config for the TfRefreshSchedule to import
+  * @param importFromId The id of the existing TfRefreshSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRefreshSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_refresh_schedule", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsQuicksightRefreshSchedule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightRefreshScheduleConfig
+  * @param options TfRefreshScheduleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightRefreshScheduleConfig) {
+  public constructor(scope: Construct, id: string, config: TfRefreshScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_refresh_schedule',
       terraformGeneratorMetadata: {
@@ -163,11 +163,11 @@ export class AwsQuicksightRefreshSchedule extends cdktn.TerraformResource {
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new AwsQuicksightRefreshSchedule.SchedulePropertyList(this, "schedule", false);
+  private _schedule = new TfRefreshSchedule.SchedulePropertyList(this, "schedule", false);
   public get schedule() {
     return this._schedule;
   }
-  public putSchedule(value: AwsQuicksightRefreshSchedule.ScheduleProperty[] | cdktn.IResolvable) {
+  public putSchedule(value: TfRefreshSchedule.ScheduleProperty[] | cdktn.IResolvable) {
     this._schedule.internalValue = value;
   }
   public resetSchedule() {
@@ -188,7 +188,7 @@ export class AwsQuicksightRefreshSchedule extends cdktn.TerraformResource {
       data_set_id: cdktn.stringToTerraform(this._dataSetId),
       region: cdktn.stringToTerraform(this._region),
       schedule_id: cdktn.stringToTerraform(this._scheduleId),
-      schedule: cdktn.listMapper(awsQuicksightRefreshScheduleSchedulePropertyToTerraform, true)(this._schedule.internalValue),
+      schedule: cdktn.listMapper(tfRefreshScheduleSchedulePropertyToTerraform, true)(this._schedule.internalValue),
     };
   }
 
@@ -219,10 +219,10 @@ export class AwsQuicksightRefreshSchedule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       schedule: {
-        value: cdktn.listMapperHcl(awsQuicksightRefreshScheduleSchedulePropertyToHclTerraform, true)(this._schedule.internalValue),
+        value: cdktn.listMapperHcl(tfRefreshScheduleSchedulePropertyToHclTerraform, true)(this._schedule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightRefreshSchedule.SchedulePropertyList",
+        storageClassType: "TfRefreshSchedule.SchedulePropertyList",
       },
     };
 
@@ -231,7 +231,7 @@ export class AwsQuicksightRefreshSchedule extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightRefreshScheduleRefreshOnDayPropertyToTerraform(struct?: AwsQuicksightRefreshSchedule.RefreshOnDayProperty | cdktn.IResolvable): any {
+export function tfRefreshScheduleRefreshOnDayPropertyToTerraform(struct?: TfRefreshSchedule.RefreshOnDayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function awsQuicksightRefreshScheduleRefreshOnDayPropertyToTerraform(stru
 }
 
 
-export function awsQuicksightRefreshScheduleRefreshOnDayPropertyToHclTerraform(struct?: AwsQuicksightRefreshSchedule.RefreshOnDayProperty | cdktn.IResolvable): any {
+export function tfRefreshScheduleRefreshOnDayPropertyToHclTerraform(struct?: TfRefreshSchedule.RefreshOnDayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function awsQuicksightRefreshScheduleRefreshOnDayPropertyToHclTerraform(s
 }
 
 
-export function awsQuicksightRefreshScheduleScheduleFrequencyPropertyToTerraform(struct?: AwsQuicksightRefreshSchedule.ScheduleFrequencyProperty | cdktn.IResolvable): any {
+export function tfRefreshScheduleScheduleFrequencyPropertyToTerraform(struct?: TfRefreshSchedule.ScheduleFrequencyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,12 +277,12 @@ export function awsQuicksightRefreshScheduleScheduleFrequencyPropertyToTerraform
     interval: cdktn.stringToTerraform(struct!.interval),
     time_of_the_day: cdktn.stringToTerraform(struct!.timeOfTheDay),
     timezone: cdktn.stringToTerraform(struct!.timezone),
-    refresh_on_day: cdktn.listMapper(awsQuicksightRefreshScheduleRefreshOnDayPropertyToTerraform, true)(struct!.refreshOnDay),
+    refresh_on_day: cdktn.listMapper(tfRefreshScheduleRefreshOnDayPropertyToTerraform, true)(struct!.refreshOnDay),
   }
 }
 
 
-export function awsQuicksightRefreshScheduleScheduleFrequencyPropertyToHclTerraform(struct?: AwsQuicksightRefreshSchedule.ScheduleFrequencyProperty | cdktn.IResolvable): any {
+export function tfRefreshScheduleScheduleFrequencyPropertyToHclTerraform(struct?: TfRefreshSchedule.ScheduleFrequencyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function awsQuicksightRefreshScheduleScheduleFrequencyPropertyToHclTerraf
       storageClassType: "string",
     },
     refresh_on_day: {
-      value: cdktn.listMapperHcl(awsQuicksightRefreshScheduleRefreshOnDayPropertyToHclTerraform, true)(struct!.refreshOnDay),
+      value: cdktn.listMapperHcl(tfRefreshScheduleRefreshOnDayPropertyToHclTerraform, true)(struct!.refreshOnDay),
       isBlock: true,
       type: "list",
       storageClassType: "RefreshOnDayPropertyList",
@@ -319,7 +319,7 @@ export function awsQuicksightRefreshScheduleScheduleFrequencyPropertyToHclTerraf
 }
 
 
-export function awsQuicksightRefreshScheduleSchedulePropertyToTerraform(struct?: AwsQuicksightRefreshSchedule.ScheduleProperty | cdktn.IResolvable): any {
+export function tfRefreshScheduleSchedulePropertyToTerraform(struct?: TfRefreshSchedule.ScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,12 +327,12 @@ export function awsQuicksightRefreshScheduleSchedulePropertyToTerraform(struct?:
   return {
     refresh_type: cdktn.stringToTerraform(struct!.refreshType),
     start_after_date_time: cdktn.stringToTerraform(struct!.startAfterDateTime),
-    schedule_frequency: cdktn.listMapper(awsQuicksightRefreshScheduleScheduleFrequencyPropertyToTerraform, true)(struct!.scheduleFrequency),
+    schedule_frequency: cdktn.listMapper(tfRefreshScheduleScheduleFrequencyPropertyToTerraform, true)(struct!.scheduleFrequency),
   }
 }
 
 
-export function awsQuicksightRefreshScheduleSchedulePropertyToHclTerraform(struct?: AwsQuicksightRefreshSchedule.ScheduleProperty | cdktn.IResolvable): any {
+export function tfRefreshScheduleSchedulePropertyToHclTerraform(struct?: TfRefreshSchedule.ScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function awsQuicksightRefreshScheduleSchedulePropertyToHclTerraform(struc
       storageClassType: "string",
     },
     schedule_frequency: {
-      value: cdktn.listMapperHcl(awsQuicksightRefreshScheduleScheduleFrequencyPropertyToHclTerraform, true)(struct!.scheduleFrequency),
+      value: cdktn.listMapperHcl(tfRefreshScheduleScheduleFrequencyPropertyToHclTerraform, true)(struct!.scheduleFrequency),
       isBlock: true,
       type: "list",
       storageClassType: "ScheduleFrequencyPropertyList",
@@ -363,14 +363,14 @@ export function awsQuicksightRefreshScheduleSchedulePropertyToHclTerraform(struc
 }
 
 
-export namespace AwsQuicksightRefreshSchedule {
+export namespace TfRefreshSchedule {
 export interface RefreshOnDayProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#day_of_month AwsQuicksightRefreshSchedule#day_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#day_of_month TfRefreshSchedule#day_of_month}
   */
   readonly dayOfMonth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#day_of_week AwsQuicksightRefreshSchedule#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#day_of_week TfRefreshSchedule#day_of_week}
   */
   readonly dayOfWeek?: string;
 }
@@ -478,21 +478,21 @@ export class RefreshOnDayPropertyList extends cdktn.ComplexList {
 }
 export interface ScheduleFrequencyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#interval AwsQuicksightRefreshSchedule#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#interval TfRefreshSchedule#interval}
   */
   readonly interval: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#time_of_the_day AwsQuicksightRefreshSchedule#time_of_the_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#time_of_the_day TfRefreshSchedule#time_of_the_day}
   */
   readonly timeOfTheDay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#timezone AwsQuicksightRefreshSchedule#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#timezone TfRefreshSchedule#timezone}
   */
   readonly timezone?: string;
   /**
   * refresh_on_day block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#refresh_on_day AwsQuicksightRefreshSchedule#refresh_on_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#refresh_on_day TfRefreshSchedule#refresh_on_day}
   */
   readonly refreshOnDay?: RefreshOnDayProperty[] | cdktn.IResolvable;
 }
@@ -641,17 +641,17 @@ export class ScheduleFrequencyPropertyList extends cdktn.ComplexList {
 }
 export interface ScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#refresh_type AwsQuicksightRefreshSchedule#refresh_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#refresh_type TfRefreshSchedule#refresh_type}
   */
   readonly refreshType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#start_after_date_time AwsQuicksightRefreshSchedule#start_after_date_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#start_after_date_time TfRefreshSchedule#start_after_date_time}
   */
   readonly startAfterDateTime?: string;
   /**
   * schedule_frequency block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#schedule_frequency AwsQuicksightRefreshSchedule#schedule_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_refresh_schedule#schedule_frequency TfRefreshSchedule#schedule_frequency}
   */
   readonly scheduleFrequency?: ScheduleFrequencyProperty[] | cdktn.IResolvable;
 }

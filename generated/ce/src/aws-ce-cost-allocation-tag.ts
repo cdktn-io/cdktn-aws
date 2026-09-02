@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCeCostAllocationTagConfig extends cdktn.TerraformMetaArguments {
+export interface TfCostAllocationTagConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#id AwsCeCostAllocationTag#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#id TfCostAllocationTag#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#status AwsCeCostAllocationTag#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#status TfCostAllocationTag#status}
   */
   readonly status: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#tag_key AwsCeCostAllocationTag#tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#tag_key TfCostAllocationTag#tag_key}
   */
   readonly tagKey: string;
 }
@@ -26,7 +26,7 @@ export interface AwsCeCostAllocationTagConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag aws_ce_cost_allocation_tag}
 */
-export class AwsCeCostAllocationTag extends cdktn.TerraformResource {
+export class TfCostAllocationTag extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class AwsCeCostAllocationTag extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCeCostAllocationTag resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCostAllocationTag resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCeCostAllocationTag to import
-  * @param importFromId The id of the existing AwsCeCostAllocationTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCeCostAllocationTag to import is found
+  * @param importToId The construct id used in the generated config for the TfCostAllocationTag to import
+  * @param importFromId The id of the existing TfCostAllocationTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_allocation_tag#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCostAllocationTag to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ce_cost_allocation_tag", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class AwsCeCostAllocationTag extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCeCostAllocationTagConfig
+  * @param options TfCostAllocationTagConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCeCostAllocationTagConfig) {
+  public constructor(scope: Construct, id: string, config: TfCostAllocationTagConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ce_cost_allocation_tag',
       terraformGeneratorMetadata: {

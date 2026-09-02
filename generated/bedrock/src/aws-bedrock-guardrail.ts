@@ -5,85 +5,85 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockGuardrailConfig extends cdktn.TerraformMetaArguments {
+export interface TfGuardrailConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#blocked_input_messaging AwsBedrockGuardrail#blocked_input_messaging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#blocked_input_messaging TfGuardrail#blocked_input_messaging}
   */
   readonly blockedInputMessaging: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#blocked_outputs_messaging AwsBedrockGuardrail#blocked_outputs_messaging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#blocked_outputs_messaging TfGuardrail#blocked_outputs_messaging}
   */
   readonly blockedOutputsMessaging: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#description AwsBedrockGuardrail#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#description TfGuardrail#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#kms_key_arn AwsBedrockGuardrail#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#kms_key_arn TfGuardrail#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#name AwsBedrockGuardrail#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#name TfGuardrail#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#region AwsBedrockGuardrail#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#region TfGuardrail#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tags AwsBedrockGuardrail#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tags TfGuardrail#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * content_policy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#content_policy_config AwsBedrockGuardrail#content_policy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#content_policy_config TfGuardrail#content_policy_config}
   */
-  readonly contentPolicyConfig?: AwsBedrockGuardrail.ContentPolicyConfigProperty[] | cdktn.IResolvable;
+  readonly contentPolicyConfig?: TfGuardrail.ContentPolicyConfigProperty[] | cdktn.IResolvable;
   /**
   * contextual_grounding_policy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#contextual_grounding_policy_config AwsBedrockGuardrail#contextual_grounding_policy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#contextual_grounding_policy_config TfGuardrail#contextual_grounding_policy_config}
   */
-  readonly contextualGroundingPolicyConfig?: AwsBedrockGuardrail.ContextualGroundingPolicyConfigProperty[] | cdktn.IResolvable;
+  readonly contextualGroundingPolicyConfig?: TfGuardrail.ContextualGroundingPolicyConfigProperty[] | cdktn.IResolvable;
   /**
   * cross_region_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#cross_region_config AwsBedrockGuardrail#cross_region_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#cross_region_config TfGuardrail#cross_region_config}
   */
-  readonly crossRegionConfig?: AwsBedrockGuardrail.CrossRegionConfigProperty[] | cdktn.IResolvable;
+  readonly crossRegionConfig?: TfGuardrail.CrossRegionConfigProperty[] | cdktn.IResolvable;
   /**
   * sensitive_information_policy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#sensitive_information_policy_config AwsBedrockGuardrail#sensitive_information_policy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#sensitive_information_policy_config TfGuardrail#sensitive_information_policy_config}
   */
-  readonly sensitiveInformationPolicyConfig?: AwsBedrockGuardrail.SensitiveInformationPolicyConfigProperty[] | cdktn.IResolvable;
+  readonly sensitiveInformationPolicyConfig?: TfGuardrail.SensitiveInformationPolicyConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#timeouts AwsBedrockGuardrail#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#timeouts TfGuardrail#timeouts}
   */
-  readonly timeouts?: AwsBedrockGuardrail.TimeoutsProperty;
+  readonly timeouts?: TfGuardrail.TimeoutsProperty;
   /**
   * topic_policy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#topic_policy_config AwsBedrockGuardrail#topic_policy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#topic_policy_config TfGuardrail#topic_policy_config}
   */
-  readonly topicPolicyConfig?: AwsBedrockGuardrail.TopicPolicyConfigProperty[] | cdktn.IResolvable;
+  readonly topicPolicyConfig?: TfGuardrail.TopicPolicyConfigProperty[] | cdktn.IResolvable;
   /**
   * word_policy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#word_policy_config AwsBedrockGuardrail#word_policy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#word_policy_config TfGuardrail#word_policy_config}
   */
-  readonly wordPolicyConfig?: AwsBedrockGuardrail.WordPolicyConfigProperty[] | cdktn.IResolvable;
+  readonly wordPolicyConfig?: TfGuardrail.WordPolicyConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail aws_bedrock_guardrail}
 */
-export class AwsBedrockGuardrail extends cdktn.TerraformResource {
+export class TfGuardrail extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -94,11 +94,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockGuardrail resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGuardrail resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockGuardrail to import
-  * @param importFromId The id of the existing AwsBedrockGuardrail that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockGuardrail to import is found
+  * @param importToId The construct id used in the generated config for the TfGuardrail to import
+  * @param importFromId The id of the existing TfGuardrail that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGuardrail to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_guardrail", importId: importFromId, provider });
@@ -113,9 +113,9 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockGuardrailConfig
+  * @param options TfGuardrailConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockGuardrailConfig) {
+  public constructor(scope: Construct, id: string, config: TfGuardrailConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_guardrail',
       terraformGeneratorMetadata: {
@@ -291,11 +291,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 
   // content_policy_config - computed: false, optional: true, required: false
-  private _contentPolicyConfig = new AwsBedrockGuardrail.ContentPolicyConfigPropertyList(this, "content_policy_config", false);
+  private _contentPolicyConfig = new TfGuardrail.ContentPolicyConfigPropertyList(this, "content_policy_config", false);
   public get contentPolicyConfig() {
     return this._contentPolicyConfig;
   }
-  public putContentPolicyConfig(value: AwsBedrockGuardrail.ContentPolicyConfigProperty[] | cdktn.IResolvable) {
+  public putContentPolicyConfig(value: TfGuardrail.ContentPolicyConfigProperty[] | cdktn.IResolvable) {
     this._contentPolicyConfig.internalValue = value;
   }
   public resetContentPolicyConfig() {
@@ -307,11 +307,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 
   // contextual_grounding_policy_config - computed: false, optional: true, required: false
-  private _contextualGroundingPolicyConfig = new AwsBedrockGuardrail.ContextualGroundingPolicyConfigPropertyList(this, "contextual_grounding_policy_config", false);
+  private _contextualGroundingPolicyConfig = new TfGuardrail.ContextualGroundingPolicyConfigPropertyList(this, "contextual_grounding_policy_config", false);
   public get contextualGroundingPolicyConfig() {
     return this._contextualGroundingPolicyConfig;
   }
-  public putContextualGroundingPolicyConfig(value: AwsBedrockGuardrail.ContextualGroundingPolicyConfigProperty[] | cdktn.IResolvable) {
+  public putContextualGroundingPolicyConfig(value: TfGuardrail.ContextualGroundingPolicyConfigProperty[] | cdktn.IResolvable) {
     this._contextualGroundingPolicyConfig.internalValue = value;
   }
   public resetContextualGroundingPolicyConfig() {
@@ -323,11 +323,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 
   // cross_region_config - computed: false, optional: true, required: false
-  private _crossRegionConfig = new AwsBedrockGuardrail.CrossRegionConfigPropertyList(this, "cross_region_config", false);
+  private _crossRegionConfig = new TfGuardrail.CrossRegionConfigPropertyList(this, "cross_region_config", false);
   public get crossRegionConfig() {
     return this._crossRegionConfig;
   }
-  public putCrossRegionConfig(value: AwsBedrockGuardrail.CrossRegionConfigProperty[] | cdktn.IResolvable) {
+  public putCrossRegionConfig(value: TfGuardrail.CrossRegionConfigProperty[] | cdktn.IResolvable) {
     this._crossRegionConfig.internalValue = value;
   }
   public resetCrossRegionConfig() {
@@ -339,11 +339,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 
   // sensitive_information_policy_config - computed: false, optional: true, required: false
-  private _sensitiveInformationPolicyConfig = new AwsBedrockGuardrail.SensitiveInformationPolicyConfigPropertyList(this, "sensitive_information_policy_config", false);
+  private _sensitiveInformationPolicyConfig = new TfGuardrail.SensitiveInformationPolicyConfigPropertyList(this, "sensitive_information_policy_config", false);
   public get sensitiveInformationPolicyConfig() {
     return this._sensitiveInformationPolicyConfig;
   }
-  public putSensitiveInformationPolicyConfig(value: AwsBedrockGuardrail.SensitiveInformationPolicyConfigProperty[] | cdktn.IResolvable) {
+  public putSensitiveInformationPolicyConfig(value: TfGuardrail.SensitiveInformationPolicyConfigProperty[] | cdktn.IResolvable) {
     this._sensitiveInformationPolicyConfig.internalValue = value;
   }
   public resetSensitiveInformationPolicyConfig() {
@@ -355,11 +355,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockGuardrail.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGuardrail.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockGuardrail.TimeoutsProperty) {
+  public putTimeouts(value: TfGuardrail.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -371,11 +371,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 
   // topic_policy_config - computed: false, optional: true, required: false
-  private _topicPolicyConfig = new AwsBedrockGuardrail.TopicPolicyConfigPropertyList(this, "topic_policy_config", false);
+  private _topicPolicyConfig = new TfGuardrail.TopicPolicyConfigPropertyList(this, "topic_policy_config", false);
   public get topicPolicyConfig() {
     return this._topicPolicyConfig;
   }
-  public putTopicPolicyConfig(value: AwsBedrockGuardrail.TopicPolicyConfigProperty[] | cdktn.IResolvable) {
+  public putTopicPolicyConfig(value: TfGuardrail.TopicPolicyConfigProperty[] | cdktn.IResolvable) {
     this._topicPolicyConfig.internalValue = value;
   }
   public resetTopicPolicyConfig() {
@@ -387,11 +387,11 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 
   // word_policy_config - computed: false, optional: true, required: false
-  private _wordPolicyConfig = new AwsBedrockGuardrail.WordPolicyConfigPropertyList(this, "word_policy_config", false);
+  private _wordPolicyConfig = new TfGuardrail.WordPolicyConfigPropertyList(this, "word_policy_config", false);
   public get wordPolicyConfig() {
     return this._wordPolicyConfig;
   }
-  public putWordPolicyConfig(value: AwsBedrockGuardrail.WordPolicyConfigProperty[] | cdktn.IResolvable) {
+  public putWordPolicyConfig(value: TfGuardrail.WordPolicyConfigProperty[] | cdktn.IResolvable) {
     this._wordPolicyConfig.internalValue = value;
   }
   public resetWordPolicyConfig() {
@@ -415,13 +415,13 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      content_policy_config: cdktn.listMapper(awsBedrockGuardrailContentPolicyConfigPropertyToTerraform, true)(this._contentPolicyConfig.internalValue),
-      contextual_grounding_policy_config: cdktn.listMapper(awsBedrockGuardrailContextualGroundingPolicyConfigPropertyToTerraform, true)(this._contextualGroundingPolicyConfig.internalValue),
-      cross_region_config: cdktn.listMapper(awsBedrockGuardrailCrossRegionConfigPropertyToTerraform, true)(this._crossRegionConfig.internalValue),
-      sensitive_information_policy_config: cdktn.listMapper(awsBedrockGuardrailSensitiveInformationPolicyConfigPropertyToTerraform, true)(this._sensitiveInformationPolicyConfig.internalValue),
-      timeouts: awsBedrockGuardrailTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      topic_policy_config: cdktn.listMapper(awsBedrockGuardrailTopicPolicyConfigPropertyToTerraform, true)(this._topicPolicyConfig.internalValue),
-      word_policy_config: cdktn.listMapper(awsBedrockGuardrailWordPolicyConfigPropertyToTerraform, true)(this._wordPolicyConfig.internalValue),
+      content_policy_config: cdktn.listMapper(tfGuardrailContentPolicyConfigPropertyToTerraform, true)(this._contentPolicyConfig.internalValue),
+      contextual_grounding_policy_config: cdktn.listMapper(tfGuardrailContextualGroundingPolicyConfigPropertyToTerraform, true)(this._contextualGroundingPolicyConfig.internalValue),
+      cross_region_config: cdktn.listMapper(tfGuardrailCrossRegionConfigPropertyToTerraform, true)(this._crossRegionConfig.internalValue),
+      sensitive_information_policy_config: cdktn.listMapper(tfGuardrailSensitiveInformationPolicyConfigPropertyToTerraform, true)(this._sensitiveInformationPolicyConfig.internalValue),
+      timeouts: tfGuardrailTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      topic_policy_config: cdktn.listMapper(tfGuardrailTopicPolicyConfigPropertyToTerraform, true)(this._topicPolicyConfig.internalValue),
+      word_policy_config: cdktn.listMapper(tfGuardrailWordPolicyConfigPropertyToTerraform, true)(this._wordPolicyConfig.internalValue),
     };
   }
 
@@ -470,46 +470,46 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       content_policy_config: {
-        value: cdktn.listMapperHcl(awsBedrockGuardrailContentPolicyConfigPropertyToHclTerraform, true)(this._contentPolicyConfig.internalValue),
+        value: cdktn.listMapperHcl(tfGuardrailContentPolicyConfigPropertyToHclTerraform, true)(this._contentPolicyConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockGuardrail.ContentPolicyConfigPropertyList",
+        storageClassType: "TfGuardrail.ContentPolicyConfigPropertyList",
       },
       contextual_grounding_policy_config: {
-        value: cdktn.listMapperHcl(awsBedrockGuardrailContextualGroundingPolicyConfigPropertyToHclTerraform, true)(this._contextualGroundingPolicyConfig.internalValue),
+        value: cdktn.listMapperHcl(tfGuardrailContextualGroundingPolicyConfigPropertyToHclTerraform, true)(this._contextualGroundingPolicyConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockGuardrail.ContextualGroundingPolicyConfigPropertyList",
+        storageClassType: "TfGuardrail.ContextualGroundingPolicyConfigPropertyList",
       },
       cross_region_config: {
-        value: cdktn.listMapperHcl(awsBedrockGuardrailCrossRegionConfigPropertyToHclTerraform, true)(this._crossRegionConfig.internalValue),
+        value: cdktn.listMapperHcl(tfGuardrailCrossRegionConfigPropertyToHclTerraform, true)(this._crossRegionConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockGuardrail.CrossRegionConfigPropertyList",
+        storageClassType: "TfGuardrail.CrossRegionConfigPropertyList",
       },
       sensitive_information_policy_config: {
-        value: cdktn.listMapperHcl(awsBedrockGuardrailSensitiveInformationPolicyConfigPropertyToHclTerraform, true)(this._sensitiveInformationPolicyConfig.internalValue),
+        value: cdktn.listMapperHcl(tfGuardrailSensitiveInformationPolicyConfigPropertyToHclTerraform, true)(this._sensitiveInformationPolicyConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockGuardrail.SensitiveInformationPolicyConfigPropertyList",
+        storageClassType: "TfGuardrail.SensitiveInformationPolicyConfigPropertyList",
       },
       timeouts: {
-        value: awsBedrockGuardrailTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGuardrailTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockGuardrail.TimeoutsProperty",
+        storageClassType: "TfGuardrail.TimeoutsProperty",
       },
       topic_policy_config: {
-        value: cdktn.listMapperHcl(awsBedrockGuardrailTopicPolicyConfigPropertyToHclTerraform, true)(this._topicPolicyConfig.internalValue),
+        value: cdktn.listMapperHcl(tfGuardrailTopicPolicyConfigPropertyToHclTerraform, true)(this._topicPolicyConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockGuardrail.TopicPolicyConfigPropertyList",
+        storageClassType: "TfGuardrail.TopicPolicyConfigPropertyList",
       },
       word_policy_config: {
-        value: cdktn.listMapperHcl(awsBedrockGuardrailWordPolicyConfigPropertyToHclTerraform, true)(this._wordPolicyConfig.internalValue),
+        value: cdktn.listMapperHcl(tfGuardrailWordPolicyConfigPropertyToHclTerraform, true)(this._wordPolicyConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockGuardrail.WordPolicyConfigPropertyList",
+        storageClassType: "TfGuardrail.WordPolicyConfigPropertyList",
       },
     };
 
@@ -518,7 +518,7 @@ export class AwsBedrockGuardrail extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockGuardrailContentPolicyConfigTierConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.ContentPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContentPolicyConfigTierConfigPropertyToTerraform(struct?: TfGuardrail.ContentPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function awsBedrockGuardrailContentPolicyConfigTierConfigPropertyToTerraf
 }
 
 
-export function awsBedrockGuardrailContentPolicyConfigTierConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.ContentPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContentPolicyConfigTierConfigPropertyToHclTerraform(struct?: TfGuardrail.ContentPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function awsBedrockGuardrailContentPolicyConfigTierConfigPropertyToHclTer
 }
 
 
-export function awsBedrockGuardrailContentPolicyConfigFiltersConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.ContentPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContentPolicyConfigFiltersConfigPropertyToTerraform(struct?: TfGuardrail.ContentPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function awsBedrockGuardrailContentPolicyConfigFiltersConfigPropertyToTer
 }
 
 
-export function awsBedrockGuardrailContentPolicyConfigFiltersConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.ContentPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContentPolicyConfigFiltersConfigPropertyToHclTerraform(struct?: TfGuardrail.ContentPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -634,32 +634,32 @@ export function awsBedrockGuardrailContentPolicyConfigFiltersConfigPropertyToHcl
 }
 
 
-export function awsBedrockGuardrailContentPolicyConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.ContentPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContentPolicyConfigPropertyToTerraform(struct?: TfGuardrail.ContentPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    tier_config: cdktn.listMapper(awsBedrockGuardrailContentPolicyConfigTierConfigPropertyToTerraform, false)(struct!.tierConfig),
-    filters_config: cdktn.listMapper(awsBedrockGuardrailContentPolicyConfigFiltersConfigPropertyToTerraform, true)(struct!.filtersConfig),
+    tier_config: cdktn.listMapper(tfGuardrailContentPolicyConfigTierConfigPropertyToTerraform, false)(struct!.tierConfig),
+    filters_config: cdktn.listMapper(tfGuardrailContentPolicyConfigFiltersConfigPropertyToTerraform, true)(struct!.filtersConfig),
   }
 }
 
 
-export function awsBedrockGuardrailContentPolicyConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.ContentPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContentPolicyConfigPropertyToHclTerraform(struct?: TfGuardrail.ContentPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     tier_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailContentPolicyConfigTierConfigPropertyToHclTerraform, false)(struct!.tierConfig),
+      value: cdktn.listMapperHcl(tfGuardrailContentPolicyConfigTierConfigPropertyToHclTerraform, false)(struct!.tierConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ContentPolicyConfigTierConfigPropertyList",
     },
     filters_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailContentPolicyConfigFiltersConfigPropertyToHclTerraform, true)(struct!.filtersConfig),
+      value: cdktn.listMapperHcl(tfGuardrailContentPolicyConfigFiltersConfigPropertyToHclTerraform, true)(struct!.filtersConfig),
       isBlock: true,
       type: "set",
       storageClassType: "ContentPolicyConfigFiltersConfigPropertyList",
@@ -671,7 +671,7 @@ export function awsBedrockGuardrailContentPolicyConfigPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.ContextualGroundingPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToTerraform(struct?: TfGuardrail.ContextualGroundingPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -683,7 +683,7 @@ export function awsBedrockGuardrailContextualGroundingPolicyConfigFiltersConfigP
 }
 
 
-export function awsBedrockGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.ContextualGroundingPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToHclTerraform(struct?: TfGuardrail.ContextualGroundingPolicyConfigFiltersConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,25 +708,25 @@ export function awsBedrockGuardrailContextualGroundingPolicyConfigFiltersConfigP
 }
 
 
-export function awsBedrockGuardrailContextualGroundingPolicyConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.ContextualGroundingPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContextualGroundingPolicyConfigPropertyToTerraform(struct?: TfGuardrail.ContextualGroundingPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filters_config: cdktn.listMapper(awsBedrockGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToTerraform, true)(struct!.filtersConfig),
+    filters_config: cdktn.listMapper(tfGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToTerraform, true)(struct!.filtersConfig),
   }
 }
 
 
-export function awsBedrockGuardrailContextualGroundingPolicyConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.ContextualGroundingPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailContextualGroundingPolicyConfigPropertyToHclTerraform(struct?: TfGuardrail.ContextualGroundingPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filters_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToHclTerraform, true)(struct!.filtersConfig),
+      value: cdktn.listMapperHcl(tfGuardrailContextualGroundingPolicyConfigFiltersConfigPropertyToHclTerraform, true)(struct!.filtersConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ContextualGroundingPolicyConfigFiltersConfigPropertyList",
@@ -738,7 +738,7 @@ export function awsBedrockGuardrailContextualGroundingPolicyConfigPropertyToHclT
 }
 
 
-export function awsBedrockGuardrailCrossRegionConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.CrossRegionConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailCrossRegionConfigPropertyToTerraform(struct?: TfGuardrail.CrossRegionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -749,7 +749,7 @@ export function awsBedrockGuardrailCrossRegionConfigPropertyToTerraform(struct?:
 }
 
 
-export function awsBedrockGuardrailCrossRegionConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.CrossRegionConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailCrossRegionConfigPropertyToHclTerraform(struct?: TfGuardrail.CrossRegionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -768,7 +768,7 @@ export function awsBedrockGuardrailCrossRegionConfigPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockGuardrailPiiEntitiesConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.PiiEntitiesConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailPiiEntitiesConfigPropertyToTerraform(struct?: TfGuardrail.PiiEntitiesConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -784,7 +784,7 @@ export function awsBedrockGuardrailPiiEntitiesConfigPropertyToTerraform(struct?:
 }
 
 
-export function awsBedrockGuardrailPiiEntitiesConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.PiiEntitiesConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailPiiEntitiesConfigPropertyToHclTerraform(struct?: TfGuardrail.PiiEntitiesConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function awsBedrockGuardrailPiiEntitiesConfigPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockGuardrailRegexesConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.RegexesConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailRegexesConfigPropertyToTerraform(struct?: TfGuardrail.RegexesConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -851,7 +851,7 @@ export function awsBedrockGuardrailRegexesConfigPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsBedrockGuardrailRegexesConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.RegexesConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailRegexesConfigPropertyToHclTerraform(struct?: TfGuardrail.RegexesConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -912,32 +912,32 @@ export function awsBedrockGuardrailRegexesConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBedrockGuardrailSensitiveInformationPolicyConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.SensitiveInformationPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailSensitiveInformationPolicyConfigPropertyToTerraform(struct?: TfGuardrail.SensitiveInformationPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    pii_entities_config: cdktn.listMapper(awsBedrockGuardrailPiiEntitiesConfigPropertyToTerraform, true)(struct!.piiEntitiesConfig),
-    regexes_config: cdktn.listMapper(awsBedrockGuardrailRegexesConfigPropertyToTerraform, true)(struct!.regexesConfig),
+    pii_entities_config: cdktn.listMapper(tfGuardrailPiiEntitiesConfigPropertyToTerraform, true)(struct!.piiEntitiesConfig),
+    regexes_config: cdktn.listMapper(tfGuardrailRegexesConfigPropertyToTerraform, true)(struct!.regexesConfig),
   }
 }
 
 
-export function awsBedrockGuardrailSensitiveInformationPolicyConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.SensitiveInformationPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailSensitiveInformationPolicyConfigPropertyToHclTerraform(struct?: TfGuardrail.SensitiveInformationPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     pii_entities_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailPiiEntitiesConfigPropertyToHclTerraform, true)(struct!.piiEntitiesConfig),
+      value: cdktn.listMapperHcl(tfGuardrailPiiEntitiesConfigPropertyToHclTerraform, true)(struct!.piiEntitiesConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PiiEntitiesConfigPropertyList",
     },
     regexes_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailRegexesConfigPropertyToHclTerraform, true)(struct!.regexesConfig),
+      value: cdktn.listMapperHcl(tfGuardrailRegexesConfigPropertyToHclTerraform, true)(struct!.regexesConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RegexesConfigPropertyList",
@@ -949,7 +949,7 @@ export function awsBedrockGuardrailSensitiveInformationPolicyConfigPropertyToHcl
 }
 
 
-export function awsBedrockGuardrailTimeoutsPropertyToTerraform(struct?: AwsBedrockGuardrail.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGuardrailTimeoutsPropertyToTerraform(struct?: TfGuardrail.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function awsBedrockGuardrailTimeoutsPropertyToTerraform(struct?: AwsBedro
 }
 
 
-export function awsBedrockGuardrailTimeoutsPropertyToHclTerraform(struct?: AwsBedrockGuardrail.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGuardrailTimeoutsPropertyToHclTerraform(struct?: TfGuardrail.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,7 +993,7 @@ export function awsBedrockGuardrailTimeoutsPropertyToHclTerraform(struct?: AwsBe
 }
 
 
-export function awsBedrockGuardrailTopicPolicyConfigTierConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.TopicPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailTopicPolicyConfigTierConfigPropertyToTerraform(struct?: TfGuardrail.TopicPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,7 +1004,7 @@ export function awsBedrockGuardrailTopicPolicyConfigTierConfigPropertyToTerrafor
 }
 
 
-export function awsBedrockGuardrailTopicPolicyConfigTierConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.TopicPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailTopicPolicyConfigTierConfigPropertyToHclTerraform(struct?: TfGuardrail.TopicPolicyConfigTierConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1023,7 +1023,7 @@ export function awsBedrockGuardrailTopicPolicyConfigTierConfigPropertyToHclTerra
 }
 
 
-export function awsBedrockGuardrailTopicsConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.TopicsConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailTopicsConfigPropertyToTerraform(struct?: TfGuardrail.TopicsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1037,7 +1037,7 @@ export function awsBedrockGuardrailTopicsConfigPropertyToTerraform(struct?: AwsB
 }
 
 
-export function awsBedrockGuardrailTopicsConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.TopicsConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailTopicsConfigPropertyToHclTerraform(struct?: TfGuardrail.TopicsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1074,32 +1074,32 @@ export function awsBedrockGuardrailTopicsConfigPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsBedrockGuardrailTopicPolicyConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.TopicPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailTopicPolicyConfigPropertyToTerraform(struct?: TfGuardrail.TopicPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    tier_config: cdktn.listMapper(awsBedrockGuardrailTopicPolicyConfigTierConfigPropertyToTerraform, false)(struct!.tierConfig),
-    topics_config: cdktn.listMapper(awsBedrockGuardrailTopicsConfigPropertyToTerraform, true)(struct!.topicsConfig),
+    tier_config: cdktn.listMapper(tfGuardrailTopicPolicyConfigTierConfigPropertyToTerraform, false)(struct!.tierConfig),
+    topics_config: cdktn.listMapper(tfGuardrailTopicsConfigPropertyToTerraform, true)(struct!.topicsConfig),
   }
 }
 
 
-export function awsBedrockGuardrailTopicPolicyConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.TopicPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailTopicPolicyConfigPropertyToHclTerraform(struct?: TfGuardrail.TopicPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     tier_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailTopicPolicyConfigTierConfigPropertyToHclTerraform, false)(struct!.tierConfig),
+      value: cdktn.listMapperHcl(tfGuardrailTopicPolicyConfigTierConfigPropertyToHclTerraform, false)(struct!.tierConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TopicPolicyConfigTierConfigPropertyList",
     },
     topics_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailTopicsConfigPropertyToHclTerraform, true)(struct!.topicsConfig),
+      value: cdktn.listMapperHcl(tfGuardrailTopicsConfigPropertyToHclTerraform, true)(struct!.topicsConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TopicsConfigPropertyList",
@@ -1111,7 +1111,7 @@ export function awsBedrockGuardrailTopicPolicyConfigPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockGuardrailManagedWordListsConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.ManagedWordListsConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailManagedWordListsConfigPropertyToTerraform(struct?: TfGuardrail.ManagedWordListsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1126,7 +1126,7 @@ export function awsBedrockGuardrailManagedWordListsConfigPropertyToTerraform(str
 }
 
 
-export function awsBedrockGuardrailManagedWordListsConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.ManagedWordListsConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailManagedWordListsConfigPropertyToHclTerraform(struct?: TfGuardrail.ManagedWordListsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,7 +1169,7 @@ export function awsBedrockGuardrailManagedWordListsConfigPropertyToHclTerraform(
 }
 
 
-export function awsBedrockGuardrailWordsConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.WordsConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailWordsConfigPropertyToTerraform(struct?: TfGuardrail.WordsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1184,7 +1184,7 @@ export function awsBedrockGuardrailWordsConfigPropertyToTerraform(struct?: AwsBe
 }
 
 
-export function awsBedrockGuardrailWordsConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.WordsConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailWordsConfigPropertyToHclTerraform(struct?: TfGuardrail.WordsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1227,32 +1227,32 @@ export function awsBedrockGuardrailWordsConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsBedrockGuardrailWordPolicyConfigPropertyToTerraform(struct?: AwsBedrockGuardrail.WordPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailWordPolicyConfigPropertyToTerraform(struct?: TfGuardrail.WordPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_word_lists_config: cdktn.listMapper(awsBedrockGuardrailManagedWordListsConfigPropertyToTerraform, true)(struct!.managedWordListsConfig),
-    words_config: cdktn.listMapper(awsBedrockGuardrailWordsConfigPropertyToTerraform, true)(struct!.wordsConfig),
+    managed_word_lists_config: cdktn.listMapper(tfGuardrailManagedWordListsConfigPropertyToTerraform, true)(struct!.managedWordListsConfig),
+    words_config: cdktn.listMapper(tfGuardrailWordsConfigPropertyToTerraform, true)(struct!.wordsConfig),
   }
 }
 
 
-export function awsBedrockGuardrailWordPolicyConfigPropertyToHclTerraform(struct?: AwsBedrockGuardrail.WordPolicyConfigProperty | cdktn.IResolvable): any {
+export function tfGuardrailWordPolicyConfigPropertyToHclTerraform(struct?: TfGuardrail.WordPolicyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_word_lists_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailManagedWordListsConfigPropertyToHclTerraform, true)(struct!.managedWordListsConfig),
+      value: cdktn.listMapperHcl(tfGuardrailManagedWordListsConfigPropertyToHclTerraform, true)(struct!.managedWordListsConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedWordListsConfigPropertyList",
     },
     words_config: {
-      value: cdktn.listMapperHcl(awsBedrockGuardrailWordsConfigPropertyToHclTerraform, true)(struct!.wordsConfig),
+      value: cdktn.listMapperHcl(tfGuardrailWordsConfigPropertyToHclTerraform, true)(struct!.wordsConfig),
       isBlock: true,
       type: "list",
       storageClassType: "WordsConfigPropertyList",
@@ -1264,10 +1264,10 @@ export function awsBedrockGuardrailWordPolicyConfigPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsBedrockGuardrail {
+export namespace TfGuardrail {
 export interface ContentPolicyConfigTierConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_name AwsBedrockGuardrail#tier_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_name TfGuardrail#tier_name}
   */
   readonly tierName?: string;
 }
@@ -1353,39 +1353,39 @@ export class ContentPolicyConfigTierConfigPropertyList extends cdktn.ComplexList
 }
 export interface ContentPolicyConfigFiltersConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action AwsBedrockGuardrail#input_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action TfGuardrail#input_action}
   */
   readonly inputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled AwsBedrockGuardrail#input_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled TfGuardrail#input_enabled}
   */
   readonly inputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_modalities AwsBedrockGuardrail#input_modalities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_modalities TfGuardrail#input_modalities}
   */
   readonly inputModalities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_strength AwsBedrockGuardrail#input_strength}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_strength TfGuardrail#input_strength}
   */
   readonly inputStrength: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action AwsBedrockGuardrail#output_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action TfGuardrail#output_action}
   */
   readonly outputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled AwsBedrockGuardrail#output_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled TfGuardrail#output_enabled}
   */
   readonly outputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_modalities AwsBedrockGuardrail#output_modalities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_modalities TfGuardrail#output_modalities}
   */
   readonly outputModalities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_strength AwsBedrockGuardrail#output_strength}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_strength TfGuardrail#output_strength}
   */
   readonly outputStrength: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type AwsBedrockGuardrail#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type TfGuardrail#type}
   */
   readonly type: string;
 }
@@ -1638,13 +1638,13 @@ export class ContentPolicyConfigFiltersConfigPropertyList extends cdktn.ComplexL
 }
 export interface ContentPolicyConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_config AwsBedrockGuardrail#tier_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_config TfGuardrail#tier_config}
   */
   readonly tierConfig?: ContentPolicyConfigTierConfigProperty[] | cdktn.IResolvable;
   /**
   * filters_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#filters_config AwsBedrockGuardrail#filters_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#filters_config TfGuardrail#filters_config}
   */
   readonly filtersConfig?: ContentPolicyConfigFiltersConfigProperty[] | cdktn.IResolvable;
 }
@@ -1752,11 +1752,11 @@ export class ContentPolicyConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ContextualGroundingPolicyConfigFiltersConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#threshold AwsBedrockGuardrail#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#threshold TfGuardrail#threshold}
   */
   readonly threshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type AwsBedrockGuardrail#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type TfGuardrail#type}
   */
   readonly type: string;
 }
@@ -1860,7 +1860,7 @@ export interface ContextualGroundingPolicyConfigProperty {
   /**
   * filters_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#filters_config AwsBedrockGuardrail#filters_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#filters_config TfGuardrail#filters_config}
   */
   readonly filtersConfig?: ContextualGroundingPolicyConfigFiltersConfigProperty[] | cdktn.IResolvable;
 }
@@ -1946,7 +1946,7 @@ export class ContextualGroundingPolicyConfigPropertyList extends cdktn.ComplexLi
 }
 export interface CrossRegionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#guardrail_profile_identifier AwsBedrockGuardrail#guardrail_profile_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#guardrail_profile_identifier TfGuardrail#guardrail_profile_identifier}
   */
   readonly guardrailProfileIdentifier: string;
 }
@@ -2029,27 +2029,27 @@ export class CrossRegionConfigPropertyList extends cdktn.ComplexList {
 }
 export interface PiiEntitiesConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#action AwsBedrockGuardrail#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#action TfGuardrail#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action AwsBedrockGuardrail#input_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action TfGuardrail#input_action}
   */
   readonly inputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled AwsBedrockGuardrail#input_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled TfGuardrail#input_enabled}
   */
   readonly inputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action AwsBedrockGuardrail#output_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action TfGuardrail#output_action}
   */
   readonly outputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled AwsBedrockGuardrail#output_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled TfGuardrail#output_enabled}
   */
   readonly outputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type AwsBedrockGuardrail#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type TfGuardrail#type}
   */
   readonly type: string;
 }
@@ -2239,35 +2239,35 @@ export class PiiEntitiesConfigPropertyList extends cdktn.ComplexList {
 }
 export interface RegexesConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#action AwsBedrockGuardrail#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#action TfGuardrail#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#description AwsBedrockGuardrail#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#description TfGuardrail#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action AwsBedrockGuardrail#input_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action TfGuardrail#input_action}
   */
   readonly inputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled AwsBedrockGuardrail#input_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled TfGuardrail#input_enabled}
   */
   readonly inputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#name AwsBedrockGuardrail#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#name TfGuardrail#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action AwsBedrockGuardrail#output_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action TfGuardrail#output_action}
   */
   readonly outputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled AwsBedrockGuardrail#output_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled TfGuardrail#output_enabled}
   */
   readonly outputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#pattern AwsBedrockGuardrail#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#pattern TfGuardrail#pattern}
   */
   readonly pattern: string;
 }
@@ -2500,13 +2500,13 @@ export interface SensitiveInformationPolicyConfigProperty {
   /**
   * pii_entities_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#pii_entities_config AwsBedrockGuardrail#pii_entities_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#pii_entities_config TfGuardrail#pii_entities_config}
   */
   readonly piiEntitiesConfig?: PiiEntitiesConfigProperty[] | cdktn.IResolvable;
   /**
   * regexes_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#regexes_config AwsBedrockGuardrail#regexes_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#regexes_config TfGuardrail#regexes_config}
   */
   readonly regexesConfig?: RegexesConfigProperty[] | cdktn.IResolvable;
 }
@@ -2616,19 +2616,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#create AwsBedrockGuardrail#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#create TfGuardrail#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#delete AwsBedrockGuardrail#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#delete TfGuardrail#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#update AwsBedrockGuardrail#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#update TfGuardrail#update}
   */
   readonly update?: string;
 }
@@ -2736,7 +2736,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TopicPolicyConfigTierConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_name AwsBedrockGuardrail#tier_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_name TfGuardrail#tier_name}
   */
   readonly tierName?: string;
 }
@@ -2822,19 +2822,19 @@ export class TopicPolicyConfigTierConfigPropertyList extends cdktn.ComplexList {
 }
 export interface TopicsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#definition AwsBedrockGuardrail#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#definition TfGuardrail#definition}
   */
   readonly definition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#examples AwsBedrockGuardrail#examples}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#examples TfGuardrail#examples}
   */
   readonly examples?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#name AwsBedrockGuardrail#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#name TfGuardrail#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type AwsBedrockGuardrail#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type TfGuardrail#type}
   */
   readonly type: string;
 }
@@ -2977,13 +2977,13 @@ export class TopicsConfigPropertyList extends cdktn.ComplexList {
 }
 export interface TopicPolicyConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_config AwsBedrockGuardrail#tier_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#tier_config TfGuardrail#tier_config}
   */
   readonly tierConfig?: TopicPolicyConfigTierConfigProperty[] | cdktn.IResolvable;
   /**
   * topics_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#topics_config AwsBedrockGuardrail#topics_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#topics_config TfGuardrail#topics_config}
   */
   readonly topicsConfig?: TopicsConfigProperty[] | cdktn.IResolvable;
 }
@@ -3091,23 +3091,23 @@ export class TopicPolicyConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ManagedWordListsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action AwsBedrockGuardrail#input_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action TfGuardrail#input_action}
   */
   readonly inputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled AwsBedrockGuardrail#input_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled TfGuardrail#input_enabled}
   */
   readonly inputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action AwsBedrockGuardrail#output_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action TfGuardrail#output_action}
   */
   readonly outputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled AwsBedrockGuardrail#output_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled TfGuardrail#output_enabled}
   */
   readonly outputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type AwsBedrockGuardrail#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#type TfGuardrail#type}
   */
   readonly type: string;
 }
@@ -3278,23 +3278,23 @@ export class ManagedWordListsConfigPropertyList extends cdktn.ComplexList {
 }
 export interface WordsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action AwsBedrockGuardrail#input_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_action TfGuardrail#input_action}
   */
   readonly inputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled AwsBedrockGuardrail#input_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#input_enabled TfGuardrail#input_enabled}
   */
   readonly inputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action AwsBedrockGuardrail#output_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_action TfGuardrail#output_action}
   */
   readonly outputAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled AwsBedrockGuardrail#output_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#output_enabled TfGuardrail#output_enabled}
   */
   readonly outputEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#text AwsBedrockGuardrail#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#text TfGuardrail#text}
   */
   readonly text: string;
 }
@@ -3467,13 +3467,13 @@ export interface WordPolicyConfigProperty {
   /**
   * managed_word_lists_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#managed_word_lists_config AwsBedrockGuardrail#managed_word_lists_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#managed_word_lists_config TfGuardrail#managed_word_lists_config}
   */
   readonly managedWordListsConfig?: ManagedWordListsConfigProperty[] | cdktn.IResolvable;
   /**
   * words_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#words_config AwsBedrockGuardrail#words_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_guardrail#words_config TfGuardrail#words_config}
   */
   readonly wordsConfig?: WordsConfigProperty[] | cdktn.IResolvable;
 }

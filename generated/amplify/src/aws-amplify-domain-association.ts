@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAmplifyDomainAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#app_id AwsAmplifyDomainAssociation#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#app_id TfDomainAssociation#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#domain_name AwsAmplifyDomainAssociation#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#domain_name TfDomainAssociation#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#enable_auto_sub_domain AwsAmplifyDomainAssociation#enable_auto_sub_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#enable_auto_sub_domain TfDomainAssociation#enable_auto_sub_domain}
   */
   readonly enableAutoSubDomain?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#id AwsAmplifyDomainAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#id TfDomainAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,31 +28,31 @@ export interface AwsAmplifyDomainAssociationConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#region AwsAmplifyDomainAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#region TfDomainAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#wait_for_verification AwsAmplifyDomainAssociation#wait_for_verification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#wait_for_verification TfDomainAssociation#wait_for_verification}
   */
   readonly waitForVerification?: boolean | cdktn.IResolvable;
   /**
   * certificate_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#certificate_settings AwsAmplifyDomainAssociation#certificate_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#certificate_settings TfDomainAssociation#certificate_settings}
   */
-  readonly certificateSettings?: AwsAmplifyDomainAssociation.CertificateSettingsProperty;
+  readonly certificateSettings?: TfDomainAssociation.CertificateSettingsProperty;
   /**
   * sub_domain block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#sub_domain AwsAmplifyDomainAssociation#sub_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#sub_domain TfDomainAssociation#sub_domain}
   */
-  readonly subDomain: AwsAmplifyDomainAssociation.SubDomainProperty[] | cdktn.IResolvable;
+  readonly subDomain: TfDomainAssociation.SubDomainProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association aws_amplify_domain_association}
 */
-export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
+export class TfDomainAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAmplifyDomainAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAmplifyDomainAssociation to import
-  * @param importFromId The id of the existing AwsAmplifyDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAmplifyDomainAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainAssociation to import
+  * @param importFromId The id of the existing TfDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_amplify_domain_association", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAmplifyDomainAssociationConfig
+  * @param options TfDomainAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAmplifyDomainAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_amplify_domain_association',
       terraformGeneratorMetadata: {
@@ -215,11 +215,11 @@ export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
   }
 
   // certificate_settings - computed: false, optional: true, required: false
-  private _certificateSettings = new AwsAmplifyDomainAssociation.CertificateSettingsPropertyOutputReference(this, "certificate_settings");
+  private _certificateSettings = new TfDomainAssociation.CertificateSettingsPropertyOutputReference(this, "certificate_settings");
   public get certificateSettings() {
     return this._certificateSettings;
   }
-  public putCertificateSettings(value: AwsAmplifyDomainAssociation.CertificateSettingsProperty) {
+  public putCertificateSettings(value: TfDomainAssociation.CertificateSettingsProperty) {
     this._certificateSettings.internalValue = value;
   }
   public resetCertificateSettings() {
@@ -231,11 +231,11 @@ export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
   }
 
   // sub_domain - computed: false, optional: false, required: true
-  private _subDomain = new AwsAmplifyDomainAssociation.SubDomainPropertyList(this, "sub_domain", true);
+  private _subDomain = new TfDomainAssociation.SubDomainPropertyList(this, "sub_domain", true);
   public get subDomain() {
     return this._subDomain;
   }
-  public putSubDomain(value: AwsAmplifyDomainAssociation.SubDomainProperty[] | cdktn.IResolvable) {
+  public putSubDomain(value: TfDomainAssociation.SubDomainProperty[] | cdktn.IResolvable) {
     this._subDomain.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -255,8 +255,8 @@ export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       wait_for_verification: cdktn.booleanToTerraform(this._waitForVerification),
-      certificate_settings: awsAmplifyDomainAssociationCertificateSettingsPropertyToTerraform(this._certificateSettings.internalValue),
-      sub_domain: cdktn.listMapper(awsAmplifyDomainAssociationSubDomainPropertyToTerraform, true)(this._subDomain.internalValue),
+      certificate_settings: tfDomainAssociationCertificateSettingsPropertyToTerraform(this._certificateSettings.internalValue),
+      sub_domain: cdktn.listMapper(tfDomainAssociationSubDomainPropertyToTerraform, true)(this._subDomain.internalValue),
     };
   }
 
@@ -299,16 +299,16 @@ export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       certificate_settings: {
-        value: awsAmplifyDomainAssociationCertificateSettingsPropertyToHclTerraform(this._certificateSettings.internalValue),
+        value: tfDomainAssociationCertificateSettingsPropertyToHclTerraform(this._certificateSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAmplifyDomainAssociation.CertificateSettingsPropertyList",
+        storageClassType: "TfDomainAssociation.CertificateSettingsPropertyList",
       },
       sub_domain: {
-        value: cdktn.listMapperHcl(awsAmplifyDomainAssociationSubDomainPropertyToHclTerraform, true)(this._subDomain.internalValue),
+        value: cdktn.listMapperHcl(tfDomainAssociationSubDomainPropertyToHclTerraform, true)(this._subDomain.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAmplifyDomainAssociation.SubDomainPropertyList",
+        storageClassType: "TfDomainAssociation.SubDomainPropertyList",
       },
     };
 
@@ -317,7 +317,7 @@ export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsAmplifyDomainAssociationCertificateSettingsPropertyToTerraform(struct?: AwsAmplifyDomainAssociation.CertificateSettingsPropertyOutputReference | AwsAmplifyDomainAssociation.CertificateSettingsProperty): any {
+export function tfDomainAssociationCertificateSettingsPropertyToTerraform(struct?: TfDomainAssociation.CertificateSettingsPropertyOutputReference | TfDomainAssociation.CertificateSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function awsAmplifyDomainAssociationCertificateSettingsPropertyToTerrafor
 }
 
 
-export function awsAmplifyDomainAssociationCertificateSettingsPropertyToHclTerraform(struct?: AwsAmplifyDomainAssociation.CertificateSettingsPropertyOutputReference | AwsAmplifyDomainAssociation.CertificateSettingsProperty): any {
+export function tfDomainAssociationCertificateSettingsPropertyToHclTerraform(struct?: TfDomainAssociation.CertificateSettingsPropertyOutputReference | TfDomainAssociation.CertificateSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function awsAmplifyDomainAssociationCertificateSettingsPropertyToHclTerra
 }
 
 
-export function awsAmplifyDomainAssociationSubDomainPropertyToTerraform(struct?: AwsAmplifyDomainAssociation.SubDomainProperty | cdktn.IResolvable): any {
+export function tfDomainAssociationSubDomainPropertyToTerraform(struct?: TfDomainAssociation.SubDomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function awsAmplifyDomainAssociationSubDomainPropertyToTerraform(struct?:
 }
 
 
-export function awsAmplifyDomainAssociationSubDomainPropertyToHclTerraform(struct?: AwsAmplifyDomainAssociation.SubDomainProperty | cdktn.IResolvable): any {
+export function tfDomainAssociationSubDomainPropertyToHclTerraform(struct?: TfDomainAssociation.SubDomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,14 +391,14 @@ export function awsAmplifyDomainAssociationSubDomainPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsAmplifyDomainAssociation {
+export namespace TfDomainAssociation {
 export interface CertificateSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#custom_certificate_arn AwsAmplifyDomainAssociation#custom_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#custom_certificate_arn TfDomainAssociation#custom_certificate_arn}
   */
   readonly customCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#type AwsAmplifyDomainAssociation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#type TfDomainAssociation#type}
   */
   readonly type: string;
 }
@@ -476,11 +476,11 @@ export class CertificateSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SubDomainProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#branch_name AwsAmplifyDomainAssociation#branch_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#branch_name TfDomainAssociation#branch_name}
   */
   readonly branchName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#prefix AwsAmplifyDomainAssociation#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#prefix TfDomainAssociation#prefix}
   */
   readonly prefix: string;
 }

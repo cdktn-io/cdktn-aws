@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSignerSigningProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfSigningProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#id AwsSignerSigningProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#id TfSigningProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#name AwsSignerSigningProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#name TfSigningProfile#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#name_prefix AwsSignerSigningProfile#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#name_prefix TfSigningProfile#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#platform_id AwsSignerSigningProfile#platform_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#platform_id TfSigningProfile#platform_id}
   */
   readonly platformId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#region AwsSignerSigningProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#region TfSigningProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#signing_parameters AwsSignerSigningProfile#signing_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#signing_parameters TfSigningProfile#signing_parameters}
   */
   readonly signingParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#tags AwsSignerSigningProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#tags TfSigningProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#tags_all AwsSignerSigningProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#tags_all TfSigningProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * signature_validity_period block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#signature_validity_period AwsSignerSigningProfile#signature_validity_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#signature_validity_period TfSigningProfile#signature_validity_period}
   */
-  readonly signatureValidityPeriod?: AwsSignerSigningProfile.SignatureValidityPeriodProperty;
+  readonly signatureValidityPeriod?: TfSigningProfile.SignatureValidityPeriodProperty;
   /**
   * signing_material block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#signing_material AwsSignerSigningProfile#signing_material}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#signing_material TfSigningProfile#signing_material}
   */
-  readonly signingMaterial?: AwsSignerSigningProfile.SigningMaterialProperty;
+  readonly signingMaterial?: TfSigningProfile.SigningMaterialProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile aws_signer_signing_profile}
 */
-export class AwsSignerSigningProfile extends cdktn.TerraformResource {
+export class TfSigningProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSignerSigningProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSigningProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSignerSigningProfile to import
-  * @param importFromId The id of the existing AwsSignerSigningProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSignerSigningProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfSigningProfile to import
+  * @param importFromId The id of the existing TfSigningProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSigningProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_signer_signing_profile", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSignerSigningProfileConfig
+  * @param options TfSigningProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSignerSigningProfileConfig) {
+  public constructor(scope: Construct, id: string, config: TfSigningProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_signer_signing_profile',
       terraformGeneratorMetadata: {
@@ -212,7 +212,7 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
   }
 
   // revocation_record - computed: true, optional: false, required: false
-  private _revocationRecord = new AwsSignerSigningProfile.RevocationRecordPropertyList(this, "revocation_record", false);
+  private _revocationRecord = new TfSigningProfile.RevocationRecordPropertyList(this, "revocation_record", false);
   public get revocationRecord() {
     return this._revocationRecord;
   }
@@ -281,11 +281,11 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
   }
 
   // signature_validity_period - computed: false, optional: true, required: false
-  private _signatureValidityPeriod = new AwsSignerSigningProfile.SignatureValidityPeriodPropertyOutputReference(this, "signature_validity_period");
+  private _signatureValidityPeriod = new TfSigningProfile.SignatureValidityPeriodPropertyOutputReference(this, "signature_validity_period");
   public get signatureValidityPeriod() {
     return this._signatureValidityPeriod;
   }
-  public putSignatureValidityPeriod(value: AwsSignerSigningProfile.SignatureValidityPeriodProperty) {
+  public putSignatureValidityPeriod(value: TfSigningProfile.SignatureValidityPeriodProperty) {
     this._signatureValidityPeriod.internalValue = value;
   }
   public resetSignatureValidityPeriod() {
@@ -297,11 +297,11 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
   }
 
   // signing_material - computed: false, optional: true, required: false
-  private _signingMaterial = new AwsSignerSigningProfile.SigningMaterialPropertyOutputReference(this, "signing_material");
+  private _signingMaterial = new TfSigningProfile.SigningMaterialPropertyOutputReference(this, "signing_material");
   public get signingMaterial() {
     return this._signingMaterial;
   }
-  public putSigningMaterial(value: AwsSignerSigningProfile.SigningMaterialProperty) {
+  public putSigningMaterial(value: TfSigningProfile.SigningMaterialProperty) {
     this._signingMaterial.internalValue = value;
   }
   public resetSigningMaterial() {
@@ -326,8 +326,8 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
       signing_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(this._signingParameters),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      signature_validity_period: awsSignerSigningProfileSignatureValidityPeriodPropertyToTerraform(this._signatureValidityPeriod.internalValue),
-      signing_material: awsSignerSigningProfileSigningMaterialPropertyToTerraform(this._signingMaterial.internalValue),
+      signature_validity_period: tfSigningProfileSignatureValidityPeriodPropertyToTerraform(this._signatureValidityPeriod.internalValue),
+      signing_material: tfSigningProfileSigningMaterialPropertyToTerraform(this._signingMaterial.internalValue),
     };
   }
 
@@ -382,16 +382,16 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       signature_validity_period: {
-        value: awsSignerSigningProfileSignatureValidityPeriodPropertyToHclTerraform(this._signatureValidityPeriod.internalValue),
+        value: tfSigningProfileSignatureValidityPeriodPropertyToHclTerraform(this._signatureValidityPeriod.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSignerSigningProfile.SignatureValidityPeriodPropertyList",
+        storageClassType: "TfSigningProfile.SignatureValidityPeriodPropertyList",
       },
       signing_material: {
-        value: awsSignerSigningProfileSigningMaterialPropertyToHclTerraform(this._signingMaterial.internalValue),
+        value: tfSigningProfileSigningMaterialPropertyToHclTerraform(this._signingMaterial.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSignerSigningProfile.SigningMaterialPropertyList",
+        storageClassType: "TfSigningProfile.SigningMaterialPropertyList",
       },
     };
 
@@ -400,7 +400,7 @@ export class AwsSignerSigningProfile extends cdktn.TerraformResource {
   }
 }
 
-export function awsSignerSigningProfileRevocationRecordPropertyToTerraform(struct?: AwsSignerSigningProfile.RevocationRecordProperty): any {
+export function tfSigningProfileRevocationRecordPropertyToTerraform(struct?: TfSigningProfile.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function awsSignerSigningProfileRevocationRecordPropertyToTerraform(struc
 }
 
 
-export function awsSignerSigningProfileRevocationRecordPropertyToHclTerraform(struct?: AwsSignerSigningProfile.RevocationRecordProperty): any {
+export function tfSigningProfileRevocationRecordPropertyToHclTerraform(struct?: TfSigningProfile.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function awsSignerSigningProfileRevocationRecordPropertyToHclTerraform(st
 }
 
 
-export function awsSignerSigningProfileSignatureValidityPeriodPropertyToTerraform(struct?: AwsSignerSigningProfile.SignatureValidityPeriodPropertyOutputReference | AwsSignerSigningProfile.SignatureValidityPeriodProperty): any {
+export function tfSigningProfileSignatureValidityPeriodPropertyToTerraform(struct?: TfSigningProfile.SignatureValidityPeriodPropertyOutputReference | TfSigningProfile.SignatureValidityPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function awsSignerSigningProfileSignatureValidityPeriodPropertyToTerrafor
 }
 
 
-export function awsSignerSigningProfileSignatureValidityPeriodPropertyToHclTerraform(struct?: AwsSignerSigningProfile.SignatureValidityPeriodPropertyOutputReference | AwsSignerSigningProfile.SignatureValidityPeriodProperty): any {
+export function tfSigningProfileSignatureValidityPeriodPropertyToHclTerraform(struct?: TfSigningProfile.SignatureValidityPeriodPropertyOutputReference | TfSigningProfile.SignatureValidityPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function awsSignerSigningProfileSignatureValidityPeriodPropertyToHclTerra
 }
 
 
-export function awsSignerSigningProfileSigningMaterialPropertyToTerraform(struct?: AwsSignerSigningProfile.SigningMaterialPropertyOutputReference | AwsSignerSigningProfile.SigningMaterialProperty): any {
+export function tfSigningProfileSigningMaterialPropertyToTerraform(struct?: TfSigningProfile.SigningMaterialPropertyOutputReference | TfSigningProfile.SigningMaterialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function awsSignerSigningProfileSigningMaterialPropertyToTerraform(struct
 }
 
 
-export function awsSignerSigningProfileSigningMaterialPropertyToHclTerraform(struct?: AwsSignerSigningProfile.SigningMaterialPropertyOutputReference | AwsSignerSigningProfile.SigningMaterialProperty): any {
+export function tfSigningProfileSigningMaterialPropertyToHclTerraform(struct?: TfSigningProfile.SigningMaterialPropertyOutputReference | TfSigningProfile.SigningMaterialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,7 +488,7 @@ export function awsSignerSigningProfileSigningMaterialPropertyToHclTerraform(str
 }
 
 
-export namespace AwsSignerSigningProfile {
+export namespace TfSigningProfile {
 export interface RevocationRecordProperty {
 }
 export class RevocationRecordPropertyOutputReference extends cdktn.ComplexObject {
@@ -555,11 +555,11 @@ export class RevocationRecordPropertyList extends cdktn.ComplexList {
 }
 export interface SignatureValidityPeriodProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#type AwsSignerSigningProfile#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#type TfSigningProfile#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#value AwsSignerSigningProfile#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#value TfSigningProfile#value}
   */
   readonly value: number;
 }
@@ -629,7 +629,7 @@ export class SignatureValidityPeriodPropertyOutputReference extends cdktn.Comple
 }
 export interface SigningMaterialProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#certificate_arn AwsSignerSigningProfile#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile#certificate_arn TfSigningProfile#certificate_arn}
   */
   readonly certificateArn: string;
 }

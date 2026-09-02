@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotAuthorizerConfig extends cdktn.TerraformMetaArguments {
+export interface TfAuthorizerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#authorizer_function_arn AwsIotAuthorizer#authorizer_function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#authorizer_function_arn TfAuthorizer#authorizer_function_arn}
   */
   readonly authorizerFunctionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#enable_caching_for_http AwsIotAuthorizer#enable_caching_for_http}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#enable_caching_for_http TfAuthorizer#enable_caching_for_http}
   */
   readonly enableCachingForHttp?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#id AwsIotAuthorizer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#id TfAuthorizer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#name AwsIotAuthorizer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#name TfAuthorizer#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#region AwsIotAuthorizer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#region TfAuthorizer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#signing_disabled AwsIotAuthorizer#signing_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#signing_disabled TfAuthorizer#signing_disabled}
   */
   readonly signingDisabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#status AwsIotAuthorizer#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#status TfAuthorizer#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#tags AwsIotAuthorizer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#tags TfAuthorizer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#tags_all AwsIotAuthorizer#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#tags_all TfAuthorizer#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#token_key_name AwsIotAuthorizer#token_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#token_key_name TfAuthorizer#token_key_name}
   */
   readonly tokenKeyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#token_signing_public_keys AwsIotAuthorizer#token_signing_public_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#token_signing_public_keys TfAuthorizer#token_signing_public_keys}
   */
   readonly tokenSigningPublicKeys?: { [key: string]: string };
 }
@@ -60,7 +60,7 @@ export interface AwsIotAuthorizerConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer aws_iot_authorizer}
 */
-export class AwsIotAuthorizer extends cdktn.TerraformResource {
+export class TfAuthorizer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsIotAuthorizer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotAuthorizer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAuthorizer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotAuthorizer to import
-  * @param importFromId The id of the existing AwsIotAuthorizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotAuthorizer to import is found
+  * @param importToId The construct id used in the generated config for the TfAuthorizer to import
+  * @param importFromId The id of the existing TfAuthorizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_authorizer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAuthorizer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_authorizer", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsIotAuthorizer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotAuthorizerConfig
+  * @param options TfAuthorizerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotAuthorizerConfig) {
+  public constructor(scope: Construct, id: string, config: TfAuthorizerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_authorizer',
       terraformGeneratorMetadata: {

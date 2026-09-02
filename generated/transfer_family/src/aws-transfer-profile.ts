@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTransferProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#as2_id AwsTransferProfile#as2_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#as2_id TfProfile#as2_id}
   */
   readonly as2Id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#certificate_ids AwsTransferProfile#certificate_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#certificate_ids TfProfile#certificate_ids}
   */
   readonly certificateIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#id AwsTransferProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#id TfProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#profile_type AwsTransferProfile#profile_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#profile_type TfProfile#profile_type}
   */
   readonly profileType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#region AwsTransferProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#region TfProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#tags AwsTransferProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#tags TfProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#tags_all AwsTransferProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#tags_all TfProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -44,7 +44,7 @@ export interface AwsTransferProfileConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile aws_transfer_profile}
 */
-export class AwsTransferProfile extends cdktn.TerraformResource {
+export class TfProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsTransferProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTransferProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTransferProfile to import
-  * @param importFromId The id of the existing AwsTransferProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTransferProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfProfile to import
+  * @param importFromId The id of the existing TfProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_profile", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsTransferProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTransferProfileConfig
+  * @param options TfProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTransferProfileConfig) {
+  public constructor(scope: Construct, id: string, config: TfProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_profile',
       terraformGeneratorMetadata: {

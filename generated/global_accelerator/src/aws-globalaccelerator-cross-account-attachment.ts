@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlobalacceleratorCrossAccountAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfCrossAccountAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#name AwsGlobalacceleratorCrossAccountAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#name TfCrossAccountAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#principals AwsGlobalacceleratorCrossAccountAttachment#principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#principals TfCrossAccountAttachment#principals}
   */
   readonly principals?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#tags AwsGlobalacceleratorCrossAccountAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#tags TfCrossAccountAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#resource AwsGlobalacceleratorCrossAccountAttachment#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#resource TfCrossAccountAttachment#resource}
   */
-  readonly resource?: AwsGlobalacceleratorCrossAccountAttachment.ResourceProperty[] | cdktn.IResolvable;
+  readonly resource?: TfCrossAccountAttachment.ResourceProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment aws_globalaccelerator_cross_account_attachment}
 */
-export class AwsGlobalacceleratorCrossAccountAttachment extends cdktn.TerraformResource {
+export class TfCrossAccountAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsGlobalacceleratorCrossAccountAttachment extends cdktn.TerraformR
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlobalacceleratorCrossAccountAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCrossAccountAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlobalacceleratorCrossAccountAttachment to import
-  * @param importFromId The id of the existing AwsGlobalacceleratorCrossAccountAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlobalacceleratorCrossAccountAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfCrossAccountAttachment to import
+  * @param importFromId The id of the existing TfCrossAccountAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCrossAccountAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_cross_account_attachment", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsGlobalacceleratorCrossAccountAttachment extends cdktn.TerraformR
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlobalacceleratorCrossAccountAttachmentConfig
+  * @param options TfCrossAccountAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlobalacceleratorCrossAccountAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfCrossAccountAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_cross_account_attachment',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class AwsGlobalacceleratorCrossAccountAttachment extends cdktn.TerraformR
   }
 
   // resource - computed: false, optional: true, required: false
-  private _resource = new AwsGlobalacceleratorCrossAccountAttachment.ResourcePropertyList(this, "resource", true);
+  private _resource = new TfCrossAccountAttachment.ResourcePropertyList(this, "resource", true);
   public get resource() {
     return this._resource;
   }
-  public putResource(value: AwsGlobalacceleratorCrossAccountAttachment.ResourceProperty[] | cdktn.IResolvable) {
+  public putResource(value: TfCrossAccountAttachment.ResourceProperty[] | cdktn.IResolvable) {
     this._resource.internalValue = value;
   }
   public resetResource() {
@@ -183,7 +183,7 @@ export class AwsGlobalacceleratorCrossAccountAttachment extends cdktn.TerraformR
       name: cdktn.stringToTerraform(this._name),
       principals: cdktn.listMapper(cdktn.stringToTerraform, false)(this._principals),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      resource: cdktn.listMapper(awsGlobalacceleratorCrossAccountAttachmentResourcePropertyToTerraform, true)(this._resource.internalValue),
+      resource: cdktn.listMapper(tfCrossAccountAttachmentResourcePropertyToTerraform, true)(this._resource.internalValue),
     };
   }
 
@@ -208,10 +208,10 @@ export class AwsGlobalacceleratorCrossAccountAttachment extends cdktn.TerraformR
         storageClassType: "stringMap",
       },
       resource: {
-        value: cdktn.listMapperHcl(awsGlobalacceleratorCrossAccountAttachmentResourcePropertyToHclTerraform, true)(this._resource.internalValue),
+        value: cdktn.listMapperHcl(tfCrossAccountAttachmentResourcePropertyToHclTerraform, true)(this._resource.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsGlobalacceleratorCrossAccountAttachment.ResourcePropertyList",
+        storageClassType: "TfCrossAccountAttachment.ResourcePropertyList",
       },
     };
 
@@ -220,7 +220,7 @@ export class AwsGlobalacceleratorCrossAccountAttachment extends cdktn.TerraformR
   }
 }
 
-export function awsGlobalacceleratorCrossAccountAttachmentResourcePropertyToTerraform(struct?: AwsGlobalacceleratorCrossAccountAttachment.ResourceProperty | cdktn.IResolvable): any {
+export function tfCrossAccountAttachmentResourcePropertyToTerraform(struct?: TfCrossAccountAttachment.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function awsGlobalacceleratorCrossAccountAttachmentResourcePropertyToTerr
 }
 
 
-export function awsGlobalacceleratorCrossAccountAttachmentResourcePropertyToHclTerraform(struct?: AwsGlobalacceleratorCrossAccountAttachment.ResourceProperty | cdktn.IResolvable): any {
+export function tfCrossAccountAttachmentResourcePropertyToHclTerraform(struct?: TfCrossAccountAttachment.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,18 +264,18 @@ export function awsGlobalacceleratorCrossAccountAttachmentResourcePropertyToHclT
 }
 
 
-export namespace AwsGlobalacceleratorCrossAccountAttachment {
+export namespace TfCrossAccountAttachment {
 export interface ResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#cidr_block AwsGlobalacceleratorCrossAccountAttachment#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#cidr_block TfCrossAccountAttachment#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#endpoint_id AwsGlobalacceleratorCrossAccountAttachment#endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#endpoint_id TfCrossAccountAttachment#endpoint_id}
   */
   readonly endpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#region AwsGlobalacceleratorCrossAccountAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_cross_account_attachment#region TfCrossAccountAttachment#region}
   */
   readonly region?: string;
 }

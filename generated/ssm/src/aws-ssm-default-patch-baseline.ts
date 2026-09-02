@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSsmDefaultPatchBaselineConfig extends cdktn.TerraformMetaArguments {
+export interface TfDefaultPatchBaselineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#baseline_id AwsSsmDefaultPatchBaseline#baseline_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#baseline_id TfDefaultPatchBaseline#baseline_id}
   */
   readonly baselineId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#id AwsSsmDefaultPatchBaseline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#id TfDefaultPatchBaseline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#operating_system AwsSsmDefaultPatchBaseline#operating_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#operating_system TfDefaultPatchBaseline#operating_system}
   */
   readonly operatingSystem: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#region AwsSsmDefaultPatchBaseline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#region TfDefaultPatchBaseline#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsSsmDefaultPatchBaselineConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline aws_ssm_default_patch_baseline}
 */
-export class AwsSsmDefaultPatchBaseline extends cdktn.TerraformResource {
+export class TfDefaultPatchBaseline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsSsmDefaultPatchBaseline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSsmDefaultPatchBaseline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDefaultPatchBaseline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSsmDefaultPatchBaseline to import
-  * @param importFromId The id of the existing AwsSsmDefaultPatchBaseline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSsmDefaultPatchBaseline to import is found
+  * @param importToId The construct id used in the generated config for the TfDefaultPatchBaseline to import
+  * @param importFromId The id of the existing TfDefaultPatchBaseline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_default_patch_baseline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDefaultPatchBaseline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_default_patch_baseline", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsSsmDefaultPatchBaseline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSsmDefaultPatchBaselineConfig
+  * @param options TfDefaultPatchBaselineConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSsmDefaultPatchBaselineConfig) {
+  public constructor(scope: Construct, id: string, config: TfDefaultPatchBaselineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_default_patch_baseline',
       terraformGeneratorMetadata: {

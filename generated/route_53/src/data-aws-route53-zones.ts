@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRoute53ZonesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfZonesConfig extends cdktn.TerraformMetaArguments {
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zones aws_route53_zones}
 */
-export class DataAwsRoute53Zones extends cdktn.TerraformDataSource {
+export class DataTfZones extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -22,11 +22,11 @@ export class DataAwsRoute53Zones extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRoute53Zones resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfZones resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRoute53Zones to import
-  * @param importFromId The id of the existing DataAwsRoute53Zones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zones#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRoute53Zones to import is found
+  * @param importToId The construct id used in the generated config for the DataTfZones to import
+  * @param importFromId The id of the existing DataTfZones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zones#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfZones to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_zones", importId: importFromId, provider });
@@ -41,9 +41,9 @@ export class DataAwsRoute53Zones extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRoute53ZonesConfig = {}
+  * @param options DataTfZonesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRoute53ZonesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfZonesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_zones',
       terraformGeneratorMetadata: {

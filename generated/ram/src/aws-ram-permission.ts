@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRamPermissionConfig extends cdktn.TerraformMetaArguments {
+export interface TfPermissionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#name AwsRamPermission#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#name TfPermission#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#policy_template AwsRamPermission#policy_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#policy_template TfPermission#policy_template}
   */
   readonly policyTemplate: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#region AwsRamPermission#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#region TfPermission#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#resource_type AwsRamPermission#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#resource_type TfPermission#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#tags AwsRamPermission#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#tags TfPermission#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#timeouts AwsRamPermission#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#timeouts TfPermission#timeouts}
   */
-  readonly timeouts?: AwsRamPermission.TimeoutsProperty;
+  readonly timeouts?: TfPermission.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission aws_ram_permission}
 */
-export class AwsRamPermission extends cdktn.TerraformResource {
+export class TfPermission extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class AwsRamPermission extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRamPermission resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPermission resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRamPermission to import
-  * @param importFromId The id of the existing AwsRamPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRamPermission to import is found
+  * @param importToId The construct id used in the generated config for the TfPermission to import
+  * @param importFromId The id of the existing TfPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPermission to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ram_permission", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class AwsRamPermission extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRamPermissionConfig
+  * @param options TfPermissionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRamPermissionConfig) {
+  public constructor(scope: Construct, id: string, config: TfPermissionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ram_permission',
       terraformGeneratorMetadata: {
@@ -197,11 +197,11 @@ export class AwsRamPermission extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRamPermission.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPermission.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRamPermission.TimeoutsProperty) {
+  public putTimeouts(value: TfPermission.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -223,7 +223,7 @@ export class AwsRamPermission extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       resource_type: cdktn.stringToTerraform(this._resourceType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsRamPermissionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPermissionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -260,10 +260,10 @@ export class AwsRamPermission extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsRamPermissionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPermissionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRamPermission.TimeoutsProperty",
+        storageClassType: "TfPermission.TimeoutsProperty",
       },
     };
 
@@ -272,7 +272,7 @@ export class AwsRamPermission extends cdktn.TerraformResource {
   }
 }
 
-export function awsRamPermissionTimeoutsPropertyToTerraform(struct?: AwsRamPermission.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPermissionTimeoutsPropertyToTerraform(struct?: TfPermission.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function awsRamPermissionTimeoutsPropertyToTerraform(struct?: AwsRamPermi
 }
 
 
-export function awsRamPermissionTimeoutsPropertyToHclTerraform(struct?: AwsRamPermission.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPermissionTimeoutsPropertyToHclTerraform(struct?: TfPermission.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,12 +302,12 @@ export function awsRamPermissionTimeoutsPropertyToHclTerraform(struct?: AwsRamPe
 }
 
 
-export namespace AwsRamPermission {
+export namespace TfPermission {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#delete AwsRamPermission#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_permission#delete TfPermission#delete}
   */
   readonly delete?: string;
 }

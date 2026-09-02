@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAppmeshVirtualServiceConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfVirtualServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#id DataAwsAppmeshVirtualService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#id DataTfVirtualService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#mesh_name DataAwsAppmeshVirtualService#mesh_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#mesh_name DataTfVirtualService#mesh_name}
   */
   readonly meshName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#mesh_owner DataAwsAppmeshVirtualService#mesh_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#mesh_owner DataTfVirtualService#mesh_owner}
   */
   readonly meshOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#name DataAwsAppmeshVirtualService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#name DataTfVirtualService#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#region DataAwsAppmeshVirtualService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#region DataTfVirtualService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#tags DataAwsAppmeshVirtualService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#tags DataTfVirtualService#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataAwsAppmeshVirtualServiceConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service aws_appmesh_virtual_service}
 */
-export class DataAwsAppmeshVirtualService extends cdktn.TerraformDataSource {
+export class DataTfVirtualService extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsAppmeshVirtualService extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAppmeshVirtualService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfVirtualService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAppmeshVirtualService to import
-  * @param importFromId The id of the existing DataAwsAppmeshVirtualService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAppmeshVirtualService to import is found
+  * @param importToId The construct id used in the generated config for the DataTfVirtualService to import
+  * @param importFromId The id of the existing DataTfVirtualService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfVirtualService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_virtual_service", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsAppmeshVirtualService extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAppmeshVirtualServiceConfig
+  * @param options DataTfVirtualServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAppmeshVirtualServiceConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfVirtualServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_virtual_service',
       terraformGeneratorMetadata: {
@@ -195,7 +195,7 @@ export class DataAwsAppmeshVirtualService extends cdktn.TerraformDataSource {
   }
 
   // spec - computed: true, optional: false, required: false
-  private _spec = new DataAwsAppmeshVirtualService.SpecPropertyList(this, "spec", false);
+  private _spec = new DataTfVirtualService.SpecPropertyList(this, "spec", false);
   public get spec() {
     return this._spec;
   }
@@ -276,7 +276,7 @@ export class DataAwsAppmeshVirtualService extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsAppmeshVirtualServiceVirtualNodePropertyToTerraform(struct?: DataAwsAppmeshVirtualService.VirtualNodeProperty): any {
+export function dataTfVirtualServiceVirtualNodePropertyToTerraform(struct?: DataTfVirtualService.VirtualNodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function dataAwsAppmeshVirtualServiceVirtualNodePropertyToTerraform(struc
 }
 
 
-export function dataAwsAppmeshVirtualServiceVirtualNodePropertyToHclTerraform(struct?: DataAwsAppmeshVirtualService.VirtualNodeProperty): any {
+export function dataTfVirtualServiceVirtualNodePropertyToHclTerraform(struct?: DataTfVirtualService.VirtualNodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function dataAwsAppmeshVirtualServiceVirtualNodePropertyToHclTerraform(st
 }
 
 
-export function dataAwsAppmeshVirtualServiceVirtualRouterPropertyToTerraform(struct?: DataAwsAppmeshVirtualService.VirtualRouterProperty): any {
+export function dataTfVirtualServiceVirtualRouterPropertyToTerraform(struct?: DataTfVirtualService.VirtualRouterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function dataAwsAppmeshVirtualServiceVirtualRouterPropertyToTerraform(str
 }
 
 
-export function dataAwsAppmeshVirtualServiceVirtualRouterPropertyToHclTerraform(struct?: DataAwsAppmeshVirtualService.VirtualRouterProperty): any {
+export function dataTfVirtualServiceVirtualRouterPropertyToHclTerraform(struct?: DataTfVirtualService.VirtualRouterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function dataAwsAppmeshVirtualServiceVirtualRouterPropertyToHclTerraform(
 }
 
 
-export function dataAwsAppmeshVirtualServiceProviderPropertyToTerraform(struct?: DataAwsAppmeshVirtualService.ProviderProperty): any {
+export function dataTfVirtualServiceProviderPropertyToTerraform(struct?: DataTfVirtualService.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataAwsAppmeshVirtualServiceProviderPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsAppmeshVirtualServiceProviderPropertyToHclTerraform(struct?: DataAwsAppmeshVirtualService.ProviderProperty): any {
+export function dataTfVirtualServiceProviderPropertyToHclTerraform(struct?: DataTfVirtualService.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataAwsAppmeshVirtualServiceProviderPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsAppmeshVirtualServiceSpecPropertyToTerraform(struct?: DataAwsAppmeshVirtualService.SpecProperty): any {
+export function dataTfVirtualServiceSpecPropertyToTerraform(struct?: DataTfVirtualService.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataAwsAppmeshVirtualServiceSpecPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsAppmeshVirtualServiceSpecPropertyToHclTerraform(struct?: DataAwsAppmeshVirtualService.SpecProperty): any {
+export function dataTfVirtualServiceSpecPropertyToHclTerraform(struct?: DataTfVirtualService.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function dataAwsAppmeshVirtualServiceSpecPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace DataAwsAppmeshVirtualService {
+export namespace DataTfVirtualService {
 export interface VirtualNodeProperty {
 }
 export class VirtualNodePropertyOutputReference extends cdktn.ComplexObject {

@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailDiskAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDiskAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#disk_name AwsLightsailDiskAttachment#disk_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#disk_name TfDiskAttachment#disk_name}
   */
   readonly diskName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#disk_path AwsLightsailDiskAttachment#disk_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#disk_path TfDiskAttachment#disk_path}
   */
   readonly diskPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#id AwsLightsailDiskAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#id TfDiskAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#instance_name AwsLightsailDiskAttachment#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#instance_name TfDiskAttachment#instance_name}
   */
   readonly instanceName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#region AwsLightsailDiskAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#region TfDiskAttachment#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsLightsailDiskAttachmentConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment aws_lightsail_disk_attachment}
 */
-export class AwsLightsailDiskAttachment extends cdktn.TerraformResource {
+export class TfDiskAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsLightsailDiskAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailDiskAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDiskAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailDiskAttachment to import
-  * @param importFromId The id of the existing AwsLightsailDiskAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailDiskAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfDiskAttachment to import
+  * @param importFromId The id of the existing TfDiskAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_disk_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDiskAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_disk_attachment", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsLightsailDiskAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailDiskAttachmentConfig
+  * @param options TfDiskAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailDiskAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDiskAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_disk_attachment',
       terraformGeneratorMetadata: {

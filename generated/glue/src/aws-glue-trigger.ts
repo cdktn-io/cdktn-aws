@@ -5,86 +5,86 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlueTriggerConfig extends cdktn.TerraformMetaArguments {
+export interface TfTriggerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#description AwsGlueTrigger#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#description TfTrigger#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#enabled AwsGlueTrigger#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#enabled TfTrigger#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#id AwsGlueTrigger#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#id TfTrigger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#name AwsGlueTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#name TfTrigger#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#region AwsGlueTrigger#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#region TfTrigger#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#schedule AwsGlueTrigger#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#schedule TfTrigger#schedule}
   */
   readonly schedule?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#start_on_creation AwsGlueTrigger#start_on_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#start_on_creation TfTrigger#start_on_creation}
   */
   readonly startOnCreation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#tags AwsGlueTrigger#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#tags TfTrigger#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#tags_all AwsGlueTrigger#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#tags_all TfTrigger#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#type AwsGlueTrigger#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#type TfTrigger#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#workflow_name AwsGlueTrigger#workflow_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#workflow_name TfTrigger#workflow_name}
   */
   readonly workflowName?: string;
   /**
   * actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#actions AwsGlueTrigger#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#actions TfTrigger#actions}
   */
-  readonly actions: AwsGlueTrigger.ActionsProperty[] | cdktn.IResolvable;
+  readonly actions: TfTrigger.ActionsProperty[] | cdktn.IResolvable;
   /**
   * event_batching_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#event_batching_condition AwsGlueTrigger#event_batching_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#event_batching_condition TfTrigger#event_batching_condition}
   */
-  readonly eventBatchingCondition?: AwsGlueTrigger.EventBatchingConditionProperty[] | cdktn.IResolvable;
+  readonly eventBatchingCondition?: TfTrigger.EventBatchingConditionProperty[] | cdktn.IResolvable;
   /**
   * predicate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#predicate AwsGlueTrigger#predicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#predicate TfTrigger#predicate}
   */
-  readonly predicate?: AwsGlueTrigger.PredicateProperty;
+  readonly predicate?: TfTrigger.PredicateProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#timeouts AwsGlueTrigger#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#timeouts TfTrigger#timeouts}
   */
-  readonly timeouts?: AwsGlueTrigger.TimeoutsProperty;
+  readonly timeouts?: TfTrigger.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger aws_glue_trigger}
 */
-export class AwsGlueTrigger extends cdktn.TerraformResource {
+export class TfTrigger extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -95,11 +95,11 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlueTrigger resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTrigger resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlueTrigger to import
-  * @param importFromId The id of the existing AwsGlueTrigger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlueTrigger to import is found
+  * @param importToId The construct id used in the generated config for the TfTrigger to import
+  * @param importFromId The id of the existing TfTrigger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTrigger to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_trigger", importId: importFromId, provider });
@@ -114,9 +114,9 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlueTriggerConfig
+  * @param options TfTriggerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlueTriggerConfig) {
+  public constructor(scope: Construct, id: string, config: TfTriggerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_trigger',
       terraformGeneratorMetadata: {
@@ -334,11 +334,11 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
   }
 
   // actions - computed: false, optional: false, required: true
-  private _actions = new AwsGlueTrigger.ActionsPropertyList(this, "actions", false);
+  private _actions = new TfTrigger.ActionsPropertyList(this, "actions", false);
   public get actions() {
     return this._actions;
   }
-  public putActions(value: AwsGlueTrigger.ActionsProperty[] | cdktn.IResolvable) {
+  public putActions(value: TfTrigger.ActionsProperty[] | cdktn.IResolvable) {
     this._actions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -347,11 +347,11 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
   }
 
   // event_batching_condition - computed: false, optional: true, required: false
-  private _eventBatchingCondition = new AwsGlueTrigger.EventBatchingConditionPropertyList(this, "event_batching_condition", false);
+  private _eventBatchingCondition = new TfTrigger.EventBatchingConditionPropertyList(this, "event_batching_condition", false);
   public get eventBatchingCondition() {
     return this._eventBatchingCondition;
   }
-  public putEventBatchingCondition(value: AwsGlueTrigger.EventBatchingConditionProperty[] | cdktn.IResolvable) {
+  public putEventBatchingCondition(value: TfTrigger.EventBatchingConditionProperty[] | cdktn.IResolvable) {
     this._eventBatchingCondition.internalValue = value;
   }
   public resetEventBatchingCondition() {
@@ -363,11 +363,11 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
   }
 
   // predicate - computed: false, optional: true, required: false
-  private _predicate = new AwsGlueTrigger.PredicatePropertyOutputReference(this, "predicate");
+  private _predicate = new TfTrigger.PredicatePropertyOutputReference(this, "predicate");
   public get predicate() {
     return this._predicate;
   }
-  public putPredicate(value: AwsGlueTrigger.PredicateProperty) {
+  public putPredicate(value: TfTrigger.PredicateProperty) {
     this._predicate.internalValue = value;
   }
   public resetPredicate() {
@@ -379,11 +379,11 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGlueTrigger.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTrigger.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGlueTrigger.TimeoutsProperty) {
+  public putTimeouts(value: TfTrigger.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -411,10 +411,10 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
       workflow_name: cdktn.stringToTerraform(this._workflowName),
-      actions: cdktn.listMapper(awsGlueTriggerActionsPropertyToTerraform, true)(this._actions.internalValue),
-      event_batching_condition: cdktn.listMapper(awsGlueTriggerEventBatchingConditionPropertyToTerraform, true)(this._eventBatchingCondition.internalValue),
-      predicate: awsGlueTriggerPredicatePropertyToTerraform(this._predicate.internalValue),
-      timeouts: awsGlueTriggerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      actions: cdktn.listMapper(tfTriggerActionsPropertyToTerraform, true)(this._actions.internalValue),
+      event_batching_condition: cdktn.listMapper(tfTriggerEventBatchingConditionPropertyToTerraform, true)(this._eventBatchingCondition.internalValue),
+      predicate: tfTriggerPredicatePropertyToTerraform(this._predicate.internalValue),
+      timeouts: tfTriggerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -487,28 +487,28 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       actions: {
-        value: cdktn.listMapperHcl(awsGlueTriggerActionsPropertyToHclTerraform, true)(this._actions.internalValue),
+        value: cdktn.listMapperHcl(tfTriggerActionsPropertyToHclTerraform, true)(this._actions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueTrigger.ActionsPropertyList",
+        storageClassType: "TfTrigger.ActionsPropertyList",
       },
       event_batching_condition: {
-        value: cdktn.listMapperHcl(awsGlueTriggerEventBatchingConditionPropertyToHclTerraform, true)(this._eventBatchingCondition.internalValue),
+        value: cdktn.listMapperHcl(tfTriggerEventBatchingConditionPropertyToHclTerraform, true)(this._eventBatchingCondition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueTrigger.EventBatchingConditionPropertyList",
+        storageClassType: "TfTrigger.EventBatchingConditionPropertyList",
       },
       predicate: {
-        value: awsGlueTriggerPredicatePropertyToHclTerraform(this._predicate.internalValue),
+        value: tfTriggerPredicatePropertyToHclTerraform(this._predicate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueTrigger.PredicatePropertyList",
+        storageClassType: "TfTrigger.PredicatePropertyList",
       },
       timeouts: {
-        value: awsGlueTriggerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTriggerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGlueTrigger.TimeoutsProperty",
+        storageClassType: "TfTrigger.TimeoutsProperty",
       },
     };
 
@@ -517,7 +517,7 @@ export class AwsGlueTrigger extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlueTriggerNotificationPropertyPropertyToTerraform(struct?: AwsGlueTrigger.NotificationPropertyPropertyOutputReference | AwsGlueTrigger.NotificationPropertyProperty): any {
+export function tfTriggerNotificationPropertyPropertyToTerraform(struct?: TfTrigger.NotificationPropertyPropertyOutputReference | TfTrigger.NotificationPropertyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function awsGlueTriggerNotificationPropertyPropertyToTerraform(struct?: A
 }
 
 
-export function awsGlueTriggerNotificationPropertyPropertyToHclTerraform(struct?: AwsGlueTrigger.NotificationPropertyPropertyOutputReference | AwsGlueTrigger.NotificationPropertyProperty): any {
+export function tfTriggerNotificationPropertyPropertyToHclTerraform(struct?: TfTrigger.NotificationPropertyPropertyOutputReference | TfTrigger.NotificationPropertyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function awsGlueTriggerNotificationPropertyPropertyToHclTerraform(struct?
 }
 
 
-export function awsGlueTriggerActionsPropertyToTerraform(struct?: AwsGlueTrigger.ActionsProperty | cdktn.IResolvable): any {
+export function tfTriggerActionsPropertyToTerraform(struct?: TfTrigger.ActionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,12 +558,12 @@ export function awsGlueTriggerActionsPropertyToTerraform(struct?: AwsGlueTrigger
     job_name: cdktn.stringToTerraform(struct!.jobName),
     security_configuration: cdktn.stringToTerraform(struct!.securityConfiguration),
     timeout: cdktn.numberToTerraform(struct!.timeout),
-    notification_property: awsGlueTriggerNotificationPropertyPropertyToTerraform(struct!.notificationProperty),
+    notification_property: tfTriggerNotificationPropertyPropertyToTerraform(struct!.notificationProperty),
   }
 }
 
 
-export function awsGlueTriggerActionsPropertyToHclTerraform(struct?: AwsGlueTrigger.ActionsProperty | cdktn.IResolvable): any {
+export function tfTriggerActionsPropertyToHclTerraform(struct?: TfTrigger.ActionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function awsGlueTriggerActionsPropertyToHclTerraform(struct?: AwsGlueTrig
       storageClassType: "number",
     },
     notification_property: {
-      value: awsGlueTriggerNotificationPropertyPropertyToHclTerraform(struct!.notificationProperty),
+      value: tfTriggerNotificationPropertyPropertyToHclTerraform(struct!.notificationProperty),
       isBlock: true,
       type: "list",
       storageClassType: "NotificationPropertyPropertyList",
@@ -612,7 +612,7 @@ export function awsGlueTriggerActionsPropertyToHclTerraform(struct?: AwsGlueTrig
 }
 
 
-export function awsGlueTriggerEventBatchingConditionPropertyToTerraform(struct?: AwsGlueTrigger.EventBatchingConditionProperty | cdktn.IResolvable): any {
+export function tfTriggerEventBatchingConditionPropertyToTerraform(struct?: TfTrigger.EventBatchingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function awsGlueTriggerEventBatchingConditionPropertyToTerraform(struct?:
 }
 
 
-export function awsGlueTriggerEventBatchingConditionPropertyToHclTerraform(struct?: AwsGlueTrigger.EventBatchingConditionProperty | cdktn.IResolvable): any {
+export function tfTriggerEventBatchingConditionPropertyToHclTerraform(struct?: TfTrigger.EventBatchingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,7 +649,7 @@ export function awsGlueTriggerEventBatchingConditionPropertyToHclTerraform(struc
 }
 
 
-export function awsGlueTriggerConditionsPropertyToTerraform(struct?: AwsGlueTrigger.ConditionsProperty | cdktn.IResolvable): any {
+export function tfTriggerConditionsPropertyToTerraform(struct?: TfTrigger.ConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,7 +664,7 @@ export function awsGlueTriggerConditionsPropertyToTerraform(struct?: AwsGlueTrig
 }
 
 
-export function awsGlueTriggerConditionsPropertyToHclTerraform(struct?: AwsGlueTrigger.ConditionsProperty | cdktn.IResolvable): any {
+export function tfTriggerConditionsPropertyToHclTerraform(struct?: TfTrigger.ConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -707,19 +707,19 @@ export function awsGlueTriggerConditionsPropertyToHclTerraform(struct?: AwsGlueT
 }
 
 
-export function awsGlueTriggerPredicatePropertyToTerraform(struct?: AwsGlueTrigger.PredicatePropertyOutputReference | AwsGlueTrigger.PredicateProperty): any {
+export function tfTriggerPredicatePropertyToTerraform(struct?: TfTrigger.PredicatePropertyOutputReference | TfTrigger.PredicateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     logical: cdktn.stringToTerraform(struct!.logical),
-    conditions: cdktn.listMapper(awsGlueTriggerConditionsPropertyToTerraform, true)(struct!.conditions),
+    conditions: cdktn.listMapper(tfTriggerConditionsPropertyToTerraform, true)(struct!.conditions),
   }
 }
 
 
-export function awsGlueTriggerPredicatePropertyToHclTerraform(struct?: AwsGlueTrigger.PredicatePropertyOutputReference | AwsGlueTrigger.PredicateProperty): any {
+export function tfTriggerPredicatePropertyToHclTerraform(struct?: TfTrigger.PredicatePropertyOutputReference | TfTrigger.PredicateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function awsGlueTriggerPredicatePropertyToHclTerraform(struct?: AwsGlueTr
       storageClassType: "string",
     },
     conditions: {
-      value: cdktn.listMapperHcl(awsGlueTriggerConditionsPropertyToHclTerraform, true)(struct!.conditions),
+      value: cdktn.listMapperHcl(tfTriggerConditionsPropertyToHclTerraform, true)(struct!.conditions),
       isBlock: true,
       type: "list",
       storageClassType: "ConditionsPropertyList",
@@ -744,7 +744,7 @@ export function awsGlueTriggerPredicatePropertyToHclTerraform(struct?: AwsGlueTr
 }
 
 
-export function awsGlueTriggerTimeoutsPropertyToTerraform(struct?: AwsGlueTrigger.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTriggerTimeoutsPropertyToTerraform(struct?: TfTrigger.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function awsGlueTriggerTimeoutsPropertyToTerraform(struct?: AwsGlueTrigge
 }
 
 
-export function awsGlueTriggerTimeoutsPropertyToHclTerraform(struct?: AwsGlueTrigger.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTriggerTimeoutsPropertyToHclTerraform(struct?: TfTrigger.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -788,10 +788,10 @@ export function awsGlueTriggerTimeoutsPropertyToHclTerraform(struct?: AwsGlueTri
 }
 
 
-export namespace AwsGlueTrigger {
+export namespace TfTrigger {
 export interface NotificationPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#notify_delay_after AwsGlueTrigger#notify_delay_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#notify_delay_after TfTrigger#notify_delay_after}
   */
   readonly notifyDelayAfter?: number;
 }
@@ -845,29 +845,29 @@ export class NotificationPropertyPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ActionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#arguments AwsGlueTrigger#arguments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#arguments TfTrigger#arguments}
   */
   readonly arguments?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawler_name AwsGlueTrigger#crawler_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawler_name TfTrigger#crawler_name}
   */
   readonly crawlerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#job_name AwsGlueTrigger#job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#job_name TfTrigger#job_name}
   */
   readonly jobName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#security_configuration AwsGlueTrigger#security_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#security_configuration TfTrigger#security_configuration}
   */
   readonly securityConfiguration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#timeout AwsGlueTrigger#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#timeout TfTrigger#timeout}
   */
   readonly timeout?: number;
   /**
   * notification_property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#notification_property AwsGlueTrigger#notification_property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#notification_property TfTrigger#notification_property}
   */
   readonly notificationProperty?: NotificationPropertyProperty;
 }
@@ -1063,11 +1063,11 @@ export class ActionsPropertyList extends cdktn.ComplexList {
 }
 export interface EventBatchingConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#batch_size AwsGlueTrigger#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#batch_size TfTrigger#batch_size}
   */
   readonly batchSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#batch_window AwsGlueTrigger#batch_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#batch_window TfTrigger#batch_window}
   */
   readonly batchWindow?: number;
 }
@@ -1172,23 +1172,23 @@ export class EventBatchingConditionPropertyList extends cdktn.ComplexList {
 }
 export interface ConditionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawl_state AwsGlueTrigger#crawl_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawl_state TfTrigger#crawl_state}
   */
   readonly crawlState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawler_name AwsGlueTrigger#crawler_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawler_name TfTrigger#crawler_name}
   */
   readonly crawlerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#job_name AwsGlueTrigger#job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#job_name TfTrigger#job_name}
   */
   readonly jobName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#logical_operator AwsGlueTrigger#logical_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#logical_operator TfTrigger#logical_operator}
   */
   readonly logicalOperator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#state AwsGlueTrigger#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#state TfTrigger#state}
   */
   readonly state?: string;
 }
@@ -1362,13 +1362,13 @@ export class ConditionsPropertyList extends cdktn.ComplexList {
 }
 export interface PredicateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#logical AwsGlueTrigger#logical}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#logical TfTrigger#logical}
   */
   readonly logical?: string;
   /**
   * conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#conditions AwsGlueTrigger#conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#conditions TfTrigger#conditions}
   */
   readonly conditions: ConditionsProperty[] | cdktn.IResolvable;
 }
@@ -1441,15 +1441,15 @@ export class PredicatePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#create AwsGlueTrigger#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#create TfTrigger#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#delete AwsGlueTrigger#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#delete TfTrigger#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#update AwsGlueTrigger#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#update TfTrigger#update}
   */
   readonly update?: string;
 }

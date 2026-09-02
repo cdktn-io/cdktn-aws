@@ -5,158 +5,158 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNeptuneClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#allow_major_version_upgrade AwsNeptuneCluster#allow_major_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#allow_major_version_upgrade TfCluster#allow_major_version_upgrade}
   */
   readonly allowMajorVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#apply_immediately AwsNeptuneCluster#apply_immediately}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#apply_immediately TfCluster#apply_immediately}
   */
   readonly applyImmediately?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#availability_zones AwsNeptuneCluster#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#availability_zones TfCluster#availability_zones}
   */
   readonly availabilityZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#backup_retention_period AwsNeptuneCluster#backup_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#backup_retention_period TfCluster#backup_retention_period}
   */
   readonly backupRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#cluster_identifier AwsNeptuneCluster#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#cluster_identifier TfCluster#cluster_identifier}
   */
   readonly clusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#cluster_identifier_prefix AwsNeptuneCluster#cluster_identifier_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#cluster_identifier_prefix TfCluster#cluster_identifier_prefix}
   */
   readonly clusterIdentifierPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#copy_tags_to_snapshot AwsNeptuneCluster#copy_tags_to_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#copy_tags_to_snapshot TfCluster#copy_tags_to_snapshot}
   */
   readonly copyTagsToSnapshot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#deletion_protection AwsNeptuneCluster#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#deletion_protection TfCluster#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#enable_cloudwatch_logs_exports AwsNeptuneCluster#enable_cloudwatch_logs_exports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#enable_cloudwatch_logs_exports TfCluster#enable_cloudwatch_logs_exports}
   */
   readonly enableCloudwatchLogsExports?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#engine AwsNeptuneCluster#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#engine TfCluster#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#engine_version AwsNeptuneCluster#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#engine_version TfCluster#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#final_snapshot_identifier AwsNeptuneCluster#final_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#final_snapshot_identifier TfCluster#final_snapshot_identifier}
   */
   readonly finalSnapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#global_cluster_identifier AwsNeptuneCluster#global_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#global_cluster_identifier TfCluster#global_cluster_identifier}
   */
   readonly globalClusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#iam_database_authentication_enabled AwsNeptuneCluster#iam_database_authentication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#iam_database_authentication_enabled TfCluster#iam_database_authentication_enabled}
   */
   readonly iamDatabaseAuthenticationEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#iam_roles AwsNeptuneCluster#iam_roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#iam_roles TfCluster#iam_roles}
   */
   readonly iamRoles?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#id AwsNeptuneCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#id TfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#kms_key_arn AwsNeptuneCluster#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#kms_key_arn TfCluster#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#neptune_cluster_parameter_group_name AwsNeptuneCluster#neptune_cluster_parameter_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#neptune_cluster_parameter_group_name TfCluster#neptune_cluster_parameter_group_name}
   */
   readonly neptuneClusterParameterGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#neptune_instance_parameter_group_name AwsNeptuneCluster#neptune_instance_parameter_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#neptune_instance_parameter_group_name TfCluster#neptune_instance_parameter_group_name}
   */
   readonly neptuneInstanceParameterGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#neptune_subnet_group_name AwsNeptuneCluster#neptune_subnet_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#neptune_subnet_group_name TfCluster#neptune_subnet_group_name}
   */
   readonly neptuneSubnetGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#port AwsNeptuneCluster#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#port TfCluster#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#preferred_backup_window AwsNeptuneCluster#preferred_backup_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#preferred_backup_window TfCluster#preferred_backup_window}
   */
   readonly preferredBackupWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#preferred_maintenance_window AwsNeptuneCluster#preferred_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#preferred_maintenance_window TfCluster#preferred_maintenance_window}
   */
   readonly preferredMaintenanceWindow?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#region AwsNeptuneCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#region TfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#replication_source_identifier AwsNeptuneCluster#replication_source_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#replication_source_identifier TfCluster#replication_source_identifier}
   */
   readonly replicationSourceIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#skip_final_snapshot AwsNeptuneCluster#skip_final_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#skip_final_snapshot TfCluster#skip_final_snapshot}
   */
   readonly skipFinalSnapshot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#snapshot_identifier AwsNeptuneCluster#snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#snapshot_identifier TfCluster#snapshot_identifier}
   */
   readonly snapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#storage_encrypted AwsNeptuneCluster#storage_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#storage_encrypted TfCluster#storage_encrypted}
   */
   readonly storageEncrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#storage_type AwsNeptuneCluster#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#storage_type TfCluster#storage_type}
   */
   readonly storageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#tags AwsNeptuneCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#tags TfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#tags_all AwsNeptuneCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#tags_all TfCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#vpc_security_group_ids AwsNeptuneCluster#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#vpc_security_group_ids TfCluster#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * serverless_v2_scaling_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#serverless_v2_scaling_configuration AwsNeptuneCluster#serverless_v2_scaling_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#serverless_v2_scaling_configuration TfCluster#serverless_v2_scaling_configuration}
   */
-  readonly serverlessV2ScalingConfiguration?: AwsNeptuneCluster.ServerlessV2ScalingConfigurationProperty;
+  readonly serverlessV2ScalingConfiguration?: TfCluster.ServerlessV2ScalingConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#timeouts AwsNeptuneCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#timeouts TfCluster#timeouts}
   */
-  readonly timeouts?: AwsNeptuneCluster.TimeoutsProperty;
+  readonly timeouts?: TfCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster aws_neptune_cluster}
 */
-export class AwsNeptuneCluster extends cdktn.TerraformResource {
+export class TfCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -167,11 +167,11 @@ export class AwsNeptuneCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNeptuneCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNeptuneCluster to import
-  * @param importFromId The id of the existing AwsNeptuneCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNeptuneCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCluster to import
+  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_neptune_cluster", importId: importFromId, provider });
@@ -186,9 +186,9 @@ export class AwsNeptuneCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNeptuneClusterConfig = {}
+  * @param options TfClusterConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsNeptuneClusterConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfClusterConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_neptune_cluster',
       terraformGeneratorMetadata: {
@@ -787,11 +787,11 @@ export class AwsNeptuneCluster extends cdktn.TerraformResource {
   }
 
   // serverless_v2_scaling_configuration - computed: false, optional: true, required: false
-  private _serverlessV2ScalingConfiguration = new AwsNeptuneCluster.ServerlessV2ScalingConfigurationPropertyOutputReference(this, "serverless_v2_scaling_configuration");
+  private _serverlessV2ScalingConfiguration = new TfCluster.ServerlessV2ScalingConfigurationPropertyOutputReference(this, "serverless_v2_scaling_configuration");
   public get serverlessV2ScalingConfiguration() {
     return this._serverlessV2ScalingConfiguration;
   }
-  public putServerlessV2ScalingConfiguration(value: AwsNeptuneCluster.ServerlessV2ScalingConfigurationProperty) {
+  public putServerlessV2ScalingConfiguration(value: TfCluster.ServerlessV2ScalingConfigurationProperty) {
     this._serverlessV2ScalingConfiguration.internalValue = value;
   }
   public resetServerlessV2ScalingConfiguration() {
@@ -803,11 +803,11 @@ export class AwsNeptuneCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNeptuneCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNeptuneCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -856,8 +856,8 @@ export class AwsNeptuneCluster extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      serverless_v2_scaling_configuration: awsNeptuneClusterServerlessV2ScalingConfigurationPropertyToTerraform(this._serverlessV2ScalingConfiguration.internalValue),
-      timeouts: awsNeptuneClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      serverless_v2_scaling_configuration: tfClusterServerlessV2ScalingConfigurationPropertyToTerraform(this._serverlessV2ScalingConfiguration.internalValue),
+      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -1056,16 +1056,16 @@ export class AwsNeptuneCluster extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       serverless_v2_scaling_configuration: {
-        value: awsNeptuneClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(this._serverlessV2ScalingConfiguration.internalValue),
+        value: tfClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(this._serverlessV2ScalingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNeptuneCluster.ServerlessV2ScalingConfigurationPropertyList",
+        storageClassType: "TfCluster.ServerlessV2ScalingConfigurationPropertyList",
       },
       timeouts: {
-        value: awsNeptuneClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNeptuneCluster.TimeoutsProperty",
+        storageClassType: "TfCluster.TimeoutsProperty",
       },
     };
 
@@ -1074,7 +1074,7 @@ export class AwsNeptuneCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsNeptuneClusterServerlessV2ScalingConfigurationPropertyToTerraform(struct?: AwsNeptuneCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | AwsNeptuneCluster.ServerlessV2ScalingConfigurationProperty): any {
+export function tfClusterServerlessV2ScalingConfigurationPropertyToTerraform(struct?: TfCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | TfCluster.ServerlessV2ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1086,7 +1086,7 @@ export function awsNeptuneClusterServerlessV2ScalingConfigurationPropertyToTerra
 }
 
 
-export function awsNeptuneClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(struct?: AwsNeptuneCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | AwsNeptuneCluster.ServerlessV2ScalingConfigurationProperty): any {
+export function tfClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(struct?: TfCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | TfCluster.ServerlessV2ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1111,7 +1111,7 @@ export function awsNeptuneClusterServerlessV2ScalingConfigurationPropertyToHclTe
 }
 
 
-export function awsNeptuneClusterTimeoutsPropertyToTerraform(struct?: AwsNeptuneCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1124,7 +1124,7 @@ export function awsNeptuneClusterTimeoutsPropertyToTerraform(struct?: AwsNeptune
 }
 
 
-export function awsNeptuneClusterTimeoutsPropertyToHclTerraform(struct?: AwsNeptuneCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1155,14 +1155,14 @@ export function awsNeptuneClusterTimeoutsPropertyToHclTerraform(struct?: AwsNept
 }
 
 
-export namespace AwsNeptuneCluster {
+export namespace TfCluster {
 export interface ServerlessV2ScalingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#max_capacity AwsNeptuneCluster#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#max_capacity TfCluster#max_capacity}
   */
   readonly maxCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#min_capacity AwsNeptuneCluster#min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#min_capacity TfCluster#min_capacity}
   */
   readonly minCapacity?: number;
 }
@@ -1238,15 +1238,15 @@ export class ServerlessV2ScalingConfigurationPropertyOutputReference extends cdk
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#create AwsNeptuneCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#create TfCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#delete AwsNeptuneCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#delete TfCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#update AwsNeptuneCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster#update TfCluster#update}
   */
   readonly update?: string;
 }

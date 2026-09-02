@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayVpcAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfVpcAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#appliance_mode_support AwsEc2TransitGatewayVpcAttachment#appliance_mode_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#appliance_mode_support TfVpcAttachment#appliance_mode_support}
   */
   readonly applianceModeSupport?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#dns_support AwsEc2TransitGatewayVpcAttachment#dns_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#dns_support TfVpcAttachment#dns_support}
   */
   readonly dnsSupport?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#id AwsEc2TransitGatewayVpcAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#id TfVpcAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#ipv6_support AwsEc2TransitGatewayVpcAttachment#ipv6_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#ipv6_support TfVpcAttachment#ipv6_support}
   */
   readonly ipv6Support?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#region AwsEc2TransitGatewayVpcAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#region TfVpcAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#security_group_referencing_support AwsEc2TransitGatewayVpcAttachment#security_group_referencing_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#security_group_referencing_support TfVpcAttachment#security_group_referencing_support}
   */
   readonly securityGroupReferencingSupport?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#subnet_ids AwsEc2TransitGatewayVpcAttachment#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#subnet_ids TfVpcAttachment#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#tags AwsEc2TransitGatewayVpcAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#tags TfVpcAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#tags_all AwsEc2TransitGatewayVpcAttachment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#tags_all TfVpcAttachment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#transit_gateway_default_route_table_association AwsEc2TransitGatewayVpcAttachment#transit_gateway_default_route_table_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#transit_gateway_default_route_table_association TfVpcAttachment#transit_gateway_default_route_table_association}
   */
   readonly transitGatewayDefaultRouteTableAssociation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#transit_gateway_default_route_table_propagation AwsEc2TransitGatewayVpcAttachment#transit_gateway_default_route_table_propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#transit_gateway_default_route_table_propagation TfVpcAttachment#transit_gateway_default_route_table_propagation}
   */
   readonly transitGatewayDefaultRouteTablePropagation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#transit_gateway_id AwsEc2TransitGatewayVpcAttachment#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#transit_gateway_id TfVpcAttachment#transit_gateway_id}
   */
   readonly transitGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#vpc_id AwsEc2TransitGatewayVpcAttachment#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#vpc_id TfVpcAttachment#vpc_id}
   */
   readonly vpcId: string;
 }
@@ -68,7 +68,7 @@ export interface AwsEc2TransitGatewayVpcAttachmentConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment aws_ec2_transit_gateway_vpc_attachment}
 */
-export class AwsEc2TransitGatewayVpcAttachment extends cdktn.TerraformResource {
+export class TfVpcAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsEc2TransitGatewayVpcAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayVpcAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVpcAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayVpcAttachment to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayVpcAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayVpcAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfVpcAttachment to import
+  * @param importFromId The id of the existing TfVpcAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_vpc_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVpcAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_vpc_attachment", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsEc2TransitGatewayVpcAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayVpcAttachmentConfig
+  * @param options TfVpcAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayVpcAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfVpcAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_vpc_attachment',
       terraformGeneratorMetadata: {

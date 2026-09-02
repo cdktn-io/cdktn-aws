@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerCustomerGatewayAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfCustomerGatewayAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#customer_gateway_arn AwsNetworkmanagerCustomerGatewayAssociation#customer_gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#customer_gateway_arn TfCustomerGatewayAssociation#customer_gateway_arn}
   */
   readonly customerGatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#device_id AwsNetworkmanagerCustomerGatewayAssociation#device_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#device_id TfCustomerGatewayAssociation#device_id}
   */
   readonly deviceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#global_network_id AwsNetworkmanagerCustomerGatewayAssociation#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#global_network_id TfCustomerGatewayAssociation#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#id AwsNetworkmanagerCustomerGatewayAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#id TfCustomerGatewayAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#link_id AwsNetworkmanagerCustomerGatewayAssociation#link_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#link_id TfCustomerGatewayAssociation#link_id}
   */
   readonly linkId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#timeouts AwsNetworkmanagerCustomerGatewayAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#timeouts TfCustomerGatewayAssociation#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerCustomerGatewayAssociation.TimeoutsProperty;
+  readonly timeouts?: TfCustomerGatewayAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association aws_networkmanager_customer_gateway_association}
 */
-export class AwsNetworkmanagerCustomerGatewayAssociation extends cdktn.TerraformResource {
+export class TfCustomerGatewayAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsNetworkmanagerCustomerGatewayAssociation extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerCustomerGatewayAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCustomerGatewayAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerCustomerGatewayAssociation to import
-  * @param importFromId The id of the existing AwsNetworkmanagerCustomerGatewayAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerCustomerGatewayAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfCustomerGatewayAssociation to import
+  * @param importFromId The id of the existing TfCustomerGatewayAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCustomerGatewayAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_customer_gateway_association", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsNetworkmanagerCustomerGatewayAssociation extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerCustomerGatewayAssociationConfig
+  * @param options TfCustomerGatewayAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerCustomerGatewayAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfCustomerGatewayAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_customer_gateway_association',
       terraformGeneratorMetadata: {
@@ -172,11 +172,11 @@ export class AwsNetworkmanagerCustomerGatewayAssociation extends cdktn.Terraform
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerCustomerGatewayAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCustomerGatewayAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerCustomerGatewayAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfCustomerGatewayAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -198,7 +198,7 @@ export class AwsNetworkmanagerCustomerGatewayAssociation extends cdktn.Terraform
       global_network_id: cdktn.stringToTerraform(this._globalNetworkId),
       id: cdktn.stringToTerraform(this._id),
       link_id: cdktn.stringToTerraform(this._linkId),
-      timeouts: awsNetworkmanagerCustomerGatewayAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfCustomerGatewayAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -235,10 +235,10 @@ export class AwsNetworkmanagerCustomerGatewayAssociation extends cdktn.Terraform
         storageClassType: "string",
       },
       timeouts: {
-        value: awsNetworkmanagerCustomerGatewayAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCustomerGatewayAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerCustomerGatewayAssociation.TimeoutsProperty",
+        storageClassType: "TfCustomerGatewayAssociation.TimeoutsProperty",
       },
     };
 
@@ -247,7 +247,7 @@ export class AwsNetworkmanagerCustomerGatewayAssociation extends cdktn.Terraform
   }
 }
 
-export function awsNetworkmanagerCustomerGatewayAssociationTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerCustomerGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCustomerGatewayAssociationTimeoutsPropertyToTerraform(struct?: TfCustomerGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsNetworkmanagerCustomerGatewayAssociationTimeoutsPropertyToTer
 }
 
 
-export function awsNetworkmanagerCustomerGatewayAssociationTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerCustomerGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCustomerGatewayAssociationTimeoutsPropertyToHclTerraform(struct?: TfCustomerGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,14 +284,14 @@ export function awsNetworkmanagerCustomerGatewayAssociationTimeoutsPropertyToHcl
 }
 
 
-export namespace AwsNetworkmanagerCustomerGatewayAssociation {
+export namespace TfCustomerGatewayAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#create AwsNetworkmanagerCustomerGatewayAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#create TfCustomerGatewayAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#delete AwsNetworkmanagerCustomerGatewayAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_customer_gateway_association#delete TfCustomerGatewayAssociation#delete}
   */
   readonly delete?: string;
 }

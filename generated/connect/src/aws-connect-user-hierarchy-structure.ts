@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConnectUserHierarchyStructureConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserHierarchyStructureConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#id AwsConnectUserHierarchyStructure#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#id TfUserHierarchyStructure#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#instance_id AwsConnectUserHierarchyStructure#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#instance_id TfUserHierarchyStructure#instance_id}
   */
   readonly instanceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#region AwsConnectUserHierarchyStructure#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#region TfUserHierarchyStructure#region}
   */
   readonly region?: string;
   /**
   * hierarchy_structure block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#hierarchy_structure AwsConnectUserHierarchyStructure#hierarchy_structure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#hierarchy_structure TfUserHierarchyStructure#hierarchy_structure}
   */
-  readonly hierarchyStructure: AwsConnectUserHierarchyStructure.HierarchyStructureProperty;
+  readonly hierarchyStructure: TfUserHierarchyStructure.HierarchyStructureProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure aws_connect_user_hierarchy_structure}
 */
-export class AwsConnectUserHierarchyStructure extends cdktn.TerraformResource {
+export class TfUserHierarchyStructure extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsConnectUserHierarchyStructure extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConnectUserHierarchyStructure resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUserHierarchyStructure resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConnectUserHierarchyStructure to import
-  * @param importFromId The id of the existing AwsConnectUserHierarchyStructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConnectUserHierarchyStructure to import is found
+  * @param importToId The construct id used in the generated config for the TfUserHierarchyStructure to import
+  * @param importFromId The id of the existing TfUserHierarchyStructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUserHierarchyStructure to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_user_hierarchy_structure", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsConnectUserHierarchyStructure extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConnectUserHierarchyStructureConfig
+  * @param options TfUserHierarchyStructureConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConnectUserHierarchyStructureConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserHierarchyStructureConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_user_hierarchy_structure',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class AwsConnectUserHierarchyStructure extends cdktn.TerraformResource {
   }
 
   // hierarchy_structure - computed: false, optional: false, required: true
-  private _hierarchyStructure = new AwsConnectUserHierarchyStructure.HierarchyStructurePropertyOutputReference(this, "hierarchy_structure");
+  private _hierarchyStructure = new TfUserHierarchyStructure.HierarchyStructurePropertyOutputReference(this, "hierarchy_structure");
   public get hierarchyStructure() {
     return this._hierarchyStructure;
   }
-  public putHierarchyStructure(value: AwsConnectUserHierarchyStructure.HierarchyStructureProperty) {
+  public putHierarchyStructure(value: TfUserHierarchyStructure.HierarchyStructureProperty) {
     this._hierarchyStructure.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class AwsConnectUserHierarchyStructure extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       instance_id: cdktn.stringToTerraform(this._instanceId),
       region: cdktn.stringToTerraform(this._region),
-      hierarchy_structure: awsConnectUserHierarchyStructureHierarchyStructurePropertyToTerraform(this._hierarchyStructure.internalValue),
+      hierarchy_structure: tfUserHierarchyStructureHierarchyStructurePropertyToTerraform(this._hierarchyStructure.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class AwsConnectUserHierarchyStructure extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       hierarchy_structure: {
-        value: awsConnectUserHierarchyStructureHierarchyStructurePropertyToHclTerraform(this._hierarchyStructure.internalValue),
+        value: tfUserHierarchyStructureHierarchyStructurePropertyToHclTerraform(this._hierarchyStructure.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConnectUserHierarchyStructure.HierarchyStructurePropertyList",
+        storageClassType: "TfUserHierarchyStructure.HierarchyStructurePropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class AwsConnectUserHierarchyStructure extends cdktn.TerraformResource {
   }
 }
 
-export function awsConnectUserHierarchyStructureLevelFivePropertyToTerraform(struct?: AwsConnectUserHierarchyStructure.LevelFivePropertyOutputReference | AwsConnectUserHierarchyStructure.LevelFiveProperty): any {
+export function tfUserHierarchyStructureLevelFivePropertyToTerraform(struct?: TfUserHierarchyStructure.LevelFivePropertyOutputReference | TfUserHierarchyStructure.LevelFiveProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -207,7 +207,7 @@ export function awsConnectUserHierarchyStructureLevelFivePropertyToTerraform(str
 }
 
 
-export function awsConnectUserHierarchyStructureLevelFivePropertyToHclTerraform(struct?: AwsConnectUserHierarchyStructure.LevelFivePropertyOutputReference | AwsConnectUserHierarchyStructure.LevelFiveProperty): any {
+export function tfUserHierarchyStructureLevelFivePropertyToHclTerraform(struct?: TfUserHierarchyStructure.LevelFivePropertyOutputReference | TfUserHierarchyStructure.LevelFiveProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,7 +226,7 @@ export function awsConnectUserHierarchyStructureLevelFivePropertyToHclTerraform(
 }
 
 
-export function awsConnectUserHierarchyStructureLevelFourPropertyToTerraform(struct?: AwsConnectUserHierarchyStructure.LevelFourPropertyOutputReference | AwsConnectUserHierarchyStructure.LevelFourProperty): any {
+export function tfUserHierarchyStructureLevelFourPropertyToTerraform(struct?: TfUserHierarchyStructure.LevelFourPropertyOutputReference | TfUserHierarchyStructure.LevelFourProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function awsConnectUserHierarchyStructureLevelFourPropertyToTerraform(str
 }
 
 
-export function awsConnectUserHierarchyStructureLevelFourPropertyToHclTerraform(struct?: AwsConnectUserHierarchyStructure.LevelFourPropertyOutputReference | AwsConnectUserHierarchyStructure.LevelFourProperty): any {
+export function tfUserHierarchyStructureLevelFourPropertyToHclTerraform(struct?: TfUserHierarchyStructure.LevelFourPropertyOutputReference | TfUserHierarchyStructure.LevelFourProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function awsConnectUserHierarchyStructureLevelFourPropertyToHclTerraform(
 }
 
 
-export function awsConnectUserHierarchyStructureLevelOnePropertyToTerraform(struct?: AwsConnectUserHierarchyStructure.LevelOnePropertyOutputReference | AwsConnectUserHierarchyStructure.LevelOneProperty): any {
+export function tfUserHierarchyStructureLevelOnePropertyToTerraform(struct?: TfUserHierarchyStructure.LevelOnePropertyOutputReference | TfUserHierarchyStructure.LevelOneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function awsConnectUserHierarchyStructureLevelOnePropertyToTerraform(stru
 }
 
 
-export function awsConnectUserHierarchyStructureLevelOnePropertyToHclTerraform(struct?: AwsConnectUserHierarchyStructure.LevelOnePropertyOutputReference | AwsConnectUserHierarchyStructure.LevelOneProperty): any {
+export function tfUserHierarchyStructureLevelOnePropertyToHclTerraform(struct?: TfUserHierarchyStructure.LevelOnePropertyOutputReference | TfUserHierarchyStructure.LevelOneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function awsConnectUserHierarchyStructureLevelOnePropertyToHclTerraform(s
 }
 
 
-export function awsConnectUserHierarchyStructureLevelThreePropertyToTerraform(struct?: AwsConnectUserHierarchyStructure.LevelThreePropertyOutputReference | AwsConnectUserHierarchyStructure.LevelThreeProperty): any {
+export function tfUserHierarchyStructureLevelThreePropertyToTerraform(struct?: TfUserHierarchyStructure.LevelThreePropertyOutputReference | TfUserHierarchyStructure.LevelThreeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function awsConnectUserHierarchyStructureLevelThreePropertyToTerraform(st
 }
 
 
-export function awsConnectUserHierarchyStructureLevelThreePropertyToHclTerraform(struct?: AwsConnectUserHierarchyStructure.LevelThreePropertyOutputReference | AwsConnectUserHierarchyStructure.LevelThreeProperty): any {
+export function tfUserHierarchyStructureLevelThreePropertyToHclTerraform(struct?: TfUserHierarchyStructure.LevelThreePropertyOutputReference | TfUserHierarchyStructure.LevelThreeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function awsConnectUserHierarchyStructureLevelThreePropertyToHclTerraform
 }
 
 
-export function awsConnectUserHierarchyStructureLevelTwoPropertyToTerraform(struct?: AwsConnectUserHierarchyStructure.LevelTwoPropertyOutputReference | AwsConnectUserHierarchyStructure.LevelTwoProperty): any {
+export function tfUserHierarchyStructureLevelTwoPropertyToTerraform(struct?: TfUserHierarchyStructure.LevelTwoPropertyOutputReference | TfUserHierarchyStructure.LevelTwoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function awsConnectUserHierarchyStructureLevelTwoPropertyToTerraform(stru
 }
 
 
-export function awsConnectUserHierarchyStructureLevelTwoPropertyToHclTerraform(struct?: AwsConnectUserHierarchyStructure.LevelTwoPropertyOutputReference | AwsConnectUserHierarchyStructure.LevelTwoProperty): any {
+export function tfUserHierarchyStructureLevelTwoPropertyToHclTerraform(struct?: TfUserHierarchyStructure.LevelTwoPropertyOutputReference | TfUserHierarchyStructure.LevelTwoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,53 +346,53 @@ export function awsConnectUserHierarchyStructureLevelTwoPropertyToHclTerraform(s
 }
 
 
-export function awsConnectUserHierarchyStructureHierarchyStructurePropertyToTerraform(struct?: AwsConnectUserHierarchyStructure.HierarchyStructurePropertyOutputReference | AwsConnectUserHierarchyStructure.HierarchyStructureProperty): any {
+export function tfUserHierarchyStructureHierarchyStructurePropertyToTerraform(struct?: TfUserHierarchyStructure.HierarchyStructurePropertyOutputReference | TfUserHierarchyStructure.HierarchyStructureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    level_five: awsConnectUserHierarchyStructureLevelFivePropertyToTerraform(struct!.levelFive),
-    level_four: awsConnectUserHierarchyStructureLevelFourPropertyToTerraform(struct!.levelFour),
-    level_one: awsConnectUserHierarchyStructureLevelOnePropertyToTerraform(struct!.levelOne),
-    level_three: awsConnectUserHierarchyStructureLevelThreePropertyToTerraform(struct!.levelThree),
-    level_two: awsConnectUserHierarchyStructureLevelTwoPropertyToTerraform(struct!.levelTwo),
+    level_five: tfUserHierarchyStructureLevelFivePropertyToTerraform(struct!.levelFive),
+    level_four: tfUserHierarchyStructureLevelFourPropertyToTerraform(struct!.levelFour),
+    level_one: tfUserHierarchyStructureLevelOnePropertyToTerraform(struct!.levelOne),
+    level_three: tfUserHierarchyStructureLevelThreePropertyToTerraform(struct!.levelThree),
+    level_two: tfUserHierarchyStructureLevelTwoPropertyToTerraform(struct!.levelTwo),
   }
 }
 
 
-export function awsConnectUserHierarchyStructureHierarchyStructurePropertyToHclTerraform(struct?: AwsConnectUserHierarchyStructure.HierarchyStructurePropertyOutputReference | AwsConnectUserHierarchyStructure.HierarchyStructureProperty): any {
+export function tfUserHierarchyStructureHierarchyStructurePropertyToHclTerraform(struct?: TfUserHierarchyStructure.HierarchyStructurePropertyOutputReference | TfUserHierarchyStructure.HierarchyStructureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     level_five: {
-      value: awsConnectUserHierarchyStructureLevelFivePropertyToHclTerraform(struct!.levelFive),
+      value: tfUserHierarchyStructureLevelFivePropertyToHclTerraform(struct!.levelFive),
       isBlock: true,
       type: "list",
       storageClassType: "LevelFivePropertyList",
     },
     level_four: {
-      value: awsConnectUserHierarchyStructureLevelFourPropertyToHclTerraform(struct!.levelFour),
+      value: tfUserHierarchyStructureLevelFourPropertyToHclTerraform(struct!.levelFour),
       isBlock: true,
       type: "list",
       storageClassType: "LevelFourPropertyList",
     },
     level_one: {
-      value: awsConnectUserHierarchyStructureLevelOnePropertyToHclTerraform(struct!.levelOne),
+      value: tfUserHierarchyStructureLevelOnePropertyToHclTerraform(struct!.levelOne),
       isBlock: true,
       type: "list",
       storageClassType: "LevelOnePropertyList",
     },
     level_three: {
-      value: awsConnectUserHierarchyStructureLevelThreePropertyToHclTerraform(struct!.levelThree),
+      value: tfUserHierarchyStructureLevelThreePropertyToHclTerraform(struct!.levelThree),
       isBlock: true,
       type: "list",
       storageClassType: "LevelThreePropertyList",
     },
     level_two: {
-      value: awsConnectUserHierarchyStructureLevelTwoPropertyToHclTerraform(struct!.levelTwo),
+      value: tfUserHierarchyStructureLevelTwoPropertyToHclTerraform(struct!.levelTwo),
       isBlock: true,
       type: "list",
       storageClassType: "LevelTwoPropertyList",
@@ -404,10 +404,10 @@ export function awsConnectUserHierarchyStructureHierarchyStructurePropertyToHclT
 }
 
 
-export namespace AwsConnectUserHierarchyStructure {
+export namespace TfUserHierarchyStructure {
 export interface LevelFiveProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name AwsConnectUserHierarchyStructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name TfUserHierarchyStructure#name}
   */
   readonly name: string;
 }
@@ -468,7 +468,7 @@ export class LevelFivePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LevelFourProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name AwsConnectUserHierarchyStructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name TfUserHierarchyStructure#name}
   */
   readonly name: string;
 }
@@ -529,7 +529,7 @@ export class LevelFourPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LevelOneProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name AwsConnectUserHierarchyStructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name TfUserHierarchyStructure#name}
   */
   readonly name: string;
 }
@@ -590,7 +590,7 @@ export class LevelOnePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LevelThreeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name AwsConnectUserHierarchyStructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name TfUserHierarchyStructure#name}
   */
   readonly name: string;
 }
@@ -651,7 +651,7 @@ export class LevelThreePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LevelTwoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name AwsConnectUserHierarchyStructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#name TfUserHierarchyStructure#name}
   */
   readonly name: string;
 }
@@ -714,31 +714,31 @@ export interface HierarchyStructureProperty {
   /**
   * level_five block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_five AwsConnectUserHierarchyStructure#level_five}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_five TfUserHierarchyStructure#level_five}
   */
   readonly levelFive?: LevelFiveProperty;
   /**
   * level_four block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_four AwsConnectUserHierarchyStructure#level_four}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_four TfUserHierarchyStructure#level_four}
   */
   readonly levelFour?: LevelFourProperty;
   /**
   * level_one block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_one AwsConnectUserHierarchyStructure#level_one}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_one TfUserHierarchyStructure#level_one}
   */
   readonly levelOne?: LevelOneProperty;
   /**
   * level_three block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_three AwsConnectUserHierarchyStructure#level_three}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_three TfUserHierarchyStructure#level_three}
   */
   readonly levelThree?: LevelThreeProperty;
   /**
   * level_two block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_two AwsConnectUserHierarchyStructure#level_two}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user_hierarchy_structure#level_two TfUserHierarchyStructure#level_two}
   */
   readonly levelTwo?: LevelTwoProperty;
 }

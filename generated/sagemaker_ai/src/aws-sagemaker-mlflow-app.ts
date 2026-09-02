@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerMlflowAppConfig extends cdktn.TerraformMetaArguments {
+export interface TfMlflowAppConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#account_default_status AwsSagemakerMlflowApp#account_default_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#account_default_status TfMlflowApp#account_default_status}
   */
   readonly accountDefaultStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#artifact_store_uri AwsSagemakerMlflowApp#artifact_store_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#artifact_store_uri TfMlflowApp#artifact_store_uri}
   */
   readonly artifactStoreUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#default_domain_id_list AwsSagemakerMlflowApp#default_domain_id_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#default_domain_id_list TfMlflowApp#default_domain_id_list}
   */
   readonly defaultDomainIdList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#model_registration_mode AwsSagemakerMlflowApp#model_registration_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#model_registration_mode TfMlflowApp#model_registration_mode}
   */
   readonly modelRegistrationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#name AwsSagemakerMlflowApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#name TfMlflowApp#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#region AwsSagemakerMlflowApp#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#region TfMlflowApp#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#role_arn AwsSagemakerMlflowApp#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#role_arn TfMlflowApp#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#tags AwsSagemakerMlflowApp#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#tags TfMlflowApp#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#weekly_maintenance_window_start AwsSagemakerMlflowApp#weekly_maintenance_window_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#weekly_maintenance_window_start TfMlflowApp#weekly_maintenance_window_start}
   */
   readonly weeklyMaintenanceWindowStart?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#timeouts AwsSagemakerMlflowApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#timeouts TfMlflowApp#timeouts}
   */
-  readonly timeouts?: AwsSagemakerMlflowApp.TimeoutsProperty;
+  readonly timeouts?: TfMlflowApp.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app aws_sagemaker_mlflow_app}
 */
-export class AwsSagemakerMlflowApp extends cdktn.TerraformResource {
+export class TfMlflowApp extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class AwsSagemakerMlflowApp extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerMlflowApp resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMlflowApp resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerMlflowApp to import
-  * @param importFromId The id of the existing AwsSagemakerMlflowApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerMlflowApp to import is found
+  * @param importToId The construct id used in the generated config for the TfMlflowApp to import
+  * @param importFromId The id of the existing TfMlflowApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMlflowApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_mlflow_app", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class AwsSagemakerMlflowApp extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerMlflowAppConfig
+  * @param options TfMlflowAppConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerMlflowAppConfig) {
+  public constructor(scope: Construct, id: string, config: TfMlflowAppConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_mlflow_app',
       terraformGeneratorMetadata: {
@@ -266,11 +266,11 @@ export class AwsSagemakerMlflowApp extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSagemakerMlflowApp.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMlflowApp.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSagemakerMlflowApp.TimeoutsProperty) {
+  public putTimeouts(value: TfMlflowApp.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -296,7 +296,7 @@ export class AwsSagemakerMlflowApp extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       weekly_maintenance_window_start: cdktn.stringToTerraform(this._weeklyMaintenanceWindowStart),
-      timeouts: awsSagemakerMlflowAppTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfMlflowAppTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -357,10 +357,10 @@ export class AwsSagemakerMlflowApp extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsSagemakerMlflowAppTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMlflowAppTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSagemakerMlflowApp.TimeoutsProperty",
+        storageClassType: "TfMlflowApp.TimeoutsProperty",
       },
     };
 
@@ -369,7 +369,7 @@ export class AwsSagemakerMlflowApp extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerMlflowAppTimeoutsPropertyToTerraform(struct?: AwsSagemakerMlflowApp.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMlflowAppTimeoutsPropertyToTerraform(struct?: TfMlflowApp.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function awsSagemakerMlflowAppTimeoutsPropertyToTerraform(struct?: AwsSag
 }
 
 
-export function awsSagemakerMlflowAppTimeoutsPropertyToHclTerraform(struct?: AwsSagemakerMlflowApp.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMlflowAppTimeoutsPropertyToHclTerraform(struct?: TfMlflowApp.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,24 +413,24 @@ export function awsSagemakerMlflowAppTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsSagemakerMlflowApp {
+export namespace TfMlflowApp {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#create AwsSagemakerMlflowApp#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#create TfMlflowApp#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#delete AwsSagemakerMlflowApp#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#delete TfMlflowApp#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#update AwsSagemakerMlflowApp#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_app#update TfMlflowApp#update}
   */
   readonly update?: string;
 }

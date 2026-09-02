@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsM2ApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#description AwsM2Application#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#description TfApplication#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#engine_type AwsM2Application#engine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#engine_type TfApplication#engine_type}
   */
   readonly engineType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#kms_key_id AwsM2Application#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#kms_key_id TfApplication#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#name AwsM2Application#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#name TfApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#region AwsM2Application#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#region TfApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#role_arn AwsM2Application#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#role_arn TfApplication#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#tags AwsM2Application#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#tags TfApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#definition AwsM2Application#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#definition TfApplication#definition}
   */
-  readonly definition?: AwsM2Application.DefinitionProperty[] | cdktn.IResolvable;
+  readonly definition?: TfApplication.DefinitionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#timeouts AwsM2Application#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#timeouts TfApplication#timeouts}
   */
-  readonly timeouts?: AwsM2Application.TimeoutsProperty;
+  readonly timeouts?: TfApplication.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application aws_m2_application}
 */
-export class AwsM2Application extends cdktn.TerraformResource {
+export class TfApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class AwsM2Application extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsM2Application resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsM2Application to import
-  * @param importFromId The id of the existing AwsM2Application that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsM2Application to import is found
+  * @param importToId The construct id used in the generated config for the TfApplication to import
+  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_m2_application", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class AwsM2Application extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsM2ApplicationConfig
+  * @param options TfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsM2ApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_m2_application',
       terraformGeneratorMetadata: {
@@ -249,11 +249,11 @@ export class AwsM2Application extends cdktn.TerraformResource {
   }
 
   // definition - computed: false, optional: true, required: false
-  private _definition = new AwsM2Application.DefinitionPropertyList(this, "definition", false);
+  private _definition = new TfApplication.DefinitionPropertyList(this, "definition", false);
   public get definition() {
     return this._definition;
   }
-  public putDefinition(value: AwsM2Application.DefinitionProperty[] | cdktn.IResolvable) {
+  public putDefinition(value: TfApplication.DefinitionProperty[] | cdktn.IResolvable) {
     this._definition.internalValue = value;
   }
   public resetDefinition() {
@@ -265,11 +265,11 @@ export class AwsM2Application extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsM2Application.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfApplication.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsM2Application.TimeoutsProperty) {
+  public putTimeouts(value: TfApplication.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -293,8 +293,8 @@ export class AwsM2Application extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      definition: cdktn.listMapper(awsM2ApplicationDefinitionPropertyToTerraform, true)(this._definition.internalValue),
-      timeouts: awsM2ApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      definition: cdktn.listMapper(tfApplicationDefinitionPropertyToTerraform, true)(this._definition.internalValue),
+      timeouts: tfApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -343,16 +343,16 @@ export class AwsM2Application extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       definition: {
-        value: cdktn.listMapperHcl(awsM2ApplicationDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsM2Application.DefinitionPropertyList",
+        storageClassType: "TfApplication.DefinitionPropertyList",
       },
       timeouts: {
-        value: awsM2ApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsM2Application.TimeoutsProperty",
+        storageClassType: "TfApplication.TimeoutsProperty",
       },
     };
 
@@ -361,7 +361,7 @@ export class AwsM2Application extends cdktn.TerraformResource {
   }
 }
 
-export function awsM2ApplicationDefinitionPropertyToTerraform(struct?: AwsM2Application.DefinitionProperty | cdktn.IResolvable): any {
+export function tfApplicationDefinitionPropertyToTerraform(struct?: TfApplication.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function awsM2ApplicationDefinitionPropertyToTerraform(struct?: AwsM2Appl
 }
 
 
-export function awsM2ApplicationDefinitionPropertyToHclTerraform(struct?: AwsM2Application.DefinitionProperty | cdktn.IResolvable): any {
+export function tfApplicationDefinitionPropertyToHclTerraform(struct?: TfApplication.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function awsM2ApplicationDefinitionPropertyToHclTerraform(struct?: AwsM2A
 }
 
 
-export function awsM2ApplicationTimeoutsPropertyToTerraform(struct?: AwsM2Application.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function awsM2ApplicationTimeoutsPropertyToTerraform(struct?: AwsM2Applic
 }
 
 
-export function awsM2ApplicationTimeoutsPropertyToHclTerraform(struct?: AwsM2Application.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToHclTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,14 +442,14 @@ export function awsM2ApplicationTimeoutsPropertyToHclTerraform(struct?: AwsM2App
 }
 
 
-export namespace AwsM2Application {
+export namespace TfApplication {
 export interface DefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#content AwsM2Application#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#content TfApplication#content}
   */
   readonly content?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#s3_location AwsM2Application#s3_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#s3_location TfApplication#s3_location}
   */
   readonly s3Location?: string;
 }
@@ -559,19 +559,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#create AwsM2Application#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#create TfApplication#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#delete AwsM2Application#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#delete TfApplication#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#update AwsM2Application#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_application#update TfApplication#update}
   */
   readonly update?: string;
 }

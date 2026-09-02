@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsMqBrokerConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBrokerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#broker_id DataAwsMqBroker#broker_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#broker_id DataTfBroker#broker_id}
   */
   readonly brokerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#broker_name DataAwsMqBroker#broker_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#broker_name DataTfBroker#broker_name}
   */
   readonly brokerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#id DataAwsMqBroker#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#id DataTfBroker#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataAwsMqBrokerConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#region DataAwsMqBroker#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#region DataTfBroker#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#tags DataAwsMqBroker#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#tags DataTfBroker#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataAwsMqBrokerConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker aws_mq_broker}
 */
-export class DataAwsMqBroker extends cdktn.TerraformDataSource {
+export class DataTfBroker extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsMqBroker resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBroker resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsMqBroker to import
-  * @param importFromId The id of the existing DataAwsMqBroker that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsMqBroker to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBroker to import
+  * @param importFromId The id of the existing DataTfBroker that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBroker to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mq_broker", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsMqBrokerConfig = {}
+  * @param options DataTfBrokerConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsMqBrokerConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfBrokerConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_mq_broker',
       terraformGeneratorMetadata: {
@@ -143,7 +143,7 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   }
 
   // configuration - computed: true, optional: false, required: false
-  private _configuration = new DataAwsMqBroker.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new DataTfBroker.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
@@ -154,7 +154,7 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   }
 
   // encryption_options - computed: true, optional: false, required: false
-  private _encryptionOptions = new DataAwsMqBroker.EncryptionOptionsPropertyList(this, "encryption_options", false);
+  private _encryptionOptions = new DataTfBroker.EncryptionOptionsPropertyList(this, "encryption_options", false);
   public get encryptionOptions() {
     return this._encryptionOptions;
   }
@@ -191,25 +191,25 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   }
 
   // instances - computed: true, optional: false, required: false
-  private _instances = new DataAwsMqBroker.InstancesPropertyList(this, "instances", false);
+  private _instances = new DataTfBroker.InstancesPropertyList(this, "instances", false);
   public get instances() {
     return this._instances;
   }
 
   // ldap_server_metadata - computed: true, optional: false, required: false
-  private _ldapServerMetadata = new DataAwsMqBroker.LdapServerMetadataPropertyList(this, "ldap_server_metadata", false);
+  private _ldapServerMetadata = new DataTfBroker.LdapServerMetadataPropertyList(this, "ldap_server_metadata", false);
   public get ldapServerMetadata() {
     return this._ldapServerMetadata;
   }
 
   // logs - computed: true, optional: false, required: false
-  private _logs = new DataAwsMqBroker.LogsPropertyList(this, "logs", false);
+  private _logs = new DataTfBroker.LogsPropertyList(this, "logs", false);
   public get logs() {
     return this._logs;
   }
 
   // maintenance_window_start_time - computed: true, optional: false, required: false
-  private _maintenanceWindowStartTime = new DataAwsMqBroker.MaintenanceWindowStartTimePropertyList(this, "maintenance_window_start_time", false);
+  private _maintenanceWindowStartTime = new DataTfBroker.MaintenanceWindowStartTimePropertyList(this, "maintenance_window_start_time", false);
   public get maintenanceWindowStartTime() {
     return this._maintenanceWindowStartTime;
   }
@@ -246,7 +246,7 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   }
 
   // shared_resources - computed: true, optional: false, required: false
-  private _sharedResources = new DataAwsMqBroker.SharedResourcesPropertyList(this, "shared_resources", false);
+  private _sharedResources = new DataTfBroker.SharedResourcesPropertyList(this, "shared_resources", false);
   public get sharedResources() {
     return this._sharedResources;
   }
@@ -278,7 +278,7 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   }
 
   // user - computed: true, optional: false, required: false
-  private _user = new DataAwsMqBroker.UserPropertyList(this, "user", true);
+  private _user = new DataTfBroker.UserPropertyList(this, "user", true);
   public get user() {
     return this._user;
   }
@@ -336,7 +336,7 @@ export class DataAwsMqBroker extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsMqBrokerConfigurationPropertyToTerraform(struct?: DataAwsMqBroker.ConfigurationProperty): any {
+export function dataTfBrokerConfigurationPropertyToTerraform(struct?: DataTfBroker.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function dataAwsMqBrokerConfigurationPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsMqBrokerConfigurationPropertyToHclTerraform(struct?: DataAwsMqBroker.ConfigurationProperty): any {
+export function dataTfBrokerConfigurationPropertyToHclTerraform(struct?: DataTfBroker.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function dataAwsMqBrokerConfigurationPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsMqBrokerEncryptionOptionsPropertyToTerraform(struct?: DataAwsMqBroker.EncryptionOptionsProperty): any {
+export function dataTfBrokerEncryptionOptionsPropertyToTerraform(struct?: DataTfBroker.EncryptionOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function dataAwsMqBrokerEncryptionOptionsPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsMqBrokerEncryptionOptionsPropertyToHclTerraform(struct?: DataAwsMqBroker.EncryptionOptionsProperty): any {
+export function dataTfBrokerEncryptionOptionsPropertyToHclTerraform(struct?: DataTfBroker.EncryptionOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function dataAwsMqBrokerEncryptionOptionsPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsMqBrokerInstancesPropertyToTerraform(struct?: DataAwsMqBroker.InstancesProperty): any {
+export function dataTfBrokerInstancesPropertyToTerraform(struct?: DataTfBroker.InstancesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function dataAwsMqBrokerInstancesPropertyToTerraform(struct?: DataAwsMqBr
 }
 
 
-export function dataAwsMqBrokerInstancesPropertyToHclTerraform(struct?: DataAwsMqBroker.InstancesProperty): any {
+export function dataTfBrokerInstancesPropertyToHclTerraform(struct?: DataTfBroker.InstancesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function dataAwsMqBrokerInstancesPropertyToHclTerraform(struct?: DataAwsM
 }
 
 
-export function dataAwsMqBrokerLdapServerMetadataPropertyToTerraform(struct?: DataAwsMqBroker.LdapServerMetadataProperty): any {
+export function dataTfBrokerLdapServerMetadataPropertyToTerraform(struct?: DataTfBroker.LdapServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function dataAwsMqBrokerLdapServerMetadataPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsMqBrokerLdapServerMetadataPropertyToHclTerraform(struct?: DataAwsMqBroker.LdapServerMetadataProperty): any {
+export function dataTfBrokerLdapServerMetadataPropertyToHclTerraform(struct?: DataTfBroker.LdapServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function dataAwsMqBrokerLdapServerMetadataPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsMqBrokerLogsPropertyToTerraform(struct?: DataAwsMqBroker.LogsProperty): any {
+export function dataTfBrokerLogsPropertyToTerraform(struct?: DataTfBroker.LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function dataAwsMqBrokerLogsPropertyToTerraform(struct?: DataAwsMqBroker.
 }
 
 
-export function dataAwsMqBrokerLogsPropertyToHclTerraform(struct?: DataAwsMqBroker.LogsProperty): any {
+export function dataTfBrokerLogsPropertyToHclTerraform(struct?: DataTfBroker.LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function dataAwsMqBrokerLogsPropertyToHclTerraform(struct?: DataAwsMqBrok
 }
 
 
-export function dataAwsMqBrokerMaintenanceWindowStartTimePropertyToTerraform(struct?: DataAwsMqBroker.MaintenanceWindowStartTimeProperty): any {
+export function dataTfBrokerMaintenanceWindowStartTimePropertyToTerraform(struct?: DataTfBroker.MaintenanceWindowStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function dataAwsMqBrokerMaintenanceWindowStartTimePropertyToTerraform(str
 }
 
 
-export function dataAwsMqBrokerMaintenanceWindowStartTimePropertyToHclTerraform(struct?: DataAwsMqBroker.MaintenanceWindowStartTimeProperty): any {
+export function dataTfBrokerMaintenanceWindowStartTimePropertyToHclTerraform(struct?: DataTfBroker.MaintenanceWindowStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function dataAwsMqBrokerMaintenanceWindowStartTimePropertyToHclTerraform(
 }
 
 
-export function dataAwsMqBrokerSharedResourcesPropertyToTerraform(struct?: DataAwsMqBroker.SharedResourcesProperty): any {
+export function dataTfBrokerSharedResourcesPropertyToTerraform(struct?: DataTfBroker.SharedResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function dataAwsMqBrokerSharedResourcesPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsMqBrokerSharedResourcesPropertyToHclTerraform(struct?: DataAwsMqBroker.SharedResourcesProperty): any {
+export function dataTfBrokerSharedResourcesPropertyToHclTerraform(struct?: DataTfBroker.SharedResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function dataAwsMqBrokerSharedResourcesPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataAwsMqBrokerUserPropertyToTerraform(struct?: DataAwsMqBroker.UserProperty): any {
+export function dataTfBrokerUserPropertyToTerraform(struct?: DataTfBroker.UserProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function dataAwsMqBrokerUserPropertyToTerraform(struct?: DataAwsMqBroker.
 }
 
 
-export function dataAwsMqBrokerUserPropertyToHclTerraform(struct?: DataAwsMqBroker.UserProperty): any {
+export function dataTfBrokerUserPropertyToHclTerraform(struct?: DataTfBroker.UserProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function dataAwsMqBrokerUserPropertyToHclTerraform(struct?: DataAwsMqBrok
 }
 
 
-export namespace DataAwsMqBroker {
+export namespace DataTfBroker {
 export interface ConfigurationProperty {
 }
 export class ConfigurationPropertyOutputReference extends cdktn.ComplexObject {

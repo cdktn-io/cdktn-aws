@@ -5,28 +5,28 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamVirtualMfaDeviceConfig extends cdktn.TerraformMetaArguments {
+export interface TfVirtualMfaDeviceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#id AwsIamVirtualMfaDevice#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#id TfVirtualMfaDevice#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#path AwsIamVirtualMfaDevice#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#path TfVirtualMfaDevice#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#tags AwsIamVirtualMfaDevice#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#tags TfVirtualMfaDevice#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#tags_all AwsIamVirtualMfaDevice#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#tags_all TfVirtualMfaDevice#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#virtual_mfa_device_name AwsIamVirtualMfaDevice#virtual_mfa_device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#virtual_mfa_device_name TfVirtualMfaDevice#virtual_mfa_device_name}
   */
   readonly virtualMfaDeviceName: string;
 }
@@ -34,7 +34,7 @@ export interface AwsIamVirtualMfaDeviceConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device aws_iam_virtual_mfa_device}
 */
-export class AwsIamVirtualMfaDevice extends cdktn.TerraformResource {
+export class TfVirtualMfaDevice extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsIamVirtualMfaDevice extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamVirtualMfaDevice resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVirtualMfaDevice resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamVirtualMfaDevice to import
-  * @param importFromId The id of the existing AwsIamVirtualMfaDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamVirtualMfaDevice to import is found
+  * @param importToId The construct id used in the generated config for the TfVirtualMfaDevice to import
+  * @param importFromId The id of the existing TfVirtualMfaDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_virtual_mfa_device#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVirtualMfaDevice to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_virtual_mfa_device", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsIamVirtualMfaDevice extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamVirtualMfaDeviceConfig
+  * @param options TfVirtualMfaDeviceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamVirtualMfaDeviceConfig) {
+  public constructor(scope: Construct, id: string, config: TfVirtualMfaDeviceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_virtual_mfa_device',
       terraformGeneratorMetadata: {

@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDynamodbGlobalTableConfig extends cdktn.TerraformMetaArguments {
+export interface TfGlobalTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#id AwsDynamodbGlobalTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#id TfGlobalTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#name AwsDynamodbGlobalTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#name TfGlobalTable#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#region AwsDynamodbGlobalTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#region TfGlobalTable#region}
   */
   readonly region?: string;
   /**
   * replica block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#replica AwsDynamodbGlobalTable#replica}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#replica TfGlobalTable#replica}
   */
-  readonly replica: AwsDynamodbGlobalTable.ReplicaProperty[] | cdktn.IResolvable;
+  readonly replica: TfGlobalTable.ReplicaProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#timeouts AwsDynamodbGlobalTable#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#timeouts TfGlobalTable#timeouts}
   */
-  readonly timeouts?: AwsDynamodbGlobalTable.TimeoutsProperty;
+  readonly timeouts?: TfGlobalTable.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table aws_dynamodb_global_table}
 */
-export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
+export class TfGlobalTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDynamodbGlobalTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGlobalTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDynamodbGlobalTable to import
-  * @param importFromId The id of the existing AwsDynamodbGlobalTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDynamodbGlobalTable to import is found
+  * @param importToId The construct id used in the generated config for the TfGlobalTable to import
+  * @param importFromId The id of the existing TfGlobalTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGlobalTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_global_table", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDynamodbGlobalTableConfig
+  * @param options TfGlobalTableConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDynamodbGlobalTableConfig) {
+  public constructor(scope: Construct, id: string, config: TfGlobalTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_global_table',
       terraformGeneratorMetadata: {
@@ -150,11 +150,11 @@ export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
   }
 
   // replica - computed: false, optional: false, required: true
-  private _replica = new AwsDynamodbGlobalTable.ReplicaPropertyList(this, "replica", true);
+  private _replica = new TfGlobalTable.ReplicaPropertyList(this, "replica", true);
   public get replica() {
     return this._replica;
   }
-  public putReplica(value: AwsDynamodbGlobalTable.ReplicaProperty[] | cdktn.IResolvable) {
+  public putReplica(value: TfGlobalTable.ReplicaProperty[] | cdktn.IResolvable) {
     this._replica.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -163,11 +163,11 @@ export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDynamodbGlobalTable.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGlobalTable.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDynamodbGlobalTable.TimeoutsProperty) {
+  public putTimeouts(value: TfGlobalTable.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -187,8 +187,8 @@ export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      replica: cdktn.listMapper(awsDynamodbGlobalTableReplicaPropertyToTerraform, true)(this._replica.internalValue),
-      timeouts: awsDynamodbGlobalTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      replica: cdktn.listMapper(tfGlobalTableReplicaPropertyToTerraform, true)(this._replica.internalValue),
+      timeouts: tfGlobalTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -213,16 +213,16 @@ export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       replica: {
-        value: cdktn.listMapperHcl(awsDynamodbGlobalTableReplicaPropertyToHclTerraform, true)(this._replica.internalValue),
+        value: cdktn.listMapperHcl(tfGlobalTableReplicaPropertyToHclTerraform, true)(this._replica.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsDynamodbGlobalTable.ReplicaPropertyList",
+        storageClassType: "TfGlobalTable.ReplicaPropertyList",
       },
       timeouts: {
-        value: awsDynamodbGlobalTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGlobalTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDynamodbGlobalTable.TimeoutsProperty",
+        storageClassType: "TfGlobalTable.TimeoutsProperty",
       },
     };
 
@@ -231,7 +231,7 @@ export class AwsDynamodbGlobalTable extends cdktn.TerraformResource {
   }
 }
 
-export function awsDynamodbGlobalTableReplicaPropertyToTerraform(struct?: AwsDynamodbGlobalTable.ReplicaProperty | cdktn.IResolvable): any {
+export function tfGlobalTableReplicaPropertyToTerraform(struct?: TfGlobalTable.ReplicaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function awsDynamodbGlobalTableReplicaPropertyToTerraform(struct?: AwsDyn
 }
 
 
-export function awsDynamodbGlobalTableReplicaPropertyToHclTerraform(struct?: AwsDynamodbGlobalTable.ReplicaProperty | cdktn.IResolvable): any {
+export function tfGlobalTableReplicaPropertyToHclTerraform(struct?: TfGlobalTable.ReplicaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function awsDynamodbGlobalTableReplicaPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsDynamodbGlobalTableTimeoutsPropertyToTerraform(struct?: AwsDynamodbGlobalTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGlobalTableTimeoutsPropertyToTerraform(struct?: TfGlobalTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function awsDynamodbGlobalTableTimeoutsPropertyToTerraform(struct?: AwsDy
 }
 
 
-export function awsDynamodbGlobalTableTimeoutsPropertyToHclTerraform(struct?: AwsDynamodbGlobalTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGlobalTableTimeoutsPropertyToHclTerraform(struct?: TfGlobalTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,10 +305,10 @@ export function awsDynamodbGlobalTableTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsDynamodbGlobalTable {
+export namespace TfGlobalTable {
 export interface ReplicaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#region_name AwsDynamodbGlobalTable#region_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#region_name TfGlobalTable#region_name}
   */
   readonly regionName: string;
 }
@@ -391,15 +391,15 @@ export class ReplicaPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#create AwsDynamodbGlobalTable#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#create TfGlobalTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#delete AwsDynamodbGlobalTable#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#delete TfGlobalTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#update AwsDynamodbGlobalTable#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_table#update TfGlobalTable#update}
   */
   readonly update?: string;
 }

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsInspector2OrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#id AwsInspector2OrganizationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#id TfOrganizationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,27 +16,27 @@ export interface AwsInspector2OrganizationConfigurationConfig extends cdktn.Terr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#region AwsInspector2OrganizationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#region TfOrganizationConfiguration#region}
   */
   readonly region?: string;
   /**
   * auto_enable block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#auto_enable AwsInspector2OrganizationConfiguration#auto_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#auto_enable TfOrganizationConfiguration#auto_enable}
   */
-  readonly autoEnable: AwsInspector2OrganizationConfiguration.AutoEnableProperty;
+  readonly autoEnable: TfOrganizationConfiguration.AutoEnableProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#timeouts AwsInspector2OrganizationConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#timeouts TfOrganizationConfiguration#timeouts}
   */
-  readonly timeouts?: AwsInspector2OrganizationConfiguration.TimeoutsProperty;
+  readonly timeouts?: TfOrganizationConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration aws_inspector2_organization_configuration}
 */
-export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResource {
+export class TfOrganizationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsInspector2OrganizationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsInspector2OrganizationConfiguration to import
-  * @param importFromId The id of the existing AwsInspector2OrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsInspector2OrganizationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationConfiguration to import
+  * @param importFromId The id of the existing TfOrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_inspector2_organization_configuration", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsInspector2OrganizationConfigurationConfig
+  * @param options TfOrganizationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsInspector2OrganizationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_inspector2_organization_configuration',
       terraformGeneratorMetadata: {
@@ -132,11 +132,11 @@ export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResou
   }
 
   // auto_enable - computed: false, optional: false, required: true
-  private _autoEnable = new AwsInspector2OrganizationConfiguration.AutoEnablePropertyOutputReference(this, "auto_enable");
+  private _autoEnable = new TfOrganizationConfiguration.AutoEnablePropertyOutputReference(this, "auto_enable");
   public get autoEnable() {
     return this._autoEnable;
   }
-  public putAutoEnable(value: AwsInspector2OrganizationConfiguration.AutoEnableProperty) {
+  public putAutoEnable(value: TfOrganizationConfiguration.AutoEnableProperty) {
     this._autoEnable.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -145,11 +145,11 @@ export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsInspector2OrganizationConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOrganizationConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsInspector2OrganizationConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: TfOrganizationConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -168,8 +168,8 @@ export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResou
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      auto_enable: awsInspector2OrganizationConfigurationAutoEnablePropertyToTerraform(this._autoEnable.internalValue),
-      timeouts: awsInspector2OrganizationConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      auto_enable: tfOrganizationConfigurationAutoEnablePropertyToTerraform(this._autoEnable.internalValue),
+      timeouts: tfOrganizationConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -188,16 +188,16 @@ export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResou
         storageClassType: "string",
       },
       auto_enable: {
-        value: awsInspector2OrganizationConfigurationAutoEnablePropertyToHclTerraform(this._autoEnable.internalValue),
+        value: tfOrganizationConfigurationAutoEnablePropertyToHclTerraform(this._autoEnable.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInspector2OrganizationConfiguration.AutoEnablePropertyList",
+        storageClassType: "TfOrganizationConfiguration.AutoEnablePropertyList",
       },
       timeouts: {
-        value: awsInspector2OrganizationConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOrganizationConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsInspector2OrganizationConfiguration.TimeoutsProperty",
+        storageClassType: "TfOrganizationConfiguration.TimeoutsProperty",
       },
     };
 
@@ -206,7 +206,7 @@ export class AwsInspector2OrganizationConfiguration extends cdktn.TerraformResou
   }
 }
 
-export function awsInspector2OrganizationConfigurationAutoEnablePropertyToTerraform(struct?: AwsInspector2OrganizationConfiguration.AutoEnablePropertyOutputReference | AwsInspector2OrganizationConfiguration.AutoEnableProperty): any {
+export function tfOrganizationConfigurationAutoEnablePropertyToTerraform(struct?: TfOrganizationConfiguration.AutoEnablePropertyOutputReference | TfOrganizationConfiguration.AutoEnableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,7 +221,7 @@ export function awsInspector2OrganizationConfigurationAutoEnablePropertyToTerraf
 }
 
 
-export function awsInspector2OrganizationConfigurationAutoEnablePropertyToHclTerraform(struct?: AwsInspector2OrganizationConfiguration.AutoEnablePropertyOutputReference | AwsInspector2OrganizationConfiguration.AutoEnableProperty): any {
+export function tfOrganizationConfigurationAutoEnablePropertyToHclTerraform(struct?: TfOrganizationConfiguration.AutoEnablePropertyOutputReference | TfOrganizationConfiguration.AutoEnableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function awsInspector2OrganizationConfigurationAutoEnablePropertyToHclTer
 }
 
 
-export function awsInspector2OrganizationConfigurationTimeoutsPropertyToTerraform(struct?: AwsInspector2OrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationConfigurationTimeoutsPropertyToTerraform(struct?: TfOrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function awsInspector2OrganizationConfigurationTimeoutsPropertyToTerrafor
 }
 
 
-export function awsInspector2OrganizationConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsInspector2OrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationConfigurationTimeoutsPropertyToHclTerraform(struct?: TfOrganizationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,26 +308,26 @@ export function awsInspector2OrganizationConfigurationTimeoutsPropertyToHclTerra
 }
 
 
-export namespace AwsInspector2OrganizationConfiguration {
+export namespace TfOrganizationConfiguration {
 export interface AutoEnableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#code_repository AwsInspector2OrganizationConfiguration#code_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#code_repository TfOrganizationConfiguration#code_repository}
   */
   readonly codeRepository?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#ec2 AwsInspector2OrganizationConfiguration#ec2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#ec2 TfOrganizationConfiguration#ec2}
   */
   readonly ec2: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#ecr AwsInspector2OrganizationConfiguration#ecr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#ecr TfOrganizationConfiguration#ecr}
   */
   readonly ecr: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#lambda AwsInspector2OrganizationConfiguration#lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#lambda TfOrganizationConfiguration#lambda}
   */
   readonly lambda?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#lambda_code AwsInspector2OrganizationConfiguration#lambda_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#lambda_code TfOrganizationConfiguration#lambda_code}
   */
   readonly lambdaCode?: boolean | cdktn.IResolvable;
 }
@@ -463,15 +463,15 @@ export class AutoEnablePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#create AwsInspector2OrganizationConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#create TfOrganizationConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#delete AwsInspector2OrganizationConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#delete TfOrganizationConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#update AwsInspector2OrganizationConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_organization_configuration#update TfOrganizationConfiguration#update}
   */
   readonly update?: string;
 }

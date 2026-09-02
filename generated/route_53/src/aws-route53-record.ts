@@ -5,104 +5,104 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53RecordConfig extends cdktn.TerraformMetaArguments {
+export interface TfRecordConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#allow_overwrite AwsRoute53Record#allow_overwrite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#allow_overwrite TfRecord#allow_overwrite}
   */
   readonly allowOverwrite?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#health_check_id AwsRoute53Record#health_check_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#health_check_id TfRecord#health_check_id}
   */
   readonly healthCheckId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#id AwsRoute53Record#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#id TfRecord#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#multivalue_answer_routing_policy AwsRoute53Record#multivalue_answer_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#multivalue_answer_routing_policy TfRecord#multivalue_answer_routing_policy}
   */
   readonly multivalueAnswerRoutingPolicy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#name AwsRoute53Record#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#name TfRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#records AwsRoute53Record#records}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#records TfRecord#records}
   */
   readonly records?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#set_identifier AwsRoute53Record#set_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#set_identifier TfRecord#set_identifier}
   */
   readonly setIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#ttl AwsRoute53Record#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#ttl TfRecord#ttl}
   */
   readonly ttl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#type AwsRoute53Record#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#type TfRecord#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#zone_id AwsRoute53Record#zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#zone_id TfRecord#zone_id}
   */
   readonly zoneId: string;
   /**
   * alias block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#alias AwsRoute53Record#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#alias TfRecord#alias}
   */
-  readonly alias?: AwsRoute53Record.AliasProperty;
+  readonly alias?: TfRecord.AliasProperty;
   /**
   * cidr_routing_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#cidr_routing_policy AwsRoute53Record#cidr_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#cidr_routing_policy TfRecord#cidr_routing_policy}
   */
-  readonly cidrRoutingPolicy?: AwsRoute53Record.CidrRoutingPolicyProperty;
+  readonly cidrRoutingPolicy?: TfRecord.CidrRoutingPolicyProperty;
   /**
   * failover_routing_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#failover_routing_policy AwsRoute53Record#failover_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#failover_routing_policy TfRecord#failover_routing_policy}
   */
-  readonly failoverRoutingPolicy?: AwsRoute53Record.FailoverRoutingPolicyProperty;
+  readonly failoverRoutingPolicy?: TfRecord.FailoverRoutingPolicyProperty;
   /**
   * geolocation_routing_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#geolocation_routing_policy AwsRoute53Record#geolocation_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#geolocation_routing_policy TfRecord#geolocation_routing_policy}
   */
-  readonly geolocationRoutingPolicy?: AwsRoute53Record.GeolocationRoutingPolicyProperty;
+  readonly geolocationRoutingPolicy?: TfRecord.GeolocationRoutingPolicyProperty;
   /**
   * geoproximity_routing_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#geoproximity_routing_policy AwsRoute53Record#geoproximity_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#geoproximity_routing_policy TfRecord#geoproximity_routing_policy}
   */
-  readonly geoproximityRoutingPolicy?: AwsRoute53Record.GeoproximityRoutingPolicyProperty;
+  readonly geoproximityRoutingPolicy?: TfRecord.GeoproximityRoutingPolicyProperty;
   /**
   * latency_routing_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#latency_routing_policy AwsRoute53Record#latency_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#latency_routing_policy TfRecord#latency_routing_policy}
   */
-  readonly latencyRoutingPolicy?: AwsRoute53Record.LatencyRoutingPolicyProperty;
+  readonly latencyRoutingPolicy?: TfRecord.LatencyRoutingPolicyProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#timeouts AwsRoute53Record#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#timeouts TfRecord#timeouts}
   */
-  readonly timeouts?: AwsRoute53Record.TimeoutsProperty;
+  readonly timeouts?: TfRecord.TimeoutsProperty;
   /**
   * weighted_routing_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#weighted_routing_policy AwsRoute53Record#weighted_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#weighted_routing_policy TfRecord#weighted_routing_policy}
   */
-  readonly weightedRoutingPolicy?: AwsRoute53Record.WeightedRoutingPolicyProperty;
+  readonly weightedRoutingPolicy?: TfRecord.WeightedRoutingPolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record aws_route53_record}
 */
-export class AwsRoute53Record extends cdktn.TerraformResource {
+export class TfRecord extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -113,11 +113,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53Record resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRecord resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53Record to import
-  * @param importFromId The id of the existing AwsRoute53Record that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53Record to import is found
+  * @param importToId The construct id used in the generated config for the TfRecord to import
+  * @param importFromId The id of the existing TfRecord that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRecord to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_record", importId: importFromId, provider });
@@ -132,9 +132,9 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53RecordConfig
+  * @param options TfRecordConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53RecordConfig) {
+  public constructor(scope: Construct, id: string, config: TfRecordConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_record',
       terraformGeneratorMetadata: {
@@ -331,11 +331,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // alias - computed: false, optional: true, required: false
-  private _alias = new AwsRoute53Record.AliasPropertyOutputReference(this, "alias");
+  private _alias = new TfRecord.AliasPropertyOutputReference(this, "alias");
   public get alias() {
     return this._alias;
   }
-  public putAlias(value: AwsRoute53Record.AliasProperty) {
+  public putAlias(value: TfRecord.AliasProperty) {
     this._alias.internalValue = value;
   }
   public resetAlias() {
@@ -347,11 +347,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // cidr_routing_policy - computed: false, optional: true, required: false
-  private _cidrRoutingPolicy = new AwsRoute53Record.CidrRoutingPolicyPropertyOutputReference(this, "cidr_routing_policy");
+  private _cidrRoutingPolicy = new TfRecord.CidrRoutingPolicyPropertyOutputReference(this, "cidr_routing_policy");
   public get cidrRoutingPolicy() {
     return this._cidrRoutingPolicy;
   }
-  public putCidrRoutingPolicy(value: AwsRoute53Record.CidrRoutingPolicyProperty) {
+  public putCidrRoutingPolicy(value: TfRecord.CidrRoutingPolicyProperty) {
     this._cidrRoutingPolicy.internalValue = value;
   }
   public resetCidrRoutingPolicy() {
@@ -363,11 +363,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // failover_routing_policy - computed: false, optional: true, required: false
-  private _failoverRoutingPolicy = new AwsRoute53Record.FailoverRoutingPolicyPropertyOutputReference(this, "failover_routing_policy");
+  private _failoverRoutingPolicy = new TfRecord.FailoverRoutingPolicyPropertyOutputReference(this, "failover_routing_policy");
   public get failoverRoutingPolicy() {
     return this._failoverRoutingPolicy;
   }
-  public putFailoverRoutingPolicy(value: AwsRoute53Record.FailoverRoutingPolicyProperty) {
+  public putFailoverRoutingPolicy(value: TfRecord.FailoverRoutingPolicyProperty) {
     this._failoverRoutingPolicy.internalValue = value;
   }
   public resetFailoverRoutingPolicy() {
@@ -379,11 +379,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // geolocation_routing_policy - computed: false, optional: true, required: false
-  private _geolocationRoutingPolicy = new AwsRoute53Record.GeolocationRoutingPolicyPropertyOutputReference(this, "geolocation_routing_policy");
+  private _geolocationRoutingPolicy = new TfRecord.GeolocationRoutingPolicyPropertyOutputReference(this, "geolocation_routing_policy");
   public get geolocationRoutingPolicy() {
     return this._geolocationRoutingPolicy;
   }
-  public putGeolocationRoutingPolicy(value: AwsRoute53Record.GeolocationRoutingPolicyProperty) {
+  public putGeolocationRoutingPolicy(value: TfRecord.GeolocationRoutingPolicyProperty) {
     this._geolocationRoutingPolicy.internalValue = value;
   }
   public resetGeolocationRoutingPolicy() {
@@ -395,11 +395,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // geoproximity_routing_policy - computed: false, optional: true, required: false
-  private _geoproximityRoutingPolicy = new AwsRoute53Record.GeoproximityRoutingPolicyPropertyOutputReference(this, "geoproximity_routing_policy");
+  private _geoproximityRoutingPolicy = new TfRecord.GeoproximityRoutingPolicyPropertyOutputReference(this, "geoproximity_routing_policy");
   public get geoproximityRoutingPolicy() {
     return this._geoproximityRoutingPolicy;
   }
-  public putGeoproximityRoutingPolicy(value: AwsRoute53Record.GeoproximityRoutingPolicyProperty) {
+  public putGeoproximityRoutingPolicy(value: TfRecord.GeoproximityRoutingPolicyProperty) {
     this._geoproximityRoutingPolicy.internalValue = value;
   }
   public resetGeoproximityRoutingPolicy() {
@@ -411,11 +411,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // latency_routing_policy - computed: false, optional: true, required: false
-  private _latencyRoutingPolicy = new AwsRoute53Record.LatencyRoutingPolicyPropertyOutputReference(this, "latency_routing_policy");
+  private _latencyRoutingPolicy = new TfRecord.LatencyRoutingPolicyPropertyOutputReference(this, "latency_routing_policy");
   public get latencyRoutingPolicy() {
     return this._latencyRoutingPolicy;
   }
-  public putLatencyRoutingPolicy(value: AwsRoute53Record.LatencyRoutingPolicyProperty) {
+  public putLatencyRoutingPolicy(value: TfRecord.LatencyRoutingPolicyProperty) {
     this._latencyRoutingPolicy.internalValue = value;
   }
   public resetLatencyRoutingPolicy() {
@@ -427,11 +427,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53Record.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRecord.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53Record.TimeoutsProperty) {
+  public putTimeouts(value: TfRecord.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -443,11 +443,11 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 
   // weighted_routing_policy - computed: false, optional: true, required: false
-  private _weightedRoutingPolicy = new AwsRoute53Record.WeightedRoutingPolicyPropertyOutputReference(this, "weighted_routing_policy");
+  private _weightedRoutingPolicy = new TfRecord.WeightedRoutingPolicyPropertyOutputReference(this, "weighted_routing_policy");
   public get weightedRoutingPolicy() {
     return this._weightedRoutingPolicy;
   }
-  public putWeightedRoutingPolicy(value: AwsRoute53Record.WeightedRoutingPolicyProperty) {
+  public putWeightedRoutingPolicy(value: TfRecord.WeightedRoutingPolicyProperty) {
     this._weightedRoutingPolicy.internalValue = value;
   }
   public resetWeightedRoutingPolicy() {
@@ -474,14 +474,14 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
       ttl: cdktn.numberToTerraform(this._ttl),
       type: cdktn.stringToTerraform(this._type),
       zone_id: cdktn.stringToTerraform(this._zoneId),
-      alias: awsRoute53RecordAliasPropertyToTerraform(this._alias.internalValue),
-      cidr_routing_policy: awsRoute53RecordCidrRoutingPolicyPropertyToTerraform(this._cidrRoutingPolicy.internalValue),
-      failover_routing_policy: awsRoute53RecordFailoverRoutingPolicyPropertyToTerraform(this._failoverRoutingPolicy.internalValue),
-      geolocation_routing_policy: awsRoute53RecordGeolocationRoutingPolicyPropertyToTerraform(this._geolocationRoutingPolicy.internalValue),
-      geoproximity_routing_policy: awsRoute53RecordGeoproximityRoutingPolicyPropertyToTerraform(this._geoproximityRoutingPolicy.internalValue),
-      latency_routing_policy: awsRoute53RecordLatencyRoutingPolicyPropertyToTerraform(this._latencyRoutingPolicy.internalValue),
-      timeouts: awsRoute53RecordTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      weighted_routing_policy: awsRoute53RecordWeightedRoutingPolicyPropertyToTerraform(this._weightedRoutingPolicy.internalValue),
+      alias: tfRecordAliasPropertyToTerraform(this._alias.internalValue),
+      cidr_routing_policy: tfRecordCidrRoutingPolicyPropertyToTerraform(this._cidrRoutingPolicy.internalValue),
+      failover_routing_policy: tfRecordFailoverRoutingPolicyPropertyToTerraform(this._failoverRoutingPolicy.internalValue),
+      geolocation_routing_policy: tfRecordGeolocationRoutingPolicyPropertyToTerraform(this._geolocationRoutingPolicy.internalValue),
+      geoproximity_routing_policy: tfRecordGeoproximityRoutingPolicyPropertyToTerraform(this._geoproximityRoutingPolicy.internalValue),
+      latency_routing_policy: tfRecordLatencyRoutingPolicyPropertyToTerraform(this._latencyRoutingPolicy.internalValue),
+      timeouts: tfRecordTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      weighted_routing_policy: tfRecordWeightedRoutingPolicyPropertyToTerraform(this._weightedRoutingPolicy.internalValue),
     };
   }
 
@@ -548,52 +548,52 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       alias: {
-        value: awsRoute53RecordAliasPropertyToHclTerraform(this._alias.internalValue),
+        value: tfRecordAliasPropertyToHclTerraform(this._alias.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53Record.AliasPropertyList",
+        storageClassType: "TfRecord.AliasPropertyList",
       },
       cidr_routing_policy: {
-        value: awsRoute53RecordCidrRoutingPolicyPropertyToHclTerraform(this._cidrRoutingPolicy.internalValue),
+        value: tfRecordCidrRoutingPolicyPropertyToHclTerraform(this._cidrRoutingPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53Record.CidrRoutingPolicyPropertyList",
+        storageClassType: "TfRecord.CidrRoutingPolicyPropertyList",
       },
       failover_routing_policy: {
-        value: awsRoute53RecordFailoverRoutingPolicyPropertyToHclTerraform(this._failoverRoutingPolicy.internalValue),
+        value: tfRecordFailoverRoutingPolicyPropertyToHclTerraform(this._failoverRoutingPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53Record.FailoverRoutingPolicyPropertyList",
+        storageClassType: "TfRecord.FailoverRoutingPolicyPropertyList",
       },
       geolocation_routing_policy: {
-        value: awsRoute53RecordGeolocationRoutingPolicyPropertyToHclTerraform(this._geolocationRoutingPolicy.internalValue),
+        value: tfRecordGeolocationRoutingPolicyPropertyToHclTerraform(this._geolocationRoutingPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53Record.GeolocationRoutingPolicyPropertyList",
+        storageClassType: "TfRecord.GeolocationRoutingPolicyPropertyList",
       },
       geoproximity_routing_policy: {
-        value: awsRoute53RecordGeoproximityRoutingPolicyPropertyToHclTerraform(this._geoproximityRoutingPolicy.internalValue),
+        value: tfRecordGeoproximityRoutingPolicyPropertyToHclTerraform(this._geoproximityRoutingPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53Record.GeoproximityRoutingPolicyPropertyList",
+        storageClassType: "TfRecord.GeoproximityRoutingPolicyPropertyList",
       },
       latency_routing_policy: {
-        value: awsRoute53RecordLatencyRoutingPolicyPropertyToHclTerraform(this._latencyRoutingPolicy.internalValue),
+        value: tfRecordLatencyRoutingPolicyPropertyToHclTerraform(this._latencyRoutingPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53Record.LatencyRoutingPolicyPropertyList",
+        storageClassType: "TfRecord.LatencyRoutingPolicyPropertyList",
       },
       timeouts: {
-        value: awsRoute53RecordTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRecordTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53Record.TimeoutsProperty",
+        storageClassType: "TfRecord.TimeoutsProperty",
       },
       weighted_routing_policy: {
-        value: awsRoute53RecordWeightedRoutingPolicyPropertyToHclTerraform(this._weightedRoutingPolicy.internalValue),
+        value: tfRecordWeightedRoutingPolicyPropertyToHclTerraform(this._weightedRoutingPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53Record.WeightedRoutingPolicyPropertyList",
+        storageClassType: "TfRecord.WeightedRoutingPolicyPropertyList",
       },
     };
 
@@ -602,7 +602,7 @@ export class AwsRoute53Record extends cdktn.TerraformResource {
   }
 }
 
-export function awsRoute53RecordAliasPropertyToTerraform(struct?: AwsRoute53Record.AliasPropertyOutputReference | AwsRoute53Record.AliasProperty): any {
+export function tfRecordAliasPropertyToTerraform(struct?: TfRecord.AliasPropertyOutputReference | TfRecord.AliasProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -615,7 +615,7 @@ export function awsRoute53RecordAliasPropertyToTerraform(struct?: AwsRoute53Reco
 }
 
 
-export function awsRoute53RecordAliasPropertyToHclTerraform(struct?: AwsRoute53Record.AliasPropertyOutputReference | AwsRoute53Record.AliasProperty): any {
+export function tfRecordAliasPropertyToHclTerraform(struct?: TfRecord.AliasPropertyOutputReference | TfRecord.AliasProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function awsRoute53RecordAliasPropertyToHclTerraform(struct?: AwsRoute53R
 }
 
 
-export function awsRoute53RecordCidrRoutingPolicyPropertyToTerraform(struct?: AwsRoute53Record.CidrRoutingPolicyPropertyOutputReference | AwsRoute53Record.CidrRoutingPolicyProperty): any {
+export function tfRecordCidrRoutingPolicyPropertyToTerraform(struct?: TfRecord.CidrRoutingPolicyPropertyOutputReference | TfRecord.CidrRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function awsRoute53RecordCidrRoutingPolicyPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsRoute53RecordCidrRoutingPolicyPropertyToHclTerraform(struct?: AwsRoute53Record.CidrRoutingPolicyPropertyOutputReference | AwsRoute53Record.CidrRoutingPolicyProperty): any {
+export function tfRecordCidrRoutingPolicyPropertyToHclTerraform(struct?: TfRecord.CidrRoutingPolicyPropertyOutputReference | TfRecord.CidrRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -683,7 +683,7 @@ export function awsRoute53RecordCidrRoutingPolicyPropertyToHclTerraform(struct?:
 }
 
 
-export function awsRoute53RecordFailoverRoutingPolicyPropertyToTerraform(struct?: AwsRoute53Record.FailoverRoutingPolicyPropertyOutputReference | AwsRoute53Record.FailoverRoutingPolicyProperty): any {
+export function tfRecordFailoverRoutingPolicyPropertyToTerraform(struct?: TfRecord.FailoverRoutingPolicyPropertyOutputReference | TfRecord.FailoverRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -694,7 +694,7 @@ export function awsRoute53RecordFailoverRoutingPolicyPropertyToTerraform(struct?
 }
 
 
-export function awsRoute53RecordFailoverRoutingPolicyPropertyToHclTerraform(struct?: AwsRoute53Record.FailoverRoutingPolicyPropertyOutputReference | AwsRoute53Record.FailoverRoutingPolicyProperty): any {
+export function tfRecordFailoverRoutingPolicyPropertyToHclTerraform(struct?: TfRecord.FailoverRoutingPolicyPropertyOutputReference | TfRecord.FailoverRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -713,7 +713,7 @@ export function awsRoute53RecordFailoverRoutingPolicyPropertyToHclTerraform(stru
 }
 
 
-export function awsRoute53RecordGeolocationRoutingPolicyPropertyToTerraform(struct?: AwsRoute53Record.GeolocationRoutingPolicyPropertyOutputReference | AwsRoute53Record.GeolocationRoutingPolicyProperty): any {
+export function tfRecordGeolocationRoutingPolicyPropertyToTerraform(struct?: TfRecord.GeolocationRoutingPolicyPropertyOutputReference | TfRecord.GeolocationRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,7 +726,7 @@ export function awsRoute53RecordGeolocationRoutingPolicyPropertyToTerraform(stru
 }
 
 
-export function awsRoute53RecordGeolocationRoutingPolicyPropertyToHclTerraform(struct?: AwsRoute53Record.GeolocationRoutingPolicyPropertyOutputReference | AwsRoute53Record.GeolocationRoutingPolicyProperty): any {
+export function tfRecordGeolocationRoutingPolicyPropertyToHclTerraform(struct?: TfRecord.GeolocationRoutingPolicyPropertyOutputReference | TfRecord.GeolocationRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function awsRoute53RecordGeolocationRoutingPolicyPropertyToHclTerraform(s
 }
 
 
-export function awsRoute53RecordCoordinatesPropertyToTerraform(struct?: AwsRoute53Record.CoordinatesProperty | cdktn.IResolvable): any {
+export function tfRecordCoordinatesPropertyToTerraform(struct?: TfRecord.CoordinatesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,7 +769,7 @@ export function awsRoute53RecordCoordinatesPropertyToTerraform(struct?: AwsRoute
 }
 
 
-export function awsRoute53RecordCoordinatesPropertyToHclTerraform(struct?: AwsRoute53Record.CoordinatesProperty | cdktn.IResolvable): any {
+export function tfRecordCoordinatesPropertyToHclTerraform(struct?: TfRecord.CoordinatesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function awsRoute53RecordCoordinatesPropertyToHclTerraform(struct?: AwsRo
 }
 
 
-export function awsRoute53RecordGeoproximityRoutingPolicyPropertyToTerraform(struct?: AwsRoute53Record.GeoproximityRoutingPolicyPropertyOutputReference | AwsRoute53Record.GeoproximityRoutingPolicyProperty): any {
+export function tfRecordGeoproximityRoutingPolicyPropertyToTerraform(struct?: TfRecord.GeoproximityRoutingPolicyPropertyOutputReference | TfRecord.GeoproximityRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,12 +803,12 @@ export function awsRoute53RecordGeoproximityRoutingPolicyPropertyToTerraform(str
     aws_region: cdktn.stringToTerraform(struct!.awsRegion),
     bias: cdktn.numberToTerraform(struct!.bias),
     local_zone_group: cdktn.stringToTerraform(struct!.localZoneGroup),
-    coordinates: cdktn.listMapper(awsRoute53RecordCoordinatesPropertyToTerraform, true)(struct!.coordinates),
+    coordinates: cdktn.listMapper(tfRecordCoordinatesPropertyToTerraform, true)(struct!.coordinates),
   }
 }
 
 
-export function awsRoute53RecordGeoproximityRoutingPolicyPropertyToHclTerraform(struct?: AwsRoute53Record.GeoproximityRoutingPolicyPropertyOutputReference | AwsRoute53Record.GeoproximityRoutingPolicyProperty): any {
+export function tfRecordGeoproximityRoutingPolicyPropertyToHclTerraform(struct?: TfRecord.GeoproximityRoutingPolicyPropertyOutputReference | TfRecord.GeoproximityRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function awsRoute53RecordGeoproximityRoutingPolicyPropertyToHclTerraform(
       storageClassType: "string",
     },
     coordinates: {
-      value: cdktn.listMapperHcl(awsRoute53RecordCoordinatesPropertyToHclTerraform, true)(struct!.coordinates),
+      value: cdktn.listMapperHcl(tfRecordCoordinatesPropertyToHclTerraform, true)(struct!.coordinates),
       isBlock: true,
       type: "set",
       storageClassType: "CoordinatesPropertyList",
@@ -845,7 +845,7 @@ export function awsRoute53RecordGeoproximityRoutingPolicyPropertyToHclTerraform(
 }
 
 
-export function awsRoute53RecordLatencyRoutingPolicyPropertyToTerraform(struct?: AwsRoute53Record.LatencyRoutingPolicyPropertyOutputReference | AwsRoute53Record.LatencyRoutingPolicyProperty): any {
+export function tfRecordLatencyRoutingPolicyPropertyToTerraform(struct?: TfRecord.LatencyRoutingPolicyPropertyOutputReference | TfRecord.LatencyRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function awsRoute53RecordLatencyRoutingPolicyPropertyToTerraform(struct?:
 }
 
 
-export function awsRoute53RecordLatencyRoutingPolicyPropertyToHclTerraform(struct?: AwsRoute53Record.LatencyRoutingPolicyPropertyOutputReference | AwsRoute53Record.LatencyRoutingPolicyProperty): any {
+export function tfRecordLatencyRoutingPolicyPropertyToHclTerraform(struct?: TfRecord.LatencyRoutingPolicyPropertyOutputReference | TfRecord.LatencyRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -875,7 +875,7 @@ export function awsRoute53RecordLatencyRoutingPolicyPropertyToHclTerraform(struc
 }
 
 
-export function awsRoute53RecordTimeoutsPropertyToTerraform(struct?: AwsRoute53Record.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRecordTimeoutsPropertyToTerraform(struct?: TfRecord.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function awsRoute53RecordTimeoutsPropertyToTerraform(struct?: AwsRoute53R
 }
 
 
-export function awsRoute53RecordTimeoutsPropertyToHclTerraform(struct?: AwsRoute53Record.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRecordTimeoutsPropertyToHclTerraform(struct?: TfRecord.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -919,7 +919,7 @@ export function awsRoute53RecordTimeoutsPropertyToHclTerraform(struct?: AwsRoute
 }
 
 
-export function awsRoute53RecordWeightedRoutingPolicyPropertyToTerraform(struct?: AwsRoute53Record.WeightedRoutingPolicyPropertyOutputReference | AwsRoute53Record.WeightedRoutingPolicyProperty): any {
+export function tfRecordWeightedRoutingPolicyPropertyToTerraform(struct?: TfRecord.WeightedRoutingPolicyPropertyOutputReference | TfRecord.WeightedRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -930,7 +930,7 @@ export function awsRoute53RecordWeightedRoutingPolicyPropertyToTerraform(struct?
 }
 
 
-export function awsRoute53RecordWeightedRoutingPolicyPropertyToHclTerraform(struct?: AwsRoute53Record.WeightedRoutingPolicyPropertyOutputReference | AwsRoute53Record.WeightedRoutingPolicyProperty): any {
+export function tfRecordWeightedRoutingPolicyPropertyToHclTerraform(struct?: TfRecord.WeightedRoutingPolicyPropertyOutputReference | TfRecord.WeightedRoutingPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -949,18 +949,18 @@ export function awsRoute53RecordWeightedRoutingPolicyPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsRoute53Record {
+export namespace TfRecord {
 export interface AliasProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#evaluate_target_health AwsRoute53Record#evaluate_target_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#evaluate_target_health TfRecord#evaluate_target_health}
   */
   readonly evaluateTargetHealth: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#name AwsRoute53Record#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#name TfRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#zone_id AwsRoute53Record#zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#zone_id TfRecord#zone_id}
   */
   readonly zoneId: string;
 }
@@ -1049,11 +1049,11 @@ export class AliasPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CidrRoutingPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#collection_id AwsRoute53Record#collection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#collection_id TfRecord#collection_id}
   */
   readonly collectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#location_name AwsRoute53Record#location_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#location_name TfRecord#location_name}
   */
   readonly locationName: string;
 }
@@ -1123,7 +1123,7 @@ export class CidrRoutingPolicyPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface FailoverRoutingPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#type AwsRoute53Record#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#type TfRecord#type}
   */
   readonly type: string;
 }
@@ -1174,15 +1174,15 @@ export class FailoverRoutingPolicyPropertyOutputReference extends cdktn.ComplexO
 }
 export interface GeolocationRoutingPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#continent AwsRoute53Record#continent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#continent TfRecord#continent}
   */
   readonly continent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#country AwsRoute53Record#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#country TfRecord#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#subdivision AwsRoute53Record#subdivision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#subdivision TfRecord#subdivision}
   */
   readonly subdivision?: string;
 }
@@ -1280,11 +1280,11 @@ export class GeolocationRoutingPolicyPropertyOutputReference extends cdktn.Compl
 }
 export interface CoordinatesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#latitude AwsRoute53Record#latitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#latitude TfRecord#latitude}
   */
   readonly latitude: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#longitude AwsRoute53Record#longitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#longitude TfRecord#longitude}
   */
   readonly longitude: string;
 }
@@ -1386,21 +1386,21 @@ export class CoordinatesPropertyList extends cdktn.ComplexList {
 }
 export interface GeoproximityRoutingPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#aws_region AwsRoute53Record#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#aws_region TfRecord#aws_region}
   */
   readonly awsRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#bias AwsRoute53Record#bias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#bias TfRecord#bias}
   */
   readonly bias?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#local_zone_group AwsRoute53Record#local_zone_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#local_zone_group TfRecord#local_zone_group}
   */
   readonly localZoneGroup?: string;
   /**
   * coordinates block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#coordinates AwsRoute53Record#coordinates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#coordinates TfRecord#coordinates}
   */
   readonly coordinates?: CoordinatesProperty[] | cdktn.IResolvable;
 }
@@ -1520,7 +1520,7 @@ export class GeoproximityRoutingPolicyPropertyOutputReference extends cdktn.Comp
 }
 export interface LatencyRoutingPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#region AwsRoute53Record#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#region TfRecord#region}
   */
   readonly region: string;
 }
@@ -1571,15 +1571,15 @@ export class LatencyRoutingPolicyPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#create AwsRoute53Record#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#create TfRecord#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#delete AwsRoute53Record#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#delete TfRecord#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#update AwsRoute53Record#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#update TfRecord#update}
   */
   readonly update?: string;
 }
@@ -1687,7 +1687,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WeightedRoutingPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#weight AwsRoute53Record#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_record#weight TfRecord#weight}
   */
   readonly weight: number;
 }

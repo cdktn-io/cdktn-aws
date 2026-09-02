@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApiGatewayUsagePlanKeyConfig extends cdktn.TerraformMetaArguments {
+export interface TfUsagePlanKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#id AwsApiGatewayUsagePlanKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#id TfUsagePlanKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#key_id AwsApiGatewayUsagePlanKey#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#key_id TfUsagePlanKey#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#key_type AwsApiGatewayUsagePlanKey#key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#key_type TfUsagePlanKey#key_type}
   */
   readonly keyType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#region AwsApiGatewayUsagePlanKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#region TfUsagePlanKey#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#usage_plan_id AwsApiGatewayUsagePlanKey#usage_plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#usage_plan_id TfUsagePlanKey#usage_plan_id}
   */
   readonly usagePlanId: string;
 }
@@ -36,7 +36,7 @@ export interface AwsApiGatewayUsagePlanKeyConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key aws_api_gateway_usage_plan_key}
 */
-export class AwsApiGatewayUsagePlanKey extends cdktn.TerraformResource {
+export class TfUsagePlanKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsApiGatewayUsagePlanKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApiGatewayUsagePlanKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUsagePlanKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApiGatewayUsagePlanKey to import
-  * @param importFromId The id of the existing AwsApiGatewayUsagePlanKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApiGatewayUsagePlanKey to import is found
+  * @param importToId The construct id used in the generated config for the TfUsagePlanKey to import
+  * @param importFromId The id of the existing TfUsagePlanKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUsagePlanKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_usage_plan_key", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsApiGatewayUsagePlanKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApiGatewayUsagePlanKeyConfig
+  * @param options TfUsagePlanKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApiGatewayUsagePlanKeyConfig) {
+  public constructor(scope: Construct, id: string, config: TfUsagePlanKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_usage_plan_key',
       terraformGeneratorMetadata: {

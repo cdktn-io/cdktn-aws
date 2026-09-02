@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebSessionLoggerAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfSessionLoggerAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#portal_arn AwsWorkspaceswebSessionLoggerAssociation#portal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#portal_arn TfSessionLoggerAssociation#portal_arn}
   */
   readonly portalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#region AwsWorkspaceswebSessionLoggerAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#region TfSessionLoggerAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#session_logger_arn AwsWorkspaceswebSessionLoggerAssociation#session_logger_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#session_logger_arn TfSessionLoggerAssociation#session_logger_arn}
   */
   readonly sessionLoggerArn: string;
 }
@@ -25,7 +25,7 @@ export interface AwsWorkspaceswebSessionLoggerAssociationConfig extends cdktn.Te
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association aws_workspacesweb_session_logger_association}
 */
-export class AwsWorkspaceswebSessionLoggerAssociation extends cdktn.TerraformResource {
+export class TfSessionLoggerAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsWorkspaceswebSessionLoggerAssociation extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebSessionLoggerAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSessionLoggerAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebSessionLoggerAssociation to import
-  * @param importFromId The id of the existing AwsWorkspaceswebSessionLoggerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebSessionLoggerAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfSessionLoggerAssociation to import
+  * @param importFromId The id of the existing TfSessionLoggerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSessionLoggerAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_session_logger_association", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsWorkspaceswebSessionLoggerAssociation extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebSessionLoggerAssociationConfig
+  * @param options TfSessionLoggerAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebSessionLoggerAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfSessionLoggerAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_session_logger_association',
       terraformGeneratorMetadata: {

@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDevopsguruResourceCollectionConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceCollectionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#region AwsDevopsguruResourceCollection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#region TfResourceCollection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#type AwsDevopsguruResourceCollection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#type TfResourceCollection#type}
   */
   readonly type: string;
   /**
   * cloudformation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#cloudformation AwsDevopsguruResourceCollection#cloudformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#cloudformation TfResourceCollection#cloudformation}
   */
-  readonly cloudformation?: AwsDevopsguruResourceCollection.CloudformationProperty[] | cdktn.IResolvable;
+  readonly cloudformation?: TfResourceCollection.CloudformationProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#tags AwsDevopsguruResourceCollection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#tags TfResourceCollection#tags}
   */
-  readonly tags?: AwsDevopsguruResourceCollection.TagsProperty[] | cdktn.IResolvable;
+  readonly tags?: TfResourceCollection.TagsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection aws_devopsguru_resource_collection}
 */
-export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
+export class TfResourceCollection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDevopsguruResourceCollection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceCollection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDevopsguruResourceCollection to import
-  * @param importFromId The id of the existing AwsDevopsguruResourceCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDevopsguruResourceCollection to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceCollection to import
+  * @param importFromId The id of the existing TfResourceCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceCollection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devopsguru_resource_collection", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDevopsguruResourceCollectionConfig
+  * @param options TfResourceCollectionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDevopsguruResourceCollectionConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceCollectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_devopsguru_resource_collection',
       terraformGeneratorMetadata: {
@@ -126,11 +126,11 @@ export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
   }
 
   // cloudformation - computed: false, optional: true, required: false
-  private _cloudformation = new AwsDevopsguruResourceCollection.CloudformationPropertyList(this, "cloudformation", false);
+  private _cloudformation = new TfResourceCollection.CloudformationPropertyList(this, "cloudformation", false);
   public get cloudformation() {
     return this._cloudformation;
   }
-  public putCloudformation(value: AwsDevopsguruResourceCollection.CloudformationProperty[] | cdktn.IResolvable) {
+  public putCloudformation(value: TfResourceCollection.CloudformationProperty[] | cdktn.IResolvable) {
     this._cloudformation.internalValue = value;
   }
   public resetCloudformation() {
@@ -142,11 +142,11 @@ export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags = new AwsDevopsguruResourceCollection.TagsPropertyList(this, "tags", false);
+  private _tags = new TfResourceCollection.TagsPropertyList(this, "tags", false);
   public get tags() {
     return this._tags;
   }
-  public putTags(value: AwsDevopsguruResourceCollection.TagsProperty[] | cdktn.IResolvable) {
+  public putTags(value: TfResourceCollection.TagsProperty[] | cdktn.IResolvable) {
     this._tags.internalValue = value;
   }
   public resetTags() {
@@ -165,8 +165,8 @@ export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       type: cdktn.stringToTerraform(this._type),
-      cloudformation: cdktn.listMapper(awsDevopsguruResourceCollectionCloudformationPropertyToTerraform, true)(this._cloudformation.internalValue),
-      tags: cdktn.listMapper(awsDevopsguruResourceCollectionTagsPropertyToTerraform, true)(this._tags.internalValue),
+      cloudformation: cdktn.listMapper(tfResourceCollectionCloudformationPropertyToTerraform, true)(this._cloudformation.internalValue),
+      tags: cdktn.listMapper(tfResourceCollectionTagsPropertyToTerraform, true)(this._tags.internalValue),
     };
   }
 
@@ -185,16 +185,16 @@ export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cloudformation: {
-        value: cdktn.listMapperHcl(awsDevopsguruResourceCollectionCloudformationPropertyToHclTerraform, true)(this._cloudformation.internalValue),
+        value: cdktn.listMapperHcl(tfResourceCollectionCloudformationPropertyToHclTerraform, true)(this._cloudformation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDevopsguruResourceCollection.CloudformationPropertyList",
+        storageClassType: "TfResourceCollection.CloudformationPropertyList",
       },
       tags: {
-        value: cdktn.listMapperHcl(awsDevopsguruResourceCollectionTagsPropertyToHclTerraform, true)(this._tags.internalValue),
+        value: cdktn.listMapperHcl(tfResourceCollectionTagsPropertyToHclTerraform, true)(this._tags.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDevopsguruResourceCollection.TagsPropertyList",
+        storageClassType: "TfResourceCollection.TagsPropertyList",
       },
     };
 
@@ -203,7 +203,7 @@ export class AwsDevopsguruResourceCollection extends cdktn.TerraformResource {
   }
 }
 
-export function awsDevopsguruResourceCollectionCloudformationPropertyToTerraform(struct?: AwsDevopsguruResourceCollection.CloudformationProperty | cdktn.IResolvable): any {
+export function tfResourceCollectionCloudformationPropertyToTerraform(struct?: TfResourceCollection.CloudformationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,7 +214,7 @@ export function awsDevopsguruResourceCollectionCloudformationPropertyToTerraform
 }
 
 
-export function awsDevopsguruResourceCollectionCloudformationPropertyToHclTerraform(struct?: AwsDevopsguruResourceCollection.CloudformationProperty | cdktn.IResolvable): any {
+export function tfResourceCollectionCloudformationPropertyToHclTerraform(struct?: TfResourceCollection.CloudformationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function awsDevopsguruResourceCollectionCloudformationPropertyToHclTerraf
 }
 
 
-export function awsDevopsguruResourceCollectionTagsPropertyToTerraform(struct?: AwsDevopsguruResourceCollection.TagsProperty | cdktn.IResolvable): any {
+export function tfResourceCollectionTagsPropertyToTerraform(struct?: TfResourceCollection.TagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function awsDevopsguruResourceCollectionTagsPropertyToTerraform(struct?: 
 }
 
 
-export function awsDevopsguruResourceCollectionTagsPropertyToHclTerraform(struct?: AwsDevopsguruResourceCollection.TagsProperty | cdktn.IResolvable): any {
+export function tfResourceCollectionTagsPropertyToHclTerraform(struct?: TfResourceCollection.TagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,10 +270,10 @@ export function awsDevopsguruResourceCollectionTagsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsDevopsguruResourceCollection {
+export namespace TfResourceCollection {
 export interface CloudformationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#stack_names AwsDevopsguruResourceCollection#stack_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#stack_names TfResourceCollection#stack_names}
   */
   readonly stackNames: string[];
 }
@@ -356,11 +356,11 @@ export class CloudformationPropertyList extends cdktn.ComplexList {
 }
 export interface TagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#app_boundary_key AwsDevopsguruResourceCollection#app_boundary_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#app_boundary_key TfResourceCollection#app_boundary_key}
   */
   readonly appBoundaryKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#tag_values AwsDevopsguruResourceCollection#tag_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_resource_collection#tag_values TfResourceCollection#tag_values}
   */
   readonly tagValues: string[];
 }

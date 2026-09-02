@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfLocalGatewayRouteTableVirtualInterfaceGroupAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#local_gateway_route_table_id AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation#local_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#local_gateway_route_table_id TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation#local_gateway_route_table_id}
   */
   readonly localGatewayRouteTableId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#local_gateway_virtual_interface_group_id AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation#local_gateway_virtual_interface_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#local_gateway_virtual_interface_group_id TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation#local_gateway_virtual_interface_group_id}
   */
   readonly localGatewayVirtualInterfaceGroupId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#region AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#region TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#tags AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#tags TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -29,7 +29,7 @@ export interface AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociationCon
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association aws_ec2_local_gateway_route_table_virtual_interface_group_association}
 */
-export class AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation extends cdktn.TerraformResource {
+export class TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation extend
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation to import
-  * @param importFromId The id of the existing AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation to import
+  * @param importFromId The id of the existing TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_virtual_interface_group_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLocalGatewayRouteTableVirtualInterfaceGroupAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_local_gateway_route_table_virtual_interface_group_association", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociation extend
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociationConfig
+  * @param options TfLocalGatewayRouteTableVirtualInterfaceGroupAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2LocalGatewayRouteTableVirtualInterfaceGroupAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfLocalGatewayRouteTableVirtualInterfaceGroupAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_local_gateway_route_table_virtual_interface_group_association',
       terraformGeneratorMetadata: {

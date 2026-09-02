@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerWorkforceConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkforceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#id AwsSagemakerWorkforce#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#id TfWorkforce#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,43 +16,43 @@ export interface AwsSagemakerWorkforceConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#region AwsSagemakerWorkforce#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#region TfWorkforce#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#workforce_name AwsSagemakerWorkforce#workforce_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#workforce_name TfWorkforce#workforce_name}
   */
   readonly workforceName: string;
   /**
   * cognito_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#cognito_config AwsSagemakerWorkforce#cognito_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#cognito_config TfWorkforce#cognito_config}
   */
-  readonly cognitoConfig?: AwsSagemakerWorkforce.CognitoConfigProperty;
+  readonly cognitoConfig?: TfWorkforce.CognitoConfigProperty;
   /**
   * oidc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#oidc_config AwsSagemakerWorkforce#oidc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#oidc_config TfWorkforce#oidc_config}
   */
-  readonly oidcConfig?: AwsSagemakerWorkforce.OidcConfigProperty;
+  readonly oidcConfig?: TfWorkforce.OidcConfigProperty;
   /**
   * source_ip_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#source_ip_config AwsSagemakerWorkforce#source_ip_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#source_ip_config TfWorkforce#source_ip_config}
   */
-  readonly sourceIpConfig?: AwsSagemakerWorkforce.SourceIpConfigProperty;
+  readonly sourceIpConfig?: TfWorkforce.SourceIpConfigProperty;
   /**
   * workforce_vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#workforce_vpc_config AwsSagemakerWorkforce#workforce_vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#workforce_vpc_config TfWorkforce#workforce_vpc_config}
   */
-  readonly workforceVpcConfig?: AwsSagemakerWorkforce.WorkforceVpcConfigProperty;
+  readonly workforceVpcConfig?: TfWorkforce.WorkforceVpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce aws_sagemaker_workforce}
 */
-export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
+export class TfWorkforce extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerWorkforce resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkforce resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerWorkforce to import
-  * @param importFromId The id of the existing AwsSagemakerWorkforce that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerWorkforce to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkforce to import
+  * @param importFromId The id of the existing TfWorkforce that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkforce to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_workforce", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerWorkforceConfig
+  * @param options TfWorkforceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerWorkforceConfig) {
+  public constructor(scope: Construct, id: string, config: TfWorkforceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_workforce',
       terraformGeneratorMetadata: {
@@ -169,11 +169,11 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
   }
 
   // cognito_config - computed: false, optional: true, required: false
-  private _cognitoConfig = new AwsSagemakerWorkforce.CognitoConfigPropertyOutputReference(this, "cognito_config");
+  private _cognitoConfig = new TfWorkforce.CognitoConfigPropertyOutputReference(this, "cognito_config");
   public get cognitoConfig() {
     return this._cognitoConfig;
   }
-  public putCognitoConfig(value: AwsSagemakerWorkforce.CognitoConfigProperty) {
+  public putCognitoConfig(value: TfWorkforce.CognitoConfigProperty) {
     this._cognitoConfig.internalValue = value;
   }
   public resetCognitoConfig() {
@@ -185,11 +185,11 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
   }
 
   // oidc_config - computed: false, optional: true, required: false
-  private _oidcConfig = new AwsSagemakerWorkforce.OidcConfigPropertyOutputReference(this, "oidc_config");
+  private _oidcConfig = new TfWorkforce.OidcConfigPropertyOutputReference(this, "oidc_config");
   public get oidcConfig() {
     return this._oidcConfig;
   }
-  public putOidcConfig(value: AwsSagemakerWorkforce.OidcConfigProperty) {
+  public putOidcConfig(value: TfWorkforce.OidcConfigProperty) {
     this._oidcConfig.internalValue = value;
   }
   public resetOidcConfig() {
@@ -201,11 +201,11 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
   }
 
   // source_ip_config - computed: false, optional: true, required: false
-  private _sourceIpConfig = new AwsSagemakerWorkforce.SourceIpConfigPropertyOutputReference(this, "source_ip_config");
+  private _sourceIpConfig = new TfWorkforce.SourceIpConfigPropertyOutputReference(this, "source_ip_config");
   public get sourceIpConfig() {
     return this._sourceIpConfig;
   }
-  public putSourceIpConfig(value: AwsSagemakerWorkforce.SourceIpConfigProperty) {
+  public putSourceIpConfig(value: TfWorkforce.SourceIpConfigProperty) {
     this._sourceIpConfig.internalValue = value;
   }
   public resetSourceIpConfig() {
@@ -217,11 +217,11 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
   }
 
   // workforce_vpc_config - computed: false, optional: true, required: false
-  private _workforceVpcConfig = new AwsSagemakerWorkforce.WorkforceVpcConfigPropertyOutputReference(this, "workforce_vpc_config");
+  private _workforceVpcConfig = new TfWorkforce.WorkforceVpcConfigPropertyOutputReference(this, "workforce_vpc_config");
   public get workforceVpcConfig() {
     return this._workforceVpcConfig;
   }
-  public putWorkforceVpcConfig(value: AwsSagemakerWorkforce.WorkforceVpcConfigProperty) {
+  public putWorkforceVpcConfig(value: TfWorkforce.WorkforceVpcConfigProperty) {
     this._workforceVpcConfig.internalValue = value;
   }
   public resetWorkforceVpcConfig() {
@@ -241,10 +241,10 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       workforce_name: cdktn.stringToTerraform(this._workforceName),
-      cognito_config: awsSagemakerWorkforceCognitoConfigPropertyToTerraform(this._cognitoConfig.internalValue),
-      oidc_config: awsSagemakerWorkforceOidcConfigPropertyToTerraform(this._oidcConfig.internalValue),
-      source_ip_config: awsSagemakerWorkforceSourceIpConfigPropertyToTerraform(this._sourceIpConfig.internalValue),
-      workforce_vpc_config: awsSagemakerWorkforceWorkforceVpcConfigPropertyToTerraform(this._workforceVpcConfig.internalValue),
+      cognito_config: tfWorkforceCognitoConfigPropertyToTerraform(this._cognitoConfig.internalValue),
+      oidc_config: tfWorkforceOidcConfigPropertyToTerraform(this._oidcConfig.internalValue),
+      source_ip_config: tfWorkforceSourceIpConfigPropertyToTerraform(this._sourceIpConfig.internalValue),
+      workforce_vpc_config: tfWorkforceWorkforceVpcConfigPropertyToTerraform(this._workforceVpcConfig.internalValue),
     };
   }
 
@@ -269,28 +269,28 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cognito_config: {
-        value: awsSagemakerWorkforceCognitoConfigPropertyToHclTerraform(this._cognitoConfig.internalValue),
+        value: tfWorkforceCognitoConfigPropertyToHclTerraform(this._cognitoConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerWorkforce.CognitoConfigPropertyList",
+        storageClassType: "TfWorkforce.CognitoConfigPropertyList",
       },
       oidc_config: {
-        value: awsSagemakerWorkforceOidcConfigPropertyToHclTerraform(this._oidcConfig.internalValue),
+        value: tfWorkforceOidcConfigPropertyToHclTerraform(this._oidcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerWorkforce.OidcConfigPropertyList",
+        storageClassType: "TfWorkforce.OidcConfigPropertyList",
       },
       source_ip_config: {
-        value: awsSagemakerWorkforceSourceIpConfigPropertyToHclTerraform(this._sourceIpConfig.internalValue),
+        value: tfWorkforceSourceIpConfigPropertyToHclTerraform(this._sourceIpConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerWorkforce.SourceIpConfigPropertyList",
+        storageClassType: "TfWorkforce.SourceIpConfigPropertyList",
       },
       workforce_vpc_config: {
-        value: awsSagemakerWorkforceWorkforceVpcConfigPropertyToHclTerraform(this._workforceVpcConfig.internalValue),
+        value: tfWorkforceWorkforceVpcConfigPropertyToHclTerraform(this._workforceVpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerWorkforce.WorkforceVpcConfigPropertyList",
+        storageClassType: "TfWorkforce.WorkforceVpcConfigPropertyList",
       },
     };
 
@@ -299,7 +299,7 @@ export class AwsSagemakerWorkforce extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerWorkforceCognitoConfigPropertyToTerraform(struct?: AwsSagemakerWorkforce.CognitoConfigPropertyOutputReference | AwsSagemakerWorkforce.CognitoConfigProperty): any {
+export function tfWorkforceCognitoConfigPropertyToTerraform(struct?: TfWorkforce.CognitoConfigPropertyOutputReference | TfWorkforce.CognitoConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function awsSagemakerWorkforceCognitoConfigPropertyToTerraform(struct?: A
 }
 
 
-export function awsSagemakerWorkforceCognitoConfigPropertyToHclTerraform(struct?: AwsSagemakerWorkforce.CognitoConfigPropertyOutputReference | AwsSagemakerWorkforce.CognitoConfigProperty): any {
+export function tfWorkforceCognitoConfigPropertyToHclTerraform(struct?: TfWorkforce.CognitoConfigPropertyOutputReference | TfWorkforce.CognitoConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function awsSagemakerWorkforceCognitoConfigPropertyToHclTerraform(struct?
 }
 
 
-export function awsSagemakerWorkforceOidcConfigPropertyToTerraform(struct?: AwsSagemakerWorkforce.OidcConfigPropertyOutputReference | AwsSagemakerWorkforce.OidcConfigProperty): any {
+export function tfWorkforceOidcConfigPropertyToTerraform(struct?: TfWorkforce.OidcConfigPropertyOutputReference | TfWorkforce.OidcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function awsSagemakerWorkforceOidcConfigPropertyToTerraform(struct?: AwsS
 }
 
 
-export function awsSagemakerWorkforceOidcConfigPropertyToHclTerraform(struct?: AwsSagemakerWorkforce.OidcConfigPropertyOutputReference | AwsSagemakerWorkforce.OidcConfigProperty): any {
+export function tfWorkforceOidcConfigPropertyToHclTerraform(struct?: TfWorkforce.OidcConfigPropertyOutputReference | TfWorkforce.OidcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsSagemakerWorkforceOidcConfigPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsSagemakerWorkforceSourceIpConfigPropertyToTerraform(struct?: AwsSagemakerWorkforce.SourceIpConfigPropertyOutputReference | AwsSagemakerWorkforce.SourceIpConfigProperty): any {
+export function tfWorkforceSourceIpConfigPropertyToTerraform(struct?: TfWorkforce.SourceIpConfigPropertyOutputReference | TfWorkforce.SourceIpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function awsSagemakerWorkforceSourceIpConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsSagemakerWorkforceSourceIpConfigPropertyToHclTerraform(struct?: AwsSagemakerWorkforce.SourceIpConfigPropertyOutputReference | AwsSagemakerWorkforce.SourceIpConfigProperty): any {
+export function tfWorkforceSourceIpConfigPropertyToHclTerraform(struct?: TfWorkforce.SourceIpConfigPropertyOutputReference | TfWorkforce.SourceIpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function awsSagemakerWorkforceSourceIpConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsSagemakerWorkforceWorkforceVpcConfigPropertyToTerraform(struct?: AwsSagemakerWorkforce.WorkforceVpcConfigPropertyOutputReference | AwsSagemakerWorkforce.WorkforceVpcConfigProperty): any {
+export function tfWorkforceWorkforceVpcConfigPropertyToTerraform(struct?: TfWorkforce.WorkforceVpcConfigPropertyOutputReference | TfWorkforce.WorkforceVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function awsSagemakerWorkforceWorkforceVpcConfigPropertyToTerraform(struc
 }
 
 
-export function awsSagemakerWorkforceWorkforceVpcConfigPropertyToHclTerraform(struct?: AwsSagemakerWorkforce.WorkforceVpcConfigPropertyOutputReference | AwsSagemakerWorkforce.WorkforceVpcConfigProperty): any {
+export function tfWorkforceWorkforceVpcConfigPropertyToHclTerraform(struct?: TfWorkforce.WorkforceVpcConfigPropertyOutputReference | TfWorkforce.WorkforceVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,14 +503,14 @@ export function awsSagemakerWorkforceWorkforceVpcConfigPropertyToHclTerraform(st
 }
 
 
-export namespace AwsSagemakerWorkforce {
+export namespace TfWorkforce {
 export interface CognitoConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#client_id AwsSagemakerWorkforce#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#client_id TfWorkforce#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#user_pool AwsSagemakerWorkforce#user_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#user_pool TfWorkforce#user_pool}
   */
   readonly userPool: string;
 }
@@ -580,43 +580,43 @@ export class CognitoConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OidcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#authentication_request_extra_params AwsSagemakerWorkforce#authentication_request_extra_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#authentication_request_extra_params TfWorkforce#authentication_request_extra_params}
   */
   readonly authenticationRequestExtraParams?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#authorization_endpoint AwsSagemakerWorkforce#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#authorization_endpoint TfWorkforce#authorization_endpoint}
   */
   readonly authorizationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#client_id AwsSagemakerWorkforce#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#client_id TfWorkforce#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#client_secret AwsSagemakerWorkforce#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#client_secret TfWorkforce#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#issuer AwsSagemakerWorkforce#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#issuer TfWorkforce#issuer}
   */
   readonly issuer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#jwks_uri AwsSagemakerWorkforce#jwks_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#jwks_uri TfWorkforce#jwks_uri}
   */
   readonly jwksUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#logout_endpoint AwsSagemakerWorkforce#logout_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#logout_endpoint TfWorkforce#logout_endpoint}
   */
   readonly logoutEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#scope AwsSagemakerWorkforce#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#scope TfWorkforce#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#token_endpoint AwsSagemakerWorkforce#token_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#token_endpoint TfWorkforce#token_endpoint}
   */
   readonly tokenEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#user_info_endpoint AwsSagemakerWorkforce#user_info_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#user_info_endpoint TfWorkforce#user_info_endpoint}
   */
   readonly userInfoEndpoint: string;
 }
@@ -844,7 +844,7 @@ export class OidcConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceIpConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#cidrs AwsSagemakerWorkforce#cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#cidrs TfWorkforce#cidrs}
   */
   readonly cidrs: string[];
 }
@@ -895,15 +895,15 @@ export class SourceIpConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WorkforceVpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#security_group_ids AwsSagemakerWorkforce#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#security_group_ids TfWorkforce#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#subnets AwsSagemakerWorkforce#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#subnets TfWorkforce#subnets}
   */
   readonly subnets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#vpc_id AwsSagemakerWorkforce#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workforce#vpc_id TfWorkforce#vpc_id}
   */
   readonly vpcId?: string;
 }

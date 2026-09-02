@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsChimeVoiceConnectorTerminationConfig extends cdktn.TerraformMetaArguments {
+export interface TfVoiceConnectorTerminationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#calling_regions AwsChimeVoiceConnectorTermination#calling_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#calling_regions TfVoiceConnectorTermination#calling_regions}
   */
   readonly callingRegions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#cidr_allow_list AwsChimeVoiceConnectorTermination#cidr_allow_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#cidr_allow_list TfVoiceConnectorTermination#cidr_allow_list}
   */
   readonly cidrAllowList: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#cps_limit AwsChimeVoiceConnectorTermination#cps_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#cps_limit TfVoiceConnectorTermination#cps_limit}
   */
   readonly cpsLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#default_phone_number AwsChimeVoiceConnectorTermination#default_phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#default_phone_number TfVoiceConnectorTermination#default_phone_number}
   */
   readonly defaultPhoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#disabled AwsChimeVoiceConnectorTermination#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#disabled TfVoiceConnectorTermination#disabled}
   */
   readonly disabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#id AwsChimeVoiceConnectorTermination#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#id TfVoiceConnectorTermination#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,11 +36,11 @@ export interface AwsChimeVoiceConnectorTerminationConfig extends cdktn.Terraform
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#region AwsChimeVoiceConnectorTermination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#region TfVoiceConnectorTermination#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#voice_connector_id AwsChimeVoiceConnectorTermination#voice_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#voice_connector_id TfVoiceConnectorTermination#voice_connector_id}
   */
   readonly voiceConnectorId: string;
 }
@@ -48,7 +48,7 @@ export interface AwsChimeVoiceConnectorTerminationConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination aws_chime_voice_connector_termination}
 */
-export class AwsChimeVoiceConnectorTermination extends cdktn.TerraformResource {
+export class TfVoiceConnectorTermination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsChimeVoiceConnectorTermination extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsChimeVoiceConnectorTermination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVoiceConnectorTermination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsChimeVoiceConnectorTermination to import
-  * @param importFromId The id of the existing AwsChimeVoiceConnectorTermination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsChimeVoiceConnectorTermination to import is found
+  * @param importToId The construct id used in the generated config for the TfVoiceConnectorTermination to import
+  * @param importFromId The id of the existing TfVoiceConnectorTermination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVoiceConnectorTermination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chime_voice_connector_termination", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsChimeVoiceConnectorTermination extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsChimeVoiceConnectorTerminationConfig
+  * @param options TfVoiceConnectorTerminationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsChimeVoiceConnectorTerminationConfig) {
+  public constructor(scope: Construct, id: string, config: TfVoiceConnectorTerminationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chime_voice_connector_termination',
       terraformGeneratorMetadata: {

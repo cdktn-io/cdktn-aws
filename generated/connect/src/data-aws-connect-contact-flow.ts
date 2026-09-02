@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsConnectContactFlowConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfContactFlowConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#contact_flow_id DataAwsConnectContactFlow#contact_flow_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#contact_flow_id DataTfContactFlow#contact_flow_id}
   */
   readonly contactFlowId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#id DataAwsConnectContactFlow#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#id DataTfContactFlow#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#instance_id DataAwsConnectContactFlow#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#instance_id DataTfContactFlow#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#name DataAwsConnectContactFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#name DataTfContactFlow#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#region DataAwsConnectContactFlow#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#region DataTfContactFlow#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#tags DataAwsConnectContactFlow#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#tags DataTfContactFlow#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#type DataAwsConnectContactFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#type DataTfContactFlow#type}
   */
   readonly type?: string;
 }
@@ -44,7 +44,7 @@ export interface DataAwsConnectContactFlowConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow aws_connect_contact_flow}
 */
-export class DataAwsConnectContactFlow extends cdktn.TerraformDataSource {
+export class DataTfContactFlow extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataAwsConnectContactFlow extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsConnectContactFlow resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfContactFlow resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsConnectContactFlow to import
-  * @param importFromId The id of the existing DataAwsConnectContactFlow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsConnectContactFlow to import is found
+  * @param importToId The construct id used in the generated config for the DataTfContactFlow to import
+  * @param importFromId The id of the existing DataTfContactFlow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfContactFlow to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_contact_flow", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataAwsConnectContactFlow extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsConnectContactFlowConfig
+  * @param options DataTfContactFlowConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsConnectContactFlowConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfContactFlowConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_contact_flow',
       terraformGeneratorMetadata: {

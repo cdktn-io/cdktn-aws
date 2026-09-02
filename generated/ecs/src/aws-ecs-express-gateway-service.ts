@@ -5,79 +5,79 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcsExpressGatewayServiceConfig extends cdktn.TerraformMetaArguments {
+export interface TfExpressGatewayServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#cluster AwsEcsExpressGatewayService#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#cluster TfExpressGatewayService#cluster}
   */
   readonly cluster?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#cpu AwsEcsExpressGatewayService#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#cpu TfExpressGatewayService#cpu}
   */
   readonly cpu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#execution_role_arn AwsEcsExpressGatewayService#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#execution_role_arn TfExpressGatewayService#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#health_check_path AwsEcsExpressGatewayService#health_check_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#health_check_path TfExpressGatewayService#health_check_path}
   */
   readonly healthCheckPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#infrastructure_role_arn AwsEcsExpressGatewayService#infrastructure_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#infrastructure_role_arn TfExpressGatewayService#infrastructure_role_arn}
   */
   readonly infrastructureRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#memory AwsEcsExpressGatewayService#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#memory TfExpressGatewayService#memory}
   */
   readonly memory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#network_configuration AwsEcsExpressGatewayService#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#network_configuration TfExpressGatewayService#network_configuration}
   */
-  readonly networkConfiguration?: AwsEcsExpressGatewayService.NetworkConfigurationProperty[] | cdktn.IResolvable;
+  readonly networkConfiguration?: TfExpressGatewayService.NetworkConfigurationProperty[] | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#region AwsEcsExpressGatewayService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#region TfExpressGatewayService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#scaling_target AwsEcsExpressGatewayService#scaling_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#scaling_target TfExpressGatewayService#scaling_target}
   */
-  readonly scalingTarget?: AwsEcsExpressGatewayService.ScalingTargetProperty[] | cdktn.IResolvable;
+  readonly scalingTarget?: TfExpressGatewayService.ScalingTargetProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#service_name AwsEcsExpressGatewayService#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#service_name TfExpressGatewayService#service_name}
   */
   readonly serviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#tags AwsEcsExpressGatewayService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#tags TfExpressGatewayService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#task_role_arn AwsEcsExpressGatewayService#task_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#task_role_arn TfExpressGatewayService#task_role_arn}
   */
   readonly taskRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#wait_for_steady_state AwsEcsExpressGatewayService#wait_for_steady_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#wait_for_steady_state TfExpressGatewayService#wait_for_steady_state}
   */
   readonly waitForSteadyState?: boolean | cdktn.IResolvable;
   /**
   * primary_container block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#primary_container AwsEcsExpressGatewayService#primary_container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#primary_container TfExpressGatewayService#primary_container}
   */
-  readonly primaryContainer?: AwsEcsExpressGatewayService.PrimaryContainerProperty[] | cdktn.IResolvable;
+  readonly primaryContainer?: TfExpressGatewayService.PrimaryContainerProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#timeouts AwsEcsExpressGatewayService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#timeouts TfExpressGatewayService#timeouts}
   */
-  readonly timeouts?: AwsEcsExpressGatewayService.TimeoutsProperty;
+  readonly timeouts?: TfExpressGatewayService.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service aws_ecs_express_gateway_service}
 */
-export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
+export class TfExpressGatewayService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -88,11 +88,11 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcsExpressGatewayService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfExpressGatewayService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcsExpressGatewayService to import
-  * @param importFromId The id of the existing AwsEcsExpressGatewayService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcsExpressGatewayService to import is found
+  * @param importToId The construct id used in the generated config for the TfExpressGatewayService to import
+  * @param importFromId The id of the existing TfExpressGatewayService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfExpressGatewayService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_express_gateway_service", importId: importFromId, provider });
@@ -107,9 +107,9 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcsExpressGatewayServiceConfig
+  * @param options TfExpressGatewayServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcsExpressGatewayServiceConfig) {
+  public constructor(scope: Construct, id: string, config: TfExpressGatewayServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_express_gateway_service',
       terraformGeneratorMetadata: {
@@ -226,7 +226,7 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   }
 
   // ingress_paths - computed: true, optional: false, required: false
-  private _ingressPaths = new AwsEcsExpressGatewayService.IngressPathsPropertyList(this, "ingress_paths", false);
+  private _ingressPaths = new TfExpressGatewayService.IngressPathsPropertyList(this, "ingress_paths", false);
   public get ingressPaths() {
     return this._ingressPaths;
   }
@@ -248,11 +248,11 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: true, optional: true, required: false
-  private _networkConfiguration = new AwsEcsExpressGatewayService.NetworkConfigurationPropertyList(this, "network_configuration", false);
+  private _networkConfiguration = new TfExpressGatewayService.NetworkConfigurationPropertyList(this, "network_configuration", false);
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: AwsEcsExpressGatewayService.NetworkConfigurationProperty[] | cdktn.IResolvable) {
+  public putNetworkConfiguration(value: TfExpressGatewayService.NetworkConfigurationProperty[] | cdktn.IResolvable) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -280,11 +280,11 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   }
 
   // scaling_target - computed: true, optional: true, required: false
-  private _scalingTarget = new AwsEcsExpressGatewayService.ScalingTargetPropertyList(this, "scaling_target", false);
+  private _scalingTarget = new TfExpressGatewayService.ScalingTargetPropertyList(this, "scaling_target", false);
   public get scalingTarget() {
     return this._scalingTarget;
   }
-  public putScalingTarget(value: AwsEcsExpressGatewayService.ScalingTargetProperty[] | cdktn.IResolvable) {
+  public putScalingTarget(value: TfExpressGatewayService.ScalingTargetProperty[] | cdktn.IResolvable) {
     this._scalingTarget.internalValue = value;
   }
   public resetScalingTarget() {
@@ -376,11 +376,11 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   }
 
   // primary_container - computed: false, optional: true, required: false
-  private _primaryContainer = new AwsEcsExpressGatewayService.PrimaryContainerPropertyList(this, "primary_container", false);
+  private _primaryContainer = new TfExpressGatewayService.PrimaryContainerPropertyList(this, "primary_container", false);
   public get primaryContainer() {
     return this._primaryContainer;
   }
-  public putPrimaryContainer(value: AwsEcsExpressGatewayService.PrimaryContainerProperty[] | cdktn.IResolvable) {
+  public putPrimaryContainer(value: TfExpressGatewayService.PrimaryContainerProperty[] | cdktn.IResolvable) {
     this._primaryContainer.internalValue = value;
   }
   public resetPrimaryContainer() {
@@ -392,11 +392,11 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEcsExpressGatewayService.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfExpressGatewayService.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEcsExpressGatewayService.TimeoutsProperty) {
+  public putTimeouts(value: TfExpressGatewayService.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -419,15 +419,15 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
       health_check_path: cdktn.stringToTerraform(this._healthCheckPath),
       infrastructure_role_arn: cdktn.stringToTerraform(this._infrastructureRoleArn),
       memory: cdktn.stringToTerraform(this._memory),
-      network_configuration: cdktn.listMapper(awsEcsExpressGatewayServiceNetworkConfigurationPropertyToTerraform, false)(this._networkConfiguration.internalValue),
+      network_configuration: cdktn.listMapper(tfExpressGatewayServiceNetworkConfigurationPropertyToTerraform, false)(this._networkConfiguration.internalValue),
       region: cdktn.stringToTerraform(this._region),
-      scaling_target: cdktn.listMapper(awsEcsExpressGatewayServiceScalingTargetPropertyToTerraform, false)(this._scalingTarget.internalValue),
+      scaling_target: cdktn.listMapper(tfExpressGatewayServiceScalingTargetPropertyToTerraform, false)(this._scalingTarget.internalValue),
       service_name: cdktn.stringToTerraform(this._serviceName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       task_role_arn: cdktn.stringToTerraform(this._taskRoleArn),
       wait_for_steady_state: cdktn.booleanToTerraform(this._waitForSteadyState),
-      primary_container: cdktn.listMapper(awsEcsExpressGatewayServicePrimaryContainerPropertyToTerraform, true)(this._primaryContainer.internalValue),
-      timeouts: awsEcsExpressGatewayServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      primary_container: cdktn.listMapper(tfExpressGatewayServicePrimaryContainerPropertyToTerraform, true)(this._primaryContainer.internalValue),
+      timeouts: tfExpressGatewayServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -470,10 +470,10 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       network_configuration: {
-        value: cdktn.listMapperHcl(awsEcsExpressGatewayServiceNetworkConfigurationPropertyToHclTerraform, false)(this._networkConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfExpressGatewayServiceNetworkConfigurationPropertyToHclTerraform, false)(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcsExpressGatewayService.NetworkConfigurationPropertyList",
+        storageClassType: "TfExpressGatewayService.NetworkConfigurationPropertyList",
       },
       region: {
         value: cdktn.stringToHclTerraform(this._region),
@@ -482,10 +482,10 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       scaling_target: {
-        value: cdktn.listMapperHcl(awsEcsExpressGatewayServiceScalingTargetPropertyToHclTerraform, false)(this._scalingTarget.internalValue),
+        value: cdktn.listMapperHcl(tfExpressGatewayServiceScalingTargetPropertyToHclTerraform, false)(this._scalingTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcsExpressGatewayService.ScalingTargetPropertyList",
+        storageClassType: "TfExpressGatewayService.ScalingTargetPropertyList",
       },
       service_name: {
         value: cdktn.stringToHclTerraform(this._serviceName),
@@ -512,16 +512,16 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       primary_container: {
-        value: cdktn.listMapperHcl(awsEcsExpressGatewayServicePrimaryContainerPropertyToHclTerraform, true)(this._primaryContainer.internalValue),
+        value: cdktn.listMapperHcl(tfExpressGatewayServicePrimaryContainerPropertyToHclTerraform, true)(this._primaryContainer.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcsExpressGatewayService.PrimaryContainerPropertyList",
+        storageClassType: "TfExpressGatewayService.PrimaryContainerPropertyList",
       },
       timeouts: {
-        value: awsEcsExpressGatewayServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfExpressGatewayServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEcsExpressGatewayService.TimeoutsProperty",
+        storageClassType: "TfExpressGatewayService.TimeoutsProperty",
       },
     };
 
@@ -530,7 +530,7 @@ export class AwsEcsExpressGatewayService extends cdktn.TerraformResource {
   }
 }
 
-export function awsEcsExpressGatewayServiceIngressPathsPropertyToTerraform(struct?: AwsEcsExpressGatewayService.IngressPathsProperty): any {
+export function tfExpressGatewayServiceIngressPathsPropertyToTerraform(struct?: TfExpressGatewayService.IngressPathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,7 +540,7 @@ export function awsEcsExpressGatewayServiceIngressPathsPropertyToTerraform(struc
 }
 
 
-export function awsEcsExpressGatewayServiceIngressPathsPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.IngressPathsProperty): any {
+export function tfExpressGatewayServiceIngressPathsPropertyToHclTerraform(struct?: TfExpressGatewayService.IngressPathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function awsEcsExpressGatewayServiceIngressPathsPropertyToHclTerraform(st
 }
 
 
-export function awsEcsExpressGatewayServiceNetworkConfigurationPropertyToTerraform(struct?: AwsEcsExpressGatewayService.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceNetworkConfigurationPropertyToTerraform(struct?: TfExpressGatewayService.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function awsEcsExpressGatewayServiceNetworkConfigurationPropertyToTerrafo
 }
 
 
-export function awsEcsExpressGatewayServiceNetworkConfigurationPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceNetworkConfigurationPropertyToHclTerraform(struct?: TfExpressGatewayService.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function awsEcsExpressGatewayServiceNetworkConfigurationPropertyToHclTerr
 }
 
 
-export function awsEcsExpressGatewayServiceScalingTargetPropertyToTerraform(struct?: AwsEcsExpressGatewayService.ScalingTargetProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceScalingTargetPropertyToTerraform(struct?: TfExpressGatewayService.ScalingTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function awsEcsExpressGatewayServiceScalingTargetPropertyToTerraform(stru
 }
 
 
-export function awsEcsExpressGatewayServiceScalingTargetPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.ScalingTargetProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceScalingTargetPropertyToHclTerraform(struct?: TfExpressGatewayService.ScalingTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,7 +639,7 @@ export function awsEcsExpressGatewayServiceScalingTargetPropertyToHclTerraform(s
 }
 
 
-export function awsEcsExpressGatewayServiceAwsLogsConfigurationPropertyToTerraform(struct?: AwsEcsExpressGatewayService.AwsLogsConfigurationProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceAwsLogsConfigurationPropertyToTerraform(struct?: TfExpressGatewayService.AwsLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,7 +651,7 @@ export function awsEcsExpressGatewayServiceAwsLogsConfigurationPropertyToTerrafo
 }
 
 
-export function awsEcsExpressGatewayServiceAwsLogsConfigurationPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.AwsLogsConfigurationProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceAwsLogsConfigurationPropertyToHclTerraform(struct?: TfExpressGatewayService.AwsLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -676,7 +676,7 @@ export function awsEcsExpressGatewayServiceAwsLogsConfigurationPropertyToHclTerr
 }
 
 
-export function awsEcsExpressGatewayServiceEnvironmentPropertyToTerraform(struct?: AwsEcsExpressGatewayService.EnvironmentProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceEnvironmentPropertyToTerraform(struct?: TfExpressGatewayService.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function awsEcsExpressGatewayServiceEnvironmentPropertyToTerraform(struct
 }
 
 
-export function awsEcsExpressGatewayServiceEnvironmentPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.EnvironmentProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceEnvironmentPropertyToHclTerraform(struct?: TfExpressGatewayService.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -713,7 +713,7 @@ export function awsEcsExpressGatewayServiceEnvironmentPropertyToHclTerraform(str
 }
 
 
-export function awsEcsExpressGatewayServiceRepositoryCredentialsPropertyToTerraform(struct?: AwsEcsExpressGatewayService.RepositoryCredentialsProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceRepositoryCredentialsPropertyToTerraform(struct?: TfExpressGatewayService.RepositoryCredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,7 +724,7 @@ export function awsEcsExpressGatewayServiceRepositoryCredentialsPropertyToTerraf
 }
 
 
-export function awsEcsExpressGatewayServiceRepositoryCredentialsPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.RepositoryCredentialsProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceRepositoryCredentialsPropertyToHclTerraform(struct?: TfExpressGatewayService.RepositoryCredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -743,7 +743,7 @@ export function awsEcsExpressGatewayServiceRepositoryCredentialsPropertyToHclTer
 }
 
 
-export function awsEcsExpressGatewayServiceSecretPropertyToTerraform(struct?: AwsEcsExpressGatewayService.SecretProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceSecretPropertyToTerraform(struct?: TfExpressGatewayService.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -755,7 +755,7 @@ export function awsEcsExpressGatewayServiceSecretPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsEcsExpressGatewayServiceSecretPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.SecretProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceSecretPropertyToHclTerraform(struct?: TfExpressGatewayService.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -780,31 +780,31 @@ export function awsEcsExpressGatewayServiceSecretPropertyToHclTerraform(struct?:
 }
 
 
-export function awsEcsExpressGatewayServicePrimaryContainerPropertyToTerraform(struct?: AwsEcsExpressGatewayService.PrimaryContainerProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServicePrimaryContainerPropertyToTerraform(struct?: TfExpressGatewayService.PrimaryContainerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aws_logs_configuration: cdktn.listMapper(awsEcsExpressGatewayServiceAwsLogsConfigurationPropertyToTerraform, false)(struct!.awsLogsConfiguration),
+    aws_logs_configuration: cdktn.listMapper(tfExpressGatewayServiceAwsLogsConfigurationPropertyToTerraform, false)(struct!.awsLogsConfiguration),
     command: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.command),
     container_port: cdktn.numberToTerraform(struct!.containerPort),
     image: cdktn.stringToTerraform(struct!.image),
-    environment: cdktn.listMapper(awsEcsExpressGatewayServiceEnvironmentPropertyToTerraform, true)(struct!.environment),
-    repository_credentials: cdktn.listMapper(awsEcsExpressGatewayServiceRepositoryCredentialsPropertyToTerraform, true)(struct!.repositoryCredentials),
-    secret: cdktn.listMapper(awsEcsExpressGatewayServiceSecretPropertyToTerraform, true)(struct!.secret),
+    environment: cdktn.listMapper(tfExpressGatewayServiceEnvironmentPropertyToTerraform, true)(struct!.environment),
+    repository_credentials: cdktn.listMapper(tfExpressGatewayServiceRepositoryCredentialsPropertyToTerraform, true)(struct!.repositoryCredentials),
+    secret: cdktn.listMapper(tfExpressGatewayServiceSecretPropertyToTerraform, true)(struct!.secret),
   }
 }
 
 
-export function awsEcsExpressGatewayServicePrimaryContainerPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.PrimaryContainerProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServicePrimaryContainerPropertyToHclTerraform(struct?: TfExpressGatewayService.PrimaryContainerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aws_logs_configuration: {
-      value: cdktn.listMapperHcl(awsEcsExpressGatewayServiceAwsLogsConfigurationPropertyToHclTerraform, false)(struct!.awsLogsConfiguration),
+      value: cdktn.listMapperHcl(tfExpressGatewayServiceAwsLogsConfigurationPropertyToHclTerraform, false)(struct!.awsLogsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AwsLogsConfigurationPropertyList",
@@ -828,19 +828,19 @@ export function awsEcsExpressGatewayServicePrimaryContainerPropertyToHclTerrafor
       storageClassType: "string",
     },
     environment: {
-      value: cdktn.listMapperHcl(awsEcsExpressGatewayServiceEnvironmentPropertyToHclTerraform, true)(struct!.environment),
+      value: cdktn.listMapperHcl(tfExpressGatewayServiceEnvironmentPropertyToHclTerraform, true)(struct!.environment),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentPropertyList",
     },
     repository_credentials: {
-      value: cdktn.listMapperHcl(awsEcsExpressGatewayServiceRepositoryCredentialsPropertyToHclTerraform, true)(struct!.repositoryCredentials),
+      value: cdktn.listMapperHcl(tfExpressGatewayServiceRepositoryCredentialsPropertyToHclTerraform, true)(struct!.repositoryCredentials),
       isBlock: true,
       type: "list",
       storageClassType: "RepositoryCredentialsPropertyList",
     },
     secret: {
-      value: cdktn.listMapperHcl(awsEcsExpressGatewayServiceSecretPropertyToHclTerraform, true)(struct!.secret),
+      value: cdktn.listMapperHcl(tfExpressGatewayServiceSecretPropertyToHclTerraform, true)(struct!.secret),
       isBlock: true,
       type: "list",
       storageClassType: "SecretPropertyList",
@@ -852,7 +852,7 @@ export function awsEcsExpressGatewayServicePrimaryContainerPropertyToHclTerrafor
 }
 
 
-export function awsEcsExpressGatewayServiceTimeoutsPropertyToTerraform(struct?: AwsEcsExpressGatewayService.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceTimeoutsPropertyToTerraform(struct?: TfExpressGatewayService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -865,7 +865,7 @@ export function awsEcsExpressGatewayServiceTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function awsEcsExpressGatewayServiceTimeoutsPropertyToHclTerraform(struct?: AwsEcsExpressGatewayService.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfExpressGatewayServiceTimeoutsPropertyToHclTerraform(struct?: TfExpressGatewayService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -896,7 +896,7 @@ export function awsEcsExpressGatewayServiceTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsEcsExpressGatewayService {
+export namespace TfExpressGatewayService {
 export interface IngressPathsProperty {
 }
 export class IngressPathsPropertyOutputReference extends cdktn.ComplexObject {
@@ -958,11 +958,11 @@ export class IngressPathsPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#security_groups AwsEcsExpressGatewayService#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#security_groups TfExpressGatewayService#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#subnets AwsEcsExpressGatewayService#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#subnets TfExpressGatewayService#subnets}
   */
   readonly subnets?: string[];
 }
@@ -1070,19 +1070,19 @@ export class NetworkConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ScalingTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#auto_scaling_metric AwsEcsExpressGatewayService#auto_scaling_metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#auto_scaling_metric TfExpressGatewayService#auto_scaling_metric}
   */
   readonly autoScalingMetric?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#auto_scaling_target_value AwsEcsExpressGatewayService#auto_scaling_target_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#auto_scaling_target_value TfExpressGatewayService#auto_scaling_target_value}
   */
   readonly autoScalingTargetValue?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#max_task_count AwsEcsExpressGatewayService#max_task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#max_task_count TfExpressGatewayService#max_task_count}
   */
   readonly maxTaskCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#min_task_count AwsEcsExpressGatewayService#min_task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#min_task_count TfExpressGatewayService#min_task_count}
   */
   readonly minTaskCount?: number;
 }
@@ -1234,11 +1234,11 @@ export class ScalingTargetPropertyList extends cdktn.ComplexList {
 }
 export interface AwsLogsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#log_group AwsEcsExpressGatewayService#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#log_group TfExpressGatewayService#log_group}
   */
   readonly logGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#log_stream_prefix AwsEcsExpressGatewayService#log_stream_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#log_stream_prefix TfExpressGatewayService#log_stream_prefix}
   */
   readonly logStreamPrefix?: string;
 }
@@ -1346,11 +1346,11 @@ export class AwsLogsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface EnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#name AwsEcsExpressGatewayService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#name TfExpressGatewayService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#value AwsEcsExpressGatewayService#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#value TfExpressGatewayService#value}
   */
   readonly value: string;
 }
@@ -1452,7 +1452,7 @@ export class EnvironmentPropertyList extends cdktn.ComplexList {
 }
 export interface RepositoryCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#credentials_parameter AwsEcsExpressGatewayService#credentials_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#credentials_parameter TfExpressGatewayService#credentials_parameter}
   */
   readonly credentialsParameter: string;
 }
@@ -1535,11 +1535,11 @@ export class RepositoryCredentialsPropertyList extends cdktn.ComplexList {
 }
 export interface SecretProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#name AwsEcsExpressGatewayService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#name TfExpressGatewayService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#value_from AwsEcsExpressGatewayService#value_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#value_from TfExpressGatewayService#value_from}
   */
   readonly valueFrom: string;
 }
@@ -1641,37 +1641,37 @@ export class SecretPropertyList extends cdktn.ComplexList {
 }
 export interface PrimaryContainerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#aws_logs_configuration AwsEcsExpressGatewayService#aws_logs_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#aws_logs_configuration TfExpressGatewayService#aws_logs_configuration}
   */
   readonly awsLogsConfiguration?: AwsLogsConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#command AwsEcsExpressGatewayService#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#command TfExpressGatewayService#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#container_port AwsEcsExpressGatewayService#container_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#container_port TfExpressGatewayService#container_port}
   */
   readonly containerPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#image AwsEcsExpressGatewayService#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#image TfExpressGatewayService#image}
   */
   readonly image: string;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#environment AwsEcsExpressGatewayService#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#environment TfExpressGatewayService#environment}
   */
   readonly environment?: EnvironmentProperty[] | cdktn.IResolvable;
   /**
   * repository_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#repository_credentials AwsEcsExpressGatewayService#repository_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#repository_credentials TfExpressGatewayService#repository_credentials}
   */
   readonly repositoryCredentials?: RepositoryCredentialsProperty[] | cdktn.IResolvable;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#secret AwsEcsExpressGatewayService#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#secret TfExpressGatewayService#secret}
   */
   readonly secret?: SecretProperty[] | cdktn.IResolvable;
 }
@@ -1888,19 +1888,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#create AwsEcsExpressGatewayService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#create TfExpressGatewayService#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#delete AwsEcsExpressGatewayService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#delete TfExpressGatewayService#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#update AwsEcsExpressGatewayService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_express_gateway_service#update TfExpressGatewayService#update}
   */
   readonly update?: string;
 }

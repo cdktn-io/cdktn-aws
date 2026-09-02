@@ -5,49 +5,49 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEbsVolumeCopyConfig extends cdktn.TerraformMetaArguments {
+export interface TfVolumeCopyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#iops AwsEbsVolumeCopy#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#iops TfVolumeCopy#iops}
   */
   readonly iops?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#region AwsEbsVolumeCopy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#region TfVolumeCopy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#size AwsEbsVolumeCopy#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#size TfVolumeCopy#size}
   */
   readonly size?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#source_volume_id AwsEbsVolumeCopy#source_volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#source_volume_id TfVolumeCopy#source_volume_id}
   */
   readonly sourceVolumeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#tags AwsEbsVolumeCopy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#tags TfVolumeCopy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#throughput AwsEbsVolumeCopy#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#throughput TfVolumeCopy#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#volume_type AwsEbsVolumeCopy#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#volume_type TfVolumeCopy#volume_type}
   */
   readonly volumeType?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#timeouts AwsEbsVolumeCopy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#timeouts TfVolumeCopy#timeouts}
   */
-  readonly timeouts?: AwsEbsVolumeCopy.TimeoutsProperty;
+  readonly timeouts?: TfVolumeCopy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy aws_ebs_volume_copy}
 */
-export class AwsEbsVolumeCopy extends cdktn.TerraformResource {
+export class TfVolumeCopy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -58,11 +58,11 @@ export class AwsEbsVolumeCopy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEbsVolumeCopy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVolumeCopy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEbsVolumeCopy to import
-  * @param importFromId The id of the existing AwsEbsVolumeCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEbsVolumeCopy to import is found
+  * @param importToId The construct id used in the generated config for the TfVolumeCopy to import
+  * @param importFromId The id of the existing TfVolumeCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVolumeCopy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_volume_copy", importId: importFromId, provider });
@@ -77,9 +77,9 @@ export class AwsEbsVolumeCopy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEbsVolumeCopyConfig
+  * @param options TfVolumeCopyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEbsVolumeCopyConfig) {
+  public constructor(scope: Construct, id: string, config: TfVolumeCopyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_volume_copy',
       terraformGeneratorMetadata: {
@@ -240,11 +240,11 @@ export class AwsEbsVolumeCopy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEbsVolumeCopy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVolumeCopy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEbsVolumeCopy.TimeoutsProperty) {
+  public putTimeouts(value: TfVolumeCopy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -268,7 +268,7 @@ export class AwsEbsVolumeCopy extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       throughput: cdktn.numberToTerraform(this._throughput),
       volume_type: cdktn.stringToTerraform(this._volumeType),
-      timeouts: awsEbsVolumeCopyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfVolumeCopyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -317,10 +317,10 @@ export class AwsEbsVolumeCopy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsEbsVolumeCopyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVolumeCopyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEbsVolumeCopy.TimeoutsProperty",
+        storageClassType: "TfVolumeCopy.TimeoutsProperty",
       },
     };
 
@@ -329,7 +329,7 @@ export class AwsEbsVolumeCopy extends cdktn.TerraformResource {
   }
 }
 
-export function awsEbsVolumeCopyTimeoutsPropertyToTerraform(struct?: AwsEbsVolumeCopy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVolumeCopyTimeoutsPropertyToTerraform(struct?: TfVolumeCopy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function awsEbsVolumeCopyTimeoutsPropertyToTerraform(struct?: AwsEbsVolum
 }
 
 
-export function awsEbsVolumeCopyTimeoutsPropertyToHclTerraform(struct?: AwsEbsVolumeCopy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVolumeCopyTimeoutsPropertyToHclTerraform(struct?: TfVolumeCopy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,24 +373,24 @@ export function awsEbsVolumeCopyTimeoutsPropertyToHclTerraform(struct?: AwsEbsVo
 }
 
 
-export namespace AwsEbsVolumeCopy {
+export namespace TfVolumeCopy {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#create AwsEbsVolumeCopy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#create TfVolumeCopy#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#delete AwsEbsVolumeCopy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#delete TfVolumeCopy#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#update AwsEbsVolumeCopy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume_copy#update TfVolumeCopy#update}
   */
   readonly update?: string;
 }

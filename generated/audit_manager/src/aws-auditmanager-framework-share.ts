@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAuditmanagerFrameworkShareConfig extends cdktn.TerraformMetaArguments {
+export interface TfFrameworkShareConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#comment AwsAuditmanagerFrameworkShare#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#comment TfFrameworkShare#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#destination_account AwsAuditmanagerFrameworkShare#destination_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#destination_account TfFrameworkShare#destination_account}
   */
   readonly destinationAccount: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#destination_region AwsAuditmanagerFrameworkShare#destination_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#destination_region TfFrameworkShare#destination_region}
   */
   readonly destinationRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#framework_id AwsAuditmanagerFrameworkShare#framework_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#framework_id TfFrameworkShare#framework_id}
   */
   readonly frameworkId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#region AwsAuditmanagerFrameworkShare#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#region TfFrameworkShare#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface AwsAuditmanagerFrameworkShareConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share aws_auditmanager_framework_share}
 */
-export class AwsAuditmanagerFrameworkShare extends cdktn.TerraformResource {
+export class TfFrameworkShare extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsAuditmanagerFrameworkShare extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAuditmanagerFrameworkShare resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFrameworkShare resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAuditmanagerFrameworkShare to import
-  * @param importFromId The id of the existing AwsAuditmanagerFrameworkShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAuditmanagerFrameworkShare to import is found
+  * @param importToId The construct id used in the generated config for the TfFrameworkShare to import
+  * @param importFromId The id of the existing TfFrameworkShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework_share#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFrameworkShare to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_framework_share", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsAuditmanagerFrameworkShare extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAuditmanagerFrameworkShareConfig
+  * @param options TfFrameworkShareConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAuditmanagerFrameworkShareConfig) {
+  public constructor(scope: Construct, id: string, config: TfFrameworkShareConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_framework_share',
       terraformGeneratorMetadata: {

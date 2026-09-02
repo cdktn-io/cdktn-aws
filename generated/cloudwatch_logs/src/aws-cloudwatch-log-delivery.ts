@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchLogDeliveryConfig extends cdktn.TerraformMetaArguments {
+export interface TfDeliveryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#delivery_destination_arn AwsCloudwatchLogDelivery#delivery_destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#delivery_destination_arn TfDelivery#delivery_destination_arn}
   */
   readonly deliveryDestinationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#delivery_source_name AwsCloudwatchLogDelivery#delivery_source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#delivery_source_name TfDelivery#delivery_source_name}
   */
   readonly deliverySourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#field_delimiter AwsCloudwatchLogDelivery#field_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#field_delimiter TfDelivery#field_delimiter}
   */
   readonly fieldDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#record_fields AwsCloudwatchLogDelivery#record_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#record_fields TfDelivery#record_fields}
   */
   readonly recordFields?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#region AwsCloudwatchLogDelivery#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#region TfDelivery#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#s3_delivery_configuration AwsCloudwatchLogDelivery#s3_delivery_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#s3_delivery_configuration TfDelivery#s3_delivery_configuration}
   */
-  readonly s3DeliveryConfiguration?: AwsCloudwatchLogDelivery.S3DeliveryConfigurationProperty[] | cdktn.IResolvable;
+  readonly s3DeliveryConfiguration?: TfDelivery.S3DeliveryConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#tags AwsCloudwatchLogDelivery#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#tags TfDelivery#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -41,7 +41,7 @@ export interface AwsCloudwatchLogDeliveryConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery aws_cloudwatch_log_delivery}
 */
-export class AwsCloudwatchLogDelivery extends cdktn.TerraformResource {
+export class TfDelivery extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class AwsCloudwatchLogDelivery extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchLogDelivery resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDelivery resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchLogDelivery to import
-  * @param importFromId The id of the existing AwsCloudwatchLogDelivery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchLogDelivery to import is found
+  * @param importToId The construct id used in the generated config for the TfDelivery to import
+  * @param importFromId The id of the existing TfDelivery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDelivery to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_log_delivery", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class AwsCloudwatchLogDelivery extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchLogDeliveryConfig
+  * @param options TfDeliveryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchLogDeliveryConfig) {
+  public constructor(scope: Construct, id: string, config: TfDeliveryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_log_delivery',
       terraformGeneratorMetadata: {
@@ -187,11 +187,11 @@ export class AwsCloudwatchLogDelivery extends cdktn.TerraformResource {
   }
 
   // s3_delivery_configuration - computed: true, optional: true, required: false
-  private _s3DeliveryConfiguration = new AwsCloudwatchLogDelivery.S3DeliveryConfigurationPropertyList(this, "s3_delivery_configuration", false);
+  private _s3DeliveryConfiguration = new TfDelivery.S3DeliveryConfigurationPropertyList(this, "s3_delivery_configuration", false);
   public get s3DeliveryConfiguration() {
     return this._s3DeliveryConfiguration;
   }
-  public putS3DeliveryConfiguration(value: AwsCloudwatchLogDelivery.S3DeliveryConfigurationProperty[] | cdktn.IResolvable) {
+  public putS3DeliveryConfiguration(value: TfDelivery.S3DeliveryConfigurationProperty[] | cdktn.IResolvable) {
     this._s3DeliveryConfiguration.internalValue = value;
   }
   public resetS3DeliveryConfiguration() {
@@ -235,7 +235,7 @@ export class AwsCloudwatchLogDelivery extends cdktn.TerraformResource {
       field_delimiter: cdktn.stringToTerraform(this._fieldDelimiter),
       record_fields: cdktn.listMapper(cdktn.stringToTerraform, false)(this._recordFields),
       region: cdktn.stringToTerraform(this._region),
-      s3_delivery_configuration: cdktn.listMapper(awsCloudwatchLogDeliveryS3DeliveryConfigurationPropertyToTerraform, false)(this._s3DeliveryConfiguration.internalValue),
+      s3_delivery_configuration: cdktn.listMapper(tfDeliveryS3DeliveryConfigurationPropertyToTerraform, false)(this._s3DeliveryConfiguration.internalValue),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
     };
   }
@@ -273,10 +273,10 @@ export class AwsCloudwatchLogDelivery extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       s3_delivery_configuration: {
-        value: cdktn.listMapperHcl(awsCloudwatchLogDeliveryS3DeliveryConfigurationPropertyToHclTerraform, false)(this._s3DeliveryConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfDeliveryS3DeliveryConfigurationPropertyToHclTerraform, false)(this._s3DeliveryConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchLogDelivery.S3DeliveryConfigurationPropertyList",
+        storageClassType: "TfDelivery.S3DeliveryConfigurationPropertyList",
       },
       tags: {
         value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
@@ -291,7 +291,7 @@ export class AwsCloudwatchLogDelivery extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchLogDeliveryS3DeliveryConfigurationPropertyToTerraform(struct?: AwsCloudwatchLogDelivery.S3DeliveryConfigurationProperty | cdktn.IResolvable): any {
+export function tfDeliveryS3DeliveryConfigurationPropertyToTerraform(struct?: TfDelivery.S3DeliveryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function awsCloudwatchLogDeliveryS3DeliveryConfigurationPropertyToTerrafo
 }
 
 
-export function awsCloudwatchLogDeliveryS3DeliveryConfigurationPropertyToHclTerraform(struct?: AwsCloudwatchLogDelivery.S3DeliveryConfigurationProperty | cdktn.IResolvable): any {
+export function tfDeliveryS3DeliveryConfigurationPropertyToHclTerraform(struct?: TfDelivery.S3DeliveryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,14 +328,14 @@ export function awsCloudwatchLogDeliveryS3DeliveryConfigurationPropertyToHclTerr
 }
 
 
-export namespace AwsCloudwatchLogDelivery {
+export namespace TfDelivery {
 export interface S3DeliveryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#enable_hive_compatible_path AwsCloudwatchLogDelivery#enable_hive_compatible_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#enable_hive_compatible_path TfDelivery#enable_hive_compatible_path}
   */
   readonly enableHiveCompatiblePath?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#suffix_path AwsCloudwatchLogDelivery#suffix_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_delivery#suffix_path TfDelivery#suffix_path}
   */
   readonly suffixPath?: string;
 }

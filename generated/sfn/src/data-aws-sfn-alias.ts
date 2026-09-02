@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSfnAliasConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#description DataAwsSfnAlias#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#description DataTfAlias#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#id DataAwsSfnAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#id DataTfAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#name DataAwsSfnAlias#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#name DataTfAlias#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#region DataAwsSfnAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#region DataTfAlias#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#statemachine_arn DataAwsSfnAlias#statemachine_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#statemachine_arn DataTfAlias#statemachine_arn}
   */
   readonly statemachineArn: string;
 }
@@ -36,7 +36,7 @@ export interface DataAwsSfnAliasConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias aws_sfn_alias}
 */
-export class DataAwsSfnAlias extends cdktn.TerraformDataSource {
+export class DataTfAlias extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsSfnAlias extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSfnAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSfnAlias to import
-  * @param importFromId The id of the existing DataAwsSfnAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSfnAlias to import is found
+  * @param importToId The construct id used in the generated config for the DataTfAlias to import
+  * @param importFromId The id of the existing DataTfAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sfn_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sfn_alias", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsSfnAlias extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSfnAliasConfig
+  * @param options DataTfAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSfnAliasConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sfn_alias',
       terraformGeneratorMetadata: {
@@ -167,7 +167,7 @@ export class DataAwsSfnAlias extends cdktn.TerraformDataSource {
   }
 
   // routing_configuration - computed: true, optional: false, required: false
-  private _routingConfiguration = new DataAwsSfnAlias.RoutingConfigurationPropertyList(this, "routing_configuration", false);
+  private _routingConfiguration = new DataTfAlias.RoutingConfigurationPropertyList(this, "routing_configuration", false);
   public get routingConfiguration() {
     return this._routingConfiguration;
   }
@@ -238,7 +238,7 @@ export class DataAwsSfnAlias extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsSfnAliasRoutingConfigurationPropertyToTerraform(struct?: DataAwsSfnAlias.RoutingConfigurationProperty): any {
+export function dataTfAliasRoutingConfigurationPropertyToTerraform(struct?: DataTfAlias.RoutingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function dataAwsSfnAliasRoutingConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsSfnAliasRoutingConfigurationPropertyToHclTerraform(struct?: DataAwsSfnAlias.RoutingConfigurationProperty): any {
+export function dataTfAliasRoutingConfigurationPropertyToHclTerraform(struct?: DataTfAlias.RoutingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function dataAwsSfnAliasRoutingConfigurationPropertyToHclTerraform(struct
 }
 
 
-export namespace DataAwsSfnAlias {
+export namespace DataTfAlias {
 export interface RoutingConfigurationProperty {
 }
 export class RoutingConfigurationPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,149 +5,149 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOdbCloudVmClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfCloudVmClusterConfig extends cdktn.TerraformMetaArguments {
   /**
   * The unique identifier of the Exadata infrastructure for this VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cloud_exadata_infrastructure_arn AwsOdbCloudVmCluster#cloud_exadata_infrastructure_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cloud_exadata_infrastructure_arn TfCloudVmCluster#cloud_exadata_infrastructure_arn}
   */
   readonly cloudExadataInfrastructureArn?: string;
   /**
   * The unique identifier of the Exadata infrastructure for this VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cloud_exadata_infrastructure_id AwsOdbCloudVmCluster#cloud_exadata_infrastructure_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cloud_exadata_infrastructure_id TfCloudVmCluster#cloud_exadata_infrastructure_id}
   */
   readonly cloudExadataInfrastructureId?: string;
   /**
   * The name of the Grid Infrastructure (GI) cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cluster_name AwsOdbCloudVmCluster#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cluster_name TfCloudVmCluster#cluster_name}
   */
   readonly clusterName?: string;
   /**
   * The number of CPU cores to enable on the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cpu_core_count AwsOdbCloudVmCluster#cpu_core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#cpu_core_count TfCloudVmCluster#cpu_core_count}
   */
   readonly cpuCoreCount: number;
   /**
   * The size of the data disk group, in terabytes (TBs), to allocate for the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#data_storage_size_in_tbs AwsOdbCloudVmCluster#data_storage_size_in_tbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#data_storage_size_in_tbs TfCloudVmCluster#data_storage_size_in_tbs}
   */
   readonly dataStorageSizeInTbs: number;
   /**
   * The amount of local node storage, in gigabytes (GBs), to allocate for the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#db_node_storage_size_in_gbs AwsOdbCloudVmCluster#db_node_storage_size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#db_node_storage_size_in_gbs TfCloudVmCluster#db_node_storage_size_in_gbs}
   */
   readonly dbNodeStorageSizeInGbs?: number;
   /**
   * The list of database servers for the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#db_servers AwsOdbCloudVmCluster#db_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#db_servers TfCloudVmCluster#db_servers}
   */
   readonly dbServers: string[];
   /**
   * A user-friendly name for the VM cluster. This member is required. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#display_name AwsOdbCloudVmCluster#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#display_name TfCloudVmCluster#display_name}
   */
   readonly displayName: string;
   /**
   * A valid software version of Oracle Grid Infrastructure (GI). To get the list of valid values, use the ListGiVersions operation and specify the shape of the Exadata infrastructure. Example: 19.0.0.0 This member is required. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#gi_version AwsOdbCloudVmCluster#gi_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#gi_version TfCloudVmCluster#gi_version}
   */
   readonly giVersion: string;
   /**
   * The host name prefix for the VM cluster. Constraints: - Can't be "localhost" or "hostname". - Can't contain "-version". - The maximum length of the combined hostname and domain is 63 characters. - The hostname must be unique within the subnet. This member is required. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#hostname_prefix AwsOdbCloudVmCluster#hostname_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#hostname_prefix TfCloudVmCluster#hostname_prefix}
   */
   readonly hostnamePrefix: string;
   /**
   * Specifies whether to enable database backups to local Exadata storage for the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_local_backup_enabled AwsOdbCloudVmCluster#is_local_backup_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_local_backup_enabled TfCloudVmCluster#is_local_backup_enabled}
   */
   readonly isLocalBackupEnabled?: boolean | cdktn.IResolvable;
   /**
   * Specifies whether to create a sparse disk group for the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_sparse_diskgroup_enabled AwsOdbCloudVmCluster#is_sparse_diskgroup_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_sparse_diskgroup_enabled TfCloudVmCluster#is_sparse_diskgroup_enabled}
   */
   readonly isSparseDiskgroupEnabled?: boolean | cdktn.IResolvable;
   /**
   * The Oracle license model to apply to the VM cluster. Default: LICENSE_INCLUDED. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#license_model AwsOdbCloudVmCluster#license_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#license_model TfCloudVmCluster#license_model}
   */
   readonly licenseModel?: string;
   /**
   * The amount of memory, in gigabytes (GBs), to allocate for the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#memory_size_in_gbs AwsOdbCloudVmCluster#memory_size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#memory_size_in_gbs TfCloudVmCluster#memory_size_in_gbs}
   */
   readonly memorySizeInGbs?: number;
   /**
   * The unique identifier of the ODB network for the VM cluster. This member is required. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#odb_network_arn AwsOdbCloudVmCluster#odb_network_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#odb_network_arn TfCloudVmCluster#odb_network_arn}
   */
   readonly odbNetworkArn?: string;
   /**
   * The unique identifier of the ODB network for the VM cluster. This member is required. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#odb_network_id AwsOdbCloudVmCluster#odb_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#odb_network_id TfCloudVmCluster#odb_network_id}
   */
   readonly odbNetworkId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#region AwsOdbCloudVmCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#region TfCloudVmCluster#region}
   */
   readonly region?: string;
   /**
   * The port number for TCP connections to the single client access name (SCAN) listener. Valid values: 1024–8999 with the following exceptions: 2484 , 6100 , 6200 , 7060, 7070 , 7085 , and 7879Default: 1521. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#scan_listener_port_tcp AwsOdbCloudVmCluster#scan_listener_port_tcp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#scan_listener_port_tcp TfCloudVmCluster#scan_listener_port_tcp}
   */
   readonly scanListenerPortTcp?: number;
   /**
   * The public key portion of one or more key pairs used for SSH access to the VM cluster. This member is required. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#ssh_public_keys AwsOdbCloudVmCluster#ssh_public_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#ssh_public_keys TfCloudVmCluster#ssh_public_keys}
   */
   readonly sshPublicKeys: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#tags AwsOdbCloudVmCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#tags TfCloudVmCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * The configured time zone of the VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#timezone AwsOdbCloudVmCluster#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#timezone TfCloudVmCluster#timezone}
   */
   readonly timezone?: string;
   /**
   * data_collection_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#data_collection_options AwsOdbCloudVmCluster#data_collection_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#data_collection_options TfCloudVmCluster#data_collection_options}
   */
-  readonly dataCollectionOptions?: AwsOdbCloudVmCluster.DataCollectionOptionsProperty[] | cdktn.IResolvable;
+  readonly dataCollectionOptions?: TfCloudVmCluster.DataCollectionOptionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#timeouts AwsOdbCloudVmCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#timeouts TfCloudVmCluster#timeouts}
   */
-  readonly timeouts?: AwsOdbCloudVmCluster.TimeoutsProperty;
+  readonly timeouts?: TfCloudVmCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster aws_odb_cloud_vm_cluster}
 */
-export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
+export class TfCloudVmCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -158,11 +158,11 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOdbCloudVmCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCloudVmCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOdbCloudVmCluster to import
-  * @param importFromId The id of the existing AwsOdbCloudVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOdbCloudVmCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCloudVmCluster to import
+  * @param importFromId The id of the existing TfCloudVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCloudVmCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_vm_cluster", importId: importFromId, provider });
@@ -177,9 +177,9 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOdbCloudVmClusterConfig
+  * @param options TfCloudVmClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOdbCloudVmClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfCloudVmClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_cloud_vm_cluster',
       terraformGeneratorMetadata: {
@@ -407,7 +407,7 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
   }
 
   // iorm_config_cache - computed: true, optional: false, required: false
-  private _iormConfigCache = new AwsOdbCloudVmCluster.IormConfigCachePropertyList(this, "iorm_config_cache", false);
+  private _iormConfigCache = new TfCloudVmCluster.IormConfigCachePropertyList(this, "iorm_config_cache", false);
   public get iormConfigCache() {
     return this._iormConfigCache;
   }
@@ -672,11 +672,11 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
   }
 
   // data_collection_options - computed: false, optional: true, required: false
-  private _dataCollectionOptions = new AwsOdbCloudVmCluster.DataCollectionOptionsPropertyList(this, "data_collection_options", false);
+  private _dataCollectionOptions = new TfCloudVmCluster.DataCollectionOptionsPropertyList(this, "data_collection_options", false);
   public get dataCollectionOptions() {
     return this._dataCollectionOptions;
   }
-  public putDataCollectionOptions(value: AwsOdbCloudVmCluster.DataCollectionOptionsProperty[] | cdktn.IResolvable) {
+  public putDataCollectionOptions(value: TfCloudVmCluster.DataCollectionOptionsProperty[] | cdktn.IResolvable) {
     this._dataCollectionOptions.internalValue = value;
   }
   public resetDataCollectionOptions() {
@@ -688,11 +688,11 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOdbCloudVmCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCloudVmCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOdbCloudVmCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCloudVmCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -730,8 +730,8 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
       ssh_public_keys: cdktn.listMapper(cdktn.stringToTerraform, false)(this._sshPublicKeys),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       timezone: cdktn.stringToTerraform(this._timezone),
-      data_collection_options: cdktn.listMapper(awsOdbCloudVmClusterDataCollectionOptionsPropertyToTerraform, true)(this._dataCollectionOptions.internalValue),
-      timeouts: awsOdbCloudVmClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_collection_options: cdktn.listMapper(tfCloudVmClusterDataCollectionOptionsPropertyToTerraform, true)(this._dataCollectionOptions.internalValue),
+      timeouts: tfCloudVmClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -864,16 +864,16 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       data_collection_options: {
-        value: cdktn.listMapperHcl(awsOdbCloudVmClusterDataCollectionOptionsPropertyToHclTerraform, true)(this._dataCollectionOptions.internalValue),
+        value: cdktn.listMapperHcl(tfCloudVmClusterDataCollectionOptionsPropertyToHclTerraform, true)(this._dataCollectionOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsOdbCloudVmCluster.DataCollectionOptionsPropertyList",
+        storageClassType: "TfCloudVmCluster.DataCollectionOptionsPropertyList",
       },
       timeouts: {
-        value: awsOdbCloudVmClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCloudVmClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOdbCloudVmCluster.TimeoutsProperty",
+        storageClassType: "TfCloudVmCluster.TimeoutsProperty",
       },
     };
 
@@ -882,7 +882,7 @@ export class AwsOdbCloudVmCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsOdbCloudVmClusterDbPlansPropertyToTerraform(struct?: AwsOdbCloudVmCluster.DbPlansProperty): any {
+export function tfCloudVmClusterDbPlansPropertyToTerraform(struct?: TfCloudVmCluster.DbPlansProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -892,7 +892,7 @@ export function awsOdbCloudVmClusterDbPlansPropertyToTerraform(struct?: AwsOdbCl
 }
 
 
-export function awsOdbCloudVmClusterDbPlansPropertyToHclTerraform(struct?: AwsOdbCloudVmCluster.DbPlansProperty): any {
+export function tfCloudVmClusterDbPlansPropertyToHclTerraform(struct?: TfCloudVmCluster.DbPlansProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -903,7 +903,7 @@ export function awsOdbCloudVmClusterDbPlansPropertyToHclTerraform(struct?: AwsOd
 }
 
 
-export function awsOdbCloudVmClusterIormConfigCachePropertyToTerraform(struct?: AwsOdbCloudVmCluster.IormConfigCacheProperty): any {
+export function tfCloudVmClusterIormConfigCachePropertyToTerraform(struct?: TfCloudVmCluster.IormConfigCacheProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function awsOdbCloudVmClusterIormConfigCachePropertyToTerraform(struct?: 
 }
 
 
-export function awsOdbCloudVmClusterIormConfigCachePropertyToHclTerraform(struct?: AwsOdbCloudVmCluster.IormConfigCacheProperty): any {
+export function tfCloudVmClusterIormConfigCachePropertyToHclTerraform(struct?: TfCloudVmCluster.IormConfigCacheProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -924,7 +924,7 @@ export function awsOdbCloudVmClusterIormConfigCachePropertyToHclTerraform(struct
 }
 
 
-export function awsOdbCloudVmClusterDataCollectionOptionsPropertyToTerraform(struct?: AwsOdbCloudVmCluster.DataCollectionOptionsProperty | cdktn.IResolvable): any {
+export function tfCloudVmClusterDataCollectionOptionsPropertyToTerraform(struct?: TfCloudVmCluster.DataCollectionOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,7 +937,7 @@ export function awsOdbCloudVmClusterDataCollectionOptionsPropertyToTerraform(str
 }
 
 
-export function awsOdbCloudVmClusterDataCollectionOptionsPropertyToHclTerraform(struct?: AwsOdbCloudVmCluster.DataCollectionOptionsProperty | cdktn.IResolvable): any {
+export function tfCloudVmClusterDataCollectionOptionsPropertyToHclTerraform(struct?: TfCloudVmCluster.DataCollectionOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function awsOdbCloudVmClusterDataCollectionOptionsPropertyToHclTerraform(
 }
 
 
-export function awsOdbCloudVmClusterTimeoutsPropertyToTerraform(struct?: AwsOdbCloudVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCloudVmClusterTimeoutsPropertyToTerraform(struct?: TfCloudVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,7 +981,7 @@ export function awsOdbCloudVmClusterTimeoutsPropertyToTerraform(struct?: AwsOdbC
 }
 
 
-export function awsOdbCloudVmClusterTimeoutsPropertyToHclTerraform(struct?: AwsOdbCloudVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCloudVmClusterTimeoutsPropertyToHclTerraform(struct?: TfCloudVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1012,7 +1012,7 @@ export function awsOdbCloudVmClusterTimeoutsPropertyToHclTerraform(struct?: AwsO
 }
 
 
-export namespace AwsOdbCloudVmCluster {
+export namespace TfCloudVmCluster {
 export interface DbPlansProperty {
 }
 export class DbPlansPropertyOutputReference extends cdktn.ComplexObject {
@@ -1149,15 +1149,15 @@ export class IormConfigCachePropertyList extends cdktn.ComplexList {
 }
 export interface DataCollectionOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_diagnostics_events_enabled AwsOdbCloudVmCluster#is_diagnostics_events_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_diagnostics_events_enabled TfCloudVmCluster#is_diagnostics_events_enabled}
   */
   readonly isDiagnosticsEventsEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_health_monitoring_enabled AwsOdbCloudVmCluster#is_health_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_health_monitoring_enabled TfCloudVmCluster#is_health_monitoring_enabled}
   */
   readonly isHealthMonitoringEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_incident_logs_enabled AwsOdbCloudVmCluster#is_incident_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#is_incident_logs_enabled TfCloudVmCluster#is_incident_logs_enabled}
   */
   readonly isIncidentLogsEnabled: boolean | cdktn.IResolvable;
 }
@@ -1280,19 +1280,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#create AwsOdbCloudVmCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#create TfCloudVmCluster#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#delete AwsOdbCloudVmCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#delete TfCloudVmCluster#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#update AwsOdbCloudVmCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_vm_cluster#update TfCloudVmCluster#update}
   */
   readonly update?: string;
 }

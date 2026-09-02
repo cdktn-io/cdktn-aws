@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamRolePoliciesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfRolePoliciesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policies#role_name DataAwsIamRolePolicies#role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policies#role_name DataTfRolePolicies#role_name}
   */
   readonly roleName: string;
 }
@@ -15,7 +15,7 @@ export interface DataAwsIamRolePoliciesConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policies aws_iam_role_policies}
 */
-export class DataAwsIamRolePolicies extends cdktn.TerraformDataSource {
+export class DataTfRolePolicies extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -26,11 +26,11 @@ export class DataAwsIamRolePolicies extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamRolePolicies resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfRolePolicies resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamRolePolicies to import
-  * @param importFromId The id of the existing DataAwsIamRolePolicies that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policies#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamRolePolicies to import is found
+  * @param importToId The construct id used in the generated config for the DataTfRolePolicies to import
+  * @param importFromId The id of the existing DataTfRolePolicies that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policies#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfRolePolicies to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role_policies", importId: importFromId, provider });
@@ -45,9 +45,9 @@ export class DataAwsIamRolePolicies extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamRolePoliciesConfig
+  * @param options DataTfRolePoliciesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamRolePoliciesConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfRolePoliciesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_role_policies',
       terraformGeneratorMetadata: {

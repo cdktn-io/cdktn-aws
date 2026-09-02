@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCeAnomalySubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfAnomalySubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#account_id AwsCeAnomalySubscription#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#account_id TfAnomalySubscription#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#frequency AwsCeAnomalySubscription#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#frequency TfAnomalySubscription#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#id AwsCeAnomalySubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#id TfAnomalySubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#monitor_arn_list AwsCeAnomalySubscription#monitor_arn_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#monitor_arn_list TfAnomalySubscription#monitor_arn_list}
   */
   readonly monitorArnList: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#name AwsCeAnomalySubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#name TfAnomalySubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags AwsCeAnomalySubscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags TfAnomalySubscription#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags_all AwsCeAnomalySubscription#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags_all TfAnomalySubscription#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * subscriber block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#subscriber AwsCeAnomalySubscription#subscriber}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#subscriber TfAnomalySubscription#subscriber}
   */
-  readonly subscriber: AwsCeAnomalySubscription.SubscriberProperty[] | cdktn.IResolvable;
+  readonly subscriber: TfAnomalySubscription.SubscriberProperty[] | cdktn.IResolvable;
   /**
   * threshold_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#threshold_expression AwsCeAnomalySubscription#threshold_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#threshold_expression TfAnomalySubscription#threshold_expression}
   */
-  readonly thresholdExpression?: AwsCeAnomalySubscription.ThresholdExpressionProperty;
+  readonly thresholdExpression?: TfAnomalySubscription.ThresholdExpressionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription aws_ce_anomaly_subscription}
 */
-export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
+export class TfAnomalySubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCeAnomalySubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAnomalySubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCeAnomalySubscription to import
-  * @param importFromId The id of the existing AwsCeAnomalySubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCeAnomalySubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfAnomalySubscription to import
+  * @param importFromId The id of the existing TfAnomalySubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAnomalySubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ce_anomaly_subscription", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCeAnomalySubscriptionConfig
+  * @param options TfAnomalySubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCeAnomalySubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfAnomalySubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ce_anomaly_subscription',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
   }
 
   // subscriber - computed: false, optional: false, required: true
-  private _subscriber = new AwsCeAnomalySubscription.SubscriberPropertyList(this, "subscriber", true);
+  private _subscriber = new TfAnomalySubscription.SubscriberPropertyList(this, "subscriber", true);
   public get subscriber() {
     return this._subscriber;
   }
-  public putSubscriber(value: AwsCeAnomalySubscription.SubscriberProperty[] | cdktn.IResolvable) {
+  public putSubscriber(value: TfAnomalySubscription.SubscriberProperty[] | cdktn.IResolvable) {
     this._subscriber.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -239,11 +239,11 @@ export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
   }
 
   // threshold_expression - computed: false, optional: true, required: false
-  private _thresholdExpression = new AwsCeAnomalySubscription.ThresholdExpressionPropertyOutputReference(this, "threshold_expression");
+  private _thresholdExpression = new TfAnomalySubscription.ThresholdExpressionPropertyOutputReference(this, "threshold_expression");
   public get thresholdExpression() {
     return this._thresholdExpression;
   }
-  public putThresholdExpression(value: AwsCeAnomalySubscription.ThresholdExpressionProperty) {
+  public putThresholdExpression(value: TfAnomalySubscription.ThresholdExpressionProperty) {
     this._thresholdExpression.internalValue = value;
   }
   public resetThresholdExpression() {
@@ -267,8 +267,8 @@ export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      subscriber: cdktn.listMapper(awsCeAnomalySubscriptionSubscriberPropertyToTerraform, true)(this._subscriber.internalValue),
-      threshold_expression: awsCeAnomalySubscriptionThresholdExpressionPropertyToTerraform(this._thresholdExpression.internalValue),
+      subscriber: cdktn.listMapper(tfAnomalySubscriptionSubscriberPropertyToTerraform, true)(this._subscriber.internalValue),
+      threshold_expression: tfAnomalySubscriptionThresholdExpressionPropertyToTerraform(this._thresholdExpression.internalValue),
     };
   }
 
@@ -317,16 +317,16 @@ export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       subscriber: {
-        value: cdktn.listMapperHcl(awsCeAnomalySubscriptionSubscriberPropertyToHclTerraform, true)(this._subscriber.internalValue),
+        value: cdktn.listMapperHcl(tfAnomalySubscriptionSubscriberPropertyToHclTerraform, true)(this._subscriber.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCeAnomalySubscription.SubscriberPropertyList",
+        storageClassType: "TfAnomalySubscription.SubscriberPropertyList",
       },
       threshold_expression: {
-        value: awsCeAnomalySubscriptionThresholdExpressionPropertyToHclTerraform(this._thresholdExpression.internalValue),
+        value: tfAnomalySubscriptionThresholdExpressionPropertyToHclTerraform(this._thresholdExpression.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCeAnomalySubscription.ThresholdExpressionPropertyList",
+        storageClassType: "TfAnomalySubscription.ThresholdExpressionPropertyList",
       },
     };
 
@@ -335,7 +335,7 @@ export class AwsCeAnomalySubscription extends cdktn.TerraformResource {
   }
 }
 
-export function awsCeAnomalySubscriptionSubscriberPropertyToTerraform(struct?: AwsCeAnomalySubscription.SubscriberProperty | cdktn.IResolvable): any {
+export function tfAnomalySubscriptionSubscriberPropertyToTerraform(struct?: TfAnomalySubscription.SubscriberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function awsCeAnomalySubscriptionSubscriberPropertyToTerraform(struct?: A
 }
 
 
-export function awsCeAnomalySubscriptionSubscriberPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.SubscriberProperty | cdktn.IResolvable): any {
+export function tfAnomalySubscriptionSubscriberPropertyToHclTerraform(struct?: TfAnomalySubscription.SubscriberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function awsCeAnomalySubscriptionSubscriberPropertyToHclTerraform(struct?
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionAndCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionAndCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionAndCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionAndCostCategoryProper
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionAndCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionAndCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionAndCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionAndCostCategoryProper
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionAndDimensionPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionAndDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionAndDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionAndDimensionPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionAndDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionAndDimensionPropertyT
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionAndDimensionPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionAndDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionAndDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionAndDimensionPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionAndDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionAndDimensionPropertyT
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionAndTagsPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionAndTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionAndTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionAndTagsPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionAndTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionAndTagsPropertyToTerr
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionAndTagsPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionAndTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionAndTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionAndTagsPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionAndTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,39 +504,39 @@ export function awsCeAnomalySubscriptionThresholdExpressionAndTagsPropertyToHclT
 }
 
 
-export function awsCeAnomalySubscriptionAndPropertyToTerraform(struct?: AwsCeAnomalySubscription.AndProperty | cdktn.IResolvable): any {
+export function tfAnomalySubscriptionAndPropertyToTerraform(struct?: TfAnomalySubscription.AndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: awsCeAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: awsCeAnomalySubscriptionThresholdExpressionAndDimensionPropertyToTerraform(struct!.dimension),
-    tags: awsCeAnomalySubscriptionThresholdExpressionAndTagsPropertyToTerraform(struct!.tags),
+    cost_category: tfAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: tfAnomalySubscriptionThresholdExpressionAndDimensionPropertyToTerraform(struct!.dimension),
+    tags: tfAnomalySubscriptionThresholdExpressionAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsCeAnomalySubscriptionAndPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.AndProperty | cdktn.IResolvable): any {
+export function tfAnomalySubscriptionAndPropertyToHclTerraform(struct?: TfAnomalySubscription.AndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: awsCeAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: tfAnomalySubscriptionThresholdExpressionAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionAndCostCategoryPropertyList",
     },
     dimension: {
-      value: awsCeAnomalySubscriptionThresholdExpressionAndDimensionPropertyToHclTerraform(struct!.dimension),
+      value: tfAnomalySubscriptionThresholdExpressionAndDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionAndDimensionPropertyList",
     },
     tags: {
-      value: awsCeAnomalySubscriptionThresholdExpressionAndTagsPropertyToHclTerraform(struct!.tags),
+      value: tfAnomalySubscriptionThresholdExpressionAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionAndTagsPropertyList",
@@ -548,7 +548,7 @@ export function awsCeAnomalySubscriptionAndPropertyToHclTerraform(struct?: AwsCe
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionCostCategoryPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionCostCategoryPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionCostCategoryPropertyT
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionCostCategoryPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionCostCategoryPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -592,7 +592,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionCostCategoryPropertyT
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionDimensionPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionDimensionPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionDimensionPropertyToTe
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionDimensionPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionDimensionPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionDimensionPropertyToHc
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionNotCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionNotCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionNotCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,7 +649,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionNotCostCategoryProper
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionNotCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionNotCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionNotCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionNotCostCategoryProper
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionNotDimensionPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionNotDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionNotDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionNotDimensionPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionNotDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,7 +693,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionNotDimensionPropertyT
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionNotDimensionPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionNotDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionNotDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionNotDimensionPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionNotDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,7 +724,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionNotDimensionPropertyT
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionNotTagsPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionNotTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionNotTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionNotTagsPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionNotTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionNotTagsPropertyToTerr
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionNotTagsPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionNotTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionNotTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionNotTagsPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionNotTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -768,39 +768,39 @@ export function awsCeAnomalySubscriptionThresholdExpressionNotTagsPropertyToHclT
 }
 
 
-export function awsCeAnomalySubscriptionNotPropertyToTerraform(struct?: AwsCeAnomalySubscription.NotPropertyOutputReference | AwsCeAnomalySubscription.NotProperty): any {
+export function tfAnomalySubscriptionNotPropertyToTerraform(struct?: TfAnomalySubscription.NotPropertyOutputReference | TfAnomalySubscription.NotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: awsCeAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: awsCeAnomalySubscriptionThresholdExpressionNotDimensionPropertyToTerraform(struct!.dimension),
-    tags: awsCeAnomalySubscriptionThresholdExpressionNotTagsPropertyToTerraform(struct!.tags),
+    cost_category: tfAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: tfAnomalySubscriptionThresholdExpressionNotDimensionPropertyToTerraform(struct!.dimension),
+    tags: tfAnomalySubscriptionThresholdExpressionNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsCeAnomalySubscriptionNotPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.NotPropertyOutputReference | AwsCeAnomalySubscription.NotProperty): any {
+export function tfAnomalySubscriptionNotPropertyToHclTerraform(struct?: TfAnomalySubscription.NotPropertyOutputReference | TfAnomalySubscription.NotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: awsCeAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: tfAnomalySubscriptionThresholdExpressionNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionNotCostCategoryPropertyList",
     },
     dimension: {
-      value: awsCeAnomalySubscriptionThresholdExpressionNotDimensionPropertyToHclTerraform(struct!.dimension),
+      value: tfAnomalySubscriptionThresholdExpressionNotDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionNotDimensionPropertyList",
     },
     tags: {
-      value: awsCeAnomalySubscriptionThresholdExpressionNotTagsPropertyToHclTerraform(struct!.tags),
+      value: tfAnomalySubscriptionThresholdExpressionNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionNotTagsPropertyList",
@@ -812,7 +812,7 @@ export function awsCeAnomalySubscriptionNotPropertyToHclTerraform(struct?: AwsCe
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionOrCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionOrCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionOrCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,7 +825,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionOrCostCategoryPropert
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionOrCostCategoryPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionOrCostCategoryProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionOrCostCategoryPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionOrCostCategoryPropert
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionOrDimensionPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionOrDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionOrDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionOrDimensionPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionOrDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -869,7 +869,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionOrDimensionPropertyTo
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionOrDimensionPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionOrDimensionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionOrDimensionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionOrDimensionPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionOrDimensionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -900,7 +900,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionOrDimensionPropertyTo
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionOrTagsPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionOrTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionOrTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionOrTagsPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionOrTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionOrTagsPropertyToTerra
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionOrTagsPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionOrTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionOrTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionOrTagsPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionOrTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -944,39 +944,39 @@ export function awsCeAnomalySubscriptionThresholdExpressionOrTagsPropertyToHclTe
 }
 
 
-export function awsCeAnomalySubscriptionOrPropertyToTerraform(struct?: AwsCeAnomalySubscription.OrProperty | cdktn.IResolvable): any {
+export function tfAnomalySubscriptionOrPropertyToTerraform(struct?: TfAnomalySubscription.OrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: awsCeAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: awsCeAnomalySubscriptionThresholdExpressionOrDimensionPropertyToTerraform(struct!.dimension),
-    tags: awsCeAnomalySubscriptionThresholdExpressionOrTagsPropertyToTerraform(struct!.tags),
+    cost_category: tfAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: tfAnomalySubscriptionThresholdExpressionOrDimensionPropertyToTerraform(struct!.dimension),
+    tags: tfAnomalySubscriptionThresholdExpressionOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsCeAnomalySubscriptionOrPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.OrProperty | cdktn.IResolvable): any {
+export function tfAnomalySubscriptionOrPropertyToHclTerraform(struct?: TfAnomalySubscription.OrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: awsCeAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: tfAnomalySubscriptionThresholdExpressionOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionOrCostCategoryPropertyList",
     },
     dimension: {
-      value: awsCeAnomalySubscriptionThresholdExpressionOrDimensionPropertyToHclTerraform(struct!.dimension),
+      value: tfAnomalySubscriptionThresholdExpressionOrDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionOrDimensionPropertyList",
     },
     tags: {
-      value: awsCeAnomalySubscriptionThresholdExpressionOrTagsPropertyToHclTerraform(struct!.tags),
+      value: tfAnomalySubscriptionThresholdExpressionOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionOrTagsPropertyList",
@@ -988,7 +988,7 @@ export function awsCeAnomalySubscriptionOrPropertyToHclTerraform(struct?: AwsCeA
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionTagsPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionTagsPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1001,7 +1001,7 @@ export function awsCeAnomalySubscriptionThresholdExpressionTagsPropertyToTerrafo
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionTagsPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionTagsPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionTagsProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionTagsPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionTagsPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1032,60 +1032,60 @@ export function awsCeAnomalySubscriptionThresholdExpressionTagsPropertyToHclTerr
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionPropertyToTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionPropertyToTerraform(struct?: TfAnomalySubscription.ThresholdExpressionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(awsCeAnomalySubscriptionAndPropertyToTerraform, true)(struct!.and),
-    cost_category: awsCeAnomalySubscriptionThresholdExpressionCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: awsCeAnomalySubscriptionThresholdExpressionDimensionPropertyToTerraform(struct!.dimension),
-    not: awsCeAnomalySubscriptionNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(awsCeAnomalySubscriptionOrPropertyToTerraform, true)(struct!.or),
-    tags: awsCeAnomalySubscriptionThresholdExpressionTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(tfAnomalySubscriptionAndPropertyToTerraform, true)(struct!.and),
+    cost_category: tfAnomalySubscriptionThresholdExpressionCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: tfAnomalySubscriptionThresholdExpressionDimensionPropertyToTerraform(struct!.dimension),
+    not: tfAnomalySubscriptionNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(tfAnomalySubscriptionOrPropertyToTerraform, true)(struct!.or),
+    tags: tfAnomalySubscriptionThresholdExpressionTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsCeAnomalySubscriptionThresholdExpressionPropertyToHclTerraform(struct?: AwsCeAnomalySubscription.ThresholdExpressionPropertyOutputReference | AwsCeAnomalySubscription.ThresholdExpressionProperty): any {
+export function tfAnomalySubscriptionThresholdExpressionPropertyToHclTerraform(struct?: TfAnomalySubscription.ThresholdExpressionPropertyOutputReference | TfAnomalySubscription.ThresholdExpressionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(awsCeAnomalySubscriptionAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(tfAnomalySubscriptionAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "set",
       storageClassType: "AndPropertyList",
     },
     cost_category: {
-      value: awsCeAnomalySubscriptionThresholdExpressionCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: tfAnomalySubscriptionThresholdExpressionCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionCostCategoryPropertyList",
     },
     dimension: {
-      value: awsCeAnomalySubscriptionThresholdExpressionDimensionPropertyToHclTerraform(struct!.dimension),
+      value: tfAnomalySubscriptionThresholdExpressionDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionDimensionPropertyList",
     },
     not: {
-      value: awsCeAnomalySubscriptionNotPropertyToHclTerraform(struct!.not),
+      value: tfAnomalySubscriptionNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "NotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(awsCeAnomalySubscriptionOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(tfAnomalySubscriptionOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "set",
       storageClassType: "OrPropertyList",
     },
     tags: {
-      value: awsCeAnomalySubscriptionThresholdExpressionTagsPropertyToHclTerraform(struct!.tags),
+      value: tfAnomalySubscriptionThresholdExpressionTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "ThresholdExpressionTagsPropertyList",
@@ -1097,14 +1097,14 @@ export function awsCeAnomalySubscriptionThresholdExpressionPropertyToHclTerrafor
 }
 
 
-export namespace AwsCeAnomalySubscription {
+export namespace TfAnomalySubscription {
 export interface SubscriberProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#address AwsCeAnomalySubscription#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#address TfAnomalySubscription#address}
   */
   readonly address: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#type AwsCeAnomalySubscription#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#type TfAnomalySubscription#type}
   */
   readonly type: string;
 }
@@ -1206,15 +1206,15 @@ export class SubscriberPropertyList extends cdktn.ComplexList {
 }
 export interface ThresholdExpressionAndCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -1312,15 +1312,15 @@ export class ThresholdExpressionAndCostCategoryPropertyOutputReference extends c
 }
 export interface ThresholdExpressionAndDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -1418,15 +1418,15 @@ export class ThresholdExpressionAndDimensionPropertyOutputReference extends cdkt
 }
 export interface ThresholdExpressionAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -1526,19 +1526,19 @@ export interface AndProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category AwsCeAnomalySubscription#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category TfAnomalySubscription#cost_category}
   */
   readonly costCategory?: ThresholdExpressionAndCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension AwsCeAnomalySubscription#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension TfAnomalySubscription#dimension}
   */
   readonly dimension?: ThresholdExpressionAndDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags AwsCeAnomalySubscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags TfAnomalySubscription#tags}
   */
   readonly tags?: ThresholdExpressionAndTagsProperty;
 }
@@ -1668,15 +1668,15 @@ export class AndPropertyList extends cdktn.ComplexList {
 }
 export interface ThresholdExpressionCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -1774,15 +1774,15 @@ export class ThresholdExpressionCostCategoryPropertyOutputReference extends cdkt
 }
 export interface ThresholdExpressionDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -1880,15 +1880,15 @@ export class ThresholdExpressionDimensionPropertyOutputReference extends cdktn.C
 }
 export interface ThresholdExpressionNotCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -1986,15 +1986,15 @@ export class ThresholdExpressionNotCostCategoryPropertyOutputReference extends c
 }
 export interface ThresholdExpressionNotDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -2092,15 +2092,15 @@ export class ThresholdExpressionNotDimensionPropertyOutputReference extends cdkt
 }
 export interface ThresholdExpressionNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -2200,19 +2200,19 @@ export interface NotProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category AwsCeAnomalySubscription#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category TfAnomalySubscription#cost_category}
   */
   readonly costCategory?: ThresholdExpressionNotCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension AwsCeAnomalySubscription#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension TfAnomalySubscription#dimension}
   */
   readonly dimension?: ThresholdExpressionNotDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags AwsCeAnomalySubscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags TfAnomalySubscription#tags}
   */
   readonly tags?: ThresholdExpressionNotTagsProperty;
 }
@@ -2310,15 +2310,15 @@ export class NotPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ThresholdExpressionOrCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -2416,15 +2416,15 @@ export class ThresholdExpressionOrCostCategoryPropertyOutputReference extends cd
 }
 export interface ThresholdExpressionOrDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -2522,15 +2522,15 @@ export class ThresholdExpressionOrDimensionPropertyOutputReference extends cdktn
 }
 export interface ThresholdExpressionOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -2630,19 +2630,19 @@ export interface OrProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category AwsCeAnomalySubscription#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category TfAnomalySubscription#cost_category}
   */
   readonly costCategory?: ThresholdExpressionOrCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension AwsCeAnomalySubscription#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension TfAnomalySubscription#dimension}
   */
   readonly dimension?: ThresholdExpressionOrDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags AwsCeAnomalySubscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags TfAnomalySubscription#tags}
   */
   readonly tags?: ThresholdExpressionOrTagsProperty;
 }
@@ -2772,15 +2772,15 @@ export class OrPropertyList extends cdktn.ComplexList {
 }
 export interface ThresholdExpressionTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key AwsCeAnomalySubscription#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#key TfAnomalySubscription#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options AwsCeAnomalySubscription#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#match_options TfAnomalySubscription#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values AwsCeAnomalySubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#values TfAnomalySubscription#values}
   */
   readonly values?: string[];
 }
@@ -2880,37 +2880,37 @@ export interface ThresholdExpressionProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#and AwsCeAnomalySubscription#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#and TfAnomalySubscription#and}
   */
   readonly and?: AndProperty[] | cdktn.IResolvable;
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category AwsCeAnomalySubscription#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#cost_category TfAnomalySubscription#cost_category}
   */
   readonly costCategory?: ThresholdExpressionCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension AwsCeAnomalySubscription#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#dimension TfAnomalySubscription#dimension}
   */
   readonly dimension?: ThresholdExpressionDimensionProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#not AwsCeAnomalySubscription#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#not TfAnomalySubscription#not}
   */
   readonly not?: NotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#or AwsCeAnomalySubscription#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#or TfAnomalySubscription#or}
   */
   readonly or?: OrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags AwsCeAnomalySubscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_subscription#tags TfAnomalySubscription#tags}
   */
   readonly tags?: ThresholdExpressionTagsProperty;
 }

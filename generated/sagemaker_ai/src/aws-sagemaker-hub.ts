@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerHubConfig extends cdktn.TerraformMetaArguments {
+export interface TfHubConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_description AwsSagemakerHub#hub_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_description TfHub#hub_description}
   */
   readonly hubDescription: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_display_name AwsSagemakerHub#hub_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_display_name TfHub#hub_display_name}
   */
   readonly hubDisplayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_name AwsSagemakerHub#hub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_name TfHub#hub_name}
   */
   readonly hubName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_search_keywords AwsSagemakerHub#hub_search_keywords}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#hub_search_keywords TfHub#hub_search_keywords}
   */
   readonly hubSearchKeywords?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#id AwsSagemakerHub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#id TfHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,29 +32,29 @@ export interface AwsSagemakerHubConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#region AwsSagemakerHub#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#region TfHub#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#tags AwsSagemakerHub#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#tags TfHub#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#tags_all AwsSagemakerHub#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#tags_all TfHub#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * s3_storage_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#s3_storage_config AwsSagemakerHub#s3_storage_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#s3_storage_config TfHub#s3_storage_config}
   */
-  readonly s3StorageConfig?: AwsSagemakerHub.S3StorageConfigProperty;
+  readonly s3StorageConfig?: TfHub.S3StorageConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub aws_sagemaker_hub}
 */
-export class AwsSagemakerHub extends cdktn.TerraformResource {
+export class TfHub extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsSagemakerHub extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerHub resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfHub resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerHub to import
-  * @param importFromId The id of the existing AwsSagemakerHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerHub to import is found
+  * @param importToId The construct id used in the generated config for the TfHub to import
+  * @param importFromId The id of the existing TfHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfHub to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_hub", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsSagemakerHub extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerHubConfig
+  * @param options TfHubConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerHubConfig) {
+  public constructor(scope: Construct, id: string, config: TfHubConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_hub',
       terraformGeneratorMetadata: {
@@ -245,11 +245,11 @@ export class AwsSagemakerHub extends cdktn.TerraformResource {
   }
 
   // s3_storage_config - computed: false, optional: true, required: false
-  private _s3StorageConfig = new AwsSagemakerHub.S3StorageConfigPropertyOutputReference(this, "s3_storage_config");
+  private _s3StorageConfig = new TfHub.S3StorageConfigPropertyOutputReference(this, "s3_storage_config");
   public get s3StorageConfig() {
     return this._s3StorageConfig;
   }
-  public putS3StorageConfig(value: AwsSagemakerHub.S3StorageConfigProperty) {
+  public putS3StorageConfig(value: TfHub.S3StorageConfigProperty) {
     this._s3StorageConfig.internalValue = value;
   }
   public resetS3StorageConfig() {
@@ -274,7 +274,7 @@ export class AwsSagemakerHub extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      s3_storage_config: awsSagemakerHubS3StorageConfigPropertyToTerraform(this._s3StorageConfig.internalValue),
+      s3_storage_config: tfHubS3StorageConfigPropertyToTerraform(this._s3StorageConfig.internalValue),
     };
   }
 
@@ -329,10 +329,10 @@ export class AwsSagemakerHub extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       s3_storage_config: {
-        value: awsSagemakerHubS3StorageConfigPropertyToHclTerraform(this._s3StorageConfig.internalValue),
+        value: tfHubS3StorageConfigPropertyToHclTerraform(this._s3StorageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerHub.S3StorageConfigPropertyList",
+        storageClassType: "TfHub.S3StorageConfigPropertyList",
       },
     };
 
@@ -341,7 +341,7 @@ export class AwsSagemakerHub extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerHubS3StorageConfigPropertyToTerraform(struct?: AwsSagemakerHub.S3StorageConfigPropertyOutputReference | AwsSagemakerHub.S3StorageConfigProperty): any {
+export function tfHubS3StorageConfigPropertyToTerraform(struct?: TfHub.S3StorageConfigPropertyOutputReference | TfHub.S3StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function awsSagemakerHubS3StorageConfigPropertyToTerraform(struct?: AwsSa
 }
 
 
-export function awsSagemakerHubS3StorageConfigPropertyToHclTerraform(struct?: AwsSagemakerHub.S3StorageConfigPropertyOutputReference | AwsSagemakerHub.S3StorageConfigProperty): any {
+export function tfHubS3StorageConfigPropertyToHclTerraform(struct?: TfHub.S3StorageConfigPropertyOutputReference | TfHub.S3StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,10 +371,10 @@ export function awsSagemakerHubS3StorageConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsSagemakerHub {
+export namespace TfHub {
 export interface S3StorageConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#s3_output_path AwsSagemakerHub#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub#s3_output_path TfHub#s3_output_path}
   */
   readonly s3OutputPath?: string;
 }

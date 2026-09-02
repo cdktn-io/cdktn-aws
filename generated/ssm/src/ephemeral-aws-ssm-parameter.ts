@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface EphemeralAwsSsmParameterConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface EphemeralTfParameterConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ssm_parameter#arn EphemeralAwsSsmParameter#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ssm_parameter#arn EphemeralTfParameter#arn}
   */
   readonly arn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ssm_parameter#region EphemeralAwsSsmParameter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ssm_parameter#region EphemeralTfParameter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ssm_parameter#with_decryption EphemeralAwsSsmParameter#with_decryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ssm_parameter#with_decryption EphemeralTfParameter#with_decryption}
   */
   readonly withDecryption?: boolean | cdktn.IResolvable;
 }
@@ -25,7 +25,7 @@ export interface EphemeralAwsSsmParameterConfig extends cdktn.TerraformEphemeral
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ssm_parameter aws_ssm_parameter}
 */
-export class EphemeralAwsSsmParameter extends cdktn.TerraformEphemeralResource {
+export class EphemeralTfParameter extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,9 +41,9 @@ export class EphemeralAwsSsmParameter extends cdktn.TerraformEphemeralResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options EphemeralAwsSsmParameterConfig
+  * @param options EphemeralTfParameterConfig
   */
-  public constructor(scope: Construct, id: string, config: EphemeralAwsSsmParameterConfig) {
+  public constructor(scope: Construct, id: string, config: EphemeralTfParameterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_parameter',
       terraformGeneratorMetadata: {

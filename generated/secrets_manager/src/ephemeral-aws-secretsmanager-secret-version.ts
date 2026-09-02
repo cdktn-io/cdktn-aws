@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface EphemeralAwsSecretsmanagerSecretVersionConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface EphemeralTfSecretVersionConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#region EphemeralAwsSecretsmanagerSecretVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#region EphemeralTfSecretVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#secret_id EphemeralAwsSecretsmanagerSecretVersion#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#secret_id EphemeralTfSecretVersion#secret_id}
   */
   readonly secretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#version_id EphemeralAwsSecretsmanagerSecretVersion#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#version_id EphemeralTfSecretVersion#version_id}
   */
   readonly versionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#version_stage EphemeralAwsSecretsmanagerSecretVersion#version_stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version#version_stage EphemeralTfSecretVersion#version_stage}
   */
   readonly versionStage?: string;
 }
@@ -29,7 +29,7 @@ export interface EphemeralAwsSecretsmanagerSecretVersionConfig extends cdktn.Ter
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/secretsmanager_secret_version aws_secretsmanager_secret_version}
 */
-export class EphemeralAwsSecretsmanagerSecretVersion extends cdktn.TerraformEphemeralResource {
+export class EphemeralTfSecretVersion extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,9 +45,9 @@ export class EphemeralAwsSecretsmanagerSecretVersion extends cdktn.TerraformEphe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options EphemeralAwsSecretsmanagerSecretVersionConfig
+  * @param options EphemeralTfSecretVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: EphemeralAwsSecretsmanagerSecretVersionConfig) {
+  public constructor(scope: Construct, id: string, config: EphemeralTfSecretVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_secret_version',
       terraformGeneratorMetadata: {

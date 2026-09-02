@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKmsReplicaKeyConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicaKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#bypass_policy_lockout_safety_check AwsKmsReplicaKey#bypass_policy_lockout_safety_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#bypass_policy_lockout_safety_check TfReplicaKey#bypass_policy_lockout_safety_check}
   */
   readonly bypassPolicyLockoutSafetyCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#deletion_window_in_days AwsKmsReplicaKey#deletion_window_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#deletion_window_in_days TfReplicaKey#deletion_window_in_days}
   */
   readonly deletionWindowInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#description AwsKmsReplicaKey#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#description TfReplicaKey#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#enabled AwsKmsReplicaKey#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#enabled TfReplicaKey#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#id AwsKmsReplicaKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#id TfReplicaKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#policy AwsKmsReplicaKey#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#policy TfReplicaKey#policy}
   */
   readonly policy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#primary_key_arn AwsKmsReplicaKey#primary_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#primary_key_arn TfReplicaKey#primary_key_arn}
   */
   readonly primaryKeyArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#region AwsKmsReplicaKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#region TfReplicaKey#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#tags AwsKmsReplicaKey#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#tags TfReplicaKey#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#tags_all AwsKmsReplicaKey#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#tags_all TfReplicaKey#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -56,7 +56,7 @@ export interface AwsKmsReplicaKeyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key aws_kms_replica_key}
 */
-export class AwsKmsReplicaKey extends cdktn.TerraformResource {
+export class TfReplicaKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsKmsReplicaKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKmsReplicaKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicaKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKmsReplicaKey to import
-  * @param importFromId The id of the existing AwsKmsReplicaKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKmsReplicaKey to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicaKey to import
+  * @param importFromId The id of the existing TfReplicaKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_replica_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicaKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_replica_key", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsKmsReplicaKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKmsReplicaKeyConfig
+  * @param options TfReplicaKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsKmsReplicaKeyConfig) {
+  public constructor(scope: Construct, id: string, config: TfReplicaKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_replica_key',
       terraformGeneratorMetadata: {

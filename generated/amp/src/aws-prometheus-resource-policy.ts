@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsPrometheusResourcePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourcePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#policy_document AwsPrometheusResourcePolicy#policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#policy_document TfResourcePolicy#policy_document}
   */
   readonly policyDocument: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#region AwsPrometheusResourcePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#region TfResourcePolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#revision_id AwsPrometheusResourcePolicy#revision_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#revision_id TfResourcePolicy#revision_id}
   */
   readonly revisionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#workspace_id AwsPrometheusResourcePolicy#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#workspace_id TfResourcePolicy#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#timeouts AwsPrometheusResourcePolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#timeouts TfResourcePolicy#timeouts}
   */
-  readonly timeouts?: AwsPrometheusResourcePolicy.TimeoutsProperty;
+  readonly timeouts?: TfResourcePolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy aws_prometheus_resource_policy}
 */
-export class AwsPrometheusResourcePolicy extends cdktn.TerraformResource {
+export class TfResourcePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsPrometheusResourcePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsPrometheusResourcePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourcePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsPrometheusResourcePolicy to import
-  * @param importFromId The id of the existing AwsPrometheusResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsPrometheusResourcePolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfResourcePolicy to import
+  * @param importFromId The id of the existing TfResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourcePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_resource_policy", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsPrometheusResourcePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsPrometheusResourcePolicyConfig
+  * @param options TfResourcePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsPrometheusResourcePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourcePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_resource_policy',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class AwsPrometheusResourcePolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsPrometheusResourcePolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfResourcePolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsPrometheusResourcePolicy.TimeoutsProperty) {
+  public putTimeouts(value: TfResourcePolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -178,7 +178,7 @@ export class AwsPrometheusResourcePolicy extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       revision_id: cdktn.stringToTerraform(this._revisionId),
       workspace_id: cdktn.stringToTerraform(this._workspaceId),
-      timeouts: awsPrometheusResourcePolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfResourcePolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -209,10 +209,10 @@ export class AwsPrometheusResourcePolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsPrometheusResourcePolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfResourcePolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsPrometheusResourcePolicy.TimeoutsProperty",
+        storageClassType: "TfResourcePolicy.TimeoutsProperty",
       },
     };
 
@@ -221,7 +221,7 @@ export class AwsPrometheusResourcePolicy extends cdktn.TerraformResource {
   }
 }
 
-export function awsPrometheusResourcePolicyTimeoutsPropertyToTerraform(struct?: AwsPrometheusResourcePolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourcePolicyTimeoutsPropertyToTerraform(struct?: TfResourcePolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function awsPrometheusResourcePolicyTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function awsPrometheusResourcePolicyTimeoutsPropertyToHclTerraform(struct?: AwsPrometheusResourcePolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourcePolicyTimeoutsPropertyToHclTerraform(struct?: TfResourcePolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,24 +265,24 @@ export function awsPrometheusResourcePolicyTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsPrometheusResourcePolicy {
+export namespace TfResourcePolicy {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#create AwsPrometheusResourcePolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#create TfResourcePolicy#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#delete AwsPrometheusResourcePolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#delete TfResourcePolicy#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#update AwsPrometheusResourcePolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_resource_policy#update TfResourcePolicy#update}
   */
   readonly update?: string;
 }

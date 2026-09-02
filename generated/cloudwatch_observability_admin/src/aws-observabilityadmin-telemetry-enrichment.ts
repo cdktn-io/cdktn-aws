@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsObservabilityadminTelemetryEnrichmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfTelemetryEnrichmentConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#region AwsObservabilityadminTelemetryEnrichment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#region TfTelemetryEnrichment#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#timeouts AwsObservabilityadminTelemetryEnrichment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#timeouts TfTelemetryEnrichment#timeouts}
   */
-  readonly timeouts?: AwsObservabilityadminTelemetryEnrichment.TimeoutsProperty;
+  readonly timeouts?: TfTelemetryEnrichment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment aws_observabilityadmin_telemetry_enrichment}
 */
-export class AwsObservabilityadminTelemetryEnrichment extends cdktn.TerraformResource {
+export class TfTelemetryEnrichment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class AwsObservabilityadminTelemetryEnrichment extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsObservabilityadminTelemetryEnrichment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTelemetryEnrichment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsObservabilityadminTelemetryEnrichment to import
-  * @param importFromId The id of the existing AwsObservabilityadminTelemetryEnrichment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsObservabilityadminTelemetryEnrichment to import is found
+  * @param importToId The construct id used in the generated config for the TfTelemetryEnrichment to import
+  * @param importFromId The id of the existing TfTelemetryEnrichment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTelemetryEnrichment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_observabilityadmin_telemetry_enrichment", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class AwsObservabilityadminTelemetryEnrichment extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsObservabilityadminTelemetryEnrichmentConfig = {}
+  * @param options TfTelemetryEnrichmentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsObservabilityadminTelemetryEnrichmentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfTelemetryEnrichmentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_observabilityadmin_telemetry_enrichment',
       terraformGeneratorMetadata: {
@@ -106,11 +106,11 @@ export class AwsObservabilityadminTelemetryEnrichment extends cdktn.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsObservabilityadminTelemetryEnrichment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTelemetryEnrichment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsObservabilityadminTelemetryEnrichment.TimeoutsProperty) {
+  public putTimeouts(value: TfTelemetryEnrichment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -128,7 +128,7 @@ export class AwsObservabilityadminTelemetryEnrichment extends cdktn.TerraformRes
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsObservabilityadminTelemetryEnrichmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfTelemetryEnrichmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -141,10 +141,10 @@ export class AwsObservabilityadminTelemetryEnrichment extends cdktn.TerraformRes
         storageClassType: "string",
       },
       timeouts: {
-        value: awsObservabilityadminTelemetryEnrichmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTelemetryEnrichmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsObservabilityadminTelemetryEnrichment.TimeoutsProperty",
+        storageClassType: "TfTelemetryEnrichment.TimeoutsProperty",
       },
     };
 
@@ -153,7 +153,7 @@ export class AwsObservabilityadminTelemetryEnrichment extends cdktn.TerraformRes
   }
 }
 
-export function awsObservabilityadminTelemetryEnrichmentTimeoutsPropertyToTerraform(struct?: AwsObservabilityadminTelemetryEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTelemetryEnrichmentTimeoutsPropertyToTerraform(struct?: TfTelemetryEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -165,7 +165,7 @@ export function awsObservabilityadminTelemetryEnrichmentTimeoutsPropertyToTerraf
 }
 
 
-export function awsObservabilityadminTelemetryEnrichmentTimeoutsPropertyToHclTerraform(struct?: AwsObservabilityadminTelemetryEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTelemetryEnrichmentTimeoutsPropertyToHclTerraform(struct?: TfTelemetryEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,18 +190,18 @@ export function awsObservabilityadminTelemetryEnrichmentTimeoutsPropertyToHclTer
 }
 
 
-export namespace AwsObservabilityadminTelemetryEnrichment {
+export namespace TfTelemetryEnrichment {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#create AwsObservabilityadminTelemetryEnrichment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#create TfTelemetryEnrichment#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#delete AwsObservabilityadminTelemetryEnrichment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_enrichment#delete TfTelemetryEnrichment#delete}
   */
   readonly delete?: string;
 }

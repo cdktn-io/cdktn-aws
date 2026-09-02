@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRumAppMonitorConfig extends cdktn.TerraformMetaArguments {
+export interface TfAppMonitorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#cw_log_enabled AwsRumAppMonitor#cw_log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#cw_log_enabled TfAppMonitor#cw_log_enabled}
   */
   readonly cwLogEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#domain AwsRumAppMonitor#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#domain TfAppMonitor#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#domain_list AwsRumAppMonitor#domain_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#domain_list TfAppMonitor#domain_list}
   */
   readonly domainList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#id AwsRumAppMonitor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#id TfAppMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#name AwsRumAppMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#name TfAppMonitor#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#region AwsRumAppMonitor#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#region TfAppMonitor#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#tags AwsRumAppMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#tags TfAppMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#tags_all AwsRumAppMonitor#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#tags_all TfAppMonitor#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * app_monitor_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#app_monitor_configuration AwsRumAppMonitor#app_monitor_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#app_monitor_configuration TfAppMonitor#app_monitor_configuration}
   */
-  readonly appMonitorConfiguration?: AwsRumAppMonitor.AppMonitorConfigurationProperty;
+  readonly appMonitorConfiguration?: TfAppMonitor.AppMonitorConfigurationProperty;
   /**
   * custom_events block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#custom_events AwsRumAppMonitor#custom_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#custom_events TfAppMonitor#custom_events}
   */
-  readonly customEvents?: AwsRumAppMonitor.CustomEventsProperty;
+  readonly customEvents?: TfAppMonitor.CustomEventsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor aws_rum_app_monitor}
 */
-export class AwsRumAppMonitor extends cdktn.TerraformResource {
+export class TfAppMonitor extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsRumAppMonitor extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRumAppMonitor resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAppMonitor resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRumAppMonitor to import
-  * @param importFromId The id of the existing AwsRumAppMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRumAppMonitor to import is found
+  * @param importToId The construct id used in the generated config for the TfAppMonitor to import
+  * @param importFromId The id of the existing TfAppMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAppMonitor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rum_app_monitor", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsRumAppMonitor extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRumAppMonitorConfig
+  * @param options TfAppMonitorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRumAppMonitorConfig) {
+  public constructor(scope: Construct, id: string, config: TfAppMonitorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rum_app_monitor',
       terraformGeneratorMetadata: {
@@ -265,11 +265,11 @@ export class AwsRumAppMonitor extends cdktn.TerraformResource {
   }
 
   // app_monitor_configuration - computed: false, optional: true, required: false
-  private _appMonitorConfiguration = new AwsRumAppMonitor.AppMonitorConfigurationPropertyOutputReference(this, "app_monitor_configuration");
+  private _appMonitorConfiguration = new TfAppMonitor.AppMonitorConfigurationPropertyOutputReference(this, "app_monitor_configuration");
   public get appMonitorConfiguration() {
     return this._appMonitorConfiguration;
   }
-  public putAppMonitorConfiguration(value: AwsRumAppMonitor.AppMonitorConfigurationProperty) {
+  public putAppMonitorConfiguration(value: TfAppMonitor.AppMonitorConfigurationProperty) {
     this._appMonitorConfiguration.internalValue = value;
   }
   public resetAppMonitorConfiguration() {
@@ -281,11 +281,11 @@ export class AwsRumAppMonitor extends cdktn.TerraformResource {
   }
 
   // custom_events - computed: false, optional: true, required: false
-  private _customEvents = new AwsRumAppMonitor.CustomEventsPropertyOutputReference(this, "custom_events");
+  private _customEvents = new TfAppMonitor.CustomEventsPropertyOutputReference(this, "custom_events");
   public get customEvents() {
     return this._customEvents;
   }
-  public putCustomEvents(value: AwsRumAppMonitor.CustomEventsProperty) {
+  public putCustomEvents(value: TfAppMonitor.CustomEventsProperty) {
     this._customEvents.internalValue = value;
   }
   public resetCustomEvents() {
@@ -310,8 +310,8 @@ export class AwsRumAppMonitor extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      app_monitor_configuration: awsRumAppMonitorAppMonitorConfigurationPropertyToTerraform(this._appMonitorConfiguration.internalValue),
-      custom_events: awsRumAppMonitorCustomEventsPropertyToTerraform(this._customEvents.internalValue),
+      app_monitor_configuration: tfAppMonitorAppMonitorConfigurationPropertyToTerraform(this._appMonitorConfiguration.internalValue),
+      custom_events: tfAppMonitorCustomEventsPropertyToTerraform(this._customEvents.internalValue),
     };
   }
 
@@ -366,16 +366,16 @@ export class AwsRumAppMonitor extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       app_monitor_configuration: {
-        value: awsRumAppMonitorAppMonitorConfigurationPropertyToHclTerraform(this._appMonitorConfiguration.internalValue),
+        value: tfAppMonitorAppMonitorConfigurationPropertyToHclTerraform(this._appMonitorConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRumAppMonitor.AppMonitorConfigurationPropertyList",
+        storageClassType: "TfAppMonitor.AppMonitorConfigurationPropertyList",
       },
       custom_events: {
-        value: awsRumAppMonitorCustomEventsPropertyToHclTerraform(this._customEvents.internalValue),
+        value: tfAppMonitorCustomEventsPropertyToHclTerraform(this._customEvents.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRumAppMonitor.CustomEventsPropertyList",
+        storageClassType: "TfAppMonitor.CustomEventsPropertyList",
       },
     };
 
@@ -384,7 +384,7 @@ export class AwsRumAppMonitor extends cdktn.TerraformResource {
   }
 }
 
-export function awsRumAppMonitorAppMonitorConfigurationPropertyToTerraform(struct?: AwsRumAppMonitor.AppMonitorConfigurationPropertyOutputReference | AwsRumAppMonitor.AppMonitorConfigurationProperty): any {
+export function tfAppMonitorAppMonitorConfigurationPropertyToTerraform(struct?: TfAppMonitor.AppMonitorConfigurationPropertyOutputReference | TfAppMonitor.AppMonitorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function awsRumAppMonitorAppMonitorConfigurationPropertyToTerraform(struc
 }
 
 
-export function awsRumAppMonitorAppMonitorConfigurationPropertyToHclTerraform(struct?: AwsRumAppMonitor.AppMonitorConfigurationPropertyOutputReference | AwsRumAppMonitor.AppMonitorConfigurationProperty): any {
+export function tfAppMonitorAppMonitorConfigurationPropertyToHclTerraform(struct?: TfAppMonitor.AppMonitorConfigurationPropertyOutputReference | TfAppMonitor.AppMonitorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function awsRumAppMonitorAppMonitorConfigurationPropertyToHclTerraform(st
 }
 
 
-export function awsRumAppMonitorCustomEventsPropertyToTerraform(struct?: AwsRumAppMonitor.CustomEventsPropertyOutputReference | AwsRumAppMonitor.CustomEventsProperty): any {
+export function tfAppMonitorCustomEventsPropertyToTerraform(struct?: TfAppMonitor.CustomEventsPropertyOutputReference | TfAppMonitor.CustomEventsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function awsRumAppMonitorCustomEventsPropertyToTerraform(struct?: AwsRumA
 }
 
 
-export function awsRumAppMonitorCustomEventsPropertyToHclTerraform(struct?: AwsRumAppMonitor.CustomEventsPropertyOutputReference | AwsRumAppMonitor.CustomEventsProperty): any {
+export function tfAppMonitorCustomEventsPropertyToHclTerraform(struct?: TfAppMonitor.CustomEventsPropertyOutputReference | TfAppMonitor.CustomEventsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,42 +500,42 @@ export function awsRumAppMonitorCustomEventsPropertyToHclTerraform(struct?: AwsR
 }
 
 
-export namespace AwsRumAppMonitor {
+export namespace TfAppMonitor {
 export interface AppMonitorConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#allow_cookies AwsRumAppMonitor#allow_cookies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#allow_cookies TfAppMonitor#allow_cookies}
   */
   readonly allowCookies?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#enable_xray AwsRumAppMonitor#enable_xray}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#enable_xray TfAppMonitor#enable_xray}
   */
   readonly enableXray?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#excluded_pages AwsRumAppMonitor#excluded_pages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#excluded_pages TfAppMonitor#excluded_pages}
   */
   readonly excludedPages?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#favorite_pages AwsRumAppMonitor#favorite_pages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#favorite_pages TfAppMonitor#favorite_pages}
   */
   readonly favoritePages?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#guest_role_arn AwsRumAppMonitor#guest_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#guest_role_arn TfAppMonitor#guest_role_arn}
   */
   readonly guestRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#identity_pool_id AwsRumAppMonitor#identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#identity_pool_id TfAppMonitor#identity_pool_id}
   */
   readonly identityPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#included_pages AwsRumAppMonitor#included_pages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#included_pages TfAppMonitor#included_pages}
   */
   readonly includedPages?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#session_sample_rate AwsRumAppMonitor#session_sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#session_sample_rate TfAppMonitor#session_sample_rate}
   */
   readonly sessionSampleRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#telemetries AwsRumAppMonitor#telemetries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#telemetries TfAppMonitor#telemetries}
   */
   readonly telemetries?: string[];
 }
@@ -765,7 +765,7 @@ export class AppMonitorConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface CustomEventsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#status AwsRumAppMonitor#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_app_monitor#status TfAppMonitor#status}
   */
   readonly status?: string;
 }

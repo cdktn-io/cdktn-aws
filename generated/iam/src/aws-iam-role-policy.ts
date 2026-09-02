@@ -5,28 +5,28 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamRolePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfRolePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#id AwsIamRolePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#id TfRolePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#name AwsIamRolePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#name TfRolePolicy#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#name_prefix AwsIamRolePolicy#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#name_prefix TfRolePolicy#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#policy AwsIamRolePolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#policy TfRolePolicy#policy}
   */
   readonly policy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#role AwsIamRolePolicy#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#role TfRolePolicy#role}
   */
   readonly role: string;
 }
@@ -34,7 +34,7 @@ export interface AwsIamRolePolicyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy aws_iam_role_policy}
 */
-export class AwsIamRolePolicy extends cdktn.TerraformResource {
+export class TfRolePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsIamRolePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamRolePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRolePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamRolePolicy to import
-  * @param importFromId The id of the existing AwsIamRolePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamRolePolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfRolePolicy to import
+  * @param importFromId The id of the existing TfRolePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRolePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role_policy", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsIamRolePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamRolePolicyConfig
+  * @param options TfRolePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamRolePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfRolePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_role_policy',
       terraformGeneratorMetadata: {

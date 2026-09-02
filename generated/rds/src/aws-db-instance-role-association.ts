@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDbInstanceRoleAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDbInstanceRoleAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#db_instance_identifier AwsDbInstanceRoleAssociation#db_instance_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#db_instance_identifier TfDbInstanceRoleAssociation#db_instance_identifier}
   */
   readonly dbInstanceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#feature_name AwsDbInstanceRoleAssociation#feature_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#feature_name TfDbInstanceRoleAssociation#feature_name}
   */
   readonly featureName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#id AwsDbInstanceRoleAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#id TfDbInstanceRoleAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,25 +24,25 @@ export interface AwsDbInstanceRoleAssociationConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#region AwsDbInstanceRoleAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#region TfDbInstanceRoleAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#role_arn AwsDbInstanceRoleAssociation#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#role_arn TfDbInstanceRoleAssociation#role_arn}
   */
   readonly roleArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#timeouts AwsDbInstanceRoleAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#timeouts TfDbInstanceRoleAssociation#timeouts}
   */
-  readonly timeouts?: AwsDbInstanceRoleAssociation.TimeoutsProperty;
+  readonly timeouts?: TfDbInstanceRoleAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association aws_db_instance_role_association}
 */
-export class AwsDbInstanceRoleAssociation extends cdktn.TerraformResource {
+export class TfDbInstanceRoleAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsDbInstanceRoleAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDbInstanceRoleAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDbInstanceRoleAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDbInstanceRoleAssociation to import
-  * @param importFromId The id of the existing AwsDbInstanceRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDbInstanceRoleAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfDbInstanceRoleAssociation to import
+  * @param importFromId The id of the existing TfDbInstanceRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDbInstanceRoleAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_instance_role_association", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsDbInstanceRoleAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDbInstanceRoleAssociationConfig
+  * @param options TfDbInstanceRoleAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDbInstanceRoleAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDbInstanceRoleAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_instance_role_association',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class AwsDbInstanceRoleAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDbInstanceRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDbInstanceRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDbInstanceRoleAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfDbInstanceRoleAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -200,7 +200,7 @@ export class AwsDbInstanceRoleAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
-      timeouts: awsDbInstanceRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDbInstanceRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class AwsDbInstanceRoleAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsDbInstanceRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDbInstanceRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDbInstanceRoleAssociation.TimeoutsProperty",
+        storageClassType: "TfDbInstanceRoleAssociation.TimeoutsProperty",
       },
     };
 
@@ -249,7 +249,7 @@ export class AwsDbInstanceRoleAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsDbInstanceRoleAssociationTimeoutsPropertyToTerraform(struct?: AwsDbInstanceRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbInstanceRoleAssociationTimeoutsPropertyToTerraform(struct?: TfDbInstanceRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function awsDbInstanceRoleAssociationTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsDbInstanceRoleAssociationTimeoutsPropertyToHclTerraform(struct?: AwsDbInstanceRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbInstanceRoleAssociationTimeoutsPropertyToHclTerraform(struct?: TfDbInstanceRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,14 +286,14 @@ export function awsDbInstanceRoleAssociationTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsDbInstanceRoleAssociation {
+export namespace TfDbInstanceRoleAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#create AwsDbInstanceRoleAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#create TfDbInstanceRoleAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#delete AwsDbInstanceRoleAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance_role_association#delete TfDbInstanceRoleAssociation#delete}
   */
   readonly delete?: string;
 }

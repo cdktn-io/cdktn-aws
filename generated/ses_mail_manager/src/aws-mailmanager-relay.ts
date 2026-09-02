@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMailmanagerRelayConfig extends cdktn.TerraformMetaArguments {
+export interface TfRelayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#name AwsMailmanagerRelay#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#name TfRelay#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#region AwsMailmanagerRelay#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#region TfRelay#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#server_name AwsMailmanagerRelay#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#server_name TfRelay#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#server_port AwsMailmanagerRelay#server_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#server_port TfRelay#server_port}
   */
   readonly serverPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#tags AwsMailmanagerRelay#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#tags TfRelay#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#authentication AwsMailmanagerRelay#authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#authentication TfRelay#authentication}
   */
-  readonly authentication?: AwsMailmanagerRelay.AuthenticationProperty[] | cdktn.IResolvable;
+  readonly authentication?: TfRelay.AuthenticationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay aws_mailmanager_relay}
 */
-export class AwsMailmanagerRelay extends cdktn.TerraformResource {
+export class TfRelay extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class AwsMailmanagerRelay extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMailmanagerRelay resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRelay resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMailmanagerRelay to import
-  * @param importFromId The id of the existing AwsMailmanagerRelay that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMailmanagerRelay to import is found
+  * @param importToId The construct id used in the generated config for the TfRelay to import
+  * @param importFromId The id of the existing TfRelay that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRelay to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mailmanager_relay", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class AwsMailmanagerRelay extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMailmanagerRelayConfig
+  * @param options TfRelayConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMailmanagerRelayConfig) {
+  public constructor(scope: Construct, id: string, config: TfRelayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mailmanager_relay',
       terraformGeneratorMetadata: {
@@ -197,11 +197,11 @@ export class AwsMailmanagerRelay extends cdktn.TerraformResource {
   }
 
   // authentication - computed: false, optional: true, required: false
-  private _authentication = new AwsMailmanagerRelay.AuthenticationPropertyList(this, "authentication", false);
+  private _authentication = new TfRelay.AuthenticationPropertyList(this, "authentication", false);
   public get authentication() {
     return this._authentication;
   }
-  public putAuthentication(value: AwsMailmanagerRelay.AuthenticationProperty[] | cdktn.IResolvable) {
+  public putAuthentication(value: TfRelay.AuthenticationProperty[] | cdktn.IResolvable) {
     this._authentication.internalValue = value;
   }
   public resetAuthentication() {
@@ -223,7 +223,7 @@ export class AwsMailmanagerRelay extends cdktn.TerraformResource {
       server_name: cdktn.stringToTerraform(this._serverName),
       server_port: cdktn.numberToTerraform(this._serverPort),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      authentication: cdktn.listMapper(awsMailmanagerRelayAuthenticationPropertyToTerraform, true)(this._authentication.internalValue),
+      authentication: cdktn.listMapper(tfRelayAuthenticationPropertyToTerraform, true)(this._authentication.internalValue),
     };
   }
 
@@ -260,10 +260,10 @@ export class AwsMailmanagerRelay extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       authentication: {
-        value: cdktn.listMapperHcl(awsMailmanagerRelayAuthenticationPropertyToHclTerraform, true)(this._authentication.internalValue),
+        value: cdktn.listMapperHcl(tfRelayAuthenticationPropertyToHclTerraform, true)(this._authentication.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMailmanagerRelay.AuthenticationPropertyList",
+        storageClassType: "TfRelay.AuthenticationPropertyList",
       },
     };
 
@@ -272,7 +272,7 @@ export class AwsMailmanagerRelay extends cdktn.TerraformResource {
   }
 }
 
-export function awsMailmanagerRelayNoAuthenticationPropertyToTerraform(struct?: AwsMailmanagerRelay.NoAuthenticationProperty | cdktn.IResolvable): any {
+export function tfRelayNoAuthenticationPropertyToTerraform(struct?: TfRelay.NoAuthenticationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function awsMailmanagerRelayNoAuthenticationPropertyToTerraform(struct?: 
 }
 
 
-export function awsMailmanagerRelayNoAuthenticationPropertyToHclTerraform(struct?: AwsMailmanagerRelay.NoAuthenticationProperty | cdktn.IResolvable): any {
+export function tfRelayNoAuthenticationPropertyToHclTerraform(struct?: TfRelay.NoAuthenticationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,19 +293,19 @@ export function awsMailmanagerRelayNoAuthenticationPropertyToHclTerraform(struct
 }
 
 
-export function awsMailmanagerRelayAuthenticationPropertyToTerraform(struct?: AwsMailmanagerRelay.AuthenticationProperty | cdktn.IResolvable): any {
+export function tfRelayAuthenticationPropertyToTerraform(struct?: TfRelay.AuthenticationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     secret_arn: cdktn.stringToTerraform(struct!.secretArn),
-    no_authentication: cdktn.listMapper(awsMailmanagerRelayNoAuthenticationPropertyToTerraform, true)(struct!.noAuthentication),
+    no_authentication: cdktn.listMapper(tfRelayNoAuthenticationPropertyToTerraform, true)(struct!.noAuthentication),
   }
 }
 
 
-export function awsMailmanagerRelayAuthenticationPropertyToHclTerraform(struct?: AwsMailmanagerRelay.AuthenticationProperty | cdktn.IResolvable): any {
+export function tfRelayAuthenticationPropertyToHclTerraform(struct?: TfRelay.AuthenticationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function awsMailmanagerRelayAuthenticationPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     no_authentication: {
-      value: cdktn.listMapperHcl(awsMailmanagerRelayNoAuthenticationPropertyToHclTerraform, true)(struct!.noAuthentication),
+      value: cdktn.listMapperHcl(tfRelayNoAuthenticationPropertyToHclTerraform, true)(struct!.noAuthentication),
       isBlock: true,
       type: "list",
       storageClassType: "NoAuthenticationPropertyList",
@@ -330,7 +330,7 @@ export function awsMailmanagerRelayAuthenticationPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsMailmanagerRelay {
+export namespace TfRelay {
 export interface NoAuthenticationProperty {
 }
 export class NoAuthenticationPropertyOutputReference extends cdktn.ComplexObject {
@@ -393,13 +393,13 @@ export class NoAuthenticationPropertyList extends cdktn.ComplexList {
 }
 export interface AuthenticationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#secret_arn AwsMailmanagerRelay#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#secret_arn TfRelay#secret_arn}
   */
   readonly secretArn?: string;
   /**
   * no_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#no_authentication AwsMailmanagerRelay#no_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_relay#no_authentication TfRelay#no_authentication}
   */
   readonly noAuthentication?: NoAuthenticationProperty[] | cdktn.IResolvable;
 }

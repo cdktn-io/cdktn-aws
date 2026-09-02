@@ -5,262 +5,262 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface TfInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ami AwsInstance#ami}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ami TfInstance#ami}
   */
   readonly ami?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#associate_public_ip_address AwsInstance#associate_public_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#associate_public_ip_address TfInstance#associate_public_ip_address}
   */
   readonly associatePublicIpAddress?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#availability_zone AwsInstance#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#availability_zone TfInstance#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#disable_api_stop AwsInstance#disable_api_stop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#disable_api_stop TfInstance#disable_api_stop}
   */
   readonly disableApiStop?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#disable_api_termination AwsInstance#disable_api_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#disable_api_termination TfInstance#disable_api_termination}
   */
   readonly disableApiTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ebs_optimized AwsInstance#ebs_optimized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ebs_optimized TfInstance#ebs_optimized}
   */
   readonly ebsOptimized?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_primary_ipv6 AwsInstance#enable_primary_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_primary_ipv6 TfInstance#enable_primary_ipv6}
   */
   readonly enablePrimaryIpv6?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#force_destroy AwsInstance#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#force_destroy TfInstance#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#get_password_data AwsInstance#get_password_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#get_password_data TfInstance#get_password_data}
   */
   readonly fetchPasswordData?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#hibernation AwsInstance#hibernation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#hibernation TfInstance#hibernation}
   */
   readonly hibernation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#host_id AwsInstance#host_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#host_id TfInstance#host_id}
   */
   readonly hostId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#host_resource_group_arn AwsInstance#host_resource_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#host_resource_group_arn TfInstance#host_resource_group_arn}
   */
   readonly hostResourceGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iam_instance_profile AwsInstance#iam_instance_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iam_instance_profile TfInstance#iam_instance_profile}
   */
   readonly iamInstanceProfile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#id AwsInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#id TfInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_initiated_shutdown_behavior AwsInstance#instance_initiated_shutdown_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_initiated_shutdown_behavior TfInstance#instance_initiated_shutdown_behavior}
   */
   readonly instanceInitiatedShutdownBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_type AwsInstance#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_type TfInstance#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ipv6_address_count AwsInstance#ipv6_address_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ipv6_address_count TfInstance#ipv6_address_count}
   */
   readonly ipv6AddressCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ipv6_addresses AwsInstance#ipv6_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ipv6_addresses TfInstance#ipv6_addresses}
   */
   readonly ipv6Addresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#key_name AwsInstance#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#key_name TfInstance#key_name}
   */
   readonly keyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#monitoring AwsInstance#monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#monitoring TfInstance#monitoring}
   */
   readonly monitoring?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_group AwsInstance#placement_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_group TfInstance#placement_group}
   */
   readonly placementGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_group_id AwsInstance#placement_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_group_id TfInstance#placement_group_id}
   */
   readonly placementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_partition_number AwsInstance#placement_partition_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_partition_number TfInstance#placement_partition_number}
   */
   readonly placementPartitionNumber?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_ip AwsInstance#private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_ip TfInstance#private_ip}
   */
   readonly privateIp?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#region AwsInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#region TfInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_private_ips AwsInstance#secondary_private_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_private_ips TfInstance#secondary_private_ips}
   */
   readonly secondaryPrivateIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#security_groups AwsInstance#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#security_groups TfInstance#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#source_dest_check AwsInstance#source_dest_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#source_dest_check TfInstance#source_dest_check}
   */
   readonly sourceDestCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#subnet_id AwsInstance#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#subnet_id TfInstance#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags AwsInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags TfInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all AwsInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all TfInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tenancy AwsInstance#tenancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tenancy TfInstance#tenancy}
   */
   readonly tenancy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data AwsInstance#user_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data TfInstance#user_data}
   */
   readonly userData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data_base64 AwsInstance#user_data_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data_base64 TfInstance#user_data_base64}
   */
   readonly userDataBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data_replace_on_change AwsInstance#user_data_replace_on_change}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data_replace_on_change TfInstance#user_data_replace_on_change}
   */
   readonly userDataReplaceOnChange?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_tags AwsInstance#volume_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_tags TfInstance#volume_tags}
   */
   readonly volumeTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#vpc_security_group_ids AwsInstance#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#vpc_security_group_ids TfInstance#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * capacity_reservation_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_specification AwsInstance#capacity_reservation_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_specification TfInstance#capacity_reservation_specification}
   */
-  readonly capacityReservationSpecification?: AwsInstance.CapacityReservationSpecificationProperty;
+  readonly capacityReservationSpecification?: TfInstance.CapacityReservationSpecificationProperty;
   /**
   * cpu_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#cpu_options AwsInstance#cpu_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#cpu_options TfInstance#cpu_options}
   */
-  readonly cpuOptions?: AwsInstance.CpuOptionsProperty;
+  readonly cpuOptions?: TfInstance.CpuOptionsProperty;
   /**
   * credit_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#credit_specification AwsInstance#credit_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#credit_specification TfInstance#credit_specification}
   */
-  readonly creditSpecification?: AwsInstance.CreditSpecificationProperty;
+  readonly creditSpecification?: TfInstance.CreditSpecificationProperty;
   /**
   * ebs_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ebs_block_device AwsInstance#ebs_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ebs_block_device TfInstance#ebs_block_device}
   */
-  readonly ebsBlockDevice?: AwsInstance.EbsBlockDeviceProperty[] | cdktn.IResolvable;
+  readonly ebsBlockDevice?: TfInstance.EbsBlockDeviceProperty[] | cdktn.IResolvable;
   /**
   * enclave_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enclave_options AwsInstance#enclave_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enclave_options TfInstance#enclave_options}
   */
-  readonly enclaveOptions?: AwsInstance.EnclaveOptionsProperty;
+  readonly enclaveOptions?: TfInstance.EnclaveOptionsProperty;
   /**
   * ephemeral_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ephemeral_block_device AwsInstance#ephemeral_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ephemeral_block_device TfInstance#ephemeral_block_device}
   */
-  readonly ephemeralBlockDevice?: AwsInstance.EphemeralBlockDeviceProperty[] | cdktn.IResolvable;
+  readonly ephemeralBlockDevice?: TfInstance.EphemeralBlockDeviceProperty[] | cdktn.IResolvable;
   /**
   * instance_market_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_market_options AwsInstance#instance_market_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_market_options TfInstance#instance_market_options}
   */
-  readonly instanceMarketOptions?: AwsInstance.InstanceMarketOptionsProperty;
+  readonly instanceMarketOptions?: TfInstance.InstanceMarketOptionsProperty;
   /**
   * launch_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#launch_template AwsInstance#launch_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#launch_template TfInstance#launch_template}
   */
-  readonly launchTemplate?: AwsInstance.LaunchTemplateProperty;
+  readonly launchTemplate?: TfInstance.LaunchTemplateProperty;
   /**
   * maintenance_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#maintenance_options AwsInstance#maintenance_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#maintenance_options TfInstance#maintenance_options}
   */
-  readonly maintenanceOptions?: AwsInstance.MaintenanceOptionsProperty;
+  readonly maintenanceOptions?: TfInstance.MaintenanceOptionsProperty;
   /**
   * metadata_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#metadata_options AwsInstance#metadata_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#metadata_options TfInstance#metadata_options}
   */
-  readonly metadataOptions?: AwsInstance.MetadataOptionsProperty;
+  readonly metadataOptions?: TfInstance.MetadataOptionsProperty;
   /**
   * network_interface block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface AwsInstance#network_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface TfInstance#network_interface}
   */
-  readonly networkInterface?: AwsInstance.NetworkInterfaceProperty[] | cdktn.IResolvable;
+  readonly networkInterface?: TfInstance.NetworkInterfaceProperty[] | cdktn.IResolvable;
   /**
   * primary_network_interface block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#primary_network_interface AwsInstance#primary_network_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#primary_network_interface TfInstance#primary_network_interface}
   */
-  readonly primaryNetworkInterface?: AwsInstance.PrimaryNetworkInterfaceProperty;
+  readonly primaryNetworkInterface?: TfInstance.PrimaryNetworkInterfaceProperty;
   /**
   * private_dns_name_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_dns_name_options AwsInstance#private_dns_name_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_dns_name_options TfInstance#private_dns_name_options}
   */
-  readonly privateDnsNameOptions?: AwsInstance.PrivateDnsNameOptionsProperty;
+  readonly privateDnsNameOptions?: TfInstance.PrivateDnsNameOptionsProperty;
   /**
   * root_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#root_block_device AwsInstance#root_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#root_block_device TfInstance#root_block_device}
   */
-  readonly rootBlockDevice?: AwsInstance.RootBlockDeviceProperty;
+  readonly rootBlockDevice?: TfInstance.RootBlockDeviceProperty;
   /**
   * secondary_network_interface block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_network_interface AwsInstance#secondary_network_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_network_interface TfInstance#secondary_network_interface}
   */
-  readonly secondaryNetworkInterface?: AwsInstance.SecondaryNetworkInterfaceProperty[] | cdktn.IResolvable;
+  readonly secondaryNetworkInterface?: TfInstance.SecondaryNetworkInterfaceProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#timeouts AwsInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#timeouts TfInstance#timeouts}
   */
-  readonly timeouts?: AwsInstance.TimeoutsProperty;
+  readonly timeouts?: TfInstance.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance aws_instance}
 */
-export class AwsInstance extends cdktn.TerraformResource {
+export class TfInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -271,11 +271,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsInstance to import
-  * @param importFromId The id of the existing AwsInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsInstance to import is found
+  * @param importToId The construct id used in the generated config for the TfInstance to import
+  * @param importFromId The id of the existing TfInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_instance", importId: importFromId, provider });
@@ -290,9 +290,9 @@ export class AwsInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsInstanceConfig = {}
+  * @param options TfInstanceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsInstanceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfInstanceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_instance',
       terraformGeneratorMetadata: {
@@ -1010,11 +1010,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // capacity_reservation_specification - computed: false, optional: true, required: false
-  private _capacityReservationSpecification = new AwsInstance.CapacityReservationSpecificationPropertyOutputReference(this, "capacity_reservation_specification");
+  private _capacityReservationSpecification = new TfInstance.CapacityReservationSpecificationPropertyOutputReference(this, "capacity_reservation_specification");
   public get capacityReservationSpecification() {
     return this._capacityReservationSpecification;
   }
-  public putCapacityReservationSpecification(value: AwsInstance.CapacityReservationSpecificationProperty) {
+  public putCapacityReservationSpecification(value: TfInstance.CapacityReservationSpecificationProperty) {
     this._capacityReservationSpecification.internalValue = value;
   }
   public resetCapacityReservationSpecification() {
@@ -1026,11 +1026,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // cpu_options - computed: false, optional: true, required: false
-  private _cpuOptions = new AwsInstance.CpuOptionsPropertyOutputReference(this, "cpu_options");
+  private _cpuOptions = new TfInstance.CpuOptionsPropertyOutputReference(this, "cpu_options");
   public get cpuOptions() {
     return this._cpuOptions;
   }
-  public putCpuOptions(value: AwsInstance.CpuOptionsProperty) {
+  public putCpuOptions(value: TfInstance.CpuOptionsProperty) {
     this._cpuOptions.internalValue = value;
   }
   public resetCpuOptions() {
@@ -1042,11 +1042,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // credit_specification - computed: false, optional: true, required: false
-  private _creditSpecification = new AwsInstance.CreditSpecificationPropertyOutputReference(this, "credit_specification");
+  private _creditSpecification = new TfInstance.CreditSpecificationPropertyOutputReference(this, "credit_specification");
   public get creditSpecification() {
     return this._creditSpecification;
   }
-  public putCreditSpecification(value: AwsInstance.CreditSpecificationProperty) {
+  public putCreditSpecification(value: TfInstance.CreditSpecificationProperty) {
     this._creditSpecification.internalValue = value;
   }
   public resetCreditSpecification() {
@@ -1058,11 +1058,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // ebs_block_device - computed: false, optional: true, required: false
-  private _ebsBlockDevice = new AwsInstance.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
+  private _ebsBlockDevice = new TfInstance.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
   public get ebsBlockDevice() {
     return this._ebsBlockDevice;
   }
-  public putEbsBlockDevice(value: AwsInstance.EbsBlockDeviceProperty[] | cdktn.IResolvable) {
+  public putEbsBlockDevice(value: TfInstance.EbsBlockDeviceProperty[] | cdktn.IResolvable) {
     this._ebsBlockDevice.internalValue = value;
   }
   public resetEbsBlockDevice() {
@@ -1074,11 +1074,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // enclave_options - computed: false, optional: true, required: false
-  private _enclaveOptions = new AwsInstance.EnclaveOptionsPropertyOutputReference(this, "enclave_options");
+  private _enclaveOptions = new TfInstance.EnclaveOptionsPropertyOutputReference(this, "enclave_options");
   public get enclaveOptions() {
     return this._enclaveOptions;
   }
-  public putEnclaveOptions(value: AwsInstance.EnclaveOptionsProperty) {
+  public putEnclaveOptions(value: TfInstance.EnclaveOptionsProperty) {
     this._enclaveOptions.internalValue = value;
   }
   public resetEnclaveOptions() {
@@ -1090,11 +1090,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // ephemeral_block_device - computed: false, optional: true, required: false
-  private _ephemeralBlockDevice = new AwsInstance.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
+  private _ephemeralBlockDevice = new TfInstance.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
   public get ephemeralBlockDevice() {
     return this._ephemeralBlockDevice;
   }
-  public putEphemeralBlockDevice(value: AwsInstance.EphemeralBlockDeviceProperty[] | cdktn.IResolvable) {
+  public putEphemeralBlockDevice(value: TfInstance.EphemeralBlockDeviceProperty[] | cdktn.IResolvable) {
     this._ephemeralBlockDevice.internalValue = value;
   }
   public resetEphemeralBlockDevice() {
@@ -1106,11 +1106,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // instance_market_options - computed: false, optional: true, required: false
-  private _instanceMarketOptions = new AwsInstance.InstanceMarketOptionsPropertyOutputReference(this, "instance_market_options");
+  private _instanceMarketOptions = new TfInstance.InstanceMarketOptionsPropertyOutputReference(this, "instance_market_options");
   public get instanceMarketOptions() {
     return this._instanceMarketOptions;
   }
-  public putInstanceMarketOptions(value: AwsInstance.InstanceMarketOptionsProperty) {
+  public putInstanceMarketOptions(value: TfInstance.InstanceMarketOptionsProperty) {
     this._instanceMarketOptions.internalValue = value;
   }
   public resetInstanceMarketOptions() {
@@ -1122,11 +1122,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // launch_template - computed: false, optional: true, required: false
-  private _launchTemplate = new AwsInstance.LaunchTemplatePropertyOutputReference(this, "launch_template");
+  private _launchTemplate = new TfInstance.LaunchTemplatePropertyOutputReference(this, "launch_template");
   public get launchTemplate() {
     return this._launchTemplate;
   }
-  public putLaunchTemplate(value: AwsInstance.LaunchTemplateProperty) {
+  public putLaunchTemplate(value: TfInstance.LaunchTemplateProperty) {
     this._launchTemplate.internalValue = value;
   }
   public resetLaunchTemplate() {
@@ -1138,11 +1138,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // maintenance_options - computed: false, optional: true, required: false
-  private _maintenanceOptions = new AwsInstance.MaintenanceOptionsPropertyOutputReference(this, "maintenance_options");
+  private _maintenanceOptions = new TfInstance.MaintenanceOptionsPropertyOutputReference(this, "maintenance_options");
   public get maintenanceOptions() {
     return this._maintenanceOptions;
   }
-  public putMaintenanceOptions(value: AwsInstance.MaintenanceOptionsProperty) {
+  public putMaintenanceOptions(value: TfInstance.MaintenanceOptionsProperty) {
     this._maintenanceOptions.internalValue = value;
   }
   public resetMaintenanceOptions() {
@@ -1154,11 +1154,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // metadata_options - computed: false, optional: true, required: false
-  private _metadataOptions = new AwsInstance.MetadataOptionsPropertyOutputReference(this, "metadata_options");
+  private _metadataOptions = new TfInstance.MetadataOptionsPropertyOutputReference(this, "metadata_options");
   public get metadataOptions() {
     return this._metadataOptions;
   }
-  public putMetadataOptions(value: AwsInstance.MetadataOptionsProperty) {
+  public putMetadataOptions(value: TfInstance.MetadataOptionsProperty) {
     this._metadataOptions.internalValue = value;
   }
   public resetMetadataOptions() {
@@ -1170,11 +1170,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // network_interface - computed: false, optional: true, required: false
-  private _networkInterface = new AwsInstance.NetworkInterfacePropertyList(this, "network_interface", true);
+  private _networkInterface = new TfInstance.NetworkInterfacePropertyList(this, "network_interface", true);
   public get networkInterface() {
     return this._networkInterface;
   }
-  public putNetworkInterface(value: AwsInstance.NetworkInterfaceProperty[] | cdktn.IResolvable) {
+  public putNetworkInterface(value: TfInstance.NetworkInterfaceProperty[] | cdktn.IResolvable) {
     this._networkInterface.internalValue = value;
   }
   public resetNetworkInterface() {
@@ -1186,11 +1186,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // primary_network_interface - computed: false, optional: true, required: false
-  private _primaryNetworkInterface = new AwsInstance.PrimaryNetworkInterfacePropertyOutputReference(this, "primary_network_interface");
+  private _primaryNetworkInterface = new TfInstance.PrimaryNetworkInterfacePropertyOutputReference(this, "primary_network_interface");
   public get primaryNetworkInterface() {
     return this._primaryNetworkInterface;
   }
-  public putPrimaryNetworkInterface(value: AwsInstance.PrimaryNetworkInterfaceProperty) {
+  public putPrimaryNetworkInterface(value: TfInstance.PrimaryNetworkInterfaceProperty) {
     this._primaryNetworkInterface.internalValue = value;
   }
   public resetPrimaryNetworkInterface() {
@@ -1202,11 +1202,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // private_dns_name_options - computed: false, optional: true, required: false
-  private _privateDnsNameOptions = new AwsInstance.PrivateDnsNameOptionsPropertyOutputReference(this, "private_dns_name_options");
+  private _privateDnsNameOptions = new TfInstance.PrivateDnsNameOptionsPropertyOutputReference(this, "private_dns_name_options");
   public get privateDnsNameOptions() {
     return this._privateDnsNameOptions;
   }
-  public putPrivateDnsNameOptions(value: AwsInstance.PrivateDnsNameOptionsProperty) {
+  public putPrivateDnsNameOptions(value: TfInstance.PrivateDnsNameOptionsProperty) {
     this._privateDnsNameOptions.internalValue = value;
   }
   public resetPrivateDnsNameOptions() {
@@ -1218,11 +1218,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // root_block_device - computed: false, optional: true, required: false
-  private _rootBlockDevice = new AwsInstance.RootBlockDevicePropertyOutputReference(this, "root_block_device");
+  private _rootBlockDevice = new TfInstance.RootBlockDevicePropertyOutputReference(this, "root_block_device");
   public get rootBlockDevice() {
     return this._rootBlockDevice;
   }
-  public putRootBlockDevice(value: AwsInstance.RootBlockDeviceProperty) {
+  public putRootBlockDevice(value: TfInstance.RootBlockDeviceProperty) {
     this._rootBlockDevice.internalValue = value;
   }
   public resetRootBlockDevice() {
@@ -1234,11 +1234,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // secondary_network_interface - computed: false, optional: true, required: false
-  private _secondaryNetworkInterface = new AwsInstance.SecondaryNetworkInterfacePropertyList(this, "secondary_network_interface", true);
+  private _secondaryNetworkInterface = new TfInstance.SecondaryNetworkInterfacePropertyList(this, "secondary_network_interface", true);
   public get secondaryNetworkInterface() {
     return this._secondaryNetworkInterface;
   }
-  public putSecondaryNetworkInterface(value: AwsInstance.SecondaryNetworkInterfaceProperty[] | cdktn.IResolvable) {
+  public putSecondaryNetworkInterface(value: TfInstance.SecondaryNetworkInterfaceProperty[] | cdktn.IResolvable) {
     this._secondaryNetworkInterface.internalValue = value;
   }
   public resetSecondaryNetworkInterface() {
@@ -1250,11 +1250,11 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfInstance.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsInstance.TimeoutsProperty) {
+  public putTimeouts(value: TfInstance.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -1308,22 +1308,22 @@ export class AwsInstance extends cdktn.TerraformResource {
       user_data_replace_on_change: cdktn.booleanToTerraform(this._userDataReplaceOnChange),
       volume_tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._volumeTags),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      capacity_reservation_specification: awsInstanceCapacityReservationSpecificationPropertyToTerraform(this._capacityReservationSpecification.internalValue),
-      cpu_options: awsInstanceCpuOptionsPropertyToTerraform(this._cpuOptions.internalValue),
-      credit_specification: awsInstanceCreditSpecificationPropertyToTerraform(this._creditSpecification.internalValue),
-      ebs_block_device: cdktn.listMapper(awsInstanceEbsBlockDevicePropertyToTerraform, true)(this._ebsBlockDevice.internalValue),
-      enclave_options: awsInstanceEnclaveOptionsPropertyToTerraform(this._enclaveOptions.internalValue),
-      ephemeral_block_device: cdktn.listMapper(awsInstanceEphemeralBlockDevicePropertyToTerraform, true)(this._ephemeralBlockDevice.internalValue),
-      instance_market_options: awsInstanceInstanceMarketOptionsPropertyToTerraform(this._instanceMarketOptions.internalValue),
-      launch_template: awsInstanceLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
-      maintenance_options: awsInstanceMaintenanceOptionsPropertyToTerraform(this._maintenanceOptions.internalValue),
-      metadata_options: awsInstanceMetadataOptionsPropertyToTerraform(this._metadataOptions.internalValue),
-      network_interface: cdktn.listMapper(awsInstanceNetworkInterfacePropertyToTerraform, true)(this._networkInterface.internalValue),
-      primary_network_interface: awsInstancePrimaryNetworkInterfacePropertyToTerraform(this._primaryNetworkInterface.internalValue),
-      private_dns_name_options: awsInstancePrivateDnsNameOptionsPropertyToTerraform(this._privateDnsNameOptions.internalValue),
-      root_block_device: awsInstanceRootBlockDevicePropertyToTerraform(this._rootBlockDevice.internalValue),
-      secondary_network_interface: cdktn.listMapper(awsInstanceSecondaryNetworkInterfacePropertyToTerraform, true)(this._secondaryNetworkInterface.internalValue),
-      timeouts: awsInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      capacity_reservation_specification: tfInstanceCapacityReservationSpecificationPropertyToTerraform(this._capacityReservationSpecification.internalValue),
+      cpu_options: tfInstanceCpuOptionsPropertyToTerraform(this._cpuOptions.internalValue),
+      credit_specification: tfInstanceCreditSpecificationPropertyToTerraform(this._creditSpecification.internalValue),
+      ebs_block_device: cdktn.listMapper(tfInstanceEbsBlockDevicePropertyToTerraform, true)(this._ebsBlockDevice.internalValue),
+      enclave_options: tfInstanceEnclaveOptionsPropertyToTerraform(this._enclaveOptions.internalValue),
+      ephemeral_block_device: cdktn.listMapper(tfInstanceEphemeralBlockDevicePropertyToTerraform, true)(this._ephemeralBlockDevice.internalValue),
+      instance_market_options: tfInstanceInstanceMarketOptionsPropertyToTerraform(this._instanceMarketOptions.internalValue),
+      launch_template: tfInstanceLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
+      maintenance_options: tfInstanceMaintenanceOptionsPropertyToTerraform(this._maintenanceOptions.internalValue),
+      metadata_options: tfInstanceMetadataOptionsPropertyToTerraform(this._metadataOptions.internalValue),
+      network_interface: cdktn.listMapper(tfInstanceNetworkInterfacePropertyToTerraform, true)(this._networkInterface.internalValue),
+      primary_network_interface: tfInstancePrimaryNetworkInterfacePropertyToTerraform(this._primaryNetworkInterface.internalValue),
+      private_dns_name_options: tfInstancePrivateDnsNameOptionsPropertyToTerraform(this._privateDnsNameOptions.internalValue),
+      root_block_device: tfInstanceRootBlockDevicePropertyToTerraform(this._rootBlockDevice.internalValue),
+      secondary_network_interface: cdktn.listMapper(tfInstanceSecondaryNetworkInterfacePropertyToTerraform, true)(this._secondaryNetworkInterface.internalValue),
+      timeouts: tfInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -1552,100 +1552,100 @@ export class AwsInstance extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       capacity_reservation_specification: {
-        value: awsInstanceCapacityReservationSpecificationPropertyToHclTerraform(this._capacityReservationSpecification.internalValue),
+        value: tfInstanceCapacityReservationSpecificationPropertyToHclTerraform(this._capacityReservationSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.CapacityReservationSpecificationPropertyList",
+        storageClassType: "TfInstance.CapacityReservationSpecificationPropertyList",
       },
       cpu_options: {
-        value: awsInstanceCpuOptionsPropertyToHclTerraform(this._cpuOptions.internalValue),
+        value: tfInstanceCpuOptionsPropertyToHclTerraform(this._cpuOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.CpuOptionsPropertyList",
+        storageClassType: "TfInstance.CpuOptionsPropertyList",
       },
       credit_specification: {
-        value: awsInstanceCreditSpecificationPropertyToHclTerraform(this._creditSpecification.internalValue),
+        value: tfInstanceCreditSpecificationPropertyToHclTerraform(this._creditSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.CreditSpecificationPropertyList",
+        storageClassType: "TfInstance.CreditSpecificationPropertyList",
       },
       ebs_block_device: {
-        value: cdktn.listMapperHcl(awsInstanceEbsBlockDevicePropertyToHclTerraform, true)(this._ebsBlockDevice.internalValue),
+        value: cdktn.listMapperHcl(tfInstanceEbsBlockDevicePropertyToHclTerraform, true)(this._ebsBlockDevice.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsInstance.EbsBlockDevicePropertyList",
+        storageClassType: "TfInstance.EbsBlockDevicePropertyList",
       },
       enclave_options: {
-        value: awsInstanceEnclaveOptionsPropertyToHclTerraform(this._enclaveOptions.internalValue),
+        value: tfInstanceEnclaveOptionsPropertyToHclTerraform(this._enclaveOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.EnclaveOptionsPropertyList",
+        storageClassType: "TfInstance.EnclaveOptionsPropertyList",
       },
       ephemeral_block_device: {
-        value: cdktn.listMapperHcl(awsInstanceEphemeralBlockDevicePropertyToHclTerraform, true)(this._ephemeralBlockDevice.internalValue),
+        value: cdktn.listMapperHcl(tfInstanceEphemeralBlockDevicePropertyToHclTerraform, true)(this._ephemeralBlockDevice.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsInstance.EphemeralBlockDevicePropertyList",
+        storageClassType: "TfInstance.EphemeralBlockDevicePropertyList",
       },
       instance_market_options: {
-        value: awsInstanceInstanceMarketOptionsPropertyToHclTerraform(this._instanceMarketOptions.internalValue),
+        value: tfInstanceInstanceMarketOptionsPropertyToHclTerraform(this._instanceMarketOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.InstanceMarketOptionsPropertyList",
+        storageClassType: "TfInstance.InstanceMarketOptionsPropertyList",
       },
       launch_template: {
-        value: awsInstanceLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
+        value: tfInstanceLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.LaunchTemplatePropertyList",
+        storageClassType: "TfInstance.LaunchTemplatePropertyList",
       },
       maintenance_options: {
-        value: awsInstanceMaintenanceOptionsPropertyToHclTerraform(this._maintenanceOptions.internalValue),
+        value: tfInstanceMaintenanceOptionsPropertyToHclTerraform(this._maintenanceOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.MaintenanceOptionsPropertyList",
+        storageClassType: "TfInstance.MaintenanceOptionsPropertyList",
       },
       metadata_options: {
-        value: awsInstanceMetadataOptionsPropertyToHclTerraform(this._metadataOptions.internalValue),
+        value: tfInstanceMetadataOptionsPropertyToHclTerraform(this._metadataOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.MetadataOptionsPropertyList",
+        storageClassType: "TfInstance.MetadataOptionsPropertyList",
       },
       network_interface: {
-        value: cdktn.listMapperHcl(awsInstanceNetworkInterfacePropertyToHclTerraform, true)(this._networkInterface.internalValue),
+        value: cdktn.listMapperHcl(tfInstanceNetworkInterfacePropertyToHclTerraform, true)(this._networkInterface.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsInstance.NetworkInterfacePropertyList",
+        storageClassType: "TfInstance.NetworkInterfacePropertyList",
       },
       primary_network_interface: {
-        value: awsInstancePrimaryNetworkInterfacePropertyToHclTerraform(this._primaryNetworkInterface.internalValue),
+        value: tfInstancePrimaryNetworkInterfacePropertyToHclTerraform(this._primaryNetworkInterface.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.PrimaryNetworkInterfacePropertyList",
+        storageClassType: "TfInstance.PrimaryNetworkInterfacePropertyList",
       },
       private_dns_name_options: {
-        value: awsInstancePrivateDnsNameOptionsPropertyToHclTerraform(this._privateDnsNameOptions.internalValue),
+        value: tfInstancePrivateDnsNameOptionsPropertyToHclTerraform(this._privateDnsNameOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.PrivateDnsNameOptionsPropertyList",
+        storageClassType: "TfInstance.PrivateDnsNameOptionsPropertyList",
       },
       root_block_device: {
-        value: awsInstanceRootBlockDevicePropertyToHclTerraform(this._rootBlockDevice.internalValue),
+        value: tfInstanceRootBlockDevicePropertyToHclTerraform(this._rootBlockDevice.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInstance.RootBlockDevicePropertyList",
+        storageClassType: "TfInstance.RootBlockDevicePropertyList",
       },
       secondary_network_interface: {
-        value: cdktn.listMapperHcl(awsInstanceSecondaryNetworkInterfacePropertyToHclTerraform, true)(this._secondaryNetworkInterface.internalValue),
+        value: cdktn.listMapperHcl(tfInstanceSecondaryNetworkInterfacePropertyToHclTerraform, true)(this._secondaryNetworkInterface.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsInstance.SecondaryNetworkInterfacePropertyList",
+        storageClassType: "TfInstance.SecondaryNetworkInterfacePropertyList",
       },
       timeouts: {
-        value: awsInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsInstance.TimeoutsProperty",
+        storageClassType: "TfInstance.TimeoutsProperty",
       },
     };
 
@@ -1654,7 +1654,7 @@ export class AwsInstance extends cdktn.TerraformResource {
   }
 }
 
-export function awsInstanceCapacityReservationTargetPropertyToTerraform(struct?: AwsInstance.CapacityReservationTargetPropertyOutputReference | AwsInstance.CapacityReservationTargetProperty): any {
+export function tfInstanceCapacityReservationTargetPropertyToTerraform(struct?: TfInstance.CapacityReservationTargetPropertyOutputReference | TfInstance.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1666,7 +1666,7 @@ export function awsInstanceCapacityReservationTargetPropertyToTerraform(struct?:
 }
 
 
-export function awsInstanceCapacityReservationTargetPropertyToHclTerraform(struct?: AwsInstance.CapacityReservationTargetPropertyOutputReference | AwsInstance.CapacityReservationTargetProperty): any {
+export function tfInstanceCapacityReservationTargetPropertyToHclTerraform(struct?: TfInstance.CapacityReservationTargetPropertyOutputReference | TfInstance.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1691,19 +1691,19 @@ export function awsInstanceCapacityReservationTargetPropertyToHclTerraform(struc
 }
 
 
-export function awsInstanceCapacityReservationSpecificationPropertyToTerraform(struct?: AwsInstance.CapacityReservationSpecificationPropertyOutputReference | AwsInstance.CapacityReservationSpecificationProperty): any {
+export function tfInstanceCapacityReservationSpecificationPropertyToTerraform(struct?: TfInstance.CapacityReservationSpecificationPropertyOutputReference | TfInstance.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     capacity_reservation_preference: cdktn.stringToTerraform(struct!.capacityReservationPreference),
-    capacity_reservation_target: awsInstanceCapacityReservationTargetPropertyToTerraform(struct!.capacityReservationTarget),
+    capacity_reservation_target: tfInstanceCapacityReservationTargetPropertyToTerraform(struct!.capacityReservationTarget),
   }
 }
 
 
-export function awsInstanceCapacityReservationSpecificationPropertyToHclTerraform(struct?: AwsInstance.CapacityReservationSpecificationPropertyOutputReference | AwsInstance.CapacityReservationSpecificationProperty): any {
+export function tfInstanceCapacityReservationSpecificationPropertyToHclTerraform(struct?: TfInstance.CapacityReservationSpecificationPropertyOutputReference | TfInstance.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1716,7 +1716,7 @@ export function awsInstanceCapacityReservationSpecificationPropertyToHclTerrafor
       storageClassType: "string",
     },
     capacity_reservation_target: {
-      value: awsInstanceCapacityReservationTargetPropertyToHclTerraform(struct!.capacityReservationTarget),
+      value: tfInstanceCapacityReservationTargetPropertyToHclTerraform(struct!.capacityReservationTarget),
       isBlock: true,
       type: "list",
       storageClassType: "CapacityReservationTargetPropertyList",
@@ -1728,7 +1728,7 @@ export function awsInstanceCapacityReservationSpecificationPropertyToHclTerrafor
 }
 
 
-export function awsInstanceCpuOptionsPropertyToTerraform(struct?: AwsInstance.CpuOptionsPropertyOutputReference | AwsInstance.CpuOptionsProperty): any {
+export function tfInstanceCpuOptionsPropertyToTerraform(struct?: TfInstance.CpuOptionsPropertyOutputReference | TfInstance.CpuOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1742,7 +1742,7 @@ export function awsInstanceCpuOptionsPropertyToTerraform(struct?: AwsInstance.Cp
 }
 
 
-export function awsInstanceCpuOptionsPropertyToHclTerraform(struct?: AwsInstance.CpuOptionsPropertyOutputReference | AwsInstance.CpuOptionsProperty): any {
+export function tfInstanceCpuOptionsPropertyToHclTerraform(struct?: TfInstance.CpuOptionsPropertyOutputReference | TfInstance.CpuOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1779,7 +1779,7 @@ export function awsInstanceCpuOptionsPropertyToHclTerraform(struct?: AwsInstance
 }
 
 
-export function awsInstanceCreditSpecificationPropertyToTerraform(struct?: AwsInstance.CreditSpecificationPropertyOutputReference | AwsInstance.CreditSpecificationProperty): any {
+export function tfInstanceCreditSpecificationPropertyToTerraform(struct?: TfInstance.CreditSpecificationPropertyOutputReference | TfInstance.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1790,7 +1790,7 @@ export function awsInstanceCreditSpecificationPropertyToTerraform(struct?: AwsIn
 }
 
 
-export function awsInstanceCreditSpecificationPropertyToHclTerraform(struct?: AwsInstance.CreditSpecificationPropertyOutputReference | AwsInstance.CreditSpecificationProperty): any {
+export function tfInstanceCreditSpecificationPropertyToHclTerraform(struct?: TfInstance.CreditSpecificationPropertyOutputReference | TfInstance.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1809,7 +1809,7 @@ export function awsInstanceCreditSpecificationPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsInstanceEbsBlockDevicePropertyToTerraform(struct?: AwsInstance.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+export function tfInstanceEbsBlockDevicePropertyToTerraform(struct?: TfInstance.EbsBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1830,7 +1830,7 @@ export function awsInstanceEbsBlockDevicePropertyToTerraform(struct?: AwsInstanc
 }
 
 
-export function awsInstanceEbsBlockDevicePropertyToHclTerraform(struct?: AwsInstance.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+export function tfInstanceEbsBlockDevicePropertyToHclTerraform(struct?: TfInstance.EbsBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1909,7 +1909,7 @@ export function awsInstanceEbsBlockDevicePropertyToHclTerraform(struct?: AwsInst
 }
 
 
-export function awsInstanceEnclaveOptionsPropertyToTerraform(struct?: AwsInstance.EnclaveOptionsPropertyOutputReference | AwsInstance.EnclaveOptionsProperty): any {
+export function tfInstanceEnclaveOptionsPropertyToTerraform(struct?: TfInstance.EnclaveOptionsPropertyOutputReference | TfInstance.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1920,7 +1920,7 @@ export function awsInstanceEnclaveOptionsPropertyToTerraform(struct?: AwsInstanc
 }
 
 
-export function awsInstanceEnclaveOptionsPropertyToHclTerraform(struct?: AwsInstance.EnclaveOptionsPropertyOutputReference | AwsInstance.EnclaveOptionsProperty): any {
+export function tfInstanceEnclaveOptionsPropertyToHclTerraform(struct?: TfInstance.EnclaveOptionsPropertyOutputReference | TfInstance.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1939,7 +1939,7 @@ export function awsInstanceEnclaveOptionsPropertyToHclTerraform(struct?: AwsInst
 }
 
 
-export function awsInstanceEphemeralBlockDevicePropertyToTerraform(struct?: AwsInstance.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+export function tfInstanceEphemeralBlockDevicePropertyToTerraform(struct?: TfInstance.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1952,7 +1952,7 @@ export function awsInstanceEphemeralBlockDevicePropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsInstanceEphemeralBlockDevicePropertyToHclTerraform(struct?: AwsInstance.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+export function tfInstanceEphemeralBlockDevicePropertyToHclTerraform(struct?: TfInstance.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1983,7 +1983,7 @@ export function awsInstanceEphemeralBlockDevicePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsInstanceSpotOptionsPropertyToTerraform(struct?: AwsInstance.SpotOptionsPropertyOutputReference | AwsInstance.SpotOptionsProperty): any {
+export function tfInstanceSpotOptionsPropertyToTerraform(struct?: TfInstance.SpotOptionsPropertyOutputReference | TfInstance.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1997,7 +1997,7 @@ export function awsInstanceSpotOptionsPropertyToTerraform(struct?: AwsInstance.S
 }
 
 
-export function awsInstanceSpotOptionsPropertyToHclTerraform(struct?: AwsInstance.SpotOptionsPropertyOutputReference | AwsInstance.SpotOptionsProperty): any {
+export function tfInstanceSpotOptionsPropertyToHclTerraform(struct?: TfInstance.SpotOptionsPropertyOutputReference | TfInstance.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2034,19 +2034,19 @@ export function awsInstanceSpotOptionsPropertyToHclTerraform(struct?: AwsInstanc
 }
 
 
-export function awsInstanceInstanceMarketOptionsPropertyToTerraform(struct?: AwsInstance.InstanceMarketOptionsPropertyOutputReference | AwsInstance.InstanceMarketOptionsProperty): any {
+export function tfInstanceInstanceMarketOptionsPropertyToTerraform(struct?: TfInstance.InstanceMarketOptionsPropertyOutputReference | TfInstance.InstanceMarketOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     market_type: cdktn.stringToTerraform(struct!.marketType),
-    spot_options: awsInstanceSpotOptionsPropertyToTerraform(struct!.spotOptions),
+    spot_options: tfInstanceSpotOptionsPropertyToTerraform(struct!.spotOptions),
   }
 }
 
 
-export function awsInstanceInstanceMarketOptionsPropertyToHclTerraform(struct?: AwsInstance.InstanceMarketOptionsPropertyOutputReference | AwsInstance.InstanceMarketOptionsProperty): any {
+export function tfInstanceInstanceMarketOptionsPropertyToHclTerraform(struct?: TfInstance.InstanceMarketOptionsPropertyOutputReference | TfInstance.InstanceMarketOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2059,7 +2059,7 @@ export function awsInstanceInstanceMarketOptionsPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     spot_options: {
-      value: awsInstanceSpotOptionsPropertyToHclTerraform(struct!.spotOptions),
+      value: tfInstanceSpotOptionsPropertyToHclTerraform(struct!.spotOptions),
       isBlock: true,
       type: "list",
       storageClassType: "SpotOptionsPropertyList",
@@ -2071,7 +2071,7 @@ export function awsInstanceInstanceMarketOptionsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsInstanceLaunchTemplatePropertyToTerraform(struct?: AwsInstance.LaunchTemplatePropertyOutputReference | AwsInstance.LaunchTemplateProperty): any {
+export function tfInstanceLaunchTemplatePropertyToTerraform(struct?: TfInstance.LaunchTemplatePropertyOutputReference | TfInstance.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2084,7 +2084,7 @@ export function awsInstanceLaunchTemplatePropertyToTerraform(struct?: AwsInstanc
 }
 
 
-export function awsInstanceLaunchTemplatePropertyToHclTerraform(struct?: AwsInstance.LaunchTemplatePropertyOutputReference | AwsInstance.LaunchTemplateProperty): any {
+export function tfInstanceLaunchTemplatePropertyToHclTerraform(struct?: TfInstance.LaunchTemplatePropertyOutputReference | TfInstance.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2115,7 +2115,7 @@ export function awsInstanceLaunchTemplatePropertyToHclTerraform(struct?: AwsInst
 }
 
 
-export function awsInstanceMaintenanceOptionsPropertyToTerraform(struct?: AwsInstance.MaintenanceOptionsPropertyOutputReference | AwsInstance.MaintenanceOptionsProperty): any {
+export function tfInstanceMaintenanceOptionsPropertyToTerraform(struct?: TfInstance.MaintenanceOptionsPropertyOutputReference | TfInstance.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2126,7 +2126,7 @@ export function awsInstanceMaintenanceOptionsPropertyToTerraform(struct?: AwsIns
 }
 
 
-export function awsInstanceMaintenanceOptionsPropertyToHclTerraform(struct?: AwsInstance.MaintenanceOptionsPropertyOutputReference | AwsInstance.MaintenanceOptionsProperty): any {
+export function tfInstanceMaintenanceOptionsPropertyToHclTerraform(struct?: TfInstance.MaintenanceOptionsPropertyOutputReference | TfInstance.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2145,7 +2145,7 @@ export function awsInstanceMaintenanceOptionsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsInstanceMetadataOptionsPropertyToTerraform(struct?: AwsInstance.MetadataOptionsPropertyOutputReference | AwsInstance.MetadataOptionsProperty): any {
+export function tfInstanceMetadataOptionsPropertyToTerraform(struct?: TfInstance.MetadataOptionsPropertyOutputReference | TfInstance.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2160,7 +2160,7 @@ export function awsInstanceMetadataOptionsPropertyToTerraform(struct?: AwsInstan
 }
 
 
-export function awsInstanceMetadataOptionsPropertyToHclTerraform(struct?: AwsInstance.MetadataOptionsPropertyOutputReference | AwsInstance.MetadataOptionsProperty): any {
+export function tfInstanceMetadataOptionsPropertyToHclTerraform(struct?: TfInstance.MetadataOptionsPropertyOutputReference | TfInstance.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2203,7 +2203,7 @@ export function awsInstanceMetadataOptionsPropertyToHclTerraform(struct?: AwsIns
 }
 
 
-export function awsInstanceNetworkInterfacePropertyToTerraform(struct?: AwsInstance.NetworkInterfaceProperty | cdktn.IResolvable): any {
+export function tfInstanceNetworkInterfacePropertyToTerraform(struct?: TfInstance.NetworkInterfaceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2217,7 +2217,7 @@ export function awsInstanceNetworkInterfacePropertyToTerraform(struct?: AwsInsta
 }
 
 
-export function awsInstanceNetworkInterfacePropertyToHclTerraform(struct?: AwsInstance.NetworkInterfaceProperty | cdktn.IResolvable): any {
+export function tfInstanceNetworkInterfacePropertyToHclTerraform(struct?: TfInstance.NetworkInterfaceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2254,7 +2254,7 @@ export function awsInstanceNetworkInterfacePropertyToHclTerraform(struct?: AwsIn
 }
 
 
-export function awsInstancePrimaryNetworkInterfacePropertyToTerraform(struct?: AwsInstance.PrimaryNetworkInterfacePropertyOutputReference | AwsInstance.PrimaryNetworkInterfaceProperty): any {
+export function tfInstancePrimaryNetworkInterfacePropertyToTerraform(struct?: TfInstance.PrimaryNetworkInterfacePropertyOutputReference | TfInstance.PrimaryNetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2265,7 +2265,7 @@ export function awsInstancePrimaryNetworkInterfacePropertyToTerraform(struct?: A
 }
 
 
-export function awsInstancePrimaryNetworkInterfacePropertyToHclTerraform(struct?: AwsInstance.PrimaryNetworkInterfacePropertyOutputReference | AwsInstance.PrimaryNetworkInterfaceProperty): any {
+export function tfInstancePrimaryNetworkInterfacePropertyToHclTerraform(struct?: TfInstance.PrimaryNetworkInterfacePropertyOutputReference | TfInstance.PrimaryNetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2284,7 +2284,7 @@ export function awsInstancePrimaryNetworkInterfacePropertyToHclTerraform(struct?
 }
 
 
-export function awsInstancePrivateDnsNameOptionsPropertyToTerraform(struct?: AwsInstance.PrivateDnsNameOptionsPropertyOutputReference | AwsInstance.PrivateDnsNameOptionsProperty): any {
+export function tfInstancePrivateDnsNameOptionsPropertyToTerraform(struct?: TfInstance.PrivateDnsNameOptionsPropertyOutputReference | TfInstance.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2297,7 +2297,7 @@ export function awsInstancePrivateDnsNameOptionsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsInstancePrivateDnsNameOptionsPropertyToHclTerraform(struct?: AwsInstance.PrivateDnsNameOptionsPropertyOutputReference | AwsInstance.PrivateDnsNameOptionsProperty): any {
+export function tfInstancePrivateDnsNameOptionsPropertyToHclTerraform(struct?: TfInstance.PrivateDnsNameOptionsPropertyOutputReference | TfInstance.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2328,7 +2328,7 @@ export function awsInstancePrivateDnsNameOptionsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsInstanceRootBlockDevicePropertyToTerraform(struct?: AwsInstance.RootBlockDevicePropertyOutputReference | AwsInstance.RootBlockDeviceProperty): any {
+export function tfInstanceRootBlockDevicePropertyToTerraform(struct?: TfInstance.RootBlockDevicePropertyOutputReference | TfInstance.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2347,7 +2347,7 @@ export function awsInstanceRootBlockDevicePropertyToTerraform(struct?: AwsInstan
 }
 
 
-export function awsInstanceRootBlockDevicePropertyToHclTerraform(struct?: AwsInstance.RootBlockDevicePropertyOutputReference | AwsInstance.RootBlockDeviceProperty): any {
+export function tfInstanceRootBlockDevicePropertyToHclTerraform(struct?: TfInstance.RootBlockDevicePropertyOutputReference | TfInstance.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2414,7 +2414,7 @@ export function awsInstanceRootBlockDevicePropertyToHclTerraform(struct?: AwsIns
 }
 
 
-export function awsInstanceSecondaryNetworkInterfacePropertyToTerraform(struct?: AwsInstance.SecondaryNetworkInterfaceProperty | cdktn.IResolvable): any {
+export function tfInstanceSecondaryNetworkInterfacePropertyToTerraform(struct?: TfInstance.SecondaryNetworkInterfaceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2430,7 +2430,7 @@ export function awsInstanceSecondaryNetworkInterfacePropertyToTerraform(struct?:
 }
 
 
-export function awsInstanceSecondaryNetworkInterfacePropertyToHclTerraform(struct?: AwsInstance.SecondaryNetworkInterfaceProperty | cdktn.IResolvable): any {
+export function tfInstanceSecondaryNetworkInterfacePropertyToHclTerraform(struct?: TfInstance.SecondaryNetworkInterfaceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2479,7 +2479,7 @@ export function awsInstanceSecondaryNetworkInterfacePropertyToHclTerraform(struc
 }
 
 
-export function awsInstanceTimeoutsPropertyToTerraform(struct?: AwsInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInstanceTimeoutsPropertyToTerraform(struct?: TfInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2493,7 +2493,7 @@ export function awsInstanceTimeoutsPropertyToTerraform(struct?: AwsInstance.Time
 }
 
 
-export function awsInstanceTimeoutsPropertyToHclTerraform(struct?: AwsInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInstanceTimeoutsPropertyToHclTerraform(struct?: TfInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2530,14 +2530,14 @@ export function awsInstanceTimeoutsPropertyToHclTerraform(struct?: AwsInstance.T
 }
 
 
-export namespace AwsInstance {
+export namespace TfInstance {
 export interface CapacityReservationTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_id AwsInstance#capacity_reservation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_id TfInstance#capacity_reservation_id}
   */
   readonly capacityReservationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_resource_group_arn AwsInstance#capacity_reservation_resource_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_resource_group_arn TfInstance#capacity_reservation_resource_group_arn}
   */
   readonly capacityReservationResourceGroupArn?: string;
 }
@@ -2613,13 +2613,13 @@ export class CapacityReservationTargetPropertyOutputReference extends cdktn.Comp
 }
 export interface CapacityReservationSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_preference AwsInstance#capacity_reservation_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_preference TfInstance#capacity_reservation_preference}
   */
   readonly capacityReservationPreference?: string;
   /**
   * capacity_reservation_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_target AwsInstance#capacity_reservation_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_target TfInstance#capacity_reservation_target}
   */
   readonly capacityReservationTarget?: CapacityReservationTargetProperty;
 }
@@ -2695,19 +2695,19 @@ export class CapacityReservationSpecificationPropertyOutputReference extends cdk
 }
 export interface CpuOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#amd_sev_snp AwsInstance#amd_sev_snp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#amd_sev_snp TfInstance#amd_sev_snp}
   */
   readonly amdSevSnp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#core_count AwsInstance#core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#core_count TfInstance#core_count}
   */
   readonly coreCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#nested_virtualization AwsInstance#nested_virtualization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#nested_virtualization TfInstance#nested_virtualization}
   */
   readonly nestedVirtualization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#threads_per_core AwsInstance#threads_per_core}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#threads_per_core TfInstance#threads_per_core}
   */
   readonly threadsPerCore?: number;
 }
@@ -2827,7 +2827,7 @@ export class CpuOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CreditSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#cpu_credits AwsInstance#cpu_credits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#cpu_credits TfInstance#cpu_credits}
   */
   readonly cpuCredits?: string;
 }
@@ -2881,47 +2881,47 @@ export class CreditSpecificationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EbsBlockDeviceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination TfInstance#delete_on_termination}
   */
   readonly deleteOnTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_name AwsInstance#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_name TfInstance#device_name}
   */
   readonly deviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#encrypted AwsInstance#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#encrypted TfInstance#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iops AwsInstance#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iops TfInstance#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#kms_key_id AwsInstance#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#kms_key_id TfInstance#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#snapshot_id AwsInstance#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#snapshot_id TfInstance#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags AwsInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags TfInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all AwsInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all TfInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#throughput AwsInstance#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#throughput TfInstance#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_size AwsInstance#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_size TfInstance#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_type AwsInstance#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_type TfInstance#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -3229,7 +3229,7 @@ export class EbsBlockDevicePropertyList extends cdktn.ComplexList {
 }
 export interface EnclaveOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enabled AwsInstance#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enabled TfInstance#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -3283,15 +3283,15 @@ export class EnclaveOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EphemeralBlockDeviceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_name AwsInstance#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_name TfInstance#device_name}
   */
   readonly deviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#no_device AwsInstance#no_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#no_device TfInstance#no_device}
   */
   readonly noDevice?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#virtual_name AwsInstance#virtual_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#virtual_name TfInstance#virtual_name}
   */
   readonly virtualName?: string;
 }
@@ -3418,19 +3418,19 @@ export class EphemeralBlockDevicePropertyList extends cdktn.ComplexList {
 }
 export interface SpotOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_interruption_behavior AwsInstance#instance_interruption_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_interruption_behavior TfInstance#instance_interruption_behavior}
   */
   readonly instanceInterruptionBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#max_price AwsInstance#max_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#max_price TfInstance#max_price}
   */
   readonly maxPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#spot_instance_type AwsInstance#spot_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#spot_instance_type TfInstance#spot_instance_type}
   */
   readonly spotInstanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#valid_until AwsInstance#valid_until}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#valid_until TfInstance#valid_until}
   */
   readonly validUntil?: string;
 }
@@ -3550,13 +3550,13 @@ export class SpotOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InstanceMarketOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#market_type AwsInstance#market_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#market_type TfInstance#market_type}
   */
   readonly marketType?: string;
   /**
   * spot_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#spot_options AwsInstance#spot_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#spot_options TfInstance#spot_options}
   */
   readonly spotOptions?: SpotOptionsProperty;
 }
@@ -3632,18 +3632,18 @@ export class InstanceMarketOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface LaunchTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#id AwsInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#id TfInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#name AwsInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#name TfInstance#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#version AwsInstance#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#version TfInstance#version}
   */
   readonly version?: string;
 }
@@ -3741,7 +3741,7 @@ export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MaintenanceOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#auto_recovery AwsInstance#auto_recovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#auto_recovery TfInstance#auto_recovery}
   */
   readonly autoRecovery?: string;
 }
@@ -3795,23 +3795,23 @@ export class MaintenanceOptionsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface MetadataOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_endpoint AwsInstance#http_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_endpoint TfInstance#http_endpoint}
   */
   readonly httpEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_protocol_ipv6 AwsInstance#http_protocol_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_protocol_ipv6 TfInstance#http_protocol_ipv6}
   */
   readonly httpProtocolIpv6?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_put_response_hop_limit AwsInstance#http_put_response_hop_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_put_response_hop_limit TfInstance#http_put_response_hop_limit}
   */
   readonly httpPutResponseHopLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_tokens AwsInstance#http_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_tokens TfInstance#http_tokens}
   */
   readonly httpTokens?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_metadata_tags AwsInstance#instance_metadata_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_metadata_tags TfInstance#instance_metadata_tags}
   */
   readonly instanceMetadataTags?: string;
 }
@@ -3953,19 +3953,19 @@ export class MetadataOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface NetworkInterfaceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination TfInstance#delete_on_termination}
   */
   readonly deleteOnTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_index AwsInstance#device_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_index TfInstance#device_index}
   */
   readonly deviceIndex: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_card_index AwsInstance#network_card_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_card_index TfInstance#network_card_index}
   */
   readonly networkCardIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface_id AwsInstance#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface_id TfInstance#network_interface_id}
   */
   readonly networkInterfaceId: string;
 }
@@ -4111,7 +4111,7 @@ export class NetworkInterfacePropertyList extends cdktn.ComplexList {
 }
 export interface PrimaryNetworkInterfaceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface_id AwsInstance#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface_id TfInstance#network_interface_id}
   */
   readonly networkInterfaceId: string;
 }
@@ -4167,15 +4167,15 @@ export class PrimaryNetworkInterfacePropertyOutputReference extends cdktn.Comple
 }
 export interface PrivateDnsNameOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_resource_name_dns_a_record AwsInstance#enable_resource_name_dns_a_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_resource_name_dns_a_record TfInstance#enable_resource_name_dns_a_record}
   */
   readonly enableResourceNameDnsARecord?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_resource_name_dns_aaaa_record AwsInstance#enable_resource_name_dns_aaaa_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_resource_name_dns_aaaa_record TfInstance#enable_resource_name_dns_aaaa_record}
   */
   readonly enableResourceNameDnsAaaaRecord?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#hostname_type AwsInstance#hostname_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#hostname_type TfInstance#hostname_type}
   */
   readonly hostnameType?: string;
 }
@@ -4273,39 +4273,39 @@ export class PrivateDnsNameOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface RootBlockDeviceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination TfInstance#delete_on_termination}
   */
   readonly deleteOnTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#encrypted AwsInstance#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#encrypted TfInstance#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iops AwsInstance#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iops TfInstance#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#kms_key_id AwsInstance#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#kms_key_id TfInstance#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags AwsInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags TfInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all AwsInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all TfInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#throughput AwsInstance#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#throughput TfInstance#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_size AwsInstance#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_size TfInstance#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_type AwsInstance#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_type TfInstance#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -4545,27 +4545,27 @@ export class RootBlockDevicePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface SecondaryNetworkInterfaceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination TfInstance#delete_on_termination}
   */
   readonly deleteOnTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_index AwsInstance#device_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_index TfInstance#device_index}
   */
   readonly deviceIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#interface_type AwsInstance#interface_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#interface_type TfInstance#interface_type}
   */
   readonly interfaceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_card_index AwsInstance#network_card_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_card_index TfInstance#network_card_index}
   */
   readonly networkCardIndex: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_ip_address_count AwsInstance#private_ip_address_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_ip_address_count TfInstance#private_ip_address_count}
   */
   readonly privateIpAddressCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_subnet_id AwsInstance#secondary_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_subnet_id TfInstance#secondary_subnet_id}
   */
   readonly secondarySubnetId: string;
 }
@@ -4785,19 +4785,19 @@ export class SecondaryNetworkInterfacePropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#create AwsInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#create TfInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete AwsInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete TfInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#read AwsInstance#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#read TfInstance#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#update AwsInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#update TfInstance#update}
   */
   readonly update?: string;
 }

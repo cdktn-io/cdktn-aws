@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSsoadminApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application#application_arn DataAwsSsoadminApplication#application_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application#application_arn DataTfApplication#application_arn}
   */
   readonly applicationArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application#region DataAwsSsoadminApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application#region DataTfApplication#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsSsoadminApplicationConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application aws_ssoadmin_application}
 */
-export class DataAwsSsoadminApplication extends cdktn.TerraformDataSource {
+export class DataTfApplication extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsSsoadminApplication extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSsoadminApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSsoadminApplication to import
-  * @param importFromId The id of the existing DataAwsSsoadminApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSsoadminApplication to import is found
+  * @param importToId The construct id used in the generated config for the DataTfApplication to import
+  * @param importFromId The id of the existing DataTfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_application", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsSsoadminApplication extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSsoadminApplicationConfig
+  * @param options DataTfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSsoadminApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_application',
       terraformGeneratorMetadata: {
@@ -121,7 +121,7 @@ export class DataAwsSsoadminApplication extends cdktn.TerraformDataSource {
   }
 
   // portal_options - computed: true, optional: false, required: false
-  private _portalOptions = new DataAwsSsoadminApplication.PortalOptionsPropertyList(this, "portal_options", false);
+  private _portalOptions = new DataTfApplication.PortalOptionsPropertyList(this, "portal_options", false);
   public get portalOptions() {
     return this._portalOptions;
   }
@@ -179,7 +179,7 @@ export class DataAwsSsoadminApplication extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsSsoadminApplicationSignInOptionsPropertyToTerraform(struct?: DataAwsSsoadminApplication.SignInOptionsProperty): any {
+export function dataTfApplicationSignInOptionsPropertyToTerraform(struct?: DataTfApplication.SignInOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function dataAwsSsoadminApplicationSignInOptionsPropertyToTerraform(struc
 }
 
 
-export function dataAwsSsoadminApplicationSignInOptionsPropertyToHclTerraform(struct?: DataAwsSsoadminApplication.SignInOptionsProperty): any {
+export function dataTfApplicationSignInOptionsPropertyToHclTerraform(struct?: DataTfApplication.SignInOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -200,7 +200,7 @@ export function dataAwsSsoadminApplicationSignInOptionsPropertyToHclTerraform(st
 }
 
 
-export function dataAwsSsoadminApplicationPortalOptionsPropertyToTerraform(struct?: DataAwsSsoadminApplication.PortalOptionsProperty): any {
+export function dataTfApplicationPortalOptionsPropertyToTerraform(struct?: DataTfApplication.PortalOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function dataAwsSsoadminApplicationPortalOptionsPropertyToTerraform(struc
 }
 
 
-export function dataAwsSsoadminApplicationPortalOptionsPropertyToHclTerraform(struct?: DataAwsSsoadminApplication.PortalOptionsProperty): any {
+export function dataTfApplicationPortalOptionsPropertyToHclTerraform(struct?: DataTfApplication.PortalOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,7 +221,7 @@ export function dataAwsSsoadminApplicationPortalOptionsPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsSsoadminApplication {
+export namespace DataTfApplication {
 export interface SignInOptionsProperty {
 }
 export class SignInOptionsPropertyOutputReference extends cdktn.ComplexObject {

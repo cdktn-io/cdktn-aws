@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsLocationTrackerConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfTrackerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#id DataAwsLocationTracker#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#id DataTfTracker#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataAwsLocationTrackerConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#region DataAwsLocationTracker#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#region DataTfTracker#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#tags DataAwsLocationTracker#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#tags DataTfTracker#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#tracker_name DataAwsLocationTracker#tracker_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#tracker_name DataTfTracker#tracker_name}
   */
   readonly trackerName: string;
 }
@@ -32,7 +32,7 @@ export interface DataAwsLocationTrackerConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker aws_location_tracker}
 */
-export class DataAwsLocationTracker extends cdktn.TerraformDataSource {
+export class DataTfTracker extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsLocationTracker extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsLocationTracker resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfTracker resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsLocationTracker to import
-  * @param importFromId The id of the existing DataAwsLocationTracker that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsLocationTracker to import is found
+  * @param importToId The construct id used in the generated config for the DataTfTracker to import
+  * @param importFromId The id of the existing DataTfTracker that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/location_tracker#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfTracker to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_location_tracker", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsLocationTracker extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsLocationTrackerConfig
+  * @param options DataTfTrackerConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsLocationTrackerConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfTrackerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_location_tracker',
       terraformGeneratorMetadata: {

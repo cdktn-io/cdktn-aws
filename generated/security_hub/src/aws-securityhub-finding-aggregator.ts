@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubFindingAggregatorConfig extends cdktn.TerraformMetaArguments {
+export interface TfFindingAggregatorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#id AwsSecurityhubFindingAggregator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#id TfFindingAggregator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#linking_mode AwsSecurityhubFindingAggregator#linking_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#linking_mode TfFindingAggregator#linking_mode}
   */
   readonly linkingMode: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#region AwsSecurityhubFindingAggregator#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#region TfFindingAggregator#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#specified_regions AwsSecurityhubFindingAggregator#specified_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#specified_regions TfFindingAggregator#specified_regions}
   */
   readonly specifiedRegions?: string[];
 }
@@ -32,7 +32,7 @@ export interface AwsSecurityhubFindingAggregatorConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator aws_securityhub_finding_aggregator}
 */
-export class AwsSecurityhubFindingAggregator extends cdktn.TerraformResource {
+export class TfFindingAggregator extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsSecurityhubFindingAggregator extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubFindingAggregator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFindingAggregator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubFindingAggregator to import
-  * @param importFromId The id of the existing AwsSecurityhubFindingAggregator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubFindingAggregator to import is found
+  * @param importToId The construct id used in the generated config for the TfFindingAggregator to import
+  * @param importFromId The id of the existing TfFindingAggregator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_finding_aggregator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFindingAggregator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_finding_aggregator", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsSecurityhubFindingAggregator extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubFindingAggregatorConfig
+  * @param options TfFindingAggregatorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubFindingAggregatorConfig) {
+  public constructor(scope: Construct, id: string, config: TfFindingAggregatorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_finding_aggregator',
       terraformGeneratorMetadata: {

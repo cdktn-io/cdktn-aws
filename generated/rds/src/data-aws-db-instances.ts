@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsDbInstancesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDbInstancesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#id DataAwsDbInstances#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#id DataTfDbInstances#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface DataAwsDbInstancesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#region DataAwsDbInstances#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#region DataTfDbInstances#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#tags DataAwsDbInstances#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#tags DataTfDbInstances#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#filter DataAwsDbInstances#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#filter DataTfDbInstances#filter}
   */
-  readonly filter?: DataAwsDbInstances.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfDbInstances.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances aws_db_instances}
 */
-export class DataAwsDbInstances extends cdktn.TerraformDataSource {
+export class DataTfDbInstances extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class DataAwsDbInstances extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsDbInstances resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDbInstances resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsDbInstances to import
-  * @param importFromId The id of the existing DataAwsDbInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsDbInstances to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDbInstances to import
+  * @param importFromId The id of the existing DataTfDbInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDbInstances to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_instances", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class DataAwsDbInstances extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsDbInstancesConfig = {}
+  * @param options DataTfDbInstancesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsDbInstancesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDbInstancesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_db_instances',
       terraformGeneratorMetadata: {
@@ -151,11 +151,11 @@ export class DataAwsDbInstances extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsDbInstances.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfDbInstances.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsDbInstances.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfDbInstances.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -175,7 +175,7 @@ export class DataAwsDbInstances extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsDbInstancesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfDbInstancesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -200,10 +200,10 @@ export class DataAwsDbInstances extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsDbInstancesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfDbInstancesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsDbInstances.FilterPropertyList",
+        storageClassType: "DataTfDbInstances.FilterPropertyList",
       },
     };
 
@@ -212,7 +212,7 @@ export class DataAwsDbInstances extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsDbInstancesFilterPropertyToTerraform(struct?: DataAwsDbInstances.FilterProperty | cdktn.IResolvable): any {
+export function dataTfDbInstancesFilterPropertyToTerraform(struct?: DataTfDbInstances.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function dataAwsDbInstancesFilterPropertyToTerraform(struct?: DataAwsDbIn
 }
 
 
-export function dataAwsDbInstancesFilterPropertyToHclTerraform(struct?: DataAwsDbInstances.FilterProperty | cdktn.IResolvable): any {
+export function dataTfDbInstancesFilterPropertyToHclTerraform(struct?: DataTfDbInstances.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,14 +249,14 @@ export function dataAwsDbInstancesFilterPropertyToHclTerraform(struct?: DataAwsD
 }
 
 
-export namespace DataAwsDbInstances {
+export namespace DataTfDbInstances {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#name DataAwsDbInstances#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#name DataTfDbInstances#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#values DataAwsDbInstances#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_instances#values DataTfDbInstances#values}
   */
   readonly values: string[];
 }

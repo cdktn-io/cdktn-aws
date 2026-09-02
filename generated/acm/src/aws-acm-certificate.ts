@@ -5,90 +5,90 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAcmCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface TfCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_authority_arn AwsAcmCertificate#certificate_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_authority_arn TfCertificate#certificate_authority_arn}
   */
   readonly certificateAuthorityArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_body AwsAcmCertificate#certificate_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_body TfCertificate#certificate_body}
   */
   readonly certificateBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_chain AwsAcmCertificate#certificate_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_chain TfCertificate#certificate_chain}
   */
   readonly certificateChain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#domain_name AwsAcmCertificate#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#domain_name TfCertificate#domain_name}
   */
   readonly domainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#early_renewal_duration AwsAcmCertificate#early_renewal_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#early_renewal_duration TfCertificate#early_renewal_duration}
   */
   readonly earlyRenewalDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#id AwsAcmCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#id TfCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#key_algorithm AwsAcmCertificate#key_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#key_algorithm TfCertificate#key_algorithm}
   */
   readonly keyAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#private_key AwsAcmCertificate#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#private_key TfCertificate#private_key}
   */
   readonly privateKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#private_key_wo AwsAcmCertificate#private_key_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#private_key_wo TfCertificate#private_key_wo}
   */
   readonly privateKeyWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#private_key_wo_version AwsAcmCertificate#private_key_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#private_key_wo_version TfCertificate#private_key_wo_version}
   */
   readonly privateKeyWoVersion?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#region AwsAcmCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#region TfCertificate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#subject_alternative_names AwsAcmCertificate#subject_alternative_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#subject_alternative_names TfCertificate#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#tags AwsAcmCertificate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#tags TfCertificate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#tags_all AwsAcmCertificate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#tags_all TfCertificate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#validation_method AwsAcmCertificate#validation_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#validation_method TfCertificate#validation_method}
   */
   readonly validationMethod?: string;
   /**
   * options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#options AwsAcmCertificate#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#options TfCertificate#options}
   */
-  readonly options?: AwsAcmCertificate.OptionsProperty;
+  readonly options?: TfCertificate.OptionsProperty;
   /**
   * validation_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#validation_option AwsAcmCertificate#validation_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#validation_option TfCertificate#validation_option}
   */
-  readonly validationOption?: AwsAcmCertificate.ValidationOptionProperty[] | cdktn.IResolvable;
+  readonly validationOption?: TfCertificate.ValidationOptionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate aws_acm_certificate}
 */
-export class AwsAcmCertificate extends cdktn.TerraformResource {
+export class TfCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -99,11 +99,11 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAcmCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAcmCertificate to import
-  * @param importFromId The id of the existing AwsAcmCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAcmCertificate to import is found
+  * @param importToId The construct id used in the generated config for the TfCertificate to import
+  * @param importFromId The id of the existing TfCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acm_certificate", importId: importFromId, provider });
@@ -118,9 +118,9 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAcmCertificateConfig = {}
+  * @param options TfCertificateConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsAcmCertificateConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfCertificateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_acm_certificate',
       terraformGeneratorMetadata: {
@@ -229,7 +229,7 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
   }
 
   // domain_validation_options - computed: true, optional: false, required: false
-  private _domainValidationOptions = new AwsAcmCertificate.DomainValidationOptionsPropertyList(this, "domain_validation_options", true);
+  private _domainValidationOptions = new TfCertificate.DomainValidationOptionsPropertyList(this, "domain_validation_options", true);
   public get domainValidationOptions() {
     return this._domainValidationOptions;
   }
@@ -370,7 +370,7 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
   }
 
   // renewal_summary - computed: true, optional: false, required: false
-  private _renewalSummary = new AwsAcmCertificate.RenewalSummaryPropertyList(this, "renewal_summary", false);
+  private _renewalSummary = new TfCertificate.RenewalSummaryPropertyList(this, "renewal_summary", false);
   public get renewalSummary() {
     return this._renewalSummary;
   }
@@ -455,11 +455,11 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
   }
 
   // options - computed: false, optional: true, required: false
-  private _options = new AwsAcmCertificate.OptionsPropertyOutputReference(this, "options");
+  private _options = new TfCertificate.OptionsPropertyOutputReference(this, "options");
   public get options() {
     return this._options;
   }
-  public putOptions(value: AwsAcmCertificate.OptionsProperty) {
+  public putOptions(value: TfCertificate.OptionsProperty) {
     this._options.internalValue = value;
   }
   public resetOptions() {
@@ -471,11 +471,11 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
   }
 
   // validation_option - computed: false, optional: true, required: false
-  private _validationOption = new AwsAcmCertificate.ValidationOptionPropertyList(this, "validation_option", true);
+  private _validationOption = new TfCertificate.ValidationOptionPropertyList(this, "validation_option", true);
   public get validationOption() {
     return this._validationOption;
   }
-  public putValidationOption(value: AwsAcmCertificate.ValidationOptionProperty[] | cdktn.IResolvable) {
+  public putValidationOption(value: TfCertificate.ValidationOptionProperty[] | cdktn.IResolvable) {
     this._validationOption.internalValue = value;
   }
   public resetValidationOption() {
@@ -507,8 +507,8 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       validation_method: cdktn.stringToTerraform(this._validationMethod),
-      options: awsAcmCertificateOptionsPropertyToTerraform(this._options.internalValue),
-      validation_option: cdktn.listMapper(awsAcmCertificateValidationOptionPropertyToTerraform, true)(this._validationOption.internalValue),
+      options: tfCertificateOptionsPropertyToTerraform(this._options.internalValue),
+      validation_option: cdktn.listMapper(tfCertificateValidationOptionPropertyToTerraform, true)(this._validationOption.internalValue),
     };
   }
 
@@ -605,16 +605,16 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       options: {
-        value: awsAcmCertificateOptionsPropertyToHclTerraform(this._options.internalValue),
+        value: tfCertificateOptionsPropertyToHclTerraform(this._options.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAcmCertificate.OptionsPropertyList",
+        storageClassType: "TfCertificate.OptionsPropertyList",
       },
       validation_option: {
-        value: cdktn.listMapperHcl(awsAcmCertificateValidationOptionPropertyToHclTerraform, true)(this._validationOption.internalValue),
+        value: cdktn.listMapperHcl(tfCertificateValidationOptionPropertyToHclTerraform, true)(this._validationOption.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAcmCertificate.ValidationOptionPropertyList",
+        storageClassType: "TfCertificate.ValidationOptionPropertyList",
       },
     };
 
@@ -623,7 +623,7 @@ export class AwsAcmCertificate extends cdktn.TerraformResource {
   }
 }
 
-export function awsAcmCertificateDomainValidationOptionsPropertyToTerraform(struct?: AwsAcmCertificate.DomainValidationOptionsProperty): any {
+export function tfCertificateDomainValidationOptionsPropertyToTerraform(struct?: TfCertificate.DomainValidationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function awsAcmCertificateDomainValidationOptionsPropertyToTerraform(stru
 }
 
 
-export function awsAcmCertificateDomainValidationOptionsPropertyToHclTerraform(struct?: AwsAcmCertificate.DomainValidationOptionsProperty): any {
+export function tfCertificateDomainValidationOptionsPropertyToHclTerraform(struct?: TfCertificate.DomainValidationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function awsAcmCertificateDomainValidationOptionsPropertyToHclTerraform(s
 }
 
 
-export function awsAcmCertificateRenewalSummaryPropertyToTerraform(struct?: AwsAcmCertificate.RenewalSummaryProperty): any {
+export function tfCertificateRenewalSummaryPropertyToTerraform(struct?: TfCertificate.RenewalSummaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -654,7 +654,7 @@ export function awsAcmCertificateRenewalSummaryPropertyToTerraform(struct?: AwsA
 }
 
 
-export function awsAcmCertificateRenewalSummaryPropertyToHclTerraform(struct?: AwsAcmCertificate.RenewalSummaryProperty): any {
+export function tfCertificateRenewalSummaryPropertyToHclTerraform(struct?: TfCertificate.RenewalSummaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -665,7 +665,7 @@ export function awsAcmCertificateRenewalSummaryPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsAcmCertificateOptionsPropertyToTerraform(struct?: AwsAcmCertificate.OptionsPropertyOutputReference | AwsAcmCertificate.OptionsProperty): any {
+export function tfCertificateOptionsPropertyToTerraform(struct?: TfCertificate.OptionsPropertyOutputReference | TfCertificate.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function awsAcmCertificateOptionsPropertyToTerraform(struct?: AwsAcmCerti
 }
 
 
-export function awsAcmCertificateOptionsPropertyToHclTerraform(struct?: AwsAcmCertificate.OptionsPropertyOutputReference | AwsAcmCertificate.OptionsProperty): any {
+export function tfCertificateOptionsPropertyToHclTerraform(struct?: TfCertificate.OptionsPropertyOutputReference | TfCertificate.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function awsAcmCertificateOptionsPropertyToHclTerraform(struct?: AwsAcmCe
 }
 
 
-export function awsAcmCertificateValidationOptionPropertyToTerraform(struct?: AwsAcmCertificate.ValidationOptionProperty | cdktn.IResolvable): any {
+export function tfCertificateValidationOptionPropertyToTerraform(struct?: TfCertificate.ValidationOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function awsAcmCertificateValidationOptionPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsAcmCertificateValidationOptionPropertyToHclTerraform(struct?: AwsAcmCertificate.ValidationOptionProperty | cdktn.IResolvable): any {
+export function tfCertificateValidationOptionPropertyToHclTerraform(struct?: TfCertificate.ValidationOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,7 +739,7 @@ export function awsAcmCertificateValidationOptionPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsAcmCertificate {
+export namespace TfCertificate {
 export interface DomainValidationOptionsProperty {
 }
 export class DomainValidationOptionsPropertyOutputReference extends cdktn.ComplexObject {
@@ -875,11 +875,11 @@ export class RenewalSummaryPropertyList extends cdktn.ComplexList {
 }
 export interface OptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_transparency_logging_preference AwsAcmCertificate#certificate_transparency_logging_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#certificate_transparency_logging_preference TfCertificate#certificate_transparency_logging_preference}
   */
   readonly certificateTransparencyLoggingPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#export AwsAcmCertificate#export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#export TfCertificate#export}
   */
   readonly export?: string;
 }
@@ -955,11 +955,11 @@ export class OptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ValidationOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#domain_name AwsAcmCertificate#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#domain_name TfCertificate#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#validation_domain AwsAcmCertificate#validation_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acm_certificate#validation_domain TfCertificate#validation_domain}
   */
   readonly validationDomain: string;
 }

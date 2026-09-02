@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightKeyRegistrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfKeyRegistrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#aws_account_id AwsQuicksightKeyRegistration#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#aws_account_id TfKeyRegistration#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#region AwsQuicksightKeyRegistration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#region TfKeyRegistration#region}
   */
   readonly region?: string;
   /**
   * key_registration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#key_registration AwsQuicksightKeyRegistration#key_registration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#key_registration TfKeyRegistration#key_registration}
   */
-  readonly keyRegistration?: AwsQuicksightKeyRegistration.KeyRegistrationProperty[] | cdktn.IResolvable;
+  readonly keyRegistration?: TfKeyRegistration.KeyRegistrationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration aws_quicksight_key_registration}
 */
-export class AwsQuicksightKeyRegistration extends cdktn.TerraformResource {
+export class TfKeyRegistration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsQuicksightKeyRegistration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightKeyRegistration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfKeyRegistration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightKeyRegistration to import
-  * @param importFromId The id of the existing AwsQuicksightKeyRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightKeyRegistration to import is found
+  * @param importToId The construct id used in the generated config for the TfKeyRegistration to import
+  * @param importFromId The id of the existing TfKeyRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfKeyRegistration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_key_registration", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsQuicksightKeyRegistration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightKeyRegistrationConfig = {}
+  * @param options TfKeyRegistrationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightKeyRegistrationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfKeyRegistrationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_key_registration',
       terraformGeneratorMetadata: {
@@ -117,11 +117,11 @@ export class AwsQuicksightKeyRegistration extends cdktn.TerraformResource {
   }
 
   // key_registration - computed: false, optional: true, required: false
-  private _keyRegistration = new AwsQuicksightKeyRegistration.KeyRegistrationPropertyList(this, "key_registration", true);
+  private _keyRegistration = new TfKeyRegistration.KeyRegistrationPropertyList(this, "key_registration", true);
   public get keyRegistration() {
     return this._keyRegistration;
   }
-  public putKeyRegistration(value: AwsQuicksightKeyRegistration.KeyRegistrationProperty[] | cdktn.IResolvable) {
+  public putKeyRegistration(value: TfKeyRegistration.KeyRegistrationProperty[] | cdktn.IResolvable) {
     this._keyRegistration.internalValue = value;
   }
   public resetKeyRegistration() {
@@ -140,7 +140,7 @@ export class AwsQuicksightKeyRegistration extends cdktn.TerraformResource {
     return {
       aws_account_id: cdktn.stringToTerraform(this._awsAccountId),
       region: cdktn.stringToTerraform(this._region),
-      key_registration: cdktn.listMapper(awsQuicksightKeyRegistrationKeyRegistrationPropertyToTerraform, true)(this._keyRegistration.internalValue),
+      key_registration: cdktn.listMapper(tfKeyRegistrationKeyRegistrationPropertyToTerraform, true)(this._keyRegistration.internalValue),
     };
   }
 
@@ -159,10 +159,10 @@ export class AwsQuicksightKeyRegistration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       key_registration: {
-        value: cdktn.listMapperHcl(awsQuicksightKeyRegistrationKeyRegistrationPropertyToHclTerraform, true)(this._keyRegistration.internalValue),
+        value: cdktn.listMapperHcl(tfKeyRegistrationKeyRegistrationPropertyToHclTerraform, true)(this._keyRegistration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightKeyRegistration.KeyRegistrationPropertyList",
+        storageClassType: "TfKeyRegistration.KeyRegistrationPropertyList",
       },
     };
 
@@ -171,7 +171,7 @@ export class AwsQuicksightKeyRegistration extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightKeyRegistrationKeyRegistrationPropertyToTerraform(struct?: AwsQuicksightKeyRegistration.KeyRegistrationProperty | cdktn.IResolvable): any {
+export function tfKeyRegistrationKeyRegistrationPropertyToTerraform(struct?: TfKeyRegistration.KeyRegistrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -183,7 +183,7 @@ export function awsQuicksightKeyRegistrationKeyRegistrationPropertyToTerraform(s
 }
 
 
-export function awsQuicksightKeyRegistrationKeyRegistrationPropertyToHclTerraform(struct?: AwsQuicksightKeyRegistration.KeyRegistrationProperty | cdktn.IResolvable): any {
+export function tfKeyRegistrationKeyRegistrationPropertyToHclTerraform(struct?: TfKeyRegistration.KeyRegistrationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,14 +208,14 @@ export function awsQuicksightKeyRegistrationKeyRegistrationPropertyToHclTerrafor
 }
 
 
-export namespace AwsQuicksightKeyRegistration {
+export namespace TfKeyRegistration {
 export interface KeyRegistrationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#default_key AwsQuicksightKeyRegistration#default_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#default_key TfKeyRegistration#default_key}
   */
   readonly defaultKey?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#key_arn AwsQuicksightKeyRegistration#key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_key_registration#key_arn TfKeyRegistration#key_arn}
   */
   readonly keyArn: string;
 }

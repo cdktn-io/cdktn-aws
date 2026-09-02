@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMedialiveMultiplexConfig extends cdktn.TerraformMetaArguments {
+export interface TfMultiplexConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#availability_zones AwsMedialiveMultiplex#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#availability_zones TfMultiplex#availability_zones}
   */
   readonly availabilityZones: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#id AwsMedialiveMultiplex#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#id TfMultiplex#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#name AwsMedialiveMultiplex#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#name TfMultiplex#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#region AwsMedialiveMultiplex#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#region TfMultiplex#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#start_multiplex AwsMedialiveMultiplex#start_multiplex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#start_multiplex TfMultiplex#start_multiplex}
   */
   readonly startMultiplex?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#tags AwsMedialiveMultiplex#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#tags TfMultiplex#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#tags_all AwsMedialiveMultiplex#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#tags_all TfMultiplex#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * multiplex_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#multiplex_settings AwsMedialiveMultiplex#multiplex_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#multiplex_settings TfMultiplex#multiplex_settings}
   */
-  readonly multiplexSettings?: AwsMedialiveMultiplex.MultiplexSettingsProperty;
+  readonly multiplexSettings?: TfMultiplex.MultiplexSettingsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#timeouts AwsMedialiveMultiplex#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#timeouts TfMultiplex#timeouts}
   */
-  readonly timeouts?: AwsMedialiveMultiplex.TimeoutsProperty;
+  readonly timeouts?: TfMultiplex.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex aws_medialive_multiplex}
 */
-export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
+export class TfMultiplex extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMedialiveMultiplex resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMultiplex resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMedialiveMultiplex to import
-  * @param importFromId The id of the existing AwsMedialiveMultiplex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMedialiveMultiplex to import is found
+  * @param importToId The construct id used in the generated config for the TfMultiplex to import
+  * @param importFromId The id of the existing TfMultiplex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMultiplex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_medialive_multiplex", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMedialiveMultiplexConfig
+  * @param options TfMultiplexConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMedialiveMultiplexConfig) {
+  public constructor(scope: Construct, id: string, config: TfMultiplexConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_medialive_multiplex',
       terraformGeneratorMetadata: {
@@ -231,11 +231,11 @@ export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
   }
 
   // multiplex_settings - computed: false, optional: true, required: false
-  private _multiplexSettings = new AwsMedialiveMultiplex.MultiplexSettingsPropertyOutputReference(this, "multiplex_settings");
+  private _multiplexSettings = new TfMultiplex.MultiplexSettingsPropertyOutputReference(this, "multiplex_settings");
   public get multiplexSettings() {
     return this._multiplexSettings;
   }
-  public putMultiplexSettings(value: AwsMedialiveMultiplex.MultiplexSettingsProperty) {
+  public putMultiplexSettings(value: TfMultiplex.MultiplexSettingsProperty) {
     this._multiplexSettings.internalValue = value;
   }
   public resetMultiplexSettings() {
@@ -247,11 +247,11 @@ export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMedialiveMultiplex.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMultiplex.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMedialiveMultiplex.TimeoutsProperty) {
+  public putTimeouts(value: TfMultiplex.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -275,8 +275,8 @@ export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
       start_multiplex: cdktn.booleanToTerraform(this._startMultiplex),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      multiplex_settings: awsMedialiveMultiplexMultiplexSettingsPropertyToTerraform(this._multiplexSettings.internalValue),
-      timeouts: awsMedialiveMultiplexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      multiplex_settings: tfMultiplexMultiplexSettingsPropertyToTerraform(this._multiplexSettings.internalValue),
+      timeouts: tfMultiplexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -325,16 +325,16 @@ export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       multiplex_settings: {
-        value: awsMedialiveMultiplexMultiplexSettingsPropertyToHclTerraform(this._multiplexSettings.internalValue),
+        value: tfMultiplexMultiplexSettingsPropertyToHclTerraform(this._multiplexSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMedialiveMultiplex.MultiplexSettingsPropertyList",
+        storageClassType: "TfMultiplex.MultiplexSettingsPropertyList",
       },
       timeouts: {
-        value: awsMedialiveMultiplexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMultiplexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMedialiveMultiplex.TimeoutsProperty",
+        storageClassType: "TfMultiplex.TimeoutsProperty",
       },
     };
 
@@ -343,7 +343,7 @@ export class AwsMedialiveMultiplex extends cdktn.TerraformResource {
   }
 }
 
-export function awsMedialiveMultiplexMultiplexSettingsPropertyToTerraform(struct?: AwsMedialiveMultiplex.MultiplexSettingsPropertyOutputReference | AwsMedialiveMultiplex.MultiplexSettingsProperty): any {
+export function tfMultiplexMultiplexSettingsPropertyToTerraform(struct?: TfMultiplex.MultiplexSettingsPropertyOutputReference | TfMultiplex.MultiplexSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function awsMedialiveMultiplexMultiplexSettingsPropertyToTerraform(struct
 }
 
 
-export function awsMedialiveMultiplexMultiplexSettingsPropertyToHclTerraform(struct?: AwsMedialiveMultiplex.MultiplexSettingsPropertyOutputReference | AwsMedialiveMultiplex.MultiplexSettingsProperty): any {
+export function tfMultiplexMultiplexSettingsPropertyToHclTerraform(struct?: TfMultiplex.MultiplexSettingsPropertyOutputReference | TfMultiplex.MultiplexSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function awsMedialiveMultiplexMultiplexSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveMultiplexTimeoutsPropertyToTerraform(struct?: AwsMedialiveMultiplex.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMultiplexTimeoutsPropertyToTerraform(struct?: TfMultiplex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,7 +407,7 @@ export function awsMedialiveMultiplexTimeoutsPropertyToTerraform(struct?: AwsMed
 }
 
 
-export function awsMedialiveMultiplexTimeoutsPropertyToHclTerraform(struct?: AwsMedialiveMultiplex.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMultiplexTimeoutsPropertyToHclTerraform(struct?: TfMultiplex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,22 +438,22 @@ export function awsMedialiveMultiplexTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsMedialiveMultiplex {
+export namespace TfMultiplex {
 export interface MultiplexSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#maximum_video_buffer_delay_milliseconds AwsMedialiveMultiplex#maximum_video_buffer_delay_milliseconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#maximum_video_buffer_delay_milliseconds TfMultiplex#maximum_video_buffer_delay_milliseconds}
   */
   readonly maximumVideoBufferDelayMilliseconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#transport_stream_bitrate AwsMedialiveMultiplex#transport_stream_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#transport_stream_bitrate TfMultiplex#transport_stream_bitrate}
   */
   readonly transportStreamBitrate: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#transport_stream_id AwsMedialiveMultiplex#transport_stream_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#transport_stream_id TfMultiplex#transport_stream_id}
   */
   readonly transportStreamId: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#transport_stream_reserved_bitrate AwsMedialiveMultiplex#transport_stream_reserved_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#transport_stream_reserved_bitrate TfMultiplex#transport_stream_reserved_bitrate}
   */
   readonly transportStreamReservedBitrate?: number;
 }
@@ -567,15 +567,15 @@ export class MultiplexSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#create AwsMedialiveMultiplex#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#create TfMultiplex#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#delete AwsMedialiveMultiplex#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#delete TfMultiplex#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#update AwsMedialiveMultiplex#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex#update TfMultiplex#update}
   */
   readonly update?: string;
 }

@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3OutpostsEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#access_type AwsS3OutpostsEndpoint#access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#access_type TfEndpoint#access_type}
   */
   readonly accessType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#customer_owned_ipv4_pool AwsS3OutpostsEndpoint#customer_owned_ipv4_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#customer_owned_ipv4_pool TfEndpoint#customer_owned_ipv4_pool}
   */
   readonly customerOwnedIpv4Pool?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#id AwsS3OutpostsEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#id TfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#outpost_id AwsS3OutpostsEndpoint#outpost_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#outpost_id TfEndpoint#outpost_id}
   */
   readonly outpostId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#region AwsS3OutpostsEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#region TfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#security_group_id AwsS3OutpostsEndpoint#security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#security_group_id TfEndpoint#security_group_id}
   */
   readonly securityGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#subnet_id AwsS3OutpostsEndpoint#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#subnet_id TfEndpoint#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -44,7 +44,7 @@ export interface AwsS3OutpostsEndpointConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint aws_s3outposts_endpoint}
 */
-export class AwsS3OutpostsEndpoint extends cdktn.TerraformResource {
+export class TfEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsS3OutpostsEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3OutpostsEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3OutpostsEndpoint to import
-  * @param importFromId The id of the existing AwsS3OutpostsEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3OutpostsEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpoint to import
+  * @param importFromId The id of the existing TfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3outposts_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3outposts_endpoint", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsS3OutpostsEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3OutpostsEndpointConfig
+  * @param options TfEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3OutpostsEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3outposts_endpoint',
       terraformGeneratorMetadata: {
@@ -169,7 +169,7 @@ export class AwsS3OutpostsEndpoint extends cdktn.TerraformResource {
   }
 
   // network_interfaces - computed: true, optional: false, required: false
-  private _networkInterfaces = new AwsS3OutpostsEndpoint.NetworkInterfacesPropertyList(this, "network_interfaces", true);
+  private _networkInterfaces = new TfEndpoint.NetworkInterfacesPropertyList(this, "network_interfaces", true);
   public get networkInterfaces() {
     return this._networkInterfaces;
   }
@@ -296,7 +296,7 @@ export class AwsS3OutpostsEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3OutpostsEndpointNetworkInterfacesPropertyToTerraform(struct?: AwsS3OutpostsEndpoint.NetworkInterfacesProperty): any {
+export function tfEndpointNetworkInterfacesPropertyToTerraform(struct?: TfEndpoint.NetworkInterfacesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function awsS3OutpostsEndpointNetworkInterfacesPropertyToTerraform(struct
 }
 
 
-export function awsS3OutpostsEndpointNetworkInterfacesPropertyToHclTerraform(struct?: AwsS3OutpostsEndpoint.NetworkInterfacesProperty): any {
+export function tfEndpointNetworkInterfacesPropertyToHclTerraform(struct?: TfEndpoint.NetworkInterfacesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function awsS3OutpostsEndpointNetworkInterfacesPropertyToHclTerraform(str
 }
 
 
-export namespace AwsS3OutpostsEndpoint {
+export namespace TfEndpoint {
 export interface NetworkInterfacesProperty {
 }
 export class NetworkInterfacesPropertyOutputReference extends cdktn.ComplexObject {

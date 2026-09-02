@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEfsReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#id AwsEfsReplicationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#id TfReplicationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface AwsEfsReplicationConfigurationConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#region AwsEfsReplicationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#region TfReplicationConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#source_file_system_id AwsEfsReplicationConfiguration#source_file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#source_file_system_id TfReplicationConfiguration#source_file_system_id}
   */
   readonly sourceFileSystemId: string;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#destination AwsEfsReplicationConfiguration#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#destination TfReplicationConfiguration#destination}
   */
-  readonly destination: AwsEfsReplicationConfiguration.DestinationProperty;
+  readonly destination: TfReplicationConfiguration.DestinationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#timeouts AwsEfsReplicationConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#timeouts TfReplicationConfiguration#timeouts}
   */
-  readonly timeouts?: AwsEfsReplicationConfiguration.TimeoutsProperty;
+  readonly timeouts?: TfReplicationConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration aws_efs_replication_configuration}
 */
-export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
+export class TfReplicationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEfsReplicationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEfsReplicationConfiguration to import
-  * @param importFromId The id of the existing AwsEfsReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEfsReplicationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicationConfiguration to import
+  * @param importFromId The id of the existing TfReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_efs_replication_configuration", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEfsReplicationConfigurationConfig
+  * @param options TfReplicationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEfsReplicationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfReplicationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_efs_replication_configuration',
       terraformGeneratorMetadata: {
@@ -165,11 +165,11 @@ export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new AwsEfsReplicationConfiguration.DestinationPropertyOutputReference(this, "destination");
+  private _destination = new TfReplicationConfiguration.DestinationPropertyOutputReference(this, "destination");
   public get destination() {
     return this._destination;
   }
-  public putDestination(value: AwsEfsReplicationConfiguration.DestinationProperty) {
+  public putDestination(value: TfReplicationConfiguration.DestinationProperty) {
     this._destination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -178,11 +178,11 @@ export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEfsReplicationConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfReplicationConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEfsReplicationConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: TfReplicationConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -202,8 +202,8 @@ export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       source_file_system_id: cdktn.stringToTerraform(this._sourceFileSystemId),
-      destination: awsEfsReplicationConfigurationDestinationPropertyToTerraform(this._destination.internalValue),
-      timeouts: awsEfsReplicationConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      destination: tfReplicationConfigurationDestinationPropertyToTerraform(this._destination.internalValue),
+      timeouts: tfReplicationConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -228,16 +228,16 @@ export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       destination: {
-        value: awsEfsReplicationConfigurationDestinationPropertyToHclTerraform(this._destination.internalValue),
+        value: tfReplicationConfigurationDestinationPropertyToHclTerraform(this._destination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEfsReplicationConfiguration.DestinationPropertyList",
+        storageClassType: "TfReplicationConfiguration.DestinationPropertyList",
       },
       timeouts: {
-        value: awsEfsReplicationConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfReplicationConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEfsReplicationConfiguration.TimeoutsProperty",
+        storageClassType: "TfReplicationConfiguration.TimeoutsProperty",
       },
     };
 
@@ -246,7 +246,7 @@ export class AwsEfsReplicationConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function awsEfsReplicationConfigurationDestinationPropertyToTerraform(struct?: AwsEfsReplicationConfiguration.DestinationPropertyOutputReference | AwsEfsReplicationConfiguration.DestinationProperty): any {
+export function tfReplicationConfigurationDestinationPropertyToTerraform(struct?: TfReplicationConfiguration.DestinationPropertyOutputReference | TfReplicationConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function awsEfsReplicationConfigurationDestinationPropertyToTerraform(str
 }
 
 
-export function awsEfsReplicationConfigurationDestinationPropertyToHclTerraform(struct?: AwsEfsReplicationConfiguration.DestinationPropertyOutputReference | AwsEfsReplicationConfiguration.DestinationProperty): any {
+export function tfReplicationConfigurationDestinationPropertyToHclTerraform(struct?: TfReplicationConfiguration.DestinationPropertyOutputReference | TfReplicationConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function awsEfsReplicationConfigurationDestinationPropertyToHclTerraform(
 }
 
 
-export function awsEfsReplicationConfigurationTimeoutsPropertyToTerraform(struct?: AwsEfsReplicationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationTimeoutsPropertyToTerraform(struct?: TfReplicationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function awsEfsReplicationConfigurationTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsEfsReplicationConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsEfsReplicationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationTimeoutsPropertyToHclTerraform(struct?: TfReplicationConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,22 +334,22 @@ export function awsEfsReplicationConfigurationTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsEfsReplicationConfiguration {
+export namespace TfReplicationConfiguration {
 export interface DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#availability_zone_name AwsEfsReplicationConfiguration#availability_zone_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#availability_zone_name TfReplicationConfiguration#availability_zone_name}
   */
   readonly availabilityZoneName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#file_system_id AwsEfsReplicationConfiguration#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#file_system_id TfReplicationConfiguration#file_system_id}
   */
   readonly fileSystemId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#kms_key_id AwsEfsReplicationConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#kms_key_id TfReplicationConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#region AwsEfsReplicationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#region TfReplicationConfiguration#region}
   */
   readonly region?: string;
 }
@@ -474,11 +474,11 @@ export class DestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#create AwsEfsReplicationConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#create TfReplicationConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#delete AwsEfsReplicationConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_replication_configuration#delete TfReplicationConfiguration#delete}
   */
   readonly delete?: string;
 }

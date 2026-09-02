@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcrReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#id AwsEcrReplicationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#id TfReplicationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface AwsEcrReplicationConfigurationConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#region AwsEcrReplicationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#region TfReplicationConfiguration#region}
   */
   readonly region?: string;
   /**
   * replication_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#replication_configuration AwsEcrReplicationConfiguration#replication_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#replication_configuration TfReplicationConfiguration#replication_configuration}
   */
-  readonly replicationConfiguration?: AwsEcrReplicationConfiguration.ReplicationConfigurationProperty;
+  readonly replicationConfiguration?: TfReplicationConfiguration.ReplicationConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration aws_ecr_replication_configuration}
 */
-export class AwsEcrReplicationConfiguration extends cdktn.TerraformResource {
+export class TfReplicationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class AwsEcrReplicationConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcrReplicationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcrReplicationConfiguration to import
-  * @param importFromId The id of the existing AwsEcrReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcrReplicationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicationConfiguration to import
+  * @param importFromId The id of the existing TfReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_replication_configuration", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class AwsEcrReplicationConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcrReplicationConfigurationConfig = {}
+  * @param options TfReplicationConfigurationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsEcrReplicationConfigurationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfReplicationConfigurationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_replication_configuration',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class AwsEcrReplicationConfiguration extends cdktn.TerraformResource {
   }
 
   // replication_configuration - computed: false, optional: true, required: false
-  private _replicationConfiguration = new AwsEcrReplicationConfiguration.ReplicationConfigurationPropertyOutputReference(this, "replication_configuration");
+  private _replicationConfiguration = new TfReplicationConfiguration.ReplicationConfigurationPropertyOutputReference(this, "replication_configuration");
   public get replicationConfiguration() {
     return this._replicationConfiguration;
   }
-  public putReplicationConfiguration(value: AwsEcrReplicationConfiguration.ReplicationConfigurationProperty) {
+  public putReplicationConfiguration(value: TfReplicationConfiguration.ReplicationConfigurationProperty) {
     this._replicationConfiguration.internalValue = value;
   }
   public resetReplicationConfiguration() {
@@ -148,7 +148,7 @@ export class AwsEcrReplicationConfiguration extends cdktn.TerraformResource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      replication_configuration: awsEcrReplicationConfigurationReplicationConfigurationPropertyToTerraform(this._replicationConfiguration.internalValue),
+      replication_configuration: tfReplicationConfigurationReplicationConfigurationPropertyToTerraform(this._replicationConfiguration.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class AwsEcrReplicationConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       replication_configuration: {
-        value: awsEcrReplicationConfigurationReplicationConfigurationPropertyToHclTerraform(this._replicationConfiguration.internalValue),
+        value: tfReplicationConfigurationReplicationConfigurationPropertyToHclTerraform(this._replicationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcrReplicationConfiguration.ReplicationConfigurationPropertyList",
+        storageClassType: "TfReplicationConfiguration.ReplicationConfigurationPropertyList",
       },
     };
 
@@ -179,7 +179,7 @@ export class AwsEcrReplicationConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function awsEcrReplicationConfigurationDestinationPropertyToTerraform(struct?: AwsEcrReplicationConfiguration.DestinationProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationDestinationPropertyToTerraform(struct?: TfReplicationConfiguration.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function awsEcrReplicationConfigurationDestinationPropertyToTerraform(str
 }
 
 
-export function awsEcrReplicationConfigurationDestinationPropertyToHclTerraform(struct?: AwsEcrReplicationConfiguration.DestinationProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationDestinationPropertyToHclTerraform(struct?: TfReplicationConfiguration.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function awsEcrReplicationConfigurationDestinationPropertyToHclTerraform(
 }
 
 
-export function awsEcrReplicationConfigurationRepositoryFilterPropertyToTerraform(struct?: AwsEcrReplicationConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationRepositoryFilterPropertyToTerraform(struct?: TfReplicationConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -228,7 +228,7 @@ export function awsEcrReplicationConfigurationRepositoryFilterPropertyToTerrafor
 }
 
 
-export function awsEcrReplicationConfigurationRepositoryFilterPropertyToHclTerraform(struct?: AwsEcrReplicationConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationRepositoryFilterPropertyToHclTerraform(struct?: TfReplicationConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -253,32 +253,32 @@ export function awsEcrReplicationConfigurationRepositoryFilterPropertyToHclTerra
 }
 
 
-export function awsEcrReplicationConfigurationRulePropertyToTerraform(struct?: AwsEcrReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationRulePropertyToTerraform(struct?: TfReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: cdktn.listMapper(awsEcrReplicationConfigurationDestinationPropertyToTerraform, true)(struct!.destination),
-    repository_filter: cdktn.listMapper(awsEcrReplicationConfigurationRepositoryFilterPropertyToTerraform, true)(struct!.repositoryFilter),
+    destination: cdktn.listMapper(tfReplicationConfigurationDestinationPropertyToTerraform, true)(struct!.destination),
+    repository_filter: cdktn.listMapper(tfReplicationConfigurationRepositoryFilterPropertyToTerraform, true)(struct!.repositoryFilter),
   }
 }
 
 
-export function awsEcrReplicationConfigurationRulePropertyToHclTerraform(struct?: AwsEcrReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationRulePropertyToHclTerraform(struct?: TfReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: cdktn.listMapperHcl(awsEcrReplicationConfigurationDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(tfReplicationConfigurationDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationPropertyList",
     },
     repository_filter: {
-      value: cdktn.listMapperHcl(awsEcrReplicationConfigurationRepositoryFilterPropertyToHclTerraform, true)(struct!.repositoryFilter),
+      value: cdktn.listMapperHcl(tfReplicationConfigurationRepositoryFilterPropertyToHclTerraform, true)(struct!.repositoryFilter),
       isBlock: true,
       type: "list",
       storageClassType: "RepositoryFilterPropertyList",
@@ -290,25 +290,25 @@ export function awsEcrReplicationConfigurationRulePropertyToHclTerraform(struct?
 }
 
 
-export function awsEcrReplicationConfigurationReplicationConfigurationPropertyToTerraform(struct?: AwsEcrReplicationConfiguration.ReplicationConfigurationPropertyOutputReference | AwsEcrReplicationConfiguration.ReplicationConfigurationProperty): any {
+export function tfReplicationConfigurationReplicationConfigurationPropertyToTerraform(struct?: TfReplicationConfiguration.ReplicationConfigurationPropertyOutputReference | TfReplicationConfiguration.ReplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    rule: cdktn.listMapper(awsEcrReplicationConfigurationRulePropertyToTerraform, true)(struct!.rule),
+    rule: cdktn.listMapper(tfReplicationConfigurationRulePropertyToTerraform, true)(struct!.rule),
   }
 }
 
 
-export function awsEcrReplicationConfigurationReplicationConfigurationPropertyToHclTerraform(struct?: AwsEcrReplicationConfiguration.ReplicationConfigurationPropertyOutputReference | AwsEcrReplicationConfiguration.ReplicationConfigurationProperty): any {
+export function tfReplicationConfigurationReplicationConfigurationPropertyToHclTerraform(struct?: TfReplicationConfiguration.ReplicationConfigurationPropertyOutputReference | TfReplicationConfiguration.ReplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     rule: {
-      value: cdktn.listMapperHcl(awsEcrReplicationConfigurationRulePropertyToHclTerraform, true)(struct!.rule),
+      value: cdktn.listMapperHcl(tfReplicationConfigurationRulePropertyToHclTerraform, true)(struct!.rule),
       isBlock: true,
       type: "list",
       storageClassType: "RulePropertyList",
@@ -320,14 +320,14 @@ export function awsEcrReplicationConfigurationReplicationConfigurationPropertyTo
 }
 
 
-export namespace AwsEcrReplicationConfiguration {
+export namespace TfReplicationConfiguration {
 export interface DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#region AwsEcrReplicationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#region TfReplicationConfiguration#region}
   */
   readonly region: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#registry_id AwsEcrReplicationConfiguration#registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#registry_id TfReplicationConfiguration#registry_id}
   */
   readonly registryId: string;
 }
@@ -429,11 +429,11 @@ export class DestinationPropertyList extends cdktn.ComplexList {
 }
 export interface RepositoryFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#filter AwsEcrReplicationConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#filter TfReplicationConfiguration#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#filter_type AwsEcrReplicationConfiguration#filter_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#filter_type TfReplicationConfiguration#filter_type}
   */
   readonly filterType: string;
 }
@@ -537,13 +537,13 @@ export interface RuleProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#destination AwsEcrReplicationConfiguration#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#destination TfReplicationConfiguration#destination}
   */
   readonly destination: DestinationProperty[] | cdktn.IResolvable;
   /**
   * repository_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#repository_filter AwsEcrReplicationConfiguration#repository_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#repository_filter TfReplicationConfiguration#repository_filter}
   */
   readonly repositoryFilter?: RepositoryFilterProperty[] | cdktn.IResolvable;
 }
@@ -650,7 +650,7 @@ export interface ReplicationConfigurationProperty {
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#rule AwsEcrReplicationConfiguration#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_replication_configuration#rule TfReplicationConfiguration#rule}
   */
   readonly rule: RuleProperty[] | cdktn.IResolvable;
 }

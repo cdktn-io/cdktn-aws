@@ -5,65 +5,65 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQbusinessApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
   * A description of the Amazon Q application.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#description AwsQbusinessApplication#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#description TfApplication#description}
   */
   readonly description?: string;
   /**
   * The display name of the Amazon Q application.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#display_name AwsQbusinessApplication#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#display_name TfApplication#display_name}
   */
   readonly displayName: string;
   /**
   * The Amazon Resource Name (ARN) of the IAM service role that provides permissions for the Amazon Q application.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#iam_service_role_arn AwsQbusinessApplication#iam_service_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#iam_service_role_arn TfApplication#iam_service_role_arn}
   */
   readonly iamServiceRoleArn: string;
   /**
   * ARN of the IAM Identity Center instance you are either creating for—or connecting to—your Amazon Q Business application
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#identity_center_instance_arn AwsQbusinessApplication#identity_center_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#identity_center_instance_arn TfApplication#identity_center_instance_arn}
   */
   readonly identityCenterInstanceArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#region AwsQbusinessApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#region TfApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#tags AwsQbusinessApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#tags TfApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * attachments_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#attachments_configuration AwsQbusinessApplication#attachments_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#attachments_configuration TfApplication#attachments_configuration}
   */
-  readonly attachmentsConfiguration?: AwsQbusinessApplication.AttachmentsConfigurationProperty[] | cdktn.IResolvable;
+  readonly attachmentsConfiguration?: TfApplication.AttachmentsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#encryption_configuration AwsQbusinessApplication#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#encryption_configuration TfApplication#encryption_configuration}
   */
-  readonly encryptionConfiguration?: AwsQbusinessApplication.EncryptionConfigurationProperty[] | cdktn.IResolvable;
+  readonly encryptionConfiguration?: TfApplication.EncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#timeouts AwsQbusinessApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#timeouts TfApplication#timeouts}
   */
-  readonly timeouts?: AwsQbusinessApplication.TimeoutsProperty;
+  readonly timeouts?: TfApplication.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application aws_qbusiness_application}
 */
-export class AwsQbusinessApplication extends cdktn.TerraformResource {
+export class TfApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -74,11 +74,11 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQbusinessApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQbusinessApplication to import
-  * @param importFromId The id of the existing AwsQbusinessApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQbusinessApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfApplication to import
+  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_qbusiness_application", importId: importFromId, provider });
@@ -93,9 +93,9 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQbusinessApplicationConfig
+  * @param options TfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQbusinessApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_qbusiness_application',
       terraformGeneratorMetadata: {
@@ -235,11 +235,11 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
   }
 
   // attachments_configuration - computed: false, optional: true, required: false
-  private _attachmentsConfiguration = new AwsQbusinessApplication.AttachmentsConfigurationPropertyList(this, "attachments_configuration", false);
+  private _attachmentsConfiguration = new TfApplication.AttachmentsConfigurationPropertyList(this, "attachments_configuration", false);
   public get attachmentsConfiguration() {
     return this._attachmentsConfiguration;
   }
-  public putAttachmentsConfiguration(value: AwsQbusinessApplication.AttachmentsConfigurationProperty[] | cdktn.IResolvable) {
+  public putAttachmentsConfiguration(value: TfApplication.AttachmentsConfigurationProperty[] | cdktn.IResolvable) {
     this._attachmentsConfiguration.internalValue = value;
   }
   public resetAttachmentsConfiguration() {
@@ -251,11 +251,11 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new AwsQbusinessApplication.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new TfApplication.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: AwsQbusinessApplication.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
+  public putEncryptionConfiguration(value: TfApplication.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -267,11 +267,11 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsQbusinessApplication.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfApplication.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsQbusinessApplication.TimeoutsProperty) {
+  public putTimeouts(value: TfApplication.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -294,9 +294,9 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
       identity_center_instance_arn: cdktn.stringToTerraform(this._identityCenterInstanceArn),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      attachments_configuration: cdktn.listMapper(awsQbusinessApplicationAttachmentsConfigurationPropertyToTerraform, true)(this._attachmentsConfiguration.internalValue),
-      encryption_configuration: cdktn.listMapper(awsQbusinessApplicationEncryptionConfigurationPropertyToTerraform, true)(this._encryptionConfiguration.internalValue),
-      timeouts: awsQbusinessApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      attachments_configuration: cdktn.listMapper(tfApplicationAttachmentsConfigurationPropertyToTerraform, true)(this._attachmentsConfiguration.internalValue),
+      encryption_configuration: cdktn.listMapper(tfApplicationEncryptionConfigurationPropertyToTerraform, true)(this._encryptionConfiguration.internalValue),
+      timeouts: tfApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -339,22 +339,22 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       attachments_configuration: {
-        value: cdktn.listMapperHcl(awsQbusinessApplicationAttachmentsConfigurationPropertyToHclTerraform, true)(this._attachmentsConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationAttachmentsConfigurationPropertyToHclTerraform, true)(this._attachmentsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQbusinessApplication.AttachmentsConfigurationPropertyList",
+        storageClassType: "TfApplication.AttachmentsConfigurationPropertyList",
       },
       encryption_configuration: {
-        value: cdktn.listMapperHcl(awsQbusinessApplicationEncryptionConfigurationPropertyToHclTerraform, true)(this._encryptionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationEncryptionConfigurationPropertyToHclTerraform, true)(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQbusinessApplication.EncryptionConfigurationPropertyList",
+        storageClassType: "TfApplication.EncryptionConfigurationPropertyList",
       },
       timeouts: {
-        value: awsQbusinessApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsQbusinessApplication.TimeoutsProperty",
+        storageClassType: "TfApplication.TimeoutsProperty",
       },
     };
 
@@ -363,7 +363,7 @@ export class AwsQbusinessApplication extends cdktn.TerraformResource {
   }
 }
 
-export function awsQbusinessApplicationAttachmentsConfigurationPropertyToTerraform(struct?: AwsQbusinessApplication.AttachmentsConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationAttachmentsConfigurationPropertyToTerraform(struct?: TfApplication.AttachmentsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function awsQbusinessApplicationAttachmentsConfigurationPropertyToTerrafo
 }
 
 
-export function awsQbusinessApplicationAttachmentsConfigurationPropertyToHclTerraform(struct?: AwsQbusinessApplication.AttachmentsConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationAttachmentsConfigurationPropertyToHclTerraform(struct?: TfApplication.AttachmentsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function awsQbusinessApplicationAttachmentsConfigurationPropertyToHclTerr
 }
 
 
-export function awsQbusinessApplicationEncryptionConfigurationPropertyToTerraform(struct?: AwsQbusinessApplication.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationEncryptionConfigurationPropertyToTerraform(struct?: TfApplication.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function awsQbusinessApplicationEncryptionConfigurationPropertyToTerrafor
 }
 
 
-export function awsQbusinessApplicationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsQbusinessApplication.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationEncryptionConfigurationPropertyToHclTerraform(struct?: TfApplication.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function awsQbusinessApplicationEncryptionConfigurationPropertyToHclTerra
 }
 
 
-export function awsQbusinessApplicationTimeoutsPropertyToTerraform(struct?: AwsQbusinessApplication.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsQbusinessApplicationTimeoutsPropertyToTerraform(struct?: AwsQ
 }
 
 
-export function awsQbusinessApplicationTimeoutsPropertyToHclTerraform(struct?: AwsQbusinessApplication.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToHclTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,12 +467,12 @@ export function awsQbusinessApplicationTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsQbusinessApplication {
+export namespace TfApplication {
 export interface AttachmentsConfigurationProperty {
   /**
   * Status information about whether file upload functionality is activated or deactivated for your end user.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#attachments_control_mode AwsQbusinessApplication#attachments_control_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#attachments_control_mode TfApplication#attachments_control_mode}
   */
   readonly attachmentsControlMode: string;
 }
@@ -557,7 +557,7 @@ export interface EncryptionConfigurationProperty {
   /**
   * The identifier of the AWS KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric keys.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#kms_key_id AwsQbusinessApplication#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#kms_key_id TfApplication#kms_key_id}
   */
   readonly kmsKeyId: string;
 }
@@ -642,19 +642,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#create AwsQbusinessApplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#create TfApplication#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#delete AwsQbusinessApplication#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#delete TfApplication#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#update AwsQbusinessApplication#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qbusiness_application#update TfApplication#update}
   */
   readonly update?: string;
 }

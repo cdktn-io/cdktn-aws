@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsImagebuilderInfrastructureConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfInfrastructureConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#arn DataAwsImagebuilderInfrastructureConfiguration#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#arn DataTfInfrastructureConfiguration#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#id DataAwsImagebuilderInfrastructureConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#id DataTfInfrastructureConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,15 +20,15 @@ export interface DataAwsImagebuilderInfrastructureConfigurationConfig extends cd
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#region DataAwsImagebuilderInfrastructureConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#region DataTfInfrastructureConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#resource_tags DataAwsImagebuilderInfrastructureConfiguration#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#resource_tags DataTfInfrastructureConfiguration#resource_tags}
   */
   readonly resourceTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#tags DataAwsImagebuilderInfrastructureConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#tags DataTfInfrastructureConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataAwsImagebuilderInfrastructureConfigurationConfig extends cd
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration aws_imagebuilder_infrastructure_configuration}
 */
-export class DataAwsImagebuilderInfrastructureConfiguration extends cdktn.TerraformDataSource {
+export class DataTfInfrastructureConfiguration extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsImagebuilderInfrastructureConfiguration extends cdktn.Terraf
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsImagebuilderInfrastructureConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfInfrastructureConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsImagebuilderInfrastructureConfiguration to import
-  * @param importFromId The id of the existing DataAwsImagebuilderInfrastructureConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsImagebuilderInfrastructureConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the DataTfInfrastructureConfiguration to import
+  * @param importFromId The id of the existing DataTfInfrastructureConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfInfrastructureConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_infrastructure_configuration", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsImagebuilderInfrastructureConfiguration extends cdktn.Terraf
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsImagebuilderInfrastructureConfigurationConfig
+  * @param options DataTfInfrastructureConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsImagebuilderInfrastructureConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfInfrastructureConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_infrastructure_configuration',
       terraformGeneratorMetadata: {
@@ -140,7 +140,7 @@ export class DataAwsImagebuilderInfrastructureConfiguration extends cdktn.Terraf
   }
 
   // instance_metadata_options - computed: true, optional: false, required: false
-  private _instanceMetadataOptions = new DataAwsImagebuilderInfrastructureConfiguration.InstanceMetadataOptionsPropertyList(this, "instance_metadata_options", false);
+  private _instanceMetadataOptions = new DataTfInfrastructureConfiguration.InstanceMetadataOptionsPropertyList(this, "instance_metadata_options", false);
   public get instanceMetadataOptions() {
     return this._instanceMetadataOptions;
   }
@@ -161,7 +161,7 @@ export class DataAwsImagebuilderInfrastructureConfiguration extends cdktn.Terraf
   }
 
   // logging - computed: true, optional: false, required: false
-  private _logging = new DataAwsImagebuilderInfrastructureConfiguration.LoggingPropertyList(this, "logging", false);
+  private _logging = new DataTfInfrastructureConfiguration.LoggingPropertyList(this, "logging", false);
   public get logging() {
     return this._logging;
   }
@@ -172,7 +172,7 @@ export class DataAwsImagebuilderInfrastructureConfiguration extends cdktn.Terraf
   }
 
   // placement - computed: true, optional: false, required: false
-  private _placement = new DataAwsImagebuilderInfrastructureConfiguration.PlacementPropertyList(this, "placement", false);
+  private _placement = new DataTfInfrastructureConfiguration.PlacementPropertyList(this, "placement", false);
   public get placement() {
     return this._placement;
   }
@@ -298,7 +298,7 @@ export class DataAwsImagebuilderInfrastructureConfiguration extends cdktn.Terraf
   }
 }
 
-export function dataAwsImagebuilderInfrastructureConfigurationInstanceMetadataOptionsPropertyToTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
+export function dataTfInfrastructureConfigurationInstanceMetadataOptionsPropertyToTerraform(struct?: DataTfInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationInstanceMetadataOp
 }
 
 
-export function dataAwsImagebuilderInfrastructureConfigurationInstanceMetadataOptionsPropertyToHclTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
+export function dataTfInfrastructureConfigurationInstanceMetadataOptionsPropertyToHclTerraform(struct?: DataTfInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationInstanceMetadataOp
 }
 
 
-export function dataAwsImagebuilderInfrastructureConfigurationS3LogsPropertyToTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.S3LogsProperty): any {
+export function dataTfInfrastructureConfigurationS3LogsPropertyToTerraform(struct?: DataTfInfrastructureConfiguration.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationS3LogsPropertyToTe
 }
 
 
-export function dataAwsImagebuilderInfrastructureConfigurationS3LogsPropertyToHclTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.S3LogsProperty): any {
+export function dataTfInfrastructureConfigurationS3LogsPropertyToHclTerraform(struct?: DataTfInfrastructureConfiguration.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationS3LogsPropertyToHc
 }
 
 
-export function dataAwsImagebuilderInfrastructureConfigurationLoggingPropertyToTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.LoggingProperty): any {
+export function dataTfInfrastructureConfigurationLoggingPropertyToTerraform(struct?: DataTfInfrastructureConfiguration.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationLoggingPropertyToT
 }
 
 
-export function dataAwsImagebuilderInfrastructureConfigurationLoggingPropertyToHclTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.LoggingProperty): any {
+export function dataTfInfrastructureConfigurationLoggingPropertyToHclTerraform(struct?: DataTfInfrastructureConfiguration.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationLoggingPropertyToH
 }
 
 
-export function dataAwsImagebuilderInfrastructureConfigurationPlacementPropertyToTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.PlacementProperty): any {
+export function dataTfInfrastructureConfigurationPlacementPropertyToTerraform(struct?: DataTfInfrastructureConfiguration.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationPlacementPropertyT
 }
 
 
-export function dataAwsImagebuilderInfrastructureConfigurationPlacementPropertyToHclTerraform(struct?: DataAwsImagebuilderInfrastructureConfiguration.PlacementProperty): any {
+export function dataTfInfrastructureConfigurationPlacementPropertyToHclTerraform(struct?: DataTfInfrastructureConfiguration.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function dataAwsImagebuilderInfrastructureConfigurationPlacementPropertyT
 }
 
 
-export namespace DataAwsImagebuilderInfrastructureConfiguration {
+export namespace DataTfInfrastructureConfiguration {
 export interface InstanceMetadataOptionsProperty {
 }
 export class InstanceMetadataOptionsPropertyOutputReference extends cdktn.ComplexObject {

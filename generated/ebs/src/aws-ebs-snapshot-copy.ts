@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEbsSnapshotCopyConfig extends cdktn.TerraformMetaArguments {
+export interface TfSnapshotCopyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#completion_duration_minutes AwsEbsSnapshotCopy#completion_duration_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#completion_duration_minutes TfSnapshotCopy#completion_duration_minutes}
   */
   readonly completionDurationMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#description AwsEbsSnapshotCopy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#description TfSnapshotCopy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#encrypted AwsEbsSnapshotCopy#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#encrypted TfSnapshotCopy#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#id AwsEbsSnapshotCopy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#id TfSnapshotCopy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#kms_key_id AwsEbsSnapshotCopy#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#kms_key_id TfSnapshotCopy#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#permanent_restore AwsEbsSnapshotCopy#permanent_restore}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#permanent_restore TfSnapshotCopy#permanent_restore}
   */
   readonly permanentRestore?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#region AwsEbsSnapshotCopy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#region TfSnapshotCopy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#source_region AwsEbsSnapshotCopy#source_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#source_region TfSnapshotCopy#source_region}
   */
   readonly sourceRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#source_snapshot_id AwsEbsSnapshotCopy#source_snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#source_snapshot_id TfSnapshotCopy#source_snapshot_id}
   */
   readonly sourceSnapshotId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#storage_tier AwsEbsSnapshotCopy#storage_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#storage_tier TfSnapshotCopy#storage_tier}
   */
   readonly storageTier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#tags AwsEbsSnapshotCopy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#tags TfSnapshotCopy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#tags_all AwsEbsSnapshotCopy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#tags_all TfSnapshotCopy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#temporary_restore_days AwsEbsSnapshotCopy#temporary_restore_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#temporary_restore_days TfSnapshotCopy#temporary_restore_days}
   */
   readonly temporaryRestoreDays?: number;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#timeouts AwsEbsSnapshotCopy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#timeouts TfSnapshotCopy#timeouts}
   */
-  readonly timeouts?: AwsEbsSnapshotCopy.TimeoutsProperty;
+  readonly timeouts?: TfSnapshotCopy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy aws_ebs_snapshot_copy}
 */
-export class AwsEbsSnapshotCopy extends cdktn.TerraformResource {
+export class TfSnapshotCopy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class AwsEbsSnapshotCopy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEbsSnapshotCopy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSnapshotCopy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEbsSnapshotCopy to import
-  * @param importFromId The id of the existing AwsEbsSnapshotCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEbsSnapshotCopy to import is found
+  * @param importToId The construct id used in the generated config for the TfSnapshotCopy to import
+  * @param importFromId The id of the existing TfSnapshotCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSnapshotCopy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_snapshot_copy", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class AwsEbsSnapshotCopy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEbsSnapshotCopyConfig
+  * @param options TfSnapshotCopyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEbsSnapshotCopyConfig) {
+  public constructor(scope: Construct, id: string, config: TfSnapshotCopyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_snapshot_copy',
       terraformGeneratorMetadata: {
@@ -380,11 +380,11 @@ export class AwsEbsSnapshotCopy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEbsSnapshotCopy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSnapshotCopy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEbsSnapshotCopy.TimeoutsProperty) {
+  public putTimeouts(value: TfSnapshotCopy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -414,7 +414,7 @@ export class AwsEbsSnapshotCopy extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       temporary_restore_days: cdktn.numberToTerraform(this._temporaryRestoreDays),
-      timeouts: awsEbsSnapshotCopyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfSnapshotCopyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -499,10 +499,10 @@ export class AwsEbsSnapshotCopy extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       timeouts: {
-        value: awsEbsSnapshotCopyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSnapshotCopyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEbsSnapshotCopy.TimeoutsProperty",
+        storageClassType: "TfSnapshotCopy.TimeoutsProperty",
       },
     };
 
@@ -511,7 +511,7 @@ export class AwsEbsSnapshotCopy extends cdktn.TerraformResource {
   }
 }
 
-export function awsEbsSnapshotCopyTimeoutsPropertyToTerraform(struct?: AwsEbsSnapshotCopy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSnapshotCopyTimeoutsPropertyToTerraform(struct?: TfSnapshotCopy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -523,7 +523,7 @@ export function awsEbsSnapshotCopyTimeoutsPropertyToTerraform(struct?: AwsEbsSna
 }
 
 
-export function awsEbsSnapshotCopyTimeoutsPropertyToHclTerraform(struct?: AwsEbsSnapshotCopy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSnapshotCopyTimeoutsPropertyToHclTerraform(struct?: TfSnapshotCopy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,14 +548,14 @@ export function awsEbsSnapshotCopyTimeoutsPropertyToHclTerraform(struct?: AwsEbs
 }
 
 
-export namespace AwsEbsSnapshotCopy {
+export namespace TfSnapshotCopy {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#create AwsEbsSnapshotCopy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#create TfSnapshotCopy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#delete AwsEbsSnapshotCopy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_copy#delete TfSnapshotCopy#delete}
   */
   readonly delete?: string;
 }

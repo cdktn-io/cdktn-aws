@@ -5,100 +5,100 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudtrailConfig extends cdktn.TerraformMetaArguments {
+export interface TfCloudtrailConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#cloud_watch_logs_group_arn AwsCloudtrail#cloud_watch_logs_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#cloud_watch_logs_group_arn TfCloudtrail#cloud_watch_logs_group_arn}
   */
   readonly cloudWatchLogsGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#cloud_watch_logs_role_arn AwsCloudtrail#cloud_watch_logs_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#cloud_watch_logs_role_arn TfCloudtrail#cloud_watch_logs_role_arn}
   */
   readonly cloudWatchLogsRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#enable_log_file_validation AwsCloudtrail#enable_log_file_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#enable_log_file_validation TfCloudtrail#enable_log_file_validation}
   */
   readonly enableLogFileValidation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#enable_logging AwsCloudtrail#enable_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#enable_logging TfCloudtrail#enable_logging}
   */
   readonly enableLogging?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#id AwsCloudtrail#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#id TfCloudtrail#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#include_global_service_events AwsCloudtrail#include_global_service_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#include_global_service_events TfCloudtrail#include_global_service_events}
   */
   readonly includeGlobalServiceEvents?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#is_multi_region_trail AwsCloudtrail#is_multi_region_trail}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#is_multi_region_trail TfCloudtrail#is_multi_region_trail}
   */
   readonly isMultiRegionTrail?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#is_organization_trail AwsCloudtrail#is_organization_trail}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#is_organization_trail TfCloudtrail#is_organization_trail}
   */
   readonly isOrganizationTrail?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#kms_key_id AwsCloudtrail#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#kms_key_id TfCloudtrail#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#name AwsCloudtrail#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#name TfCloudtrail#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#region AwsCloudtrail#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#region TfCloudtrail#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#s3_bucket_name AwsCloudtrail#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#s3_bucket_name TfCloudtrail#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#s3_key_prefix AwsCloudtrail#s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#s3_key_prefix TfCloudtrail#s3_key_prefix}
   */
   readonly s3KeyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#sns_topic_name AwsCloudtrail#sns_topic_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#sns_topic_name TfCloudtrail#sns_topic_name}
   */
   readonly snsTopicName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#tags AwsCloudtrail#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#tags TfCloudtrail#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#tags_all AwsCloudtrail#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#tags_all TfCloudtrail#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * advanced_event_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#advanced_event_selector AwsCloudtrail#advanced_event_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#advanced_event_selector TfCloudtrail#advanced_event_selector}
   */
-  readonly advancedEventSelector?: AwsCloudtrail.AdvancedEventSelectorProperty[] | cdktn.IResolvable;
+  readonly advancedEventSelector?: TfCloudtrail.AdvancedEventSelectorProperty[] | cdktn.IResolvable;
   /**
   * event_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#event_selector AwsCloudtrail#event_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#event_selector TfCloudtrail#event_selector}
   */
-  readonly eventSelector?: AwsCloudtrail.EventSelectorProperty[] | cdktn.IResolvable;
+  readonly eventSelector?: TfCloudtrail.EventSelectorProperty[] | cdktn.IResolvable;
   /**
   * insight_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#insight_selector AwsCloudtrail#insight_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#insight_selector TfCloudtrail#insight_selector}
   */
-  readonly insightSelector?: AwsCloudtrail.InsightSelectorProperty[] | cdktn.IResolvable;
+  readonly insightSelector?: TfCloudtrail.InsightSelectorProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail aws_cloudtrail}
 */
-export class AwsCloudtrail extends cdktn.TerraformResource {
+export class TfCloudtrail extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -109,11 +109,11 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudtrail resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCloudtrail resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudtrail to import
-  * @param importFromId The id of the existing AwsCloudtrail that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudtrail to import is found
+  * @param importToId The construct id used in the generated config for the TfCloudtrail to import
+  * @param importFromId The id of the existing TfCloudtrail that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCloudtrail to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudtrail", importId: importFromId, provider });
@@ -128,9 +128,9 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudtrailConfig
+  * @param options TfCloudtrailConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudtrailConfig) {
+  public constructor(scope: Construct, id: string, config: TfCloudtrailConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudtrail',
       terraformGeneratorMetadata: {
@@ -437,11 +437,11 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
   }
 
   // advanced_event_selector - computed: false, optional: true, required: false
-  private _advancedEventSelector = new AwsCloudtrail.AdvancedEventSelectorPropertyList(this, "advanced_event_selector", false);
+  private _advancedEventSelector = new TfCloudtrail.AdvancedEventSelectorPropertyList(this, "advanced_event_selector", false);
   public get advancedEventSelector() {
     return this._advancedEventSelector;
   }
-  public putAdvancedEventSelector(value: AwsCloudtrail.AdvancedEventSelectorProperty[] | cdktn.IResolvable) {
+  public putAdvancedEventSelector(value: TfCloudtrail.AdvancedEventSelectorProperty[] | cdktn.IResolvable) {
     this._advancedEventSelector.internalValue = value;
   }
   public resetAdvancedEventSelector() {
@@ -453,11 +453,11 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
   }
 
   // event_selector - computed: false, optional: true, required: false
-  private _eventSelector = new AwsCloudtrail.EventSelectorPropertyList(this, "event_selector", false);
+  private _eventSelector = new TfCloudtrail.EventSelectorPropertyList(this, "event_selector", false);
   public get eventSelector() {
     return this._eventSelector;
   }
-  public putEventSelector(value: AwsCloudtrail.EventSelectorProperty[] | cdktn.IResolvable) {
+  public putEventSelector(value: TfCloudtrail.EventSelectorProperty[] | cdktn.IResolvable) {
     this._eventSelector.internalValue = value;
   }
   public resetEventSelector() {
@@ -469,11 +469,11 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
   }
 
   // insight_selector - computed: false, optional: true, required: false
-  private _insightSelector = new AwsCloudtrail.InsightSelectorPropertyList(this, "insight_selector", true);
+  private _insightSelector = new TfCloudtrail.InsightSelectorPropertyList(this, "insight_selector", true);
   public get insightSelector() {
     return this._insightSelector;
   }
-  public putInsightSelector(value: AwsCloudtrail.InsightSelectorProperty[] | cdktn.IResolvable) {
+  public putInsightSelector(value: TfCloudtrail.InsightSelectorProperty[] | cdktn.IResolvable) {
     this._insightSelector.internalValue = value;
   }
   public resetInsightSelector() {
@@ -506,9 +506,9 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
       sns_topic_name: cdktn.stringToTerraform(this._snsTopicName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      advanced_event_selector: cdktn.listMapper(awsCloudtrailAdvancedEventSelectorPropertyToTerraform, true)(this._advancedEventSelector.internalValue),
-      event_selector: cdktn.listMapper(awsCloudtrailEventSelectorPropertyToTerraform, true)(this._eventSelector.internalValue),
-      insight_selector: cdktn.listMapper(awsCloudtrailInsightSelectorPropertyToTerraform, true)(this._insightSelector.internalValue),
+      advanced_event_selector: cdktn.listMapper(tfCloudtrailAdvancedEventSelectorPropertyToTerraform, true)(this._advancedEventSelector.internalValue),
+      event_selector: cdktn.listMapper(tfCloudtrailEventSelectorPropertyToTerraform, true)(this._eventSelector.internalValue),
+      insight_selector: cdktn.listMapper(tfCloudtrailInsightSelectorPropertyToTerraform, true)(this._insightSelector.internalValue),
     };
   }
 
@@ -611,22 +611,22 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       advanced_event_selector: {
-        value: cdktn.listMapperHcl(awsCloudtrailAdvancedEventSelectorPropertyToHclTerraform, true)(this._advancedEventSelector.internalValue),
+        value: cdktn.listMapperHcl(tfCloudtrailAdvancedEventSelectorPropertyToHclTerraform, true)(this._advancedEventSelector.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudtrail.AdvancedEventSelectorPropertyList",
+        storageClassType: "TfCloudtrail.AdvancedEventSelectorPropertyList",
       },
       event_selector: {
-        value: cdktn.listMapperHcl(awsCloudtrailEventSelectorPropertyToHclTerraform, true)(this._eventSelector.internalValue),
+        value: cdktn.listMapperHcl(tfCloudtrailEventSelectorPropertyToHclTerraform, true)(this._eventSelector.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudtrail.EventSelectorPropertyList",
+        storageClassType: "TfCloudtrail.EventSelectorPropertyList",
       },
       insight_selector: {
-        value: cdktn.listMapperHcl(awsCloudtrailInsightSelectorPropertyToHclTerraform, true)(this._insightSelector.internalValue),
+        value: cdktn.listMapperHcl(tfCloudtrailInsightSelectorPropertyToHclTerraform, true)(this._insightSelector.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudtrail.InsightSelectorPropertyList",
+        storageClassType: "TfCloudtrail.InsightSelectorPropertyList",
       },
     };
 
@@ -635,7 +635,7 @@ export class AwsCloudtrail extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudtrailFieldSelectorPropertyToTerraform(struct?: AwsCloudtrail.FieldSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailFieldSelectorPropertyToTerraform(struct?: TfCloudtrail.FieldSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function awsCloudtrailFieldSelectorPropertyToTerraform(struct?: AwsCloudt
 }
 
 
-export function awsCloudtrailFieldSelectorPropertyToHclTerraform(struct?: AwsCloudtrail.FieldSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailFieldSelectorPropertyToHclTerraform(struct?: TfCloudtrail.FieldSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -707,19 +707,19 @@ export function awsCloudtrailFieldSelectorPropertyToHclTerraform(struct?: AwsClo
 }
 
 
-export function awsCloudtrailAdvancedEventSelectorPropertyToTerraform(struct?: AwsCloudtrail.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailAdvancedEventSelectorPropertyToTerraform(struct?: TfCloudtrail.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    field_selector: cdktn.listMapper(awsCloudtrailFieldSelectorPropertyToTerraform, true)(struct!.fieldSelector),
+    field_selector: cdktn.listMapper(tfCloudtrailFieldSelectorPropertyToTerraform, true)(struct!.fieldSelector),
   }
 }
 
 
-export function awsCloudtrailAdvancedEventSelectorPropertyToHclTerraform(struct?: AwsCloudtrail.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailAdvancedEventSelectorPropertyToHclTerraform(struct?: TfCloudtrail.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function awsCloudtrailAdvancedEventSelectorPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     field_selector: {
-      value: cdktn.listMapperHcl(awsCloudtrailFieldSelectorPropertyToHclTerraform, true)(struct!.fieldSelector),
+      value: cdktn.listMapperHcl(tfCloudtrailFieldSelectorPropertyToHclTerraform, true)(struct!.fieldSelector),
       isBlock: true,
       type: "set",
       storageClassType: "FieldSelectorPropertyList",
@@ -744,7 +744,7 @@ export function awsCloudtrailAdvancedEventSelectorPropertyToHclTerraform(struct?
 }
 
 
-export function awsCloudtrailDataResourcePropertyToTerraform(struct?: AwsCloudtrail.DataResourceProperty | cdktn.IResolvable): any {
+export function tfCloudtrailDataResourcePropertyToTerraform(struct?: TfCloudtrail.DataResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -756,7 +756,7 @@ export function awsCloudtrailDataResourcePropertyToTerraform(struct?: AwsCloudtr
 }
 
 
-export function awsCloudtrailDataResourcePropertyToHclTerraform(struct?: AwsCloudtrail.DataResourceProperty | cdktn.IResolvable): any {
+export function tfCloudtrailDataResourcePropertyToHclTerraform(struct?: TfCloudtrail.DataResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -781,7 +781,7 @@ export function awsCloudtrailDataResourcePropertyToHclTerraform(struct?: AwsClou
 }
 
 
-export function awsCloudtrailEventSelectorPropertyToTerraform(struct?: AwsCloudtrail.EventSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailEventSelectorPropertyToTerraform(struct?: TfCloudtrail.EventSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,12 +790,12 @@ export function awsCloudtrailEventSelectorPropertyToTerraform(struct?: AwsCloudt
     exclude_management_event_sources: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.excludeManagementEventSources),
     include_management_events: cdktn.booleanToTerraform(struct!.includeManagementEvents),
     read_write_type: cdktn.stringToTerraform(struct!.readWriteType),
-    data_resource: cdktn.listMapper(awsCloudtrailDataResourcePropertyToTerraform, true)(struct!.dataResource),
+    data_resource: cdktn.listMapper(tfCloudtrailDataResourcePropertyToTerraform, true)(struct!.dataResource),
   }
 }
 
 
-export function awsCloudtrailEventSelectorPropertyToHclTerraform(struct?: AwsCloudtrail.EventSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailEventSelectorPropertyToHclTerraform(struct?: TfCloudtrail.EventSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,7 +820,7 @@ export function awsCloudtrailEventSelectorPropertyToHclTerraform(struct?: AwsClo
       storageClassType: "string",
     },
     data_resource: {
-      value: cdktn.listMapperHcl(awsCloudtrailDataResourcePropertyToHclTerraform, true)(struct!.dataResource),
+      value: cdktn.listMapperHcl(tfCloudtrailDataResourcePropertyToHclTerraform, true)(struct!.dataResource),
       isBlock: true,
       type: "list",
       storageClassType: "DataResourcePropertyList",
@@ -832,7 +832,7 @@ export function awsCloudtrailEventSelectorPropertyToHclTerraform(struct?: AwsClo
 }
 
 
-export function awsCloudtrailInsightSelectorPropertyToTerraform(struct?: AwsCloudtrail.InsightSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailInsightSelectorPropertyToTerraform(struct?: TfCloudtrail.InsightSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -843,7 +843,7 @@ export function awsCloudtrailInsightSelectorPropertyToTerraform(struct?: AwsClou
 }
 
 
-export function awsCloudtrailInsightSelectorPropertyToHclTerraform(struct?: AwsCloudtrail.InsightSelectorProperty | cdktn.IResolvable): any {
+export function tfCloudtrailInsightSelectorPropertyToHclTerraform(struct?: TfCloudtrail.InsightSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,34 +862,34 @@ export function awsCloudtrailInsightSelectorPropertyToHclTerraform(struct?: AwsC
 }
 
 
-export namespace AwsCloudtrail {
+export namespace TfCloudtrail {
 export interface FieldSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#ends_with AwsCloudtrail#ends_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#ends_with TfCloudtrail#ends_with}
   */
   readonly endsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#equals AwsCloudtrail#equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#equals TfCloudtrail#equals}
   */
   readonly equalTo?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#field AwsCloudtrail#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#field TfCloudtrail#field}
   */
   readonly field: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#not_ends_with AwsCloudtrail#not_ends_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#not_ends_with TfCloudtrail#not_ends_with}
   */
   readonly notEndsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#not_equals AwsCloudtrail#not_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#not_equals TfCloudtrail#not_equals}
   */
   readonly notEquals?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#not_starts_with AwsCloudtrail#not_starts_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#not_starts_with TfCloudtrail#not_starts_with}
   */
   readonly notStartsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#starts_with AwsCloudtrail#starts_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#starts_with TfCloudtrail#starts_with}
   */
   readonly startsWith?: string[];
 }
@@ -1104,13 +1104,13 @@ export class FieldSelectorPropertyList extends cdktn.ComplexList {
 }
 export interface AdvancedEventSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#name AwsCloudtrail#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#name TfCloudtrail#name}
   */
   readonly name?: string;
   /**
   * field_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#field_selector AwsCloudtrail#field_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#field_selector TfCloudtrail#field_selector}
   */
   readonly fieldSelector: FieldSelectorProperty[] | cdktn.IResolvable;
 }
@@ -1215,11 +1215,11 @@ export class AdvancedEventSelectorPropertyList extends cdktn.ComplexList {
 }
 export interface DataResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#type AwsCloudtrail#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#type TfCloudtrail#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#values AwsCloudtrail#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#values TfCloudtrail#values}
   */
   readonly values: string[];
 }
@@ -1321,21 +1321,21 @@ export class DataResourcePropertyList extends cdktn.ComplexList {
 }
 export interface EventSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#exclude_management_event_sources AwsCloudtrail#exclude_management_event_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#exclude_management_event_sources TfCloudtrail#exclude_management_event_sources}
   */
   readonly excludeManagementEventSources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#include_management_events AwsCloudtrail#include_management_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#include_management_events TfCloudtrail#include_management_events}
   */
   readonly includeManagementEvents?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#read_write_type AwsCloudtrail#read_write_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#read_write_type TfCloudtrail#read_write_type}
   */
   readonly readWriteType?: string;
   /**
   * data_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#data_resource AwsCloudtrail#data_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#data_resource TfCloudtrail#data_resource}
   */
   readonly dataResource?: DataResourceProperty[] | cdktn.IResolvable;
 }
@@ -1487,7 +1487,7 @@ export class EventSelectorPropertyList extends cdktn.ComplexList {
 }
 export interface InsightSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#insight_type AwsCloudtrail#insight_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail#insight_type TfCloudtrail#insight_type}
   */
   readonly insightType: string;
 }

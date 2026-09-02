@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMediaConvertQueueConfig extends cdktn.TerraformMetaArguments {
+export interface TfQueueConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#concurrent_jobs AwsMediaConvertQueue#concurrent_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#concurrent_jobs TfQueue#concurrent_jobs}
   */
   readonly concurrentJobs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#description AwsMediaConvertQueue#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#description TfQueue#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#id AwsMediaConvertQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#id TfQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#name AwsMediaConvertQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#name TfQueue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#pricing_plan AwsMediaConvertQueue#pricing_plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#pricing_plan TfQueue#pricing_plan}
   */
   readonly pricingPlan?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#region AwsMediaConvertQueue#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#region TfQueue#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#status AwsMediaConvertQueue#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#status TfQueue#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#tags AwsMediaConvertQueue#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#tags TfQueue#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#tags_all AwsMediaConvertQueue#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#tags_all TfQueue#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * reservation_plan_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#reservation_plan_settings AwsMediaConvertQueue#reservation_plan_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#reservation_plan_settings TfQueue#reservation_plan_settings}
   */
-  readonly reservationPlanSettings?: AwsMediaConvertQueue.ReservationPlanSettingsProperty;
+  readonly reservationPlanSettings?: TfQueue.ReservationPlanSettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue aws_media_convert_queue}
 */
-export class AwsMediaConvertQueue extends cdktn.TerraformResource {
+export class TfQueue extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsMediaConvertQueue extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMediaConvertQueue resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfQueue resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMediaConvertQueue to import
-  * @param importFromId The id of the existing AwsMediaConvertQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMediaConvertQueue to import is found
+  * @param importToId The construct id used in the generated config for the TfQueue to import
+  * @param importFromId The id of the existing TfQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_media_convert_queue", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsMediaConvertQueue extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMediaConvertQueueConfig
+  * @param options TfQueueConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMediaConvertQueueConfig) {
+  public constructor(scope: Construct, id: string, config: TfQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_media_convert_queue',
       terraformGeneratorMetadata: {
@@ -269,11 +269,11 @@ export class AwsMediaConvertQueue extends cdktn.TerraformResource {
   }
 
   // reservation_plan_settings - computed: false, optional: true, required: false
-  private _reservationPlanSettings = new AwsMediaConvertQueue.ReservationPlanSettingsPropertyOutputReference(this, "reservation_plan_settings");
+  private _reservationPlanSettings = new TfQueue.ReservationPlanSettingsPropertyOutputReference(this, "reservation_plan_settings");
   public get reservationPlanSettings() {
     return this._reservationPlanSettings;
   }
-  public putReservationPlanSettings(value: AwsMediaConvertQueue.ReservationPlanSettingsProperty) {
+  public putReservationPlanSettings(value: TfQueue.ReservationPlanSettingsProperty) {
     this._reservationPlanSettings.internalValue = value;
   }
   public resetReservationPlanSettings() {
@@ -299,7 +299,7 @@ export class AwsMediaConvertQueue extends cdktn.TerraformResource {
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      reservation_plan_settings: awsMediaConvertQueueReservationPlanSettingsPropertyToTerraform(this._reservationPlanSettings.internalValue),
+      reservation_plan_settings: tfQueueReservationPlanSettingsPropertyToTerraform(this._reservationPlanSettings.internalValue),
     };
   }
 
@@ -360,10 +360,10 @@ export class AwsMediaConvertQueue extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       reservation_plan_settings: {
-        value: awsMediaConvertQueueReservationPlanSettingsPropertyToHclTerraform(this._reservationPlanSettings.internalValue),
+        value: tfQueueReservationPlanSettingsPropertyToHclTerraform(this._reservationPlanSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMediaConvertQueue.ReservationPlanSettingsPropertyList",
+        storageClassType: "TfQueue.ReservationPlanSettingsPropertyList",
       },
     };
 
@@ -372,7 +372,7 @@ export class AwsMediaConvertQueue extends cdktn.TerraformResource {
   }
 }
 
-export function awsMediaConvertQueueReservationPlanSettingsPropertyToTerraform(struct?: AwsMediaConvertQueue.ReservationPlanSettingsPropertyOutputReference | AwsMediaConvertQueue.ReservationPlanSettingsProperty): any {
+export function tfQueueReservationPlanSettingsPropertyToTerraform(struct?: TfQueue.ReservationPlanSettingsPropertyOutputReference | TfQueue.ReservationPlanSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsMediaConvertQueueReservationPlanSettingsPropertyToTerraform(s
 }
 
 
-export function awsMediaConvertQueueReservationPlanSettingsPropertyToHclTerraform(struct?: AwsMediaConvertQueue.ReservationPlanSettingsPropertyOutputReference | AwsMediaConvertQueue.ReservationPlanSettingsProperty): any {
+export function tfQueueReservationPlanSettingsPropertyToHclTerraform(struct?: TfQueue.ReservationPlanSettingsPropertyOutputReference | TfQueue.ReservationPlanSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,18 +416,18 @@ export function awsMediaConvertQueueReservationPlanSettingsPropertyToHclTerrafor
 }
 
 
-export namespace AwsMediaConvertQueue {
+export namespace TfQueue {
 export interface ReservationPlanSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#commitment AwsMediaConvertQueue#commitment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#commitment TfQueue#commitment}
   */
   readonly commitment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#renewal_type AwsMediaConvertQueue#renewal_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#renewal_type TfQueue#renewal_type}
   */
   readonly renewalType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#reserved_slots AwsMediaConvertQueue#reserved_slots}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_convert_queue#reserved_slots TfQueue#reserved_slots}
   */
   readonly reservedSlots: number;
 }

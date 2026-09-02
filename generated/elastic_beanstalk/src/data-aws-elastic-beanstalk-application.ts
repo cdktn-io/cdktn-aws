@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsElasticBeanstalkApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#id DataAwsElasticBeanstalkApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#id DataTfApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#name DataAwsElasticBeanstalkApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#name DataTfApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#region DataAwsElasticBeanstalkApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#region DataTfApplication#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsElasticBeanstalkApplicationConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application aws_elastic_beanstalk_application}
 */
-export class DataAwsElasticBeanstalkApplication extends cdktn.TerraformDataSource {
+export class DataTfApplication extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsElasticBeanstalkApplication extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsElasticBeanstalkApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsElasticBeanstalkApplication to import
-  * @param importFromId The id of the existing DataAwsElasticBeanstalkApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsElasticBeanstalkApplication to import is found
+  * @param importToId The construct id used in the generated config for the DataTfApplication to import
+  * @param importFromId The id of the existing DataTfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elastic_beanstalk_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elastic_beanstalk_application", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsElasticBeanstalkApplication extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsElasticBeanstalkApplicationConfig
+  * @param options DataTfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsElasticBeanstalkApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elastic_beanstalk_application',
       terraformGeneratorMetadata: {
@@ -86,7 +86,7 @@ export class DataAwsElasticBeanstalkApplication extends cdktn.TerraformDataSourc
   // ==========
 
   // appversion_lifecycle - computed: true, optional: false, required: false
-  private _appversionLifecycle = new DataAwsElasticBeanstalkApplication.AppversionLifecyclePropertyList(this, "appversion_lifecycle", false);
+  private _appversionLifecycle = new DataTfApplication.AppversionLifecyclePropertyList(this, "appversion_lifecycle", false);
   public get appversionLifecycle() {
     return this._appversionLifecycle;
   }
@@ -185,7 +185,7 @@ export class DataAwsElasticBeanstalkApplication extends cdktn.TerraformDataSourc
   }
 }
 
-export function dataAwsElasticBeanstalkApplicationAppversionLifecyclePropertyToTerraform(struct?: DataAwsElasticBeanstalkApplication.AppversionLifecycleProperty): any {
+export function dataTfApplicationAppversionLifecyclePropertyToTerraform(struct?: DataTfApplication.AppversionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -195,7 +195,7 @@ export function dataAwsElasticBeanstalkApplicationAppversionLifecyclePropertyToT
 }
 
 
-export function dataAwsElasticBeanstalkApplicationAppversionLifecyclePropertyToHclTerraform(struct?: DataAwsElasticBeanstalkApplication.AppversionLifecycleProperty): any {
+export function dataTfApplicationAppversionLifecyclePropertyToHclTerraform(struct?: DataTfApplication.AppversionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function dataAwsElasticBeanstalkApplicationAppversionLifecyclePropertyToH
 }
 
 
-export namespace DataAwsElasticBeanstalkApplication {
+export namespace DataTfApplication {
 export interface AppversionLifecycleProperty {
 }
 export class AppversionLifecyclePropertyOutputReference extends cdktn.ComplexObject {

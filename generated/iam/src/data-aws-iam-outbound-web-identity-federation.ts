@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamOutboundWebIdentityFederationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfOutboundWebIdentityFederationConfig extends cdktn.TerraformMetaArguments {
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_outbound_web_identity_federation aws_iam_outbound_web_identity_federation}
 */
-export class DataAwsIamOutboundWebIdentityFederation extends cdktn.TerraformDataSource {
+export class DataTfOutboundWebIdentityFederation extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -22,11 +22,11 @@ export class DataAwsIamOutboundWebIdentityFederation extends cdktn.TerraformData
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamOutboundWebIdentityFederation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfOutboundWebIdentityFederation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamOutboundWebIdentityFederation to import
-  * @param importFromId The id of the existing DataAwsIamOutboundWebIdentityFederation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_outbound_web_identity_federation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamOutboundWebIdentityFederation to import is found
+  * @param importToId The construct id used in the generated config for the DataTfOutboundWebIdentityFederation to import
+  * @param importFromId The id of the existing DataTfOutboundWebIdentityFederation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_outbound_web_identity_federation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfOutboundWebIdentityFederation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_outbound_web_identity_federation", importId: importFromId, provider });
@@ -41,9 +41,9 @@ export class DataAwsIamOutboundWebIdentityFederation extends cdktn.TerraformData
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamOutboundWebIdentityFederationConfig = {}
+  * @param options DataTfOutboundWebIdentityFederationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamOutboundWebIdentityFederationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfOutboundWebIdentityFederationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_outbound_web_identity_federation',
       terraformGeneratorMetadata: {

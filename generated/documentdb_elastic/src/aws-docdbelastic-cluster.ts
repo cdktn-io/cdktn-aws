@@ -5,81 +5,81 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDocdbelasticClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#admin_user_name AwsDocdbelasticCluster#admin_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#admin_user_name TfCluster#admin_user_name}
   */
   readonly adminUserName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#admin_user_password AwsDocdbelasticCluster#admin_user_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#admin_user_password TfCluster#admin_user_password}
   */
   readonly adminUserPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#auth_type AwsDocdbelasticCluster#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#auth_type TfCluster#auth_type}
   */
   readonly authType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#backup_retention_period AwsDocdbelasticCluster#backup_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#backup_retention_period TfCluster#backup_retention_period}
   */
   readonly backupRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#kms_key_id AwsDocdbelasticCluster#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#kms_key_id TfCluster#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#name AwsDocdbelasticCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#name TfCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#preferred_backup_window AwsDocdbelasticCluster#preferred_backup_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#preferred_backup_window TfCluster#preferred_backup_window}
   */
   readonly preferredBackupWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#preferred_maintenance_window AwsDocdbelasticCluster#preferred_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#preferred_maintenance_window TfCluster#preferred_maintenance_window}
   */
   readonly preferredMaintenanceWindow?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#region AwsDocdbelasticCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#region TfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#shard_capacity AwsDocdbelasticCluster#shard_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#shard_capacity TfCluster#shard_capacity}
   */
   readonly shardCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#shard_count AwsDocdbelasticCluster#shard_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#shard_count TfCluster#shard_count}
   */
   readonly shardCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#shard_instance_count AwsDocdbelasticCluster#shard_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#shard_instance_count TfCluster#shard_instance_count}
   */
   readonly shardInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#subnet_ids AwsDocdbelasticCluster#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#subnet_ids TfCluster#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#tags AwsDocdbelasticCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#tags TfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#vpc_security_group_ids AwsDocdbelasticCluster#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#vpc_security_group_ids TfCluster#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#timeouts AwsDocdbelasticCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#timeouts TfCluster#timeouts}
   */
-  readonly timeouts?: AwsDocdbelasticCluster.TimeoutsProperty;
+  readonly timeouts?: TfCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster aws_docdbelastic_cluster}
 */
-export class AwsDocdbelasticCluster extends cdktn.TerraformResource {
+export class TfCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -90,11 +90,11 @@ export class AwsDocdbelasticCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDocdbelasticCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDocdbelasticCluster to import
-  * @param importFromId The id of the existing AwsDocdbelasticCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDocdbelasticCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCluster to import
+  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_docdbelastic_cluster", importId: importFromId, provider });
@@ -109,9 +109,9 @@ export class AwsDocdbelasticCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDocdbelasticClusterConfig
+  * @param options TfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDocdbelasticClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_docdbelastic_cluster',
       terraformGeneratorMetadata: {
@@ -393,11 +393,11 @@ export class AwsDocdbelasticCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDocdbelasticCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDocdbelasticCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -429,7 +429,7 @@ export class AwsDocdbelasticCluster extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      timeouts: awsDocdbelasticClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -526,10 +526,10 @@ export class AwsDocdbelasticCluster extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       timeouts: {
-        value: awsDocdbelasticClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDocdbelasticCluster.TimeoutsProperty",
+        storageClassType: "TfCluster.TimeoutsProperty",
       },
     };
 
@@ -538,7 +538,7 @@ export class AwsDocdbelasticCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsDocdbelasticClusterTimeoutsPropertyToTerraform(struct?: AwsDocdbelasticCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function awsDocdbelasticClusterTimeoutsPropertyToTerraform(struct?: AwsDo
 }
 
 
-export function awsDocdbelasticClusterTimeoutsPropertyToHclTerraform(struct?: AwsDocdbelasticCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,24 +582,24 @@ export function awsDocdbelasticClusterTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsDocdbelasticCluster {
+export namespace TfCluster {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#create AwsDocdbelasticCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#create TfCluster#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#delete AwsDocdbelasticCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#delete TfCluster#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#update AwsDocdbelasticCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdbelastic_cluster#update TfCluster#update}
   */
   readonly update?: string;
 }

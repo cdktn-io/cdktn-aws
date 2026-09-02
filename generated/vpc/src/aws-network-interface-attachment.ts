@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkInterfaceAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfNetworkInterfaceAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#device_index AwsNetworkInterfaceAttachment#device_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#device_index TfNetworkInterfaceAttachment#device_index}
   */
   readonly deviceIndex: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#id AwsNetworkInterfaceAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#id TfNetworkInterfaceAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#instance_id AwsNetworkInterfaceAttachment#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#instance_id TfNetworkInterfaceAttachment#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#network_card_index AwsNetworkInterfaceAttachment#network_card_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#network_card_index TfNetworkInterfaceAttachment#network_card_index}
   */
   readonly networkCardIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#network_interface_id AwsNetworkInterfaceAttachment#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#network_interface_id TfNetworkInterfaceAttachment#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#region AwsNetworkInterfaceAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#region TfNetworkInterfaceAttachment#region}
   */
   readonly region?: string;
 }
@@ -40,7 +40,7 @@ export interface AwsNetworkInterfaceAttachmentConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment aws_network_interface_attachment}
 */
-export class AwsNetworkInterfaceAttachment extends cdktn.TerraformResource {
+export class TfNetworkInterfaceAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsNetworkInterfaceAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkInterfaceAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNetworkInterfaceAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkInterfaceAttachment to import
-  * @param importFromId The id of the existing AwsNetworkInterfaceAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkInterfaceAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfNetworkInterfaceAttachment to import
+  * @param importFromId The id of the existing TfNetworkInterfaceAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNetworkInterfaceAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_network_interface_attachment", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsNetworkInterfaceAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkInterfaceAttachmentConfig
+  * @param options TfNetworkInterfaceAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkInterfaceAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfNetworkInterfaceAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_network_interface_attachment',
       terraformGeneratorMetadata: {

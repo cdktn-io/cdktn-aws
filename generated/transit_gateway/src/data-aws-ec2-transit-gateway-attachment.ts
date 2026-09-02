@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEc2TransitGatewayAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#id DataAwsEc2TransitGatewayAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#id DataTfAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,29 +16,29 @@ export interface DataAwsEc2TransitGatewayAttachmentConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#region DataAwsEc2TransitGatewayAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#region DataTfAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#tags DataAwsEc2TransitGatewayAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#tags DataTfAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#transit_gateway_attachment_id DataAwsEc2TransitGatewayAttachment#transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#transit_gateway_attachment_id DataTfAttachment#transit_gateway_attachment_id}
   */
   readonly transitGatewayAttachmentId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#filter DataAwsEc2TransitGatewayAttachment#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#filter DataTfAttachment#filter}
   */
-  readonly filter?: DataAwsEc2TransitGatewayAttachment.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfAttachment.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment aws_ec2_transit_gateway_attachment}
 */
-export class DataAwsEc2TransitGatewayAttachment extends cdktn.TerraformDataSource {
+export class DataTfAttachment extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataAwsEc2TransitGatewayAttachment extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEc2TransitGatewayAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEc2TransitGatewayAttachment to import
-  * @param importFromId The id of the existing DataAwsEc2TransitGatewayAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEc2TransitGatewayAttachment to import is found
+  * @param importToId The construct id used in the generated config for the DataTfAttachment to import
+  * @param importFromId The id of the existing DataTfAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_attachment", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataAwsEc2TransitGatewayAttachment extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEc2TransitGatewayAttachmentConfig = {}
+  * @param options DataTfAttachmentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEc2TransitGatewayAttachmentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfAttachmentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_attachment',
       terraformGeneratorMetadata: {
@@ -207,11 +207,11 @@ export class DataAwsEc2TransitGatewayAttachment extends cdktn.TerraformDataSourc
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsEc2TransitGatewayAttachment.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfAttachment.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsEc2TransitGatewayAttachment.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfAttachment.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -232,7 +232,7 @@ export class DataAwsEc2TransitGatewayAttachment extends cdktn.TerraformDataSourc
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       transit_gateway_attachment_id: cdktn.stringToTerraform(this._transitGatewayAttachmentId),
-      filter: cdktn.listMapper(dataAwsEc2TransitGatewayAttachmentFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfAttachmentFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -263,10 +263,10 @@ export class DataAwsEc2TransitGatewayAttachment extends cdktn.TerraformDataSourc
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsEc2TransitGatewayAttachmentFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfAttachmentFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsEc2TransitGatewayAttachment.FilterPropertyList",
+        storageClassType: "DataTfAttachment.FilterPropertyList",
       },
     };
 
@@ -275,7 +275,7 @@ export class DataAwsEc2TransitGatewayAttachment extends cdktn.TerraformDataSourc
   }
 }
 
-export function dataAwsEc2TransitGatewayAttachmentFilterPropertyToTerraform(struct?: DataAwsEc2TransitGatewayAttachment.FilterProperty | cdktn.IResolvable): any {
+export function dataTfAttachmentFilterPropertyToTerraform(struct?: DataTfAttachment.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function dataAwsEc2TransitGatewayAttachmentFilterPropertyToTerraform(stru
 }
 
 
-export function dataAwsEc2TransitGatewayAttachmentFilterPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayAttachment.FilterProperty | cdktn.IResolvable): any {
+export function dataTfAttachmentFilterPropertyToHclTerraform(struct?: DataTfAttachment.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,14 +312,14 @@ export function dataAwsEc2TransitGatewayAttachmentFilterPropertyToHclTerraform(s
 }
 
 
-export namespace DataAwsEc2TransitGatewayAttachment {
+export namespace DataTfAttachment {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#name DataAwsEc2TransitGatewayAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#name DataTfAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#values DataAwsEc2TransitGatewayAttachment#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_attachment#values DataTfAttachment#values}
   */
   readonly values: string[];
 }

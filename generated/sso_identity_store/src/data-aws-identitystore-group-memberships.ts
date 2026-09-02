@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIdentitystoreGroupMembershipsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfGroupMembershipsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#group_id DataAwsIdentitystoreGroupMemberships#group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#group_id DataTfGroupMemberships#group_id}
   */
   readonly groupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#identity_store_id DataAwsIdentitystoreGroupMemberships#identity_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#identity_store_id DataTfGroupMemberships#identity_store_id}
   */
   readonly identityStoreId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#region DataAwsIdentitystoreGroupMemberships#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#region DataTfGroupMemberships#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface DataAwsIdentitystoreGroupMembershipsConfig extends cdktn.Terraf
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships aws_identitystore_group_memberships}
 */
-export class DataAwsIdentitystoreGroupMemberships extends cdktn.TerraformDataSource {
+export class DataTfGroupMemberships extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataAwsIdentitystoreGroupMemberships extends cdktn.TerraformDataSou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIdentitystoreGroupMemberships resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfGroupMemberships resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIdentitystoreGroupMemberships to import
-  * @param importFromId The id of the existing DataAwsIdentitystoreGroupMemberships that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIdentitystoreGroupMemberships to import is found
+  * @param importToId The construct id used in the generated config for the DataTfGroupMemberships to import
+  * @param importFromId The id of the existing DataTfGroupMemberships that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group_memberships#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfGroupMemberships to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_identitystore_group_memberships", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataAwsIdentitystoreGroupMemberships extends cdktn.TerraformDataSou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIdentitystoreGroupMembershipsConfig
+  * @param options DataTfGroupMembershipsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIdentitystoreGroupMembershipsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfGroupMembershipsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_identitystore_group_memberships',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class DataAwsIdentitystoreGroupMemberships extends cdktn.TerraformDataSou
   }
 
   // group_memberships - computed: true, optional: false, required: false
-  private _groupMemberships = new DataAwsIdentitystoreGroupMemberships.GroupMembershipsPropertyList(this, "group_memberships", false);
+  private _groupMemberships = new DataTfGroupMemberships.GroupMembershipsPropertyList(this, "group_memberships", false);
   public get groupMemberships() {
     return this._groupMemberships;
   }
@@ -169,7 +169,7 @@ export class DataAwsIdentitystoreGroupMemberships extends cdktn.TerraformDataSou
   }
 }
 
-export function dataAwsIdentitystoreGroupMembershipsMemberIdPropertyToTerraform(struct?: DataAwsIdentitystoreGroupMemberships.MemberIdProperty): any {
+export function dataTfGroupMembershipsMemberIdPropertyToTerraform(struct?: DataTfGroupMemberships.MemberIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -179,7 +179,7 @@ export function dataAwsIdentitystoreGroupMembershipsMemberIdPropertyToTerraform(
 }
 
 
-export function dataAwsIdentitystoreGroupMembershipsMemberIdPropertyToHclTerraform(struct?: DataAwsIdentitystoreGroupMemberships.MemberIdProperty): any {
+export function dataTfGroupMembershipsMemberIdPropertyToHclTerraform(struct?: DataTfGroupMemberships.MemberIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,7 +190,7 @@ export function dataAwsIdentitystoreGroupMembershipsMemberIdPropertyToHclTerrafo
 }
 
 
-export function dataAwsIdentitystoreGroupMembershipsGroupMembershipsPropertyToTerraform(struct?: DataAwsIdentitystoreGroupMemberships.GroupMembershipsProperty): any {
+export function dataTfGroupMembershipsGroupMembershipsPropertyToTerraform(struct?: DataTfGroupMemberships.GroupMembershipsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -200,7 +200,7 @@ export function dataAwsIdentitystoreGroupMembershipsGroupMembershipsPropertyToTe
 }
 
 
-export function dataAwsIdentitystoreGroupMembershipsGroupMembershipsPropertyToHclTerraform(struct?: DataAwsIdentitystoreGroupMemberships.GroupMembershipsProperty): any {
+export function dataTfGroupMembershipsGroupMembershipsPropertyToHclTerraform(struct?: DataTfGroupMemberships.GroupMembershipsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function dataAwsIdentitystoreGroupMembershipsGroupMembershipsPropertyToHc
 }
 
 
-export namespace DataAwsIdentitystoreGroupMemberships {
+export namespace DataTfGroupMemberships {
 export interface MemberIdProperty {
 }
 export class MemberIdPropertyOutputReference extends cdktn.ComplexObject {

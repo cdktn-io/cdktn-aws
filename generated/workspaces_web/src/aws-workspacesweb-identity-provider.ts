@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebIdentityProviderConfig extends cdktn.TerraformMetaArguments {
+export interface TfIdentityProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#identity_provider_details AwsWorkspaceswebIdentityProvider#identity_provider_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#identity_provider_details TfIdentityProvider#identity_provider_details}
   */
   readonly identityProviderDetails: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#identity_provider_name AwsWorkspaceswebIdentityProvider#identity_provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#identity_provider_name TfIdentityProvider#identity_provider_name}
   */
   readonly identityProviderName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#identity_provider_type AwsWorkspaceswebIdentityProvider#identity_provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#identity_provider_type TfIdentityProvider#identity_provider_type}
   */
   readonly identityProviderType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#portal_arn AwsWorkspaceswebIdentityProvider#portal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#portal_arn TfIdentityProvider#portal_arn}
   */
   readonly portalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#region AwsWorkspaceswebIdentityProvider#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#region TfIdentityProvider#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#tags AwsWorkspaceswebIdentityProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#tags TfIdentityProvider#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -37,7 +37,7 @@ export interface AwsWorkspaceswebIdentityProviderConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider aws_workspacesweb_identity_provider}
 */
-export class AwsWorkspaceswebIdentityProvider extends cdktn.TerraformResource {
+export class TfIdentityProvider extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsWorkspaceswebIdentityProvider extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebIdentityProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIdentityProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebIdentityProvider to import
-  * @param importFromId The id of the existing AwsWorkspaceswebIdentityProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebIdentityProvider to import is found
+  * @param importToId The construct id used in the generated config for the TfIdentityProvider to import
+  * @param importFromId The id of the existing TfIdentityProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_identity_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIdentityProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_identity_provider", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsWorkspaceswebIdentityProvider extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebIdentityProviderConfig
+  * @param options TfIdentityProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebIdentityProviderConfig) {
+  public constructor(scope: Construct, id: string, config: TfIdentityProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_identity_provider',
       terraformGeneratorMetadata: {

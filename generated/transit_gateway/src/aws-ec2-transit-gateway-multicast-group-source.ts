@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayMulticastGroupSourceConfig extends cdktn.TerraformMetaArguments {
+export interface TfMulticastGroupSourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#group_ip_address AwsEc2TransitGatewayMulticastGroupSource#group_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#group_ip_address TfMulticastGroupSource#group_ip_address}
   */
   readonly groupIpAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#id AwsEc2TransitGatewayMulticastGroupSource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#id TfMulticastGroupSource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#network_interface_id AwsEc2TransitGatewayMulticastGroupSource#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#network_interface_id TfMulticastGroupSource#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#region AwsEc2TransitGatewayMulticastGroupSource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#region TfMulticastGroupSource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#transit_gateway_multicast_domain_id AwsEc2TransitGatewayMulticastGroupSource#transit_gateway_multicast_domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#transit_gateway_multicast_domain_id TfMulticastGroupSource#transit_gateway_multicast_domain_id}
   */
   readonly transitGatewayMulticastDomainId: string;
 }
@@ -36,7 +36,7 @@ export interface AwsEc2TransitGatewayMulticastGroupSourceConfig extends cdktn.Te
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source aws_ec2_transit_gateway_multicast_group_source}
 */
-export class AwsEc2TransitGatewayMulticastGroupSource extends cdktn.TerraformResource {
+export class TfMulticastGroupSource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsEc2TransitGatewayMulticastGroupSource extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayMulticastGroupSource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMulticastGroupSource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayMulticastGroupSource to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayMulticastGroupSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayMulticastGroupSource to import is found
+  * @param importToId The construct id used in the generated config for the TfMulticastGroupSource to import
+  * @param importFromId The id of the existing TfMulticastGroupSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_group_source#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMulticastGroupSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_multicast_group_source", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsEc2TransitGatewayMulticastGroupSource extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayMulticastGroupSourceConfig
+  * @param options TfMulticastGroupSourceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayMulticastGroupSourceConfig) {
+  public constructor(scope: Construct, id: string, config: TfMulticastGroupSourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_multicast_group_source',
       terraformGeneratorMetadata: {

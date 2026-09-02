@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotThingGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfThingGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#id AwsIotThingGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#id TfThingGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#name AwsIotThingGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#name TfThingGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#parent_group_name AwsIotThingGroup#parent_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#parent_group_name TfThingGroup#parent_group_name}
   */
   readonly parentGroupName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#region AwsIotThingGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#region TfThingGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#tags AwsIotThingGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#tags TfThingGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#tags_all AwsIotThingGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#tags_all TfThingGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#properties AwsIotThingGroup#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#properties TfThingGroup#properties}
   */
-  readonly properties?: AwsIotThingGroup.PropertiesProperty;
+  readonly properties?: TfThingGroup.PropertiesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group aws_iot_thing_group}
 */
-export class AwsIotThingGroup extends cdktn.TerraformResource {
+export class TfThingGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsIotThingGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotThingGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfThingGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotThingGroup to import
-  * @param importFromId The id of the existing AwsIotThingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotThingGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfThingGroup to import
+  * @param importFromId The id of the existing TfThingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfThingGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_thing_group", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsIotThingGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotThingGroupConfig
+  * @param options TfThingGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotThingGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfThingGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_thing_group',
       terraformGeneratorMetadata: {
@@ -129,7 +129,7 @@ export class AwsIotThingGroup extends cdktn.TerraformResource {
   }
 
   // metadata - computed: true, optional: false, required: false
-  private _metadata = new AwsIotThingGroup.MetadataPropertyList(this, "metadata", false);
+  private _metadata = new TfThingGroup.MetadataPropertyList(this, "metadata", false);
   public get metadata() {
     return this._metadata;
   }
@@ -217,11 +217,11 @@ export class AwsIotThingGroup extends cdktn.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties = new AwsIotThingGroup.PropertiesPropertyOutputReference(this, "properties");
+  private _properties = new TfThingGroup.PropertiesPropertyOutputReference(this, "properties");
   public get properties() {
     return this._properties;
   }
-  public putProperties(value: AwsIotThingGroup.PropertiesProperty) {
+  public putProperties(value: TfThingGroup.PropertiesProperty) {
     this._properties.internalValue = value;
   }
   public resetProperties() {
@@ -244,7 +244,7 @@ export class AwsIotThingGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      properties: awsIotThingGroupPropertiesPropertyToTerraform(this._properties.internalValue),
+      properties: tfThingGroupPropertiesPropertyToTerraform(this._properties.internalValue),
     };
   }
 
@@ -287,10 +287,10 @@ export class AwsIotThingGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       properties: {
-        value: awsIotThingGroupPropertiesPropertyToHclTerraform(this._properties.internalValue),
+        value: tfThingGroupPropertiesPropertyToHclTerraform(this._properties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIotThingGroup.PropertiesPropertyList",
+        storageClassType: "TfThingGroup.PropertiesPropertyList",
       },
     };
 
@@ -299,7 +299,7 @@ export class AwsIotThingGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsIotThingGroupRootToParentGroupsPropertyToTerraform(struct?: AwsIotThingGroup.RootToParentGroupsProperty): any {
+export function tfThingGroupRootToParentGroupsPropertyToTerraform(struct?: TfThingGroup.RootToParentGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function awsIotThingGroupRootToParentGroupsPropertyToTerraform(struct?: A
 }
 
 
-export function awsIotThingGroupRootToParentGroupsPropertyToHclTerraform(struct?: AwsIotThingGroup.RootToParentGroupsProperty): any {
+export function tfThingGroupRootToParentGroupsPropertyToHclTerraform(struct?: TfThingGroup.RootToParentGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function awsIotThingGroupRootToParentGroupsPropertyToHclTerraform(struct?
 }
 
 
-export function awsIotThingGroupMetadataPropertyToTerraform(struct?: AwsIotThingGroup.MetadataProperty): any {
+export function tfThingGroupMetadataPropertyToTerraform(struct?: TfThingGroup.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function awsIotThingGroupMetadataPropertyToTerraform(struct?: AwsIotThing
 }
 
 
-export function awsIotThingGroupMetadataPropertyToHclTerraform(struct?: AwsIotThingGroup.MetadataProperty): any {
+export function tfThingGroupMetadataPropertyToHclTerraform(struct?: TfThingGroup.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function awsIotThingGroupMetadataPropertyToHclTerraform(struct?: AwsIotTh
 }
 
 
-export function awsIotThingGroupAttributePayloadPropertyToTerraform(struct?: AwsIotThingGroup.AttributePayloadPropertyOutputReference | AwsIotThingGroup.AttributePayloadProperty): any {
+export function tfThingGroupAttributePayloadPropertyToTerraform(struct?: TfThingGroup.AttributePayloadPropertyOutputReference | TfThingGroup.AttributePayloadProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function awsIotThingGroupAttributePayloadPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsIotThingGroupAttributePayloadPropertyToHclTerraform(struct?: AwsIotThingGroup.AttributePayloadPropertyOutputReference | AwsIotThingGroup.AttributePayloadProperty): any {
+export function tfThingGroupAttributePayloadPropertyToHclTerraform(struct?: TfThingGroup.AttributePayloadPropertyOutputReference | TfThingGroup.AttributePayloadProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,19 +371,19 @@ export function awsIotThingGroupAttributePayloadPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsIotThingGroupPropertiesPropertyToTerraform(struct?: AwsIotThingGroup.PropertiesPropertyOutputReference | AwsIotThingGroup.PropertiesProperty): any {
+export function tfThingGroupPropertiesPropertyToTerraform(struct?: TfThingGroup.PropertiesPropertyOutputReference | TfThingGroup.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     description: cdktn.stringToTerraform(struct!.description),
-    attribute_payload: awsIotThingGroupAttributePayloadPropertyToTerraform(struct!.attributePayload),
+    attribute_payload: tfThingGroupAttributePayloadPropertyToTerraform(struct!.attributePayload),
   }
 }
 
 
-export function awsIotThingGroupPropertiesPropertyToHclTerraform(struct?: AwsIotThingGroup.PropertiesPropertyOutputReference | AwsIotThingGroup.PropertiesProperty): any {
+export function tfThingGroupPropertiesPropertyToHclTerraform(struct?: TfThingGroup.PropertiesPropertyOutputReference | TfThingGroup.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function awsIotThingGroupPropertiesPropertyToHclTerraform(struct?: AwsIot
       storageClassType: "string",
     },
     attribute_payload: {
-      value: awsIotThingGroupAttributePayloadPropertyToHclTerraform(struct!.attributePayload),
+      value: tfThingGroupAttributePayloadPropertyToHclTerraform(struct!.attributePayload),
       isBlock: true,
       type: "list",
       storageClassType: "AttributePayloadPropertyList",
@@ -408,7 +408,7 @@ export function awsIotThingGroupPropertiesPropertyToHclTerraform(struct?: AwsIot
 }
 
 
-export namespace AwsIotThingGroup {
+export namespace TfThingGroup {
 export interface RootToParentGroupsProperty {
 }
 export class RootToParentGroupsPropertyOutputReference extends cdktn.ComplexObject {
@@ -535,7 +535,7 @@ export class MetadataPropertyList extends cdktn.ComplexList {
 }
 export interface AttributePayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#attributes AwsIotThingGroup#attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#attributes TfThingGroup#attributes}
   */
   readonly attributes?: { [key: string]: string };
 }
@@ -589,13 +589,13 @@ export class AttributePayloadPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface PropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#description AwsIotThingGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#description TfThingGroup#description}
   */
   readonly description?: string;
   /**
   * attribute_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#attribute_payload AwsIotThingGroup#attribute_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_group#attribute_payload TfThingGroup#attribute_payload}
   */
   readonly attributePayload?: AttributePayloadProperty;
 }

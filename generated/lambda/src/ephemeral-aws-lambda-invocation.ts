@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface EphemeralAwsLambdaInvocationConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface EphemeralTfInvocationConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#client_context EphemeralAwsLambdaInvocation#client_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#client_context EphemeralTfInvocation#client_context}
   */
   readonly clientContext?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#function_name EphemeralAwsLambdaInvocation#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#function_name EphemeralTfInvocation#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#log_type EphemeralAwsLambdaInvocation#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#log_type EphemeralTfInvocation#log_type}
   */
   readonly logType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#payload EphemeralAwsLambdaInvocation#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#payload EphemeralTfInvocation#payload}
   */
   readonly payload: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#qualifier EphemeralAwsLambdaInvocation#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#qualifier EphemeralTfInvocation#qualifier}
   */
   readonly qualifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#region EphemeralAwsLambdaInvocation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#region EphemeralTfInvocation#region}
   */
   readonly region?: string;
 }
@@ -37,7 +37,7 @@ export interface EphemeralAwsLambdaInvocationConfig extends cdktn.TerraformEphem
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation aws_lambda_invocation}
 */
-export class EphemeralAwsLambdaInvocation extends cdktn.TerraformEphemeralResource {
+export class EphemeralTfInvocation extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,9 +53,9 @@ export class EphemeralAwsLambdaInvocation extends cdktn.TerraformEphemeralResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options EphemeralAwsLambdaInvocationConfig
+  * @param options EphemeralTfInvocationConfig
   */
-  public constructor(scope: Construct, id: string, config: EphemeralAwsLambdaInvocationConfig) {
+  public constructor(scope: Construct, id: string, config: EphemeralTfInvocationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_invocation',
       terraformGeneratorMetadata: {

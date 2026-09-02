@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesv2EmailIdentityConfig extends cdktn.TerraformMetaArguments {
+export interface TfEmailIdentityConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#configuration_set_name AwsSesv2EmailIdentity#configuration_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#configuration_set_name TfEmailIdentity#configuration_set_name}
   */
   readonly configurationSetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#email_identity AwsSesv2EmailIdentity#email_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#email_identity TfEmailIdentity#email_identity}
   */
   readonly emailIdentity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#id AwsSesv2EmailIdentity#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#id TfEmailIdentity#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,29 +24,29 @@ export interface AwsSesv2EmailIdentityConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#region AwsSesv2EmailIdentity#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#region TfEmailIdentity#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#tags AwsSesv2EmailIdentity#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#tags TfEmailIdentity#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#tags_all AwsSesv2EmailIdentity#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#tags_all TfEmailIdentity#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * dkim_signing_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#dkim_signing_attributes AwsSesv2EmailIdentity#dkim_signing_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#dkim_signing_attributes TfEmailIdentity#dkim_signing_attributes}
   */
-  readonly dkimSigningAttributes?: AwsSesv2EmailIdentity.DkimSigningAttributesProperty;
+  readonly dkimSigningAttributes?: TfEmailIdentity.DkimSigningAttributesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity aws_sesv2_email_identity}
 */
-export class AwsSesv2EmailIdentity extends cdktn.TerraformResource {
+export class TfEmailIdentity extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsSesv2EmailIdentity extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesv2EmailIdentity resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEmailIdentity resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesv2EmailIdentity to import
-  * @param importFromId The id of the existing AwsSesv2EmailIdentity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesv2EmailIdentity to import is found
+  * @param importToId The construct id used in the generated config for the TfEmailIdentity to import
+  * @param importFromId The id of the existing TfEmailIdentity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEmailIdentity to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_email_identity", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsSesv2EmailIdentity extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesv2EmailIdentityConfig
+  * @param options TfEmailIdentityConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesv2EmailIdentityConfig) {
+  public constructor(scope: Construct, id: string, config: TfEmailIdentityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_email_identity',
       terraformGeneratorMetadata: {
@@ -221,11 +221,11 @@ export class AwsSesv2EmailIdentity extends cdktn.TerraformResource {
   }
 
   // dkim_signing_attributes - computed: false, optional: true, required: false
-  private _dkimSigningAttributes = new AwsSesv2EmailIdentity.DkimSigningAttributesPropertyOutputReference(this, "dkim_signing_attributes");
+  private _dkimSigningAttributes = new TfEmailIdentity.DkimSigningAttributesPropertyOutputReference(this, "dkim_signing_attributes");
   public get dkimSigningAttributes() {
     return this._dkimSigningAttributes;
   }
-  public putDkimSigningAttributes(value: AwsSesv2EmailIdentity.DkimSigningAttributesProperty) {
+  public putDkimSigningAttributes(value: TfEmailIdentity.DkimSigningAttributesProperty) {
     this._dkimSigningAttributes.internalValue = value;
   }
   public resetDkimSigningAttributes() {
@@ -248,7 +248,7 @@ export class AwsSesv2EmailIdentity extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      dkim_signing_attributes: awsSesv2EmailIdentityDkimSigningAttributesPropertyToTerraform(this._dkimSigningAttributes.internalValue),
+      dkim_signing_attributes: tfEmailIdentityDkimSigningAttributesPropertyToTerraform(this._dkimSigningAttributes.internalValue),
     };
   }
 
@@ -291,10 +291,10 @@ export class AwsSesv2EmailIdentity extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       dkim_signing_attributes: {
-        value: awsSesv2EmailIdentityDkimSigningAttributesPropertyToHclTerraform(this._dkimSigningAttributes.internalValue),
+        value: tfEmailIdentityDkimSigningAttributesPropertyToHclTerraform(this._dkimSigningAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSesv2EmailIdentity.DkimSigningAttributesPropertyList",
+        storageClassType: "TfEmailIdentity.DkimSigningAttributesPropertyList",
       },
     };
 
@@ -303,7 +303,7 @@ export class AwsSesv2EmailIdentity extends cdktn.TerraformResource {
   }
 }
 
-export function awsSesv2EmailIdentityDkimSigningAttributesPropertyToTerraform(struct?: AwsSesv2EmailIdentity.DkimSigningAttributesPropertyOutputReference | AwsSesv2EmailIdentity.DkimSigningAttributesProperty): any {
+export function tfEmailIdentityDkimSigningAttributesPropertyToTerraform(struct?: TfEmailIdentity.DkimSigningAttributesPropertyOutputReference | TfEmailIdentity.DkimSigningAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function awsSesv2EmailIdentityDkimSigningAttributesPropertyToTerraform(st
 }
 
 
-export function awsSesv2EmailIdentityDkimSigningAttributesPropertyToHclTerraform(struct?: AwsSesv2EmailIdentity.DkimSigningAttributesPropertyOutputReference | AwsSesv2EmailIdentity.DkimSigningAttributesProperty): any {
+export function tfEmailIdentityDkimSigningAttributesPropertyToHclTerraform(struct?: TfEmailIdentity.DkimSigningAttributesPropertyOutputReference | TfEmailIdentity.DkimSigningAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,18 +347,18 @@ export function awsSesv2EmailIdentityDkimSigningAttributesPropertyToHclTerraform
 }
 
 
-export namespace AwsSesv2EmailIdentity {
+export namespace TfEmailIdentity {
 export interface DkimSigningAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#domain_signing_private_key AwsSesv2EmailIdentity#domain_signing_private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#domain_signing_private_key TfEmailIdentity#domain_signing_private_key}
   */
   readonly domainSigningPrivateKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#domain_signing_selector AwsSesv2EmailIdentity#domain_signing_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#domain_signing_selector TfEmailIdentity#domain_signing_selector}
   */
   readonly domainSigningSelector?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#next_signing_key_length AwsSesv2EmailIdentity#next_signing_key_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity#next_signing_key_length TfEmailIdentity#next_signing_key_length}
   */
   readonly nextSigningKeyLength?: string;
 }

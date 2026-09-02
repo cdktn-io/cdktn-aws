@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCleanroomsMembershipConfig extends cdktn.TerraformMetaArguments {
+export interface TfMembershipConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#collaboration_id AwsCleanroomsMembership#collaboration_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#collaboration_id TfMembership#collaboration_id}
   */
   readonly collaborationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#query_log_status AwsCleanroomsMembership#query_log_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#query_log_status TfMembership#query_log_status}
   */
   readonly queryLogStatus: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#region AwsCleanroomsMembership#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#region TfMembership#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#tags AwsCleanroomsMembership#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#tags TfMembership#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * default_result_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#default_result_configuration AwsCleanroomsMembership#default_result_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#default_result_configuration TfMembership#default_result_configuration}
   */
-  readonly defaultResultConfiguration?: AwsCleanroomsMembership.DefaultResultConfigurationProperty[] | cdktn.IResolvable;
+  readonly defaultResultConfiguration?: TfMembership.DefaultResultConfigurationProperty[] | cdktn.IResolvable;
   /**
   * payment_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#payment_configuration AwsCleanroomsMembership#payment_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#payment_configuration TfMembership#payment_configuration}
   */
-  readonly paymentConfiguration?: AwsCleanroomsMembership.PaymentConfigurationProperty[] | cdktn.IResolvable;
+  readonly paymentConfiguration?: TfMembership.PaymentConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership aws_cleanrooms_membership}
 */
-export class AwsCleanroomsMembership extends cdktn.TerraformResource {
+export class TfMembership extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class AwsCleanroomsMembership extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCleanroomsMembership resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMembership resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCleanroomsMembership to import
-  * @param importFromId The id of the existing AwsCleanroomsMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCleanroomsMembership to import is found
+  * @param importToId The construct id used in the generated config for the TfMembership to import
+  * @param importFromId The id of the existing TfMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMembership to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cleanrooms_membership", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class AwsCleanroomsMembership extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCleanroomsMembershipConfig
+  * @param options TfMembershipConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCleanroomsMembershipConfig) {
+  public constructor(scope: Construct, id: string, config: TfMembershipConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cleanrooms_membership',
       terraformGeneratorMetadata: {
@@ -216,11 +216,11 @@ export class AwsCleanroomsMembership extends cdktn.TerraformResource {
   }
 
   // default_result_configuration - computed: false, optional: true, required: false
-  private _defaultResultConfiguration = new AwsCleanroomsMembership.DefaultResultConfigurationPropertyList(this, "default_result_configuration", false);
+  private _defaultResultConfiguration = new TfMembership.DefaultResultConfigurationPropertyList(this, "default_result_configuration", false);
   public get defaultResultConfiguration() {
     return this._defaultResultConfiguration;
   }
-  public putDefaultResultConfiguration(value: AwsCleanroomsMembership.DefaultResultConfigurationProperty[] | cdktn.IResolvable) {
+  public putDefaultResultConfiguration(value: TfMembership.DefaultResultConfigurationProperty[] | cdktn.IResolvable) {
     this._defaultResultConfiguration.internalValue = value;
   }
   public resetDefaultResultConfiguration() {
@@ -232,11 +232,11 @@ export class AwsCleanroomsMembership extends cdktn.TerraformResource {
   }
 
   // payment_configuration - computed: false, optional: true, required: false
-  private _paymentConfiguration = new AwsCleanroomsMembership.PaymentConfigurationPropertyList(this, "payment_configuration", false);
+  private _paymentConfiguration = new TfMembership.PaymentConfigurationPropertyList(this, "payment_configuration", false);
   public get paymentConfiguration() {
     return this._paymentConfiguration;
   }
-  public putPaymentConfiguration(value: AwsCleanroomsMembership.PaymentConfigurationProperty[] | cdktn.IResolvable) {
+  public putPaymentConfiguration(value: TfMembership.PaymentConfigurationProperty[] | cdktn.IResolvable) {
     this._paymentConfiguration.internalValue = value;
   }
   public resetPaymentConfiguration() {
@@ -257,8 +257,8 @@ export class AwsCleanroomsMembership extends cdktn.TerraformResource {
       query_log_status: cdktn.stringToTerraform(this._queryLogStatus),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      default_result_configuration: cdktn.listMapper(awsCleanroomsMembershipDefaultResultConfigurationPropertyToTerraform, true)(this._defaultResultConfiguration.internalValue),
-      payment_configuration: cdktn.listMapper(awsCleanroomsMembershipPaymentConfigurationPropertyToTerraform, true)(this._paymentConfiguration.internalValue),
+      default_result_configuration: cdktn.listMapper(tfMembershipDefaultResultConfigurationPropertyToTerraform, true)(this._defaultResultConfiguration.internalValue),
+      payment_configuration: cdktn.listMapper(tfMembershipPaymentConfigurationPropertyToTerraform, true)(this._paymentConfiguration.internalValue),
     };
   }
 
@@ -289,16 +289,16 @@ export class AwsCleanroomsMembership extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       default_result_configuration: {
-        value: cdktn.listMapperHcl(awsCleanroomsMembershipDefaultResultConfigurationPropertyToHclTerraform, true)(this._defaultResultConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfMembershipDefaultResultConfigurationPropertyToHclTerraform, true)(this._defaultResultConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCleanroomsMembership.DefaultResultConfigurationPropertyList",
+        storageClassType: "TfMembership.DefaultResultConfigurationPropertyList",
       },
       payment_configuration: {
-        value: cdktn.listMapperHcl(awsCleanroomsMembershipPaymentConfigurationPropertyToHclTerraform, true)(this._paymentConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfMembershipPaymentConfigurationPropertyToHclTerraform, true)(this._paymentConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCleanroomsMembership.PaymentConfigurationPropertyList",
+        storageClassType: "TfMembership.PaymentConfigurationPropertyList",
       },
     };
 
@@ -307,7 +307,7 @@ export class AwsCleanroomsMembership extends cdktn.TerraformResource {
   }
 }
 
-export function awsCleanroomsMembershipS3PropertyToTerraform(struct?: AwsCleanroomsMembership.S3Property | cdktn.IResolvable): any {
+export function tfMembershipS3PropertyToTerraform(struct?: TfMembership.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function awsCleanroomsMembershipS3PropertyToTerraform(struct?: AwsCleanro
 }
 
 
-export function awsCleanroomsMembershipS3PropertyToHclTerraform(struct?: AwsCleanroomsMembership.S3Property | cdktn.IResolvable): any {
+export function tfMembershipS3PropertyToHclTerraform(struct?: TfMembership.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,25 +351,25 @@ export function awsCleanroomsMembershipS3PropertyToHclTerraform(struct?: AwsClea
 }
 
 
-export function awsCleanroomsMembershipOutputConfigurationPropertyToTerraform(struct?: AwsCleanroomsMembership.OutputConfigurationProperty | cdktn.IResolvable): any {
+export function tfMembershipOutputConfigurationPropertyToTerraform(struct?: TfMembership.OutputConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: cdktn.listMapper(awsCleanroomsMembershipS3PropertyToTerraform, true)(struct!.s3),
+    s3: cdktn.listMapper(tfMembershipS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsCleanroomsMembershipOutputConfigurationPropertyToHclTerraform(struct?: AwsCleanroomsMembership.OutputConfigurationProperty | cdktn.IResolvable): any {
+export function tfMembershipOutputConfigurationPropertyToHclTerraform(struct?: TfMembership.OutputConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: cdktn.listMapperHcl(awsCleanroomsMembershipS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfMembershipS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -381,19 +381,19 @@ export function awsCleanroomsMembershipOutputConfigurationPropertyToHclTerraform
 }
 
 
-export function awsCleanroomsMembershipDefaultResultConfigurationPropertyToTerraform(struct?: AwsCleanroomsMembership.DefaultResultConfigurationProperty | cdktn.IResolvable): any {
+export function tfMembershipDefaultResultConfigurationPropertyToTerraform(struct?: TfMembership.DefaultResultConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    output_configuration: cdktn.listMapper(awsCleanroomsMembershipOutputConfigurationPropertyToTerraform, true)(struct!.outputConfiguration),
+    output_configuration: cdktn.listMapper(tfMembershipOutputConfigurationPropertyToTerraform, true)(struct!.outputConfiguration),
   }
 }
 
 
-export function awsCleanroomsMembershipDefaultResultConfigurationPropertyToHclTerraform(struct?: AwsCleanroomsMembership.DefaultResultConfigurationProperty | cdktn.IResolvable): any {
+export function tfMembershipDefaultResultConfigurationPropertyToHclTerraform(struct?: TfMembership.DefaultResultConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function awsCleanroomsMembershipDefaultResultConfigurationPropertyToHclTe
       storageClassType: "string",
     },
     output_configuration: {
-      value: cdktn.listMapperHcl(awsCleanroomsMembershipOutputConfigurationPropertyToHclTerraform, true)(struct!.outputConfiguration),
+      value: cdktn.listMapperHcl(tfMembershipOutputConfigurationPropertyToHclTerraform, true)(struct!.outputConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OutputConfigurationPropertyList",
@@ -418,7 +418,7 @@ export function awsCleanroomsMembershipDefaultResultConfigurationPropertyToHclTe
 }
 
 
-export function awsCleanroomsMembershipQueryComputePropertyToTerraform(struct?: AwsCleanroomsMembership.QueryComputeProperty | cdktn.IResolvable): any {
+export function tfMembershipQueryComputePropertyToTerraform(struct?: TfMembership.QueryComputeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsCleanroomsMembershipQueryComputePropertyToTerraform(struct?: 
 }
 
 
-export function awsCleanroomsMembershipQueryComputePropertyToHclTerraform(struct?: AwsCleanroomsMembership.QueryComputeProperty | cdktn.IResolvable): any {
+export function tfMembershipQueryComputePropertyToHclTerraform(struct?: TfMembership.QueryComputeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,25 +448,25 @@ export function awsCleanroomsMembershipQueryComputePropertyToHclTerraform(struct
 }
 
 
-export function awsCleanroomsMembershipPaymentConfigurationPropertyToTerraform(struct?: AwsCleanroomsMembership.PaymentConfigurationProperty | cdktn.IResolvable): any {
+export function tfMembershipPaymentConfigurationPropertyToTerraform(struct?: TfMembership.PaymentConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    query_compute: cdktn.listMapper(awsCleanroomsMembershipQueryComputePropertyToTerraform, true)(struct!.queryCompute),
+    query_compute: cdktn.listMapper(tfMembershipQueryComputePropertyToTerraform, true)(struct!.queryCompute),
   }
 }
 
 
-export function awsCleanroomsMembershipPaymentConfigurationPropertyToHclTerraform(struct?: AwsCleanroomsMembership.PaymentConfigurationProperty | cdktn.IResolvable): any {
+export function tfMembershipPaymentConfigurationPropertyToHclTerraform(struct?: TfMembership.PaymentConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     query_compute: {
-      value: cdktn.listMapperHcl(awsCleanroomsMembershipQueryComputePropertyToHclTerraform, true)(struct!.queryCompute),
+      value: cdktn.listMapperHcl(tfMembershipQueryComputePropertyToHclTerraform, true)(struct!.queryCompute),
       isBlock: true,
       type: "list",
       storageClassType: "QueryComputePropertyList",
@@ -478,18 +478,18 @@ export function awsCleanroomsMembershipPaymentConfigurationPropertyToHclTerrafor
 }
 
 
-export namespace AwsCleanroomsMembership {
+export namespace TfMembership {
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#bucket AwsCleanroomsMembership#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#bucket TfMembership#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#key_prefix AwsCleanroomsMembership#key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#key_prefix TfMembership#key_prefix}
   */
   readonly keyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#result_format AwsCleanroomsMembership#result_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#result_format TfMembership#result_format}
   */
   readonly resultFormat: string;
 }
@@ -615,7 +615,7 @@ export interface OutputConfigurationProperty {
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#s3 AwsCleanroomsMembership#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#s3 TfMembership#s3}
   */
   readonly s3?: S3Property[] | cdktn.IResolvable;
 }
@@ -701,13 +701,13 @@ export class OutputConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DefaultResultConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#role_arn AwsCleanroomsMembership#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#role_arn TfMembership#role_arn}
   */
   readonly roleArn?: string;
   /**
   * output_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#output_configuration AwsCleanroomsMembership#output_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#output_configuration TfMembership#output_configuration}
   */
   readonly outputConfiguration?: OutputConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -815,7 +815,7 @@ export class DefaultResultConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface QueryComputeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#is_responsible AwsCleanroomsMembership#is_responsible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#is_responsible TfMembership#is_responsible}
   */
   readonly isResponsible: boolean | cdktn.IResolvable;
 }
@@ -900,7 +900,7 @@ export interface PaymentConfigurationProperty {
   /**
   * query_compute block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#query_compute AwsCleanroomsMembership#query_compute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_membership#query_compute TfMembership#query_compute}
   */
   readonly queryCompute?: QueryComputeProperty[] | cdktn.IResolvable;
 }

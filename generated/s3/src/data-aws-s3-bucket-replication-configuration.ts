@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsS3BucketReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBucketReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_replication_configuration#bucket DataAwsS3BucketReplicationConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_replication_configuration#bucket DataTfBucketReplicationConfiguration#bucket}
   */
   readonly bucket: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_replication_configuration#region DataAwsS3BucketReplicationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_replication_configuration#region DataTfBucketReplicationConfiguration#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsS3BucketReplicationConfigurationConfig extends cdktn.Ter
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_replication_configuration aws_s3_bucket_replication_configuration}
 */
-export class DataAwsS3BucketReplicationConfiguration extends cdktn.TerraformDataSource {
+export class DataTfBucketReplicationConfiguration extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsS3BucketReplicationConfiguration extends cdktn.TerraformData
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsS3BucketReplicationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBucketReplicationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsS3BucketReplicationConfiguration to import
-  * @param importFromId The id of the existing DataAwsS3BucketReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_replication_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsS3BucketReplicationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBucketReplicationConfiguration to import
+  * @param importFromId The id of the existing DataTfBucketReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_replication_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBucketReplicationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_replication_configuration", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsS3BucketReplicationConfiguration extends cdktn.TerraformData
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsS3BucketReplicationConfigurationConfig
+  * @param options DataTfBucketReplicationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsS3BucketReplicationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfBucketReplicationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_replication_configuration',
       terraformGeneratorMetadata: {
@@ -112,7 +112,7 @@ export class DataAwsS3BucketReplicationConfiguration extends cdktn.TerraformData
   }
 
   // rule - computed: true, optional: false, required: false
-  private _rule = new DataAwsS3BucketReplicationConfiguration.RulePropertyList(this, "rule", false);
+  private _rule = new DataTfBucketReplicationConfiguration.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
@@ -149,7 +149,7 @@ export class DataAwsS3BucketReplicationConfiguration extends cdktn.TerraformData
   }
 }
 
-export function dataAwsS3BucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
+export function dataTfBucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function dataAwsS3BucketReplicationConfigurationDeleteMarkerReplicationPr
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
+export function dataTfBucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function dataAwsS3BucketReplicationConfigurationDeleteMarkerReplicationPr
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.AccessControlTranslationProperty): any {
+export function dataTfBucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.AccessControlTranslationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -180,7 +180,7 @@ export function dataAwsS3BucketReplicationConfigurationAccessControlTranslationP
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.AccessControlTranslationProperty): any {
+export function dataTfBucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.AccessControlTranslationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function dataAwsS3BucketReplicationConfigurationAccessControlTranslationP
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.EncryptionConfigurationProperty): any {
+export function dataTfBucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -201,7 +201,7 @@ export function dataAwsS3BucketReplicationConfigurationEncryptionConfigurationPr
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.EncryptionConfigurationProperty): any {
+export function dataTfBucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,7 +212,7 @@ export function dataAwsS3BucketReplicationConfigurationEncryptionConfigurationPr
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationEventThresholdPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.EventThresholdProperty): any {
+export function dataTfBucketReplicationConfigurationEventThresholdPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.EventThresholdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -222,7 +222,7 @@ export function dataAwsS3BucketReplicationConfigurationEventThresholdPropertyToT
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.EventThresholdProperty): any {
+export function dataTfBucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.EventThresholdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataAwsS3BucketReplicationConfigurationEventThresholdPropertyToH
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationMetricsPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.MetricsProperty): any {
+export function dataTfBucketReplicationConfigurationMetricsPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.MetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function dataAwsS3BucketReplicationConfigurationMetricsPropertyToTerrafor
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationMetricsPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.MetricsProperty): any {
+export function dataTfBucketReplicationConfigurationMetricsPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.MetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function dataAwsS3BucketReplicationConfigurationMetricsPropertyToHclTerra
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationTimePropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.TimeProperty): any {
+export function dataTfBucketReplicationConfigurationTimePropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.TimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function dataAwsS3BucketReplicationConfigurationTimePropertyToTerraform(s
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationTimePropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.TimeProperty): any {
+export function dataTfBucketReplicationConfigurationTimePropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.TimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function dataAwsS3BucketReplicationConfigurationTimePropertyToHclTerrafor
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationReplicationTimePropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.ReplicationTimeProperty): any {
+export function dataTfBucketReplicationConfigurationReplicationTimePropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.ReplicationTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function dataAwsS3BucketReplicationConfigurationReplicationTimePropertyTo
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.ReplicationTimeProperty): any {
+export function dataTfBucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.ReplicationTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function dataAwsS3BucketReplicationConfigurationReplicationTimePropertyTo
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationDestinationPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.DestinationProperty): any {
+export function dataTfBucketReplicationConfigurationDestinationPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function dataAwsS3BucketReplicationConfigurationDestinationPropertyToTerr
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationDestinationPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.DestinationProperty): any {
+export function dataTfBucketReplicationConfigurationDestinationPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function dataAwsS3BucketReplicationConfigurationDestinationPropertyToHclT
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
+export function dataTfBucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function dataAwsS3BucketReplicationConfigurationExistingObjectReplication
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
+export function dataTfBucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataAwsS3BucketReplicationConfigurationExistingObjectReplication
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationRuleFilterAndTagPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.RuleFilterAndTagProperty): any {
+export function dataTfBucketReplicationConfigurationRuleFilterAndTagPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.RuleFilterAndTagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function dataAwsS3BucketReplicationConfigurationRuleFilterAndTagPropertyT
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationRuleFilterAndTagPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.RuleFilterAndTagProperty): any {
+export function dataTfBucketReplicationConfigurationRuleFilterAndTagPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.RuleFilterAndTagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function dataAwsS3BucketReplicationConfigurationRuleFilterAndTagPropertyT
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationAndPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.AndProperty): any {
+export function dataTfBucketReplicationConfigurationAndPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.AndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function dataAwsS3BucketReplicationConfigurationAndPropertyToTerraform(st
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationAndPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.AndProperty): any {
+export function dataTfBucketReplicationConfigurationAndPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.AndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function dataAwsS3BucketReplicationConfigurationAndPropertyToHclTerraform
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationRuleFilterTagPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.RuleFilterTagProperty): any {
+export function dataTfBucketReplicationConfigurationRuleFilterTagPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.RuleFilterTagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,7 +390,7 @@ export function dataAwsS3BucketReplicationConfigurationRuleFilterTagPropertyToTe
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationRuleFilterTagPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.RuleFilterTagProperty): any {
+export function dataTfBucketReplicationConfigurationRuleFilterTagPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.RuleFilterTagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function dataAwsS3BucketReplicationConfigurationRuleFilterTagPropertyToHc
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationFilterPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.FilterProperty): any {
+export function dataTfBucketReplicationConfigurationFilterPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function dataAwsS3BucketReplicationConfigurationFilterPropertyToTerraform
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationFilterPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.FilterProperty): any {
+export function dataTfBucketReplicationConfigurationFilterPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function dataAwsS3BucketReplicationConfigurationFilterPropertyToHclTerraf
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.ReplicaModificationsProperty): any {
+export function dataTfBucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.ReplicaModificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function dataAwsS3BucketReplicationConfigurationReplicaModificationsPrope
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.ReplicaModificationsProperty): any {
+export function dataTfBucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.ReplicaModificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function dataAwsS3BucketReplicationConfigurationReplicaModificationsPrope
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
+export function dataTfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function dataAwsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPro
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
+export function dataTfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function dataAwsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPro
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
+export function dataTfBucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -474,7 +474,7 @@ export function dataAwsS3BucketReplicationConfigurationSourceSelectionCriteriaPr
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
+export function dataTfBucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function dataAwsS3BucketReplicationConfigurationSourceSelectionCriteriaPr
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationRulePropertyToTerraform(struct?: DataAwsS3BucketReplicationConfiguration.RuleProperty): any {
+export function dataTfBucketReplicationConfigurationRulePropertyToTerraform(struct?: DataTfBucketReplicationConfiguration.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function dataAwsS3BucketReplicationConfigurationRulePropertyToTerraform(s
 }
 
 
-export function dataAwsS3BucketReplicationConfigurationRulePropertyToHclTerraform(struct?: DataAwsS3BucketReplicationConfiguration.RuleProperty): any {
+export function dataTfBucketReplicationConfigurationRulePropertyToHclTerraform(struct?: DataTfBucketReplicationConfiguration.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function dataAwsS3BucketReplicationConfigurationRulePropertyToHclTerrafor
 }
 
 
-export namespace DataAwsS3BucketReplicationConfiguration {
+export namespace DataTfBucketReplicationConfiguration {
 export interface DeleteMarkerReplicationProperty {
 }
 export class DeleteMarkerReplicationPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsM2DeploymentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDeploymentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#application_id AwsM2Deployment#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#application_id TfDeployment#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#application_version AwsM2Deployment#application_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#application_version TfDeployment#application_version}
   */
   readonly applicationVersion: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#environment_id AwsM2Deployment#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#environment_id TfDeployment#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#force_stop AwsM2Deployment#force_stop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#force_stop TfDeployment#force_stop}
   */
   readonly forceStop?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#region AwsM2Deployment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#region TfDeployment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#start AwsM2Deployment#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#start TfDeployment#start}
   */
   readonly start: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#timeouts AwsM2Deployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#timeouts TfDeployment#timeouts}
   */
-  readonly timeouts?: AwsM2Deployment.TimeoutsProperty;
+  readonly timeouts?: TfDeployment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment aws_m2_deployment}
 */
-export class AwsM2Deployment extends cdktn.TerraformResource {
+export class TfDeployment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsM2Deployment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsM2Deployment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDeployment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsM2Deployment to import
-  * @param importFromId The id of the existing AwsM2Deployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsM2Deployment to import is found
+  * @param importToId The construct id used in the generated config for the TfDeployment to import
+  * @param importFromId The id of the existing TfDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_m2_deployment", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsM2Deployment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsM2DeploymentConfig
+  * @param options TfDeploymentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsM2DeploymentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_m2_deployment',
       terraformGeneratorMetadata: {
@@ -199,11 +199,11 @@ export class AwsM2Deployment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsM2Deployment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDeployment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsM2Deployment.TimeoutsProperty) {
+  public putTimeouts(value: TfDeployment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -226,7 +226,7 @@ export class AwsM2Deployment extends cdktn.TerraformResource {
       force_stop: cdktn.booleanToTerraform(this._forceStop),
       region: cdktn.stringToTerraform(this._region),
       start: cdktn.booleanToTerraform(this._start),
-      timeouts: awsM2DeploymentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDeploymentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -269,10 +269,10 @@ export class AwsM2Deployment extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: awsM2DeploymentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDeploymentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsM2Deployment.TimeoutsProperty",
+        storageClassType: "TfDeployment.TimeoutsProperty",
       },
     };
 
@@ -281,7 +281,7 @@ export class AwsM2Deployment extends cdktn.TerraformResource {
   }
 }
 
-export function awsM2DeploymentTimeoutsPropertyToTerraform(struct?: AwsM2Deployment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDeploymentTimeoutsPropertyToTerraform(struct?: TfDeployment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function awsM2DeploymentTimeoutsPropertyToTerraform(struct?: AwsM2Deploym
 }
 
 
-export function awsM2DeploymentTimeoutsPropertyToHclTerraform(struct?: AwsM2Deployment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDeploymentTimeoutsPropertyToHclTerraform(struct?: TfDeployment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,24 +325,24 @@ export function awsM2DeploymentTimeoutsPropertyToHclTerraform(struct?: AwsM2Depl
 }
 
 
-export namespace AwsM2Deployment {
+export namespace TfDeployment {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#create AwsM2Deployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#create TfDeployment#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#delete AwsM2Deployment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#delete TfDeployment#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#update AwsM2Deployment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/m2_deployment#update TfDeployment#update}
   */
   readonly update?: string;
 }

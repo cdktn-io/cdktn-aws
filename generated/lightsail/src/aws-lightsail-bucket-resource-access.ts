@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailBucketResourceAccessConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketResourceAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#bucket_name AwsLightsailBucketResourceAccess#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#bucket_name TfBucketResourceAccess#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#id AwsLightsailBucketResourceAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#id TfBucketResourceAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface AwsLightsailBucketResourceAccessConfig extends cdktn.TerraformM
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#region AwsLightsailBucketResourceAccess#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#region TfBucketResourceAccess#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#resource_name AwsLightsailBucketResourceAccess#resource_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#resource_name TfBucketResourceAccess#resource_name}
   */
   readonly resourceName: string;
 }
@@ -32,7 +32,7 @@ export interface AwsLightsailBucketResourceAccessConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access aws_lightsail_bucket_resource_access}
 */
-export class AwsLightsailBucketResourceAccess extends cdktn.TerraformResource {
+export class TfBucketResourceAccess extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsLightsailBucketResourceAccess extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailBucketResourceAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketResourceAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailBucketResourceAccess to import
-  * @param importFromId The id of the existing AwsLightsailBucketResourceAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailBucketResourceAccess to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketResourceAccess to import
+  * @param importFromId The id of the existing TfBucketResourceAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_bucket_resource_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketResourceAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_bucket_resource_access", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsLightsailBucketResourceAccess extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailBucketResourceAccessConfig
+  * @param options TfBucketResourceAccessConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailBucketResourceAccessConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketResourceAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_bucket_resource_access',
       terraformGeneratorMetadata: {

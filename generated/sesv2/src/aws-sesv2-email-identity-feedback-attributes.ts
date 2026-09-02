@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesv2EmailIdentityFeedbackAttributesConfig extends cdktn.TerraformMetaArguments {
+export interface TfEmailIdentityFeedbackAttributesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#email_forwarding_enabled AwsSesv2EmailIdentityFeedbackAttributes#email_forwarding_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#email_forwarding_enabled TfEmailIdentityFeedbackAttributes#email_forwarding_enabled}
   */
   readonly emailForwardingEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#email_identity AwsSesv2EmailIdentityFeedbackAttributes#email_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#email_identity TfEmailIdentityFeedbackAttributes#email_identity}
   */
   readonly emailIdentity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#id AwsSesv2EmailIdentityFeedbackAttributes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#id TfEmailIdentityFeedbackAttributes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,7 +24,7 @@ export interface AwsSesv2EmailIdentityFeedbackAttributesConfig extends cdktn.Ter
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#region AwsSesv2EmailIdentityFeedbackAttributes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#region TfEmailIdentityFeedbackAttributes#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsSesv2EmailIdentityFeedbackAttributesConfig extends cdktn.Ter
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes aws_sesv2_email_identity_feedback_attributes}
 */
-export class AwsSesv2EmailIdentityFeedbackAttributes extends cdktn.TerraformResource {
+export class TfEmailIdentityFeedbackAttributes extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsSesv2EmailIdentityFeedbackAttributes extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesv2EmailIdentityFeedbackAttributes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEmailIdentityFeedbackAttributes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesv2EmailIdentityFeedbackAttributes to import
-  * @param importFromId The id of the existing AwsSesv2EmailIdentityFeedbackAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesv2EmailIdentityFeedbackAttributes to import is found
+  * @param importToId The construct id used in the generated config for the TfEmailIdentityFeedbackAttributes to import
+  * @param importFromId The id of the existing TfEmailIdentityFeedbackAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_feedback_attributes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEmailIdentityFeedbackAttributes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_email_identity_feedback_attributes", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsSesv2EmailIdentityFeedbackAttributes extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesv2EmailIdentityFeedbackAttributesConfig
+  * @param options TfEmailIdentityFeedbackAttributesConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesv2EmailIdentityFeedbackAttributesConfig) {
+  public constructor(scope: Construct, id: string, config: TfEmailIdentityFeedbackAttributesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_email_identity_feedback_attributes',
       terraformGeneratorMetadata: {

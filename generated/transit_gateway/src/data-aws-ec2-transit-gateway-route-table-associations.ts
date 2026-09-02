@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEc2TransitGatewayRouteTableAssociationsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfRouteTableAssociationsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#id DataAwsEc2TransitGatewayRouteTableAssociations#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#id DataTfRouteTableAssociations#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface DataAwsEc2TransitGatewayRouteTableAssociationsConfig extends cd
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#region DataAwsEc2TransitGatewayRouteTableAssociations#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#region DataTfRouteTableAssociations#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#transit_gateway_route_table_id DataAwsEc2TransitGatewayRouteTableAssociations#transit_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#transit_gateway_route_table_id DataTfRouteTableAssociations#transit_gateway_route_table_id}
   */
   readonly transitGatewayRouteTableId: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#filter DataAwsEc2TransitGatewayRouteTableAssociations#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#filter DataTfRouteTableAssociations#filter}
   */
-  readonly filter?: DataAwsEc2TransitGatewayRouteTableAssociations.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfRouteTableAssociations.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#timeouts DataAwsEc2TransitGatewayRouteTableAssociations#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#timeouts DataTfRouteTableAssociations#timeouts}
   */
-  readonly timeouts?: DataAwsEc2TransitGatewayRouteTableAssociations.TimeoutsProperty;
+  readonly timeouts?: DataTfRouteTableAssociations.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations aws_ec2_transit_gateway_route_table_associations}
 */
-export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.TerraformDataSource {
+export class DataTfRouteTableAssociations extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.Terraf
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEc2TransitGatewayRouteTableAssociations resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfRouteTableAssociations resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEc2TransitGatewayRouteTableAssociations to import
-  * @param importFromId The id of the existing DataAwsEc2TransitGatewayRouteTableAssociations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEc2TransitGatewayRouteTableAssociations to import is found
+  * @param importToId The construct id used in the generated config for the DataTfRouteTableAssociations to import
+  * @param importFromId The id of the existing DataTfRouteTableAssociations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfRouteTableAssociations to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_route_table_associations", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.Terraf
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEc2TransitGatewayRouteTableAssociationsConfig
+  * @param options DataTfRouteTableAssociationsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEc2TransitGatewayRouteTableAssociationsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfRouteTableAssociationsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_route_table_associations',
       terraformGeneratorMetadata: {
@@ -150,11 +150,11 @@ export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.Terraf
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsEc2TransitGatewayRouteTableAssociations.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfRouteTableAssociations.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsEc2TransitGatewayRouteTableAssociations.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfRouteTableAssociations.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -166,11 +166,11 @@ export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.Terraf
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsEc2TransitGatewayRouteTableAssociations.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfRouteTableAssociations.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsEc2TransitGatewayRouteTableAssociations.TimeoutsProperty) {
+  public putTimeouts(value: DataTfRouteTableAssociations.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -190,8 +190,8 @@ export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.Terraf
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       transit_gateway_route_table_id: cdktn.stringToTerraform(this._transitGatewayRouteTableId),
-      filter: cdktn.listMapper(dataAwsEc2TransitGatewayRouteTableAssociationsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsEc2TransitGatewayRouteTableAssociationsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfRouteTableAssociationsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfRouteTableAssociationsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -216,16 +216,16 @@ export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.Terraf
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsEc2TransitGatewayRouteTableAssociationsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfRouteTableAssociationsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsEc2TransitGatewayRouteTableAssociations.FilterPropertyList",
+        storageClassType: "DataTfRouteTableAssociations.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsEc2TransitGatewayRouteTableAssociationsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfRouteTableAssociationsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsEc2TransitGatewayRouteTableAssociations.TimeoutsProperty",
+        storageClassType: "DataTfRouteTableAssociations.TimeoutsProperty",
       },
     };
 
@@ -234,7 +234,7 @@ export class DataAwsEc2TransitGatewayRouteTableAssociations extends cdktn.Terraf
   }
 }
 
-export function dataAwsEc2TransitGatewayRouteTableAssociationsFilterPropertyToTerraform(struct?: DataAwsEc2TransitGatewayRouteTableAssociations.FilterProperty | cdktn.IResolvable): any {
+export function dataTfRouteTableAssociationsFilterPropertyToTerraform(struct?: DataTfRouteTableAssociations.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function dataAwsEc2TransitGatewayRouteTableAssociationsFilterPropertyToTe
 }
 
 
-export function dataAwsEc2TransitGatewayRouteTableAssociationsFilterPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayRouteTableAssociations.FilterProperty | cdktn.IResolvable): any {
+export function dataTfRouteTableAssociationsFilterPropertyToHclTerraform(struct?: DataTfRouteTableAssociations.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function dataAwsEc2TransitGatewayRouteTableAssociationsFilterPropertyToHc
 }
 
 
-export function dataAwsEc2TransitGatewayRouteTableAssociationsTimeoutsPropertyToTerraform(struct?: DataAwsEc2TransitGatewayRouteTableAssociations.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfRouteTableAssociationsTimeoutsPropertyToTerraform(struct?: DataTfRouteTableAssociations.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function dataAwsEc2TransitGatewayRouteTableAssociationsTimeoutsPropertyTo
 }
 
 
-export function dataAwsEc2TransitGatewayRouteTableAssociationsTimeoutsPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayRouteTableAssociations.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfRouteTableAssociationsTimeoutsPropertyToHclTerraform(struct?: DataTfRouteTableAssociations.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,14 +301,14 @@ export function dataAwsEc2TransitGatewayRouteTableAssociationsTimeoutsPropertyTo
 }
 
 
-export namespace DataAwsEc2TransitGatewayRouteTableAssociations {
+export namespace DataTfRouteTableAssociations {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#name DataAwsEc2TransitGatewayRouteTableAssociations#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#name DataTfRouteTableAssociations#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#values DataAwsEc2TransitGatewayRouteTableAssociations#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#values DataTfRouteTableAssociations#values}
   */
   readonly values: string[];
 }
@@ -410,7 +410,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#read DataAwsEc2TransitGatewayRouteTableAssociations#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_associations#read DataTfRouteTableAssociations#read}
   */
   readonly read?: string;
 }

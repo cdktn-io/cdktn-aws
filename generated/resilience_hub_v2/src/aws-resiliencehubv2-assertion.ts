@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsResiliencehubv2AssertionConfig extends cdktn.TerraformMetaArguments {
+export interface TfAssertionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#region AwsResiliencehubv2Assertion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#region TfAssertion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#service_arn AwsResiliencehubv2Assertion#service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#service_arn TfAssertion#service_arn}
   */
   readonly serviceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#text AwsResiliencehubv2Assertion#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#text TfAssertion#text}
   */
   readonly text: string;
 }
@@ -25,7 +25,7 @@ export interface AwsResiliencehubv2AssertionConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion aws_resiliencehubv2_assertion}
 */
-export class AwsResiliencehubv2Assertion extends cdktn.TerraformResource {
+export class TfAssertion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsResiliencehubv2Assertion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsResiliencehubv2Assertion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAssertion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsResiliencehubv2Assertion to import
-  * @param importFromId The id of the existing AwsResiliencehubv2Assertion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsResiliencehubv2Assertion to import is found
+  * @param importToId The construct id used in the generated config for the TfAssertion to import
+  * @param importFromId The id of the existing TfAssertion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_assertion#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAssertion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_assertion", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsResiliencehubv2Assertion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsResiliencehubv2AssertionConfig
+  * @param options TfAssertionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsResiliencehubv2AssertionConfig) {
+  public constructor(scope: Construct, id: string, config: TfAssertionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_assertion',
       terraformGeneratorMetadata: {

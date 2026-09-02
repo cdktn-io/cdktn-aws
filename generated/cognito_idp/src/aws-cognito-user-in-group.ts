@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCognitoUserInGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserInGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#group_name AwsCognitoUserInGroup#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#group_name TfUserInGroup#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#id AwsCognitoUserInGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#id TfUserInGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,15 +20,15 @@ export interface AwsCognitoUserInGroupConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#region AwsCognitoUserInGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#region TfUserInGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#user_pool_id AwsCognitoUserInGroup#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#user_pool_id TfUserInGroup#user_pool_id}
   */
   readonly userPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#username AwsCognitoUserInGroup#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#username TfUserInGroup#username}
   */
   readonly username: string;
 }
@@ -36,7 +36,7 @@ export interface AwsCognitoUserInGroupConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group aws_cognito_user_in_group}
 */
-export class AwsCognitoUserInGroup extends cdktn.TerraformResource {
+export class TfUserInGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsCognitoUserInGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCognitoUserInGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUserInGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCognitoUserInGroup to import
-  * @param importFromId The id of the existing AwsCognitoUserInGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCognitoUserInGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfUserInGroup to import
+  * @param importFromId The id of the existing TfUserInGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_in_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUserInGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_in_group", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsCognitoUserInGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCognitoUserInGroupConfig
+  * @param options TfUserInGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCognitoUserInGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserInGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_in_group',
       terraformGeneratorMetadata: {

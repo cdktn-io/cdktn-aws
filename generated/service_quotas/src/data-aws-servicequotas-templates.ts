@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsServicequotasTemplatesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfTemplatesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_templates#aws_region DataAwsServicequotasTemplates#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_templates#aws_region DataTfTemplates#aws_region}
   */
   readonly awsRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_templates#region DataAwsServicequotasTemplates#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_templates#region DataTfTemplates#region}
   */
   readonly region?: string;
 }
@@ -19,7 +19,7 @@ export interface DataAwsServicequotasTemplatesConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_templates aws_servicequotas_templates}
 */
-export class DataAwsServicequotasTemplates extends cdktn.TerraformDataSource {
+export class DataTfTemplates extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class DataAwsServicequotasTemplates extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsServicequotasTemplates resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfTemplates resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsServicequotasTemplates to import
-  * @param importFromId The id of the existing DataAwsServicequotasTemplates that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_templates#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsServicequotasTemplates to import is found
+  * @param importToId The construct id used in the generated config for the DataTfTemplates to import
+  * @param importFromId The id of the existing DataTfTemplates that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_templates#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfTemplates to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicequotas_templates", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class DataAwsServicequotasTemplates extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsServicequotasTemplatesConfig = {}
+  * @param options DataTfTemplatesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsServicequotasTemplatesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfTemplatesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_servicequotas_templates',
       terraformGeneratorMetadata: {
@@ -113,7 +113,7 @@ export class DataAwsServicequotasTemplates extends cdktn.TerraformDataSource {
   }
 
   // templates - computed: true, optional: false, required: false
-  private _templates = new DataAwsServicequotasTemplates.TemplatesPropertyList(this, "templates", false);
+  private _templates = new DataTfTemplates.TemplatesPropertyList(this, "templates", false);
   public get templates() {
     return this._templates;
   }
@@ -150,7 +150,7 @@ export class DataAwsServicequotasTemplates extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsServicequotasTemplatesTemplatesPropertyToTerraform(struct?: DataAwsServicequotasTemplates.TemplatesProperty): any {
+export function dataTfTemplatesTemplatesPropertyToTerraform(struct?: DataTfTemplates.TemplatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -160,7 +160,7 @@ export function dataAwsServicequotasTemplatesTemplatesPropertyToTerraform(struct
 }
 
 
-export function dataAwsServicequotasTemplatesTemplatesPropertyToHclTerraform(struct?: DataAwsServicequotasTemplates.TemplatesProperty): any {
+export function dataTfTemplatesTemplatesPropertyToHclTerraform(struct?: DataTfTemplates.TemplatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -171,7 +171,7 @@ export function dataAwsServicequotasTemplatesTemplatesPropertyToHclTerraform(str
 }
 
 
-export namespace DataAwsServicequotasTemplates {
+export namespace DataTfTemplates {
 export interface TemplatesProperty {
 }
 export class TemplatesPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOrganizationsAwsServiceAccessConfig extends cdktn.TerraformMetaArguments {
+export interface TfAwsServiceAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_aws_service_access#service_principal AwsOrganizationsAwsServiceAccess#service_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_aws_service_access#service_principal TfAwsServiceAccess#service_principal}
   */
   readonly servicePrincipal: string;
 }
@@ -15,7 +15,7 @@ export interface AwsOrganizationsAwsServiceAccessConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_aws_service_access aws_organizations_aws_service_access}
 */
-export class AwsOrganizationsAwsServiceAccess extends cdktn.TerraformResource {
+export class TfAwsServiceAccess extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -26,11 +26,11 @@ export class AwsOrganizationsAwsServiceAccess extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOrganizationsAwsServiceAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAwsServiceAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOrganizationsAwsServiceAccess to import
-  * @param importFromId The id of the existing AwsOrganizationsAwsServiceAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_aws_service_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOrganizationsAwsServiceAccess to import is found
+  * @param importToId The construct id used in the generated config for the TfAwsServiceAccess to import
+  * @param importFromId The id of the existing TfAwsServiceAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_aws_service_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAwsServiceAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_aws_service_access", importId: importFromId, provider });
@@ -45,9 +45,9 @@ export class AwsOrganizationsAwsServiceAccess extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOrganizationsAwsServiceAccessConfig
+  * @param options TfAwsServiceAccessConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOrganizationsAwsServiceAccessConfig) {
+  public constructor(scope: Construct, id: string, config: TfAwsServiceAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_aws_service_access',
       terraformGeneratorMetadata: {

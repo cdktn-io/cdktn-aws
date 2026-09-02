@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubAccountConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#auto_enable_controls AwsSecurityhubAccount#auto_enable_controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#auto_enable_controls TfAccount#auto_enable_controls}
   */
   readonly autoEnableControls?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#control_finding_generator AwsSecurityhubAccount#control_finding_generator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#control_finding_generator TfAccount#control_finding_generator}
   */
   readonly controlFindingGenerator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#enable_default_standards AwsSecurityhubAccount#enable_default_standards}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#enable_default_standards TfAccount#enable_default_standards}
   */
   readonly enableDefaultStandards?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#id AwsSecurityhubAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#id TfAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface AwsSecurityhubAccountConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#region AwsSecurityhubAccount#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#region TfAccount#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsSecurityhubAccountConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account aws_securityhub_account}
 */
-export class AwsSecurityhubAccount extends cdktn.TerraformResource {
+export class TfAccount extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsSecurityhubAccount extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubAccount resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccount resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubAccount to import
-  * @param importFromId The id of the existing AwsSecurityhubAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubAccount to import is found
+  * @param importToId The construct id used in the generated config for the TfAccount to import
+  * @param importFromId The id of the existing TfAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_account", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsSecurityhubAccount extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubAccountConfig = {}
+  * @param options TfAccountConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubAccountConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfAccountConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_account',
       terraformGeneratorMetadata: {

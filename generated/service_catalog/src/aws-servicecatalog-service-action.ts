@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServicecatalogServiceActionConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceActionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#accept_language AwsServicecatalogServiceAction#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#accept_language TfServiceAction#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#description AwsServicecatalogServiceAction#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#description TfServiceAction#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#id AwsServicecatalogServiceAction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#id TfServiceAction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#name AwsServicecatalogServiceAction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#name TfServiceAction#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#region AwsServicecatalogServiceAction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#region TfServiceAction#region}
   */
   readonly region?: string;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#definition AwsServicecatalogServiceAction#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#definition TfServiceAction#definition}
   */
-  readonly definition: AwsServicecatalogServiceAction.DefinitionProperty;
+  readonly definition: TfServiceAction.DefinitionProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#timeouts AwsServicecatalogServiceAction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#timeouts TfServiceAction#timeouts}
   */
-  readonly timeouts?: AwsServicecatalogServiceAction.TimeoutsProperty;
+  readonly timeouts?: TfServiceAction.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action aws_servicecatalog_service_action}
 */
-export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
+export class TfServiceAction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServicecatalogServiceAction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServiceAction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServicecatalogServiceAction to import
-  * @param importFromId The id of the existing AwsServicecatalogServiceAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServicecatalogServiceAction to import is found
+  * @param importToId The construct id used in the generated config for the TfServiceAction to import
+  * @param importFromId The id of the existing TfServiceAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServiceAction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_service_action", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServicecatalogServiceActionConfig
+  * @param options TfServiceActionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServicecatalogServiceActionConfig) {
+  public constructor(scope: Construct, id: string, config: TfServiceActionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_service_action',
       terraformGeneratorMetadata: {
@@ -187,11 +187,11 @@ export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
   }
 
   // definition - computed: false, optional: false, required: true
-  private _definition = new AwsServicecatalogServiceAction.DefinitionPropertyOutputReference(this, "definition");
+  private _definition = new TfServiceAction.DefinitionPropertyOutputReference(this, "definition");
   public get definition() {
     return this._definition;
   }
-  public putDefinition(value: AwsServicecatalogServiceAction.DefinitionProperty) {
+  public putDefinition(value: TfServiceAction.DefinitionProperty) {
     this._definition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -200,11 +200,11 @@ export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsServicecatalogServiceAction.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfServiceAction.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsServicecatalogServiceAction.TimeoutsProperty) {
+  public putTimeouts(value: TfServiceAction.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -226,8 +226,8 @@ export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      definition: awsServicecatalogServiceActionDefinitionPropertyToTerraform(this._definition.internalValue),
-      timeouts: awsServicecatalogServiceActionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      definition: tfServiceActionDefinitionPropertyToTerraform(this._definition.internalValue),
+      timeouts: tfServiceActionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -264,16 +264,16 @@ export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       definition: {
-        value: awsServicecatalogServiceActionDefinitionPropertyToHclTerraform(this._definition.internalValue),
+        value: tfServiceActionDefinitionPropertyToHclTerraform(this._definition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsServicecatalogServiceAction.DefinitionPropertyList",
+        storageClassType: "TfServiceAction.DefinitionPropertyList",
       },
       timeouts: {
-        value: awsServicecatalogServiceActionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfServiceActionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsServicecatalogServiceAction.TimeoutsProperty",
+        storageClassType: "TfServiceAction.TimeoutsProperty",
       },
     };
 
@@ -282,7 +282,7 @@ export class AwsServicecatalogServiceAction extends cdktn.TerraformResource {
   }
 }
 
-export function awsServicecatalogServiceActionDefinitionPropertyToTerraform(struct?: AwsServicecatalogServiceAction.DefinitionPropertyOutputReference | AwsServicecatalogServiceAction.DefinitionProperty): any {
+export function tfServiceActionDefinitionPropertyToTerraform(struct?: TfServiceAction.DefinitionPropertyOutputReference | TfServiceAction.DefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function awsServicecatalogServiceActionDefinitionPropertyToTerraform(stru
 }
 
 
-export function awsServicecatalogServiceActionDefinitionPropertyToHclTerraform(struct?: AwsServicecatalogServiceAction.DefinitionPropertyOutputReference | AwsServicecatalogServiceAction.DefinitionProperty): any {
+export function tfServiceActionDefinitionPropertyToHclTerraform(struct?: TfServiceAction.DefinitionPropertyOutputReference | TfServiceAction.DefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function awsServicecatalogServiceActionDefinitionPropertyToHclTerraform(s
 }
 
 
-export function awsServicecatalogServiceActionTimeoutsPropertyToTerraform(struct?: AwsServicecatalogServiceAction.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfServiceActionTimeoutsPropertyToTerraform(struct?: TfServiceAction.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function awsServicecatalogServiceActionTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsServicecatalogServiceActionTimeoutsPropertyToHclTerraform(struct?: AwsServicecatalogServiceAction.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfServiceActionTimeoutsPropertyToHclTerraform(struct?: TfServiceAction.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,26 +391,26 @@ export function awsServicecatalogServiceActionTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsServicecatalogServiceAction {
+export namespace TfServiceAction {
 export interface DefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#assume_role AwsServicecatalogServiceAction#assume_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#assume_role TfServiceAction#assume_role}
   */
   readonly assumeRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#name AwsServicecatalogServiceAction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#name TfServiceAction#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#parameters AwsServicecatalogServiceAction#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#parameters TfServiceAction#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#type AwsServicecatalogServiceAction#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#type TfServiceAction#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#version AwsServicecatalogServiceAction#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#version TfServiceAction#version}
   */
   readonly version: string;
 }
@@ -546,19 +546,19 @@ export class DefinitionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#create AwsServicecatalogServiceAction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#create TfServiceAction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#delete AwsServicecatalogServiceAction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#delete TfServiceAction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#read AwsServicecatalogServiceAction#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#read TfServiceAction#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#update AwsServicecatalogServiceAction#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_service_action#update TfServiceAction#update}
   */
   readonly update?: string;
 }

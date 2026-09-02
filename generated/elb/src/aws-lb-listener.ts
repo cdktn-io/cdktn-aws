@@ -5,156 +5,156 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLbListenerConfig extends cdktn.TerraformMetaArguments {
+export interface TfListenerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#alpn_policy AwsLbListener#alpn_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#alpn_policy TfListener#alpn_policy}
   */
   readonly alpnPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#certificate_arn AwsLbListener#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#certificate_arn TfListener#certificate_arn}
   */
   readonly certificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#id AwsLbListener#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#id TfListener#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#load_balancer_arn AwsLbListener#load_balancer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#load_balancer_arn TfListener#load_balancer_arn}
   */
   readonly loadBalancerArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#port AwsLbListener#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#port TfListener#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#protocol AwsLbListener#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#protocol TfListener#protocol}
   */
   readonly protocol?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#region AwsLbListener#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#region TfListener#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_header_name AwsLbListener#routing_http_request_x_amzn_mtls_clientcert_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_header_name TfListener#routing_http_request_x_amzn_mtls_clientcert_header_name}
   */
   readonly routingHttpRequestXAmznMtlsClientcertHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_issuer_header_name AwsLbListener#routing_http_request_x_amzn_mtls_clientcert_issuer_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_issuer_header_name TfListener#routing_http_request_x_amzn_mtls_clientcert_issuer_header_name}
   */
   readonly routingHttpRequestXAmznMtlsClientcertIssuerHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_leaf_header_name AwsLbListener#routing_http_request_x_amzn_mtls_clientcert_leaf_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_leaf_header_name TfListener#routing_http_request_x_amzn_mtls_clientcert_leaf_header_name}
   */
   readonly routingHttpRequestXAmznMtlsClientcertLeafHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name AwsLbListener#routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name TfListener#routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name}
   */
   readonly routingHttpRequestXAmznMtlsClientcertSerialNumberHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_subject_header_name AwsLbListener#routing_http_request_x_amzn_mtls_clientcert_subject_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_subject_header_name TfListener#routing_http_request_x_amzn_mtls_clientcert_subject_header_name}
   */
   readonly routingHttpRequestXAmznMtlsClientcertSubjectHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_validity_header_name AwsLbListener#routing_http_request_x_amzn_mtls_clientcert_validity_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_mtls_clientcert_validity_header_name TfListener#routing_http_request_x_amzn_mtls_clientcert_validity_header_name}
   */
   readonly routingHttpRequestXAmznMtlsClientcertValidityHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_tls_cipher_suite_header_name AwsLbListener#routing_http_request_x_amzn_tls_cipher_suite_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_tls_cipher_suite_header_name TfListener#routing_http_request_x_amzn_tls_cipher_suite_header_name}
   */
   readonly routingHttpRequestXAmznTlsCipherSuiteHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_tls_version_header_name AwsLbListener#routing_http_request_x_amzn_tls_version_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_request_x_amzn_tls_version_header_name TfListener#routing_http_request_x_amzn_tls_version_header_name}
   */
   readonly routingHttpRequestXAmznTlsVersionHeaderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_credentials_header_value AwsLbListener#routing_http_response_access_control_allow_credentials_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_credentials_header_value TfListener#routing_http_response_access_control_allow_credentials_header_value}
   */
   readonly routingHttpResponseAccessControlAllowCredentialsHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_headers_header_value AwsLbListener#routing_http_response_access_control_allow_headers_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_headers_header_value TfListener#routing_http_response_access_control_allow_headers_header_value}
   */
   readonly routingHttpResponseAccessControlAllowHeadersHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_methods_header_value AwsLbListener#routing_http_response_access_control_allow_methods_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_methods_header_value TfListener#routing_http_response_access_control_allow_methods_header_value}
   */
   readonly routingHttpResponseAccessControlAllowMethodsHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_origin_header_value AwsLbListener#routing_http_response_access_control_allow_origin_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_allow_origin_header_value TfListener#routing_http_response_access_control_allow_origin_header_value}
   */
   readonly routingHttpResponseAccessControlAllowOriginHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_expose_headers_header_value AwsLbListener#routing_http_response_access_control_expose_headers_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_expose_headers_header_value TfListener#routing_http_response_access_control_expose_headers_header_value}
   */
   readonly routingHttpResponseAccessControlExposeHeadersHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_max_age_header_value AwsLbListener#routing_http_response_access_control_max_age_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_access_control_max_age_header_value TfListener#routing_http_response_access_control_max_age_header_value}
   */
   readonly routingHttpResponseAccessControlMaxAgeHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_content_security_policy_header_value AwsLbListener#routing_http_response_content_security_policy_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_content_security_policy_header_value TfListener#routing_http_response_content_security_policy_header_value}
   */
   readonly routingHttpResponseContentSecurityPolicyHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_server_enabled AwsLbListener#routing_http_response_server_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_server_enabled TfListener#routing_http_response_server_enabled}
   */
   readonly routingHttpResponseServerEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_strict_transport_security_header_value AwsLbListener#routing_http_response_strict_transport_security_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_strict_transport_security_header_value TfListener#routing_http_response_strict_transport_security_header_value}
   */
   readonly routingHttpResponseStrictTransportSecurityHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_x_content_type_options_header_value AwsLbListener#routing_http_response_x_content_type_options_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_x_content_type_options_header_value TfListener#routing_http_response_x_content_type_options_header_value}
   */
   readonly routingHttpResponseXContentTypeOptionsHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_x_frame_options_header_value AwsLbListener#routing_http_response_x_frame_options_header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#routing_http_response_x_frame_options_header_value TfListener#routing_http_response_x_frame_options_header_value}
   */
   readonly routingHttpResponseXFrameOptionsHeaderValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#ssl_policy AwsLbListener#ssl_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#ssl_policy TfListener#ssl_policy}
   */
   readonly sslPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#tags AwsLbListener#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#tags TfListener#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#tags_all AwsLbListener#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#tags_all TfListener#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#tcp_idle_timeout_seconds AwsLbListener#tcp_idle_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#tcp_idle_timeout_seconds TfListener#tcp_idle_timeout_seconds}
   */
   readonly tcpIdleTimeoutSeconds?: number;
   /**
   * default_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#default_action AwsLbListener#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#default_action TfListener#default_action}
   */
-  readonly defaultAction: AwsLbListener.DefaultActionProperty[] | cdktn.IResolvable;
+  readonly defaultAction: TfListener.DefaultActionProperty[] | cdktn.IResolvable;
   /**
   * mutual_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#mutual_authentication AwsLbListener#mutual_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#mutual_authentication TfListener#mutual_authentication}
   */
-  readonly mutualAuthentication?: AwsLbListener.MutualAuthenticationProperty;
+  readonly mutualAuthentication?: TfListener.MutualAuthenticationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#timeouts AwsLbListener#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#timeouts TfListener#timeouts}
   */
-  readonly timeouts?: AwsLbListener.TimeoutsProperty;
+  readonly timeouts?: TfListener.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener aws_lb_listener}
 */
-export class AwsLbListener extends cdktn.TerraformResource {
+export class TfListener extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -165,11 +165,11 @@ export class AwsLbListener extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLbListener resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfListener resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLbListener to import
-  * @param importFromId The id of the existing AwsLbListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLbListener to import is found
+  * @param importToId The construct id used in the generated config for the TfListener to import
+  * @param importFromId The id of the existing TfListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfListener to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb_listener", importId: importFromId, provider });
@@ -184,9 +184,9 @@ export class AwsLbListener extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLbListenerConfig
+  * @param options TfListenerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLbListenerConfig) {
+  public constructor(scope: Construct, id: string, config: TfListenerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lb_listener',
       terraformGeneratorMetadata: {
@@ -724,11 +724,11 @@ export class AwsLbListener extends cdktn.TerraformResource {
   }
 
   // default_action - computed: false, optional: false, required: true
-  private _defaultAction = new AwsLbListener.DefaultActionPropertyList(this, "default_action", false);
+  private _defaultAction = new TfListener.DefaultActionPropertyList(this, "default_action", false);
   public get defaultAction() {
     return this._defaultAction;
   }
-  public putDefaultAction(value: AwsLbListener.DefaultActionProperty[] | cdktn.IResolvable) {
+  public putDefaultAction(value: TfListener.DefaultActionProperty[] | cdktn.IResolvable) {
     this._defaultAction.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -737,11 +737,11 @@ export class AwsLbListener extends cdktn.TerraformResource {
   }
 
   // mutual_authentication - computed: false, optional: true, required: false
-  private _mutualAuthentication = new AwsLbListener.MutualAuthenticationPropertyOutputReference(this, "mutual_authentication");
+  private _mutualAuthentication = new TfListener.MutualAuthenticationPropertyOutputReference(this, "mutual_authentication");
   public get mutualAuthentication() {
     return this._mutualAuthentication;
   }
-  public putMutualAuthentication(value: AwsLbListener.MutualAuthenticationProperty) {
+  public putMutualAuthentication(value: TfListener.MutualAuthenticationProperty) {
     this._mutualAuthentication.internalValue = value;
   }
   public resetMutualAuthentication() {
@@ -753,11 +753,11 @@ export class AwsLbListener extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLbListener.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfListener.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLbListener.TimeoutsProperty) {
+  public putTimeouts(value: TfListener.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -804,9 +804,9 @@ export class AwsLbListener extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       tcp_idle_timeout_seconds: cdktn.numberToTerraform(this._tcpIdleTimeoutSeconds),
-      default_action: cdktn.listMapper(awsLbListenerDefaultActionPropertyToTerraform, true)(this._defaultAction.internalValue),
-      mutual_authentication: awsLbListenerMutualAuthenticationPropertyToTerraform(this._mutualAuthentication.internalValue),
-      timeouts: awsLbListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      default_action: cdktn.listMapper(tfListenerDefaultActionPropertyToTerraform, true)(this._defaultAction.internalValue),
+      mutual_authentication: tfListenerMutualAuthenticationPropertyToTerraform(this._mutualAuthentication.internalValue),
+      timeouts: tfListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -993,22 +993,22 @@ export class AwsLbListener extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       default_action: {
-        value: cdktn.listMapperHcl(awsLbListenerDefaultActionPropertyToHclTerraform, true)(this._defaultAction.internalValue),
+        value: cdktn.listMapperHcl(tfListenerDefaultActionPropertyToHclTerraform, true)(this._defaultAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLbListener.DefaultActionPropertyList",
+        storageClassType: "TfListener.DefaultActionPropertyList",
       },
       mutual_authentication: {
-        value: awsLbListenerMutualAuthenticationPropertyToHclTerraform(this._mutualAuthentication.internalValue),
+        value: tfListenerMutualAuthenticationPropertyToHclTerraform(this._mutualAuthentication.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLbListener.MutualAuthenticationPropertyList",
+        storageClassType: "TfListener.MutualAuthenticationPropertyList",
       },
       timeouts: {
-        value: awsLbListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLbListener.TimeoutsProperty",
+        storageClassType: "TfListener.TimeoutsProperty",
       },
     };
 
@@ -1017,7 +1017,7 @@ export class AwsLbListener extends cdktn.TerraformResource {
   }
 }
 
-export function awsLbListenerAuthenticateCognitoPropertyToTerraform(struct?: AwsLbListener.AuthenticateCognitoPropertyOutputReference | AwsLbListener.AuthenticateCognitoProperty): any {
+export function tfListenerAuthenticateCognitoPropertyToTerraform(struct?: TfListener.AuthenticateCognitoPropertyOutputReference | TfListener.AuthenticateCognitoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1035,7 +1035,7 @@ export function awsLbListenerAuthenticateCognitoPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsLbListenerAuthenticateCognitoPropertyToHclTerraform(struct?: AwsLbListener.AuthenticateCognitoPropertyOutputReference | AwsLbListener.AuthenticateCognitoProperty): any {
+export function tfListenerAuthenticateCognitoPropertyToHclTerraform(struct?: TfListener.AuthenticateCognitoPropertyOutputReference | TfListener.AuthenticateCognitoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1096,7 +1096,7 @@ export function awsLbListenerAuthenticateCognitoPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsLbListenerAuthenticateOidcPropertyToTerraform(struct?: AwsLbListener.AuthenticateOidcPropertyOutputReference | AwsLbListener.AuthenticateOidcProperty): any {
+export function tfListenerAuthenticateOidcPropertyToTerraform(struct?: TfListener.AuthenticateOidcPropertyOutputReference | TfListener.AuthenticateOidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1117,7 +1117,7 @@ export function awsLbListenerAuthenticateOidcPropertyToTerraform(struct?: AwsLbL
 }
 
 
-export function awsLbListenerAuthenticateOidcPropertyToHclTerraform(struct?: AwsLbListener.AuthenticateOidcPropertyOutputReference | AwsLbListener.AuthenticateOidcProperty): any {
+export function tfListenerAuthenticateOidcPropertyToHclTerraform(struct?: TfListener.AuthenticateOidcPropertyOutputReference | TfListener.AuthenticateOidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1196,7 +1196,7 @@ export function awsLbListenerAuthenticateOidcPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsLbListenerFixedResponsePropertyToTerraform(struct?: AwsLbListener.FixedResponsePropertyOutputReference | AwsLbListener.FixedResponseProperty): any {
+export function tfListenerFixedResponsePropertyToTerraform(struct?: TfListener.FixedResponsePropertyOutputReference | TfListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1209,7 +1209,7 @@ export function awsLbListenerFixedResponsePropertyToTerraform(struct?: AwsLbList
 }
 
 
-export function awsLbListenerFixedResponsePropertyToHclTerraform(struct?: AwsLbListener.FixedResponsePropertyOutputReference | AwsLbListener.FixedResponseProperty): any {
+export function tfListenerFixedResponsePropertyToHclTerraform(struct?: TfListener.FixedResponsePropertyOutputReference | TfListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1240,7 +1240,7 @@ export function awsLbListenerFixedResponsePropertyToHclTerraform(struct?: AwsLbL
 }
 
 
-export function awsLbListenerStickinessPropertyToTerraform(struct?: AwsLbListener.StickinessPropertyOutputReference | AwsLbListener.StickinessProperty): any {
+export function tfListenerStickinessPropertyToTerraform(struct?: TfListener.StickinessPropertyOutputReference | TfListener.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1252,7 +1252,7 @@ export function awsLbListenerStickinessPropertyToTerraform(struct?: AwsLbListene
 }
 
 
-export function awsLbListenerStickinessPropertyToHclTerraform(struct?: AwsLbListener.StickinessPropertyOutputReference | AwsLbListener.StickinessProperty): any {
+export function tfListenerStickinessPropertyToHclTerraform(struct?: TfListener.StickinessPropertyOutputReference | TfListener.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1277,7 +1277,7 @@ export function awsLbListenerStickinessPropertyToHclTerraform(struct?: AwsLbList
 }
 
 
-export function awsLbListenerTargetGroupPropertyToTerraform(struct?: AwsLbListener.TargetGroupProperty | cdktn.IResolvable): any {
+export function tfListenerTargetGroupPropertyToTerraform(struct?: TfListener.TargetGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1289,7 +1289,7 @@ export function awsLbListenerTargetGroupPropertyToTerraform(struct?: AwsLbListen
 }
 
 
-export function awsLbListenerTargetGroupPropertyToHclTerraform(struct?: AwsLbListener.TargetGroupProperty | cdktn.IResolvable): any {
+export function tfListenerTargetGroupPropertyToHclTerraform(struct?: TfListener.TargetGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1314,32 +1314,32 @@ export function awsLbListenerTargetGroupPropertyToHclTerraform(struct?: AwsLbLis
 }
 
 
-export function awsLbListenerForwardPropertyToTerraform(struct?: AwsLbListener.ForwardPropertyOutputReference | AwsLbListener.ForwardProperty): any {
+export function tfListenerForwardPropertyToTerraform(struct?: TfListener.ForwardPropertyOutputReference | TfListener.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    stickiness: awsLbListenerStickinessPropertyToTerraform(struct!.stickiness),
-    target_group: cdktn.listMapper(awsLbListenerTargetGroupPropertyToTerraform, true)(struct!.targetGroup),
+    stickiness: tfListenerStickinessPropertyToTerraform(struct!.stickiness),
+    target_group: cdktn.listMapper(tfListenerTargetGroupPropertyToTerraform, true)(struct!.targetGroup),
   }
 }
 
 
-export function awsLbListenerForwardPropertyToHclTerraform(struct?: AwsLbListener.ForwardPropertyOutputReference | AwsLbListener.ForwardProperty): any {
+export function tfListenerForwardPropertyToHclTerraform(struct?: TfListener.ForwardPropertyOutputReference | TfListener.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     stickiness: {
-      value: awsLbListenerStickinessPropertyToHclTerraform(struct!.stickiness),
+      value: tfListenerStickinessPropertyToHclTerraform(struct!.stickiness),
       isBlock: true,
       type: "list",
       storageClassType: "StickinessPropertyList",
     },
     target_group: {
-      value: cdktn.listMapperHcl(awsLbListenerTargetGroupPropertyToHclTerraform, true)(struct!.targetGroup),
+      value: cdktn.listMapperHcl(tfListenerTargetGroupPropertyToHclTerraform, true)(struct!.targetGroup),
       isBlock: true,
       type: "set",
       storageClassType: "TargetGroupPropertyList",
@@ -1351,7 +1351,7 @@ export function awsLbListenerForwardPropertyToHclTerraform(struct?: AwsLbListene
 }
 
 
-export function awsLbListenerAdditionalClaimPropertyToTerraform(struct?: AwsLbListener.AdditionalClaimProperty | cdktn.IResolvable): any {
+export function tfListenerAdditionalClaimPropertyToTerraform(struct?: TfListener.AdditionalClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1364,7 +1364,7 @@ export function awsLbListenerAdditionalClaimPropertyToTerraform(struct?: AwsLbLi
 }
 
 
-export function awsLbListenerAdditionalClaimPropertyToHclTerraform(struct?: AwsLbListener.AdditionalClaimProperty | cdktn.IResolvable): any {
+export function tfListenerAdditionalClaimPropertyToHclTerraform(struct?: TfListener.AdditionalClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1395,7 +1395,7 @@ export function awsLbListenerAdditionalClaimPropertyToHclTerraform(struct?: AwsL
 }
 
 
-export function awsLbListenerJwtValidationPropertyToTerraform(struct?: AwsLbListener.JwtValidationPropertyOutputReference | AwsLbListener.JwtValidationProperty): any {
+export function tfListenerJwtValidationPropertyToTerraform(struct?: TfListener.JwtValidationPropertyOutputReference | TfListener.JwtValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1403,12 +1403,12 @@ export function awsLbListenerJwtValidationPropertyToTerraform(struct?: AwsLbList
   return {
     issuer: cdktn.stringToTerraform(struct!.issuer),
     jwks_endpoint: cdktn.stringToTerraform(struct!.jwksEndpoint),
-    additional_claim: cdktn.listMapper(awsLbListenerAdditionalClaimPropertyToTerraform, true)(struct!.additionalClaim),
+    additional_claim: cdktn.listMapper(tfListenerAdditionalClaimPropertyToTerraform, true)(struct!.additionalClaim),
   }
 }
 
 
-export function awsLbListenerJwtValidationPropertyToHclTerraform(struct?: AwsLbListener.JwtValidationPropertyOutputReference | AwsLbListener.JwtValidationProperty): any {
+export function tfListenerJwtValidationPropertyToHclTerraform(struct?: TfListener.JwtValidationPropertyOutputReference | TfListener.JwtValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1427,7 +1427,7 @@ export function awsLbListenerJwtValidationPropertyToHclTerraform(struct?: AwsLbL
       storageClassType: "string",
     },
     additional_claim: {
-      value: cdktn.listMapperHcl(awsLbListenerAdditionalClaimPropertyToHclTerraform, true)(struct!.additionalClaim),
+      value: cdktn.listMapperHcl(tfListenerAdditionalClaimPropertyToHclTerraform, true)(struct!.additionalClaim),
       isBlock: true,
       type: "set",
       storageClassType: "AdditionalClaimPropertyList",
@@ -1439,7 +1439,7 @@ export function awsLbListenerJwtValidationPropertyToHclTerraform(struct?: AwsLbL
 }
 
 
-export function awsLbListenerRedirectPropertyToTerraform(struct?: AwsLbListener.RedirectPropertyOutputReference | AwsLbListener.RedirectProperty): any {
+export function tfListenerRedirectPropertyToTerraform(struct?: TfListener.RedirectPropertyOutputReference | TfListener.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1455,7 +1455,7 @@ export function awsLbListenerRedirectPropertyToTerraform(struct?: AwsLbListener.
 }
 
 
-export function awsLbListenerRedirectPropertyToHclTerraform(struct?: AwsLbListener.RedirectPropertyOutputReference | AwsLbListener.RedirectProperty): any {
+export function tfListenerRedirectPropertyToHclTerraform(struct?: TfListener.RedirectPropertyOutputReference | TfListener.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1504,7 +1504,7 @@ export function awsLbListenerRedirectPropertyToHclTerraform(struct?: AwsLbListen
 }
 
 
-export function awsLbListenerDefaultActionPropertyToTerraform(struct?: AwsLbListener.DefaultActionProperty | cdktn.IResolvable): any {
+export function tfListenerDefaultActionPropertyToTerraform(struct?: TfListener.DefaultActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1513,17 +1513,17 @@ export function awsLbListenerDefaultActionPropertyToTerraform(struct?: AwsLbList
     order: cdktn.numberToTerraform(struct!.order),
     target_group_arn: cdktn.stringToTerraform(struct!.targetGroupArn),
     type: cdktn.stringToTerraform(struct!.type),
-    authenticate_cognito: awsLbListenerAuthenticateCognitoPropertyToTerraform(struct!.authenticateCognito),
-    authenticate_oidc: awsLbListenerAuthenticateOidcPropertyToTerraform(struct!.authenticateOidc),
-    fixed_response: awsLbListenerFixedResponsePropertyToTerraform(struct!.fixedResponse),
-    forward: awsLbListenerForwardPropertyToTerraform(struct!.forward),
-    jwt_validation: awsLbListenerJwtValidationPropertyToTerraform(struct!.jwtValidation),
-    redirect: awsLbListenerRedirectPropertyToTerraform(struct!.redirect),
+    authenticate_cognito: tfListenerAuthenticateCognitoPropertyToTerraform(struct!.authenticateCognito),
+    authenticate_oidc: tfListenerAuthenticateOidcPropertyToTerraform(struct!.authenticateOidc),
+    fixed_response: tfListenerFixedResponsePropertyToTerraform(struct!.fixedResponse),
+    forward: tfListenerForwardPropertyToTerraform(struct!.forward),
+    jwt_validation: tfListenerJwtValidationPropertyToTerraform(struct!.jwtValidation),
+    redirect: tfListenerRedirectPropertyToTerraform(struct!.redirect),
   }
 }
 
 
-export function awsLbListenerDefaultActionPropertyToHclTerraform(struct?: AwsLbListener.DefaultActionProperty | cdktn.IResolvable): any {
+export function tfListenerDefaultActionPropertyToHclTerraform(struct?: TfListener.DefaultActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1548,37 +1548,37 @@ export function awsLbListenerDefaultActionPropertyToHclTerraform(struct?: AwsLbL
       storageClassType: "string",
     },
     authenticate_cognito: {
-      value: awsLbListenerAuthenticateCognitoPropertyToHclTerraform(struct!.authenticateCognito),
+      value: tfListenerAuthenticateCognitoPropertyToHclTerraform(struct!.authenticateCognito),
       isBlock: true,
       type: "list",
       storageClassType: "AuthenticateCognitoPropertyList",
     },
     authenticate_oidc: {
-      value: awsLbListenerAuthenticateOidcPropertyToHclTerraform(struct!.authenticateOidc),
+      value: tfListenerAuthenticateOidcPropertyToHclTerraform(struct!.authenticateOidc),
       isBlock: true,
       type: "list",
       storageClassType: "AuthenticateOidcPropertyList",
     },
     fixed_response: {
-      value: awsLbListenerFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
+      value: tfListenerFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
       isBlock: true,
       type: "list",
       storageClassType: "FixedResponsePropertyList",
     },
     forward: {
-      value: awsLbListenerForwardPropertyToHclTerraform(struct!.forward),
+      value: tfListenerForwardPropertyToHclTerraform(struct!.forward),
       isBlock: true,
       type: "list",
       storageClassType: "ForwardPropertyList",
     },
     jwt_validation: {
-      value: awsLbListenerJwtValidationPropertyToHclTerraform(struct!.jwtValidation),
+      value: tfListenerJwtValidationPropertyToHclTerraform(struct!.jwtValidation),
       isBlock: true,
       type: "list",
       storageClassType: "JwtValidationPropertyList",
     },
     redirect: {
-      value: awsLbListenerRedirectPropertyToHclTerraform(struct!.redirect),
+      value: tfListenerRedirectPropertyToHclTerraform(struct!.redirect),
       isBlock: true,
       type: "list",
       storageClassType: "RedirectPropertyList",
@@ -1590,7 +1590,7 @@ export function awsLbListenerDefaultActionPropertyToHclTerraform(struct?: AwsLbL
 }
 
 
-export function awsLbListenerMutualAuthenticationPropertyToTerraform(struct?: AwsLbListener.MutualAuthenticationPropertyOutputReference | AwsLbListener.MutualAuthenticationProperty): any {
+export function tfListenerMutualAuthenticationPropertyToTerraform(struct?: TfListener.MutualAuthenticationPropertyOutputReference | TfListener.MutualAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1604,7 +1604,7 @@ export function awsLbListenerMutualAuthenticationPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsLbListenerMutualAuthenticationPropertyToHclTerraform(struct?: AwsLbListener.MutualAuthenticationPropertyOutputReference | AwsLbListener.MutualAuthenticationProperty): any {
+export function tfListenerMutualAuthenticationPropertyToHclTerraform(struct?: TfListener.MutualAuthenticationPropertyOutputReference | TfListener.MutualAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1641,7 +1641,7 @@ export function awsLbListenerMutualAuthenticationPropertyToHclTerraform(struct?:
 }
 
 
-export function awsLbListenerTimeoutsPropertyToTerraform(struct?: AwsLbListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfListenerTimeoutsPropertyToTerraform(struct?: TfListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1653,7 +1653,7 @@ export function awsLbListenerTimeoutsPropertyToTerraform(struct?: AwsLbListener.
 }
 
 
-export function awsLbListenerTimeoutsPropertyToHclTerraform(struct?: AwsLbListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfListenerTimeoutsPropertyToHclTerraform(struct?: TfListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1678,38 +1678,38 @@ export function awsLbListenerTimeoutsPropertyToHclTerraform(struct?: AwsLbListen
 }
 
 
-export namespace AwsLbListener {
+export namespace TfListener {
 export interface AuthenticateCognitoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authentication_request_extra_params AwsLbListener#authentication_request_extra_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authentication_request_extra_params TfListener#authentication_request_extra_params}
   */
   readonly authenticationRequestExtraParams?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#on_unauthenticated_request AwsLbListener#on_unauthenticated_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#on_unauthenticated_request TfListener#on_unauthenticated_request}
   */
   readonly onUnauthenticatedRequest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#scope AwsLbListener#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#scope TfListener#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_cookie_name AwsLbListener#session_cookie_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_cookie_name TfListener#session_cookie_name}
   */
   readonly sessionCookieName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_timeout AwsLbListener#session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_timeout TfListener#session_timeout}
   */
   readonly sessionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_pool_arn AwsLbListener#user_pool_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_pool_arn TfListener#user_pool_arn}
   */
   readonly userPoolArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_pool_client_id AwsLbListener#user_pool_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_pool_client_id TfListener#user_pool_client_id}
   */
   readonly userPoolClientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_pool_domain AwsLbListener#user_pool_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_pool_domain TfListener#user_pool_domain}
   */
   readonly userPoolDomain: string;
 }
@@ -1908,47 +1908,47 @@ export class AuthenticateCognitoPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface AuthenticateOidcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authentication_request_extra_params AwsLbListener#authentication_request_extra_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authentication_request_extra_params TfListener#authentication_request_extra_params}
   */
   readonly authenticationRequestExtraParams?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authorization_endpoint AwsLbListener#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authorization_endpoint TfListener#authorization_endpoint}
   */
   readonly authorizationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#client_id AwsLbListener#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#client_id TfListener#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#client_secret AwsLbListener#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#client_secret TfListener#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#issuer AwsLbListener#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#issuer TfListener#issuer}
   */
   readonly issuer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#on_unauthenticated_request AwsLbListener#on_unauthenticated_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#on_unauthenticated_request TfListener#on_unauthenticated_request}
   */
   readonly onUnauthenticatedRequest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#scope AwsLbListener#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#scope TfListener#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_cookie_name AwsLbListener#session_cookie_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_cookie_name TfListener#session_cookie_name}
   */
   readonly sessionCookieName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_timeout AwsLbListener#session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#session_timeout TfListener#session_timeout}
   */
   readonly sessionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#token_endpoint AwsLbListener#token_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#token_endpoint TfListener#token_endpoint}
   */
   readonly tokenEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_info_endpoint AwsLbListener#user_info_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#user_info_endpoint TfListener#user_info_endpoint}
   */
   readonly userInfoEndpoint: string;
 }
@@ -2204,15 +2204,15 @@ export class AuthenticateOidcPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface FixedResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#content_type AwsLbListener#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#content_type TfListener#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#message_body AwsLbListener#message_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#message_body TfListener#message_body}
   */
   readonly messageBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#status_code AwsLbListener#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#status_code TfListener#status_code}
   */
   readonly statusCode?: string;
 }
@@ -2307,11 +2307,11 @@ export class FixedResponsePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StickinessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#duration AwsLbListener#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#duration TfListener#duration}
   */
   readonly duration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#enabled AwsLbListener#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#enabled TfListener#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2384,11 +2384,11 @@ export class StickinessPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#arn AwsLbListener#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#arn TfListener#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#weight AwsLbListener#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#weight TfListener#weight}
   */
   readonly weight?: number;
 }
@@ -2495,13 +2495,13 @@ export interface ForwardProperty {
   /**
   * stickiness block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#stickiness AwsLbListener#stickiness}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#stickiness TfListener#stickiness}
   */
   readonly stickiness?: StickinessProperty;
   /**
   * target_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#target_group AwsLbListener#target_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#target_group TfListener#target_group}
   */
   readonly targetGroup: TargetGroupProperty[] | cdktn.IResolvable;
 }
@@ -2574,15 +2574,15 @@ export class ForwardPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AdditionalClaimProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#format AwsLbListener#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#format TfListener#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#name AwsLbListener#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#name TfListener#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#values AwsLbListener#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#values TfListener#values}
   */
   readonly values: string[];
 }
@@ -2703,17 +2703,17 @@ export class AdditionalClaimPropertyList extends cdktn.ComplexList {
 }
 export interface JwtValidationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#issuer AwsLbListener#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#issuer TfListener#issuer}
   */
   readonly issuer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#jwks_endpoint AwsLbListener#jwks_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#jwks_endpoint TfListener#jwks_endpoint}
   */
   readonly jwksEndpoint: string;
   /**
   * additional_claim block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#additional_claim AwsLbListener#additional_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#additional_claim TfListener#additional_claim}
   */
   readonly additionalClaim?: AdditionalClaimProperty[] | cdktn.IResolvable;
 }
@@ -2805,27 +2805,27 @@ export class JwtValidationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RedirectProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#host AwsLbListener#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#host TfListener#host}
   */
   readonly host?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#path AwsLbListener#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#path TfListener#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#port AwsLbListener#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#port TfListener#port}
   */
   readonly port?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#protocol AwsLbListener#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#protocol TfListener#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#query AwsLbListener#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#query TfListener#query}
   */
   readonly query?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#status_code AwsLbListener#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#status_code TfListener#status_code}
   */
   readonly statusCode: string;
 }
@@ -2986,51 +2986,51 @@ export class RedirectPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DefaultActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#order AwsLbListener#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#order TfListener#order}
   */
   readonly order?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#target_group_arn AwsLbListener#target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#target_group_arn TfListener#target_group_arn}
   */
   readonly targetGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#type AwsLbListener#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#type TfListener#type}
   */
   readonly type: string;
   /**
   * authenticate_cognito block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authenticate_cognito AwsLbListener#authenticate_cognito}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authenticate_cognito TfListener#authenticate_cognito}
   */
   readonly authenticateCognito?: AuthenticateCognitoProperty;
   /**
   * authenticate_oidc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authenticate_oidc AwsLbListener#authenticate_oidc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#authenticate_oidc TfListener#authenticate_oidc}
   */
   readonly authenticateOidc?: AuthenticateOidcProperty;
   /**
   * fixed_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#fixed_response AwsLbListener#fixed_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#fixed_response TfListener#fixed_response}
   */
   readonly fixedResponse?: FixedResponseProperty;
   /**
   * forward block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#forward AwsLbListener#forward}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#forward TfListener#forward}
   */
   readonly forward?: ForwardProperty;
   /**
   * jwt_validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#jwt_validation AwsLbListener#jwt_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#jwt_validation TfListener#jwt_validation}
   */
   readonly jwtValidation?: JwtValidationProperty;
   /**
   * redirect block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#redirect AwsLbListener#redirect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#redirect TfListener#redirect}
   */
   readonly redirect?: RedirectProperty;
 }
@@ -3289,19 +3289,19 @@ export class DefaultActionPropertyList extends cdktn.ComplexList {
 }
 export interface MutualAuthenticationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#advertise_trust_store_ca_names AwsLbListener#advertise_trust_store_ca_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#advertise_trust_store_ca_names TfListener#advertise_trust_store_ca_names}
   */
   readonly advertiseTrustStoreCaNames?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#ignore_client_certificate_expiry AwsLbListener#ignore_client_certificate_expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#ignore_client_certificate_expiry TfListener#ignore_client_certificate_expiry}
   */
   readonly ignoreClientCertificateExpiry?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#mode AwsLbListener#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#mode TfListener#mode}
   */
   readonly mode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#trust_store_arn AwsLbListener#trust_store_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#trust_store_arn TfListener#trust_store_arn}
   */
   readonly trustStoreArn?: string;
 }
@@ -3418,11 +3418,11 @@ export class MutualAuthenticationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#create AwsLbListener#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#create TfListener#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#update AwsLbListener#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener#update TfListener#update}
   */
   readonly update?: string;
 }

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOdbNetworkConfig extends cdktn.TerraformMetaArguments {
+export interface TfNetworkConfig extends cdktn.TerraformMetaArguments {
   /**
   * The name of the Availability Zone (AZ) where the odb network is located. Changing this will force terraform to create new resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#availability_zone AwsOdbNetwork#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#availability_zone TfNetwork#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
   * The AZ ID of the AZ where the ODB network is located. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#availability_zone_id AwsOdbNetwork#availability_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#availability_zone_id TfNetwork#availability_zone_id}
   */
   readonly availabilityZoneId: string;
   /**
@@ -30,7 +30,7 @@ export interface AwsOdbNetworkConfig extends cdktn.TerraformMetaArguments {
   * 	   - 224.0.0.0 - 239.255.255.255
   * 	   - 240.0.0.0 - 255.255.255.255
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#backup_subnet_cidr AwsOdbNetwork#backup_subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#backup_subnet_cidr TfNetwork#backup_subnet_cidr}
   */
   readonly backupSubnetCidr: string;
   /**
@@ -45,103 +45,103 @@ export interface AwsOdbNetworkConfig extends cdktn.TerraformMetaArguments {
   *    	- 224.0.0.0 - 239.255.255.255
   *    	- 240.0.0.0 - 255.255.255.255
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#client_subnet_cidr AwsOdbNetwork#client_subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#client_subnet_cidr TfNetwork#client_subnet_cidr}
   */
   readonly clientSubnetCidr: string;
   /**
   * The list of regions enabled for cross-region restore in the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#cross_region_s3_restore_sources_access AwsOdbNetwork#cross_region_s3_restore_sources_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#cross_region_s3_restore_sources_access TfNetwork#cross_region_s3_restore_sources_access}
   */
   readonly crossRegionS3RestoreSourcesAccess?: string[];
   /**
   * The name of the custom domain that the network is located. custom_domain_name and default_dns_prefix both can't be given.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#custom_domain_name AwsOdbNetwork#custom_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#custom_domain_name TfNetwork#custom_domain_name}
   */
   readonly customDomainName?: string;
   /**
   * The default DNS prefix for the network resource. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#default_dns_prefix AwsOdbNetwork#default_dns_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#default_dns_prefix TfNetwork#default_dns_prefix}
   */
   readonly defaultDnsPrefix?: string;
   /**
   * If set to true deletes associated OCI resources. Default false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#delete_associated_resources AwsOdbNetwork#delete_associated_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#delete_associated_resources TfNetwork#delete_associated_resources}
   */
   readonly deleteAssociatedResources?: boolean | cdktn.IResolvable;
   /**
   * The user-friendly name for the odb network. Changing this will force terraform to create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#display_name AwsOdbNetwork#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#display_name TfNetwork#display_name}
   */
   readonly displayName: string;
   /**
   * Specifies the configuration for Amazon KMS access from the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#kms_access AwsOdbNetwork#kms_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#kms_access TfNetwork#kms_access}
   */
   readonly kmsAccess?: string;
   /**
   * Specifies the endpoint policy for Amazon KMS access from the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#kms_policy_document AwsOdbNetwork#kms_policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#kms_policy_document TfNetwork#kms_policy_document}
   */
   readonly kmsPolicyDocument?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#region AwsOdbNetwork#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#region TfNetwork#region}
   */
   readonly region?: string;
   /**
   * Specifies the configuration for Amazon S3 access from the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#s3_access AwsOdbNetwork#s3_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#s3_access TfNetwork#s3_access}
   */
   readonly s3Access: string;
   /**
   * Specifies the endpoint policy for Amazon S3 access from the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#s3_policy_document AwsOdbNetwork#s3_policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#s3_policy_document TfNetwork#s3_policy_document}
   */
   readonly s3PolicyDocument?: string;
   /**
   * Specifies the configuration for Amazon STS access from the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#sts_access AwsOdbNetwork#sts_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#sts_access TfNetwork#sts_access}
   */
   readonly stsAccess?: string;
   /**
   * Specifies the endpoint policy for Amazon STS access from the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#sts_policy_document AwsOdbNetwork#sts_policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#sts_policy_document TfNetwork#sts_policy_document}
   */
   readonly stsPolicyDocument?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#tags AwsOdbNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#tags TfNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * Specifies the configuration for Zero-ETL access from the ODB network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#zero_etl_access AwsOdbNetwork#zero_etl_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#zero_etl_access TfNetwork#zero_etl_access}
   */
   readonly zeroEtlAccess: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#timeouts AwsOdbNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#timeouts TfNetwork#timeouts}
   */
-  readonly timeouts?: AwsOdbNetwork.TimeoutsProperty;
+  readonly timeouts?: TfNetwork.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network aws_odb_network}
 */
-export class AwsOdbNetwork extends cdktn.TerraformResource {
+export class TfNetwork extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -152,11 +152,11 @@ export class AwsOdbNetwork extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOdbNetwork resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNetwork resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOdbNetwork to import
-  * @param importFromId The id of the existing AwsOdbNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOdbNetwork to import is found
+  * @param importToId The construct id used in the generated config for the TfNetwork to import
+  * @param importFromId The id of the existing TfNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_network", importId: importFromId, provider });
@@ -171,9 +171,9 @@ export class AwsOdbNetwork extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOdbNetworkConfig
+  * @param options TfNetworkConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOdbNetworkConfig) {
+  public constructor(scope: Construct, id: string, config: TfNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_network',
       terraformGeneratorMetadata: {
@@ -399,13 +399,13 @@ export class AwsOdbNetwork extends cdktn.TerraformResource {
   }
 
   // managed_services - computed: true, optional: false, required: false
-  private _managedServices = new AwsOdbNetwork.ManagedServicesPropertyList(this, "managed_services", false);
+  private _managedServices = new TfNetwork.ManagedServicesPropertyList(this, "managed_services", false);
   public get managedServices() {
     return this._managedServices;
   }
 
   // oci_dns_forwarding_configs - computed: true, optional: false, required: false
-  private _ociDnsForwardingConfigs = new AwsOdbNetwork.OciDnsForwardingConfigsPropertyList(this, "oci_dns_forwarding_configs", false);
+  private _ociDnsForwardingConfigs = new TfNetwork.OciDnsForwardingConfigsPropertyList(this, "oci_dns_forwarding_configs", false);
   public get ociDnsForwardingConfigs() {
     return this._ociDnsForwardingConfigs;
   }
@@ -568,11 +568,11 @@ export class AwsOdbNetwork extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOdbNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOdbNetwork.TimeoutsProperty) {
+  public putTimeouts(value: TfNetwork.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -607,7 +607,7 @@ export class AwsOdbNetwork extends cdktn.TerraformResource {
       sts_policy_document: cdktn.stringToTerraform(this._stsPolicyDocument),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       zero_etl_access: cdktn.stringToTerraform(this._zeroEtlAccess),
-      timeouts: awsOdbNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -722,10 +722,10 @@ export class AwsOdbNetwork extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsOdbNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOdbNetwork.TimeoutsProperty",
+        storageClassType: "TfNetwork.TimeoutsProperty",
       },
     };
 
@@ -734,7 +734,7 @@ export class AwsOdbNetwork extends cdktn.TerraformResource {
   }
 }
 
-export function awsOdbNetworkCrossRegionS3RestoreSourcesAccessPropertyToTerraform(struct?: AwsOdbNetwork.CrossRegionS3RestoreSourcesAccessProperty): any {
+export function tfNetworkCrossRegionS3RestoreSourcesAccessPropertyToTerraform(struct?: TfNetwork.CrossRegionS3RestoreSourcesAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -744,7 +744,7 @@ export function awsOdbNetworkCrossRegionS3RestoreSourcesAccessPropertyToTerrafor
 }
 
 
-export function awsOdbNetworkCrossRegionS3RestoreSourcesAccessPropertyToHclTerraform(struct?: AwsOdbNetwork.CrossRegionS3RestoreSourcesAccessProperty): any {
+export function tfNetworkCrossRegionS3RestoreSourcesAccessPropertyToHclTerraform(struct?: TfNetwork.CrossRegionS3RestoreSourcesAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -755,7 +755,7 @@ export function awsOdbNetworkCrossRegionS3RestoreSourcesAccessPropertyToHclTerra
 }
 
 
-export function awsOdbNetworkKmsAccessPropertyToTerraform(struct?: AwsOdbNetwork.KmsAccessProperty): any {
+export function tfNetworkKmsAccessPropertyToTerraform(struct?: TfNetwork.KmsAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function awsOdbNetworkKmsAccessPropertyToTerraform(struct?: AwsOdbNetwork
 }
 
 
-export function awsOdbNetworkKmsAccessPropertyToHclTerraform(struct?: AwsOdbNetwork.KmsAccessProperty): any {
+export function tfNetworkKmsAccessPropertyToHclTerraform(struct?: TfNetwork.KmsAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function awsOdbNetworkKmsAccessPropertyToHclTerraform(struct?: AwsOdbNetw
 }
 
 
-export function awsOdbNetworkManagedS3BackupAccessPropertyToTerraform(struct?: AwsOdbNetwork.ManagedS3BackupAccessProperty): any {
+export function tfNetworkManagedS3BackupAccessPropertyToTerraform(struct?: TfNetwork.ManagedS3BackupAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -786,7 +786,7 @@ export function awsOdbNetworkManagedS3BackupAccessPropertyToTerraform(struct?: A
 }
 
 
-export function awsOdbNetworkManagedS3BackupAccessPropertyToHclTerraform(struct?: AwsOdbNetwork.ManagedS3BackupAccessProperty): any {
+export function tfNetworkManagedS3BackupAccessPropertyToHclTerraform(struct?: TfNetwork.ManagedS3BackupAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -797,7 +797,7 @@ export function awsOdbNetworkManagedS3BackupAccessPropertyToHclTerraform(struct?
 }
 
 
-export function awsOdbNetworkS3AccessPropertyToTerraform(struct?: AwsOdbNetwork.S3AccessProperty): any {
+export function tfNetworkS3AccessPropertyToTerraform(struct?: TfNetwork.S3AccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -807,7 +807,7 @@ export function awsOdbNetworkS3AccessPropertyToTerraform(struct?: AwsOdbNetwork.
 }
 
 
-export function awsOdbNetworkS3AccessPropertyToHclTerraform(struct?: AwsOdbNetwork.S3AccessProperty): any {
+export function tfNetworkS3AccessPropertyToHclTerraform(struct?: TfNetwork.S3AccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function awsOdbNetworkS3AccessPropertyToHclTerraform(struct?: AwsOdbNetwo
 }
 
 
-export function awsOdbNetworkServiceNetworkEndpointPropertyToTerraform(struct?: AwsOdbNetwork.ServiceNetworkEndpointProperty): any {
+export function tfNetworkServiceNetworkEndpointPropertyToTerraform(struct?: TfNetwork.ServiceNetworkEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,7 +828,7 @@ export function awsOdbNetworkServiceNetworkEndpointPropertyToTerraform(struct?: 
 }
 
 
-export function awsOdbNetworkServiceNetworkEndpointPropertyToHclTerraform(struct?: AwsOdbNetwork.ServiceNetworkEndpointProperty): any {
+export function tfNetworkServiceNetworkEndpointPropertyToHclTerraform(struct?: TfNetwork.ServiceNetworkEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -839,7 +839,7 @@ export function awsOdbNetworkServiceNetworkEndpointPropertyToHclTerraform(struct
 }
 
 
-export function awsOdbNetworkStsAccessPropertyToTerraform(struct?: AwsOdbNetwork.StsAccessProperty): any {
+export function tfNetworkStsAccessPropertyToTerraform(struct?: TfNetwork.StsAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -849,7 +849,7 @@ export function awsOdbNetworkStsAccessPropertyToTerraform(struct?: AwsOdbNetwork
 }
 
 
-export function awsOdbNetworkStsAccessPropertyToHclTerraform(struct?: AwsOdbNetwork.StsAccessProperty): any {
+export function tfNetworkStsAccessPropertyToHclTerraform(struct?: TfNetwork.StsAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -860,7 +860,7 @@ export function awsOdbNetworkStsAccessPropertyToHclTerraform(struct?: AwsOdbNetw
 }
 
 
-export function awsOdbNetworkZeroEtlAccessPropertyToTerraform(struct?: AwsOdbNetwork.ZeroEtlAccessProperty): any {
+export function tfNetworkZeroEtlAccessPropertyToTerraform(struct?: TfNetwork.ZeroEtlAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,7 +870,7 @@ export function awsOdbNetworkZeroEtlAccessPropertyToTerraform(struct?: AwsOdbNet
 }
 
 
-export function awsOdbNetworkZeroEtlAccessPropertyToHclTerraform(struct?: AwsOdbNetwork.ZeroEtlAccessProperty): any {
+export function tfNetworkZeroEtlAccessPropertyToHclTerraform(struct?: TfNetwork.ZeroEtlAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -881,7 +881,7 @@ export function awsOdbNetworkZeroEtlAccessPropertyToHclTerraform(struct?: AwsOdb
 }
 
 
-export function awsOdbNetworkManagedServicesPropertyToTerraform(struct?: AwsOdbNetwork.ManagedServicesProperty): any {
+export function tfNetworkManagedServicesPropertyToTerraform(struct?: TfNetwork.ManagedServicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -891,7 +891,7 @@ export function awsOdbNetworkManagedServicesPropertyToTerraform(struct?: AwsOdbN
 }
 
 
-export function awsOdbNetworkManagedServicesPropertyToHclTerraform(struct?: AwsOdbNetwork.ManagedServicesProperty): any {
+export function tfNetworkManagedServicesPropertyToHclTerraform(struct?: TfNetwork.ManagedServicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -902,7 +902,7 @@ export function awsOdbNetworkManagedServicesPropertyToHclTerraform(struct?: AwsO
 }
 
 
-export function awsOdbNetworkOciDnsForwardingConfigsPropertyToTerraform(struct?: AwsOdbNetwork.OciDnsForwardingConfigsProperty): any {
+export function tfNetworkOciDnsForwardingConfigsPropertyToTerraform(struct?: TfNetwork.OciDnsForwardingConfigsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -912,7 +912,7 @@ export function awsOdbNetworkOciDnsForwardingConfigsPropertyToTerraform(struct?:
 }
 
 
-export function awsOdbNetworkOciDnsForwardingConfigsPropertyToHclTerraform(struct?: AwsOdbNetwork.OciDnsForwardingConfigsProperty): any {
+export function tfNetworkOciDnsForwardingConfigsPropertyToHclTerraform(struct?: TfNetwork.OciDnsForwardingConfigsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -923,7 +923,7 @@ export function awsOdbNetworkOciDnsForwardingConfigsPropertyToHclTerraform(struc
 }
 
 
-export function awsOdbNetworkTimeoutsPropertyToTerraform(struct?: AwsOdbNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfNetworkTimeoutsPropertyToTerraform(struct?: TfNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -936,7 +936,7 @@ export function awsOdbNetworkTimeoutsPropertyToTerraform(struct?: AwsOdbNetwork.
 }
 
 
-export function awsOdbNetworkTimeoutsPropertyToHclTerraform(struct?: AwsOdbNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfNetworkTimeoutsPropertyToHclTerraform(struct?: TfNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function awsOdbNetworkTimeoutsPropertyToHclTerraform(struct?: AwsOdbNetwo
 }
 
 
-export namespace AwsOdbNetwork {
+export namespace TfNetwork {
 export interface CrossRegionS3RestoreSourcesAccessProperty {
 }
 export class CrossRegionS3RestoreSourcesAccessPropertyOutputReference extends cdktn.ComplexObject {
@@ -1585,19 +1585,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#create AwsOdbNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#create TfNetwork#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#delete AwsOdbNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#delete TfNetwork#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#update AwsOdbNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_network#update TfNetwork#update}
   */
   readonly update?: string;
 }

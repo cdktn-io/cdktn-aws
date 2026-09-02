@@ -5,134 +5,134 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSnsTopicConfig extends cdktn.TerraformMetaArguments {
+export interface TfTopicConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#application_failure_feedback_role_arn AwsSnsTopic#application_failure_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#application_failure_feedback_role_arn TfTopic#application_failure_feedback_role_arn}
   */
   readonly applicationFailureFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#application_success_feedback_role_arn AwsSnsTopic#application_success_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#application_success_feedback_role_arn TfTopic#application_success_feedback_role_arn}
   */
   readonly applicationSuccessFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#application_success_feedback_sample_rate AwsSnsTopic#application_success_feedback_sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#application_success_feedback_sample_rate TfTopic#application_success_feedback_sample_rate}
   */
   readonly applicationSuccessFeedbackSampleRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#archive_policy AwsSnsTopic#archive_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#archive_policy TfTopic#archive_policy}
   */
   readonly archivePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#content_based_deduplication AwsSnsTopic#content_based_deduplication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#content_based_deduplication TfTopic#content_based_deduplication}
   */
   readonly contentBasedDeduplication?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#delivery_policy AwsSnsTopic#delivery_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#delivery_policy TfTopic#delivery_policy}
   */
   readonly deliveryPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#display_name AwsSnsTopic#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#display_name TfTopic#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#fifo_throughput_scope AwsSnsTopic#fifo_throughput_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#fifo_throughput_scope TfTopic#fifo_throughput_scope}
   */
   readonly fifoThroughputScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#fifo_topic AwsSnsTopic#fifo_topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#fifo_topic TfTopic#fifo_topic}
   */
   readonly fifoTopic?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#firehose_failure_feedback_role_arn AwsSnsTopic#firehose_failure_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#firehose_failure_feedback_role_arn TfTopic#firehose_failure_feedback_role_arn}
   */
   readonly firehoseFailureFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#firehose_success_feedback_role_arn AwsSnsTopic#firehose_success_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#firehose_success_feedback_role_arn TfTopic#firehose_success_feedback_role_arn}
   */
   readonly firehoseSuccessFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#firehose_success_feedback_sample_rate AwsSnsTopic#firehose_success_feedback_sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#firehose_success_feedback_sample_rate TfTopic#firehose_success_feedback_sample_rate}
   */
   readonly firehoseSuccessFeedbackSampleRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#http_failure_feedback_role_arn AwsSnsTopic#http_failure_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#http_failure_feedback_role_arn TfTopic#http_failure_feedback_role_arn}
   */
   readonly httpFailureFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#http_success_feedback_role_arn AwsSnsTopic#http_success_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#http_success_feedback_role_arn TfTopic#http_success_feedback_role_arn}
   */
   readonly httpSuccessFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#http_success_feedback_sample_rate AwsSnsTopic#http_success_feedback_sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#http_success_feedback_sample_rate TfTopic#http_success_feedback_sample_rate}
   */
   readonly httpSuccessFeedbackSampleRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#id AwsSnsTopic#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#id TfTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#kms_master_key_id AwsSnsTopic#kms_master_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#kms_master_key_id TfTopic#kms_master_key_id}
   */
   readonly kmsMasterKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#lambda_failure_feedback_role_arn AwsSnsTopic#lambda_failure_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#lambda_failure_feedback_role_arn TfTopic#lambda_failure_feedback_role_arn}
   */
   readonly lambdaFailureFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#lambda_success_feedback_role_arn AwsSnsTopic#lambda_success_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#lambda_success_feedback_role_arn TfTopic#lambda_success_feedback_role_arn}
   */
   readonly lambdaSuccessFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#lambda_success_feedback_sample_rate AwsSnsTopic#lambda_success_feedback_sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#lambda_success_feedback_sample_rate TfTopic#lambda_success_feedback_sample_rate}
   */
   readonly lambdaSuccessFeedbackSampleRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#name AwsSnsTopic#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#name TfTopic#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#name_prefix AwsSnsTopic#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#name_prefix TfTopic#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#policy AwsSnsTopic#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#policy TfTopic#policy}
   */
   readonly policy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#region AwsSnsTopic#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#region TfTopic#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#signature_version AwsSnsTopic#signature_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#signature_version TfTopic#signature_version}
   */
   readonly signatureVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#sqs_failure_feedback_role_arn AwsSnsTopic#sqs_failure_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#sqs_failure_feedback_role_arn TfTopic#sqs_failure_feedback_role_arn}
   */
   readonly sqsFailureFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#sqs_success_feedback_role_arn AwsSnsTopic#sqs_success_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#sqs_success_feedback_role_arn TfTopic#sqs_success_feedback_role_arn}
   */
   readonly sqsSuccessFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#sqs_success_feedback_sample_rate AwsSnsTopic#sqs_success_feedback_sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#sqs_success_feedback_sample_rate TfTopic#sqs_success_feedback_sample_rate}
   */
   readonly sqsSuccessFeedbackSampleRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#tags AwsSnsTopic#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#tags TfTopic#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#tags_all AwsSnsTopic#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#tags_all TfTopic#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#tracing_config AwsSnsTopic#tracing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#tracing_config TfTopic#tracing_config}
   */
   readonly tracingConfig?: string;
 }
@@ -140,7 +140,7 @@ export interface AwsSnsTopicConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic aws_sns_topic}
 */
-export class AwsSnsTopic extends cdktn.TerraformResource {
+export class TfTopic extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -151,11 +151,11 @@ export class AwsSnsTopic extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSnsTopic resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTopic resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSnsTopic to import
-  * @param importFromId The id of the existing AwsSnsTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSnsTopic to import is found
+  * @param importToId The construct id used in the generated config for the TfTopic to import
+  * @param importFromId The id of the existing TfTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_topic#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTopic to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sns_topic", importId: importFromId, provider });
@@ -170,9 +170,9 @@ export class AwsSnsTopic extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSnsTopicConfig = {}
+  * @param options TfTopicConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsSnsTopicConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfTopicConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_sns_topic',
       terraformGeneratorMetadata: {

@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpclatticeAuthPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfAuthPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#id AwsVpclatticeAuthPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#id TfAuthPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#policy AwsVpclatticeAuthPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#policy TfAuthPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#region AwsVpclatticeAuthPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#region TfAuthPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#resource_identifier AwsVpclatticeAuthPolicy#resource_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#resource_identifier TfAuthPolicy#resource_identifier}
   */
   readonly resourceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#state AwsVpclatticeAuthPolicy#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#state TfAuthPolicy#state}
   */
   readonly state?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#timeouts AwsVpclatticeAuthPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#timeouts TfAuthPolicy#timeouts}
   */
-  readonly timeouts?: AwsVpclatticeAuthPolicy.TimeoutsProperty;
+  readonly timeouts?: TfAuthPolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy aws_vpclattice_auth_policy}
 */
-export class AwsVpclatticeAuthPolicy extends cdktn.TerraformResource {
+export class TfAuthPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsVpclatticeAuthPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpclatticeAuthPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAuthPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpclatticeAuthPolicy to import
-  * @param importFromId The id of the existing AwsVpclatticeAuthPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpclatticeAuthPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfAuthPolicy to import
+  * @param importFromId The id of the existing TfAuthPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAuthPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_auth_policy", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsVpclatticeAuthPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpclatticeAuthPolicyConfig
+  * @param options TfAuthPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpclatticeAuthPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfAuthPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_auth_policy',
       terraformGeneratorMetadata: {
@@ -177,11 +177,11 @@ export class AwsVpclatticeAuthPolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpclatticeAuthPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAuthPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpclatticeAuthPolicy.TimeoutsProperty) {
+  public putTimeouts(value: TfAuthPolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -203,7 +203,7 @@ export class AwsVpclatticeAuthPolicy extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       resource_identifier: cdktn.stringToTerraform(this._resourceIdentifier),
       state: cdktn.stringToTerraform(this._state),
-      timeouts: awsVpclatticeAuthPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfAuthPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -240,10 +240,10 @@ export class AwsVpclatticeAuthPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsVpclatticeAuthPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAuthPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpclatticeAuthPolicy.TimeoutsProperty",
+        storageClassType: "TfAuthPolicy.TimeoutsProperty",
       },
     };
 
@@ -252,7 +252,7 @@ export class AwsVpclatticeAuthPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpclatticeAuthPolicyTimeoutsPropertyToTerraform(struct?: AwsVpclatticeAuthPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAuthPolicyTimeoutsPropertyToTerraform(struct?: TfAuthPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function awsVpclatticeAuthPolicyTimeoutsPropertyToTerraform(struct?: AwsV
 }
 
 
-export function awsVpclatticeAuthPolicyTimeoutsPropertyToHclTerraform(struct?: AwsVpclatticeAuthPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAuthPolicyTimeoutsPropertyToHclTerraform(struct?: TfAuthPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,18 +296,18 @@ export function awsVpclatticeAuthPolicyTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsVpclatticeAuthPolicy {
+export namespace TfAuthPolicy {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#create AwsVpclatticeAuthPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#create TfAuthPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#delete AwsVpclatticeAuthPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#delete TfAuthPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#update AwsVpclatticeAuthPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_auth_policy#update TfAuthPolicy#update}
   */
   readonly update?: string;
 }

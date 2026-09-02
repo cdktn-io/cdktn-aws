@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcEndpointServicePrivateDnsVerificationConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointServicePrivateDnsVerificationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#region AwsVpcEndpointServicePrivateDnsVerification#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#region TfEndpointServicePrivateDnsVerification#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#service_id AwsVpcEndpointServicePrivateDnsVerification#service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#service_id TfEndpointServicePrivateDnsVerification#service_id}
   */
   readonly serviceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#wait_for_verification AwsVpcEndpointServicePrivateDnsVerification#wait_for_verification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#wait_for_verification TfEndpointServicePrivateDnsVerification#wait_for_verification}
   */
   readonly waitForVerification?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#timeouts AwsVpcEndpointServicePrivateDnsVerification#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#timeouts TfEndpointServicePrivateDnsVerification#timeouts}
   */
-  readonly timeouts?: AwsVpcEndpointServicePrivateDnsVerification.TimeoutsProperty;
+  readonly timeouts?: TfEndpointServicePrivateDnsVerification.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification aws_vpc_endpoint_service_private_dns_verification}
 */
-export class AwsVpcEndpointServicePrivateDnsVerification extends cdktn.TerraformResource {
+export class TfEndpointServicePrivateDnsVerification extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsVpcEndpointServicePrivateDnsVerification extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcEndpointServicePrivateDnsVerification resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpointServicePrivateDnsVerification resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcEndpointServicePrivateDnsVerification to import
-  * @param importFromId The id of the existing AwsVpcEndpointServicePrivateDnsVerification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcEndpointServicePrivateDnsVerification to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpointServicePrivateDnsVerification to import
+  * @param importFromId The id of the existing TfEndpointServicePrivateDnsVerification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpointServicePrivateDnsVerification to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_service_private_dns_verification", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsVpcEndpointServicePrivateDnsVerification extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcEndpointServicePrivateDnsVerificationConfig
+  * @param options TfEndpointServicePrivateDnsVerificationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcEndpointServicePrivateDnsVerificationConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointServicePrivateDnsVerificationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint_service_private_dns_verification',
       terraformGeneratorMetadata: {
@@ -135,11 +135,11 @@ export class AwsVpcEndpointServicePrivateDnsVerification extends cdktn.Terraform
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpcEndpointServicePrivateDnsVerification.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEndpointServicePrivateDnsVerification.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpcEndpointServicePrivateDnsVerification.TimeoutsProperty) {
+  public putTimeouts(value: TfEndpointServicePrivateDnsVerification.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -159,7 +159,7 @@ export class AwsVpcEndpointServicePrivateDnsVerification extends cdktn.Terraform
       region: cdktn.stringToTerraform(this._region),
       service_id: cdktn.stringToTerraform(this._serviceId),
       wait_for_verification: cdktn.booleanToTerraform(this._waitForVerification),
-      timeouts: awsVpcEndpointServicePrivateDnsVerificationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfEndpointServicePrivateDnsVerificationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class AwsVpcEndpointServicePrivateDnsVerification extends cdktn.Terraform
         storageClassType: "boolean",
       },
       timeouts: {
-        value: awsVpcEndpointServicePrivateDnsVerificationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEndpointServicePrivateDnsVerificationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpcEndpointServicePrivateDnsVerification.TimeoutsProperty",
+        storageClassType: "TfEndpointServicePrivateDnsVerification.TimeoutsProperty",
       },
     };
 
@@ -196,7 +196,7 @@ export class AwsVpcEndpointServicePrivateDnsVerification extends cdktn.Terraform
   }
 }
 
-export function awsVpcEndpointServicePrivateDnsVerificationTimeoutsPropertyToTerraform(struct?: AwsVpcEndpointServicePrivateDnsVerification.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointServicePrivateDnsVerificationTimeoutsPropertyToTerraform(struct?: TfEndpointServicePrivateDnsVerification.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -207,7 +207,7 @@ export function awsVpcEndpointServicePrivateDnsVerificationTimeoutsPropertyToTer
 }
 
 
-export function awsVpcEndpointServicePrivateDnsVerificationTimeoutsPropertyToHclTerraform(struct?: AwsVpcEndpointServicePrivateDnsVerification.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointServicePrivateDnsVerificationTimeoutsPropertyToHclTerraform(struct?: TfEndpointServicePrivateDnsVerification.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,12 +226,12 @@ export function awsVpcEndpointServicePrivateDnsVerificationTimeoutsPropertyToHcl
 }
 
 
-export namespace AwsVpcEndpointServicePrivateDnsVerification {
+export namespace TfEndpointServicePrivateDnsVerification {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#create AwsVpcEndpointServicePrivateDnsVerification#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service_private_dns_verification#create TfEndpointServicePrivateDnsVerification#create}
   */
   readonly create?: string;
 }

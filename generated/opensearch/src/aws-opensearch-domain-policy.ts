@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOpensearchDomainPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#access_policies AwsOpensearchDomainPolicy#access_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#access_policies TfDomainPolicy#access_policies}
   */
   readonly accessPolicies: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#domain_name AwsOpensearchDomainPolicy#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#domain_name TfDomainPolicy#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#id AwsOpensearchDomainPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#id TfDomainPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface AwsOpensearchDomainPolicyConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#region AwsOpensearchDomainPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#region TfDomainPolicy#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#timeouts AwsOpensearchDomainPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#timeouts TfDomainPolicy#timeouts}
   */
-  readonly timeouts?: AwsOpensearchDomainPolicy.TimeoutsProperty;
+  readonly timeouts?: TfDomainPolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy aws_opensearch_domain_policy}
 */
-export class AwsOpensearchDomainPolicy extends cdktn.TerraformResource {
+export class TfDomainPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsOpensearchDomainPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOpensearchDomainPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOpensearchDomainPolicy to import
-  * @param importFromId The id of the existing AwsOpensearchDomainPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOpensearchDomainPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainPolicy to import
+  * @param importFromId The id of the existing TfDomainPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_domain_policy", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsOpensearchDomainPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOpensearchDomainPolicyConfig
+  * @param options TfDomainPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOpensearchDomainPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_domain_policy',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsOpensearchDomainPolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOpensearchDomainPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDomainPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOpensearchDomainPolicy.TimeoutsProperty) {
+  public putTimeouts(value: TfDomainPolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class AwsOpensearchDomainPolicy extends cdktn.TerraformResource {
       domain_name: cdktn.stringToTerraform(this._domainName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsOpensearchDomainPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDomainPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsOpensearchDomainPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsOpensearchDomainPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDomainPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOpensearchDomainPolicy.TimeoutsProperty",
+        storageClassType: "TfDomainPolicy.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsOpensearchDomainPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function awsOpensearchDomainPolicyTimeoutsPropertyToTerraform(struct?: AwsOpensearchDomainPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainPolicyTimeoutsPropertyToTerraform(struct?: TfDomainPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function awsOpensearchDomainPolicyTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsOpensearchDomainPolicyTimeoutsPropertyToHclTerraform(struct?: AwsOpensearchDomainPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainPolicyTimeoutsPropertyToHclTerraform(struct?: TfDomainPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,14 +261,14 @@ export function awsOpensearchDomainPolicyTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsOpensearchDomainPolicy {
+export namespace TfDomainPolicy {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#delete AwsOpensearchDomainPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#delete TfDomainPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#update AwsOpensearchDomainPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_policy#update TfDomainPolicy#update}
   */
   readonly update?: string;
 }

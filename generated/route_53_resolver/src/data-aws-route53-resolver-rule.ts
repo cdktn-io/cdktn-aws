@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRoute53ResolverRuleConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfResolverRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#domain_name DataAwsRoute53ResolverRule#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#domain_name DataTfResolverRule#domain_name}
   */
   readonly domainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#id DataAwsRoute53ResolverRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#id DataTfResolverRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#name DataAwsRoute53ResolverRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#name DataTfResolverRule#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#region DataAwsRoute53ResolverRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#region DataTfResolverRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#resolver_endpoint_id DataAwsRoute53ResolverRule#resolver_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#resolver_endpoint_id DataTfResolverRule#resolver_endpoint_id}
   */
   readonly resolverEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#resolver_rule_id DataAwsRoute53ResolverRule#resolver_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#resolver_rule_id DataTfResolverRule#resolver_rule_id}
   */
   readonly resolverRuleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#rule_type DataAwsRoute53ResolverRule#rule_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#rule_type DataTfResolverRule#rule_type}
   */
   readonly ruleType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#tags DataAwsRoute53ResolverRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#tags DataTfResolverRule#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -48,7 +48,7 @@ export interface DataAwsRoute53ResolverRuleConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule aws_route53_resolver_rule}
 */
-export class DataAwsRoute53ResolverRule extends cdktn.TerraformDataSource {
+export class DataTfResolverRule extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class DataAwsRoute53ResolverRule extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRoute53ResolverRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfResolverRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRoute53ResolverRule to import
-  * @param importFromId The id of the existing DataAwsRoute53ResolverRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRoute53ResolverRule to import is found
+  * @param importToId The construct id used in the generated config for the DataTfResolverRule to import
+  * @param importFromId The id of the existing DataTfResolverRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfResolverRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_rule", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class DataAwsRoute53ResolverRule extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRoute53ResolverRuleConfig = {}
+  * @param options DataTfResolverRuleConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRoute53ResolverRuleConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfResolverRuleConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_rule',
       terraformGeneratorMetadata: {
@@ -254,7 +254,7 @@ export class DataAwsRoute53ResolverRule extends cdktn.TerraformDataSource {
   }
 
   // target_ips - computed: true, optional: false, required: false
-  private _targetIps = new DataAwsRoute53ResolverRule.TargetIpsPropertyList(this, "target_ips", true);
+  private _targetIps = new DataTfResolverRule.TargetIpsPropertyList(this, "target_ips", true);
   public get targetIps() {
     return this._targetIps;
   }
@@ -333,7 +333,7 @@ export class DataAwsRoute53ResolverRule extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsRoute53ResolverRuleTargetIpsPropertyToTerraform(struct?: DataAwsRoute53ResolverRule.TargetIpsProperty): any {
+export function dataTfResolverRuleTargetIpsPropertyToTerraform(struct?: DataTfResolverRule.TargetIpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataAwsRoute53ResolverRuleTargetIpsPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsRoute53ResolverRuleTargetIpsPropertyToHclTerraform(struct?: DataAwsRoute53ResolverRule.TargetIpsProperty): any {
+export function dataTfResolverRuleTargetIpsPropertyToHclTerraform(struct?: DataTfResolverRule.TargetIpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function dataAwsRoute53ResolverRuleTargetIpsPropertyToHclTerraform(struct
 }
 
 
-export namespace DataAwsRoute53ResolverRule {
+export namespace DataTfResolverRule {
 export interface TargetIpsProperty {
 }
 export class TargetIpsPropertyOutputReference extends cdktn.ComplexObject {

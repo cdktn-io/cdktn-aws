@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontMonitoringSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfMonitoringSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#distribution_id AwsCloudfrontMonitoringSubscription#distribution_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#distribution_id TfMonitoringSubscription#distribution_id}
   */
   readonly distributionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#id AwsCloudfrontMonitoringSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#id TfMonitoringSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,15 +20,15 @@ export interface AwsCloudfrontMonitoringSubscriptionConfig extends cdktn.Terrafo
   /**
   * monitoring_subscription block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#monitoring_subscription AwsCloudfrontMonitoringSubscription#monitoring_subscription}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#monitoring_subscription TfMonitoringSubscription#monitoring_subscription}
   */
-  readonly monitoringSubscription: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty;
+  readonly monitoringSubscription: TfMonitoringSubscription.MonitoringSubscriptionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription aws_cloudfront_monitoring_subscription}
 */
-export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource {
+export class TfMonitoringSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontMonitoringSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMonitoringSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontMonitoringSubscription to import
-  * @param importFromId The id of the existing AwsCloudfrontMonitoringSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontMonitoringSubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfMonitoringSubscription to import
+  * @param importFromId The id of the existing TfMonitoringSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMonitoringSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_monitoring_subscription", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontMonitoringSubscriptionConfig
+  * @param options TfMonitoringSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontMonitoringSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfMonitoringSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_monitoring_subscription',
       terraformGeneratorMetadata: {
@@ -115,11 +115,11 @@ export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource
   }
 
   // monitoring_subscription - computed: false, optional: false, required: true
-  private _monitoringSubscription = new AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference(this, "monitoring_subscription");
+  private _monitoringSubscription = new TfMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference(this, "monitoring_subscription");
   public get monitoringSubscription() {
     return this._monitoringSubscription;
   }
-  public putMonitoringSubscription(value: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty) {
+  public putMonitoringSubscription(value: TfMonitoringSubscription.MonitoringSubscriptionProperty) {
     this._monitoringSubscription.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -135,7 +135,7 @@ export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource
     return {
       distribution_id: cdktn.stringToTerraform(this._distributionId),
       id: cdktn.stringToTerraform(this._id),
-      monitoring_subscription: awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToTerraform(this._monitoringSubscription.internalValue),
+      monitoring_subscription: tfMonitoringSubscriptionMonitoringSubscriptionPropertyToTerraform(this._monitoringSubscription.internalValue),
     };
   }
 
@@ -154,10 +154,10 @@ export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource
         storageClassType: "string",
       },
       monitoring_subscription: {
-        value: awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToHclTerraform(this._monitoringSubscription.internalValue),
+        value: tfMonitoringSubscriptionMonitoringSubscriptionPropertyToHclTerraform(this._monitoringSubscription.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyList",
+        storageClassType: "TfMonitoringSubscription.MonitoringSubscriptionPropertyList",
       },
     };
 
@@ -166,7 +166,7 @@ export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource
   }
 }
 
-export function awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToTerraform(struct?: AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigPropertyOutputReference | AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty): any {
+export function tfMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToTerraform(struct?: TfMonitoringSubscription.RealtimeMetricsSubscriptionConfigPropertyOutputReference | TfMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -177,7 +177,7 @@ export function awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionCo
 }
 
 
-export function awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToHclTerraform(struct?: AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigPropertyOutputReference | AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty): any {
+export function tfMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToHclTerraform(struct?: TfMonitoringSubscription.RealtimeMetricsSubscriptionConfigPropertyOutputReference | TfMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,25 +196,25 @@ export function awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionCo
 }
 
 
-export function awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToTerraform(struct?: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference | AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty): any {
+export function tfMonitoringSubscriptionMonitoringSubscriptionPropertyToTerraform(struct?: TfMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference | TfMonitoringSubscription.MonitoringSubscriptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    realtime_metrics_subscription_config: awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToTerraform(struct!.realtimeMetricsSubscriptionConfig),
+    realtime_metrics_subscription_config: tfMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToTerraform(struct!.realtimeMetricsSubscriptionConfig),
   }
 }
 
 
-export function awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToHclTerraform(struct?: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference | AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty): any {
+export function tfMonitoringSubscriptionMonitoringSubscriptionPropertyToHclTerraform(struct?: TfMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference | TfMonitoringSubscription.MonitoringSubscriptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     realtime_metrics_subscription_config: {
-      value: awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToHclTerraform(struct!.realtimeMetricsSubscriptionConfig),
+      value: tfMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToHclTerraform(struct!.realtimeMetricsSubscriptionConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RealtimeMetricsSubscriptionConfigPropertyList",
@@ -226,10 +226,10 @@ export function awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropert
 }
 
 
-export namespace AwsCloudfrontMonitoringSubscription {
+export namespace TfMonitoringSubscription {
 export interface RealtimeMetricsSubscriptionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#realtime_metrics_subscription_status AwsCloudfrontMonitoringSubscription#realtime_metrics_subscription_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#realtime_metrics_subscription_status TfMonitoringSubscription#realtime_metrics_subscription_status}
   */
   readonly realtimeMetricsSubscriptionStatus: string;
 }
@@ -282,7 +282,7 @@ export interface MonitoringSubscriptionProperty {
   /**
   * realtime_metrics_subscription_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#realtime_metrics_subscription_config AwsCloudfrontMonitoringSubscription#realtime_metrics_subscription_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#realtime_metrics_subscription_config TfMonitoringSubscription#realtime_metrics_subscription_config}
   */
   readonly realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty;
 }

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchLogStorageTierPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfStorageTierPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_storage_tier_policy#region AwsCloudwatchLogStorageTierPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_storage_tier_policy#region TfStorageTierPolicy#region}
   */
   readonly region?: string;
   /**
   * The storage tier to set for the account. Valid values are `STANDARD` or `INTELLIGENT_TIERING`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_storage_tier_policy#storage_tier AwsCloudwatchLogStorageTierPolicy#storage_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_storage_tier_policy#storage_tier TfStorageTierPolicy#storage_tier}
   */
   readonly storageTier: string;
 }
@@ -23,7 +23,7 @@ export interface AwsCloudwatchLogStorageTierPolicyConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_storage_tier_policy aws_cloudwatch_log_storage_tier_policy}
 */
-export class AwsCloudwatchLogStorageTierPolicy extends cdktn.TerraformResource {
+export class TfStorageTierPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class AwsCloudwatchLogStorageTierPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchLogStorageTierPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfStorageTierPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchLogStorageTierPolicy to import
-  * @param importFromId The id of the existing AwsCloudwatchLogStorageTierPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_storage_tier_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchLogStorageTierPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfStorageTierPolicy to import
+  * @param importFromId The id of the existing TfStorageTierPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_storage_tier_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfStorageTierPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_log_storage_tier_policy", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class AwsCloudwatchLogStorageTierPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchLogStorageTierPolicyConfig
+  * @param options TfStorageTierPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchLogStorageTierPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfStorageTierPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_log_storage_tier_policy',
       terraformGeneratorMetadata: {

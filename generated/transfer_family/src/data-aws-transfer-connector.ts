@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsTransferConnectorConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfConnectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_connector#id DataAwsTransferConnector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_connector#id DataTfConnector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,7 +16,7 @@ export interface DataAwsTransferConnectorConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_connector#region DataAwsTransferConnector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_connector#region DataTfConnector#region}
   */
   readonly region?: string;
 }
@@ -24,7 +24,7 @@ export interface DataAwsTransferConnectorConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_connector aws_transfer_connector}
 */
-export class DataAwsTransferConnector extends cdktn.TerraformDataSource {
+export class DataTfConnector extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -35,11 +35,11 @@ export class DataAwsTransferConnector extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsTransferConnector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfConnector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsTransferConnector to import
-  * @param importFromId The id of the existing DataAwsTransferConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_connector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsTransferConnector to import is found
+  * @param importToId The construct id used in the generated config for the DataTfConnector to import
+  * @param importFromId The id of the existing DataTfConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_connector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfConnector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_connector", importId: importFromId, provider });
@@ -54,9 +54,9 @@ export class DataAwsTransferConnector extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsTransferConnectorConfig
+  * @param options DataTfConnectorConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsTransferConnectorConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfConnectorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_connector',
       terraformGeneratorMetadata: {
@@ -91,13 +91,13 @@ export class DataAwsTransferConnector extends cdktn.TerraformDataSource {
   }
 
   // as2_config - computed: true, optional: false, required: false
-  private _as2Config = new DataAwsTransferConnector.As2ConfigPropertyList(this, "as2_config", false);
+  private _as2Config = new DataTfConnector.As2ConfigPropertyList(this, "as2_config", false);
   public get as2Config() {
     return this._as2Config;
   }
 
   // egress_config - computed: true, optional: false, required: false
-  private _egressConfig = new DataAwsTransferConnector.EgressConfigPropertyList(this, "egress_config", false);
+  private _egressConfig = new DataTfConnector.EgressConfigPropertyList(this, "egress_config", false);
   public get egressConfig() {
     return this._egressConfig;
   }
@@ -147,7 +147,7 @@ export class DataAwsTransferConnector extends cdktn.TerraformDataSource {
   }
 
   // sftp_config - computed: true, optional: false, required: false
-  private _sftpConfig = new DataAwsTransferConnector.SftpConfigPropertyList(this, "sftp_config", false);
+  private _sftpConfig = new DataTfConnector.SftpConfigPropertyList(this, "sftp_config", false);
   public get sftpConfig() {
     return this._sftpConfig;
   }
@@ -195,7 +195,7 @@ export class DataAwsTransferConnector extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsTransferConnectorAs2ConfigPropertyToTerraform(struct?: DataAwsTransferConnector.As2ConfigProperty): any {
+export function dataTfConnectorAs2ConfigPropertyToTerraform(struct?: DataTfConnector.As2ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function dataAwsTransferConnectorAs2ConfigPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsTransferConnectorAs2ConfigPropertyToHclTerraform(struct?: DataAwsTransferConnector.As2ConfigProperty): any {
+export function dataTfConnectorAs2ConfigPropertyToHclTerraform(struct?: DataTfConnector.As2ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function dataAwsTransferConnectorAs2ConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsTransferConnectorVpcLatticePropertyToTerraform(struct?: DataAwsTransferConnector.VpcLatticeProperty): any {
+export function dataTfConnectorVpcLatticePropertyToTerraform(struct?: DataTfConnector.VpcLatticeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,7 +226,7 @@ export function dataAwsTransferConnectorVpcLatticePropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsTransferConnectorVpcLatticePropertyToHclTerraform(struct?: DataAwsTransferConnector.VpcLatticeProperty): any {
+export function dataTfConnectorVpcLatticePropertyToHclTerraform(struct?: DataTfConnector.VpcLatticeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function dataAwsTransferConnectorVpcLatticePropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsTransferConnectorEgressConfigPropertyToTerraform(struct?: DataAwsTransferConnector.EgressConfigProperty): any {
+export function dataTfConnectorEgressConfigPropertyToTerraform(struct?: DataTfConnector.EgressConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,7 +247,7 @@ export function dataAwsTransferConnectorEgressConfigPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsTransferConnectorEgressConfigPropertyToHclTerraform(struct?: DataAwsTransferConnector.EgressConfigProperty): any {
+export function dataTfConnectorEgressConfigPropertyToHclTerraform(struct?: DataTfConnector.EgressConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -258,7 +258,7 @@ export function dataAwsTransferConnectorEgressConfigPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsTransferConnectorSftpConfigPropertyToTerraform(struct?: DataAwsTransferConnector.SftpConfigProperty): any {
+export function dataTfConnectorSftpConfigPropertyToTerraform(struct?: DataTfConnector.SftpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function dataAwsTransferConnectorSftpConfigPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsTransferConnectorSftpConfigPropertyToHclTerraform(struct?: DataAwsTransferConnector.SftpConfigProperty): any {
+export function dataTfConnectorSftpConfigPropertyToHclTerraform(struct?: DataTfConnector.SftpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function dataAwsTransferConnectorSftpConfigPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataAwsTransferConnector {
+export namespace DataTfConnector {
 export interface As2ConfigProperty {
 }
 export class As2ConfigPropertyOutputReference extends cdktn.ComplexObject {

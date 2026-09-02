@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCognitoRiskConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfRiskConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#client_id AwsCognitoRiskConfiguration#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#client_id TfRiskConfiguration#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#id AwsCognitoRiskConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#id TfRiskConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,37 +20,37 @@ export interface AwsCognitoRiskConfigurationConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#region AwsCognitoRiskConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#region TfRiskConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#user_pool_id AwsCognitoRiskConfiguration#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#user_pool_id TfRiskConfiguration#user_pool_id}
   */
   readonly userPoolId: string;
   /**
   * account_takeover_risk_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#account_takeover_risk_configuration AwsCognitoRiskConfiguration#account_takeover_risk_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#account_takeover_risk_configuration TfRiskConfiguration#account_takeover_risk_configuration}
   */
-  readonly accountTakeoverRiskConfiguration?: AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationProperty;
+  readonly accountTakeoverRiskConfiguration?: TfRiskConfiguration.AccountTakeoverRiskConfigurationProperty;
   /**
   * compromised_credentials_risk_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#compromised_credentials_risk_configuration AwsCognitoRiskConfiguration#compromised_credentials_risk_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#compromised_credentials_risk_configuration TfRiskConfiguration#compromised_credentials_risk_configuration}
   */
-  readonly compromisedCredentialsRiskConfiguration?: AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty;
+  readonly compromisedCredentialsRiskConfiguration?: TfRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty;
   /**
   * risk_exception_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#risk_exception_configuration AwsCognitoRiskConfiguration#risk_exception_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#risk_exception_configuration TfRiskConfiguration#risk_exception_configuration}
   */
-  readonly riskExceptionConfiguration?: AwsCognitoRiskConfiguration.RiskExceptionConfigurationProperty;
+  readonly riskExceptionConfiguration?: TfRiskConfiguration.RiskExceptionConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration aws_cognito_risk_configuration}
 */
-export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
+export class TfRiskConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCognitoRiskConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRiskConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCognitoRiskConfiguration to import
-  * @param importFromId The id of the existing AwsCognitoRiskConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCognitoRiskConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfRiskConfiguration to import
+  * @param importFromId The id of the existing TfRiskConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRiskConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_risk_configuration", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCognitoRiskConfigurationConfig
+  * @param options TfRiskConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCognitoRiskConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfRiskConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_risk_configuration',
       terraformGeneratorMetadata: {
@@ -173,11 +173,11 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
   }
 
   // account_takeover_risk_configuration - computed: false, optional: true, required: false
-  private _accountTakeoverRiskConfiguration = new AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationPropertyOutputReference(this, "account_takeover_risk_configuration");
+  private _accountTakeoverRiskConfiguration = new TfRiskConfiguration.AccountTakeoverRiskConfigurationPropertyOutputReference(this, "account_takeover_risk_configuration");
   public get accountTakeoverRiskConfiguration() {
     return this._accountTakeoverRiskConfiguration;
   }
-  public putAccountTakeoverRiskConfiguration(value: AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationProperty) {
+  public putAccountTakeoverRiskConfiguration(value: TfRiskConfiguration.AccountTakeoverRiskConfigurationProperty) {
     this._accountTakeoverRiskConfiguration.internalValue = value;
   }
   public resetAccountTakeoverRiskConfiguration() {
@@ -189,11 +189,11 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
   }
 
   // compromised_credentials_risk_configuration - computed: false, optional: true, required: false
-  private _compromisedCredentialsRiskConfiguration = new AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyOutputReference(this, "compromised_credentials_risk_configuration");
+  private _compromisedCredentialsRiskConfiguration = new TfRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyOutputReference(this, "compromised_credentials_risk_configuration");
   public get compromisedCredentialsRiskConfiguration() {
     return this._compromisedCredentialsRiskConfiguration;
   }
-  public putCompromisedCredentialsRiskConfiguration(value: AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty) {
+  public putCompromisedCredentialsRiskConfiguration(value: TfRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty) {
     this._compromisedCredentialsRiskConfiguration.internalValue = value;
   }
   public resetCompromisedCredentialsRiskConfiguration() {
@@ -205,11 +205,11 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
   }
 
   // risk_exception_configuration - computed: false, optional: true, required: false
-  private _riskExceptionConfiguration = new AwsCognitoRiskConfiguration.RiskExceptionConfigurationPropertyOutputReference(this, "risk_exception_configuration");
+  private _riskExceptionConfiguration = new TfRiskConfiguration.RiskExceptionConfigurationPropertyOutputReference(this, "risk_exception_configuration");
   public get riskExceptionConfiguration() {
     return this._riskExceptionConfiguration;
   }
-  public putRiskExceptionConfiguration(value: AwsCognitoRiskConfiguration.RiskExceptionConfigurationProperty) {
+  public putRiskExceptionConfiguration(value: TfRiskConfiguration.RiskExceptionConfigurationProperty) {
     this._riskExceptionConfiguration.internalValue = value;
   }
   public resetRiskExceptionConfiguration() {
@@ -230,9 +230,9 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       user_pool_id: cdktn.stringToTerraform(this._userPoolId),
-      account_takeover_risk_configuration: awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationPropertyToTerraform(this._accountTakeoverRiskConfiguration.internalValue),
-      compromised_credentials_risk_configuration: awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToTerraform(this._compromisedCredentialsRiskConfiguration.internalValue),
-      risk_exception_configuration: awsCognitoRiskConfigurationRiskExceptionConfigurationPropertyToTerraform(this._riskExceptionConfiguration.internalValue),
+      account_takeover_risk_configuration: tfRiskConfigurationAccountTakeoverRiskConfigurationPropertyToTerraform(this._accountTakeoverRiskConfiguration.internalValue),
+      compromised_credentials_risk_configuration: tfRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToTerraform(this._compromisedCredentialsRiskConfiguration.internalValue),
+      risk_exception_configuration: tfRiskConfigurationRiskExceptionConfigurationPropertyToTerraform(this._riskExceptionConfiguration.internalValue),
     };
   }
 
@@ -263,22 +263,22 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       account_takeover_risk_configuration: {
-        value: awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationPropertyToHclTerraform(this._accountTakeoverRiskConfiguration.internalValue),
+        value: tfRiskConfigurationAccountTakeoverRiskConfigurationPropertyToHclTerraform(this._accountTakeoverRiskConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationPropertyList",
+        storageClassType: "TfRiskConfiguration.AccountTakeoverRiskConfigurationPropertyList",
       },
       compromised_credentials_risk_configuration: {
-        value: awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToHclTerraform(this._compromisedCredentialsRiskConfiguration.internalValue),
+        value: tfRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToHclTerraform(this._compromisedCredentialsRiskConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyList",
+        storageClassType: "TfRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyList",
       },
       risk_exception_configuration: {
-        value: awsCognitoRiskConfigurationRiskExceptionConfigurationPropertyToHclTerraform(this._riskExceptionConfiguration.internalValue),
+        value: tfRiskConfigurationRiskExceptionConfigurationPropertyToHclTerraform(this._riskExceptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCognitoRiskConfiguration.RiskExceptionConfigurationPropertyList",
+        storageClassType: "TfRiskConfiguration.RiskExceptionConfigurationPropertyList",
       },
     };
 
@@ -287,7 +287,7 @@ export class AwsCognitoRiskConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function awsCognitoRiskConfigurationHighActionPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.HighActionPropertyOutputReference | AwsCognitoRiskConfiguration.HighActionProperty): any {
+export function tfRiskConfigurationHighActionPropertyToTerraform(struct?: TfRiskConfiguration.HighActionPropertyOutputReference | TfRiskConfiguration.HighActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function awsCognitoRiskConfigurationHighActionPropertyToTerraform(struct?
 }
 
 
-export function awsCognitoRiskConfigurationHighActionPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.HighActionPropertyOutputReference | AwsCognitoRiskConfiguration.HighActionProperty): any {
+export function tfRiskConfigurationHighActionPropertyToHclTerraform(struct?: TfRiskConfiguration.HighActionPropertyOutputReference | TfRiskConfiguration.HighActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function awsCognitoRiskConfigurationHighActionPropertyToHclTerraform(stru
 }
 
 
-export function awsCognitoRiskConfigurationLowActionPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.LowActionPropertyOutputReference | AwsCognitoRiskConfiguration.LowActionProperty): any {
+export function tfRiskConfigurationLowActionPropertyToTerraform(struct?: TfRiskConfiguration.LowActionPropertyOutputReference | TfRiskConfiguration.LowActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function awsCognitoRiskConfigurationLowActionPropertyToTerraform(struct?:
 }
 
 
-export function awsCognitoRiskConfigurationLowActionPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.LowActionPropertyOutputReference | AwsCognitoRiskConfiguration.LowActionProperty): any {
+export function tfRiskConfigurationLowActionPropertyToHclTerraform(struct?: TfRiskConfiguration.LowActionPropertyOutputReference | TfRiskConfiguration.LowActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function awsCognitoRiskConfigurationLowActionPropertyToHclTerraform(struc
 }
 
 
-export function awsCognitoRiskConfigurationMediumActionPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.MediumActionPropertyOutputReference | AwsCognitoRiskConfiguration.MediumActionProperty): any {
+export function tfRiskConfigurationMediumActionPropertyToTerraform(struct?: TfRiskConfiguration.MediumActionPropertyOutputReference | TfRiskConfiguration.MediumActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function awsCognitoRiskConfigurationMediumActionPropertyToTerraform(struc
 }
 
 
-export function awsCognitoRiskConfigurationMediumActionPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.MediumActionPropertyOutputReference | AwsCognitoRiskConfiguration.MediumActionProperty): any {
+export function tfRiskConfigurationMediumActionPropertyToHclTerraform(struct?: TfRiskConfiguration.MediumActionPropertyOutputReference | TfRiskConfiguration.MediumActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,39 +398,39 @@ export function awsCognitoRiskConfigurationMediumActionPropertyToHclTerraform(st
 }
 
 
-export function awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationActionsPropertyOutputReference | AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationActionsProperty): any {
+export function tfRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToTerraform(struct?: TfRiskConfiguration.AccountTakeoverRiskConfigurationActionsPropertyOutputReference | TfRiskConfiguration.AccountTakeoverRiskConfigurationActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    high_action: awsCognitoRiskConfigurationHighActionPropertyToTerraform(struct!.highAction),
-    low_action: awsCognitoRiskConfigurationLowActionPropertyToTerraform(struct!.lowAction),
-    medium_action: awsCognitoRiskConfigurationMediumActionPropertyToTerraform(struct!.mediumAction),
+    high_action: tfRiskConfigurationHighActionPropertyToTerraform(struct!.highAction),
+    low_action: tfRiskConfigurationLowActionPropertyToTerraform(struct!.lowAction),
+    medium_action: tfRiskConfigurationMediumActionPropertyToTerraform(struct!.mediumAction),
   }
 }
 
 
-export function awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationActionsPropertyOutputReference | AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationActionsProperty): any {
+export function tfRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToHclTerraform(struct?: TfRiskConfiguration.AccountTakeoverRiskConfigurationActionsPropertyOutputReference | TfRiskConfiguration.AccountTakeoverRiskConfigurationActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     high_action: {
-      value: awsCognitoRiskConfigurationHighActionPropertyToHclTerraform(struct!.highAction),
+      value: tfRiskConfigurationHighActionPropertyToHclTerraform(struct!.highAction),
       isBlock: true,
       type: "list",
       storageClassType: "HighActionPropertyList",
     },
     low_action: {
-      value: awsCognitoRiskConfigurationLowActionPropertyToHclTerraform(struct!.lowAction),
+      value: tfRiskConfigurationLowActionPropertyToHclTerraform(struct!.lowAction),
       isBlock: true,
       type: "list",
       storageClassType: "LowActionPropertyList",
     },
     medium_action: {
-      value: awsCognitoRiskConfigurationMediumActionPropertyToHclTerraform(struct!.mediumAction),
+      value: tfRiskConfigurationMediumActionPropertyToHclTerraform(struct!.mediumAction),
       isBlock: true,
       type: "list",
       storageClassType: "MediumActionPropertyList",
@@ -442,7 +442,7 @@ export function awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationActio
 }
 
 
-export function awsCognitoRiskConfigurationBlockEmailPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.BlockEmailPropertyOutputReference | AwsCognitoRiskConfiguration.BlockEmailProperty): any {
+export function tfRiskConfigurationBlockEmailPropertyToTerraform(struct?: TfRiskConfiguration.BlockEmailPropertyOutputReference | TfRiskConfiguration.BlockEmailProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function awsCognitoRiskConfigurationBlockEmailPropertyToTerraform(struct?
 }
 
 
-export function awsCognitoRiskConfigurationBlockEmailPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.BlockEmailPropertyOutputReference | AwsCognitoRiskConfiguration.BlockEmailProperty): any {
+export function tfRiskConfigurationBlockEmailPropertyToHclTerraform(struct?: TfRiskConfiguration.BlockEmailPropertyOutputReference | TfRiskConfiguration.BlockEmailProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function awsCognitoRiskConfigurationBlockEmailPropertyToHclTerraform(stru
 }
 
 
-export function awsCognitoRiskConfigurationMfaEmailPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.MfaEmailPropertyOutputReference | AwsCognitoRiskConfiguration.MfaEmailProperty): any {
+export function tfRiskConfigurationMfaEmailPropertyToTerraform(struct?: TfRiskConfiguration.MfaEmailPropertyOutputReference | TfRiskConfiguration.MfaEmailProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function awsCognitoRiskConfigurationMfaEmailPropertyToTerraform(struct?: 
 }
 
 
-export function awsCognitoRiskConfigurationMfaEmailPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.MfaEmailPropertyOutputReference | AwsCognitoRiskConfiguration.MfaEmailProperty): any {
+export function tfRiskConfigurationMfaEmailPropertyToHclTerraform(struct?: TfRiskConfiguration.MfaEmailPropertyOutputReference | TfRiskConfiguration.MfaEmailProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function awsCognitoRiskConfigurationMfaEmailPropertyToHclTerraform(struct
 }
 
 
-export function awsCognitoRiskConfigurationNoActionEmailPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.NoActionEmailPropertyOutputReference | AwsCognitoRiskConfiguration.NoActionEmailProperty): any {
+export function tfRiskConfigurationNoActionEmailPropertyToTerraform(struct?: TfRiskConfiguration.NoActionEmailPropertyOutputReference | TfRiskConfiguration.NoActionEmailProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function awsCognitoRiskConfigurationNoActionEmailPropertyToTerraform(stru
 }
 
 
-export function awsCognitoRiskConfigurationNoActionEmailPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.NoActionEmailPropertyOutputReference | AwsCognitoRiskConfiguration.NoActionEmailProperty): any {
+export function tfRiskConfigurationNoActionEmailPropertyToHclTerraform(struct?: TfRiskConfiguration.NoActionEmailPropertyOutputReference | TfRiskConfiguration.NoActionEmailProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function awsCognitoRiskConfigurationNoActionEmailPropertyToHclTerraform(s
 }
 
 
-export function awsCognitoRiskConfigurationNotifyConfigurationPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.NotifyConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.NotifyConfigurationProperty): any {
+export function tfRiskConfigurationNotifyConfigurationPropertyToTerraform(struct?: TfRiskConfiguration.NotifyConfigurationPropertyOutputReference | TfRiskConfiguration.NotifyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,14 +583,14 @@ export function awsCognitoRiskConfigurationNotifyConfigurationPropertyToTerrafor
     from: cdktn.stringToTerraform(struct!.from),
     reply_to: cdktn.stringToTerraform(struct!.replyTo),
     source_arn: cdktn.stringToTerraform(struct!.sourceArn),
-    block_email: awsCognitoRiskConfigurationBlockEmailPropertyToTerraform(struct!.blockEmail),
-    mfa_email: awsCognitoRiskConfigurationMfaEmailPropertyToTerraform(struct!.mfaEmail),
-    no_action_email: awsCognitoRiskConfigurationNoActionEmailPropertyToTerraform(struct!.noActionEmail),
+    block_email: tfRiskConfigurationBlockEmailPropertyToTerraform(struct!.blockEmail),
+    mfa_email: tfRiskConfigurationMfaEmailPropertyToTerraform(struct!.mfaEmail),
+    no_action_email: tfRiskConfigurationNoActionEmailPropertyToTerraform(struct!.noActionEmail),
   }
 }
 
 
-export function awsCognitoRiskConfigurationNotifyConfigurationPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.NotifyConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.NotifyConfigurationProperty): any {
+export function tfRiskConfigurationNotifyConfigurationPropertyToHclTerraform(struct?: TfRiskConfiguration.NotifyConfigurationPropertyOutputReference | TfRiskConfiguration.NotifyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -615,19 +615,19 @@ export function awsCognitoRiskConfigurationNotifyConfigurationPropertyToHclTerra
       storageClassType: "string",
     },
     block_email: {
-      value: awsCognitoRiskConfigurationBlockEmailPropertyToHclTerraform(struct!.blockEmail),
+      value: tfRiskConfigurationBlockEmailPropertyToHclTerraform(struct!.blockEmail),
       isBlock: true,
       type: "list",
       storageClassType: "BlockEmailPropertyList",
     },
     mfa_email: {
-      value: awsCognitoRiskConfigurationMfaEmailPropertyToHclTerraform(struct!.mfaEmail),
+      value: tfRiskConfigurationMfaEmailPropertyToHclTerraform(struct!.mfaEmail),
       isBlock: true,
       type: "list",
       storageClassType: "MfaEmailPropertyList",
     },
     no_action_email: {
-      value: awsCognitoRiskConfigurationNoActionEmailPropertyToHclTerraform(struct!.noActionEmail),
+      value: tfRiskConfigurationNoActionEmailPropertyToHclTerraform(struct!.noActionEmail),
       isBlock: true,
       type: "list",
       storageClassType: "NoActionEmailPropertyList",
@@ -639,32 +639,32 @@ export function awsCognitoRiskConfigurationNotifyConfigurationPropertyToHclTerra
 }
 
 
-export function awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationProperty): any {
+export function tfRiskConfigurationAccountTakeoverRiskConfigurationPropertyToTerraform(struct?: TfRiskConfiguration.AccountTakeoverRiskConfigurationPropertyOutputReference | TfRiskConfiguration.AccountTakeoverRiskConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    actions: awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToTerraform(struct!.actions),
-    notify_configuration: awsCognitoRiskConfigurationNotifyConfigurationPropertyToTerraform(struct!.notifyConfiguration),
+    actions: tfRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToTerraform(struct!.actions),
+    notify_configuration: tfRiskConfigurationNotifyConfigurationPropertyToTerraform(struct!.notifyConfiguration),
   }
 }
 
 
-export function awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.AccountTakeoverRiskConfigurationProperty): any {
+export function tfRiskConfigurationAccountTakeoverRiskConfigurationPropertyToHclTerraform(struct?: TfRiskConfiguration.AccountTakeoverRiskConfigurationPropertyOutputReference | TfRiskConfiguration.AccountTakeoverRiskConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     actions: {
-      value: awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToHclTerraform(struct!.actions),
+      value: tfRiskConfigurationAccountTakeoverRiskConfigurationActionsPropertyToHclTerraform(struct!.actions),
       isBlock: true,
       type: "list",
       storageClassType: "AccountTakeoverRiskConfigurationActionsPropertyList",
     },
     notify_configuration: {
-      value: awsCognitoRiskConfigurationNotifyConfigurationPropertyToHclTerraform(struct!.notifyConfiguration),
+      value: tfRiskConfigurationNotifyConfigurationPropertyToHclTerraform(struct!.notifyConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "NotifyConfigurationPropertyList",
@@ -676,7 +676,7 @@ export function awsCognitoRiskConfigurationAccountTakeoverRiskConfigurationPrope
 }
 
 
-export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsPropertyOutputReference | AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsProperty): any {
+export function tfRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToTerraform(struct?: TfRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsPropertyOutputReference | TfRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -687,7 +687,7 @@ export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurati
 }
 
 
-export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsPropertyOutputReference | AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsProperty): any {
+export function tfRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToHclTerraform(struct?: TfRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsPropertyOutputReference | TfRiskConfiguration.CompromisedCredentialsRiskConfigurationActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -706,19 +706,19 @@ export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurati
 }
 
 
-export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty): any {
+export function tfRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToTerraform(struct?: TfRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyOutputReference | TfRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     event_filter: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.eventFilter),
-    actions: awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToTerraform(struct!.actions),
+    actions: tfRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToTerraform(struct!.actions),
   }
 }
 
 
-export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty): any {
+export function tfRiskConfigurationCompromisedCredentialsRiskConfigurationPropertyToHclTerraform(struct?: TfRiskConfiguration.CompromisedCredentialsRiskConfigurationPropertyOutputReference | TfRiskConfiguration.CompromisedCredentialsRiskConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurati
       storageClassType: "stringList",
     },
     actions: {
-      value: awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToHclTerraform(struct!.actions),
+      value: tfRiskConfigurationCompromisedCredentialsRiskConfigurationActionsPropertyToHclTerraform(struct!.actions),
       isBlock: true,
       type: "list",
       storageClassType: "CompromisedCredentialsRiskConfigurationActionsPropertyList",
@@ -743,7 +743,7 @@ export function awsCognitoRiskConfigurationCompromisedCredentialsRiskConfigurati
 }
 
 
-export function awsCognitoRiskConfigurationRiskExceptionConfigurationPropertyToTerraform(struct?: AwsCognitoRiskConfiguration.RiskExceptionConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.RiskExceptionConfigurationProperty): any {
+export function tfRiskConfigurationRiskExceptionConfigurationPropertyToTerraform(struct?: TfRiskConfiguration.RiskExceptionConfigurationPropertyOutputReference | TfRiskConfiguration.RiskExceptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -755,7 +755,7 @@ export function awsCognitoRiskConfigurationRiskExceptionConfigurationPropertyToT
 }
 
 
-export function awsCognitoRiskConfigurationRiskExceptionConfigurationPropertyToHclTerraform(struct?: AwsCognitoRiskConfiguration.RiskExceptionConfigurationPropertyOutputReference | AwsCognitoRiskConfiguration.RiskExceptionConfigurationProperty): any {
+export function tfRiskConfigurationRiskExceptionConfigurationPropertyToHclTerraform(struct?: TfRiskConfiguration.RiskExceptionConfigurationPropertyOutputReference | TfRiskConfiguration.RiskExceptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -780,14 +780,14 @@ export function awsCognitoRiskConfigurationRiskExceptionConfigurationPropertyToH
 }
 
 
-export namespace AwsCognitoRiskConfiguration {
+export namespace TfRiskConfiguration {
 export interface HighActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action AwsCognitoRiskConfiguration#event_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action TfRiskConfiguration#event_action}
   */
   readonly eventAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify AwsCognitoRiskConfiguration#notify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify TfRiskConfiguration#notify}
   */
   readonly notify: boolean | cdktn.IResolvable;
 }
@@ -857,11 +857,11 @@ export class HighActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LowActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action AwsCognitoRiskConfiguration#event_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action TfRiskConfiguration#event_action}
   */
   readonly eventAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify AwsCognitoRiskConfiguration#notify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify TfRiskConfiguration#notify}
   */
   readonly notify: boolean | cdktn.IResolvable;
 }
@@ -931,11 +931,11 @@ export class LowActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MediumActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action AwsCognitoRiskConfiguration#event_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action TfRiskConfiguration#event_action}
   */
   readonly eventAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify AwsCognitoRiskConfiguration#notify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify TfRiskConfiguration#notify}
   */
   readonly notify: boolean | cdktn.IResolvable;
 }
@@ -1007,19 +1007,19 @@ export interface AccountTakeoverRiskConfigurationActionsProperty {
   /**
   * high_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#high_action AwsCognitoRiskConfiguration#high_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#high_action TfRiskConfiguration#high_action}
   */
   readonly highAction?: HighActionProperty;
   /**
   * low_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#low_action AwsCognitoRiskConfiguration#low_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#low_action TfRiskConfiguration#low_action}
   */
   readonly lowAction?: LowActionProperty;
   /**
   * medium_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#medium_action AwsCognitoRiskConfiguration#medium_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#medium_action TfRiskConfiguration#medium_action}
   */
   readonly mediumAction?: MediumActionProperty;
 }
@@ -1117,15 +1117,15 @@ export class AccountTakeoverRiskConfigurationActionsPropertyOutputReference exte
 }
 export interface BlockEmailProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#html_body AwsCognitoRiskConfiguration#html_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#html_body TfRiskConfiguration#html_body}
   */
   readonly htmlBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#subject AwsCognitoRiskConfiguration#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#subject TfRiskConfiguration#subject}
   */
   readonly subject: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#text_body AwsCognitoRiskConfiguration#text_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#text_body TfRiskConfiguration#text_body}
   */
   readonly textBody: string;
 }
@@ -1214,15 +1214,15 @@ export class BlockEmailPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MfaEmailProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#html_body AwsCognitoRiskConfiguration#html_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#html_body TfRiskConfiguration#html_body}
   */
   readonly htmlBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#subject AwsCognitoRiskConfiguration#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#subject TfRiskConfiguration#subject}
   */
   readonly subject: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#text_body AwsCognitoRiskConfiguration#text_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#text_body TfRiskConfiguration#text_body}
   */
   readonly textBody: string;
 }
@@ -1311,15 +1311,15 @@ export class MfaEmailPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NoActionEmailProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#html_body AwsCognitoRiskConfiguration#html_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#html_body TfRiskConfiguration#html_body}
   */
   readonly htmlBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#subject AwsCognitoRiskConfiguration#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#subject TfRiskConfiguration#subject}
   */
   readonly subject: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#text_body AwsCognitoRiskConfiguration#text_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#text_body TfRiskConfiguration#text_body}
   */
   readonly textBody: string;
 }
@@ -1408,33 +1408,33 @@ export class NoActionEmailPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NotifyConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#from AwsCognitoRiskConfiguration#from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#from TfRiskConfiguration#from}
   */
   readonly from?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#reply_to AwsCognitoRiskConfiguration#reply_to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#reply_to TfRiskConfiguration#reply_to}
   */
   readonly replyTo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#source_arn AwsCognitoRiskConfiguration#source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#source_arn TfRiskConfiguration#source_arn}
   */
   readonly sourceArn: string;
   /**
   * block_email block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#block_email AwsCognitoRiskConfiguration#block_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#block_email TfRiskConfiguration#block_email}
   */
   readonly blockEmail?: BlockEmailProperty;
   /**
   * mfa_email block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#mfa_email AwsCognitoRiskConfiguration#mfa_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#mfa_email TfRiskConfiguration#mfa_email}
   */
   readonly mfaEmail?: MfaEmailProperty;
   /**
   * no_action_email block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#no_action_email AwsCognitoRiskConfiguration#no_action_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#no_action_email TfRiskConfiguration#no_action_email}
   */
   readonly noActionEmail?: NoActionEmailProperty;
 }
@@ -1597,13 +1597,13 @@ export interface AccountTakeoverRiskConfigurationProperty {
   /**
   * actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#actions AwsCognitoRiskConfiguration#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#actions TfRiskConfiguration#actions}
   */
   readonly actions: AccountTakeoverRiskConfigurationActionsProperty;
   /**
   * notify_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify_configuration AwsCognitoRiskConfiguration#notify_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#notify_configuration TfRiskConfiguration#notify_configuration}
   */
   readonly notifyConfiguration?: NotifyConfigurationProperty;
 }
@@ -1676,7 +1676,7 @@ export class AccountTakeoverRiskConfigurationPropertyOutputReference extends cdk
 }
 export interface CompromisedCredentialsRiskConfigurationActionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action AwsCognitoRiskConfiguration#event_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_action TfRiskConfiguration#event_action}
   */
   readonly eventAction: string;
 }
@@ -1727,13 +1727,13 @@ export class CompromisedCredentialsRiskConfigurationActionsPropertyOutputReferen
 }
 export interface CompromisedCredentialsRiskConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_filter AwsCognitoRiskConfiguration#event_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#event_filter TfRiskConfiguration#event_filter}
   */
   readonly eventFilter?: string[];
   /**
   * actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#actions AwsCognitoRiskConfiguration#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#actions TfRiskConfiguration#actions}
   */
   readonly actions: CompromisedCredentialsRiskConfigurationActionsProperty;
 }
@@ -1806,11 +1806,11 @@ export class CompromisedCredentialsRiskConfigurationPropertyOutputReference exte
 }
 export interface RiskExceptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#blocked_ip_range_list AwsCognitoRiskConfiguration#blocked_ip_range_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#blocked_ip_range_list TfRiskConfiguration#blocked_ip_range_list}
   */
   readonly blockedIpRangeList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#skipped_ip_range_list AwsCognitoRiskConfiguration#skipped_ip_range_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_risk_configuration#skipped_ip_range_list TfRiskConfiguration#skipped_ip_range_list}
   */
   readonly skippedIpRangeList?: string[];
 }

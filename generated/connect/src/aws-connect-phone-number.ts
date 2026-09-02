@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConnectPhoneNumberConfig extends cdktn.TerraformMetaArguments {
+export interface TfPhoneNumberConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#country_code AwsConnectPhoneNumber#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#country_code TfPhoneNumber#country_code}
   */
   readonly countryCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#description AwsConnectPhoneNumber#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#description TfPhoneNumber#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#id AwsConnectPhoneNumber#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#id TfPhoneNumber#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#prefix AwsConnectPhoneNumber#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#prefix TfPhoneNumber#prefix}
   */
   readonly prefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#region AwsConnectPhoneNumber#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#region TfPhoneNumber#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#tags AwsConnectPhoneNumber#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#tags TfPhoneNumber#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#tags_all AwsConnectPhoneNumber#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#tags_all TfPhoneNumber#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#target_arn AwsConnectPhoneNumber#target_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#target_arn TfPhoneNumber#target_arn}
   */
   readonly targetArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#type AwsConnectPhoneNumber#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#type TfPhoneNumber#type}
   */
   readonly type: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#timeouts AwsConnectPhoneNumber#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#timeouts TfPhoneNumber#timeouts}
   */
-  readonly timeouts?: AwsConnectPhoneNumber.TimeoutsProperty;
+  readonly timeouts?: TfPhoneNumber.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number aws_connect_phone_number}
 */
-export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
+export class TfPhoneNumber extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConnectPhoneNumber resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPhoneNumber resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConnectPhoneNumber to import
-  * @param importFromId The id of the existing AwsConnectPhoneNumber that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConnectPhoneNumber to import is found
+  * @param importToId The construct id used in the generated config for the TfPhoneNumber to import
+  * @param importFromId The id of the existing TfPhoneNumber that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPhoneNumber to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_phone_number", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConnectPhoneNumberConfig
+  * @param options TfPhoneNumberConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConnectPhoneNumberConfig) {
+  public constructor(scope: Construct, id: string, config: TfPhoneNumberConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_phone_number',
       terraformGeneratorMetadata: {
@@ -210,7 +210,7 @@ export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
   }
 
   // status - computed: true, optional: false, required: false
-  private _status = new AwsConnectPhoneNumber.StatusPropertyList(this, "status", false);
+  private _status = new TfPhoneNumber.StatusPropertyList(this, "status", false);
   public get status() {
     return this._status;
   }
@@ -274,11 +274,11 @@ export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsConnectPhoneNumber.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPhoneNumber.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsConnectPhoneNumber.TimeoutsProperty) {
+  public putTimeouts(value: TfPhoneNumber.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -304,7 +304,7 @@ export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       target_arn: cdktn.stringToTerraform(this._targetArn),
       type: cdktn.stringToTerraform(this._type),
-      timeouts: awsConnectPhoneNumberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPhoneNumberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -365,10 +365,10 @@ export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsConnectPhoneNumberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPhoneNumberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsConnectPhoneNumber.TimeoutsProperty",
+        storageClassType: "TfPhoneNumber.TimeoutsProperty",
       },
     };
 
@@ -377,7 +377,7 @@ export class AwsConnectPhoneNumber extends cdktn.TerraformResource {
   }
 }
 
-export function awsConnectPhoneNumberStatusPropertyToTerraform(struct?: AwsConnectPhoneNumber.StatusProperty): any {
+export function tfPhoneNumberStatusPropertyToTerraform(struct?: TfPhoneNumber.StatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function awsConnectPhoneNumberStatusPropertyToTerraform(struct?: AwsConne
 }
 
 
-export function awsConnectPhoneNumberStatusPropertyToHclTerraform(struct?: AwsConnectPhoneNumber.StatusProperty): any {
+export function tfPhoneNumberStatusPropertyToHclTerraform(struct?: TfPhoneNumber.StatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function awsConnectPhoneNumberStatusPropertyToHclTerraform(struct?: AwsCo
 }
 
 
-export function awsConnectPhoneNumberTimeoutsPropertyToTerraform(struct?: AwsConnectPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPhoneNumberTimeoutsPropertyToTerraform(struct?: TfPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function awsConnectPhoneNumberTimeoutsPropertyToTerraform(struct?: AwsCon
 }
 
 
-export function awsConnectPhoneNumberTimeoutsPropertyToHclTerraform(struct?: AwsConnectPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPhoneNumberTimeoutsPropertyToHclTerraform(struct?: TfPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function awsConnectPhoneNumberTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsConnectPhoneNumber {
+export namespace TfPhoneNumber {
 export interface StatusProperty {
 }
 export class StatusPropertyOutputReference extends cdktn.ComplexObject {
@@ -504,15 +504,15 @@ export class StatusPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#create AwsConnectPhoneNumber#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#create TfPhoneNumber#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#delete AwsConnectPhoneNumber#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#delete TfPhoneNumber#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#update AwsConnectPhoneNumber#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_phone_number#update TfPhoneNumber#update}
   */
   readonly update?: string;
 }

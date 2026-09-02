@@ -5,63 +5,63 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsComputeoptimizerRecommendationPreferencesConfig extends cdktn.TerraformMetaArguments {
+export interface TfRecommendationPreferencesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#enhanced_infrastructure_metrics AwsComputeoptimizerRecommendationPreferences#enhanced_infrastructure_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#enhanced_infrastructure_metrics TfRecommendationPreferences#enhanced_infrastructure_metrics}
   */
   readonly enhancedInfrastructureMetrics?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#inferred_workload_types AwsComputeoptimizerRecommendationPreferences#inferred_workload_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#inferred_workload_types TfRecommendationPreferences#inferred_workload_types}
   */
   readonly inferredWorkloadTypes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#look_back_period AwsComputeoptimizerRecommendationPreferences#look_back_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#look_back_period TfRecommendationPreferences#look_back_period}
   */
   readonly lookBackPeriod?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#region AwsComputeoptimizerRecommendationPreferences#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#region TfRecommendationPreferences#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#resource_type AwsComputeoptimizerRecommendationPreferences#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#resource_type TfRecommendationPreferences#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#savings_estimation_mode AwsComputeoptimizerRecommendationPreferences#savings_estimation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#savings_estimation_mode TfRecommendationPreferences#savings_estimation_mode}
   */
   readonly savingsEstimationMode?: string;
   /**
   * external_metrics_preference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#external_metrics_preference AwsComputeoptimizerRecommendationPreferences#external_metrics_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#external_metrics_preference TfRecommendationPreferences#external_metrics_preference}
   */
-  readonly externalMetricsPreference?: AwsComputeoptimizerRecommendationPreferences.ExternalMetricsPreferenceProperty[] | cdktn.IResolvable;
+  readonly externalMetricsPreference?: TfRecommendationPreferences.ExternalMetricsPreferenceProperty[] | cdktn.IResolvable;
   /**
   * preferred_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#preferred_resource AwsComputeoptimizerRecommendationPreferences#preferred_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#preferred_resource TfRecommendationPreferences#preferred_resource}
   */
-  readonly preferredResource?: AwsComputeoptimizerRecommendationPreferences.PreferredResourceProperty[] | cdktn.IResolvable;
+  readonly preferredResource?: TfRecommendationPreferences.PreferredResourceProperty[] | cdktn.IResolvable;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#scope AwsComputeoptimizerRecommendationPreferences#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#scope TfRecommendationPreferences#scope}
   */
-  readonly scope?: AwsComputeoptimizerRecommendationPreferences.ScopeProperty[] | cdktn.IResolvable;
+  readonly scope?: TfRecommendationPreferences.ScopeProperty[] | cdktn.IResolvable;
   /**
   * utilization_preference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#utilization_preference AwsComputeoptimizerRecommendationPreferences#utilization_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#utilization_preference TfRecommendationPreferences#utilization_preference}
   */
-  readonly utilizationPreference?: AwsComputeoptimizerRecommendationPreferences.UtilizationPreferenceProperty[] | cdktn.IResolvable;
+  readonly utilizationPreference?: TfRecommendationPreferences.UtilizationPreferenceProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences aws_computeoptimizer_recommendation_preferences}
 */
-export class AwsComputeoptimizerRecommendationPreferences extends cdktn.TerraformResource {
+export class TfRecommendationPreferences extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -72,11 +72,11 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsComputeoptimizerRecommendationPreferences resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRecommendationPreferences resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsComputeoptimizerRecommendationPreferences to import
-  * @param importFromId The id of the existing AwsComputeoptimizerRecommendationPreferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsComputeoptimizerRecommendationPreferences to import is found
+  * @param importToId The construct id used in the generated config for the TfRecommendationPreferences to import
+  * @param importFromId The id of the existing TfRecommendationPreferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRecommendationPreferences to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_computeoptimizer_recommendation_preferences", importId: importFromId, provider });
@@ -91,9 +91,9 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsComputeoptimizerRecommendationPreferencesConfig
+  * @param options TfRecommendationPreferencesConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsComputeoptimizerRecommendationPreferencesConfig) {
+  public constructor(scope: Construct, id: string, config: TfRecommendationPreferencesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_computeoptimizer_recommendation_preferences',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
   }
 
   // external_metrics_preference - computed: false, optional: true, required: false
-  private _externalMetricsPreference = new AwsComputeoptimizerRecommendationPreferences.ExternalMetricsPreferencePropertyList(this, "external_metrics_preference", false);
+  private _externalMetricsPreference = new TfRecommendationPreferences.ExternalMetricsPreferencePropertyList(this, "external_metrics_preference", false);
   public get externalMetricsPreference() {
     return this._externalMetricsPreference;
   }
-  public putExternalMetricsPreference(value: AwsComputeoptimizerRecommendationPreferences.ExternalMetricsPreferenceProperty[] | cdktn.IResolvable) {
+  public putExternalMetricsPreference(value: TfRecommendationPreferences.ExternalMetricsPreferenceProperty[] | cdktn.IResolvable) {
     this._externalMetricsPreference.internalValue = value;
   }
   public resetExternalMetricsPreference() {
@@ -240,11 +240,11 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
   }
 
   // preferred_resource - computed: false, optional: true, required: false
-  private _preferredResource = new AwsComputeoptimizerRecommendationPreferences.PreferredResourcePropertyList(this, "preferred_resource", false);
+  private _preferredResource = new TfRecommendationPreferences.PreferredResourcePropertyList(this, "preferred_resource", false);
   public get preferredResource() {
     return this._preferredResource;
   }
-  public putPreferredResource(value: AwsComputeoptimizerRecommendationPreferences.PreferredResourceProperty[] | cdktn.IResolvable) {
+  public putPreferredResource(value: TfRecommendationPreferences.PreferredResourceProperty[] | cdktn.IResolvable) {
     this._preferredResource.internalValue = value;
   }
   public resetPreferredResource() {
@@ -256,11 +256,11 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new AwsComputeoptimizerRecommendationPreferences.ScopePropertyList(this, "scope", false);
+  private _scope = new TfRecommendationPreferences.ScopePropertyList(this, "scope", false);
   public get scope() {
     return this._scope;
   }
-  public putScope(value: AwsComputeoptimizerRecommendationPreferences.ScopeProperty[] | cdktn.IResolvable) {
+  public putScope(value: TfRecommendationPreferences.ScopeProperty[] | cdktn.IResolvable) {
     this._scope.internalValue = value;
   }
   public resetScope() {
@@ -272,11 +272,11 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
   }
 
   // utilization_preference - computed: false, optional: true, required: false
-  private _utilizationPreference = new AwsComputeoptimizerRecommendationPreferences.UtilizationPreferencePropertyList(this, "utilization_preference", false);
+  private _utilizationPreference = new TfRecommendationPreferences.UtilizationPreferencePropertyList(this, "utilization_preference", false);
   public get utilizationPreference() {
     return this._utilizationPreference;
   }
-  public putUtilizationPreference(value: AwsComputeoptimizerRecommendationPreferences.UtilizationPreferenceProperty[] | cdktn.IResolvable) {
+  public putUtilizationPreference(value: TfRecommendationPreferences.UtilizationPreferenceProperty[] | cdktn.IResolvable) {
     this._utilizationPreference.internalValue = value;
   }
   public resetUtilizationPreference() {
@@ -299,10 +299,10 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
       region: cdktn.stringToTerraform(this._region),
       resource_type: cdktn.stringToTerraform(this._resourceType),
       savings_estimation_mode: cdktn.stringToTerraform(this._savingsEstimationMode),
-      external_metrics_preference: cdktn.listMapper(awsComputeoptimizerRecommendationPreferencesExternalMetricsPreferencePropertyToTerraform, true)(this._externalMetricsPreference.internalValue),
-      preferred_resource: cdktn.listMapper(awsComputeoptimizerRecommendationPreferencesPreferredResourcePropertyToTerraform, true)(this._preferredResource.internalValue),
-      scope: cdktn.listMapper(awsComputeoptimizerRecommendationPreferencesScopePropertyToTerraform, true)(this._scope.internalValue),
-      utilization_preference: cdktn.listMapper(awsComputeoptimizerRecommendationPreferencesUtilizationPreferencePropertyToTerraform, true)(this._utilizationPreference.internalValue),
+      external_metrics_preference: cdktn.listMapper(tfRecommendationPreferencesExternalMetricsPreferencePropertyToTerraform, true)(this._externalMetricsPreference.internalValue),
+      preferred_resource: cdktn.listMapper(tfRecommendationPreferencesPreferredResourcePropertyToTerraform, true)(this._preferredResource.internalValue),
+      scope: cdktn.listMapper(tfRecommendationPreferencesScopePropertyToTerraform, true)(this._scope.internalValue),
+      utilization_preference: cdktn.listMapper(tfRecommendationPreferencesUtilizationPreferencePropertyToTerraform, true)(this._utilizationPreference.internalValue),
     };
   }
 
@@ -345,28 +345,28 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
         storageClassType: "string",
       },
       external_metrics_preference: {
-        value: cdktn.listMapperHcl(awsComputeoptimizerRecommendationPreferencesExternalMetricsPreferencePropertyToHclTerraform, true)(this._externalMetricsPreference.internalValue),
+        value: cdktn.listMapperHcl(tfRecommendationPreferencesExternalMetricsPreferencePropertyToHclTerraform, true)(this._externalMetricsPreference.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsComputeoptimizerRecommendationPreferences.ExternalMetricsPreferencePropertyList",
+        storageClassType: "TfRecommendationPreferences.ExternalMetricsPreferencePropertyList",
       },
       preferred_resource: {
-        value: cdktn.listMapperHcl(awsComputeoptimizerRecommendationPreferencesPreferredResourcePropertyToHclTerraform, true)(this._preferredResource.internalValue),
+        value: cdktn.listMapperHcl(tfRecommendationPreferencesPreferredResourcePropertyToHclTerraform, true)(this._preferredResource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsComputeoptimizerRecommendationPreferences.PreferredResourcePropertyList",
+        storageClassType: "TfRecommendationPreferences.PreferredResourcePropertyList",
       },
       scope: {
-        value: cdktn.listMapperHcl(awsComputeoptimizerRecommendationPreferencesScopePropertyToHclTerraform, true)(this._scope.internalValue),
+        value: cdktn.listMapperHcl(tfRecommendationPreferencesScopePropertyToHclTerraform, true)(this._scope.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsComputeoptimizerRecommendationPreferences.ScopePropertyList",
+        storageClassType: "TfRecommendationPreferences.ScopePropertyList",
       },
       utilization_preference: {
-        value: cdktn.listMapperHcl(awsComputeoptimizerRecommendationPreferencesUtilizationPreferencePropertyToHclTerraform, true)(this._utilizationPreference.internalValue),
+        value: cdktn.listMapperHcl(tfRecommendationPreferencesUtilizationPreferencePropertyToHclTerraform, true)(this._utilizationPreference.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsComputeoptimizerRecommendationPreferences.UtilizationPreferencePropertyList",
+        storageClassType: "TfRecommendationPreferences.UtilizationPreferencePropertyList",
       },
     };
 
@@ -375,7 +375,7 @@ export class AwsComputeoptimizerRecommendationPreferences extends cdktn.Terrafor
   }
 }
 
-export function awsComputeoptimizerRecommendationPreferencesExternalMetricsPreferencePropertyToTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.ExternalMetricsPreferenceProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesExternalMetricsPreferencePropertyToTerraform(struct?: TfRecommendationPreferences.ExternalMetricsPreferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function awsComputeoptimizerRecommendationPreferencesExternalMetricsPrefe
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesExternalMetricsPreferencePropertyToHclTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.ExternalMetricsPreferenceProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesExternalMetricsPreferencePropertyToHclTerraform(struct?: TfRecommendationPreferences.ExternalMetricsPreferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function awsComputeoptimizerRecommendationPreferencesExternalMetricsPrefe
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesPreferredResourcePropertyToTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.PreferredResourceProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesPreferredResourcePropertyToTerraform(struct?: TfRecommendationPreferences.PreferredResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function awsComputeoptimizerRecommendationPreferencesPreferredResourcePro
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesPreferredResourcePropertyToHclTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.PreferredResourceProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesPreferredResourcePropertyToHclTerraform(struct?: TfRecommendationPreferences.PreferredResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function awsComputeoptimizerRecommendationPreferencesPreferredResourcePro
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesScopePropertyToTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.ScopeProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesScopePropertyToTerraform(struct?: TfRecommendationPreferences.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function awsComputeoptimizerRecommendationPreferencesScopePropertyToTerra
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesScopePropertyToHclTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.ScopeProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesScopePropertyToHclTerraform(struct?: TfRecommendationPreferences.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function awsComputeoptimizerRecommendationPreferencesScopePropertyToHclTe
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesMetricParametersPropertyToTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.MetricParametersProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesMetricParametersPropertyToTerraform(struct?: TfRecommendationPreferences.MetricParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function awsComputeoptimizerRecommendationPreferencesMetricParametersProp
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesMetricParametersPropertyToHclTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.MetricParametersProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesMetricParametersPropertyToHclTerraform(struct?: TfRecommendationPreferences.MetricParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -523,19 +523,19 @@ export function awsComputeoptimizerRecommendationPreferencesMetricParametersProp
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesUtilizationPreferencePropertyToTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.UtilizationPreferenceProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesUtilizationPreferencePropertyToTerraform(struct?: TfRecommendationPreferences.UtilizationPreferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     metric_name: cdktn.stringToTerraform(struct!.metricName),
-    metric_parameters: cdktn.listMapper(awsComputeoptimizerRecommendationPreferencesMetricParametersPropertyToTerraform, true)(struct!.metricParameters),
+    metric_parameters: cdktn.listMapper(tfRecommendationPreferencesMetricParametersPropertyToTerraform, true)(struct!.metricParameters),
   }
 }
 
 
-export function awsComputeoptimizerRecommendationPreferencesUtilizationPreferencePropertyToHclTerraform(struct?: AwsComputeoptimizerRecommendationPreferences.UtilizationPreferenceProperty | cdktn.IResolvable): any {
+export function tfRecommendationPreferencesUtilizationPreferencePropertyToHclTerraform(struct?: TfRecommendationPreferences.UtilizationPreferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function awsComputeoptimizerRecommendationPreferencesUtilizationPreferenc
       storageClassType: "string",
     },
     metric_parameters: {
-      value: cdktn.listMapperHcl(awsComputeoptimizerRecommendationPreferencesMetricParametersPropertyToHclTerraform, true)(struct!.metricParameters),
+      value: cdktn.listMapperHcl(tfRecommendationPreferencesMetricParametersPropertyToHclTerraform, true)(struct!.metricParameters),
       isBlock: true,
       type: "list",
       storageClassType: "MetricParametersPropertyList",
@@ -560,10 +560,10 @@ export function awsComputeoptimizerRecommendationPreferencesUtilizationPreferenc
 }
 
 
-export namespace AwsComputeoptimizerRecommendationPreferences {
+export namespace TfRecommendationPreferences {
 export interface ExternalMetricsPreferenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#source AwsComputeoptimizerRecommendationPreferences#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#source TfRecommendationPreferences#source}
   */
   readonly source: string;
 }
@@ -646,15 +646,15 @@ export class ExternalMetricsPreferencePropertyList extends cdktn.ComplexList {
 }
 export interface PreferredResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#exclude_list AwsComputeoptimizerRecommendationPreferences#exclude_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#exclude_list TfRecommendationPreferences#exclude_list}
   */
   readonly excludeList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#include_list AwsComputeoptimizerRecommendationPreferences#include_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#include_list TfRecommendationPreferences#include_list}
   */
   readonly includeList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#name AwsComputeoptimizerRecommendationPreferences#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#name TfRecommendationPreferences#name}
   */
   readonly name: string;
 }
@@ -781,11 +781,11 @@ export class PreferredResourcePropertyList extends cdktn.ComplexList {
 }
 export interface ScopeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#name AwsComputeoptimizerRecommendationPreferences#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#name TfRecommendationPreferences#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#value AwsComputeoptimizerRecommendationPreferences#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#value TfRecommendationPreferences#value}
   */
   readonly value: string;
 }
@@ -887,11 +887,11 @@ export class ScopePropertyList extends cdktn.ComplexList {
 }
 export interface MetricParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#headroom AwsComputeoptimizerRecommendationPreferences#headroom}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#headroom TfRecommendationPreferences#headroom}
   */
   readonly headroom: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#threshold AwsComputeoptimizerRecommendationPreferences#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#threshold TfRecommendationPreferences#threshold}
   */
   readonly threshold?: string;
 }
@@ -996,13 +996,13 @@ export class MetricParametersPropertyList extends cdktn.ComplexList {
 }
 export interface UtilizationPreferenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#metric_name AwsComputeoptimizerRecommendationPreferences#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#metric_name TfRecommendationPreferences#metric_name}
   */
   readonly metricName: string;
   /**
   * metric_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#metric_parameters AwsComputeoptimizerRecommendationPreferences#metric_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/computeoptimizer_recommendation_preferences#metric_parameters TfRecommendationPreferences#metric_parameters}
   */
   readonly metricParameters?: MetricParametersProperty[] | cdktn.IResolvable;
 }

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsQuicksightDataSetConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDataSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#aws_account_id DataAwsQuicksightDataSet#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#aws_account_id DataTfDataSet#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#data_set_id DataAwsQuicksightDataSet#data_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#data_set_id DataTfDataSet#data_set_id}
   */
   readonly dataSetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#id DataAwsQuicksightDataSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#id DataTfDataSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataAwsQuicksightDataSetConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#region DataAwsQuicksightDataSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#region DataTfDataSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#tags DataAwsQuicksightDataSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#tags DataTfDataSet#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataAwsQuicksightDataSetConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set aws_quicksight_data_set}
 */
-export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
+export class DataTfDataSet extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsQuicksightDataSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDataSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsQuicksightDataSet to import
-  * @param importFromId The id of the existing DataAwsQuicksightDataSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsQuicksightDataSet to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDataSet to import
+  * @param importFromId The id of the existing DataTfDataSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_data_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDataSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_data_set", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsQuicksightDataSetConfig
+  * @param options DataTfDataSetConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsQuicksightDataSetConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDataSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_data_set',
       terraformGeneratorMetadata: {
@@ -117,13 +117,13 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   }
 
   // column_groups - computed: true, optional: false, required: false
-  private _columnGroups = new DataAwsQuicksightDataSet.ColumnGroupsPropertyList(this, "column_groups", false);
+  private _columnGroups = new DataTfDataSet.ColumnGroupsPropertyList(this, "column_groups", false);
   public get columnGroups() {
     return this._columnGroups;
   }
 
   // column_level_permission_rules - computed: true, optional: false, required: false
-  private _columnLevelPermissionRules = new DataAwsQuicksightDataSet.ColumnLevelPermissionRulesPropertyList(this, "column_level_permission_rules", false);
+  private _columnLevelPermissionRules = new DataTfDataSet.ColumnLevelPermissionRulesPropertyList(this, "column_level_permission_rules", false);
   public get columnLevelPermissionRules() {
     return this._columnLevelPermissionRules;
   }
@@ -142,13 +142,13 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   }
 
   // data_set_usage_configuration - computed: true, optional: false, required: false
-  private _dataSetUsageConfiguration = new DataAwsQuicksightDataSet.DataSetUsageConfigurationPropertyList(this, "data_set_usage_configuration", false);
+  private _dataSetUsageConfiguration = new DataTfDataSet.DataSetUsageConfigurationPropertyList(this, "data_set_usage_configuration", false);
   public get dataSetUsageConfiguration() {
     return this._dataSetUsageConfiguration;
   }
 
   // field_folders - computed: true, optional: false, required: false
-  private _fieldFolders = new DataAwsQuicksightDataSet.FieldFoldersPropertyList(this, "field_folders", true);
+  private _fieldFolders = new DataTfDataSet.FieldFoldersPropertyList(this, "field_folders", true);
   public get fieldFolders() {
     return this._fieldFolders;
   }
@@ -175,7 +175,7 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   }
 
   // logical_table_map - computed: true, optional: false, required: false
-  private _logicalTableMap = new DataAwsQuicksightDataSet.LogicalTableMapPropertyList(this, "logical_table_map", true);
+  private _logicalTableMap = new DataTfDataSet.LogicalTableMapPropertyList(this, "logical_table_map", true);
   public get logicalTableMap() {
     return this._logicalTableMap;
   }
@@ -186,13 +186,13 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   }
 
   // permissions - computed: true, optional: false, required: false
-  private _permissions = new DataAwsQuicksightDataSet.PermissionsPropertyList(this, "permissions", false);
+  private _permissions = new DataTfDataSet.PermissionsPropertyList(this, "permissions", false);
   public get permissions() {
     return this._permissions;
   }
 
   // physical_table_map - computed: true, optional: false, required: false
-  private _physicalTableMap = new DataAwsQuicksightDataSet.PhysicalTableMapPropertyList(this, "physical_table_map", true);
+  private _physicalTableMap = new DataTfDataSet.PhysicalTableMapPropertyList(this, "physical_table_map", true);
   public get physicalTableMap() {
     return this._physicalTableMap;
   }
@@ -214,13 +214,13 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   }
 
   // row_level_permission_data_set - computed: true, optional: false, required: false
-  private _rowLevelPermissionDataSet = new DataAwsQuicksightDataSet.RowLevelPermissionDataSetPropertyList(this, "row_level_permission_data_set", false);
+  private _rowLevelPermissionDataSet = new DataTfDataSet.RowLevelPermissionDataSetPropertyList(this, "row_level_permission_data_set", false);
   public get rowLevelPermissionDataSet() {
     return this._rowLevelPermissionDataSet;
   }
 
   // row_level_permission_tag_configuration - computed: true, optional: false, required: false
-  private _rowLevelPermissionTagConfiguration = new DataAwsQuicksightDataSet.RowLevelPermissionTagConfigurationPropertyList(this, "row_level_permission_tag_configuration", false);
+  private _rowLevelPermissionTagConfiguration = new DataTfDataSet.RowLevelPermissionTagConfigurationPropertyList(this, "row_level_permission_tag_configuration", false);
   public get rowLevelPermissionTagConfiguration() {
     return this._rowLevelPermissionTagConfiguration;
   }
@@ -294,7 +294,7 @@ export class DataAwsQuicksightDataSet extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsQuicksightDataSetGeoSpatialColumnGroupPropertyToTerraform(struct?: DataAwsQuicksightDataSet.GeoSpatialColumnGroupProperty): any {
+export function dataTfDataSetGeoSpatialColumnGroupPropertyToTerraform(struct?: DataTfDataSet.GeoSpatialColumnGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function dataAwsQuicksightDataSetGeoSpatialColumnGroupPropertyToTerraform
 }
 
 
-export function dataAwsQuicksightDataSetGeoSpatialColumnGroupPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.GeoSpatialColumnGroupProperty): any {
+export function dataTfDataSetGeoSpatialColumnGroupPropertyToHclTerraform(struct?: DataTfDataSet.GeoSpatialColumnGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function dataAwsQuicksightDataSetGeoSpatialColumnGroupPropertyToHclTerraf
 }
 
 
-export function dataAwsQuicksightDataSetColumnGroupsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.ColumnGroupsProperty): any {
+export function dataTfDataSetColumnGroupsPropertyToTerraform(struct?: DataTfDataSet.ColumnGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function dataAwsQuicksightDataSetColumnGroupsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsQuicksightDataSetColumnGroupsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.ColumnGroupsProperty): any {
+export function dataTfDataSetColumnGroupsPropertyToHclTerraform(struct?: DataTfDataSet.ColumnGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function dataAwsQuicksightDataSetColumnGroupsPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsQuicksightDataSetColumnLevelPermissionRulesPropertyToTerraform(struct?: DataAwsQuicksightDataSet.ColumnLevelPermissionRulesProperty): any {
+export function dataTfDataSetColumnLevelPermissionRulesPropertyToTerraform(struct?: DataTfDataSet.ColumnLevelPermissionRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function dataAwsQuicksightDataSetColumnLevelPermissionRulesPropertyToTerr
 }
 
 
-export function dataAwsQuicksightDataSetColumnLevelPermissionRulesPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.ColumnLevelPermissionRulesProperty): any {
+export function dataTfDataSetColumnLevelPermissionRulesPropertyToHclTerraform(struct?: DataTfDataSet.ColumnLevelPermissionRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function dataAwsQuicksightDataSetColumnLevelPermissionRulesPropertyToHclT
 }
 
 
-export function dataAwsQuicksightDataSetDataSetUsageConfigurationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.DataSetUsageConfigurationProperty): any {
+export function dataTfDataSetDataSetUsageConfigurationPropertyToTerraform(struct?: DataTfDataSet.DataSetUsageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function dataAwsQuicksightDataSetDataSetUsageConfigurationPropertyToTerra
 }
 
 
-export function dataAwsQuicksightDataSetDataSetUsageConfigurationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.DataSetUsageConfigurationProperty): any {
+export function dataTfDataSetDataSetUsageConfigurationPropertyToHclTerraform(struct?: DataTfDataSet.DataSetUsageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function dataAwsQuicksightDataSetDataSetUsageConfigurationPropertyToHclTe
 }
 
 
-export function dataAwsQuicksightDataSetFieldFoldersPropertyToTerraform(struct?: DataAwsQuicksightDataSet.FieldFoldersProperty): any {
+export function dataTfDataSetFieldFoldersPropertyToTerraform(struct?: DataTfDataSet.FieldFoldersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function dataAwsQuicksightDataSetFieldFoldersPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsQuicksightDataSetFieldFoldersPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.FieldFoldersProperty): any {
+export function dataTfDataSetFieldFoldersPropertyToHclTerraform(struct?: DataTfDataSet.FieldFoldersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function dataAwsQuicksightDataSetFieldFoldersPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsQuicksightDataSetCastColumnTypeOperationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.CastColumnTypeOperationProperty): any {
+export function dataTfDataSetCastColumnTypeOperationPropertyToTerraform(struct?: DataTfDataSet.CastColumnTypeOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function dataAwsQuicksightDataSetCastColumnTypeOperationPropertyToTerrafo
 }
 
 
-export function dataAwsQuicksightDataSetCastColumnTypeOperationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.CastColumnTypeOperationProperty): any {
+export function dataTfDataSetCastColumnTypeOperationPropertyToHclTerraform(struct?: DataTfDataSet.CastColumnTypeOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function dataAwsQuicksightDataSetCastColumnTypeOperationPropertyToHclTerr
 }
 
 
-export function dataAwsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty): any {
+export function dataTfDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToTerraform(struct?: DataTfDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function dataAwsQuicksightDataSetLogicalTableMapDataTransformsCreateColum
 }
 
 
-export function dataAwsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty): any {
+export function dataTfDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToHclTerraform(struct?: DataTfDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function dataAwsQuicksightDataSetLogicalTableMapDataTransformsCreateColum
 }
 
 
-export function dataAwsQuicksightDataSetCreateColumnsOperationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.CreateColumnsOperationProperty): any {
+export function dataTfDataSetCreateColumnsOperationPropertyToTerraform(struct?: DataTfDataSet.CreateColumnsOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function dataAwsQuicksightDataSetCreateColumnsOperationPropertyToTerrafor
 }
 
 
-export function dataAwsQuicksightDataSetCreateColumnsOperationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.CreateColumnsOperationProperty): any {
+export function dataTfDataSetCreateColumnsOperationPropertyToHclTerraform(struct?: DataTfDataSet.CreateColumnsOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function dataAwsQuicksightDataSetCreateColumnsOperationPropertyToHclTerra
 }
 
 
-export function dataAwsQuicksightDataSetFilterOperationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.FilterOperationProperty): any {
+export function dataTfDataSetFilterOperationPropertyToTerraform(struct?: DataTfDataSet.FilterOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function dataAwsQuicksightDataSetFilterOperationPropertyToTerraform(struc
 }
 
 
-export function dataAwsQuicksightDataSetFilterOperationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.FilterOperationProperty): any {
+export function dataTfDataSetFilterOperationPropertyToHclTerraform(struct?: DataTfDataSet.FilterOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function dataAwsQuicksightDataSetFilterOperationPropertyToHclTerraform(st
 }
 
 
-export function dataAwsQuicksightDataSetProjectOperationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.ProjectOperationProperty): any {
+export function dataTfDataSetProjectOperationPropertyToTerraform(struct?: DataTfDataSet.ProjectOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function dataAwsQuicksightDataSetProjectOperationPropertyToTerraform(stru
 }
 
 
-export function dataAwsQuicksightDataSetProjectOperationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.ProjectOperationProperty): any {
+export function dataTfDataSetProjectOperationPropertyToHclTerraform(struct?: DataTfDataSet.ProjectOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function dataAwsQuicksightDataSetProjectOperationPropertyToHclTerraform(s
 }
 
 
-export function dataAwsQuicksightDataSetRenameColumnOperationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.RenameColumnOperationProperty): any {
+export function dataTfDataSetRenameColumnOperationPropertyToTerraform(struct?: DataTfDataSet.RenameColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function dataAwsQuicksightDataSetRenameColumnOperationPropertyToTerraform
 }
 
 
-export function dataAwsQuicksightDataSetRenameColumnOperationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.RenameColumnOperationProperty): any {
+export function dataTfDataSetRenameColumnOperationPropertyToHclTerraform(struct?: DataTfDataSet.RenameColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function dataAwsQuicksightDataSetRenameColumnOperationPropertyToHclTerraf
 }
 
 
-export function dataAwsQuicksightDataSetColumnDescriptionPropertyToTerraform(struct?: DataAwsQuicksightDataSet.ColumnDescriptionProperty): any {
+export function dataTfDataSetColumnDescriptionPropertyToTerraform(struct?: DataTfDataSet.ColumnDescriptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function dataAwsQuicksightDataSetColumnDescriptionPropertyToTerraform(str
 }
 
 
-export function dataAwsQuicksightDataSetColumnDescriptionPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.ColumnDescriptionProperty): any {
+export function dataTfDataSetColumnDescriptionPropertyToHclTerraform(struct?: DataTfDataSet.ColumnDescriptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function dataAwsQuicksightDataSetColumnDescriptionPropertyToHclTerraform(
 }
 
 
-export function dataAwsQuicksightDataSetTagsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.TagsProperty): any {
+export function dataTfDataSetTagsPropertyToTerraform(struct?: DataTfDataSet.TagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function dataAwsQuicksightDataSetTagsPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsQuicksightDataSetTagsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.TagsProperty): any {
+export function dataTfDataSetTagsPropertyToHclTerraform(struct?: DataTfDataSet.TagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function dataAwsQuicksightDataSetTagsPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsQuicksightDataSetTagColumnOperationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.TagColumnOperationProperty): any {
+export function dataTfDataSetTagColumnOperationPropertyToTerraform(struct?: DataTfDataSet.TagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function dataAwsQuicksightDataSetTagColumnOperationPropertyToTerraform(st
 }
 
 
-export function dataAwsQuicksightDataSetTagColumnOperationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.TagColumnOperationProperty): any {
+export function dataTfDataSetTagColumnOperationPropertyToHclTerraform(struct?: DataTfDataSet.TagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function dataAwsQuicksightDataSetTagColumnOperationPropertyToHclTerraform
 }
 
 
-export function dataAwsQuicksightDataSetUntagColumnOperationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.UntagColumnOperationProperty): any {
+export function dataTfDataSetUntagColumnOperationPropertyToTerraform(struct?: DataTfDataSet.UntagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -598,7 +598,7 @@ export function dataAwsQuicksightDataSetUntagColumnOperationPropertyToTerraform(
 }
 
 
-export function dataAwsQuicksightDataSetUntagColumnOperationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.UntagColumnOperationProperty): any {
+export function dataTfDataSetUntagColumnOperationPropertyToHclTerraform(struct?: DataTfDataSet.UntagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,7 +609,7 @@ export function dataAwsQuicksightDataSetUntagColumnOperationPropertyToHclTerrafo
 }
 
 
-export function dataAwsQuicksightDataSetDataTransformsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.DataTransformsProperty): any {
+export function dataTfDataSetDataTransformsPropertyToTerraform(struct?: DataTfDataSet.DataTransformsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function dataAwsQuicksightDataSetDataTransformsPropertyToTerraform(struct
 }
 
 
-export function dataAwsQuicksightDataSetDataTransformsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.DataTransformsProperty): any {
+export function dataTfDataSetDataTransformsPropertyToHclTerraform(struct?: DataTfDataSet.DataTransformsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function dataAwsQuicksightDataSetDataTransformsPropertyToHclTerraform(str
 }
 
 
-export function dataAwsQuicksightDataSetLeftJoinKeyPropertiesPropertyToTerraform(struct?: DataAwsQuicksightDataSet.LeftJoinKeyPropertiesProperty): any {
+export function dataTfDataSetLeftJoinKeyPropertiesPropertyToTerraform(struct?: DataTfDataSet.LeftJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -640,7 +640,7 @@ export function dataAwsQuicksightDataSetLeftJoinKeyPropertiesPropertyToTerraform
 }
 
 
-export function dataAwsQuicksightDataSetLeftJoinKeyPropertiesPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.LeftJoinKeyPropertiesProperty): any {
+export function dataTfDataSetLeftJoinKeyPropertiesPropertyToHclTerraform(struct?: DataTfDataSet.LeftJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,7 +651,7 @@ export function dataAwsQuicksightDataSetLeftJoinKeyPropertiesPropertyToHclTerraf
 }
 
 
-export function dataAwsQuicksightDataSetRightJoinKeyPropertiesPropertyToTerraform(struct?: DataAwsQuicksightDataSet.RightJoinKeyPropertiesProperty): any {
+export function dataTfDataSetRightJoinKeyPropertiesPropertyToTerraform(struct?: DataTfDataSet.RightJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function dataAwsQuicksightDataSetRightJoinKeyPropertiesPropertyToTerrafor
 }
 
 
-export function dataAwsQuicksightDataSetRightJoinKeyPropertiesPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.RightJoinKeyPropertiesProperty): any {
+export function dataTfDataSetRightJoinKeyPropertiesPropertyToHclTerraform(struct?: DataTfDataSet.RightJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,7 +672,7 @@ export function dataAwsQuicksightDataSetRightJoinKeyPropertiesPropertyToHclTerra
 }
 
 
-export function dataAwsQuicksightDataSetJoinInstructionPropertyToTerraform(struct?: DataAwsQuicksightDataSet.JoinInstructionProperty): any {
+export function dataTfDataSetJoinInstructionPropertyToTerraform(struct?: DataTfDataSet.JoinInstructionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -682,7 +682,7 @@ export function dataAwsQuicksightDataSetJoinInstructionPropertyToTerraform(struc
 }
 
 
-export function dataAwsQuicksightDataSetJoinInstructionPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.JoinInstructionProperty): any {
+export function dataTfDataSetJoinInstructionPropertyToHclTerraform(struct?: DataTfDataSet.JoinInstructionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,7 +693,7 @@ export function dataAwsQuicksightDataSetJoinInstructionPropertyToHclTerraform(st
 }
 
 
-export function dataAwsQuicksightDataSetSourcePropertyToTerraform(struct?: DataAwsQuicksightDataSet.SourceProperty): any {
+export function dataTfDataSetSourcePropertyToTerraform(struct?: DataTfDataSet.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,7 +703,7 @@ export function dataAwsQuicksightDataSetSourcePropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsQuicksightDataSetSourcePropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.SourceProperty): any {
+export function dataTfDataSetSourcePropertyToHclTerraform(struct?: DataTfDataSet.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function dataAwsQuicksightDataSetSourcePropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataAwsQuicksightDataSetLogicalTableMapPropertyToTerraform(struct?: DataAwsQuicksightDataSet.LogicalTableMapProperty): any {
+export function dataTfDataSetLogicalTableMapPropertyToTerraform(struct?: DataTfDataSet.LogicalTableMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,7 +724,7 @@ export function dataAwsQuicksightDataSetLogicalTableMapPropertyToTerraform(struc
 }
 
 
-export function dataAwsQuicksightDataSetLogicalTableMapPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.LogicalTableMapProperty): any {
+export function dataTfDataSetLogicalTableMapPropertyToHclTerraform(struct?: DataTfDataSet.LogicalTableMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -735,7 +735,7 @@ export function dataAwsQuicksightDataSetLogicalTableMapPropertyToHclTerraform(st
 }
 
 
-export function dataAwsQuicksightDataSetPermissionsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.PermissionsProperty): any {
+export function dataTfDataSetPermissionsPropertyToTerraform(struct?: DataTfDataSet.PermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -745,7 +745,7 @@ export function dataAwsQuicksightDataSetPermissionsPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsQuicksightDataSetPermissionsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.PermissionsProperty): any {
+export function dataTfDataSetPermissionsPropertyToHclTerraform(struct?: DataTfDataSet.PermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -756,7 +756,7 @@ export function dataAwsQuicksightDataSetPermissionsPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapCustomSqlColumnsProperty): any {
+export function dataTfDataSetPhysicalTableMapCustomSqlColumnsPropertyToTerraform(struct?: DataTfDataSet.PhysicalTableMapCustomSqlColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -766,7 +766,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapCustomSqlColumnsProperty
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapCustomSqlColumnsProperty): any {
+export function dataTfDataSetPhysicalTableMapCustomSqlColumnsPropertyToHclTerraform(struct?: DataTfDataSet.PhysicalTableMapCustomSqlColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -777,7 +777,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapCustomSqlColumnsProperty
 }
 
 
-export function dataAwsQuicksightDataSetCustomSqlPropertyToTerraform(struct?: DataAwsQuicksightDataSet.CustomSqlProperty): any {
+export function dataTfDataSetCustomSqlPropertyToTerraform(struct?: DataTfDataSet.CustomSqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -787,7 +787,7 @@ export function dataAwsQuicksightDataSetCustomSqlPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsQuicksightDataSetCustomSqlPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.CustomSqlProperty): any {
+export function dataTfDataSetCustomSqlPropertyToHclTerraform(struct?: DataTfDataSet.CustomSqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -798,7 +798,7 @@ export function dataAwsQuicksightDataSetCustomSqlPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapRelationalTableInputColumnsProperty): any {
+export function dataTfDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToTerraform(struct?: DataTfDataSet.PhysicalTableMapRelationalTableInputColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -808,7 +808,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapRelationalTableInputColu
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapRelationalTableInputColumnsProperty): any {
+export function dataTfDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToHclTerraform(struct?: DataTfDataSet.PhysicalTableMapRelationalTableInputColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -819,7 +819,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapRelationalTableInputColu
 }
 
 
-export function dataAwsQuicksightDataSetRelationalTablePropertyToTerraform(struct?: DataAwsQuicksightDataSet.RelationalTableProperty): any {
+export function dataTfDataSetRelationalTablePropertyToTerraform(struct?: DataTfDataSet.RelationalTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -829,7 +829,7 @@ export function dataAwsQuicksightDataSetRelationalTablePropertyToTerraform(struc
 }
 
 
-export function dataAwsQuicksightDataSetRelationalTablePropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.RelationalTableProperty): any {
+export function dataTfDataSetRelationalTablePropertyToHclTerraform(struct?: DataTfDataSet.RelationalTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -840,7 +840,7 @@ export function dataAwsQuicksightDataSetRelationalTablePropertyToHclTerraform(st
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapS3SourceInputColumnsProperty): any {
+export function dataTfDataSetPhysicalTableMapS3SourceInputColumnsPropertyToTerraform(struct?: DataTfDataSet.PhysicalTableMapS3SourceInputColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsProp
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapS3SourceInputColumnsProperty): any {
+export function dataTfDataSetPhysicalTableMapS3SourceInputColumnsPropertyToHclTerraform(struct?: DataTfDataSet.PhysicalTableMapS3SourceInputColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -861,7 +861,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsProp
 }
 
 
-export function dataAwsQuicksightDataSetUploadSettingsPropertyToTerraform(struct?: DataAwsQuicksightDataSet.UploadSettingsProperty): any {
+export function dataTfDataSetUploadSettingsPropertyToTerraform(struct?: DataTfDataSet.UploadSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -871,7 +871,7 @@ export function dataAwsQuicksightDataSetUploadSettingsPropertyToTerraform(struct
 }
 
 
-export function dataAwsQuicksightDataSetUploadSettingsPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.UploadSettingsProperty): any {
+export function dataTfDataSetUploadSettingsPropertyToHclTerraform(struct?: DataTfDataSet.UploadSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -882,7 +882,7 @@ export function dataAwsQuicksightDataSetUploadSettingsPropertyToHclTerraform(str
 }
 
 
-export function dataAwsQuicksightDataSetS3SourcePropertyToTerraform(struct?: DataAwsQuicksightDataSet.S3SourceProperty): any {
+export function dataTfDataSetS3SourcePropertyToTerraform(struct?: DataTfDataSet.S3SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -892,7 +892,7 @@ export function dataAwsQuicksightDataSetS3SourcePropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsQuicksightDataSetS3SourcePropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.S3SourceProperty): any {
+export function dataTfDataSetS3SourcePropertyToHclTerraform(struct?: DataTfDataSet.S3SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -903,7 +903,7 @@ export function dataAwsQuicksightDataSetS3SourcePropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapPropertyToTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapProperty): any {
+export function dataTfDataSetPhysicalTableMapPropertyToTerraform(struct?: DataTfDataSet.PhysicalTableMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapPropertyToTerraform(stru
 }
 
 
-export function dataAwsQuicksightDataSetPhysicalTableMapPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.PhysicalTableMapProperty): any {
+export function dataTfDataSetPhysicalTableMapPropertyToHclTerraform(struct?: DataTfDataSet.PhysicalTableMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -924,7 +924,7 @@ export function dataAwsQuicksightDataSetPhysicalTableMapPropertyToHclTerraform(s
 }
 
 
-export function dataAwsQuicksightDataSetRowLevelPermissionDataSetPropertyToTerraform(struct?: DataAwsQuicksightDataSet.RowLevelPermissionDataSetProperty): any {
+export function dataTfDataSetRowLevelPermissionDataSetPropertyToTerraform(struct?: DataTfDataSet.RowLevelPermissionDataSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -934,7 +934,7 @@ export function dataAwsQuicksightDataSetRowLevelPermissionDataSetPropertyToTerra
 }
 
 
-export function dataAwsQuicksightDataSetRowLevelPermissionDataSetPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.RowLevelPermissionDataSetProperty): any {
+export function dataTfDataSetRowLevelPermissionDataSetPropertyToHclTerraform(struct?: DataTfDataSet.RowLevelPermissionDataSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -945,7 +945,7 @@ export function dataAwsQuicksightDataSetRowLevelPermissionDataSetPropertyToHclTe
 }
 
 
-export function dataAwsQuicksightDataSetTagRulesPropertyToTerraform(struct?: DataAwsQuicksightDataSet.TagRulesProperty): any {
+export function dataTfDataSetTagRulesPropertyToTerraform(struct?: DataTfDataSet.TagRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -955,7 +955,7 @@ export function dataAwsQuicksightDataSetTagRulesPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsQuicksightDataSetTagRulesPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.TagRulesProperty): any {
+export function dataTfDataSetTagRulesPropertyToHclTerraform(struct?: DataTfDataSet.TagRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -966,7 +966,7 @@ export function dataAwsQuicksightDataSetTagRulesPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyToTerraform(struct?: DataAwsQuicksightDataSet.RowLevelPermissionTagConfigurationProperty): any {
+export function dataTfDataSetRowLevelPermissionTagConfigurationPropertyToTerraform(struct?: DataTfDataSet.RowLevelPermissionTagConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,7 +976,7 @@ export function dataAwsQuicksightDataSetRowLevelPermissionTagConfigurationProper
 }
 
 
-export function dataAwsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyToHclTerraform(struct?: DataAwsQuicksightDataSet.RowLevelPermissionTagConfigurationProperty): any {
+export function dataTfDataSetRowLevelPermissionTagConfigurationPropertyToHclTerraform(struct?: DataTfDataSet.RowLevelPermissionTagConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -987,7 +987,7 @@ export function dataAwsQuicksightDataSetRowLevelPermissionTagConfigurationProper
 }
 
 
-export namespace DataAwsQuicksightDataSet {
+export namespace DataTfDataSet {
 export interface GeoSpatialColumnGroupProperty {
 }
 export class GeoSpatialColumnGroupPropertyOutputReference extends cdktn.ComplexObject {

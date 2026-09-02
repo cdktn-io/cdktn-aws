@@ -5,144 +5,144 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMwaaEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#airflow_configuration_options AwsMwaaEnvironment#airflow_configuration_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#airflow_configuration_options TfEnvironment#airflow_configuration_options}
   */
   readonly airflowConfigurationOptions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#airflow_version AwsMwaaEnvironment#airflow_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#airflow_version TfEnvironment#airflow_version}
   */
   readonly airflowVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#dag_s3_path AwsMwaaEnvironment#dag_s3_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#dag_s3_path TfEnvironment#dag_s3_path}
   */
   readonly dagS3Path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#endpoint_management AwsMwaaEnvironment#endpoint_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#endpoint_management TfEnvironment#endpoint_management}
   */
   readonly endpointManagement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#environment_class AwsMwaaEnvironment#environment_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#environment_class TfEnvironment#environment_class}
   */
   readonly environmentClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#execution_role_arn AwsMwaaEnvironment#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#execution_role_arn TfEnvironment#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#id AwsMwaaEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#id TfEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#kms_key AwsMwaaEnvironment#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#kms_key TfEnvironment#kms_key}
   */
   readonly kmsKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#max_webservers AwsMwaaEnvironment#max_webservers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#max_webservers TfEnvironment#max_webservers}
   */
   readonly maxWebservers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#max_workers AwsMwaaEnvironment#max_workers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#max_workers TfEnvironment#max_workers}
   */
   readonly maxWorkers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#min_webservers AwsMwaaEnvironment#min_webservers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#min_webservers TfEnvironment#min_webservers}
   */
   readonly minWebservers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#min_workers AwsMwaaEnvironment#min_workers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#min_workers TfEnvironment#min_workers}
   */
   readonly minWorkers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#name AwsMwaaEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#name TfEnvironment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#plugins_s3_object_version AwsMwaaEnvironment#plugins_s3_object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#plugins_s3_object_version TfEnvironment#plugins_s3_object_version}
   */
   readonly pluginsS3ObjectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#plugins_s3_path AwsMwaaEnvironment#plugins_s3_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#plugins_s3_path TfEnvironment#plugins_s3_path}
   */
   readonly pluginsS3Path?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#region AwsMwaaEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#region TfEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#requirements_s3_object_version AwsMwaaEnvironment#requirements_s3_object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#requirements_s3_object_version TfEnvironment#requirements_s3_object_version}
   */
   readonly requirementsS3ObjectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#requirements_s3_path AwsMwaaEnvironment#requirements_s3_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#requirements_s3_path TfEnvironment#requirements_s3_path}
   */
   readonly requirementsS3Path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#schedulers AwsMwaaEnvironment#schedulers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#schedulers TfEnvironment#schedulers}
   */
   readonly schedulers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#source_bucket_arn AwsMwaaEnvironment#source_bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#source_bucket_arn TfEnvironment#source_bucket_arn}
   */
   readonly sourceBucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#startup_script_s3_object_version AwsMwaaEnvironment#startup_script_s3_object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#startup_script_s3_object_version TfEnvironment#startup_script_s3_object_version}
   */
   readonly startupScriptS3ObjectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#startup_script_s3_path AwsMwaaEnvironment#startup_script_s3_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#startup_script_s3_path TfEnvironment#startup_script_s3_path}
   */
   readonly startupScriptS3Path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#tags AwsMwaaEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#tags TfEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#tags_all AwsMwaaEnvironment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#tags_all TfEnvironment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#webserver_access_mode AwsMwaaEnvironment#webserver_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#webserver_access_mode TfEnvironment#webserver_access_mode}
   */
   readonly webserverAccessMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#weekly_maintenance_window_start AwsMwaaEnvironment#weekly_maintenance_window_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#weekly_maintenance_window_start TfEnvironment#weekly_maintenance_window_start}
   */
   readonly weeklyMaintenanceWindowStart?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#worker_replacement_strategy AwsMwaaEnvironment#worker_replacement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#worker_replacement_strategy TfEnvironment#worker_replacement_strategy}
   */
   readonly workerReplacementStrategy?: string;
   /**
   * logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#logging_configuration AwsMwaaEnvironment#logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#logging_configuration TfEnvironment#logging_configuration}
   */
-  readonly loggingConfiguration?: AwsMwaaEnvironment.LoggingConfigurationProperty;
+  readonly loggingConfiguration?: TfEnvironment.LoggingConfigurationProperty;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#network_configuration AwsMwaaEnvironment#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#network_configuration TfEnvironment#network_configuration}
   */
-  readonly networkConfiguration: AwsMwaaEnvironment.NetworkConfigurationProperty;
+  readonly networkConfiguration: TfEnvironment.NetworkConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#timeouts AwsMwaaEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#timeouts TfEnvironment#timeouts}
   */
-  readonly timeouts?: AwsMwaaEnvironment.TimeoutsProperty;
+  readonly timeouts?: TfEnvironment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment aws_mwaa_environment}
 */
-export class AwsMwaaEnvironment extends cdktn.TerraformResource {
+export class TfEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -153,11 +153,11 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMwaaEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMwaaEnvironment to import
-  * @param importFromId The id of the existing AwsMwaaEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMwaaEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the TfEnvironment to import
+  * @param importFromId The id of the existing TfEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mwaa_environment", importId: importFromId, provider });
@@ -172,9 +172,9 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMwaaEnvironmentConfig
+  * @param options TfEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMwaaEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mwaa_environment',
       terraformGeneratorMetadata: {
@@ -364,7 +364,7 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
   }
 
   // last_updated - computed: true, optional: false, required: false
-  private _lastUpdated = new AwsMwaaEnvironment.LastUpdatedPropertyList(this, "last_updated", false);
+  private _lastUpdated = new TfEnvironment.LastUpdatedPropertyList(this, "last_updated", false);
   public get lastUpdated() {
     return this._lastUpdated;
   }
@@ -688,11 +688,11 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
   }
 
   // logging_configuration - computed: false, optional: true, required: false
-  private _loggingConfiguration = new AwsMwaaEnvironment.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
+  private _loggingConfiguration = new TfEnvironment.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
   public get loggingConfiguration() {
     return this._loggingConfiguration;
   }
-  public putLoggingConfiguration(value: AwsMwaaEnvironment.LoggingConfigurationProperty) {
+  public putLoggingConfiguration(value: TfEnvironment.LoggingConfigurationProperty) {
     this._loggingConfiguration.internalValue = value;
   }
   public resetLoggingConfiguration() {
@@ -704,11 +704,11 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: false, required: true
-  private _networkConfiguration = new AwsMwaaEnvironment.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
+  private _networkConfiguration = new TfEnvironment.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: AwsMwaaEnvironment.NetworkConfigurationProperty) {
+  public putNetworkConfiguration(value: TfEnvironment.NetworkConfigurationProperty) {
     this._networkConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -717,11 +717,11 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMwaaEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMwaaEnvironment.TimeoutsProperty) {
+  public putTimeouts(value: TfEnvironment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -765,9 +765,9 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
       webserver_access_mode: cdktn.stringToTerraform(this._webserverAccessMode),
       weekly_maintenance_window_start: cdktn.stringToTerraform(this._weeklyMaintenanceWindowStart),
       worker_replacement_strategy: cdktn.stringToTerraform(this._workerReplacementStrategy),
-      logging_configuration: awsMwaaEnvironmentLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
-      network_configuration: awsMwaaEnvironmentNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
-      timeouts: awsMwaaEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      logging_configuration: tfEnvironmentLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
+      network_configuration: tfEnvironmentNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
+      timeouts: tfEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -936,22 +936,22 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       logging_configuration: {
-        value: awsMwaaEnvironmentLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
+        value: tfEnvironmentLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMwaaEnvironment.LoggingConfigurationPropertyList",
+        storageClassType: "TfEnvironment.LoggingConfigurationPropertyList",
       },
       network_configuration: {
-        value: awsMwaaEnvironmentNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
+        value: tfEnvironmentNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMwaaEnvironment.NetworkConfigurationPropertyList",
+        storageClassType: "TfEnvironment.NetworkConfigurationPropertyList",
       },
       timeouts: {
-        value: awsMwaaEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMwaaEnvironment.TimeoutsProperty",
+        storageClassType: "TfEnvironment.TimeoutsProperty",
       },
     };
 
@@ -960,7 +960,7 @@ export class AwsMwaaEnvironment extends cdktn.TerraformResource {
   }
 }
 
-export function awsMwaaEnvironmentErrorPropertyToTerraform(struct?: AwsMwaaEnvironment.ErrorProperty): any {
+export function tfEnvironmentErrorPropertyToTerraform(struct?: TfEnvironment.ErrorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -970,7 +970,7 @@ export function awsMwaaEnvironmentErrorPropertyToTerraform(struct?: AwsMwaaEnvir
 }
 
 
-export function awsMwaaEnvironmentErrorPropertyToHclTerraform(struct?: AwsMwaaEnvironment.ErrorProperty): any {
+export function tfEnvironmentErrorPropertyToHclTerraform(struct?: TfEnvironment.ErrorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,7 +981,7 @@ export function awsMwaaEnvironmentErrorPropertyToHclTerraform(struct?: AwsMwaaEn
 }
 
 
-export function awsMwaaEnvironmentLastUpdatedPropertyToTerraform(struct?: AwsMwaaEnvironment.LastUpdatedProperty): any {
+export function tfEnvironmentLastUpdatedPropertyToTerraform(struct?: TfEnvironment.LastUpdatedProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -991,7 +991,7 @@ export function awsMwaaEnvironmentLastUpdatedPropertyToTerraform(struct?: AwsMwa
 }
 
 
-export function awsMwaaEnvironmentLastUpdatedPropertyToHclTerraform(struct?: AwsMwaaEnvironment.LastUpdatedProperty): any {
+export function tfEnvironmentLastUpdatedPropertyToHclTerraform(struct?: TfEnvironment.LastUpdatedProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1002,7 +1002,7 @@ export function awsMwaaEnvironmentLastUpdatedPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsMwaaEnvironmentDagProcessingLogsPropertyToTerraform(struct?: AwsMwaaEnvironment.DagProcessingLogsPropertyOutputReference | AwsMwaaEnvironment.DagProcessingLogsProperty): any {
+export function tfEnvironmentDagProcessingLogsPropertyToTerraform(struct?: TfEnvironment.DagProcessingLogsPropertyOutputReference | TfEnvironment.DagProcessingLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1014,7 +1014,7 @@ export function awsMwaaEnvironmentDagProcessingLogsPropertyToTerraform(struct?: 
 }
 
 
-export function awsMwaaEnvironmentDagProcessingLogsPropertyToHclTerraform(struct?: AwsMwaaEnvironment.DagProcessingLogsPropertyOutputReference | AwsMwaaEnvironment.DagProcessingLogsProperty): any {
+export function tfEnvironmentDagProcessingLogsPropertyToHclTerraform(struct?: TfEnvironment.DagProcessingLogsPropertyOutputReference | TfEnvironment.DagProcessingLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1039,7 +1039,7 @@ export function awsMwaaEnvironmentDagProcessingLogsPropertyToHclTerraform(struct
 }
 
 
-export function awsMwaaEnvironmentSchedulerLogsPropertyToTerraform(struct?: AwsMwaaEnvironment.SchedulerLogsPropertyOutputReference | AwsMwaaEnvironment.SchedulerLogsProperty): any {
+export function tfEnvironmentSchedulerLogsPropertyToTerraform(struct?: TfEnvironment.SchedulerLogsPropertyOutputReference | TfEnvironment.SchedulerLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1051,7 +1051,7 @@ export function awsMwaaEnvironmentSchedulerLogsPropertyToTerraform(struct?: AwsM
 }
 
 
-export function awsMwaaEnvironmentSchedulerLogsPropertyToHclTerraform(struct?: AwsMwaaEnvironment.SchedulerLogsPropertyOutputReference | AwsMwaaEnvironment.SchedulerLogsProperty): any {
+export function tfEnvironmentSchedulerLogsPropertyToHclTerraform(struct?: TfEnvironment.SchedulerLogsPropertyOutputReference | TfEnvironment.SchedulerLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1076,7 +1076,7 @@ export function awsMwaaEnvironmentSchedulerLogsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMwaaEnvironmentTaskLogsPropertyToTerraform(struct?: AwsMwaaEnvironment.TaskLogsPropertyOutputReference | AwsMwaaEnvironment.TaskLogsProperty): any {
+export function tfEnvironmentTaskLogsPropertyToTerraform(struct?: TfEnvironment.TaskLogsPropertyOutputReference | TfEnvironment.TaskLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1088,7 +1088,7 @@ export function awsMwaaEnvironmentTaskLogsPropertyToTerraform(struct?: AwsMwaaEn
 }
 
 
-export function awsMwaaEnvironmentTaskLogsPropertyToHclTerraform(struct?: AwsMwaaEnvironment.TaskLogsPropertyOutputReference | AwsMwaaEnvironment.TaskLogsProperty): any {
+export function tfEnvironmentTaskLogsPropertyToHclTerraform(struct?: TfEnvironment.TaskLogsPropertyOutputReference | TfEnvironment.TaskLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1113,7 +1113,7 @@ export function awsMwaaEnvironmentTaskLogsPropertyToHclTerraform(struct?: AwsMwa
 }
 
 
-export function awsMwaaEnvironmentWebserverLogsPropertyToTerraform(struct?: AwsMwaaEnvironment.WebserverLogsPropertyOutputReference | AwsMwaaEnvironment.WebserverLogsProperty): any {
+export function tfEnvironmentWebserverLogsPropertyToTerraform(struct?: TfEnvironment.WebserverLogsPropertyOutputReference | TfEnvironment.WebserverLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1125,7 +1125,7 @@ export function awsMwaaEnvironmentWebserverLogsPropertyToTerraform(struct?: AwsM
 }
 
 
-export function awsMwaaEnvironmentWebserverLogsPropertyToHclTerraform(struct?: AwsMwaaEnvironment.WebserverLogsPropertyOutputReference | AwsMwaaEnvironment.WebserverLogsProperty): any {
+export function tfEnvironmentWebserverLogsPropertyToHclTerraform(struct?: TfEnvironment.WebserverLogsPropertyOutputReference | TfEnvironment.WebserverLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1150,7 +1150,7 @@ export function awsMwaaEnvironmentWebserverLogsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMwaaEnvironmentWorkerLogsPropertyToTerraform(struct?: AwsMwaaEnvironment.WorkerLogsPropertyOutputReference | AwsMwaaEnvironment.WorkerLogsProperty): any {
+export function tfEnvironmentWorkerLogsPropertyToTerraform(struct?: TfEnvironment.WorkerLogsPropertyOutputReference | TfEnvironment.WorkerLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function awsMwaaEnvironmentWorkerLogsPropertyToTerraform(struct?: AwsMwaa
 }
 
 
-export function awsMwaaEnvironmentWorkerLogsPropertyToHclTerraform(struct?: AwsMwaaEnvironment.WorkerLogsPropertyOutputReference | AwsMwaaEnvironment.WorkerLogsProperty): any {
+export function tfEnvironmentWorkerLogsPropertyToHclTerraform(struct?: TfEnvironment.WorkerLogsPropertyOutputReference | TfEnvironment.WorkerLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1187,53 +1187,53 @@ export function awsMwaaEnvironmentWorkerLogsPropertyToHclTerraform(struct?: AwsM
 }
 
 
-export function awsMwaaEnvironmentLoggingConfigurationPropertyToTerraform(struct?: AwsMwaaEnvironment.LoggingConfigurationPropertyOutputReference | AwsMwaaEnvironment.LoggingConfigurationProperty): any {
+export function tfEnvironmentLoggingConfigurationPropertyToTerraform(struct?: TfEnvironment.LoggingConfigurationPropertyOutputReference | TfEnvironment.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    dag_processing_logs: awsMwaaEnvironmentDagProcessingLogsPropertyToTerraform(struct!.dagProcessingLogs),
-    scheduler_logs: awsMwaaEnvironmentSchedulerLogsPropertyToTerraform(struct!.schedulerLogs),
-    task_logs: awsMwaaEnvironmentTaskLogsPropertyToTerraform(struct!.taskLogs),
-    webserver_logs: awsMwaaEnvironmentWebserverLogsPropertyToTerraform(struct!.webserverLogs),
-    worker_logs: awsMwaaEnvironmentWorkerLogsPropertyToTerraform(struct!.workerLogs),
+    dag_processing_logs: tfEnvironmentDagProcessingLogsPropertyToTerraform(struct!.dagProcessingLogs),
+    scheduler_logs: tfEnvironmentSchedulerLogsPropertyToTerraform(struct!.schedulerLogs),
+    task_logs: tfEnvironmentTaskLogsPropertyToTerraform(struct!.taskLogs),
+    webserver_logs: tfEnvironmentWebserverLogsPropertyToTerraform(struct!.webserverLogs),
+    worker_logs: tfEnvironmentWorkerLogsPropertyToTerraform(struct!.workerLogs),
   }
 }
 
 
-export function awsMwaaEnvironmentLoggingConfigurationPropertyToHclTerraform(struct?: AwsMwaaEnvironment.LoggingConfigurationPropertyOutputReference | AwsMwaaEnvironment.LoggingConfigurationProperty): any {
+export function tfEnvironmentLoggingConfigurationPropertyToHclTerraform(struct?: TfEnvironment.LoggingConfigurationPropertyOutputReference | TfEnvironment.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     dag_processing_logs: {
-      value: awsMwaaEnvironmentDagProcessingLogsPropertyToHclTerraform(struct!.dagProcessingLogs),
+      value: tfEnvironmentDagProcessingLogsPropertyToHclTerraform(struct!.dagProcessingLogs),
       isBlock: true,
       type: "list",
       storageClassType: "DagProcessingLogsPropertyList",
     },
     scheduler_logs: {
-      value: awsMwaaEnvironmentSchedulerLogsPropertyToHclTerraform(struct!.schedulerLogs),
+      value: tfEnvironmentSchedulerLogsPropertyToHclTerraform(struct!.schedulerLogs),
       isBlock: true,
       type: "list",
       storageClassType: "SchedulerLogsPropertyList",
     },
     task_logs: {
-      value: awsMwaaEnvironmentTaskLogsPropertyToHclTerraform(struct!.taskLogs),
+      value: tfEnvironmentTaskLogsPropertyToHclTerraform(struct!.taskLogs),
       isBlock: true,
       type: "list",
       storageClassType: "TaskLogsPropertyList",
     },
     webserver_logs: {
-      value: awsMwaaEnvironmentWebserverLogsPropertyToHclTerraform(struct!.webserverLogs),
+      value: tfEnvironmentWebserverLogsPropertyToHclTerraform(struct!.webserverLogs),
       isBlock: true,
       type: "list",
       storageClassType: "WebserverLogsPropertyList",
     },
     worker_logs: {
-      value: awsMwaaEnvironmentWorkerLogsPropertyToHclTerraform(struct!.workerLogs),
+      value: tfEnvironmentWorkerLogsPropertyToHclTerraform(struct!.workerLogs),
       isBlock: true,
       type: "list",
       storageClassType: "WorkerLogsPropertyList",
@@ -1245,7 +1245,7 @@ export function awsMwaaEnvironmentLoggingConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsMwaaEnvironmentNetworkConfigurationPropertyToTerraform(struct?: AwsMwaaEnvironment.NetworkConfigurationPropertyOutputReference | AwsMwaaEnvironment.NetworkConfigurationProperty): any {
+export function tfEnvironmentNetworkConfigurationPropertyToTerraform(struct?: TfEnvironment.NetworkConfigurationPropertyOutputReference | TfEnvironment.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1257,7 +1257,7 @@ export function awsMwaaEnvironmentNetworkConfigurationPropertyToTerraform(struct
 }
 
 
-export function awsMwaaEnvironmentNetworkConfigurationPropertyToHclTerraform(struct?: AwsMwaaEnvironment.NetworkConfigurationPropertyOutputReference | AwsMwaaEnvironment.NetworkConfigurationProperty): any {
+export function tfEnvironmentNetworkConfigurationPropertyToHclTerraform(struct?: TfEnvironment.NetworkConfigurationPropertyOutputReference | TfEnvironment.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1282,7 +1282,7 @@ export function awsMwaaEnvironmentNetworkConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsMwaaEnvironmentTimeoutsPropertyToTerraform(struct?: AwsMwaaEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentTimeoutsPropertyToTerraform(struct?: TfEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1295,7 +1295,7 @@ export function awsMwaaEnvironmentTimeoutsPropertyToTerraform(struct?: AwsMwaaEn
 }
 
 
-export function awsMwaaEnvironmentTimeoutsPropertyToHclTerraform(struct?: AwsMwaaEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEnvironmentTimeoutsPropertyToHclTerraform(struct?: TfEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1326,7 +1326,7 @@ export function awsMwaaEnvironmentTimeoutsPropertyToHclTerraform(struct?: AwsMwa
 }
 
 
-export namespace AwsMwaaEnvironment {
+export namespace TfEnvironment {
 export interface ErrorProperty {
 }
 export class ErrorPropertyOutputReference extends cdktn.ComplexObject {
@@ -1453,11 +1453,11 @@ export class LastUpdatedPropertyList extends cdktn.ComplexList {
 }
 export interface DagProcessingLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled AwsMwaaEnvironment#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled TfEnvironment#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level AwsMwaaEnvironment#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level TfEnvironment#log_level}
   */
   readonly logLevel?: string;
 }
@@ -1538,11 +1538,11 @@ export class DagProcessingLogsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface SchedulerLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled AwsMwaaEnvironment#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled TfEnvironment#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level AwsMwaaEnvironment#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level TfEnvironment#log_level}
   */
   readonly logLevel?: string;
 }
@@ -1623,11 +1623,11 @@ export class SchedulerLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TaskLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled AwsMwaaEnvironment#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled TfEnvironment#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level AwsMwaaEnvironment#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level TfEnvironment#log_level}
   */
   readonly logLevel?: string;
 }
@@ -1708,11 +1708,11 @@ export class TaskLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WebserverLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled AwsMwaaEnvironment#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled TfEnvironment#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level AwsMwaaEnvironment#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level TfEnvironment#log_level}
   */
   readonly logLevel?: string;
 }
@@ -1793,11 +1793,11 @@ export class WebserverLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WorkerLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled AwsMwaaEnvironment#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#enabled TfEnvironment#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level AwsMwaaEnvironment#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#log_level TfEnvironment#log_level}
   */
   readonly logLevel?: string;
 }
@@ -1880,31 +1880,31 @@ export interface LoggingConfigurationProperty {
   /**
   * dag_processing_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#dag_processing_logs AwsMwaaEnvironment#dag_processing_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#dag_processing_logs TfEnvironment#dag_processing_logs}
   */
   readonly dagProcessingLogs?: DagProcessingLogsProperty;
   /**
   * scheduler_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#scheduler_logs AwsMwaaEnvironment#scheduler_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#scheduler_logs TfEnvironment#scheduler_logs}
   */
   readonly schedulerLogs?: SchedulerLogsProperty;
   /**
   * task_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#task_logs AwsMwaaEnvironment#task_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#task_logs TfEnvironment#task_logs}
   */
   readonly taskLogs?: TaskLogsProperty;
   /**
   * webserver_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#webserver_logs AwsMwaaEnvironment#webserver_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#webserver_logs TfEnvironment#webserver_logs}
   */
   readonly webserverLogs?: WebserverLogsProperty;
   /**
   * worker_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#worker_logs AwsMwaaEnvironment#worker_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#worker_logs TfEnvironment#worker_logs}
   */
   readonly workerLogs?: WorkerLogsProperty;
 }
@@ -2046,11 +2046,11 @@ export class LoggingConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#security_group_ids AwsMwaaEnvironment#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#security_group_ids TfEnvironment#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#subnet_ids AwsMwaaEnvironment#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#subnet_ids TfEnvironment#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -2120,15 +2120,15 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#create AwsMwaaEnvironment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#create TfEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#delete AwsMwaaEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#delete TfEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#update AwsMwaaEnvironment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mwaa_environment#update TfEnvironment#update}
   */
   readonly update?: string;
 }

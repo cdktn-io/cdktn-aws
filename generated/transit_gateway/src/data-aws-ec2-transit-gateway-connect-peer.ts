@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEc2TransitGatewayConnectPeerConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfConnectPeerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#id DataAwsEc2TransitGatewayConnectPeer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#id DataTfConnectPeer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,35 +16,35 @@ export interface DataAwsEc2TransitGatewayConnectPeerConfig extends cdktn.Terrafo
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#region DataAwsEc2TransitGatewayConnectPeer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#region DataTfConnectPeer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#tags DataAwsEc2TransitGatewayConnectPeer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#tags DataTfConnectPeer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#transit_gateway_connect_peer_id DataAwsEc2TransitGatewayConnectPeer#transit_gateway_connect_peer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#transit_gateway_connect_peer_id DataTfConnectPeer#transit_gateway_connect_peer_id}
   */
   readonly transitGatewayConnectPeerId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#filter DataAwsEc2TransitGatewayConnectPeer#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#filter DataTfConnectPeer#filter}
   */
-  readonly filter?: DataAwsEc2TransitGatewayConnectPeer.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfConnectPeer.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#timeouts DataAwsEc2TransitGatewayConnectPeer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#timeouts DataTfConnectPeer#timeouts}
   */
-  readonly timeouts?: DataAwsEc2TransitGatewayConnectPeer.TimeoutsProperty;
+  readonly timeouts?: DataTfConnectPeer.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer aws_ec2_transit_gateway_connect_peer}
 */
-export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSource {
+export class DataTfConnectPeer extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEc2TransitGatewayConnectPeer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfConnectPeer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEc2TransitGatewayConnectPeer to import
-  * @param importFromId The id of the existing DataAwsEc2TransitGatewayConnectPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEc2TransitGatewayConnectPeer to import is found
+  * @param importToId The construct id used in the generated config for the DataTfConnectPeer to import
+  * @param importFromId The id of the existing DataTfConnectPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfConnectPeer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_connect_peer", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEc2TransitGatewayConnectPeerConfig = {}
+  * @param options DataTfConnectPeerConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEc2TransitGatewayConnectPeerConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfConnectPeerConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_connect_peer',
       terraformGeneratorMetadata: {
@@ -209,11 +209,11 @@ export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSour
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsEc2TransitGatewayConnectPeer.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfConnectPeer.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsEc2TransitGatewayConnectPeer.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfConnectPeer.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -225,11 +225,11 @@ export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsEc2TransitGatewayConnectPeer.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfConnectPeer.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsEc2TransitGatewayConnectPeer.TimeoutsProperty) {
+  public putTimeouts(value: DataTfConnectPeer.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -250,8 +250,8 @@ export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSour
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       transit_gateway_connect_peer_id: cdktn.stringToTerraform(this._transitGatewayConnectPeerId),
-      filter: cdktn.listMapper(dataAwsEc2TransitGatewayConnectPeerFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsEc2TransitGatewayConnectPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfConnectPeerFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfConnectPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -282,16 +282,16 @@ export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSour
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsEc2TransitGatewayConnectPeerFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfConnectPeerFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsEc2TransitGatewayConnectPeer.FilterPropertyList",
+        storageClassType: "DataTfConnectPeer.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsEc2TransitGatewayConnectPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfConnectPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsEc2TransitGatewayConnectPeer.TimeoutsProperty",
+        storageClassType: "DataTfConnectPeer.TimeoutsProperty",
       },
     };
 
@@ -300,7 +300,7 @@ export class DataAwsEc2TransitGatewayConnectPeer extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsEc2TransitGatewayConnectPeerFilterPropertyToTerraform(struct?: DataAwsEc2TransitGatewayConnectPeer.FilterProperty | cdktn.IResolvable): any {
+export function dataTfConnectPeerFilterPropertyToTerraform(struct?: DataTfConnectPeer.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function dataAwsEc2TransitGatewayConnectPeerFilterPropertyToTerraform(str
 }
 
 
-export function dataAwsEc2TransitGatewayConnectPeerFilterPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayConnectPeer.FilterProperty | cdktn.IResolvable): any {
+export function dataTfConnectPeerFilterPropertyToHclTerraform(struct?: DataTfConnectPeer.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function dataAwsEc2TransitGatewayConnectPeerFilterPropertyToHclTerraform(
 }
 
 
-export function dataAwsEc2TransitGatewayConnectPeerTimeoutsPropertyToTerraform(struct?: DataAwsEc2TransitGatewayConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfConnectPeerTimeoutsPropertyToTerraform(struct?: DataTfConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function dataAwsEc2TransitGatewayConnectPeerTimeoutsPropertyToTerraform(s
 }
 
 
-export function dataAwsEc2TransitGatewayConnectPeerTimeoutsPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfConnectPeerTimeoutsPropertyToHclTerraform(struct?: DataTfConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,14 +367,14 @@ export function dataAwsEc2TransitGatewayConnectPeerTimeoutsPropertyToHclTerrafor
 }
 
 
-export namespace DataAwsEc2TransitGatewayConnectPeer {
+export namespace DataTfConnectPeer {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#name DataAwsEc2TransitGatewayConnectPeer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#name DataTfConnectPeer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#values DataAwsEc2TransitGatewayConnectPeer#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#values DataTfConnectPeer#values}
   */
   readonly values: string[];
 }
@@ -476,7 +476,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#read DataAwsEc2TransitGatewayConnectPeer#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_connect_peer#read DataTfConnectPeer#read}
   */
   readonly read?: string;
 }

@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlacierVaultConfig extends cdktn.TerraformMetaArguments {
+export interface TfVaultConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#access_policy AwsGlacierVault#access_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#access_policy TfVault#access_policy}
   */
   readonly accessPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#id AwsGlacierVault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#id TfVault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#name AwsGlacierVault#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#name TfVault#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#region AwsGlacierVault#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#region TfVault#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#tags AwsGlacierVault#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#tags TfVault#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#tags_all AwsGlacierVault#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#tags_all TfVault#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * notification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#notification AwsGlacierVault#notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#notification TfVault#notification}
   */
-  readonly notification?: AwsGlacierVault.NotificationProperty;
+  readonly notification?: TfVault.NotificationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault aws_glacier_vault}
 */
-export class AwsGlacierVault extends cdktn.TerraformResource {
+export class TfVault extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsGlacierVault extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlacierVault resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVault resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlacierVault to import
-  * @param importFromId The id of the existing AwsGlacierVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlacierVault to import is found
+  * @param importToId The construct id used in the generated config for the TfVault to import
+  * @param importFromId The id of the existing TfVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glacier_vault", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsGlacierVault extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlacierVaultConfig
+  * @param options TfVaultConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlacierVaultConfig) {
+  public constructor(scope: Construct, id: string, config: TfVaultConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glacier_vault',
       terraformGeneratorMetadata: {
@@ -211,11 +211,11 @@ export class AwsGlacierVault extends cdktn.TerraformResource {
   }
 
   // notification - computed: false, optional: true, required: false
-  private _notification = new AwsGlacierVault.NotificationPropertyOutputReference(this, "notification");
+  private _notification = new TfVault.NotificationPropertyOutputReference(this, "notification");
   public get notification() {
     return this._notification;
   }
-  public putNotification(value: AwsGlacierVault.NotificationProperty) {
+  public putNotification(value: TfVault.NotificationProperty) {
     this._notification.internalValue = value;
   }
   public resetNotification() {
@@ -238,7 +238,7 @@ export class AwsGlacierVault extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      notification: awsGlacierVaultNotificationPropertyToTerraform(this._notification.internalValue),
+      notification: tfVaultNotificationPropertyToTerraform(this._notification.internalValue),
     };
   }
 
@@ -281,10 +281,10 @@ export class AwsGlacierVault extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       notification: {
-        value: awsGlacierVaultNotificationPropertyToHclTerraform(this._notification.internalValue),
+        value: tfVaultNotificationPropertyToHclTerraform(this._notification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlacierVault.NotificationPropertyList",
+        storageClassType: "TfVault.NotificationPropertyList",
       },
     };
 
@@ -293,7 +293,7 @@ export class AwsGlacierVault extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlacierVaultNotificationPropertyToTerraform(struct?: AwsGlacierVault.NotificationPropertyOutputReference | AwsGlacierVault.NotificationProperty): any {
+export function tfVaultNotificationPropertyToTerraform(struct?: TfVault.NotificationPropertyOutputReference | TfVault.NotificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function awsGlacierVaultNotificationPropertyToTerraform(struct?: AwsGlaci
 }
 
 
-export function awsGlacierVaultNotificationPropertyToHclTerraform(struct?: AwsGlacierVault.NotificationPropertyOutputReference | AwsGlacierVault.NotificationProperty): any {
+export function tfVaultNotificationPropertyToHclTerraform(struct?: TfVault.NotificationPropertyOutputReference | TfVault.NotificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,14 +330,14 @@ export function awsGlacierVaultNotificationPropertyToHclTerraform(struct?: AwsGl
 }
 
 
-export namespace AwsGlacierVault {
+export namespace TfVault {
 export interface NotificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#events AwsGlacierVault#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#events TfVault#events}
   */
   readonly events: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#sns_topic AwsGlacierVault#sns_topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glacier_vault#sns_topic TfVault#sns_topic}
   */
   readonly snsTopic: string;
 }

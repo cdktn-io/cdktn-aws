@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesDomainMailFromConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainMailFromConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#behavior_on_mx_failure AwsSesDomainMailFrom#behavior_on_mx_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#behavior_on_mx_failure TfDomainMailFrom#behavior_on_mx_failure}
   */
   readonly behaviorOnMxFailure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#domain AwsSesDomainMailFrom#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#domain TfDomainMailFrom#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#id AwsSesDomainMailFrom#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#id TfDomainMailFrom#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#mail_from_domain AwsSesDomainMailFrom#mail_from_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#mail_from_domain TfDomainMailFrom#mail_from_domain}
   */
   readonly mailFromDomain: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#region AwsSesDomainMailFrom#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#region TfDomainMailFrom#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsSesDomainMailFromConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from aws_ses_domain_mail_from}
 */
-export class AwsSesDomainMailFrom extends cdktn.TerraformResource {
+export class TfDomainMailFrom extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsSesDomainMailFrom extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesDomainMailFrom resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainMailFrom resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesDomainMailFrom to import
-  * @param importFromId The id of the existing AwsSesDomainMailFrom that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesDomainMailFrom to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainMailFrom to import
+  * @param importFromId The id of the existing TfDomainMailFrom that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_domain_mail_from#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainMailFrom to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ses_domain_mail_from", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsSesDomainMailFrom extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesDomainMailFromConfig
+  * @param options TfDomainMailFromConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesDomainMailFromConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainMailFromConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ses_domain_mail_from',
       terraformGeneratorMetadata: {

@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcorePolicyEngineConfig extends cdktn.TerraformMetaArguments {
+export interface TfPolicyEngineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#description AwsBedrockagentcorePolicyEngine#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#description TfPolicyEngine#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#encryption_key_arn AwsBedrockagentcorePolicyEngine#encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#encryption_key_arn TfPolicyEngine#encryption_key_arn}
   */
   readonly encryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#name AwsBedrockagentcorePolicyEngine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#name TfPolicyEngine#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#region AwsBedrockagentcorePolicyEngine#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#region TfPolicyEngine#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#tags AwsBedrockagentcorePolicyEngine#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#tags TfPolicyEngine#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#timeouts AwsBedrockagentcorePolicyEngine#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#timeouts TfPolicyEngine#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcorePolicyEngine.TimeoutsProperty;
+  readonly timeouts?: TfPolicyEngine.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine aws_bedrockagentcore_policy_engine}
 */
-export class AwsBedrockagentcorePolicyEngine extends cdktn.TerraformResource {
+export class TfPolicyEngine extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class AwsBedrockagentcorePolicyEngine extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcorePolicyEngine resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPolicyEngine resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcorePolicyEngine to import
-  * @param importFromId The id of the existing AwsBedrockagentcorePolicyEngine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcorePolicyEngine to import is found
+  * @param importToId The construct id used in the generated config for the TfPolicyEngine to import
+  * @param importFromId The id of the existing TfPolicyEngine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPolicyEngine to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_policy_engine", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class AwsBedrockagentcorePolicyEngine extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcorePolicyEngineConfig
+  * @param options TfPolicyEngineConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcorePolicyEngineConfig) {
+  public constructor(scope: Construct, id: string, config: TfPolicyEngineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_policy_engine',
       terraformGeneratorMetadata: {
@@ -193,11 +193,11 @@ export class AwsBedrockagentcorePolicyEngine extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcorePolicyEngine.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPolicyEngine.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcorePolicyEngine.TimeoutsProperty) {
+  public putTimeouts(value: TfPolicyEngine.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -219,7 +219,7 @@ export class AwsBedrockagentcorePolicyEngine extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsBedrockagentcorePolicyEngineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPolicyEngineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -256,10 +256,10 @@ export class AwsBedrockagentcorePolicyEngine extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsBedrockagentcorePolicyEngineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPolicyEngineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcorePolicyEngine.TimeoutsProperty",
+        storageClassType: "TfPolicyEngine.TimeoutsProperty",
       },
     };
 
@@ -268,7 +268,7 @@ export class AwsBedrockagentcorePolicyEngine extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcorePolicyEngineTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcorePolicyEngine.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPolicyEngineTimeoutsPropertyToTerraform(struct?: TfPolicyEngine.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function awsBedrockagentcorePolicyEngineTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsBedrockagentcorePolicyEngineTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcorePolicyEngine.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPolicyEngineTimeoutsPropertyToHclTerraform(struct?: TfPolicyEngine.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,24 +312,24 @@ export function awsBedrockagentcorePolicyEngineTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsBedrockagentcorePolicyEngine {
+export namespace TfPolicyEngine {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#create AwsBedrockagentcorePolicyEngine#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#create TfPolicyEngine#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#delete AwsBedrockagentcorePolicyEngine#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#delete TfPolicyEngine#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#update AwsBedrockagentcorePolicyEngine#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy_engine#update TfPolicyEngine#update}
   */
   readonly update?: string;
 }

@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOrganizationsPoliciesForTargetConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPoliciesForTargetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#filter DataAwsOrganizationsPoliciesForTarget#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#filter DataTfPoliciesForTarget#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#id DataAwsOrganizationsPoliciesForTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#id DataTfPoliciesForTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#target_id DataAwsOrganizationsPoliciesForTarget#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#target_id DataTfPoliciesForTarget#target_id}
   */
   readonly targetId: string;
 }
@@ -26,7 +26,7 @@ export interface DataAwsOrganizationsPoliciesForTargetConfig extends cdktn.Terra
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target aws_organizations_policies_for_target}
 */
-export class DataAwsOrganizationsPoliciesForTarget extends cdktn.TerraformDataSource {
+export class DataTfPoliciesForTarget extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class DataAwsOrganizationsPoliciesForTarget extends cdktn.TerraformDataSo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOrganizationsPoliciesForTarget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPoliciesForTarget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOrganizationsPoliciesForTarget to import
-  * @param importFromId The id of the existing DataAwsOrganizationsPoliciesForTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOrganizationsPoliciesForTarget to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPoliciesForTarget to import
+  * @param importFromId The id of the existing DataTfPoliciesForTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_policies_for_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPoliciesForTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_policies_for_target", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class DataAwsOrganizationsPoliciesForTarget extends cdktn.TerraformDataSo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOrganizationsPoliciesForTargetConfig
+  * @param options DataTfPoliciesForTargetConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOrganizationsPoliciesForTargetConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPoliciesForTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_policies_for_target',
       terraformGeneratorMetadata: {

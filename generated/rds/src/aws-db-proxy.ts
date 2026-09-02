@@ -5,90 +5,90 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDbProxyConfig extends cdktn.TerraformMetaArguments {
+export interface TfDbProxyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#debug_logging AwsDbProxy#debug_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#debug_logging TfDbProxy#debug_logging}
   */
   readonly debugLogging?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#default_auth_scheme AwsDbProxy#default_auth_scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#default_auth_scheme TfDbProxy#default_auth_scheme}
   */
   readonly defaultAuthScheme?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#endpoint_network_type AwsDbProxy#endpoint_network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#endpoint_network_type TfDbProxy#endpoint_network_type}
   */
   readonly endpointNetworkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#engine_family AwsDbProxy#engine_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#engine_family TfDbProxy#engine_family}
   */
   readonly engineFamily: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#id AwsDbProxy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#id TfDbProxy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#idle_client_timeout AwsDbProxy#idle_client_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#idle_client_timeout TfDbProxy#idle_client_timeout}
   */
   readonly idleClientTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#name AwsDbProxy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#name TfDbProxy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#region AwsDbProxy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#region TfDbProxy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#require_tls AwsDbProxy#require_tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#require_tls TfDbProxy#require_tls}
   */
   readonly requireTls?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#role_arn AwsDbProxy#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#role_arn TfDbProxy#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#tags AwsDbProxy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#tags TfDbProxy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#tags_all AwsDbProxy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#tags_all TfDbProxy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#target_connection_network_type AwsDbProxy#target_connection_network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#target_connection_network_type TfDbProxy#target_connection_network_type}
   */
   readonly targetConnectionNetworkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#vpc_security_group_ids AwsDbProxy#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#vpc_security_group_ids TfDbProxy#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#vpc_subnet_ids AwsDbProxy#vpc_subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#vpc_subnet_ids TfDbProxy#vpc_subnet_ids}
   */
   readonly vpcSubnetIds: string[];
   /**
   * auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#auth AwsDbProxy#auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#auth TfDbProxy#auth}
   */
-  readonly auth?: AwsDbProxy.AuthProperty[] | cdktn.IResolvable;
+  readonly auth?: TfDbProxy.AuthProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#timeouts AwsDbProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#timeouts TfDbProxy#timeouts}
   */
-  readonly timeouts?: AwsDbProxy.TimeoutsProperty;
+  readonly timeouts?: TfDbProxy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy aws_db_proxy}
 */
-export class AwsDbProxy extends cdktn.TerraformResource {
+export class TfDbProxy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -99,11 +99,11 @@ export class AwsDbProxy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDbProxy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDbProxy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDbProxy to import
-  * @param importFromId The id of the existing AwsDbProxy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDbProxy to import is found
+  * @param importToId The construct id used in the generated config for the TfDbProxy to import
+  * @param importFromId The id of the existing TfDbProxy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDbProxy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_proxy", importId: importFromId, provider });
@@ -118,9 +118,9 @@ export class AwsDbProxy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDbProxyConfig
+  * @param options TfDbProxyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDbProxyConfig) {
+  public constructor(scope: Construct, id: string, config: TfDbProxyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_proxy',
       terraformGeneratorMetadata: {
@@ -398,11 +398,11 @@ export class AwsDbProxy extends cdktn.TerraformResource {
   }
 
   // auth - computed: false, optional: true, required: false
-  private _auth = new AwsDbProxy.AuthPropertyList(this, "auth", true);
+  private _auth = new TfDbProxy.AuthPropertyList(this, "auth", true);
   public get auth() {
     return this._auth;
   }
-  public putAuth(value: AwsDbProxy.AuthProperty[] | cdktn.IResolvable) {
+  public putAuth(value: TfDbProxy.AuthProperty[] | cdktn.IResolvable) {
     this._auth.internalValue = value;
   }
   public resetAuth() {
@@ -414,11 +414,11 @@ export class AwsDbProxy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDbProxy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDbProxy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDbProxy.TimeoutsProperty) {
+  public putTimeouts(value: TfDbProxy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -450,8 +450,8 @@ export class AwsDbProxy extends cdktn.TerraformResource {
       target_connection_network_type: cdktn.stringToTerraform(this._targetConnectionNetworkType),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
       vpc_subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSubnetIds),
-      auth: cdktn.listMapper(awsDbProxyAuthPropertyToTerraform, true)(this._auth.internalValue),
-      timeouts: awsDbProxyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      auth: cdktn.listMapper(tfDbProxyAuthPropertyToTerraform, true)(this._auth.internalValue),
+      timeouts: tfDbProxyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -548,16 +548,16 @@ export class AwsDbProxy extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       auth: {
-        value: cdktn.listMapperHcl(awsDbProxyAuthPropertyToHclTerraform, true)(this._auth.internalValue),
+        value: cdktn.listMapperHcl(tfDbProxyAuthPropertyToHclTerraform, true)(this._auth.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsDbProxy.AuthPropertyList",
+        storageClassType: "TfDbProxy.AuthPropertyList",
       },
       timeouts: {
-        value: awsDbProxyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDbProxyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDbProxy.TimeoutsProperty",
+        storageClassType: "TfDbProxy.TimeoutsProperty",
       },
     };
 
@@ -566,7 +566,7 @@ export class AwsDbProxy extends cdktn.TerraformResource {
   }
 }
 
-export function awsDbProxyAuthPropertyToTerraform(struct?: AwsDbProxy.AuthProperty | cdktn.IResolvable): any {
+export function tfDbProxyAuthPropertyToTerraform(struct?: TfDbProxy.AuthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function awsDbProxyAuthPropertyToTerraform(struct?: AwsDbProxy.AuthProper
 }
 
 
-export function awsDbProxyAuthPropertyToHclTerraform(struct?: AwsDbProxy.AuthProperty | cdktn.IResolvable): any {
+export function tfDbProxyAuthPropertyToHclTerraform(struct?: TfDbProxy.AuthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function awsDbProxyAuthPropertyToHclTerraform(struct?: AwsDbProxy.AuthPro
 }
 
 
-export function awsDbProxyTimeoutsPropertyToTerraform(struct?: AwsDbProxy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbProxyTimeoutsPropertyToTerraform(struct?: TfDbProxy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function awsDbProxyTimeoutsPropertyToTerraform(struct?: AwsDbProxy.Timeou
 }
 
 
-export function awsDbProxyTimeoutsPropertyToHclTerraform(struct?: AwsDbProxy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbProxyTimeoutsPropertyToHclTerraform(struct?: TfDbProxy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,30 +675,30 @@ export function awsDbProxyTimeoutsPropertyToHclTerraform(struct?: AwsDbProxy.Tim
 }
 
 
-export namespace AwsDbProxy {
+export namespace TfDbProxy {
 export interface AuthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#auth_scheme AwsDbProxy#auth_scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#auth_scheme TfDbProxy#auth_scheme}
   */
   readonly authScheme?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#client_password_auth_type AwsDbProxy#client_password_auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#client_password_auth_type TfDbProxy#client_password_auth_type}
   */
   readonly clientPasswordAuthType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#description AwsDbProxy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#description TfDbProxy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#iam_auth AwsDbProxy#iam_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#iam_auth TfDbProxy#iam_auth}
   */
   readonly iamAuth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#secret_arn AwsDbProxy#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#secret_arn TfDbProxy#secret_arn}
   */
   readonly secretArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#username AwsDbProxy#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#username TfDbProxy#username}
   */
   readonly username?: string;
 }
@@ -894,15 +894,15 @@ export class AuthPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#create AwsDbProxy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#create TfDbProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#delete AwsDbProxy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#delete TfDbProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#update AwsDbProxy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#update TfDbProxy#update}
   */
   readonly update?: string;
 }

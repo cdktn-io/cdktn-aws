@@ -5,102 +5,102 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMskconnectConnectorConfig extends cdktn.TerraformMetaArguments {
+export interface TfConnectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#connector_configuration AwsMskconnectConnector#connector_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#connector_configuration TfConnector#connector_configuration}
   */
   readonly connectorConfiguration: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#description AwsMskconnectConnector#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#description TfConnector#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#id AwsMskconnectConnector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#id TfConnector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafkaconnect_version AwsMskconnectConnector#kafkaconnect_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafkaconnect_version TfConnector#kafkaconnect_version}
   */
   readonly kafkaconnectVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#name AwsMskconnectConnector#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#name TfConnector#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#region AwsMskconnectConnector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#region TfConnector#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#service_execution_role_arn AwsMskconnectConnector#service_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#service_execution_role_arn TfConnector#service_execution_role_arn}
   */
   readonly serviceExecutionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#tags AwsMskconnectConnector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#tags TfConnector#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#tags_all AwsMskconnectConnector#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#tags_all TfConnector#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#capacity AwsMskconnectConnector#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#capacity TfConnector#capacity}
   */
-  readonly capacity: AwsMskconnectConnector.CapacityProperty;
+  readonly capacity: TfConnector.CapacityProperty;
   /**
   * kafka_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafka_cluster AwsMskconnectConnector#kafka_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafka_cluster TfConnector#kafka_cluster}
   */
-  readonly kafkaCluster: AwsMskconnectConnector.KafkaClusterProperty;
+  readonly kafkaCluster: TfConnector.KafkaClusterProperty;
   /**
   * kafka_cluster_client_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafka_cluster_client_authentication AwsMskconnectConnector#kafka_cluster_client_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafka_cluster_client_authentication TfConnector#kafka_cluster_client_authentication}
   */
-  readonly kafkaClusterClientAuthentication: AwsMskconnectConnector.KafkaClusterClientAuthenticationProperty;
+  readonly kafkaClusterClientAuthentication: TfConnector.KafkaClusterClientAuthenticationProperty;
   /**
   * kafka_cluster_encryption_in_transit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafka_cluster_encryption_in_transit AwsMskconnectConnector#kafka_cluster_encryption_in_transit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#kafka_cluster_encryption_in_transit TfConnector#kafka_cluster_encryption_in_transit}
   */
-  readonly kafkaClusterEncryptionInTransit: AwsMskconnectConnector.KafkaClusterEncryptionInTransitProperty;
+  readonly kafkaClusterEncryptionInTransit: TfConnector.KafkaClusterEncryptionInTransitProperty;
   /**
   * log_delivery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#log_delivery AwsMskconnectConnector#log_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#log_delivery TfConnector#log_delivery}
   */
-  readonly logDelivery?: AwsMskconnectConnector.LogDeliveryProperty;
+  readonly logDelivery?: TfConnector.LogDeliveryProperty;
   /**
   * plugin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#plugin AwsMskconnectConnector#plugin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#plugin TfConnector#plugin}
   */
-  readonly plugin: AwsMskconnectConnector.PluginProperty[] | cdktn.IResolvable;
+  readonly plugin: TfConnector.PluginProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#timeouts AwsMskconnectConnector#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#timeouts TfConnector#timeouts}
   */
-  readonly timeouts?: AwsMskconnectConnector.TimeoutsProperty;
+  readonly timeouts?: TfConnector.TimeoutsProperty;
   /**
   * worker_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#worker_configuration AwsMskconnectConnector#worker_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#worker_configuration TfConnector#worker_configuration}
   */
-  readonly workerConfiguration?: AwsMskconnectConnector.WorkerConfigurationProperty;
+  readonly workerConfiguration?: TfConnector.WorkerConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector aws_mskconnect_connector}
 */
-export class AwsMskconnectConnector extends cdktn.TerraformResource {
+export class TfConnector extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMskconnectConnector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConnector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMskconnectConnector to import
-  * @param importFromId The id of the existing AwsMskconnectConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMskconnectConnector to import is found
+  * @param importToId The construct id used in the generated config for the TfConnector to import
+  * @param importFromId The id of the existing TfConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConnector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mskconnect_connector", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMskconnectConnectorConfig
+  * @param options TfConnectorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMskconnectConnectorConfig) {
+  public constructor(scope: Construct, id: string, config: TfConnectorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mskconnect_connector',
       terraformGeneratorMetadata: {
@@ -314,11 +314,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // capacity - computed: false, optional: false, required: true
-  private _capacity = new AwsMskconnectConnector.CapacityPropertyOutputReference(this, "capacity");
+  private _capacity = new TfConnector.CapacityPropertyOutputReference(this, "capacity");
   public get capacity() {
     return this._capacity;
   }
-  public putCapacity(value: AwsMskconnectConnector.CapacityProperty) {
+  public putCapacity(value: TfConnector.CapacityProperty) {
     this._capacity.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -327,11 +327,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // kafka_cluster - computed: false, optional: false, required: true
-  private _kafkaCluster = new AwsMskconnectConnector.KafkaClusterPropertyOutputReference(this, "kafka_cluster");
+  private _kafkaCluster = new TfConnector.KafkaClusterPropertyOutputReference(this, "kafka_cluster");
   public get kafkaCluster() {
     return this._kafkaCluster;
   }
-  public putKafkaCluster(value: AwsMskconnectConnector.KafkaClusterProperty) {
+  public putKafkaCluster(value: TfConnector.KafkaClusterProperty) {
     this._kafkaCluster.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -340,11 +340,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // kafka_cluster_client_authentication - computed: false, optional: false, required: true
-  private _kafkaClusterClientAuthentication = new AwsMskconnectConnector.KafkaClusterClientAuthenticationPropertyOutputReference(this, "kafka_cluster_client_authentication");
+  private _kafkaClusterClientAuthentication = new TfConnector.KafkaClusterClientAuthenticationPropertyOutputReference(this, "kafka_cluster_client_authentication");
   public get kafkaClusterClientAuthentication() {
     return this._kafkaClusterClientAuthentication;
   }
-  public putKafkaClusterClientAuthentication(value: AwsMskconnectConnector.KafkaClusterClientAuthenticationProperty) {
+  public putKafkaClusterClientAuthentication(value: TfConnector.KafkaClusterClientAuthenticationProperty) {
     this._kafkaClusterClientAuthentication.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -353,11 +353,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // kafka_cluster_encryption_in_transit - computed: false, optional: false, required: true
-  private _kafkaClusterEncryptionInTransit = new AwsMskconnectConnector.KafkaClusterEncryptionInTransitPropertyOutputReference(this, "kafka_cluster_encryption_in_transit");
+  private _kafkaClusterEncryptionInTransit = new TfConnector.KafkaClusterEncryptionInTransitPropertyOutputReference(this, "kafka_cluster_encryption_in_transit");
   public get kafkaClusterEncryptionInTransit() {
     return this._kafkaClusterEncryptionInTransit;
   }
-  public putKafkaClusterEncryptionInTransit(value: AwsMskconnectConnector.KafkaClusterEncryptionInTransitProperty) {
+  public putKafkaClusterEncryptionInTransit(value: TfConnector.KafkaClusterEncryptionInTransitProperty) {
     this._kafkaClusterEncryptionInTransit.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -366,11 +366,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // log_delivery - computed: false, optional: true, required: false
-  private _logDelivery = new AwsMskconnectConnector.LogDeliveryPropertyOutputReference(this, "log_delivery");
+  private _logDelivery = new TfConnector.LogDeliveryPropertyOutputReference(this, "log_delivery");
   public get logDelivery() {
     return this._logDelivery;
   }
-  public putLogDelivery(value: AwsMskconnectConnector.LogDeliveryProperty) {
+  public putLogDelivery(value: TfConnector.LogDeliveryProperty) {
     this._logDelivery.internalValue = value;
   }
   public resetLogDelivery() {
@@ -382,11 +382,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // plugin - computed: false, optional: false, required: true
-  private _plugin = new AwsMskconnectConnector.PluginPropertyList(this, "plugin", true);
+  private _plugin = new TfConnector.PluginPropertyList(this, "plugin", true);
   public get plugin() {
     return this._plugin;
   }
-  public putPlugin(value: AwsMskconnectConnector.PluginProperty[] | cdktn.IResolvable) {
+  public putPlugin(value: TfConnector.PluginProperty[] | cdktn.IResolvable) {
     this._plugin.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -395,11 +395,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMskconnectConnector.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfConnector.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMskconnectConnector.TimeoutsProperty) {
+  public putTimeouts(value: TfConnector.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -411,11 +411,11 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 
   // worker_configuration - computed: false, optional: true, required: false
-  private _workerConfiguration = new AwsMskconnectConnector.WorkerConfigurationPropertyOutputReference(this, "worker_configuration");
+  private _workerConfiguration = new TfConnector.WorkerConfigurationPropertyOutputReference(this, "worker_configuration");
   public get workerConfiguration() {
     return this._workerConfiguration;
   }
-  public putWorkerConfiguration(value: AwsMskconnectConnector.WorkerConfigurationProperty) {
+  public putWorkerConfiguration(value: TfConnector.WorkerConfigurationProperty) {
     this._workerConfiguration.internalValue = value;
   }
   public resetWorkerConfiguration() {
@@ -441,14 +441,14 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
       service_execution_role_arn: cdktn.stringToTerraform(this._serviceExecutionRoleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      capacity: awsMskconnectConnectorCapacityPropertyToTerraform(this._capacity.internalValue),
-      kafka_cluster: awsMskconnectConnectorKafkaClusterPropertyToTerraform(this._kafkaCluster.internalValue),
-      kafka_cluster_client_authentication: awsMskconnectConnectorKafkaClusterClientAuthenticationPropertyToTerraform(this._kafkaClusterClientAuthentication.internalValue),
-      kafka_cluster_encryption_in_transit: awsMskconnectConnectorKafkaClusterEncryptionInTransitPropertyToTerraform(this._kafkaClusterEncryptionInTransit.internalValue),
-      log_delivery: awsMskconnectConnectorLogDeliveryPropertyToTerraform(this._logDelivery.internalValue),
-      plugin: cdktn.listMapper(awsMskconnectConnectorPluginPropertyToTerraform, true)(this._plugin.internalValue),
-      timeouts: awsMskconnectConnectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      worker_configuration: awsMskconnectConnectorWorkerConfigurationPropertyToTerraform(this._workerConfiguration.internalValue),
+      capacity: tfConnectorCapacityPropertyToTerraform(this._capacity.internalValue),
+      kafka_cluster: tfConnectorKafkaClusterPropertyToTerraform(this._kafkaCluster.internalValue),
+      kafka_cluster_client_authentication: tfConnectorKafkaClusterClientAuthenticationPropertyToTerraform(this._kafkaClusterClientAuthentication.internalValue),
+      kafka_cluster_encryption_in_transit: tfConnectorKafkaClusterEncryptionInTransitPropertyToTerraform(this._kafkaClusterEncryptionInTransit.internalValue),
+      log_delivery: tfConnectorLogDeliveryPropertyToTerraform(this._logDelivery.internalValue),
+      plugin: cdktn.listMapper(tfConnectorPluginPropertyToTerraform, true)(this._plugin.internalValue),
+      timeouts: tfConnectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      worker_configuration: tfConnectorWorkerConfigurationPropertyToTerraform(this._workerConfiguration.internalValue),
     };
   }
 
@@ -509,52 +509,52 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       capacity: {
-        value: awsMskconnectConnectorCapacityPropertyToHclTerraform(this._capacity.internalValue),
+        value: tfConnectorCapacityPropertyToHclTerraform(this._capacity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMskconnectConnector.CapacityPropertyList",
+        storageClassType: "TfConnector.CapacityPropertyList",
       },
       kafka_cluster: {
-        value: awsMskconnectConnectorKafkaClusterPropertyToHclTerraform(this._kafkaCluster.internalValue),
+        value: tfConnectorKafkaClusterPropertyToHclTerraform(this._kafkaCluster.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMskconnectConnector.KafkaClusterPropertyList",
+        storageClassType: "TfConnector.KafkaClusterPropertyList",
       },
       kafka_cluster_client_authentication: {
-        value: awsMskconnectConnectorKafkaClusterClientAuthenticationPropertyToHclTerraform(this._kafkaClusterClientAuthentication.internalValue),
+        value: tfConnectorKafkaClusterClientAuthenticationPropertyToHclTerraform(this._kafkaClusterClientAuthentication.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMskconnectConnector.KafkaClusterClientAuthenticationPropertyList",
+        storageClassType: "TfConnector.KafkaClusterClientAuthenticationPropertyList",
       },
       kafka_cluster_encryption_in_transit: {
-        value: awsMskconnectConnectorKafkaClusterEncryptionInTransitPropertyToHclTerraform(this._kafkaClusterEncryptionInTransit.internalValue),
+        value: tfConnectorKafkaClusterEncryptionInTransitPropertyToHclTerraform(this._kafkaClusterEncryptionInTransit.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMskconnectConnector.KafkaClusterEncryptionInTransitPropertyList",
+        storageClassType: "TfConnector.KafkaClusterEncryptionInTransitPropertyList",
       },
       log_delivery: {
-        value: awsMskconnectConnectorLogDeliveryPropertyToHclTerraform(this._logDelivery.internalValue),
+        value: tfConnectorLogDeliveryPropertyToHclTerraform(this._logDelivery.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMskconnectConnector.LogDeliveryPropertyList",
+        storageClassType: "TfConnector.LogDeliveryPropertyList",
       },
       plugin: {
-        value: cdktn.listMapperHcl(awsMskconnectConnectorPluginPropertyToHclTerraform, true)(this._plugin.internalValue),
+        value: cdktn.listMapperHcl(tfConnectorPluginPropertyToHclTerraform, true)(this._plugin.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsMskconnectConnector.PluginPropertyList",
+        storageClassType: "TfConnector.PluginPropertyList",
       },
       timeouts: {
-        value: awsMskconnectConnectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfConnectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMskconnectConnector.TimeoutsProperty",
+        storageClassType: "TfConnector.TimeoutsProperty",
       },
       worker_configuration: {
-        value: awsMskconnectConnectorWorkerConfigurationPropertyToHclTerraform(this._workerConfiguration.internalValue),
+        value: tfConnectorWorkerConfigurationPropertyToHclTerraform(this._workerConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMskconnectConnector.WorkerConfigurationPropertyList",
+        storageClassType: "TfConnector.WorkerConfigurationPropertyList",
       },
     };
 
@@ -563,7 +563,7 @@ export class AwsMskconnectConnector extends cdktn.TerraformResource {
   }
 }
 
-export function awsMskconnectConnectorScaleInPolicyPropertyToTerraform(struct?: AwsMskconnectConnector.ScaleInPolicyPropertyOutputReference | AwsMskconnectConnector.ScaleInPolicyProperty): any {
+export function tfConnectorScaleInPolicyPropertyToTerraform(struct?: TfConnector.ScaleInPolicyPropertyOutputReference | TfConnector.ScaleInPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function awsMskconnectConnectorScaleInPolicyPropertyToTerraform(struct?: 
 }
 
 
-export function awsMskconnectConnectorScaleInPolicyPropertyToHclTerraform(struct?: AwsMskconnectConnector.ScaleInPolicyPropertyOutputReference | AwsMskconnectConnector.ScaleInPolicyProperty): any {
+export function tfConnectorScaleInPolicyPropertyToHclTerraform(struct?: TfConnector.ScaleInPolicyPropertyOutputReference | TfConnector.ScaleInPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function awsMskconnectConnectorScaleInPolicyPropertyToHclTerraform(struct
 }
 
 
-export function awsMskconnectConnectorScaleOutPolicyPropertyToTerraform(struct?: AwsMskconnectConnector.ScaleOutPolicyPropertyOutputReference | AwsMskconnectConnector.ScaleOutPolicyProperty): any {
+export function tfConnectorScaleOutPolicyPropertyToTerraform(struct?: TfConnector.ScaleOutPolicyPropertyOutputReference | TfConnector.ScaleOutPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function awsMskconnectConnectorScaleOutPolicyPropertyToTerraform(struct?:
 }
 
 
-export function awsMskconnectConnectorScaleOutPolicyPropertyToHclTerraform(struct?: AwsMskconnectConnector.ScaleOutPolicyPropertyOutputReference | AwsMskconnectConnector.ScaleOutPolicyProperty): any {
+export function tfConnectorScaleOutPolicyPropertyToHclTerraform(struct?: TfConnector.ScaleOutPolicyPropertyOutputReference | TfConnector.ScaleOutPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -623,7 +623,7 @@ export function awsMskconnectConnectorScaleOutPolicyPropertyToHclTerraform(struc
 }
 
 
-export function awsMskconnectConnectorAutoscalingPropertyToTerraform(struct?: AwsMskconnectConnector.AutoscalingPropertyOutputReference | AwsMskconnectConnector.AutoscalingProperty): any {
+export function tfConnectorAutoscalingPropertyToTerraform(struct?: TfConnector.AutoscalingPropertyOutputReference | TfConnector.AutoscalingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,13 +632,13 @@ export function awsMskconnectConnectorAutoscalingPropertyToTerraform(struct?: Aw
     max_worker_count: cdktn.numberToTerraform(struct!.maxWorkerCount),
     mcu_count: cdktn.numberToTerraform(struct!.mcuCount),
     min_worker_count: cdktn.numberToTerraform(struct!.minWorkerCount),
-    scale_in_policy: awsMskconnectConnectorScaleInPolicyPropertyToTerraform(struct!.scaleInPolicy),
-    scale_out_policy: awsMskconnectConnectorScaleOutPolicyPropertyToTerraform(struct!.scaleOutPolicy),
+    scale_in_policy: tfConnectorScaleInPolicyPropertyToTerraform(struct!.scaleInPolicy),
+    scale_out_policy: tfConnectorScaleOutPolicyPropertyToTerraform(struct!.scaleOutPolicy),
   }
 }
 
 
-export function awsMskconnectConnectorAutoscalingPropertyToHclTerraform(struct?: AwsMskconnectConnector.AutoscalingPropertyOutputReference | AwsMskconnectConnector.AutoscalingProperty): any {
+export function tfConnectorAutoscalingPropertyToHclTerraform(struct?: TfConnector.AutoscalingPropertyOutputReference | TfConnector.AutoscalingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,13 +663,13 @@ export function awsMskconnectConnectorAutoscalingPropertyToHclTerraform(struct?:
       storageClassType: "number",
     },
     scale_in_policy: {
-      value: awsMskconnectConnectorScaleInPolicyPropertyToHclTerraform(struct!.scaleInPolicy),
+      value: tfConnectorScaleInPolicyPropertyToHclTerraform(struct!.scaleInPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "ScaleInPolicyPropertyList",
     },
     scale_out_policy: {
-      value: awsMskconnectConnectorScaleOutPolicyPropertyToHclTerraform(struct!.scaleOutPolicy),
+      value: tfConnectorScaleOutPolicyPropertyToHclTerraform(struct!.scaleOutPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "ScaleOutPolicyPropertyList",
@@ -681,7 +681,7 @@ export function awsMskconnectConnectorAutoscalingPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMskconnectConnectorProvisionedCapacityPropertyToTerraform(struct?: AwsMskconnectConnector.ProvisionedCapacityPropertyOutputReference | AwsMskconnectConnector.ProvisionedCapacityProperty): any {
+export function tfConnectorProvisionedCapacityPropertyToTerraform(struct?: TfConnector.ProvisionedCapacityPropertyOutputReference | TfConnector.ProvisionedCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,7 +693,7 @@ export function awsMskconnectConnectorProvisionedCapacityPropertyToTerraform(str
 }
 
 
-export function awsMskconnectConnectorProvisionedCapacityPropertyToHclTerraform(struct?: AwsMskconnectConnector.ProvisionedCapacityPropertyOutputReference | AwsMskconnectConnector.ProvisionedCapacityProperty): any {
+export function tfConnectorProvisionedCapacityPropertyToHclTerraform(struct?: TfConnector.ProvisionedCapacityPropertyOutputReference | TfConnector.ProvisionedCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -718,32 +718,32 @@ export function awsMskconnectConnectorProvisionedCapacityPropertyToHclTerraform(
 }
 
 
-export function awsMskconnectConnectorCapacityPropertyToTerraform(struct?: AwsMskconnectConnector.CapacityPropertyOutputReference | AwsMskconnectConnector.CapacityProperty): any {
+export function tfConnectorCapacityPropertyToTerraform(struct?: TfConnector.CapacityPropertyOutputReference | TfConnector.CapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    autoscaling: awsMskconnectConnectorAutoscalingPropertyToTerraform(struct!.autoscaling),
-    provisioned_capacity: awsMskconnectConnectorProvisionedCapacityPropertyToTerraform(struct!.provisionedCapacity),
+    autoscaling: tfConnectorAutoscalingPropertyToTerraform(struct!.autoscaling),
+    provisioned_capacity: tfConnectorProvisionedCapacityPropertyToTerraform(struct!.provisionedCapacity),
   }
 }
 
 
-export function awsMskconnectConnectorCapacityPropertyToHclTerraform(struct?: AwsMskconnectConnector.CapacityPropertyOutputReference | AwsMskconnectConnector.CapacityProperty): any {
+export function tfConnectorCapacityPropertyToHclTerraform(struct?: TfConnector.CapacityPropertyOutputReference | TfConnector.CapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     autoscaling: {
-      value: awsMskconnectConnectorAutoscalingPropertyToHclTerraform(struct!.autoscaling),
+      value: tfConnectorAutoscalingPropertyToHclTerraform(struct!.autoscaling),
       isBlock: true,
       type: "list",
       storageClassType: "AutoscalingPropertyList",
     },
     provisioned_capacity: {
-      value: awsMskconnectConnectorProvisionedCapacityPropertyToHclTerraform(struct!.provisionedCapacity),
+      value: tfConnectorProvisionedCapacityPropertyToHclTerraform(struct!.provisionedCapacity),
       isBlock: true,
       type: "list",
       storageClassType: "ProvisionedCapacityPropertyList",
@@ -755,7 +755,7 @@ export function awsMskconnectConnectorCapacityPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMskconnectConnectorVpcPropertyToTerraform(struct?: AwsMskconnectConnector.VpcPropertyOutputReference | AwsMskconnectConnector.VpcProperty): any {
+export function tfConnectorVpcPropertyToTerraform(struct?: TfConnector.VpcPropertyOutputReference | TfConnector.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -767,7 +767,7 @@ export function awsMskconnectConnectorVpcPropertyToTerraform(struct?: AwsMskconn
 }
 
 
-export function awsMskconnectConnectorVpcPropertyToHclTerraform(struct?: AwsMskconnectConnector.VpcPropertyOutputReference | AwsMskconnectConnector.VpcProperty): any {
+export function tfConnectorVpcPropertyToHclTerraform(struct?: TfConnector.VpcPropertyOutputReference | TfConnector.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -792,19 +792,19 @@ export function awsMskconnectConnectorVpcPropertyToHclTerraform(struct?: AwsMskc
 }
 
 
-export function awsMskconnectConnectorApacheKafkaClusterPropertyToTerraform(struct?: AwsMskconnectConnector.ApacheKafkaClusterPropertyOutputReference | AwsMskconnectConnector.ApacheKafkaClusterProperty): any {
+export function tfConnectorApacheKafkaClusterPropertyToTerraform(struct?: TfConnector.ApacheKafkaClusterPropertyOutputReference | TfConnector.ApacheKafkaClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     bootstrap_servers: cdktn.stringToTerraform(struct!.bootstrapServers),
-    vpc: awsMskconnectConnectorVpcPropertyToTerraform(struct!.vpc),
+    vpc: tfConnectorVpcPropertyToTerraform(struct!.vpc),
   }
 }
 
 
-export function awsMskconnectConnectorApacheKafkaClusterPropertyToHclTerraform(struct?: AwsMskconnectConnector.ApacheKafkaClusterPropertyOutputReference | AwsMskconnectConnector.ApacheKafkaClusterProperty): any {
+export function tfConnectorApacheKafkaClusterPropertyToHclTerraform(struct?: TfConnector.ApacheKafkaClusterPropertyOutputReference | TfConnector.ApacheKafkaClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -817,7 +817,7 @@ export function awsMskconnectConnectorApacheKafkaClusterPropertyToHclTerraform(s
       storageClassType: "string",
     },
     vpc: {
-      value: awsMskconnectConnectorVpcPropertyToHclTerraform(struct!.vpc),
+      value: tfConnectorVpcPropertyToHclTerraform(struct!.vpc),
       isBlock: true,
       type: "list",
       storageClassType: "VpcPropertyList",
@@ -829,25 +829,25 @@ export function awsMskconnectConnectorApacheKafkaClusterPropertyToHclTerraform(s
 }
 
 
-export function awsMskconnectConnectorKafkaClusterPropertyToTerraform(struct?: AwsMskconnectConnector.KafkaClusterPropertyOutputReference | AwsMskconnectConnector.KafkaClusterProperty): any {
+export function tfConnectorKafkaClusterPropertyToTerraform(struct?: TfConnector.KafkaClusterPropertyOutputReference | TfConnector.KafkaClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    apache_kafka_cluster: awsMskconnectConnectorApacheKafkaClusterPropertyToTerraform(struct!.apacheKafkaCluster),
+    apache_kafka_cluster: tfConnectorApacheKafkaClusterPropertyToTerraform(struct!.apacheKafkaCluster),
   }
 }
 
 
-export function awsMskconnectConnectorKafkaClusterPropertyToHclTerraform(struct?: AwsMskconnectConnector.KafkaClusterPropertyOutputReference | AwsMskconnectConnector.KafkaClusterProperty): any {
+export function tfConnectorKafkaClusterPropertyToHclTerraform(struct?: TfConnector.KafkaClusterPropertyOutputReference | TfConnector.KafkaClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     apache_kafka_cluster: {
-      value: awsMskconnectConnectorApacheKafkaClusterPropertyToHclTerraform(struct!.apacheKafkaCluster),
+      value: tfConnectorApacheKafkaClusterPropertyToHclTerraform(struct!.apacheKafkaCluster),
       isBlock: true,
       type: "list",
       storageClassType: "ApacheKafkaClusterPropertyList",
@@ -859,7 +859,7 @@ export function awsMskconnectConnectorKafkaClusterPropertyToHclTerraform(struct?
 }
 
 
-export function awsMskconnectConnectorKafkaClusterClientAuthenticationPropertyToTerraform(struct?: AwsMskconnectConnector.KafkaClusterClientAuthenticationPropertyOutputReference | AwsMskconnectConnector.KafkaClusterClientAuthenticationProperty): any {
+export function tfConnectorKafkaClusterClientAuthenticationPropertyToTerraform(struct?: TfConnector.KafkaClusterClientAuthenticationPropertyOutputReference | TfConnector.KafkaClusterClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,7 +870,7 @@ export function awsMskconnectConnectorKafkaClusterClientAuthenticationPropertyTo
 }
 
 
-export function awsMskconnectConnectorKafkaClusterClientAuthenticationPropertyToHclTerraform(struct?: AwsMskconnectConnector.KafkaClusterClientAuthenticationPropertyOutputReference | AwsMskconnectConnector.KafkaClusterClientAuthenticationProperty): any {
+export function tfConnectorKafkaClusterClientAuthenticationPropertyToHclTerraform(struct?: TfConnector.KafkaClusterClientAuthenticationPropertyOutputReference | TfConnector.KafkaClusterClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function awsMskconnectConnectorKafkaClusterClientAuthenticationPropertyTo
 }
 
 
-export function awsMskconnectConnectorKafkaClusterEncryptionInTransitPropertyToTerraform(struct?: AwsMskconnectConnector.KafkaClusterEncryptionInTransitPropertyOutputReference | AwsMskconnectConnector.KafkaClusterEncryptionInTransitProperty): any {
+export function tfConnectorKafkaClusterEncryptionInTransitPropertyToTerraform(struct?: TfConnector.KafkaClusterEncryptionInTransitPropertyOutputReference | TfConnector.KafkaClusterEncryptionInTransitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -900,7 +900,7 @@ export function awsMskconnectConnectorKafkaClusterEncryptionInTransitPropertyToT
 }
 
 
-export function awsMskconnectConnectorKafkaClusterEncryptionInTransitPropertyToHclTerraform(struct?: AwsMskconnectConnector.KafkaClusterEncryptionInTransitPropertyOutputReference | AwsMskconnectConnector.KafkaClusterEncryptionInTransitProperty): any {
+export function tfConnectorKafkaClusterEncryptionInTransitPropertyToHclTerraform(struct?: TfConnector.KafkaClusterEncryptionInTransitPropertyOutputReference | TfConnector.KafkaClusterEncryptionInTransitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -919,7 +919,7 @@ export function awsMskconnectConnectorKafkaClusterEncryptionInTransitPropertyToH
 }
 
 
-export function awsMskconnectConnectorCloudwatchLogsPropertyToTerraform(struct?: AwsMskconnectConnector.CloudwatchLogsPropertyOutputReference | AwsMskconnectConnector.CloudwatchLogsProperty): any {
+export function tfConnectorCloudwatchLogsPropertyToTerraform(struct?: TfConnector.CloudwatchLogsPropertyOutputReference | TfConnector.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function awsMskconnectConnectorCloudwatchLogsPropertyToTerraform(struct?:
 }
 
 
-export function awsMskconnectConnectorCloudwatchLogsPropertyToHclTerraform(struct?: AwsMskconnectConnector.CloudwatchLogsPropertyOutputReference | AwsMskconnectConnector.CloudwatchLogsProperty): any {
+export function tfConnectorCloudwatchLogsPropertyToHclTerraform(struct?: TfConnector.CloudwatchLogsPropertyOutputReference | TfConnector.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function awsMskconnectConnectorCloudwatchLogsPropertyToHclTerraform(struc
 }
 
 
-export function awsMskconnectConnectorFirehosePropertyToTerraform(struct?: AwsMskconnectConnector.FirehosePropertyOutputReference | AwsMskconnectConnector.FirehoseProperty): any {
+export function tfConnectorFirehosePropertyToTerraform(struct?: TfConnector.FirehosePropertyOutputReference | TfConnector.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function awsMskconnectConnectorFirehosePropertyToTerraform(struct?: AwsMs
 }
 
 
-export function awsMskconnectConnectorFirehosePropertyToHclTerraform(struct?: AwsMskconnectConnector.FirehosePropertyOutputReference | AwsMskconnectConnector.FirehoseProperty): any {
+export function tfConnectorFirehosePropertyToHclTerraform(struct?: TfConnector.FirehosePropertyOutputReference | TfConnector.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,7 +993,7 @@ export function awsMskconnectConnectorFirehosePropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMskconnectConnectorS3PropertyToTerraform(struct?: AwsMskconnectConnector.S3PropertyOutputReference | AwsMskconnectConnector.S3Property): any {
+export function tfConnectorS3PropertyToTerraform(struct?: TfConnector.S3PropertyOutputReference | TfConnector.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1006,7 +1006,7 @@ export function awsMskconnectConnectorS3PropertyToTerraform(struct?: AwsMskconne
 }
 
 
-export function awsMskconnectConnectorS3PropertyToHclTerraform(struct?: AwsMskconnectConnector.S3PropertyOutputReference | AwsMskconnectConnector.S3Property): any {
+export function tfConnectorS3PropertyToHclTerraform(struct?: TfConnector.S3PropertyOutputReference | TfConnector.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1037,39 +1037,39 @@ export function awsMskconnectConnectorS3PropertyToHclTerraform(struct?: AwsMskco
 }
 
 
-export function awsMskconnectConnectorWorkerLogDeliveryPropertyToTerraform(struct?: AwsMskconnectConnector.WorkerLogDeliveryPropertyOutputReference | AwsMskconnectConnector.WorkerLogDeliveryProperty): any {
+export function tfConnectorWorkerLogDeliveryPropertyToTerraform(struct?: TfConnector.WorkerLogDeliveryPropertyOutputReference | TfConnector.WorkerLogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: awsMskconnectConnectorCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    firehose: awsMskconnectConnectorFirehosePropertyToTerraform(struct!.firehose),
-    s3: awsMskconnectConnectorS3PropertyToTerraform(struct!.s3),
+    cloudwatch_logs: tfConnectorCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    firehose: tfConnectorFirehosePropertyToTerraform(struct!.firehose),
+    s3: tfConnectorS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function awsMskconnectConnectorWorkerLogDeliveryPropertyToHclTerraform(struct?: AwsMskconnectConnector.WorkerLogDeliveryPropertyOutputReference | AwsMskconnectConnector.WorkerLogDeliveryProperty): any {
+export function tfConnectorWorkerLogDeliveryPropertyToHclTerraform(struct?: TfConnector.WorkerLogDeliveryPropertyOutputReference | TfConnector.WorkerLogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: awsMskconnectConnectorCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: tfConnectorCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     firehose: {
-      value: awsMskconnectConnectorFirehosePropertyToHclTerraform(struct!.firehose),
+      value: tfConnectorFirehosePropertyToHclTerraform(struct!.firehose),
       isBlock: true,
       type: "list",
       storageClassType: "FirehosePropertyList",
     },
     s3: {
-      value: awsMskconnectConnectorS3PropertyToHclTerraform(struct!.s3),
+      value: tfConnectorS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -1081,25 +1081,25 @@ export function awsMskconnectConnectorWorkerLogDeliveryPropertyToHclTerraform(st
 }
 
 
-export function awsMskconnectConnectorLogDeliveryPropertyToTerraform(struct?: AwsMskconnectConnector.LogDeliveryPropertyOutputReference | AwsMskconnectConnector.LogDeliveryProperty): any {
+export function tfConnectorLogDeliveryPropertyToTerraform(struct?: TfConnector.LogDeliveryPropertyOutputReference | TfConnector.LogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    worker_log_delivery: awsMskconnectConnectorWorkerLogDeliveryPropertyToTerraform(struct!.workerLogDelivery),
+    worker_log_delivery: tfConnectorWorkerLogDeliveryPropertyToTerraform(struct!.workerLogDelivery),
   }
 }
 
 
-export function awsMskconnectConnectorLogDeliveryPropertyToHclTerraform(struct?: AwsMskconnectConnector.LogDeliveryPropertyOutputReference | AwsMskconnectConnector.LogDeliveryProperty): any {
+export function tfConnectorLogDeliveryPropertyToHclTerraform(struct?: TfConnector.LogDeliveryPropertyOutputReference | TfConnector.LogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     worker_log_delivery: {
-      value: awsMskconnectConnectorWorkerLogDeliveryPropertyToHclTerraform(struct!.workerLogDelivery),
+      value: tfConnectorWorkerLogDeliveryPropertyToHclTerraform(struct!.workerLogDelivery),
       isBlock: true,
       type: "list",
       storageClassType: "WorkerLogDeliveryPropertyList",
@@ -1111,7 +1111,7 @@ export function awsMskconnectConnectorLogDeliveryPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMskconnectConnectorCustomPluginPropertyToTerraform(struct?: AwsMskconnectConnector.CustomPluginPropertyOutputReference | AwsMskconnectConnector.CustomPluginProperty): any {
+export function tfConnectorCustomPluginPropertyToTerraform(struct?: TfConnector.CustomPluginPropertyOutputReference | TfConnector.CustomPluginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1123,7 +1123,7 @@ export function awsMskconnectConnectorCustomPluginPropertyToTerraform(struct?: A
 }
 
 
-export function awsMskconnectConnectorCustomPluginPropertyToHclTerraform(struct?: AwsMskconnectConnector.CustomPluginPropertyOutputReference | AwsMskconnectConnector.CustomPluginProperty): any {
+export function tfConnectorCustomPluginPropertyToHclTerraform(struct?: TfConnector.CustomPluginPropertyOutputReference | TfConnector.CustomPluginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1148,25 +1148,25 @@ export function awsMskconnectConnectorCustomPluginPropertyToHclTerraform(struct?
 }
 
 
-export function awsMskconnectConnectorPluginPropertyToTerraform(struct?: AwsMskconnectConnector.PluginProperty | cdktn.IResolvable): any {
+export function tfConnectorPluginPropertyToTerraform(struct?: TfConnector.PluginProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_plugin: awsMskconnectConnectorCustomPluginPropertyToTerraform(struct!.customPlugin),
+    custom_plugin: tfConnectorCustomPluginPropertyToTerraform(struct!.customPlugin),
   }
 }
 
 
-export function awsMskconnectConnectorPluginPropertyToHclTerraform(struct?: AwsMskconnectConnector.PluginProperty | cdktn.IResolvable): any {
+export function tfConnectorPluginPropertyToHclTerraform(struct?: TfConnector.PluginProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_plugin: {
-      value: awsMskconnectConnectorCustomPluginPropertyToHclTerraform(struct!.customPlugin),
+      value: tfConnectorCustomPluginPropertyToHclTerraform(struct!.customPlugin),
       isBlock: true,
       type: "list",
       storageClassType: "CustomPluginPropertyList",
@@ -1178,7 +1178,7 @@ export function awsMskconnectConnectorPluginPropertyToHclTerraform(struct?: AwsM
 }
 
 
-export function awsMskconnectConnectorTimeoutsPropertyToTerraform(struct?: AwsMskconnectConnector.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConnectorTimeoutsPropertyToTerraform(struct?: TfConnector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1191,7 +1191,7 @@ export function awsMskconnectConnectorTimeoutsPropertyToTerraform(struct?: AwsMs
 }
 
 
-export function awsMskconnectConnectorTimeoutsPropertyToHclTerraform(struct?: AwsMskconnectConnector.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConnectorTimeoutsPropertyToHclTerraform(struct?: TfConnector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1222,7 +1222,7 @@ export function awsMskconnectConnectorTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMskconnectConnectorWorkerConfigurationPropertyToTerraform(struct?: AwsMskconnectConnector.WorkerConfigurationPropertyOutputReference | AwsMskconnectConnector.WorkerConfigurationProperty): any {
+export function tfConnectorWorkerConfigurationPropertyToTerraform(struct?: TfConnector.WorkerConfigurationPropertyOutputReference | TfConnector.WorkerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1234,7 +1234,7 @@ export function awsMskconnectConnectorWorkerConfigurationPropertyToTerraform(str
 }
 
 
-export function awsMskconnectConnectorWorkerConfigurationPropertyToHclTerraform(struct?: AwsMskconnectConnector.WorkerConfigurationPropertyOutputReference | AwsMskconnectConnector.WorkerConfigurationProperty): any {
+export function tfConnectorWorkerConfigurationPropertyToHclTerraform(struct?: TfConnector.WorkerConfigurationPropertyOutputReference | TfConnector.WorkerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1259,10 +1259,10 @@ export function awsMskconnectConnectorWorkerConfigurationPropertyToHclTerraform(
 }
 
 
-export namespace AwsMskconnectConnector {
+export namespace TfConnector {
 export interface ScaleInPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#cpu_utilization_percentage AwsMskconnectConnector#cpu_utilization_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#cpu_utilization_percentage TfConnector#cpu_utilization_percentage}
   */
   readonly cpuUtilizationPercentage?: number;
 }
@@ -1316,7 +1316,7 @@ export class ScaleInPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScaleOutPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#cpu_utilization_percentage AwsMskconnectConnector#cpu_utilization_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#cpu_utilization_percentage TfConnector#cpu_utilization_percentage}
   */
   readonly cpuUtilizationPercentage?: number;
 }
@@ -1370,27 +1370,27 @@ export class ScaleOutPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AutoscalingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#max_worker_count AwsMskconnectConnector#max_worker_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#max_worker_count TfConnector#max_worker_count}
   */
   readonly maxWorkerCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#mcu_count AwsMskconnectConnector#mcu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#mcu_count TfConnector#mcu_count}
   */
   readonly mcuCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#min_worker_count AwsMskconnectConnector#min_worker_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#min_worker_count TfConnector#min_worker_count}
   */
   readonly minWorkerCount: number;
   /**
   * scale_in_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#scale_in_policy AwsMskconnectConnector#scale_in_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#scale_in_policy TfConnector#scale_in_policy}
   */
   readonly scaleInPolicy?: ScaleInPolicyProperty;
   /**
   * scale_out_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#scale_out_policy AwsMskconnectConnector#scale_out_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#scale_out_policy TfConnector#scale_out_policy}
   */
   readonly scaleOutPolicy?: ScaleOutPolicyProperty;
 }
@@ -1526,11 +1526,11 @@ export class AutoscalingPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ProvisionedCapacityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#mcu_count AwsMskconnectConnector#mcu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#mcu_count TfConnector#mcu_count}
   */
   readonly mcuCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#worker_count AwsMskconnectConnector#worker_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#worker_count TfConnector#worker_count}
   */
   readonly workerCount: number;
 }
@@ -1605,13 +1605,13 @@ export interface CapacityProperty {
   /**
   * autoscaling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#autoscaling AwsMskconnectConnector#autoscaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#autoscaling TfConnector#autoscaling}
   */
   readonly autoscaling?: AutoscalingProperty;
   /**
   * provisioned_capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#provisioned_capacity AwsMskconnectConnector#provisioned_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#provisioned_capacity TfConnector#provisioned_capacity}
   */
   readonly provisionedCapacity?: ProvisionedCapacityProperty;
 }
@@ -1687,11 +1687,11 @@ export class CapacityPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#security_groups AwsMskconnectConnector#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#security_groups TfConnector#security_groups}
   */
   readonly securityGroups: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#subnets AwsMskconnectConnector#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#subnets TfConnector#subnets}
   */
   readonly subnets: string[];
 }
@@ -1761,13 +1761,13 @@ export class VpcPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ApacheKafkaClusterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#bootstrap_servers AwsMskconnectConnector#bootstrap_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#bootstrap_servers TfConnector#bootstrap_servers}
   */
   readonly bootstrapServers: string;
   /**
   * vpc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#vpc AwsMskconnectConnector#vpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#vpc TfConnector#vpc}
   */
   readonly vpc: VpcProperty;
 }
@@ -1839,7 +1839,7 @@ export interface KafkaClusterProperty {
   /**
   * apache_kafka_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#apache_kafka_cluster AwsMskconnectConnector#apache_kafka_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#apache_kafka_cluster TfConnector#apache_kafka_cluster}
   */
   readonly apacheKafkaCluster: ApacheKafkaClusterProperty;
 }
@@ -1890,7 +1890,7 @@ export class KafkaClusterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface KafkaClusterClientAuthenticationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#authentication_type AwsMskconnectConnector#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#authentication_type TfConnector#authentication_type}
   */
   readonly authenticationType?: string;
 }
@@ -1944,7 +1944,7 @@ export class KafkaClusterClientAuthenticationPropertyOutputReference extends cdk
 }
 export interface KafkaClusterEncryptionInTransitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#encryption_type AwsMskconnectConnector#encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#encryption_type TfConnector#encryption_type}
   */
   readonly encryptionType?: string;
 }
@@ -1998,11 +1998,11 @@ export class KafkaClusterEncryptionInTransitPropertyOutputReference extends cdkt
 }
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#enabled AwsMskconnectConnector#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#enabled TfConnector#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#log_group AwsMskconnectConnector#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#log_group TfConnector#log_group}
   */
   readonly logGroup?: string;
 }
@@ -2075,11 +2075,11 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FirehoseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#delivery_stream AwsMskconnectConnector#delivery_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#delivery_stream TfConnector#delivery_stream}
   */
   readonly deliveryStream?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#enabled AwsMskconnectConnector#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#enabled TfConnector#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -2152,15 +2152,15 @@ export class FirehosePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#bucket AwsMskconnectConnector#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#bucket TfConnector#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#enabled AwsMskconnectConnector#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#enabled TfConnector#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#prefix AwsMskconnectConnector#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#prefix TfConnector#prefix}
   */
   readonly prefix?: string;
 }
@@ -2257,19 +2257,19 @@ export interface WorkerLogDeliveryProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#cloudwatch_logs AwsMskconnectConnector#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#cloudwatch_logs TfConnector#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * firehose block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#firehose AwsMskconnectConnector#firehose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#firehose TfConnector#firehose}
   */
   readonly firehose?: FirehoseProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#s3 AwsMskconnectConnector#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#s3 TfConnector#s3}
   */
   readonly s3?: S3Property;
 }
@@ -2369,7 +2369,7 @@ export interface LogDeliveryProperty {
   /**
   * worker_log_delivery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#worker_log_delivery AwsMskconnectConnector#worker_log_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#worker_log_delivery TfConnector#worker_log_delivery}
   */
   readonly workerLogDelivery: WorkerLogDeliveryProperty;
 }
@@ -2420,11 +2420,11 @@ export class LogDeliveryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CustomPluginProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#arn AwsMskconnectConnector#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#arn TfConnector#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#revision AwsMskconnectConnector#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#revision TfConnector#revision}
   */
   readonly revision: number;
 }
@@ -2496,7 +2496,7 @@ export interface PluginProperty {
   /**
   * custom_plugin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#custom_plugin AwsMskconnectConnector#custom_plugin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#custom_plugin TfConnector#custom_plugin}
   */
   readonly customPlugin: CustomPluginProperty;
 }
@@ -2579,15 +2579,15 @@ export class PluginPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#create AwsMskconnectConnector#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#create TfConnector#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#delete AwsMskconnectConnector#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#delete TfConnector#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#update AwsMskconnectConnector#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#update TfConnector#update}
   */
   readonly update?: string;
 }
@@ -2695,11 +2695,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WorkerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#arn AwsMskconnectConnector#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#arn TfConnector#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#revision AwsMskconnectConnector#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_connector#revision TfConnector#revision}
   */
   readonly revision: number;
 }

@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsResourceexplorer2ViewConfig extends cdktn.TerraformMetaArguments {
+export interface TfViewConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#default_view AwsResourceexplorer2View#default_view}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#default_view TfView#default_view}
   */
   readonly defaultView?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#name AwsResourceexplorer2View#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#name TfView#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#region AwsResourceexplorer2View#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#region TfView#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#scope AwsResourceexplorer2View#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#scope TfView#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#tags AwsResourceexplorer2View#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#tags TfView#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#filters AwsResourceexplorer2View#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#filters TfView#filters}
   */
-  readonly filters?: AwsResourceexplorer2View.FiltersProperty[] | cdktn.IResolvable;
+  readonly filters?: TfView.FiltersProperty[] | cdktn.IResolvable;
   /**
   * included_property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#included_property AwsResourceexplorer2View#included_property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#included_property TfView#included_property}
   */
-  readonly includedProperty?: AwsResourceexplorer2View.IncludedPropertyProperty[] | cdktn.IResolvable;
+  readonly includedProperty?: TfView.IncludedPropertyProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view aws_resourceexplorer2_view}
 */
-export class AwsResourceexplorer2View extends cdktn.TerraformResource {
+export class TfView extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsResourceexplorer2View extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsResourceexplorer2View resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfView resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsResourceexplorer2View to import
-  * @param importFromId The id of the existing AwsResourceexplorer2View that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsResourceexplorer2View to import is found
+  * @param importToId The construct id used in the generated config for the TfView to import
+  * @param importFromId The id of the existing TfView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfView to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resourceexplorer2_view", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsResourceexplorer2View extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsResourceexplorer2ViewConfig
+  * @param options TfViewConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsResourceexplorer2ViewConfig) {
+  public constructor(scope: Construct, id: string, config: TfViewConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resourceexplorer2_view',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class AwsResourceexplorer2View extends cdktn.TerraformResource {
   }
 
   // filters - computed: false, optional: true, required: false
-  private _filters = new AwsResourceexplorer2View.FiltersPropertyList(this, "filters", false);
+  private _filters = new TfView.FiltersPropertyList(this, "filters", false);
   public get filters() {
     return this._filters;
   }
-  public putFilters(value: AwsResourceexplorer2View.FiltersProperty[] | cdktn.IResolvable) {
+  public putFilters(value: TfView.FiltersProperty[] | cdktn.IResolvable) {
     this._filters.internalValue = value;
   }
   public resetFilters() {
@@ -216,11 +216,11 @@ export class AwsResourceexplorer2View extends cdktn.TerraformResource {
   }
 
   // included_property - computed: false, optional: true, required: false
-  private _includedProperty = new AwsResourceexplorer2View.IncludedPropertyPropertyList(this, "included_property", false);
+  private _includedProperty = new TfView.IncludedPropertyPropertyList(this, "included_property", false);
   public get includedProperty() {
     return this._includedProperty;
   }
-  public putIncludedProperty(value: AwsResourceexplorer2View.IncludedPropertyProperty[] | cdktn.IResolvable) {
+  public putIncludedProperty(value: TfView.IncludedPropertyProperty[] | cdktn.IResolvable) {
     this._includedProperty.internalValue = value;
   }
   public resetIncludedProperty() {
@@ -242,8 +242,8 @@ export class AwsResourceexplorer2View extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       scope: cdktn.stringToTerraform(this._scope),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filters: cdktn.listMapper(awsResourceexplorer2ViewFiltersPropertyToTerraform, true)(this._filters.internalValue),
-      included_property: cdktn.listMapper(awsResourceexplorer2ViewIncludedPropertyPropertyToTerraform, true)(this._includedProperty.internalValue),
+      filters: cdktn.listMapper(tfViewFiltersPropertyToTerraform, true)(this._filters.internalValue),
+      included_property: cdktn.listMapper(tfViewIncludedPropertyPropertyToTerraform, true)(this._includedProperty.internalValue),
     };
   }
 
@@ -280,16 +280,16 @@ export class AwsResourceexplorer2View extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       filters: {
-        value: cdktn.listMapperHcl(awsResourceexplorer2ViewFiltersPropertyToHclTerraform, true)(this._filters.internalValue),
+        value: cdktn.listMapperHcl(tfViewFiltersPropertyToHclTerraform, true)(this._filters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsResourceexplorer2View.FiltersPropertyList",
+        storageClassType: "TfView.FiltersPropertyList",
       },
       included_property: {
-        value: cdktn.listMapperHcl(awsResourceexplorer2ViewIncludedPropertyPropertyToHclTerraform, true)(this._includedProperty.internalValue),
+        value: cdktn.listMapperHcl(tfViewIncludedPropertyPropertyToHclTerraform, true)(this._includedProperty.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsResourceexplorer2View.IncludedPropertyPropertyList",
+        storageClassType: "TfView.IncludedPropertyPropertyList",
       },
     };
 
@@ -298,7 +298,7 @@ export class AwsResourceexplorer2View extends cdktn.TerraformResource {
   }
 }
 
-export function awsResourceexplorer2ViewFiltersPropertyToTerraform(struct?: AwsResourceexplorer2View.FiltersProperty | cdktn.IResolvable): any {
+export function tfViewFiltersPropertyToTerraform(struct?: TfView.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function awsResourceexplorer2ViewFiltersPropertyToTerraform(struct?: AwsR
 }
 
 
-export function awsResourceexplorer2ViewFiltersPropertyToHclTerraform(struct?: AwsResourceexplorer2View.FiltersProperty | cdktn.IResolvable): any {
+export function tfViewFiltersPropertyToHclTerraform(struct?: TfView.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function awsResourceexplorer2ViewFiltersPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsResourceexplorer2ViewIncludedPropertyPropertyToTerraform(struct?: AwsResourceexplorer2View.IncludedPropertyProperty | cdktn.IResolvable): any {
+export function tfViewIncludedPropertyPropertyToTerraform(struct?: TfView.IncludedPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function awsResourceexplorer2ViewIncludedPropertyPropertyToTerraform(stru
 }
 
 
-export function awsResourceexplorer2ViewIncludedPropertyPropertyToHclTerraform(struct?: AwsResourceexplorer2View.IncludedPropertyProperty | cdktn.IResolvable): any {
+export function tfViewIncludedPropertyPropertyToHclTerraform(struct?: TfView.IncludedPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,10 +358,10 @@ export function awsResourceexplorer2ViewIncludedPropertyPropertyToHclTerraform(s
 }
 
 
-export namespace AwsResourceexplorer2View {
+export namespace TfView {
 export interface FiltersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#filter_string AwsResourceexplorer2View#filter_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#filter_string TfView#filter_string}
   */
   readonly filterString: string;
 }
@@ -444,7 +444,7 @@ export class FiltersPropertyList extends cdktn.ComplexList {
 }
 export interface IncludedPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#name AwsResourceexplorer2View#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_view#name TfView#name}
   */
   readonly name: string;
 }

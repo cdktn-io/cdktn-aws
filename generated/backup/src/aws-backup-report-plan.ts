@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBackupReportPlanConfig extends cdktn.TerraformMetaArguments {
+export interface TfReportPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#description AwsBackupReportPlan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#description TfReportPlan#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#id AwsBackupReportPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#id TfReportPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#name AwsBackupReportPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#name TfReportPlan#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#region AwsBackupReportPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#region TfReportPlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#tags AwsBackupReportPlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#tags TfReportPlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#tags_all AwsBackupReportPlan#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#tags_all TfReportPlan#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * report_delivery_channel block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#report_delivery_channel AwsBackupReportPlan#report_delivery_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#report_delivery_channel TfReportPlan#report_delivery_channel}
   */
-  readonly reportDeliveryChannel: AwsBackupReportPlan.ReportDeliveryChannelProperty;
+  readonly reportDeliveryChannel: TfReportPlan.ReportDeliveryChannelProperty;
   /**
   * report_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#report_setting AwsBackupReportPlan#report_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#report_setting TfReportPlan#report_setting}
   */
-  readonly reportSetting: AwsBackupReportPlan.ReportSettingProperty;
+  readonly reportSetting: TfReportPlan.ReportSettingProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan aws_backup_report_plan}
 */
-export class AwsBackupReportPlan extends cdktn.TerraformResource {
+export class TfReportPlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsBackupReportPlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBackupReportPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReportPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBackupReportPlan to import
-  * @param importFromId The id of the existing AwsBackupReportPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBackupReportPlan to import is found
+  * @param importToId The construct id used in the generated config for the TfReportPlan to import
+  * @param importFromId The id of the existing TfReportPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReportPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_report_plan", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsBackupReportPlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBackupReportPlanConfig
+  * @param options TfReportPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBackupReportPlanConfig) {
+  public constructor(scope: Construct, id: string, config: TfReportPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_report_plan',
       terraformGeneratorMetadata: {
@@ -223,11 +223,11 @@ export class AwsBackupReportPlan extends cdktn.TerraformResource {
   }
 
   // report_delivery_channel - computed: false, optional: false, required: true
-  private _reportDeliveryChannel = new AwsBackupReportPlan.ReportDeliveryChannelPropertyOutputReference(this, "report_delivery_channel");
+  private _reportDeliveryChannel = new TfReportPlan.ReportDeliveryChannelPropertyOutputReference(this, "report_delivery_channel");
   public get reportDeliveryChannel() {
     return this._reportDeliveryChannel;
   }
-  public putReportDeliveryChannel(value: AwsBackupReportPlan.ReportDeliveryChannelProperty) {
+  public putReportDeliveryChannel(value: TfReportPlan.ReportDeliveryChannelProperty) {
     this._reportDeliveryChannel.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -236,11 +236,11 @@ export class AwsBackupReportPlan extends cdktn.TerraformResource {
   }
 
   // report_setting - computed: false, optional: false, required: true
-  private _reportSetting = new AwsBackupReportPlan.ReportSettingPropertyOutputReference(this, "report_setting");
+  private _reportSetting = new TfReportPlan.ReportSettingPropertyOutputReference(this, "report_setting");
   public get reportSetting() {
     return this._reportSetting;
   }
-  public putReportSetting(value: AwsBackupReportPlan.ReportSettingProperty) {
+  public putReportSetting(value: TfReportPlan.ReportSettingProperty) {
     this._reportSetting.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -260,8 +260,8 @@ export class AwsBackupReportPlan extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      report_delivery_channel: awsBackupReportPlanReportDeliveryChannelPropertyToTerraform(this._reportDeliveryChannel.internalValue),
-      report_setting: awsBackupReportPlanReportSettingPropertyToTerraform(this._reportSetting.internalValue),
+      report_delivery_channel: tfReportPlanReportDeliveryChannelPropertyToTerraform(this._reportDeliveryChannel.internalValue),
+      report_setting: tfReportPlanReportSettingPropertyToTerraform(this._reportSetting.internalValue),
     };
   }
 
@@ -304,16 +304,16 @@ export class AwsBackupReportPlan extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       report_delivery_channel: {
-        value: awsBackupReportPlanReportDeliveryChannelPropertyToHclTerraform(this._reportDeliveryChannel.internalValue),
+        value: tfReportPlanReportDeliveryChannelPropertyToHclTerraform(this._reportDeliveryChannel.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBackupReportPlan.ReportDeliveryChannelPropertyList",
+        storageClassType: "TfReportPlan.ReportDeliveryChannelPropertyList",
       },
       report_setting: {
-        value: awsBackupReportPlanReportSettingPropertyToHclTerraform(this._reportSetting.internalValue),
+        value: tfReportPlanReportSettingPropertyToHclTerraform(this._reportSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBackupReportPlan.ReportSettingPropertyList",
+        storageClassType: "TfReportPlan.ReportSettingPropertyList",
       },
     };
 
@@ -322,7 +322,7 @@ export class AwsBackupReportPlan extends cdktn.TerraformResource {
   }
 }
 
-export function awsBackupReportPlanReportDeliveryChannelPropertyToTerraform(struct?: AwsBackupReportPlan.ReportDeliveryChannelPropertyOutputReference | AwsBackupReportPlan.ReportDeliveryChannelProperty): any {
+export function tfReportPlanReportDeliveryChannelPropertyToTerraform(struct?: TfReportPlan.ReportDeliveryChannelPropertyOutputReference | TfReportPlan.ReportDeliveryChannelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function awsBackupReportPlanReportDeliveryChannelPropertyToTerraform(stru
 }
 
 
-export function awsBackupReportPlanReportDeliveryChannelPropertyToHclTerraform(struct?: AwsBackupReportPlan.ReportDeliveryChannelPropertyOutputReference | AwsBackupReportPlan.ReportDeliveryChannelProperty): any {
+export function tfReportPlanReportDeliveryChannelPropertyToHclTerraform(struct?: TfReportPlan.ReportDeliveryChannelPropertyOutputReference | TfReportPlan.ReportDeliveryChannelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function awsBackupReportPlanReportDeliveryChannelPropertyToHclTerraform(s
 }
 
 
-export function awsBackupReportPlanReportSettingPropertyToTerraform(struct?: AwsBackupReportPlan.ReportSettingPropertyOutputReference | AwsBackupReportPlan.ReportSettingProperty): any {
+export function tfReportPlanReportSettingPropertyToTerraform(struct?: TfReportPlan.ReportSettingPropertyOutputReference | TfReportPlan.ReportSettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function awsBackupReportPlanReportSettingPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsBackupReportPlanReportSettingPropertyToHclTerraform(struct?: AwsBackupReportPlan.ReportSettingPropertyOutputReference | AwsBackupReportPlan.ReportSettingProperty): any {
+export function tfReportPlanReportSettingPropertyToHclTerraform(struct?: TfReportPlan.ReportSettingPropertyOutputReference | TfReportPlan.ReportSettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,18 +431,18 @@ export function awsBackupReportPlanReportSettingPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsBackupReportPlan {
+export namespace TfReportPlan {
 export interface ReportDeliveryChannelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#formats AwsBackupReportPlan#formats}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#formats TfReportPlan#formats}
   */
   readonly formats?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#s3_bucket_name AwsBackupReportPlan#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#s3_bucket_name TfReportPlan#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#s3_key_prefix AwsBackupReportPlan#s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#s3_key_prefix TfReportPlan#s3_key_prefix}
   */
   readonly s3KeyPrefix?: string;
 }
@@ -537,27 +537,27 @@ export class ReportDeliveryChannelPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ReportSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#accounts AwsBackupReportPlan#accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#accounts TfReportPlan#accounts}
   */
   readonly accounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#framework_arns AwsBackupReportPlan#framework_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#framework_arns TfReportPlan#framework_arns}
   */
   readonly frameworkArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#number_of_frameworks AwsBackupReportPlan#number_of_frameworks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#number_of_frameworks TfReportPlan#number_of_frameworks}
   */
   readonly numberOfFrameworks?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#organization_units AwsBackupReportPlan#organization_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#organization_units TfReportPlan#organization_units}
   */
   readonly organizationUnits?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#regions AwsBackupReportPlan#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#regions TfReportPlan#regions}
   */
   readonly regions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#report_template AwsBackupReportPlan#report_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_report_plan#report_template TfReportPlan#report_template}
   */
   readonly reportTemplate: string;
 }

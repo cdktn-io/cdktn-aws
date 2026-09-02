@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafGeoMatchSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfGeoMatchSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#id AwsWafGeoMatchSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#id TfGeoMatchSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#name AwsWafGeoMatchSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#name TfGeoMatchSet#name}
   */
   readonly name: string;
   /**
   * geo_match_constraint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#geo_match_constraint AwsWafGeoMatchSet#geo_match_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#geo_match_constraint TfGeoMatchSet#geo_match_constraint}
   */
-  readonly geoMatchConstraint?: AwsWafGeoMatchSet.GeoMatchConstraintProperty[] | cdktn.IResolvable;
+  readonly geoMatchConstraint?: TfGeoMatchSet.GeoMatchConstraintProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set aws_waf_geo_match_set}
 */
-export class AwsWafGeoMatchSet extends cdktn.TerraformResource {
+export class TfGeoMatchSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsWafGeoMatchSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafGeoMatchSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGeoMatchSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafGeoMatchSet to import
-  * @param importFromId The id of the existing AwsWafGeoMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafGeoMatchSet to import is found
+  * @param importToId The construct id used in the generated config for the TfGeoMatchSet to import
+  * @param importFromId The id of the existing TfGeoMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGeoMatchSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_waf_geo_match_set", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsWafGeoMatchSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafGeoMatchSetConfig
+  * @param options TfGeoMatchSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafGeoMatchSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfGeoMatchSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_waf_geo_match_set',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class AwsWafGeoMatchSet extends cdktn.TerraformResource {
   }
 
   // geo_match_constraint - computed: false, optional: true, required: false
-  private _geoMatchConstraint = new AwsWafGeoMatchSet.GeoMatchConstraintPropertyList(this, "geo_match_constraint", true);
+  private _geoMatchConstraint = new TfGeoMatchSet.GeoMatchConstraintPropertyList(this, "geo_match_constraint", true);
   public get geoMatchConstraint() {
     return this._geoMatchConstraint;
   }
-  public putGeoMatchConstraint(value: AwsWafGeoMatchSet.GeoMatchConstraintProperty[] | cdktn.IResolvable) {
+  public putGeoMatchConstraint(value: TfGeoMatchSet.GeoMatchConstraintProperty[] | cdktn.IResolvable) {
     this._geoMatchConstraint.internalValue = value;
   }
   public resetGeoMatchConstraint() {
@@ -143,7 +143,7 @@ export class AwsWafGeoMatchSet extends cdktn.TerraformResource {
     return {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      geo_match_constraint: cdktn.listMapper(awsWafGeoMatchSetGeoMatchConstraintPropertyToTerraform, true)(this._geoMatchConstraint.internalValue),
+      geo_match_constraint: cdktn.listMapper(tfGeoMatchSetGeoMatchConstraintPropertyToTerraform, true)(this._geoMatchConstraint.internalValue),
     };
   }
 
@@ -162,10 +162,10 @@ export class AwsWafGeoMatchSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       geo_match_constraint: {
-        value: cdktn.listMapperHcl(awsWafGeoMatchSetGeoMatchConstraintPropertyToHclTerraform, true)(this._geoMatchConstraint.internalValue),
+        value: cdktn.listMapperHcl(tfGeoMatchSetGeoMatchConstraintPropertyToHclTerraform, true)(this._geoMatchConstraint.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafGeoMatchSet.GeoMatchConstraintPropertyList",
+        storageClassType: "TfGeoMatchSet.GeoMatchConstraintPropertyList",
       },
     };
 
@@ -174,7 +174,7 @@ export class AwsWafGeoMatchSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafGeoMatchSetGeoMatchConstraintPropertyToTerraform(struct?: AwsWafGeoMatchSet.GeoMatchConstraintProperty | cdktn.IResolvable): any {
+export function tfGeoMatchSetGeoMatchConstraintPropertyToTerraform(struct?: TfGeoMatchSet.GeoMatchConstraintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function awsWafGeoMatchSetGeoMatchConstraintPropertyToTerraform(struct?: 
 }
 
 
-export function awsWafGeoMatchSetGeoMatchConstraintPropertyToHclTerraform(struct?: AwsWafGeoMatchSet.GeoMatchConstraintProperty | cdktn.IResolvable): any {
+export function tfGeoMatchSetGeoMatchConstraintPropertyToHclTerraform(struct?: TfGeoMatchSet.GeoMatchConstraintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,14 +211,14 @@ export function awsWafGeoMatchSetGeoMatchConstraintPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsWafGeoMatchSet {
+export namespace TfGeoMatchSet {
 export interface GeoMatchConstraintProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#type AwsWafGeoMatchSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#type TfGeoMatchSet#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#value AwsWafGeoMatchSet#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_geo_match_set#value TfGeoMatchSet#value}
   */
   readonly value: string;
 }

@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppfabricAppAuthorizationConfig extends cdktn.TerraformMetaArguments {
+export interface TfAppAuthorizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#app AwsAppfabricAppAuthorization#app}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#app TfAppAuthorization#app}
   */
   readonly app: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#app_bundle_arn AwsAppfabricAppAuthorization#app_bundle_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#app_bundle_arn TfAppAuthorization#app_bundle_arn}
   */
   readonly appBundleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#auth_type AwsAppfabricAppAuthorization#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#auth_type TfAppAuthorization#auth_type}
   */
   readonly authType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#region AwsAppfabricAppAuthorization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#region TfAppAuthorization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tags AwsAppfabricAppAuthorization#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tags TfAppAuthorization#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#credential AwsAppfabricAppAuthorization#credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#credential TfAppAuthorization#credential}
   */
-  readonly credential?: AwsAppfabricAppAuthorization.CredentialProperty[] | cdktn.IResolvable;
+  readonly credential?: TfAppAuthorization.CredentialProperty[] | cdktn.IResolvable;
   /**
   * tenant block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tenant AwsAppfabricAppAuthorization#tenant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tenant TfAppAuthorization#tenant}
   */
-  readonly tenant?: AwsAppfabricAppAuthorization.TenantProperty[] | cdktn.IResolvable;
+  readonly tenant?: TfAppAuthorization.TenantProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#timeouts AwsAppfabricAppAuthorization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#timeouts TfAppAuthorization#timeouts}
   */
-  readonly timeouts?: AwsAppfabricAppAuthorization.TimeoutsProperty;
+  readonly timeouts?: TfAppAuthorization.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization aws_appfabric_app_authorization}
 */
-export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
+export class TfAppAuthorization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppfabricAppAuthorization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAppAuthorization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppfabricAppAuthorization to import
-  * @param importFromId The id of the existing AwsAppfabricAppAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppfabricAppAuthorization to import is found
+  * @param importToId The construct id used in the generated config for the TfAppAuthorization to import
+  * @param importFromId The id of the existing TfAppAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAppAuthorization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appfabric_app_authorization", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppfabricAppAuthorizationConfig
+  * @param options TfAppAuthorizationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppfabricAppAuthorizationConfig) {
+  public constructor(scope: Construct, id: string, config: TfAppAuthorizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appfabric_app_authorization',
       terraformGeneratorMetadata: {
@@ -221,11 +221,11 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
   }
 
   // credential - computed: false, optional: true, required: false
-  private _credential = new AwsAppfabricAppAuthorization.CredentialPropertyList(this, "credential", false);
+  private _credential = new TfAppAuthorization.CredentialPropertyList(this, "credential", false);
   public get credential() {
     return this._credential;
   }
-  public putCredential(value: AwsAppfabricAppAuthorization.CredentialProperty[] | cdktn.IResolvable) {
+  public putCredential(value: TfAppAuthorization.CredentialProperty[] | cdktn.IResolvable) {
     this._credential.internalValue = value;
   }
   public resetCredential() {
@@ -237,11 +237,11 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
   }
 
   // tenant - computed: false, optional: true, required: false
-  private _tenant = new AwsAppfabricAppAuthorization.TenantPropertyList(this, "tenant", false);
+  private _tenant = new TfAppAuthorization.TenantPropertyList(this, "tenant", false);
   public get tenant() {
     return this._tenant;
   }
-  public putTenant(value: AwsAppfabricAppAuthorization.TenantProperty[] | cdktn.IResolvable) {
+  public putTenant(value: TfAppAuthorization.TenantProperty[] | cdktn.IResolvable) {
     this._tenant.internalValue = value;
   }
   public resetTenant() {
@@ -253,11 +253,11 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsAppfabricAppAuthorization.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAppAuthorization.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsAppfabricAppAuthorization.TimeoutsProperty) {
+  public putTimeouts(value: TfAppAuthorization.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -279,9 +279,9 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
       auth_type: cdktn.stringToTerraform(this._authType),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      credential: cdktn.listMapper(awsAppfabricAppAuthorizationCredentialPropertyToTerraform, true)(this._credential.internalValue),
-      tenant: cdktn.listMapper(awsAppfabricAppAuthorizationTenantPropertyToTerraform, true)(this._tenant.internalValue),
-      timeouts: awsAppfabricAppAuthorizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      credential: cdktn.listMapper(tfAppAuthorizationCredentialPropertyToTerraform, true)(this._credential.internalValue),
+      tenant: cdktn.listMapper(tfAppAuthorizationTenantPropertyToTerraform, true)(this._tenant.internalValue),
+      timeouts: tfAppAuthorizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -318,22 +318,22 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       credential: {
-        value: cdktn.listMapperHcl(awsAppfabricAppAuthorizationCredentialPropertyToHclTerraform, true)(this._credential.internalValue),
+        value: cdktn.listMapperHcl(tfAppAuthorizationCredentialPropertyToHclTerraform, true)(this._credential.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppfabricAppAuthorization.CredentialPropertyList",
+        storageClassType: "TfAppAuthorization.CredentialPropertyList",
       },
       tenant: {
-        value: cdktn.listMapperHcl(awsAppfabricAppAuthorizationTenantPropertyToHclTerraform, true)(this._tenant.internalValue),
+        value: cdktn.listMapperHcl(tfAppAuthorizationTenantPropertyToHclTerraform, true)(this._tenant.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppfabricAppAuthorization.TenantPropertyList",
+        storageClassType: "TfAppAuthorization.TenantPropertyList",
       },
       timeouts: {
-        value: awsAppfabricAppAuthorizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAppAuthorizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsAppfabricAppAuthorization.TimeoutsProperty",
+        storageClassType: "TfAppAuthorization.TimeoutsProperty",
       },
     };
 
@@ -342,7 +342,7 @@ export class AwsAppfabricAppAuthorization extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppfabricAppAuthorizationApiKeyCredentialPropertyToTerraform(struct?: AwsAppfabricAppAuthorization.ApiKeyCredentialProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationApiKeyCredentialPropertyToTerraform(struct?: TfAppAuthorization.ApiKeyCredentialProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function awsAppfabricAppAuthorizationApiKeyCredentialPropertyToTerraform(
 }
 
 
-export function awsAppfabricAppAuthorizationApiKeyCredentialPropertyToHclTerraform(struct?: AwsAppfabricAppAuthorization.ApiKeyCredentialProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationApiKeyCredentialPropertyToHclTerraform(struct?: TfAppAuthorization.ApiKeyCredentialProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function awsAppfabricAppAuthorizationApiKeyCredentialPropertyToHclTerrafo
 }
 
 
-export function awsAppfabricAppAuthorizationOauth2CredentialPropertyToTerraform(struct?: AwsAppfabricAppAuthorization.Oauth2CredentialProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationOauth2CredentialPropertyToTerraform(struct?: TfAppAuthorization.Oauth2CredentialProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function awsAppfabricAppAuthorizationOauth2CredentialPropertyToTerraform(
 }
 
 
-export function awsAppfabricAppAuthorizationOauth2CredentialPropertyToHclTerraform(struct?: AwsAppfabricAppAuthorization.Oauth2CredentialProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationOauth2CredentialPropertyToHclTerraform(struct?: TfAppAuthorization.Oauth2CredentialProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,32 +409,32 @@ export function awsAppfabricAppAuthorizationOauth2CredentialPropertyToHclTerrafo
 }
 
 
-export function awsAppfabricAppAuthorizationCredentialPropertyToTerraform(struct?: AwsAppfabricAppAuthorization.CredentialProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationCredentialPropertyToTerraform(struct?: TfAppAuthorization.CredentialProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    api_key_credential: cdktn.listMapper(awsAppfabricAppAuthorizationApiKeyCredentialPropertyToTerraform, true)(struct!.apiKeyCredential),
-    oauth2_credential: cdktn.listMapper(awsAppfabricAppAuthorizationOauth2CredentialPropertyToTerraform, true)(struct!.oauth2Credential),
+    api_key_credential: cdktn.listMapper(tfAppAuthorizationApiKeyCredentialPropertyToTerraform, true)(struct!.apiKeyCredential),
+    oauth2_credential: cdktn.listMapper(tfAppAuthorizationOauth2CredentialPropertyToTerraform, true)(struct!.oauth2Credential),
   }
 }
 
 
-export function awsAppfabricAppAuthorizationCredentialPropertyToHclTerraform(struct?: AwsAppfabricAppAuthorization.CredentialProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationCredentialPropertyToHclTerraform(struct?: TfAppAuthorization.CredentialProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     api_key_credential: {
-      value: cdktn.listMapperHcl(awsAppfabricAppAuthorizationApiKeyCredentialPropertyToHclTerraform, true)(struct!.apiKeyCredential),
+      value: cdktn.listMapperHcl(tfAppAuthorizationApiKeyCredentialPropertyToHclTerraform, true)(struct!.apiKeyCredential),
       isBlock: true,
       type: "list",
       storageClassType: "ApiKeyCredentialPropertyList",
     },
     oauth2_credential: {
-      value: cdktn.listMapperHcl(awsAppfabricAppAuthorizationOauth2CredentialPropertyToHclTerraform, true)(struct!.oauth2Credential),
+      value: cdktn.listMapperHcl(tfAppAuthorizationOauth2CredentialPropertyToHclTerraform, true)(struct!.oauth2Credential),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2CredentialPropertyList",
@@ -446,7 +446,7 @@ export function awsAppfabricAppAuthorizationCredentialPropertyToHclTerraform(str
 }
 
 
-export function awsAppfabricAppAuthorizationTenantPropertyToTerraform(struct?: AwsAppfabricAppAuthorization.TenantProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationTenantPropertyToTerraform(struct?: TfAppAuthorization.TenantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function awsAppfabricAppAuthorizationTenantPropertyToTerraform(struct?: A
 }
 
 
-export function awsAppfabricAppAuthorizationTenantPropertyToHclTerraform(struct?: AwsAppfabricAppAuthorization.TenantProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationTenantPropertyToHclTerraform(struct?: TfAppAuthorization.TenantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function awsAppfabricAppAuthorizationTenantPropertyToHclTerraform(struct?
 }
 
 
-export function awsAppfabricAppAuthorizationTimeoutsPropertyToTerraform(struct?: AwsAppfabricAppAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationTimeoutsPropertyToTerraform(struct?: TfAppAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function awsAppfabricAppAuthorizationTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsAppfabricAppAuthorizationTimeoutsPropertyToHclTerraform(struct?: AwsAppfabricAppAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAppAuthorizationTimeoutsPropertyToHclTerraform(struct?: TfAppAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,10 +527,10 @@ export function awsAppfabricAppAuthorizationTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsAppfabricAppAuthorization {
+export namespace TfAppAuthorization {
 export interface ApiKeyCredentialProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#api_key AwsAppfabricAppAuthorization#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#api_key TfAppAuthorization#api_key}
   */
   readonly apiKey: string;
 }
@@ -613,11 +613,11 @@ export class ApiKeyCredentialPropertyList extends cdktn.ComplexList {
 }
 export interface Oauth2CredentialProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#client_id AwsAppfabricAppAuthorization#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#client_id TfAppAuthorization#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#client_secret AwsAppfabricAppAuthorization#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#client_secret TfAppAuthorization#client_secret}
   */
   readonly clientSecret: string;
 }
@@ -721,13 +721,13 @@ export interface CredentialProperty {
   /**
   * api_key_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#api_key_credential AwsAppfabricAppAuthorization#api_key_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#api_key_credential TfAppAuthorization#api_key_credential}
   */
   readonly apiKeyCredential?: ApiKeyCredentialProperty[] | cdktn.IResolvable;
   /**
   * oauth2_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#oauth2_credential AwsAppfabricAppAuthorization#oauth2_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#oauth2_credential TfAppAuthorization#oauth2_credential}
   */
   readonly oauth2Credential?: Oauth2CredentialProperty[] | cdktn.IResolvable;
 }
@@ -835,11 +835,11 @@ export class CredentialPropertyList extends cdktn.ComplexList {
 }
 export interface TenantProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tenant_display_name AwsAppfabricAppAuthorization#tenant_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tenant_display_name TfAppAuthorization#tenant_display_name}
   */
   readonly tenantDisplayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tenant_identifier AwsAppfabricAppAuthorization#tenant_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#tenant_identifier TfAppAuthorization#tenant_identifier}
   */
   readonly tenantIdentifier: string;
 }
@@ -943,19 +943,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#create AwsAppfabricAppAuthorization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#create TfAppAuthorization#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#delete AwsAppfabricAppAuthorization#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#delete TfAppAuthorization#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#update AwsAppfabricAppAuthorization#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_authorization#update TfAppAuthorization#update}
   */
   readonly update?: string;
 }

@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkmailGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
   /**
   * Primary email address used to register the group with WorkMail.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#email AwsWorkmailGroup#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#email TfGroup#email}
   */
   readonly email: string;
   /**
   * Whether to hide the group from the global address list.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#hidden_from_global_address_list AwsWorkmailGroup#hidden_from_global_address_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#hidden_from_global_address_list TfGroup#hidden_from_global_address_list}
   */
   readonly hiddenFromGlobalAddressList?: boolean | cdktn.IResolvable;
   /**
   * Name of the group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#name AwsWorkmailGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#name TfGroup#name}
   */
   readonly name: string;
   /**
   * Identifier of the WorkMail organization where the group is managed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#organization_id AwsWorkmailGroup#organization_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#organization_id TfGroup#organization_id}
   */
   readonly organizationId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#region AwsWorkmailGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#region TfGroup#region}
   */
   readonly region?: string;
 }
@@ -41,7 +41,7 @@ export interface AwsWorkmailGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group aws_workmail_group}
 */
-export class AwsWorkmailGroup extends cdktn.TerraformResource {
+export class TfGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class AwsWorkmailGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkmailGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkmailGroup to import
-  * @param importFromId The id of the existing AwsWorkmailGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkmailGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfGroup to import
+  * @param importFromId The id of the existing TfGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workmail_group", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class AwsWorkmailGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkmailGroupConfig
+  * @param options TfGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkmailGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workmail_group',
       terraformGeneratorMetadata: {

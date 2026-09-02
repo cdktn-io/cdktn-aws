@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlobalacceleratorAcceleratorConfig extends cdktn.TerraformMetaArguments {
+export interface TfAcceleratorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#enabled AwsGlobalacceleratorAccelerator#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#enabled TfAccelerator#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#id AwsGlobalacceleratorAccelerator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#id TfAccelerator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#ip_address_type AwsGlobalacceleratorAccelerator#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#ip_address_type TfAccelerator#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#ip_addresses AwsGlobalacceleratorAccelerator#ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#ip_addresses TfAccelerator#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#name AwsGlobalacceleratorAccelerator#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#name TfAccelerator#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#tags AwsGlobalacceleratorAccelerator#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#tags TfAccelerator#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#tags_all AwsGlobalacceleratorAccelerator#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#tags_all TfAccelerator#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#attributes AwsGlobalacceleratorAccelerator#attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#attributes TfAccelerator#attributes}
   */
-  readonly attributes?: AwsGlobalacceleratorAccelerator.AttributesProperty;
+  readonly attributes?: TfAccelerator.AttributesProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#timeouts AwsGlobalacceleratorAccelerator#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#timeouts TfAccelerator#timeouts}
   */
-  readonly timeouts?: AwsGlobalacceleratorAccelerator.TimeoutsProperty;
+  readonly timeouts?: TfAccelerator.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator aws_globalaccelerator_accelerator}
 */
-export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
+export class TfAccelerator extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlobalacceleratorAccelerator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccelerator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlobalacceleratorAccelerator to import
-  * @param importFromId The id of the existing AwsGlobalacceleratorAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlobalacceleratorAccelerator to import is found
+  * @param importToId The construct id used in the generated config for the TfAccelerator to import
+  * @param importFromId The id of the existing TfAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccelerator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_accelerator", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlobalacceleratorAcceleratorConfig
+  * @param options TfAcceleratorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlobalacceleratorAcceleratorConfig) {
+  public constructor(scope: Construct, id: string, config: TfAcceleratorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_accelerator',
       terraformGeneratorMetadata: {
@@ -202,7 +202,7 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
   }
 
   // ip_sets - computed: true, optional: false, required: false
-  private _ipSets = new AwsGlobalacceleratorAccelerator.IpSetsPropertyList(this, "ip_sets", false);
+  private _ipSets = new TfAccelerator.IpSetsPropertyList(this, "ip_sets", false);
   public get ipSets() {
     return this._ipSets;
   }
@@ -253,11 +253,11 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
   }
 
   // attributes - computed: false, optional: true, required: false
-  private _attributes = new AwsGlobalacceleratorAccelerator.AttributesPropertyOutputReference(this, "attributes");
+  private _attributes = new TfAccelerator.AttributesPropertyOutputReference(this, "attributes");
   public get attributes() {
     return this._attributes;
   }
-  public putAttributes(value: AwsGlobalacceleratorAccelerator.AttributesProperty) {
+  public putAttributes(value: TfAccelerator.AttributesProperty) {
     this._attributes.internalValue = value;
   }
   public resetAttributes() {
@@ -269,11 +269,11 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGlobalacceleratorAccelerator.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAccelerator.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGlobalacceleratorAccelerator.TimeoutsProperty) {
+  public putTimeouts(value: TfAccelerator.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -297,8 +297,8 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      attributes: awsGlobalacceleratorAcceleratorAttributesPropertyToTerraform(this._attributes.internalValue),
-      timeouts: awsGlobalacceleratorAcceleratorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      attributes: tfAcceleratorAttributesPropertyToTerraform(this._attributes.internalValue),
+      timeouts: tfAcceleratorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -347,16 +347,16 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       attributes: {
-        value: awsGlobalacceleratorAcceleratorAttributesPropertyToHclTerraform(this._attributes.internalValue),
+        value: tfAcceleratorAttributesPropertyToHclTerraform(this._attributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlobalacceleratorAccelerator.AttributesPropertyList",
+        storageClassType: "TfAccelerator.AttributesPropertyList",
       },
       timeouts: {
-        value: awsGlobalacceleratorAcceleratorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAcceleratorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGlobalacceleratorAccelerator.TimeoutsProperty",
+        storageClassType: "TfAccelerator.TimeoutsProperty",
       },
     };
 
@@ -365,7 +365,7 @@ export class AwsGlobalacceleratorAccelerator extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlobalacceleratorAcceleratorIpSetsPropertyToTerraform(struct?: AwsGlobalacceleratorAccelerator.IpSetsProperty): any {
+export function tfAcceleratorIpSetsPropertyToTerraform(struct?: TfAccelerator.IpSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function awsGlobalacceleratorAcceleratorIpSetsPropertyToTerraform(struct?
 }
 
 
-export function awsGlobalacceleratorAcceleratorIpSetsPropertyToHclTerraform(struct?: AwsGlobalacceleratorAccelerator.IpSetsProperty): any {
+export function tfAcceleratorIpSetsPropertyToHclTerraform(struct?: TfAccelerator.IpSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function awsGlobalacceleratorAcceleratorIpSetsPropertyToHclTerraform(stru
 }
 
 
-export function awsGlobalacceleratorAcceleratorAttributesPropertyToTerraform(struct?: AwsGlobalacceleratorAccelerator.AttributesPropertyOutputReference | AwsGlobalacceleratorAccelerator.AttributesProperty): any {
+export function tfAcceleratorAttributesPropertyToTerraform(struct?: TfAccelerator.AttributesPropertyOutputReference | TfAccelerator.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function awsGlobalacceleratorAcceleratorAttributesPropertyToTerraform(str
 }
 
 
-export function awsGlobalacceleratorAcceleratorAttributesPropertyToHclTerraform(struct?: AwsGlobalacceleratorAccelerator.AttributesPropertyOutputReference | AwsGlobalacceleratorAccelerator.AttributesProperty): any {
+export function tfAcceleratorAttributesPropertyToHclTerraform(struct?: TfAccelerator.AttributesPropertyOutputReference | TfAccelerator.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function awsGlobalacceleratorAcceleratorAttributesPropertyToHclTerraform(
 }
 
 
-export function awsGlobalacceleratorAcceleratorTimeoutsPropertyToTerraform(struct?: AwsGlobalacceleratorAccelerator.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAcceleratorTimeoutsPropertyToTerraform(struct?: TfAccelerator.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function awsGlobalacceleratorAcceleratorTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsGlobalacceleratorAcceleratorTimeoutsPropertyToHclTerraform(struct?: AwsGlobalacceleratorAccelerator.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAcceleratorTimeoutsPropertyToHclTerraform(struct?: TfAccelerator.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function awsGlobalacceleratorAcceleratorTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsGlobalacceleratorAccelerator {
+export namespace TfAccelerator {
 export interface IpSetsProperty {
 }
 export class IpSetsPropertyOutputReference extends cdktn.ComplexObject {
@@ -529,15 +529,15 @@ export class IpSetsPropertyList extends cdktn.ComplexList {
 }
 export interface AttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#flow_logs_enabled AwsGlobalacceleratorAccelerator#flow_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#flow_logs_enabled TfAccelerator#flow_logs_enabled}
   */
   readonly flowLogsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#flow_logs_s3_bucket AwsGlobalacceleratorAccelerator#flow_logs_s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#flow_logs_s3_bucket TfAccelerator#flow_logs_s3_bucket}
   */
   readonly flowLogsS3Bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#flow_logs_s3_prefix AwsGlobalacceleratorAccelerator#flow_logs_s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#flow_logs_s3_prefix TfAccelerator#flow_logs_s3_prefix}
   */
   readonly flowLogsS3Prefix?: string;
 }
@@ -635,11 +635,11 @@ export class AttributesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#create AwsGlobalacceleratorAccelerator#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#create TfAccelerator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#update AwsGlobalacceleratorAccelerator#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_accelerator#update TfAccelerator#update}
   */
   readonly update?: string;
 }

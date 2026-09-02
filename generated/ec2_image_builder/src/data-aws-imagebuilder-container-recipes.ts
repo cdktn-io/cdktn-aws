@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsImagebuilderContainerRecipesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfContainerRecipesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#id DataAwsImagebuilderContainerRecipes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#id DataTfContainerRecipes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#owner DataAwsImagebuilderContainerRecipes#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#owner DataTfContainerRecipes#owner}
   */
   readonly owner?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#region DataAwsImagebuilderContainerRecipes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#region DataTfContainerRecipes#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#filter DataAwsImagebuilderContainerRecipes#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#filter DataTfContainerRecipes#filter}
   */
-  readonly filter?: DataAwsImagebuilderContainerRecipes.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfContainerRecipes.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes aws_imagebuilder_container_recipes}
 */
-export class DataAwsImagebuilderContainerRecipes extends cdktn.TerraformDataSource {
+export class DataTfContainerRecipes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class DataAwsImagebuilderContainerRecipes extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsImagebuilderContainerRecipes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfContainerRecipes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsImagebuilderContainerRecipes to import
-  * @param importFromId The id of the existing DataAwsImagebuilderContainerRecipes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsImagebuilderContainerRecipes to import is found
+  * @param importToId The construct id used in the generated config for the DataTfContainerRecipes to import
+  * @param importFromId The id of the existing DataTfContainerRecipes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfContainerRecipes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_container_recipes", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class DataAwsImagebuilderContainerRecipes extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsImagebuilderContainerRecipesConfig = {}
+  * @param options DataTfContainerRecipesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsImagebuilderContainerRecipesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfContainerRecipesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_container_recipes',
       terraformGeneratorMetadata: {
@@ -151,11 +151,11 @@ export class DataAwsImagebuilderContainerRecipes extends cdktn.TerraformDataSour
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsImagebuilderContainerRecipes.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfContainerRecipes.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsImagebuilderContainerRecipes.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfContainerRecipes.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -175,7 +175,7 @@ export class DataAwsImagebuilderContainerRecipes extends cdktn.TerraformDataSour
       id: cdktn.stringToTerraform(this._id),
       owner: cdktn.stringToTerraform(this._owner),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataAwsImagebuilderContainerRecipesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfContainerRecipesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -200,10 +200,10 @@ export class DataAwsImagebuilderContainerRecipes extends cdktn.TerraformDataSour
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsImagebuilderContainerRecipesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfContainerRecipesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsImagebuilderContainerRecipes.FilterPropertyList",
+        storageClassType: "DataTfContainerRecipes.FilterPropertyList",
       },
     };
 
@@ -212,7 +212,7 @@ export class DataAwsImagebuilderContainerRecipes extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsImagebuilderContainerRecipesFilterPropertyToTerraform(struct?: DataAwsImagebuilderContainerRecipes.FilterProperty | cdktn.IResolvable): any {
+export function dataTfContainerRecipesFilterPropertyToTerraform(struct?: DataTfContainerRecipes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function dataAwsImagebuilderContainerRecipesFilterPropertyToTerraform(str
 }
 
 
-export function dataAwsImagebuilderContainerRecipesFilterPropertyToHclTerraform(struct?: DataAwsImagebuilderContainerRecipes.FilterProperty | cdktn.IResolvable): any {
+export function dataTfContainerRecipesFilterPropertyToHclTerraform(struct?: DataTfContainerRecipes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,14 +249,14 @@ export function dataAwsImagebuilderContainerRecipesFilterPropertyToHclTerraform(
 }
 
 
-export namespace DataAwsImagebuilderContainerRecipes {
+export namespace DataTfContainerRecipes {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#name DataAwsImagebuilderContainerRecipes#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#name DataTfContainerRecipes#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#values DataAwsImagebuilderContainerRecipes#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipes#values DataTfContainerRecipes#values}
   */
   readonly values: string[];
 }

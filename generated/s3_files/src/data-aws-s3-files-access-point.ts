@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsS3FilesAccessPointConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfAccessPointConfig extends cdktn.TerraformMetaArguments {
   /**
   * Access point ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#id DataAwsS3FilesAccessPoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#id DataTfAccessPoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,27 +18,27 @@ export interface DataAwsS3FilesAccessPointConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#region DataAwsS3FilesAccessPoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#region DataTfAccessPoint#region}
   */
   readonly region?: string;
   /**
   * posix_user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#posix_user DataAwsS3FilesAccessPoint#posix_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#posix_user DataTfAccessPoint#posix_user}
   */
-  readonly posixUser?: DataAwsS3FilesAccessPoint.PosixUserProperty[] | cdktn.IResolvable;
+  readonly posixUser?: DataTfAccessPoint.PosixUserProperty[] | cdktn.IResolvable;
   /**
   * root_directory block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#root_directory DataAwsS3FilesAccessPoint#root_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#root_directory DataTfAccessPoint#root_directory}
   */
-  readonly rootDirectory?: DataAwsS3FilesAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable;
+  readonly rootDirectory?: DataTfAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point aws_s3files_access_point}
 */
-export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
+export class DataTfAccessPoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsS3FilesAccessPoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfAccessPoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsS3FilesAccessPoint to import
-  * @param importFromId The id of the existing DataAwsS3FilesAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsS3FilesAccessPoint to import is found
+  * @param importToId The construct id used in the generated config for the DataTfAccessPoint to import
+  * @param importFromId The id of the existing DataTfAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfAccessPoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3files_access_point", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsS3FilesAccessPointConfig
+  * @param options DataTfAccessPointConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsS3FilesAccessPointConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfAccessPointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3files_access_point',
       terraformGeneratorMetadata: {
@@ -157,11 +157,11 @@ export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
   }
 
   // posix_user - computed: false, optional: true, required: false
-  private _posixUser = new DataAwsS3FilesAccessPoint.PosixUserPropertyList(this, "posix_user", false);
+  private _posixUser = new DataTfAccessPoint.PosixUserPropertyList(this, "posix_user", false);
   public get posixUser() {
     return this._posixUser;
   }
-  public putPosixUser(value: DataAwsS3FilesAccessPoint.PosixUserProperty[] | cdktn.IResolvable) {
+  public putPosixUser(value: DataTfAccessPoint.PosixUserProperty[] | cdktn.IResolvable) {
     this._posixUser.internalValue = value;
   }
   public resetPosixUser() {
@@ -173,11 +173,11 @@ export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
   }
 
   // root_directory - computed: false, optional: true, required: false
-  private _rootDirectory = new DataAwsS3FilesAccessPoint.RootDirectoryPropertyList(this, "root_directory", false);
+  private _rootDirectory = new DataTfAccessPoint.RootDirectoryPropertyList(this, "root_directory", false);
   public get rootDirectory() {
     return this._rootDirectory;
   }
-  public putRootDirectory(value: DataAwsS3FilesAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable) {
+  public putRootDirectory(value: DataTfAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable) {
     this._rootDirectory.internalValue = value;
   }
   public resetRootDirectory() {
@@ -196,8 +196,8 @@ export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      posix_user: cdktn.listMapper(dataAwsS3FilesAccessPointPosixUserPropertyToTerraform, true)(this._posixUser.internalValue),
-      root_directory: cdktn.listMapper(dataAwsS3FilesAccessPointRootDirectoryPropertyToTerraform, true)(this._rootDirectory.internalValue),
+      posix_user: cdktn.listMapper(dataTfAccessPointPosixUserPropertyToTerraform, true)(this._posixUser.internalValue),
+      root_directory: cdktn.listMapper(dataTfAccessPointRootDirectoryPropertyToTerraform, true)(this._rootDirectory.internalValue),
     };
   }
 
@@ -216,16 +216,16 @@ export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       posix_user: {
-        value: cdktn.listMapperHcl(dataAwsS3FilesAccessPointPosixUserPropertyToHclTerraform, true)(this._posixUser.internalValue),
+        value: cdktn.listMapperHcl(dataTfAccessPointPosixUserPropertyToHclTerraform, true)(this._posixUser.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsS3FilesAccessPoint.PosixUserPropertyList",
+        storageClassType: "DataTfAccessPoint.PosixUserPropertyList",
       },
       root_directory: {
-        value: cdktn.listMapperHcl(dataAwsS3FilesAccessPointRootDirectoryPropertyToHclTerraform, true)(this._rootDirectory.internalValue),
+        value: cdktn.listMapperHcl(dataTfAccessPointRootDirectoryPropertyToHclTerraform, true)(this._rootDirectory.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsS3FilesAccessPoint.RootDirectoryPropertyList",
+        storageClassType: "DataTfAccessPoint.RootDirectoryPropertyList",
       },
     };
 
@@ -234,7 +234,7 @@ export class DataAwsS3FilesAccessPoint extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsS3FilesAccessPointPosixUserPropertyToTerraform(struct?: DataAwsS3FilesAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
+export function dataTfAccessPointPosixUserPropertyToTerraform(struct?: DataTfAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataAwsS3FilesAccessPointPosixUserPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsS3FilesAccessPointPosixUserPropertyToHclTerraform(struct?: DataAwsS3FilesAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
+export function dataTfAccessPointPosixUserPropertyToHclTerraform(struct?: DataTfAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function dataAwsS3FilesAccessPointPosixUserPropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsS3FilesAccessPointCreationPermissionsPropertyToTerraform(struct?: DataAwsS3FilesAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
+export function dataTfAccessPointCreationPermissionsPropertyToTerraform(struct?: DataTfAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function dataAwsS3FilesAccessPointCreationPermissionsPropertyToTerraform(
 }
 
 
-export function dataAwsS3FilesAccessPointCreationPermissionsPropertyToHclTerraform(struct?: DataAwsS3FilesAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
+export function dataTfAccessPointCreationPermissionsPropertyToHclTerraform(struct?: DataTfAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,25 +276,25 @@ export function dataAwsS3FilesAccessPointCreationPermissionsPropertyToHclTerrafo
 }
 
 
-export function dataAwsS3FilesAccessPointRootDirectoryPropertyToTerraform(struct?: DataAwsS3FilesAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
+export function dataTfAccessPointRootDirectoryPropertyToTerraform(struct?: DataTfAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    creation_permissions: cdktn.listMapper(dataAwsS3FilesAccessPointCreationPermissionsPropertyToTerraform, true)(struct!.creationPermissions),
+    creation_permissions: cdktn.listMapper(dataTfAccessPointCreationPermissionsPropertyToTerraform, true)(struct!.creationPermissions),
   }
 }
 
 
-export function dataAwsS3FilesAccessPointRootDirectoryPropertyToHclTerraform(struct?: DataAwsS3FilesAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
+export function dataTfAccessPointRootDirectoryPropertyToHclTerraform(struct?: DataTfAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     creation_permissions: {
-      value: cdktn.listMapperHcl(dataAwsS3FilesAccessPointCreationPermissionsPropertyToHclTerraform, true)(struct!.creationPermissions),
+      value: cdktn.listMapperHcl(dataTfAccessPointCreationPermissionsPropertyToHclTerraform, true)(struct!.creationPermissions),
       isBlock: true,
       type: "list",
       storageClassType: "CreationPermissionsPropertyList",
@@ -306,7 +306,7 @@ export function dataAwsS3FilesAccessPointRootDirectoryPropertyToHclTerraform(str
 }
 
 
-export namespace DataAwsS3FilesAccessPoint {
+export namespace DataTfAccessPoint {
 export interface PosixUserProperty {
 }
 export class PosixUserPropertyOutputReference extends cdktn.ComplexObject {
@@ -461,7 +461,7 @@ export interface RootDirectoryProperty {
   /**
   * creation_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#creation_permissions DataAwsS3FilesAccessPoint#creation_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_access_point#creation_permissions DataTfAccessPoint#creation_permissions}
   */
   readonly creationPermissions?: CreationPermissionsProperty[] | cdktn.IResolvable;
 }

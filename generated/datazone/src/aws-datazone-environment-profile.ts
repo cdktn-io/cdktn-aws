@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatazoneEnvironmentProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfEnvironmentProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#aws_account_id AwsDatazoneEnvironmentProfile#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#aws_account_id TfEnvironmentProfile#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#aws_account_region AwsDatazoneEnvironmentProfile#aws_account_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#aws_account_region TfEnvironmentProfile#aws_account_region}
   */
   readonly awsAccountRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#description AwsDatazoneEnvironmentProfile#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#description TfEnvironmentProfile#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#domain_identifier AwsDatazoneEnvironmentProfile#domain_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#domain_identifier TfEnvironmentProfile#domain_identifier}
   */
   readonly domainIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#environment_blueprint_identifier AwsDatazoneEnvironmentProfile#environment_blueprint_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#environment_blueprint_identifier TfEnvironmentProfile#environment_blueprint_identifier}
   */
   readonly environmentBlueprintIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#name AwsDatazoneEnvironmentProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#name TfEnvironmentProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#project_identifier AwsDatazoneEnvironmentProfile#project_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#project_identifier TfEnvironmentProfile#project_identifier}
   */
   readonly projectIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#region AwsDatazoneEnvironmentProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#region TfEnvironmentProfile#region}
   */
   readonly region?: string;
   /**
   * user_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#user_parameters AwsDatazoneEnvironmentProfile#user_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#user_parameters TfEnvironmentProfile#user_parameters}
   */
-  readonly userParameters?: AwsDatazoneEnvironmentProfile.UserParametersProperty[] | cdktn.IResolvable;
+  readonly userParameters?: TfEnvironmentProfile.UserParametersProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile aws_datazone_environment_profile}
 */
-export class AwsDatazoneEnvironmentProfile extends cdktn.TerraformResource {
+export class TfEnvironmentProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsDatazoneEnvironmentProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatazoneEnvironmentProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEnvironmentProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatazoneEnvironmentProfile to import
-  * @param importFromId The id of the existing AwsDatazoneEnvironmentProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatazoneEnvironmentProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfEnvironmentProfile to import
+  * @param importFromId The id of the existing TfEnvironmentProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEnvironmentProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_environment_profile", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsDatazoneEnvironmentProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatazoneEnvironmentProfileConfig
+  * @param options TfEnvironmentProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatazoneEnvironmentProfileConfig) {
+  public constructor(scope: Construct, id: string, config: TfEnvironmentProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_environment_profile',
       terraformGeneratorMetadata: {
@@ -248,11 +248,11 @@ export class AwsDatazoneEnvironmentProfile extends cdktn.TerraformResource {
   }
 
   // user_parameters - computed: false, optional: true, required: false
-  private _userParameters = new AwsDatazoneEnvironmentProfile.UserParametersPropertyList(this, "user_parameters", false);
+  private _userParameters = new TfEnvironmentProfile.UserParametersPropertyList(this, "user_parameters", false);
   public get userParameters() {
     return this._userParameters;
   }
-  public putUserParameters(value: AwsDatazoneEnvironmentProfile.UserParametersProperty[] | cdktn.IResolvable) {
+  public putUserParameters(value: TfEnvironmentProfile.UserParametersProperty[] | cdktn.IResolvable) {
     this._userParameters.internalValue = value;
   }
   public resetUserParameters() {
@@ -277,7 +277,7 @@ export class AwsDatazoneEnvironmentProfile extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       project_identifier: cdktn.stringToTerraform(this._projectIdentifier),
       region: cdktn.stringToTerraform(this._region),
-      user_parameters: cdktn.listMapper(awsDatazoneEnvironmentProfileUserParametersPropertyToTerraform, true)(this._userParameters.internalValue),
+      user_parameters: cdktn.listMapper(tfEnvironmentProfileUserParametersPropertyToTerraform, true)(this._userParameters.internalValue),
     };
   }
 
@@ -332,10 +332,10 @@ export class AwsDatazoneEnvironmentProfile extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       user_parameters: {
-        value: cdktn.listMapperHcl(awsDatazoneEnvironmentProfileUserParametersPropertyToHclTerraform, true)(this._userParameters.internalValue),
+        value: cdktn.listMapperHcl(tfEnvironmentProfileUserParametersPropertyToHclTerraform, true)(this._userParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatazoneEnvironmentProfile.UserParametersPropertyList",
+        storageClassType: "TfEnvironmentProfile.UserParametersPropertyList",
       },
     };
 
@@ -344,7 +344,7 @@ export class AwsDatazoneEnvironmentProfile extends cdktn.TerraformResource {
   }
 }
 
-export function awsDatazoneEnvironmentProfileUserParametersPropertyToTerraform(struct?: AwsDatazoneEnvironmentProfile.UserParametersProperty | cdktn.IResolvable): any {
+export function tfEnvironmentProfileUserParametersPropertyToTerraform(struct?: TfEnvironmentProfile.UserParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function awsDatazoneEnvironmentProfileUserParametersPropertyToTerraform(s
 }
 
 
-export function awsDatazoneEnvironmentProfileUserParametersPropertyToHclTerraform(struct?: AwsDatazoneEnvironmentProfile.UserParametersProperty | cdktn.IResolvable): any {
+export function tfEnvironmentProfileUserParametersPropertyToHclTerraform(struct?: TfEnvironmentProfile.UserParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,14 +381,14 @@ export function awsDatazoneEnvironmentProfileUserParametersPropertyToHclTerrafor
 }
 
 
-export namespace AwsDatazoneEnvironmentProfile {
+export namespace TfEnvironmentProfile {
 export interface UserParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#name AwsDatazoneEnvironmentProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#name TfEnvironmentProfile#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#value AwsDatazoneEnvironmentProfile#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_profile#value TfEnvironmentProfile#value}
   */
   readonly value?: string;
 }

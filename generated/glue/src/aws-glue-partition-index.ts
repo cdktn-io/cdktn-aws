@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGluePartitionIndexConfig extends cdktn.TerraformMetaArguments {
+export interface TfPartitionIndexConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#catalog_id AwsGluePartitionIndex#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#catalog_id TfPartitionIndex#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#database_name AwsGluePartitionIndex#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#database_name TfPartitionIndex#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#id AwsGluePartitionIndex#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#id TfPartitionIndex#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,31 +24,31 @@ export interface AwsGluePartitionIndexConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#region AwsGluePartitionIndex#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#region TfPartitionIndex#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#table_name AwsGluePartitionIndex#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#table_name TfPartitionIndex#table_name}
   */
   readonly tableName: string;
   /**
   * partition_index block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#partition_index AwsGluePartitionIndex#partition_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#partition_index TfPartitionIndex#partition_index}
   */
-  readonly partitionIndex: AwsGluePartitionIndex.PartitionIndexProperty;
+  readonly partitionIndex: TfPartitionIndex.PartitionIndexProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#timeouts AwsGluePartitionIndex#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#timeouts TfPartitionIndex#timeouts}
   */
-  readonly timeouts?: AwsGluePartitionIndex.TimeoutsProperty;
+  readonly timeouts?: TfPartitionIndex.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index aws_glue_partition_index}
 */
-export class AwsGluePartitionIndex extends cdktn.TerraformResource {
+export class TfPartitionIndex extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsGluePartitionIndex extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGluePartitionIndex resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPartitionIndex resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGluePartitionIndex to import
-  * @param importFromId The id of the existing AwsGluePartitionIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGluePartitionIndex to import is found
+  * @param importToId The construct id used in the generated config for the TfPartitionIndex to import
+  * @param importFromId The id of the existing TfPartitionIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPartitionIndex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_partition_index", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsGluePartitionIndex extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGluePartitionIndexConfig
+  * @param options TfPartitionIndexConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGluePartitionIndexConfig) {
+  public constructor(scope: Construct, id: string, config: TfPartitionIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_partition_index',
       terraformGeneratorMetadata: {
@@ -184,11 +184,11 @@ export class AwsGluePartitionIndex extends cdktn.TerraformResource {
   }
 
   // partition_index - computed: false, optional: false, required: true
-  private _partitionIndex = new AwsGluePartitionIndex.PartitionIndexPropertyOutputReference(this, "partition_index");
+  private _partitionIndex = new TfPartitionIndex.PartitionIndexPropertyOutputReference(this, "partition_index");
   public get partitionIndex() {
     return this._partitionIndex;
   }
-  public putPartitionIndex(value: AwsGluePartitionIndex.PartitionIndexProperty) {
+  public putPartitionIndex(value: TfPartitionIndex.PartitionIndexProperty) {
     this._partitionIndex.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -197,11 +197,11 @@ export class AwsGluePartitionIndex extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGluePartitionIndex.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPartitionIndex.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGluePartitionIndex.TimeoutsProperty) {
+  public putTimeouts(value: TfPartitionIndex.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -223,8 +223,8 @@ export class AwsGluePartitionIndex extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       table_name: cdktn.stringToTerraform(this._tableName),
-      partition_index: awsGluePartitionIndexPartitionIndexPropertyToTerraform(this._partitionIndex.internalValue),
-      timeouts: awsGluePartitionIndexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      partition_index: tfPartitionIndexPartitionIndexPropertyToTerraform(this._partitionIndex.internalValue),
+      timeouts: tfPartitionIndexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -261,16 +261,16 @@ export class AwsGluePartitionIndex extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       partition_index: {
-        value: awsGluePartitionIndexPartitionIndexPropertyToHclTerraform(this._partitionIndex.internalValue),
+        value: tfPartitionIndexPartitionIndexPropertyToHclTerraform(this._partitionIndex.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGluePartitionIndex.PartitionIndexPropertyList",
+        storageClassType: "TfPartitionIndex.PartitionIndexPropertyList",
       },
       timeouts: {
-        value: awsGluePartitionIndexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPartitionIndexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGluePartitionIndex.TimeoutsProperty",
+        storageClassType: "TfPartitionIndex.TimeoutsProperty",
       },
     };
 
@@ -279,7 +279,7 @@ export class AwsGluePartitionIndex extends cdktn.TerraformResource {
   }
 }
 
-export function awsGluePartitionIndexPartitionIndexPropertyToTerraform(struct?: AwsGluePartitionIndex.PartitionIndexPropertyOutputReference | AwsGluePartitionIndex.PartitionIndexProperty): any {
+export function tfPartitionIndexPartitionIndexPropertyToTerraform(struct?: TfPartitionIndex.PartitionIndexPropertyOutputReference | TfPartitionIndex.PartitionIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function awsGluePartitionIndexPartitionIndexPropertyToTerraform(struct?: 
 }
 
 
-export function awsGluePartitionIndexPartitionIndexPropertyToHclTerraform(struct?: AwsGluePartitionIndex.PartitionIndexPropertyOutputReference | AwsGluePartitionIndex.PartitionIndexProperty): any {
+export function tfPartitionIndexPartitionIndexPropertyToHclTerraform(struct?: TfPartitionIndex.PartitionIndexPropertyOutputReference | TfPartitionIndex.PartitionIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function awsGluePartitionIndexPartitionIndexPropertyToHclTerraform(struct
 }
 
 
-export function awsGluePartitionIndexTimeoutsPropertyToTerraform(struct?: AwsGluePartitionIndex.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPartitionIndexTimeoutsPropertyToTerraform(struct?: TfPartitionIndex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function awsGluePartitionIndexTimeoutsPropertyToTerraform(struct?: AwsGlu
 }
 
 
-export function awsGluePartitionIndexTimeoutsPropertyToHclTerraform(struct?: AwsGluePartitionIndex.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPartitionIndexTimeoutsPropertyToHclTerraform(struct?: TfPartitionIndex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,14 +353,14 @@ export function awsGluePartitionIndexTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsGluePartitionIndex {
+export namespace TfPartitionIndex {
 export interface PartitionIndexProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#index_name AwsGluePartitionIndex#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#index_name TfPartitionIndex#index_name}
   */
   readonly indexName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#keys AwsGluePartitionIndex#keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#keys TfPartitionIndex#keys}
   */
   readonly keys?: string[];
 }
@@ -441,11 +441,11 @@ export class PartitionIndexPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#create AwsGluePartitionIndex#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#create TfPartitionIndex#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#delete AwsGluePartitionIndex#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition_index#delete TfPartitionIndex#delete}
   */
   readonly delete?: string;
 }

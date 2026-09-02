@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLambdaFunctionEventInvokeConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfFunctionEventInvokeConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#function_name AwsLambdaFunctionEventInvokeConfig#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#function_name TfFunctionEventInvokeConfig#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#id AwsLambdaFunctionEventInvokeConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#id TfFunctionEventInvokeConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#maximum_event_age_in_seconds AwsLambdaFunctionEventInvokeConfig#maximum_event_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#maximum_event_age_in_seconds TfFunctionEventInvokeConfig#maximum_event_age_in_seconds}
   */
   readonly maximumEventAgeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#maximum_retry_attempts AwsLambdaFunctionEventInvokeConfig#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#maximum_retry_attempts TfFunctionEventInvokeConfig#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#qualifier AwsLambdaFunctionEventInvokeConfig#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#qualifier TfFunctionEventInvokeConfig#qualifier}
   */
   readonly qualifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#region AwsLambdaFunctionEventInvokeConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#region TfFunctionEventInvokeConfig#region}
   */
   readonly region?: string;
   /**
   * destination_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#destination_config AwsLambdaFunctionEventInvokeConfig#destination_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#destination_config TfFunctionEventInvokeConfig#destination_config}
   */
-  readonly destinationConfig?: AwsLambdaFunctionEventInvokeConfig.DestinationConfigProperty;
+  readonly destinationConfig?: TfFunctionEventInvokeConfig.DestinationConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config aws_lambda_function_event_invoke_config}
 */
-export class AwsLambdaFunctionEventInvokeConfig extends cdktn.TerraformResource {
+export class TfFunctionEventInvokeConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsLambdaFunctionEventInvokeConfig extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLambdaFunctionEventInvokeConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFunctionEventInvokeConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLambdaFunctionEventInvokeConfig to import
-  * @param importFromId The id of the existing AwsLambdaFunctionEventInvokeConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLambdaFunctionEventInvokeConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfFunctionEventInvokeConfig to import
+  * @param importFromId The id of the existing TfFunctionEventInvokeConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFunctionEventInvokeConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_function_event_invoke_config", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsLambdaFunctionEventInvokeConfig extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLambdaFunctionEventInvokeConfigConfig
+  * @param options TfFunctionEventInvokeConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLambdaFunctionEventInvokeConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfFunctionEventInvokeConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_function_event_invoke_config',
       terraformGeneratorMetadata: {
@@ -201,11 +201,11 @@ export class AwsLambdaFunctionEventInvokeConfig extends cdktn.TerraformResource 
   }
 
   // destination_config - computed: false, optional: true, required: false
-  private _destinationConfig = new AwsLambdaFunctionEventInvokeConfig.DestinationConfigPropertyOutputReference(this, "destination_config");
+  private _destinationConfig = new TfFunctionEventInvokeConfig.DestinationConfigPropertyOutputReference(this, "destination_config");
   public get destinationConfig() {
     return this._destinationConfig;
   }
-  public putDestinationConfig(value: AwsLambdaFunctionEventInvokeConfig.DestinationConfigProperty) {
+  public putDestinationConfig(value: TfFunctionEventInvokeConfig.DestinationConfigProperty) {
     this._destinationConfig.internalValue = value;
   }
   public resetDestinationConfig() {
@@ -228,7 +228,7 @@ export class AwsLambdaFunctionEventInvokeConfig extends cdktn.TerraformResource 
       maximum_retry_attempts: cdktn.numberToTerraform(this._maximumRetryAttempts),
       qualifier: cdktn.stringToTerraform(this._qualifier),
       region: cdktn.stringToTerraform(this._region),
-      destination_config: awsLambdaFunctionEventInvokeConfigDestinationConfigPropertyToTerraform(this._destinationConfig.internalValue),
+      destination_config: tfFunctionEventInvokeConfigDestinationConfigPropertyToTerraform(this._destinationConfig.internalValue),
     };
   }
 
@@ -271,10 +271,10 @@ export class AwsLambdaFunctionEventInvokeConfig extends cdktn.TerraformResource 
         storageClassType: "string",
       },
       destination_config: {
-        value: awsLambdaFunctionEventInvokeConfigDestinationConfigPropertyToHclTerraform(this._destinationConfig.internalValue),
+        value: tfFunctionEventInvokeConfigDestinationConfigPropertyToHclTerraform(this._destinationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunctionEventInvokeConfig.DestinationConfigPropertyList",
+        storageClassType: "TfFunctionEventInvokeConfig.DestinationConfigPropertyList",
       },
     };
 
@@ -283,7 +283,7 @@ export class AwsLambdaFunctionEventInvokeConfig extends cdktn.TerraformResource 
   }
 }
 
-export function awsLambdaFunctionEventInvokeConfigOnFailurePropertyToTerraform(struct?: AwsLambdaFunctionEventInvokeConfig.OnFailurePropertyOutputReference | AwsLambdaFunctionEventInvokeConfig.OnFailureProperty): any {
+export function tfFunctionEventInvokeConfigOnFailurePropertyToTerraform(struct?: TfFunctionEventInvokeConfig.OnFailurePropertyOutputReference | TfFunctionEventInvokeConfig.OnFailureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function awsLambdaFunctionEventInvokeConfigOnFailurePropertyToTerraform(s
 }
 
 
-export function awsLambdaFunctionEventInvokeConfigOnFailurePropertyToHclTerraform(struct?: AwsLambdaFunctionEventInvokeConfig.OnFailurePropertyOutputReference | AwsLambdaFunctionEventInvokeConfig.OnFailureProperty): any {
+export function tfFunctionEventInvokeConfigOnFailurePropertyToHclTerraform(struct?: TfFunctionEventInvokeConfig.OnFailurePropertyOutputReference | TfFunctionEventInvokeConfig.OnFailureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function awsLambdaFunctionEventInvokeConfigOnFailurePropertyToHclTerrafor
 }
 
 
-export function awsLambdaFunctionEventInvokeConfigOnSuccessPropertyToTerraform(struct?: AwsLambdaFunctionEventInvokeConfig.OnSuccessPropertyOutputReference | AwsLambdaFunctionEventInvokeConfig.OnSuccessProperty): any {
+export function tfFunctionEventInvokeConfigOnSuccessPropertyToTerraform(struct?: TfFunctionEventInvokeConfig.OnSuccessPropertyOutputReference | TfFunctionEventInvokeConfig.OnSuccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function awsLambdaFunctionEventInvokeConfigOnSuccessPropertyToTerraform(s
 }
 
 
-export function awsLambdaFunctionEventInvokeConfigOnSuccessPropertyToHclTerraform(struct?: AwsLambdaFunctionEventInvokeConfig.OnSuccessPropertyOutputReference | AwsLambdaFunctionEventInvokeConfig.OnSuccessProperty): any {
+export function tfFunctionEventInvokeConfigOnSuccessPropertyToHclTerraform(struct?: TfFunctionEventInvokeConfig.OnSuccessPropertyOutputReference | TfFunctionEventInvokeConfig.OnSuccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,32 +343,32 @@ export function awsLambdaFunctionEventInvokeConfigOnSuccessPropertyToHclTerrafor
 }
 
 
-export function awsLambdaFunctionEventInvokeConfigDestinationConfigPropertyToTerraform(struct?: AwsLambdaFunctionEventInvokeConfig.DestinationConfigPropertyOutputReference | AwsLambdaFunctionEventInvokeConfig.DestinationConfigProperty): any {
+export function tfFunctionEventInvokeConfigDestinationConfigPropertyToTerraform(struct?: TfFunctionEventInvokeConfig.DestinationConfigPropertyOutputReference | TfFunctionEventInvokeConfig.DestinationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    on_failure: awsLambdaFunctionEventInvokeConfigOnFailurePropertyToTerraform(struct!.onFailure),
-    on_success: awsLambdaFunctionEventInvokeConfigOnSuccessPropertyToTerraform(struct!.onSuccess),
+    on_failure: tfFunctionEventInvokeConfigOnFailurePropertyToTerraform(struct!.onFailure),
+    on_success: tfFunctionEventInvokeConfigOnSuccessPropertyToTerraform(struct!.onSuccess),
   }
 }
 
 
-export function awsLambdaFunctionEventInvokeConfigDestinationConfigPropertyToHclTerraform(struct?: AwsLambdaFunctionEventInvokeConfig.DestinationConfigPropertyOutputReference | AwsLambdaFunctionEventInvokeConfig.DestinationConfigProperty): any {
+export function tfFunctionEventInvokeConfigDestinationConfigPropertyToHclTerraform(struct?: TfFunctionEventInvokeConfig.DestinationConfigPropertyOutputReference | TfFunctionEventInvokeConfig.DestinationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     on_failure: {
-      value: awsLambdaFunctionEventInvokeConfigOnFailurePropertyToHclTerraform(struct!.onFailure),
+      value: tfFunctionEventInvokeConfigOnFailurePropertyToHclTerraform(struct!.onFailure),
       isBlock: true,
       type: "list",
       storageClassType: "OnFailurePropertyList",
     },
     on_success: {
-      value: awsLambdaFunctionEventInvokeConfigOnSuccessPropertyToHclTerraform(struct!.onSuccess),
+      value: tfFunctionEventInvokeConfigOnSuccessPropertyToHclTerraform(struct!.onSuccess),
       isBlock: true,
       type: "list",
       storageClassType: "OnSuccessPropertyList",
@@ -380,10 +380,10 @@ export function awsLambdaFunctionEventInvokeConfigDestinationConfigPropertyToHcl
 }
 
 
-export namespace AwsLambdaFunctionEventInvokeConfig {
+export namespace TfFunctionEventInvokeConfig {
 export interface OnFailureProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#destination AwsLambdaFunctionEventInvokeConfig#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#destination TfFunctionEventInvokeConfig#destination}
   */
   readonly destination: string;
 }
@@ -434,7 +434,7 @@ export class OnFailurePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OnSuccessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#destination AwsLambdaFunctionEventInvokeConfig#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#destination TfFunctionEventInvokeConfig#destination}
   */
   readonly destination: string;
 }
@@ -487,13 +487,13 @@ export interface DestinationConfigProperty {
   /**
   * on_failure block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#on_failure AwsLambdaFunctionEventInvokeConfig#on_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#on_failure TfFunctionEventInvokeConfig#on_failure}
   */
   readonly onFailure?: OnFailureProperty;
   /**
   * on_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#on_success AwsLambdaFunctionEventInvokeConfig#on_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_event_invoke_config#on_success TfFunctionEventInvokeConfig#on_success}
   */
   readonly onSuccess?: OnSuccessProperty;
 }

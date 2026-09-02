@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppflowFlowConfig extends cdktn.TerraformMetaArguments {
+export interface TfFlowConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#description AwsAppflowFlow#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#description TfFlow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id AwsAppflowFlow#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id TfFlow#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#kms_arn AwsAppflowFlow#kms_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#kms_arn TfFlow#kms_arn}
   */
   readonly kmsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#name AwsAppflowFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#name TfFlow#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#region AwsAppflowFlow#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#region TfFlow#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#tags AwsAppflowFlow#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#tags TfFlow#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#tags_all AwsAppflowFlow#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#tags_all TfFlow#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * destination_flow_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#destination_flow_config AwsAppflowFlow#destination_flow_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#destination_flow_config TfFlow#destination_flow_config}
   */
-  readonly destinationFlowConfig: AwsAppflowFlow.DestinationFlowConfigProperty[] | cdktn.IResolvable;
+  readonly destinationFlowConfig: TfFlow.DestinationFlowConfigProperty[] | cdktn.IResolvable;
   /**
   * metadata_catalog_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#metadata_catalog_config AwsAppflowFlow#metadata_catalog_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#metadata_catalog_config TfFlow#metadata_catalog_config}
   */
-  readonly metadataCatalogConfig?: AwsAppflowFlow.MetadataCatalogConfigProperty;
+  readonly metadataCatalogConfig?: TfFlow.MetadataCatalogConfigProperty;
   /**
   * source_flow_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#source_flow_config AwsAppflowFlow#source_flow_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#source_flow_config TfFlow#source_flow_config}
   */
-  readonly sourceFlowConfig: AwsAppflowFlow.SourceFlowConfigProperty;
+  readonly sourceFlowConfig: TfFlow.SourceFlowConfigProperty;
   /**
   * task block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#task AwsAppflowFlow#task}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#task TfFlow#task}
   */
-  readonly task: AwsAppflowFlow.TaskProperty[] | cdktn.IResolvable;
+  readonly task: TfFlow.TaskProperty[] | cdktn.IResolvable;
   /**
   * trigger_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trigger_config AwsAppflowFlow#trigger_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trigger_config TfFlow#trigger_config}
   */
-  readonly triggerConfig: AwsAppflowFlow.TriggerConfigProperty;
+  readonly triggerConfig: TfFlow.TriggerConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow aws_appflow_flow}
 */
-export class AwsAppflowFlow extends cdktn.TerraformResource {
+export class TfFlow extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppflowFlow resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFlow resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppflowFlow to import
-  * @param importFromId The id of the existing AwsAppflowFlow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppflowFlow to import is found
+  * @param importToId The construct id used in the generated config for the TfFlow to import
+  * @param importFromId The id of the existing TfFlow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFlow to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appflow_flow", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppflowFlowConfig
+  * @param options TfFlowConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppflowFlowConfig) {
+  public constructor(scope: Construct, id: string, config: TfFlowConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appflow_flow',
       terraformGeneratorMetadata: {
@@ -260,11 +260,11 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   }
 
   // destination_flow_config - computed: false, optional: false, required: true
-  private _destinationFlowConfig = new AwsAppflowFlow.DestinationFlowConfigPropertyList(this, "destination_flow_config", false);
+  private _destinationFlowConfig = new TfFlow.DestinationFlowConfigPropertyList(this, "destination_flow_config", false);
   public get destinationFlowConfig() {
     return this._destinationFlowConfig;
   }
-  public putDestinationFlowConfig(value: AwsAppflowFlow.DestinationFlowConfigProperty[] | cdktn.IResolvable) {
+  public putDestinationFlowConfig(value: TfFlow.DestinationFlowConfigProperty[] | cdktn.IResolvable) {
     this._destinationFlowConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -273,11 +273,11 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   }
 
   // metadata_catalog_config - computed: false, optional: true, required: false
-  private _metadataCatalogConfig = new AwsAppflowFlow.MetadataCatalogConfigPropertyOutputReference(this, "metadata_catalog_config");
+  private _metadataCatalogConfig = new TfFlow.MetadataCatalogConfigPropertyOutputReference(this, "metadata_catalog_config");
   public get metadataCatalogConfig() {
     return this._metadataCatalogConfig;
   }
-  public putMetadataCatalogConfig(value: AwsAppflowFlow.MetadataCatalogConfigProperty) {
+  public putMetadataCatalogConfig(value: TfFlow.MetadataCatalogConfigProperty) {
     this._metadataCatalogConfig.internalValue = value;
   }
   public resetMetadataCatalogConfig() {
@@ -289,11 +289,11 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   }
 
   // source_flow_config - computed: false, optional: false, required: true
-  private _sourceFlowConfig = new AwsAppflowFlow.SourceFlowConfigPropertyOutputReference(this, "source_flow_config");
+  private _sourceFlowConfig = new TfFlow.SourceFlowConfigPropertyOutputReference(this, "source_flow_config");
   public get sourceFlowConfig() {
     return this._sourceFlowConfig;
   }
-  public putSourceFlowConfig(value: AwsAppflowFlow.SourceFlowConfigProperty) {
+  public putSourceFlowConfig(value: TfFlow.SourceFlowConfigProperty) {
     this._sourceFlowConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -302,11 +302,11 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   }
 
   // task - computed: false, optional: false, required: true
-  private _task = new AwsAppflowFlow.TaskPropertyList(this, "task", true);
+  private _task = new TfFlow.TaskPropertyList(this, "task", true);
   public get task() {
     return this._task;
   }
-  public putTask(value: AwsAppflowFlow.TaskProperty[] | cdktn.IResolvable) {
+  public putTask(value: TfFlow.TaskProperty[] | cdktn.IResolvable) {
     this._task.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -315,11 +315,11 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   }
 
   // trigger_config - computed: false, optional: false, required: true
-  private _triggerConfig = new AwsAppflowFlow.TriggerConfigPropertyOutputReference(this, "trigger_config");
+  private _triggerConfig = new TfFlow.TriggerConfigPropertyOutputReference(this, "trigger_config");
   public get triggerConfig() {
     return this._triggerConfig;
   }
-  public putTriggerConfig(value: AwsAppflowFlow.TriggerConfigProperty) {
+  public putTriggerConfig(value: TfFlow.TriggerConfigProperty) {
     this._triggerConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -340,11 +340,11 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      destination_flow_config: cdktn.listMapper(awsAppflowFlowDestinationFlowConfigPropertyToTerraform, true)(this._destinationFlowConfig.internalValue),
-      metadata_catalog_config: awsAppflowFlowMetadataCatalogConfigPropertyToTerraform(this._metadataCatalogConfig.internalValue),
-      source_flow_config: awsAppflowFlowSourceFlowConfigPropertyToTerraform(this._sourceFlowConfig.internalValue),
-      task: cdktn.listMapper(awsAppflowFlowTaskPropertyToTerraform, true)(this._task.internalValue),
-      trigger_config: awsAppflowFlowTriggerConfigPropertyToTerraform(this._triggerConfig.internalValue),
+      destination_flow_config: cdktn.listMapper(tfFlowDestinationFlowConfigPropertyToTerraform, true)(this._destinationFlowConfig.internalValue),
+      metadata_catalog_config: tfFlowMetadataCatalogConfigPropertyToTerraform(this._metadataCatalogConfig.internalValue),
+      source_flow_config: tfFlowSourceFlowConfigPropertyToTerraform(this._sourceFlowConfig.internalValue),
+      task: cdktn.listMapper(tfFlowTaskPropertyToTerraform, true)(this._task.internalValue),
+      trigger_config: tfFlowTriggerConfigPropertyToTerraform(this._triggerConfig.internalValue),
     };
   }
 
@@ -393,34 +393,34 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       destination_flow_config: {
-        value: cdktn.listMapperHcl(awsAppflowFlowDestinationFlowConfigPropertyToHclTerraform, true)(this._destinationFlowConfig.internalValue),
+        value: cdktn.listMapperHcl(tfFlowDestinationFlowConfigPropertyToHclTerraform, true)(this._destinationFlowConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppflowFlow.DestinationFlowConfigPropertyList",
+        storageClassType: "TfFlow.DestinationFlowConfigPropertyList",
       },
       metadata_catalog_config: {
-        value: awsAppflowFlowMetadataCatalogConfigPropertyToHclTerraform(this._metadataCatalogConfig.internalValue),
+        value: tfFlowMetadataCatalogConfigPropertyToHclTerraform(this._metadataCatalogConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppflowFlow.MetadataCatalogConfigPropertyList",
+        storageClassType: "TfFlow.MetadataCatalogConfigPropertyList",
       },
       source_flow_config: {
-        value: awsAppflowFlowSourceFlowConfigPropertyToHclTerraform(this._sourceFlowConfig.internalValue),
+        value: tfFlowSourceFlowConfigPropertyToHclTerraform(this._sourceFlowConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppflowFlow.SourceFlowConfigPropertyList",
+        storageClassType: "TfFlow.SourceFlowConfigPropertyList",
       },
       task: {
-        value: cdktn.listMapperHcl(awsAppflowFlowTaskPropertyToHclTerraform, true)(this._task.internalValue),
+        value: cdktn.listMapperHcl(tfFlowTaskPropertyToHclTerraform, true)(this._task.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAppflowFlow.TaskPropertyList",
+        storageClassType: "TfFlow.TaskPropertyList",
       },
       trigger_config: {
-        value: awsAppflowFlowTriggerConfigPropertyToHclTerraform(this._triggerConfig.internalValue),
+        value: tfFlowTriggerConfigPropertyToHclTerraform(this._triggerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppflowFlow.TriggerConfigPropertyList",
+        storageClassType: "TfFlow.TriggerConfigPropertyList",
       },
     };
 
@@ -429,7 +429,7 @@ export class AwsAppflowFlow extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,12 +483,12 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
     entity_name: cdktn.stringToTerraform(struct!.entityName),
     id_field_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.idFieldNames),
     write_operation_type: cdktn.stringToTerraform(struct!.writeOperationType),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigPropertyList",
@@ -531,7 +531,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowCustomerProfilesPropertyToTerraform(struct?: AwsAppflowFlow.CustomerProfilesPropertyOutputReference | AwsAppflowFlow.CustomerProfilesProperty): any {
+export function tfFlowCustomerProfilesPropertyToTerraform(struct?: TfFlow.CustomerProfilesPropertyOutputReference | TfFlow.CustomerProfilesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function awsAppflowFlowCustomerProfilesPropertyToTerraform(struct?: AwsAp
 }
 
 
-export function awsAppflowFlowCustomerProfilesPropertyToHclTerraform(struct?: AwsAppflowFlow.CustomerProfilesPropertyOutputReference | AwsAppflowFlow.CustomerProfilesProperty): any {
+export function tfFlowCustomerProfilesPropertyToHclTerraform(struct?: TfFlow.CustomerProfilesPropertyOutputReference | TfFlow.CustomerProfilesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function awsAppflowFlowCustomerProfilesPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -581,7 +581,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,19 +612,19 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowEventBridgePropertyToTerraform(struct?: AwsAppflowFlow.EventBridgePropertyOutputReference | AwsAppflowFlow.EventBridgeProperty): any {
+export function tfFlowEventBridgePropertyToTerraform(struct?: TfFlow.EventBridgePropertyOutputReference | TfFlow.EventBridgeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     object: cdktn.stringToTerraform(struct!.object),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowEventBridgePropertyToHclTerraform(struct?: AwsAppflowFlow.EventBridgePropertyOutputReference | AwsAppflowFlow.EventBridgeProperty): any {
+export function tfFlowEventBridgePropertyToHclTerraform(struct?: TfFlow.EventBridgePropertyOutputReference | TfFlow.EventBridgeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function awsAppflowFlowEventBridgePropertyToHclTerraform(struct?: AwsAppf
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigPropertyList",
@@ -649,7 +649,7 @@ export function awsAppflowFlowEventBridgePropertyToHclTerraform(struct?: AwsAppf
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,7 +662,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,19 +693,19 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowHoneycodePropertyToTerraform(struct?: AwsAppflowFlow.HoneycodePropertyOutputReference | AwsAppflowFlow.HoneycodeProperty): any {
+export function tfFlowHoneycodePropertyToTerraform(struct?: TfFlow.HoneycodePropertyOutputReference | TfFlow.HoneycodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     object: cdktn.stringToTerraform(struct!.object),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowHoneycodePropertyToHclTerraform(struct?: AwsAppflowFlow.HoneycodePropertyOutputReference | AwsAppflowFlow.HoneycodeProperty): any {
+export function tfFlowHoneycodePropertyToHclTerraform(struct?: TfFlow.HoneycodePropertyOutputReference | TfFlow.HoneycodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -718,7 +718,7 @@ export function awsAppflowFlowHoneycodePropertyToHclTerraform(struct?: AwsAppflo
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigPropertyList",
@@ -730,7 +730,7 @@ export function awsAppflowFlowHoneycodePropertyToHclTerraform(struct?: AwsAppflo
 }
 
 
-export function awsAppflowFlowLookoutMetricsPropertyToTerraform(struct?: AwsAppflowFlow.LookoutMetricsPropertyOutputReference | AwsAppflowFlow.LookoutMetricsProperty): any {
+export function tfFlowLookoutMetricsPropertyToTerraform(struct?: TfFlow.LookoutMetricsPropertyOutputReference | TfFlow.LookoutMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -740,7 +740,7 @@ export function awsAppflowFlowLookoutMetricsPropertyToTerraform(struct?: AwsAppf
 }
 
 
-export function awsAppflowFlowLookoutMetricsPropertyToHclTerraform(struct?: AwsAppflowFlow.LookoutMetricsPropertyOutputReference | AwsAppflowFlow.LookoutMetricsProperty): any {
+export function tfFlowLookoutMetricsPropertyToHclTerraform(struct?: TfFlow.LookoutMetricsPropertyOutputReference | TfFlow.LookoutMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -751,7 +751,7 @@ export function awsAppflowFlowLookoutMetricsPropertyToHclTerraform(struct?: AwsA
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -764,7 +764,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,19 +795,19 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     object: cdktn.stringToTerraform(struct!.object),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,7 +820,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigPropertyList",
@@ -832,7 +832,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,7 +845,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -876,7 +876,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowRedshiftPropertyToTerraform(struct?: AwsAppflowFlow.RedshiftPropertyOutputReference | AwsAppflowFlow.RedshiftProperty): any {
+export function tfFlowRedshiftPropertyToTerraform(struct?: TfFlow.RedshiftPropertyOutputReference | TfFlow.RedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -885,12 +885,12 @@ export function awsAppflowFlowRedshiftPropertyToTerraform(struct?: AwsAppflowFlo
     bucket_prefix: cdktn.stringToTerraform(struct!.bucketPrefix),
     intermediate_bucket_name: cdktn.stringToTerraform(struct!.intermediateBucketName),
     object: cdktn.stringToTerraform(struct!.object),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowRedshiftPropertyToHclTerraform(struct?: AwsAppflowFlow.RedshiftPropertyOutputReference | AwsAppflowFlow.RedshiftProperty): any {
+export function tfFlowRedshiftPropertyToHclTerraform(struct?: TfFlow.RedshiftPropertyOutputReference | TfFlow.RedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -915,7 +915,7 @@ export function awsAppflowFlowRedshiftPropertyToHclTerraform(struct?: AwsAppflow
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigPropertyList",
@@ -927,7 +927,7 @@ export function awsAppflowFlowRedshiftPropertyToHclTerraform(struct?: AwsAppflow
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -939,7 +939,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -964,7 +964,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -977,7 +977,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1008,7 +1008,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1016,13 +1016,13 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
   return {
     file_type: cdktn.stringToTerraform(struct!.fileType),
     preserve_source_data_typing: cdktn.booleanToTerraform(struct!.preserveSourceDataTyping),
-    aggregation_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToTerraform(struct!.aggregationConfig),
-    prefix_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToTerraform(struct!.prefixConfig),
+    aggregation_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToTerraform(struct!.aggregationConfig),
+    prefix_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToTerraform(struct!.prefixConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1041,13 +1041,13 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "boolean",
     },
     aggregation_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct!.aggregationConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct!.aggregationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigPropertyList",
     },
     prefix_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct!.prefixConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct!.prefixConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigPropertyList",
@@ -1059,7 +1059,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3PropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3Property): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3PropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1067,12 +1067,12 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
   return {
     bucket_name: cdktn.stringToTerraform(struct!.bucketName),
     bucket_prefix: cdktn.stringToTerraform(struct!.bucketPrefix),
-    s3_output_format_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToTerraform(struct!.s3OutputFormatConfig),
+    s3_output_format_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToTerraform(struct!.s3OutputFormatConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3PropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesS3Property): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3PropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1091,7 +1091,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "string",
     },
     s3_output_format_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToHclTerraform(struct!.s3OutputFormatConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyToHclTerraform(struct!.s3OutputFormatConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPropertyList",
@@ -1103,7 +1103,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1116,7 +1116,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1147,7 +1147,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1157,12 +1157,12 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
     id_field_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.idFieldNames),
     object: cdktn.stringToTerraform(struct!.object),
     write_operation_type: cdktn.stringToTerraform(struct!.writeOperationType),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1193,7 +1193,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigPropertyList",
@@ -1205,7 +1205,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1218,7 +1218,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1249,7 +1249,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowSuccessResponseHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.SuccessResponseHandlingConfigPropertyOutputReference | AwsAppflowFlow.SuccessResponseHandlingConfigProperty): any {
+export function tfFlowSuccessResponseHandlingConfigPropertyToTerraform(struct?: TfFlow.SuccessResponseHandlingConfigPropertyOutputReference | TfFlow.SuccessResponseHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1261,7 +1261,7 @@ export function awsAppflowFlowSuccessResponseHandlingConfigPropertyToTerraform(s
 }
 
 
-export function awsAppflowFlowSuccessResponseHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.SuccessResponseHandlingConfigPropertyOutputReference | AwsAppflowFlow.SuccessResponseHandlingConfigProperty): any {
+export function tfFlowSuccessResponseHandlingConfigPropertyToHclTerraform(struct?: TfFlow.SuccessResponseHandlingConfigPropertyOutputReference | TfFlow.SuccessResponseHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1286,7 +1286,7 @@ export function awsAppflowFlowSuccessResponseHandlingConfigPropertyToHclTerrafor
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1295,13 +1295,13 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
     id_field_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.idFieldNames),
     object_path: cdktn.stringToTerraform(struct!.objectPath),
     write_operation_type: cdktn.stringToTerraform(struct!.writeOperationType),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
-    success_response_handling_config: awsAppflowFlowSuccessResponseHandlingConfigPropertyToTerraform(struct!.successResponseHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    success_response_handling_config: tfFlowSuccessResponseHandlingConfigPropertyToTerraform(struct!.successResponseHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1326,13 +1326,13 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigPropertyList",
     },
     success_response_handling_config: {
-      value: awsAppflowFlowSuccessResponseHandlingConfigPropertyToHclTerraform(struct!.successResponseHandlingConfig),
+      value: tfFlowSuccessResponseHandlingConfigPropertyToHclTerraform(struct!.successResponseHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SuccessResponseHandlingConfigPropertyList",
@@ -1344,7 +1344,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1357,7 +1357,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1388,7 +1388,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowSnowflakePropertyToTerraform(struct?: AwsAppflowFlow.SnowflakePropertyOutputReference | AwsAppflowFlow.SnowflakeProperty): any {
+export function tfFlowSnowflakePropertyToTerraform(struct?: TfFlow.SnowflakePropertyOutputReference | TfFlow.SnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1397,12 +1397,12 @@ export function awsAppflowFlowSnowflakePropertyToTerraform(struct?: AwsAppflowFl
     bucket_prefix: cdktn.stringToTerraform(struct!.bucketPrefix),
     intermediate_bucket_name: cdktn.stringToTerraform(struct!.intermediateBucketName),
     object: cdktn.stringToTerraform(struct!.object),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowSnowflakePropertyToHclTerraform(struct?: AwsAppflowFlow.SnowflakePropertyOutputReference | AwsAppflowFlow.SnowflakeProperty): any {
+export function tfFlowSnowflakePropertyToHclTerraform(struct?: TfFlow.SnowflakePropertyOutputReference | TfFlow.SnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1427,7 +1427,7 @@ export function awsAppflowFlowSnowflakePropertyToHclTerraform(struct?: AwsAppflo
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigPropertyList",
@@ -1439,7 +1439,7 @@ export function awsAppflowFlowSnowflakePropertyToHclTerraform(struct?: AwsAppflo
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1450,7 +1450,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1469,7 +1469,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1482,7 +1482,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1513,20 +1513,20 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     file_type: cdktn.stringToTerraform(struct!.fileType),
-    aggregation_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToTerraform(struct!.aggregationConfig),
-    prefix_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToTerraform(struct!.prefixConfig),
+    aggregation_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToTerraform(struct!.aggregationConfig),
+    prefix_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToTerraform(struct!.prefixConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1539,13 +1539,13 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "string",
     },
     aggregation_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct!.aggregationConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyToHclTerraform(struct!.aggregationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigPropertyList",
     },
     prefix_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct!.prefixConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyToHclTerraform(struct!.prefixConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigPropertyList",
@@ -1557,7 +1557,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowUpsolverPropertyToTerraform(struct?: AwsAppflowFlow.UpsolverPropertyOutputReference | AwsAppflowFlow.UpsolverProperty): any {
+export function tfFlowUpsolverPropertyToTerraform(struct?: TfFlow.UpsolverPropertyOutputReference | TfFlow.UpsolverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1565,12 +1565,12 @@ export function awsAppflowFlowUpsolverPropertyToTerraform(struct?: AwsAppflowFlo
   return {
     bucket_name: cdktn.stringToTerraform(struct!.bucketName),
     bucket_prefix: cdktn.stringToTerraform(struct!.bucketPrefix),
-    s3_output_format_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToTerraform(struct!.s3OutputFormatConfig),
+    s3_output_format_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToTerraform(struct!.s3OutputFormatConfig),
   }
 }
 
 
-export function awsAppflowFlowUpsolverPropertyToHclTerraform(struct?: AwsAppflowFlow.UpsolverPropertyOutputReference | AwsAppflowFlow.UpsolverProperty): any {
+export function tfFlowUpsolverPropertyToHclTerraform(struct?: TfFlow.UpsolverPropertyOutputReference | TfFlow.UpsolverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1589,7 +1589,7 @@ export function awsAppflowFlowUpsolverPropertyToHclTerraform(struct?: AwsAppflow
       storageClassType: "string",
     },
     s3_output_format_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToHclTerraform(struct!.s3OutputFormatConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyToHclTerraform(struct!.s3OutputFormatConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPropertyList",
@@ -1601,7 +1601,7 @@ export function awsAppflowFlowUpsolverPropertyToHclTerraform(struct?: AwsAppflow
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1614,7 +1614,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1645,7 +1645,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1654,12 +1654,12 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
     id_field_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.idFieldNames),
     object: cdktn.stringToTerraform(struct!.object),
     write_operation_type: cdktn.stringToTerraform(struct!.writeOperationType),
-    error_handling_config: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
+    error_handling_config: tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToTerraform(struct!.errorHandlingConfig),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyOutputReference | AwsAppflowFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskProperty): any {
+export function tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyOutputReference | TfFlow.DestinationFlowConfigDestinationConnectorPropertiesZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1684,7 +1684,7 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
       storageClassType: "string",
     },
     error_handling_config: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyToHclTerraform(struct!.errorHandlingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigPropertyList",
@@ -1696,109 +1696,109 @@ export function awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertie
 }
 
 
-export function awsAppflowFlowDestinationConnectorPropertiesPropertyToTerraform(struct?: AwsAppflowFlow.DestinationConnectorPropertiesPropertyOutputReference | AwsAppflowFlow.DestinationConnectorPropertiesProperty): any {
+export function tfFlowDestinationConnectorPropertiesPropertyToTerraform(struct?: TfFlow.DestinationConnectorPropertiesPropertyOutputReference | TfFlow.DestinationConnectorPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_connector: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToTerraform(struct!.customConnector),
-    customer_profiles: awsAppflowFlowCustomerProfilesPropertyToTerraform(struct!.customerProfiles),
-    event_bridge: awsAppflowFlowEventBridgePropertyToTerraform(struct!.eventBridge),
-    honeycode: awsAppflowFlowHoneycodePropertyToTerraform(struct!.honeycode),
-    lookout_metrics: awsAppflowFlowLookoutMetricsPropertyToTerraform(struct!.lookoutMetrics),
-    marketo: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToTerraform(struct!.marketo),
-    redshift: awsAppflowFlowRedshiftPropertyToTerraform(struct!.redshift),
-    s3: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToTerraform(struct!.s3),
-    salesforce: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToTerraform(struct!.salesforce),
-    sapo_data: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToTerraform(struct!.sapoData),
-    snowflake: awsAppflowFlowSnowflakePropertyToTerraform(struct!.snowflake),
-    upsolver: awsAppflowFlowUpsolverPropertyToTerraform(struct!.upsolver),
-    zendesk: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToTerraform(struct!.zendesk),
+    custom_connector: tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToTerraform(struct!.customConnector),
+    customer_profiles: tfFlowCustomerProfilesPropertyToTerraform(struct!.customerProfiles),
+    event_bridge: tfFlowEventBridgePropertyToTerraform(struct!.eventBridge),
+    honeycode: tfFlowHoneycodePropertyToTerraform(struct!.honeycode),
+    lookout_metrics: tfFlowLookoutMetricsPropertyToTerraform(struct!.lookoutMetrics),
+    marketo: tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToTerraform(struct!.marketo),
+    redshift: tfFlowRedshiftPropertyToTerraform(struct!.redshift),
+    s3: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToTerraform(struct!.s3),
+    salesforce: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToTerraform(struct!.salesforce),
+    sapo_data: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToTerraform(struct!.sapoData),
+    snowflake: tfFlowSnowflakePropertyToTerraform(struct!.snowflake),
+    upsolver: tfFlowUpsolverPropertyToTerraform(struct!.upsolver),
+    zendesk: tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToTerraform(struct!.zendesk),
   }
 }
 
 
-export function awsAppflowFlowDestinationConnectorPropertiesPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationConnectorPropertiesPropertyOutputReference | AwsAppflowFlow.DestinationConnectorPropertiesProperty): any {
+export function tfFlowDestinationConnectorPropertiesPropertyToHclTerraform(struct?: TfFlow.DestinationConnectorPropertiesPropertyOutputReference | TfFlow.DestinationConnectorPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_connector: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct!.customConnector),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct!.customConnector),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorPropertyList",
     },
     customer_profiles: {
-      value: awsAppflowFlowCustomerProfilesPropertyToHclTerraform(struct!.customerProfiles),
+      value: tfFlowCustomerProfilesPropertyToHclTerraform(struct!.customerProfiles),
       isBlock: true,
       type: "list",
       storageClassType: "CustomerProfilesPropertyList",
     },
     event_bridge: {
-      value: awsAppflowFlowEventBridgePropertyToHclTerraform(struct!.eventBridge),
+      value: tfFlowEventBridgePropertyToHclTerraform(struct!.eventBridge),
       isBlock: true,
       type: "list",
       storageClassType: "EventBridgePropertyList",
     },
     honeycode: {
-      value: awsAppflowFlowHoneycodePropertyToHclTerraform(struct!.honeycode),
+      value: tfFlowHoneycodePropertyToHclTerraform(struct!.honeycode),
       isBlock: true,
       type: "list",
       storageClassType: "HoneycodePropertyList",
     },
     lookout_metrics: {
-      value: awsAppflowFlowLookoutMetricsPropertyToHclTerraform(struct!.lookoutMetrics),
+      value: tfFlowLookoutMetricsPropertyToHclTerraform(struct!.lookoutMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "LookoutMetricsPropertyList",
     },
     marketo: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToHclTerraform(struct!.marketo),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyToHclTerraform(struct!.marketo),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyList",
     },
     redshift: {
-      value: awsAppflowFlowRedshiftPropertyToHclTerraform(struct!.redshift),
+      value: tfFlowRedshiftPropertyToHclTerraform(struct!.redshift),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftPropertyList",
     },
     s3: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToHclTerraform(struct!.s3),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesS3PropertyList",
     },
     salesforce: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToHclTerraform(struct!.salesforce),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyToHclTerraform(struct!.salesforce),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesSalesforcePropertyList",
     },
     sapo_data: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToHclTerraform(struct!.sapoData),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyToHclTerraform(struct!.sapoData),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesSapoDataPropertyList",
     },
     snowflake: {
-      value: awsAppflowFlowSnowflakePropertyToHclTerraform(struct!.snowflake),
+      value: tfFlowSnowflakePropertyToHclTerraform(struct!.snowflake),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakePropertyList",
     },
     upsolver: {
-      value: awsAppflowFlowUpsolverPropertyToHclTerraform(struct!.upsolver),
+      value: tfFlowUpsolverPropertyToHclTerraform(struct!.upsolver),
       isBlock: true,
       type: "list",
       storageClassType: "UpsolverPropertyList",
     },
     zendesk: {
-      value: awsAppflowFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToHclTerraform(struct!.zendesk),
+      value: tfFlowDestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyToHclTerraform(struct!.zendesk),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationFlowConfigDestinationConnectorPropertiesZendeskPropertyList",
@@ -1810,7 +1810,7 @@ export function awsAppflowFlowDestinationConnectorPropertiesPropertyToHclTerrafo
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigPropertyToTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigProperty | cdktn.IResolvable): any {
+export function tfFlowDestinationFlowConfigPropertyToTerraform(struct?: TfFlow.DestinationFlowConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1819,12 +1819,12 @@ export function awsAppflowFlowDestinationFlowConfigPropertyToTerraform(struct?: 
     api_version: cdktn.stringToTerraform(struct!.apiVersion),
     connector_profile_name: cdktn.stringToTerraform(struct!.connectorProfileName),
     connector_type: cdktn.stringToTerraform(struct!.connectorType),
-    destination_connector_properties: awsAppflowFlowDestinationConnectorPropertiesPropertyToTerraform(struct!.destinationConnectorProperties),
+    destination_connector_properties: tfFlowDestinationConnectorPropertiesPropertyToTerraform(struct!.destinationConnectorProperties),
   }
 }
 
 
-export function awsAppflowFlowDestinationFlowConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.DestinationFlowConfigProperty | cdktn.IResolvable): any {
+export function tfFlowDestinationFlowConfigPropertyToHclTerraform(struct?: TfFlow.DestinationFlowConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1849,7 +1849,7 @@ export function awsAppflowFlowDestinationFlowConfigPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     destination_connector_properties: {
-      value: awsAppflowFlowDestinationConnectorPropertiesPropertyToHclTerraform(struct!.destinationConnectorProperties),
+      value: tfFlowDestinationConnectorPropertiesPropertyToHclTerraform(struct!.destinationConnectorProperties),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationConnectorPropertiesPropertyList",
@@ -1861,7 +1861,7 @@ export function awsAppflowFlowDestinationFlowConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsAppflowFlowGlueDataCatalogPropertyToTerraform(struct?: AwsAppflowFlow.GlueDataCatalogPropertyOutputReference | AwsAppflowFlow.GlueDataCatalogProperty): any {
+export function tfFlowGlueDataCatalogPropertyToTerraform(struct?: TfFlow.GlueDataCatalogPropertyOutputReference | TfFlow.GlueDataCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1874,7 +1874,7 @@ export function awsAppflowFlowGlueDataCatalogPropertyToTerraform(struct?: AwsApp
 }
 
 
-export function awsAppflowFlowGlueDataCatalogPropertyToHclTerraform(struct?: AwsAppflowFlow.GlueDataCatalogPropertyOutputReference | AwsAppflowFlow.GlueDataCatalogProperty): any {
+export function tfFlowGlueDataCatalogPropertyToHclTerraform(struct?: TfFlow.GlueDataCatalogPropertyOutputReference | TfFlow.GlueDataCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1905,25 +1905,25 @@ export function awsAppflowFlowGlueDataCatalogPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsAppflowFlowMetadataCatalogConfigPropertyToTerraform(struct?: AwsAppflowFlow.MetadataCatalogConfigPropertyOutputReference | AwsAppflowFlow.MetadataCatalogConfigProperty): any {
+export function tfFlowMetadataCatalogConfigPropertyToTerraform(struct?: TfFlow.MetadataCatalogConfigPropertyOutputReference | TfFlow.MetadataCatalogConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    glue_data_catalog: awsAppflowFlowGlueDataCatalogPropertyToTerraform(struct!.glueDataCatalog),
+    glue_data_catalog: tfFlowGlueDataCatalogPropertyToTerraform(struct!.glueDataCatalog),
   }
 }
 
 
-export function awsAppflowFlowMetadataCatalogConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.MetadataCatalogConfigPropertyOutputReference | AwsAppflowFlow.MetadataCatalogConfigProperty): any {
+export function tfFlowMetadataCatalogConfigPropertyToHclTerraform(struct?: TfFlow.MetadataCatalogConfigPropertyOutputReference | TfFlow.MetadataCatalogConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     glue_data_catalog: {
-      value: awsAppflowFlowGlueDataCatalogPropertyToHclTerraform(struct!.glueDataCatalog),
+      value: tfFlowGlueDataCatalogPropertyToHclTerraform(struct!.glueDataCatalog),
       isBlock: true,
       type: "list",
       storageClassType: "GlueDataCatalogPropertyList",
@@ -1935,7 +1935,7 @@ export function awsAppflowFlowMetadataCatalogConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsAppflowFlowIncrementalPullConfigPropertyToTerraform(struct?: AwsAppflowFlow.IncrementalPullConfigPropertyOutputReference | AwsAppflowFlow.IncrementalPullConfigProperty): any {
+export function tfFlowIncrementalPullConfigPropertyToTerraform(struct?: TfFlow.IncrementalPullConfigPropertyOutputReference | TfFlow.IncrementalPullConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1946,7 +1946,7 @@ export function awsAppflowFlowIncrementalPullConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsAppflowFlowIncrementalPullConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.IncrementalPullConfigPropertyOutputReference | AwsAppflowFlow.IncrementalPullConfigProperty): any {
+export function tfFlowIncrementalPullConfigPropertyToHclTerraform(struct?: TfFlow.IncrementalPullConfigPropertyOutputReference | TfFlow.IncrementalPullConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1965,7 +1965,7 @@ export function awsAppflowFlowIncrementalPullConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsAppflowFlowAmplitudePropertyToTerraform(struct?: AwsAppflowFlow.AmplitudePropertyOutputReference | AwsAppflowFlow.AmplitudeProperty): any {
+export function tfFlowAmplitudePropertyToTerraform(struct?: TfFlow.AmplitudePropertyOutputReference | TfFlow.AmplitudeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1976,7 +1976,7 @@ export function awsAppflowFlowAmplitudePropertyToTerraform(struct?: AwsAppflowFl
 }
 
 
-export function awsAppflowFlowAmplitudePropertyToHclTerraform(struct?: AwsAppflowFlow.AmplitudePropertyOutputReference | AwsAppflowFlow.AmplitudeProperty): any {
+export function tfFlowAmplitudePropertyToHclTerraform(struct?: TfFlow.AmplitudePropertyOutputReference | TfFlow.AmplitudeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1995,7 +1995,7 @@ export function awsAppflowFlowAmplitudePropertyToHclTerraform(struct?: AwsAppflo
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2007,7 +2007,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesCustomCon
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2032,7 +2032,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesCustomCon
 }
 
 
-export function awsAppflowFlowDatadogPropertyToTerraform(struct?: AwsAppflowFlow.DatadogPropertyOutputReference | AwsAppflowFlow.DatadogProperty): any {
+export function tfFlowDatadogPropertyToTerraform(struct?: TfFlow.DatadogPropertyOutputReference | TfFlow.DatadogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2043,7 +2043,7 @@ export function awsAppflowFlowDatadogPropertyToTerraform(struct?: AwsAppflowFlow
 }
 
 
-export function awsAppflowFlowDatadogPropertyToHclTerraform(struct?: AwsAppflowFlow.DatadogPropertyOutputReference | AwsAppflowFlow.DatadogProperty): any {
+export function tfFlowDatadogPropertyToHclTerraform(struct?: TfFlow.DatadogPropertyOutputReference | TfFlow.DatadogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2062,7 +2062,7 @@ export function awsAppflowFlowDatadogPropertyToHclTerraform(struct?: AwsAppflowF
 }
 
 
-export function awsAppflowFlowDynatracePropertyToTerraform(struct?: AwsAppflowFlow.DynatracePropertyOutputReference | AwsAppflowFlow.DynatraceProperty): any {
+export function tfFlowDynatracePropertyToTerraform(struct?: TfFlow.DynatracePropertyOutputReference | TfFlow.DynatraceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2073,7 +2073,7 @@ export function awsAppflowFlowDynatracePropertyToTerraform(struct?: AwsAppflowFl
 }
 
 
-export function awsAppflowFlowDynatracePropertyToHclTerraform(struct?: AwsAppflowFlow.DynatracePropertyOutputReference | AwsAppflowFlow.DynatraceProperty): any {
+export function tfFlowDynatracePropertyToHclTerraform(struct?: TfFlow.DynatracePropertyOutputReference | TfFlow.DynatraceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2092,7 +2092,7 @@ export function awsAppflowFlowDynatracePropertyToHclTerraform(struct?: AwsAppflo
 }
 
 
-export function awsAppflowFlowGoogleAnalyticsPropertyToTerraform(struct?: AwsAppflowFlow.GoogleAnalyticsPropertyOutputReference | AwsAppflowFlow.GoogleAnalyticsProperty): any {
+export function tfFlowGoogleAnalyticsPropertyToTerraform(struct?: TfFlow.GoogleAnalyticsPropertyOutputReference | TfFlow.GoogleAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2103,7 +2103,7 @@ export function awsAppflowFlowGoogleAnalyticsPropertyToTerraform(struct?: AwsApp
 }
 
 
-export function awsAppflowFlowGoogleAnalyticsPropertyToHclTerraform(struct?: AwsAppflowFlow.GoogleAnalyticsPropertyOutputReference | AwsAppflowFlow.GoogleAnalyticsProperty): any {
+export function tfFlowGoogleAnalyticsPropertyToHclTerraform(struct?: TfFlow.GoogleAnalyticsPropertyOutputReference | TfFlow.GoogleAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2122,7 +2122,7 @@ export function awsAppflowFlowGoogleAnalyticsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsAppflowFlowInforNexusPropertyToTerraform(struct?: AwsAppflowFlow.InforNexusPropertyOutputReference | AwsAppflowFlow.InforNexusProperty): any {
+export function tfFlowInforNexusPropertyToTerraform(struct?: TfFlow.InforNexusPropertyOutputReference | TfFlow.InforNexusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2133,7 +2133,7 @@ export function awsAppflowFlowInforNexusPropertyToTerraform(struct?: AwsAppflowF
 }
 
 
-export function awsAppflowFlowInforNexusPropertyToHclTerraform(struct?: AwsAppflowFlow.InforNexusPropertyOutputReference | AwsAppflowFlow.InforNexusProperty): any {
+export function tfFlowInforNexusPropertyToHclTerraform(struct?: TfFlow.InforNexusPropertyOutputReference | TfFlow.InforNexusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2152,7 +2152,7 @@ export function awsAppflowFlowInforNexusPropertyToHclTerraform(struct?: AwsAppfl
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesMarketoPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesMarketoProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesMarketoPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2163,7 +2163,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesMarketoPr
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToHclTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesMarketoPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesMarketoProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToHclTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesMarketoPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2182,7 +2182,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesMarketoPr
 }
 
 
-export function awsAppflowFlowS3InputFormatConfigPropertyToTerraform(struct?: AwsAppflowFlow.S3InputFormatConfigPropertyOutputReference | AwsAppflowFlow.S3InputFormatConfigProperty): any {
+export function tfFlowS3InputFormatConfigPropertyToTerraform(struct?: TfFlow.S3InputFormatConfigPropertyOutputReference | TfFlow.S3InputFormatConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2193,7 +2193,7 @@ export function awsAppflowFlowS3InputFormatConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsAppflowFlowS3InputFormatConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.S3InputFormatConfigPropertyOutputReference | AwsAppflowFlow.S3InputFormatConfigProperty): any {
+export function tfFlowS3InputFormatConfigPropertyToHclTerraform(struct?: TfFlow.S3InputFormatConfigPropertyOutputReference | TfFlow.S3InputFormatConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2212,7 +2212,7 @@ export function awsAppflowFlowS3InputFormatConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesS3PropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesS3Property): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesS3PropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2220,12 +2220,12 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesS3Propert
   return {
     bucket_name: cdktn.stringToTerraform(struct!.bucketName),
     bucket_prefix: cdktn.stringToTerraform(struct!.bucketPrefix),
-    s3_input_format_config: awsAppflowFlowS3InputFormatConfigPropertyToTerraform(struct!.s3InputFormatConfig),
+    s3_input_format_config: tfFlowS3InputFormatConfigPropertyToTerraform(struct!.s3InputFormatConfig),
   }
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToHclTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesS3PropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesS3Property): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToHclTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesS3PropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2244,7 +2244,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesS3Propert
       storageClassType: "string",
     },
     s3_input_format_config: {
-      value: awsAppflowFlowS3InputFormatConfigPropertyToHclTerraform(struct!.s3InputFormatConfig),
+      value: tfFlowS3InputFormatConfigPropertyToHclTerraform(struct!.s3InputFormatConfig),
       isBlock: true,
       type: "list",
       storageClassType: "S3InputFormatConfigPropertyList",
@@ -2256,7 +2256,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesS3Propert
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSalesforcePropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSalesforceProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesSalesforcePropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2270,7 +2270,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSalesforc
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToHclTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSalesforcePropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSalesforceProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToHclTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesSalesforcePropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2307,7 +2307,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSalesforc
 }
 
 
-export function awsAppflowFlowPaginationConfigPropertyToTerraform(struct?: AwsAppflowFlow.PaginationConfigPropertyOutputReference | AwsAppflowFlow.PaginationConfigProperty): any {
+export function tfFlowPaginationConfigPropertyToTerraform(struct?: TfFlow.PaginationConfigPropertyOutputReference | TfFlow.PaginationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2318,7 +2318,7 @@ export function awsAppflowFlowPaginationConfigPropertyToTerraform(struct?: AwsAp
 }
 
 
-export function awsAppflowFlowPaginationConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.PaginationConfigPropertyOutputReference | AwsAppflowFlow.PaginationConfigProperty): any {
+export function tfFlowPaginationConfigPropertyToHclTerraform(struct?: TfFlow.PaginationConfigPropertyOutputReference | TfFlow.PaginationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2337,7 +2337,7 @@ export function awsAppflowFlowPaginationConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsAppflowFlowParallelismConfigPropertyToTerraform(struct?: AwsAppflowFlow.ParallelismConfigPropertyOutputReference | AwsAppflowFlow.ParallelismConfigProperty): any {
+export function tfFlowParallelismConfigPropertyToTerraform(struct?: TfFlow.ParallelismConfigPropertyOutputReference | TfFlow.ParallelismConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2348,7 +2348,7 @@ export function awsAppflowFlowParallelismConfigPropertyToTerraform(struct?: AwsA
 }
 
 
-export function awsAppflowFlowParallelismConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.ParallelismConfigPropertyOutputReference | AwsAppflowFlow.ParallelismConfigProperty): any {
+export function tfFlowParallelismConfigPropertyToHclTerraform(struct?: TfFlow.ParallelismConfigPropertyOutputReference | TfFlow.ParallelismConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2367,20 +2367,20 @@ export function awsAppflowFlowParallelismConfigPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     object_path: cdktn.stringToTerraform(struct!.objectPath),
-    pagination_config: awsAppflowFlowPaginationConfigPropertyToTerraform(struct!.paginationConfig),
-    parallelism_config: awsAppflowFlowParallelismConfigPropertyToTerraform(struct!.parallelismConfig),
+    pagination_config: tfFlowPaginationConfigPropertyToTerraform(struct!.paginationConfig),
+    parallelism_config: tfFlowParallelismConfigPropertyToTerraform(struct!.parallelismConfig),
   }
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToHclTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToHclTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2393,13 +2393,13 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataP
       storageClassType: "string",
     },
     pagination_config: {
-      value: awsAppflowFlowPaginationConfigPropertyToHclTerraform(struct!.paginationConfig),
+      value: tfFlowPaginationConfigPropertyToHclTerraform(struct!.paginationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PaginationConfigPropertyList",
     },
     parallelism_config: {
-      value: awsAppflowFlowParallelismConfigPropertyToHclTerraform(struct!.parallelismConfig),
+      value: tfFlowParallelismConfigPropertyToHclTerraform(struct!.parallelismConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ParallelismConfigPropertyList",
@@ -2411,7 +2411,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataP
 }
 
 
-export function awsAppflowFlowServiceNowPropertyToTerraform(struct?: AwsAppflowFlow.ServiceNowPropertyOutputReference | AwsAppflowFlow.ServiceNowProperty): any {
+export function tfFlowServiceNowPropertyToTerraform(struct?: TfFlow.ServiceNowPropertyOutputReference | TfFlow.ServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2422,7 +2422,7 @@ export function awsAppflowFlowServiceNowPropertyToTerraform(struct?: AwsAppflowF
 }
 
 
-export function awsAppflowFlowServiceNowPropertyToHclTerraform(struct?: AwsAppflowFlow.ServiceNowPropertyOutputReference | AwsAppflowFlow.ServiceNowProperty): any {
+export function tfFlowServiceNowPropertyToHclTerraform(struct?: TfFlow.ServiceNowPropertyOutputReference | TfFlow.ServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2441,7 +2441,7 @@ export function awsAppflowFlowServiceNowPropertyToHclTerraform(struct?: AwsAppfl
 }
 
 
-export function awsAppflowFlowSingularPropertyToTerraform(struct?: AwsAppflowFlow.SingularPropertyOutputReference | AwsAppflowFlow.SingularProperty): any {
+export function tfFlowSingularPropertyToTerraform(struct?: TfFlow.SingularPropertyOutputReference | TfFlow.SingularProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2452,7 +2452,7 @@ export function awsAppflowFlowSingularPropertyToTerraform(struct?: AwsAppflowFlo
 }
 
 
-export function awsAppflowFlowSingularPropertyToHclTerraform(struct?: AwsAppflowFlow.SingularPropertyOutputReference | AwsAppflowFlow.SingularProperty): any {
+export function tfFlowSingularPropertyToHclTerraform(struct?: TfFlow.SingularPropertyOutputReference | TfFlow.SingularProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2471,7 +2471,7 @@ export function awsAppflowFlowSingularPropertyToHclTerraform(struct?: AwsAppflow
 }
 
 
-export function awsAppflowFlowSlackPropertyToTerraform(struct?: AwsAppflowFlow.SlackPropertyOutputReference | AwsAppflowFlow.SlackProperty): any {
+export function tfFlowSlackPropertyToTerraform(struct?: TfFlow.SlackPropertyOutputReference | TfFlow.SlackProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2482,7 +2482,7 @@ export function awsAppflowFlowSlackPropertyToTerraform(struct?: AwsAppflowFlow.S
 }
 
 
-export function awsAppflowFlowSlackPropertyToHclTerraform(struct?: AwsAppflowFlow.SlackPropertyOutputReference | AwsAppflowFlow.SlackProperty): any {
+export function tfFlowSlackPropertyToHclTerraform(struct?: TfFlow.SlackPropertyOutputReference | TfFlow.SlackProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2501,7 +2501,7 @@ export function awsAppflowFlowSlackPropertyToHclTerraform(struct?: AwsAppflowFlo
 }
 
 
-export function awsAppflowFlowTrendmicroPropertyToTerraform(struct?: AwsAppflowFlow.TrendmicroPropertyOutputReference | AwsAppflowFlow.TrendmicroProperty): any {
+export function tfFlowTrendmicroPropertyToTerraform(struct?: TfFlow.TrendmicroPropertyOutputReference | TfFlow.TrendmicroProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2512,7 +2512,7 @@ export function awsAppflowFlowTrendmicroPropertyToTerraform(struct?: AwsAppflowF
 }
 
 
-export function awsAppflowFlowTrendmicroPropertyToHclTerraform(struct?: AwsAppflowFlow.TrendmicroPropertyOutputReference | AwsAppflowFlow.TrendmicroProperty): any {
+export function tfFlowTrendmicroPropertyToHclTerraform(struct?: TfFlow.TrendmicroPropertyOutputReference | TfFlow.TrendmicroProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2531,7 +2531,7 @@ export function awsAppflowFlowTrendmicroPropertyToHclTerraform(struct?: AwsAppfl
 }
 
 
-export function awsAppflowFlowVeevaPropertyToTerraform(struct?: AwsAppflowFlow.VeevaPropertyOutputReference | AwsAppflowFlow.VeevaProperty): any {
+export function tfFlowVeevaPropertyToTerraform(struct?: TfFlow.VeevaPropertyOutputReference | TfFlow.VeevaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2546,7 +2546,7 @@ export function awsAppflowFlowVeevaPropertyToTerraform(struct?: AwsAppflowFlow.V
 }
 
 
-export function awsAppflowFlowVeevaPropertyToHclTerraform(struct?: AwsAppflowFlow.VeevaPropertyOutputReference | AwsAppflowFlow.VeevaProperty): any {
+export function tfFlowVeevaPropertyToHclTerraform(struct?: TfFlow.VeevaPropertyOutputReference | TfFlow.VeevaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2589,7 +2589,7 @@ export function awsAppflowFlowVeevaPropertyToHclTerraform(struct?: AwsAppflowFlo
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesZendeskPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesZendeskProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesZendeskPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2600,7 +2600,7 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesZendeskPr
 }
 
 
-export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToHclTerraform(struct?: AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesZendeskPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigSourceConnectorPropertiesZendeskProperty): any {
+export function tfFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToHclTerraform(struct?: TfFlow.SourceFlowConfigSourceConnectorPropertiesZendeskPropertyOutputReference | TfFlow.SourceFlowConfigSourceConnectorPropertiesZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2619,130 +2619,130 @@ export function awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesZendeskPr
 }
 
 
-export function awsAppflowFlowSourceConnectorPropertiesPropertyToTerraform(struct?: AwsAppflowFlow.SourceConnectorPropertiesPropertyOutputReference | AwsAppflowFlow.SourceConnectorPropertiesProperty): any {
+export function tfFlowSourceConnectorPropertiesPropertyToTerraform(struct?: TfFlow.SourceConnectorPropertiesPropertyOutputReference | TfFlow.SourceConnectorPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amplitude: awsAppflowFlowAmplitudePropertyToTerraform(struct!.amplitude),
-    custom_connector: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToTerraform(struct!.customConnector),
-    datadog: awsAppflowFlowDatadogPropertyToTerraform(struct!.datadog),
-    dynatrace: awsAppflowFlowDynatracePropertyToTerraform(struct!.dynatrace),
-    google_analytics: awsAppflowFlowGoogleAnalyticsPropertyToTerraform(struct!.googleAnalytics),
-    infor_nexus: awsAppflowFlowInforNexusPropertyToTerraform(struct!.inforNexus),
-    marketo: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToTerraform(struct!.marketo),
-    s3: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToTerraform(struct!.s3),
-    salesforce: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToTerraform(struct!.salesforce),
-    sapo_data: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToTerraform(struct!.sapoData),
-    service_now: awsAppflowFlowServiceNowPropertyToTerraform(struct!.serviceNow),
-    singular: awsAppflowFlowSingularPropertyToTerraform(struct!.singular),
-    slack: awsAppflowFlowSlackPropertyToTerraform(struct!.slack),
-    trendmicro: awsAppflowFlowTrendmicroPropertyToTerraform(struct!.trendmicro),
-    veeva: awsAppflowFlowVeevaPropertyToTerraform(struct!.veeva),
-    zendesk: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToTerraform(struct!.zendesk),
+    amplitude: tfFlowAmplitudePropertyToTerraform(struct!.amplitude),
+    custom_connector: tfFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToTerraform(struct!.customConnector),
+    datadog: tfFlowDatadogPropertyToTerraform(struct!.datadog),
+    dynatrace: tfFlowDynatracePropertyToTerraform(struct!.dynatrace),
+    google_analytics: tfFlowGoogleAnalyticsPropertyToTerraform(struct!.googleAnalytics),
+    infor_nexus: tfFlowInforNexusPropertyToTerraform(struct!.inforNexus),
+    marketo: tfFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToTerraform(struct!.marketo),
+    s3: tfFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToTerraform(struct!.s3),
+    salesforce: tfFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToTerraform(struct!.salesforce),
+    sapo_data: tfFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToTerraform(struct!.sapoData),
+    service_now: tfFlowServiceNowPropertyToTerraform(struct!.serviceNow),
+    singular: tfFlowSingularPropertyToTerraform(struct!.singular),
+    slack: tfFlowSlackPropertyToTerraform(struct!.slack),
+    trendmicro: tfFlowTrendmicroPropertyToTerraform(struct!.trendmicro),
+    veeva: tfFlowVeevaPropertyToTerraform(struct!.veeva),
+    zendesk: tfFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToTerraform(struct!.zendesk),
   }
 }
 
 
-export function awsAppflowFlowSourceConnectorPropertiesPropertyToHclTerraform(struct?: AwsAppflowFlow.SourceConnectorPropertiesPropertyOutputReference | AwsAppflowFlow.SourceConnectorPropertiesProperty): any {
+export function tfFlowSourceConnectorPropertiesPropertyToHclTerraform(struct?: TfFlow.SourceConnectorPropertiesPropertyOutputReference | TfFlow.SourceConnectorPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amplitude: {
-      value: awsAppflowFlowAmplitudePropertyToHclTerraform(struct!.amplitude),
+      value: tfFlowAmplitudePropertyToHclTerraform(struct!.amplitude),
       isBlock: true,
       type: "list",
       storageClassType: "AmplitudePropertyList",
     },
     custom_connector: {
-      value: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct!.customConnector),
+      value: tfFlowSourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyToHclTerraform(struct!.customConnector),
       isBlock: true,
       type: "list",
       storageClassType: "SourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyList",
     },
     datadog: {
-      value: awsAppflowFlowDatadogPropertyToHclTerraform(struct!.datadog),
+      value: tfFlowDatadogPropertyToHclTerraform(struct!.datadog),
       isBlock: true,
       type: "list",
       storageClassType: "DatadogPropertyList",
     },
     dynatrace: {
-      value: awsAppflowFlowDynatracePropertyToHclTerraform(struct!.dynatrace),
+      value: tfFlowDynatracePropertyToHclTerraform(struct!.dynatrace),
       isBlock: true,
       type: "list",
       storageClassType: "DynatracePropertyList",
     },
     google_analytics: {
-      value: awsAppflowFlowGoogleAnalyticsPropertyToHclTerraform(struct!.googleAnalytics),
+      value: tfFlowGoogleAnalyticsPropertyToHclTerraform(struct!.googleAnalytics),
       isBlock: true,
       type: "list",
       storageClassType: "GoogleAnalyticsPropertyList",
     },
     infor_nexus: {
-      value: awsAppflowFlowInforNexusPropertyToHclTerraform(struct!.inforNexus),
+      value: tfFlowInforNexusPropertyToHclTerraform(struct!.inforNexus),
       isBlock: true,
       type: "list",
       storageClassType: "InforNexusPropertyList",
     },
     marketo: {
-      value: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToHclTerraform(struct!.marketo),
+      value: tfFlowSourceFlowConfigSourceConnectorPropertiesMarketoPropertyToHclTerraform(struct!.marketo),
       isBlock: true,
       type: "list",
       storageClassType: "SourceFlowConfigSourceConnectorPropertiesMarketoPropertyList",
     },
     s3: {
-      value: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToHclTerraform(struct!.s3),
+      value: tfFlowSourceFlowConfigSourceConnectorPropertiesS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "SourceFlowConfigSourceConnectorPropertiesS3PropertyList",
     },
     salesforce: {
-      value: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToHclTerraform(struct!.salesforce),
+      value: tfFlowSourceFlowConfigSourceConnectorPropertiesSalesforcePropertyToHclTerraform(struct!.salesforce),
       isBlock: true,
       type: "list",
       storageClassType: "SourceFlowConfigSourceConnectorPropertiesSalesforcePropertyList",
     },
     sapo_data: {
-      value: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToHclTerraform(struct!.sapoData),
+      value: tfFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPropertyToHclTerraform(struct!.sapoData),
       isBlock: true,
       type: "list",
       storageClassType: "SourceFlowConfigSourceConnectorPropertiesSapoDataPropertyList",
     },
     service_now: {
-      value: awsAppflowFlowServiceNowPropertyToHclTerraform(struct!.serviceNow),
+      value: tfFlowServiceNowPropertyToHclTerraform(struct!.serviceNow),
       isBlock: true,
       type: "list",
       storageClassType: "ServiceNowPropertyList",
     },
     singular: {
-      value: awsAppflowFlowSingularPropertyToHclTerraform(struct!.singular),
+      value: tfFlowSingularPropertyToHclTerraform(struct!.singular),
       isBlock: true,
       type: "list",
       storageClassType: "SingularPropertyList",
     },
     slack: {
-      value: awsAppflowFlowSlackPropertyToHclTerraform(struct!.slack),
+      value: tfFlowSlackPropertyToHclTerraform(struct!.slack),
       isBlock: true,
       type: "list",
       storageClassType: "SlackPropertyList",
     },
     trendmicro: {
-      value: awsAppflowFlowTrendmicroPropertyToHclTerraform(struct!.trendmicro),
+      value: tfFlowTrendmicroPropertyToHclTerraform(struct!.trendmicro),
       isBlock: true,
       type: "list",
       storageClassType: "TrendmicroPropertyList",
     },
     veeva: {
-      value: awsAppflowFlowVeevaPropertyToHclTerraform(struct!.veeva),
+      value: tfFlowVeevaPropertyToHclTerraform(struct!.veeva),
       isBlock: true,
       type: "list",
       storageClassType: "VeevaPropertyList",
     },
     zendesk: {
-      value: awsAppflowFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToHclTerraform(struct!.zendesk),
+      value: tfFlowSourceFlowConfigSourceConnectorPropertiesZendeskPropertyToHclTerraform(struct!.zendesk),
       isBlock: true,
       type: "list",
       storageClassType: "SourceFlowConfigSourceConnectorPropertiesZendeskPropertyList",
@@ -2754,7 +2754,7 @@ export function awsAppflowFlowSourceConnectorPropertiesPropertyToHclTerraform(st
 }
 
 
-export function awsAppflowFlowSourceFlowConfigPropertyToTerraform(struct?: AwsAppflowFlow.SourceFlowConfigPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigProperty): any {
+export function tfFlowSourceFlowConfigPropertyToTerraform(struct?: TfFlow.SourceFlowConfigPropertyOutputReference | TfFlow.SourceFlowConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2763,13 +2763,13 @@ export function awsAppflowFlowSourceFlowConfigPropertyToTerraform(struct?: AwsAp
     api_version: cdktn.stringToTerraform(struct!.apiVersion),
     connector_profile_name: cdktn.stringToTerraform(struct!.connectorProfileName),
     connector_type: cdktn.stringToTerraform(struct!.connectorType),
-    incremental_pull_config: awsAppflowFlowIncrementalPullConfigPropertyToTerraform(struct!.incrementalPullConfig),
-    source_connector_properties: awsAppflowFlowSourceConnectorPropertiesPropertyToTerraform(struct!.sourceConnectorProperties),
+    incremental_pull_config: tfFlowIncrementalPullConfigPropertyToTerraform(struct!.incrementalPullConfig),
+    source_connector_properties: tfFlowSourceConnectorPropertiesPropertyToTerraform(struct!.sourceConnectorProperties),
   }
 }
 
 
-export function awsAppflowFlowSourceFlowConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.SourceFlowConfigPropertyOutputReference | AwsAppflowFlow.SourceFlowConfigProperty): any {
+export function tfFlowSourceFlowConfigPropertyToHclTerraform(struct?: TfFlow.SourceFlowConfigPropertyOutputReference | TfFlow.SourceFlowConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2794,13 +2794,13 @@ export function awsAppflowFlowSourceFlowConfigPropertyToHclTerraform(struct?: Aw
       storageClassType: "string",
     },
     incremental_pull_config: {
-      value: awsAppflowFlowIncrementalPullConfigPropertyToHclTerraform(struct!.incrementalPullConfig),
+      value: tfFlowIncrementalPullConfigPropertyToHclTerraform(struct!.incrementalPullConfig),
       isBlock: true,
       type: "list",
       storageClassType: "IncrementalPullConfigPropertyList",
     },
     source_connector_properties: {
-      value: awsAppflowFlowSourceConnectorPropertiesPropertyToHclTerraform(struct!.sourceConnectorProperties),
+      value: tfFlowSourceConnectorPropertiesPropertyToHclTerraform(struct!.sourceConnectorProperties),
       isBlock: true,
       type: "list",
       storageClassType: "SourceConnectorPropertiesPropertyList",
@@ -2812,7 +2812,7 @@ export function awsAppflowFlowSourceFlowConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsAppflowFlowConnectorOperatorPropertyToTerraform(struct?: AwsAppflowFlow.ConnectorOperatorProperty | cdktn.IResolvable): any {
+export function tfFlowConnectorOperatorPropertyToTerraform(struct?: TfFlow.ConnectorOperatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2838,7 +2838,7 @@ export function awsAppflowFlowConnectorOperatorPropertyToTerraform(struct?: AwsA
 }
 
 
-export function awsAppflowFlowConnectorOperatorPropertyToHclTerraform(struct?: AwsAppflowFlow.ConnectorOperatorProperty | cdktn.IResolvable): any {
+export function tfFlowConnectorOperatorPropertyToHclTerraform(struct?: TfFlow.ConnectorOperatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2947,7 +2947,7 @@ export function awsAppflowFlowConnectorOperatorPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsAppflowFlowTaskPropertyToTerraform(struct?: AwsAppflowFlow.TaskProperty | cdktn.IResolvable): any {
+export function tfFlowTaskPropertyToTerraform(struct?: TfFlow.TaskProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2957,12 +2957,12 @@ export function awsAppflowFlowTaskPropertyToTerraform(struct?: AwsAppflowFlow.Ta
     source_fields: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.sourceFields),
     task_properties: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.taskProperties),
     task_type: cdktn.stringToTerraform(struct!.taskType),
-    connector_operator: cdktn.listMapper(awsAppflowFlowConnectorOperatorPropertyToTerraform, true)(struct!.connectorOperator),
+    connector_operator: cdktn.listMapper(tfFlowConnectorOperatorPropertyToTerraform, true)(struct!.connectorOperator),
   }
 }
 
 
-export function awsAppflowFlowTaskPropertyToHclTerraform(struct?: AwsAppflowFlow.TaskProperty | cdktn.IResolvable): any {
+export function tfFlowTaskPropertyToHclTerraform(struct?: TfFlow.TaskProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2993,7 +2993,7 @@ export function awsAppflowFlowTaskPropertyToHclTerraform(struct?: AwsAppflowFlow
       storageClassType: "string",
     },
     connector_operator: {
-      value: cdktn.listMapperHcl(awsAppflowFlowConnectorOperatorPropertyToHclTerraform, true)(struct!.connectorOperator),
+      value: cdktn.listMapperHcl(tfFlowConnectorOperatorPropertyToHclTerraform, true)(struct!.connectorOperator),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorOperatorPropertyList",
@@ -3005,7 +3005,7 @@ export function awsAppflowFlowTaskPropertyToHclTerraform(struct?: AwsAppflowFlow
 }
 
 
-export function awsAppflowFlowScheduledPropertyToTerraform(struct?: AwsAppflowFlow.ScheduledPropertyOutputReference | AwsAppflowFlow.ScheduledProperty): any {
+export function tfFlowScheduledPropertyToTerraform(struct?: TfFlow.ScheduledPropertyOutputReference | TfFlow.ScheduledProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3022,7 +3022,7 @@ export function awsAppflowFlowScheduledPropertyToTerraform(struct?: AwsAppflowFl
 }
 
 
-export function awsAppflowFlowScheduledPropertyToHclTerraform(struct?: AwsAppflowFlow.ScheduledPropertyOutputReference | AwsAppflowFlow.ScheduledProperty): any {
+export function tfFlowScheduledPropertyToHclTerraform(struct?: TfFlow.ScheduledPropertyOutputReference | TfFlow.ScheduledProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3077,25 +3077,25 @@ export function awsAppflowFlowScheduledPropertyToHclTerraform(struct?: AwsAppflo
 }
 
 
-export function awsAppflowFlowTriggerPropertiesPropertyToTerraform(struct?: AwsAppflowFlow.TriggerPropertiesPropertyOutputReference | AwsAppflowFlow.TriggerPropertiesProperty): any {
+export function tfFlowTriggerPropertiesPropertyToTerraform(struct?: TfFlow.TriggerPropertiesPropertyOutputReference | TfFlow.TriggerPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    scheduled: awsAppflowFlowScheduledPropertyToTerraform(struct!.scheduled),
+    scheduled: tfFlowScheduledPropertyToTerraform(struct!.scheduled),
   }
 }
 
 
-export function awsAppflowFlowTriggerPropertiesPropertyToHclTerraform(struct?: AwsAppflowFlow.TriggerPropertiesPropertyOutputReference | AwsAppflowFlow.TriggerPropertiesProperty): any {
+export function tfFlowTriggerPropertiesPropertyToHclTerraform(struct?: TfFlow.TriggerPropertiesPropertyOutputReference | TfFlow.TriggerPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     scheduled: {
-      value: awsAppflowFlowScheduledPropertyToHclTerraform(struct!.scheduled),
+      value: tfFlowScheduledPropertyToHclTerraform(struct!.scheduled),
       isBlock: true,
       type: "list",
       storageClassType: "ScheduledPropertyList",
@@ -3107,19 +3107,19 @@ export function awsAppflowFlowTriggerPropertiesPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsAppflowFlowTriggerConfigPropertyToTerraform(struct?: AwsAppflowFlow.TriggerConfigPropertyOutputReference | AwsAppflowFlow.TriggerConfigProperty): any {
+export function tfFlowTriggerConfigPropertyToTerraform(struct?: TfFlow.TriggerConfigPropertyOutputReference | TfFlow.TriggerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     trigger_type: cdktn.stringToTerraform(struct!.triggerType),
-    trigger_properties: awsAppflowFlowTriggerPropertiesPropertyToTerraform(struct!.triggerProperties),
+    trigger_properties: tfFlowTriggerPropertiesPropertyToTerraform(struct!.triggerProperties),
   }
 }
 
 
-export function awsAppflowFlowTriggerConfigPropertyToHclTerraform(struct?: AwsAppflowFlow.TriggerConfigPropertyOutputReference | AwsAppflowFlow.TriggerConfigProperty): any {
+export function tfFlowTriggerConfigPropertyToHclTerraform(struct?: TfFlow.TriggerConfigPropertyOutputReference | TfFlow.TriggerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3132,7 +3132,7 @@ export function awsAppflowFlowTriggerConfigPropertyToHclTerraform(struct?: AwsAp
       storageClassType: "string",
     },
     trigger_properties: {
-      value: awsAppflowFlowTriggerPropertiesPropertyToHclTerraform(struct!.triggerProperties),
+      value: tfFlowTriggerPropertiesPropertyToHclTerraform(struct!.triggerProperties),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerPropertiesPropertyList",
@@ -3144,18 +3144,18 @@ export function awsAppflowFlowTriggerConfigPropertyToHclTerraform(struct?: AwsAp
 }
 
 
-export namespace AwsAppflowFlow {
+export namespace TfFlow {
 export interface DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -3253,25 +3253,25 @@ export class DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorE
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_properties AwsAppflowFlow#custom_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_properties TfFlow#custom_properties}
   */
   readonly customProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#entity_name AwsAppflowFlow#entity_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#entity_name TfFlow#entity_name}
   */
   readonly entityName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names AwsAppflowFlow#id_field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names TfFlow#id_field_names}
   */
   readonly idFieldNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type AwsAppflowFlow#write_operation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type TfFlow#write_operation_type}
   */
   readonly writeOperationType?: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfigProperty;
 }
@@ -3410,11 +3410,11 @@ export class DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorP
 }
 export interface CustomerProfilesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#domain_name AwsAppflowFlow#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#domain_name TfFlow#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object_type_name AwsAppflowFlow#object_type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object_type_name TfFlow#object_type_name}
   */
   readonly objectTypeName?: string;
 }
@@ -3487,15 +3487,15 @@ export class CustomerProfilesPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -3593,13 +3593,13 @@ export class DestinationFlowConfigDestinationConnectorPropertiesEventBridgeError
 }
 export interface EventBridgeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfigProperty;
 }
@@ -3672,15 +3672,15 @@ export class EventBridgePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -3778,13 +3778,13 @@ export class DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHa
 }
 export interface HoneycodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfigProperty;
 }
@@ -3885,15 +3885,15 @@ export class LookoutMetricsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -3991,13 +3991,13 @@ export class DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHand
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesMarketoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfigProperty;
 }
@@ -4070,15 +4070,15 @@ export class DestinationFlowConfigDestinationConnectorPropertiesMarketoPropertyO
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -4176,21 +4176,21 @@ export class DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHan
 }
 export interface RedshiftProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#intermediate_bucket_name AwsAppflowFlow#intermediate_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#intermediate_bucket_name TfFlow#intermediate_bucket_name}
   */
   readonly intermediateBucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfigProperty;
 }
@@ -4304,11 +4304,11 @@ export class RedshiftPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_type AwsAppflowFlow#aggregation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_type TfFlow#aggregation_type}
   */
   readonly aggregationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#target_file_size AwsAppflowFlow#target_file_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#target_file_size TfFlow#target_file_size}
   */
   readonly targetFileSize?: number;
 }
@@ -4384,15 +4384,15 @@ export class DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormat
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_format AwsAppflowFlow#prefix_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_format TfFlow#prefix_format}
   */
   readonly prefixFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_hierarchy AwsAppflowFlow#prefix_hierarchy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_hierarchy TfFlow#prefix_hierarchy}
   */
   readonly prefixHierarchy?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_type AwsAppflowFlow#prefix_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_type TfFlow#prefix_type}
   */
   readonly prefixType?: string;
 }
@@ -4490,23 +4490,23 @@ export class DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormat
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#file_type AwsAppflowFlow#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#file_type TfFlow#file_type}
   */
   readonly fileType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#preserve_source_data_typing AwsAppflowFlow#preserve_source_data_typing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#preserve_source_data_typing TfFlow#preserve_source_data_typing}
   */
   readonly preserveSourceDataTyping?: boolean | cdktn.IResolvable;
   /**
   * aggregation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_config AwsAppflowFlow#aggregation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_config TfFlow#aggregation_config}
   */
   readonly aggregationConfig?: DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfigProperty;
   /**
   * prefix_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_config AwsAppflowFlow#prefix_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_config TfFlow#prefix_config}
   */
   readonly prefixConfig?: DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigProperty;
 }
@@ -4626,17 +4626,17 @@ export class DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormat
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
   * s3_output_format_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_output_format_config AwsAppflowFlow#s3_output_format_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_output_format_config TfFlow#s3_output_format_config}
   */
   readonly s3OutputFormatConfig?: DestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigProperty;
 }
@@ -4731,15 +4731,15 @@ export class DestinationFlowConfigDestinationConnectorPropertiesS3PropertyOutput
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -4837,25 +4837,25 @@ export class DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorH
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesSalesforceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#data_transfer_api AwsAppflowFlow#data_transfer_api}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#data_transfer_api TfFlow#data_transfer_api}
   */
   readonly dataTransferApi?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names AwsAppflowFlow#id_field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names TfFlow#id_field_names}
   */
   readonly idFieldNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type AwsAppflowFlow#write_operation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type TfFlow#write_operation_type}
   */
   readonly writeOperationType?: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfigProperty;
 }
@@ -4994,15 +4994,15 @@ export class DestinationFlowConfigDestinationConnectorPropertiesSalesforceProper
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -5100,11 +5100,11 @@ export class DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHan
 }
 export interface SuccessResponseHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
 }
@@ -5180,27 +5180,27 @@ export class SuccessResponseHandlingConfigPropertyOutputReference extends cdktn.
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesSapoDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names AwsAppflowFlow#id_field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names TfFlow#id_field_names}
   */
   readonly idFieldNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object_path AwsAppflowFlow#object_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object_path TfFlow#object_path}
   */
   readonly objectPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type AwsAppflowFlow#write_operation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type TfFlow#write_operation_type}
   */
   readonly writeOperationType?: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfigProperty;
   /**
   * success_response_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#success_response_handling_config AwsAppflowFlow#success_response_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#success_response_handling_config TfFlow#success_response_handling_config}
   */
   readonly successResponseHandlingConfig?: SuccessResponseHandlingConfigProperty;
 }
@@ -5339,15 +5339,15 @@ export class DestinationFlowConfigDestinationConnectorPropertiesSapoDataProperty
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -5445,21 +5445,21 @@ export class DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHa
 }
 export interface SnowflakeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#intermediate_bucket_name AwsAppflowFlow#intermediate_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#intermediate_bucket_name TfFlow#intermediate_bucket_name}
   */
   readonly intermediateBucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfigProperty;
 }
@@ -5573,7 +5573,7 @@ export class SnowflakePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_type AwsAppflowFlow#aggregation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_type TfFlow#aggregation_type}
   */
   readonly aggregationType?: string;
 }
@@ -5627,15 +5627,15 @@ export class DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3Output
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_format AwsAppflowFlow#prefix_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_format TfFlow#prefix_format}
   */
   readonly prefixFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_hierarchy AwsAppflowFlow#prefix_hierarchy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_hierarchy TfFlow#prefix_hierarchy}
   */
   readonly prefixHierarchy?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_type AwsAppflowFlow#prefix_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_type TfFlow#prefix_type}
   */
   readonly prefixType: string;
 }
@@ -5730,19 +5730,19 @@ export class DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3Output
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#file_type AwsAppflowFlow#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#file_type TfFlow#file_type}
   */
   readonly fileType?: string;
   /**
   * aggregation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_config AwsAppflowFlow#aggregation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#aggregation_config TfFlow#aggregation_config}
   */
   readonly aggregationConfig?: DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfigProperty;
   /**
   * prefix_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_config AwsAppflowFlow#prefix_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#prefix_config TfFlow#prefix_config}
   */
   readonly prefixConfig: DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigProperty;
 }
@@ -5837,17 +5837,17 @@ export class DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3Output
 }
 export interface UpsolverProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
   * s3_output_format_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_output_format_config AwsAppflowFlow#s3_output_format_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_output_format_config TfFlow#s3_output_format_config}
   */
   readonly s3OutputFormatConfig: DestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigProperty;
 }
@@ -5939,15 +5939,15 @@ export class UpsolverPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error AwsAppflowFlow#fail_on_first_destination_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#fail_on_first_destination_error TfFlow#fail_on_first_destination_error}
   */
   readonly failOnFirstDestinationError?: boolean | cdktn.IResolvable;
 }
@@ -6045,21 +6045,21 @@ export class DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHand
 }
 export interface DestinationFlowConfigDestinationConnectorPropertiesZendeskProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names AwsAppflowFlow#id_field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#id_field_names TfFlow#id_field_names}
   */
   readonly idFieldNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type AwsAppflowFlow#write_operation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#write_operation_type TfFlow#write_operation_type}
   */
   readonly writeOperationType?: string;
   /**
   * error_handling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config AwsAppflowFlow#error_handling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#error_handling_config TfFlow#error_handling_config}
   */
   readonly errorHandlingConfig?: DestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfigProperty;
 }
@@ -6178,79 +6178,79 @@ export interface DestinationConnectorPropertiesProperty {
   /**
   * custom_connector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_connector AwsAppflowFlow#custom_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_connector TfFlow#custom_connector}
   */
   readonly customConnector?: DestinationFlowConfigDestinationConnectorPropertiesCustomConnectorProperty;
   /**
   * customer_profiles block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#customer_profiles AwsAppflowFlow#customer_profiles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#customer_profiles TfFlow#customer_profiles}
   */
   readonly customerProfiles?: CustomerProfilesProperty;
   /**
   * event_bridge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#event_bridge AwsAppflowFlow#event_bridge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#event_bridge TfFlow#event_bridge}
   */
   readonly eventBridge?: EventBridgeProperty;
   /**
   * honeycode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#honeycode AwsAppflowFlow#honeycode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#honeycode TfFlow#honeycode}
   */
   readonly honeycode?: HoneycodeProperty;
   /**
   * lookout_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#lookout_metrics AwsAppflowFlow#lookout_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#lookout_metrics TfFlow#lookout_metrics}
   */
   readonly lookoutMetrics?: LookoutMetricsProperty;
   /**
   * marketo block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#marketo AwsAppflowFlow#marketo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#marketo TfFlow#marketo}
   */
   readonly marketo?: DestinationFlowConfigDestinationConnectorPropertiesMarketoProperty;
   /**
   * redshift block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#redshift AwsAppflowFlow#redshift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#redshift TfFlow#redshift}
   */
   readonly redshift?: RedshiftProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3 AwsAppflowFlow#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3 TfFlow#s3}
   */
   readonly s3?: DestinationFlowConfigDestinationConnectorPropertiesS3Property;
   /**
   * salesforce block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#salesforce AwsAppflowFlow#salesforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#salesforce TfFlow#salesforce}
   */
   readonly salesforce?: DestinationFlowConfigDestinationConnectorPropertiesSalesforceProperty;
   /**
   * sapo_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#sapo_data AwsAppflowFlow#sapo_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#sapo_data TfFlow#sapo_data}
   */
   readonly sapoData?: DestinationFlowConfigDestinationConnectorPropertiesSapoDataProperty;
   /**
   * snowflake block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#snowflake AwsAppflowFlow#snowflake}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#snowflake TfFlow#snowflake}
   */
   readonly snowflake?: SnowflakeProperty;
   /**
   * upsolver block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#upsolver AwsAppflowFlow#upsolver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#upsolver TfFlow#upsolver}
   */
   readonly upsolver?: UpsolverProperty;
   /**
   * zendesk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#zendesk AwsAppflowFlow#zendesk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#zendesk TfFlow#zendesk}
   */
   readonly zendesk?: DestinationFlowConfigDestinationConnectorPropertiesZendeskProperty;
 }
@@ -6568,21 +6568,21 @@ export class DestinationConnectorPropertiesPropertyOutputReference extends cdktn
 }
 export interface DestinationFlowConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#api_version AwsAppflowFlow#api_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#api_version TfFlow#api_version}
   */
   readonly apiVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_profile_name AwsAppflowFlow#connector_profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_profile_name TfFlow#connector_profile_name}
   */
   readonly connectorProfileName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_type AwsAppflowFlow#connector_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_type TfFlow#connector_type}
   */
   readonly connectorType: string;
   /**
   * destination_connector_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#destination_connector_properties AwsAppflowFlow#destination_connector_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#destination_connector_properties TfFlow#destination_connector_properties}
   */
   readonly destinationConnectorProperties: DestinationConnectorPropertiesProperty;
 }
@@ -6728,15 +6728,15 @@ export class DestinationFlowConfigPropertyList extends cdktn.ComplexList {
 }
 export interface GlueDataCatalogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#database_name AwsAppflowFlow#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#database_name TfFlow#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#role_arn AwsAppflowFlow#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#role_arn TfFlow#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#table_prefix AwsAppflowFlow#table_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#table_prefix TfFlow#table_prefix}
   */
   readonly tablePrefix: string;
 }
@@ -6827,7 +6827,7 @@ export interface MetadataCatalogConfigProperty {
   /**
   * glue_data_catalog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#glue_data_catalog AwsAppflowFlow#glue_data_catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#glue_data_catalog TfFlow#glue_data_catalog}
   */
   readonly glueDataCatalog?: GlueDataCatalogProperty;
 }
@@ -6881,7 +6881,7 @@ export class MetadataCatalogConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface IncrementalPullConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#datetime_type_field_name AwsAppflowFlow#datetime_type_field_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#datetime_type_field_name TfFlow#datetime_type_field_name}
   */
   readonly datetimeTypeFieldName?: string;
 }
@@ -6935,7 +6935,7 @@ export class IncrementalPullConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface AmplitudeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -6986,11 +6986,11 @@ export class AmplitudePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceFlowConfigSourceConnectorPropertiesCustomConnectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_properties AwsAppflowFlow#custom_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_properties TfFlow#custom_properties}
   */
   readonly customProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#entity_name AwsAppflowFlow#entity_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#entity_name TfFlow#entity_name}
   */
   readonly entityName: string;
 }
@@ -7063,7 +7063,7 @@ export class SourceFlowConfigSourceConnectorPropertiesCustomConnectorPropertyOut
 }
 export interface DatadogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7114,7 +7114,7 @@ export class DatadogPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DynatraceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7165,7 +7165,7 @@ export class DynatracePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface GoogleAnalyticsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7216,7 +7216,7 @@ export class GoogleAnalyticsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface InforNexusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7267,7 +7267,7 @@ export class InforNexusPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceFlowConfigSourceConnectorPropertiesMarketoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7318,7 +7318,7 @@ export class SourceFlowConfigSourceConnectorPropertiesMarketoPropertyOutputRefer
 }
 export interface S3InputFormatConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_input_file_type AwsAppflowFlow#s3_input_file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_input_file_type TfFlow#s3_input_file_type}
   */
   readonly s3InputFileType?: string;
 }
@@ -7372,17 +7372,17 @@ export class S3InputFormatConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SourceFlowConfigSourceConnectorPropertiesS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name AwsAppflowFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_name TfFlow#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix AwsAppflowFlow#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#bucket_prefix TfFlow#bucket_prefix}
   */
   readonly bucketPrefix: string;
   /**
   * s3_input_format_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_input_format_config AwsAppflowFlow#s3_input_format_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3_input_format_config TfFlow#s3_input_format_config}
   */
   readonly s3InputFormatConfig?: S3InputFormatConfigProperty;
 }
@@ -7474,19 +7474,19 @@ export class SourceFlowConfigSourceConnectorPropertiesS3PropertyOutputReference 
 }
 export interface SourceFlowConfigSourceConnectorPropertiesSalesforceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#data_transfer_api AwsAppflowFlow#data_transfer_api}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#data_transfer_api TfFlow#data_transfer_api}
   */
   readonly dataTransferApi?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#enable_dynamic_field_update AwsAppflowFlow#enable_dynamic_field_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#enable_dynamic_field_update TfFlow#enable_dynamic_field_update}
   */
   readonly enableDynamicFieldUpdate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_deleted_records AwsAppflowFlow#include_deleted_records}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_deleted_records TfFlow#include_deleted_records}
   */
   readonly includeDeletedRecords?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7603,7 +7603,7 @@ export class SourceFlowConfigSourceConnectorPropertiesSalesforcePropertyOutputRe
 }
 export interface PaginationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#max_page_size AwsAppflowFlow#max_page_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#max_page_size TfFlow#max_page_size}
   */
   readonly maxPageSize: number;
 }
@@ -7654,7 +7654,7 @@ export class PaginationConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ParallelismConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#max_page_size AwsAppflowFlow#max_page_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#max_page_size TfFlow#max_page_size}
   */
   readonly maxPageSize: number;
 }
@@ -7705,19 +7705,19 @@ export class ParallelismConfigPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface SourceFlowConfigSourceConnectorPropertiesSapoDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object_path AwsAppflowFlow#object_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object_path TfFlow#object_path}
   */
   readonly objectPath: string;
   /**
   * pagination_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#pagination_config AwsAppflowFlow#pagination_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#pagination_config TfFlow#pagination_config}
   */
   readonly paginationConfig?: PaginationConfigProperty;
   /**
   * parallelism_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#parallelism_config AwsAppflowFlow#parallelism_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#parallelism_config TfFlow#parallelism_config}
   */
   readonly parallelismConfig?: ParallelismConfigProperty;
 }
@@ -7812,7 +7812,7 @@ export class SourceFlowConfigSourceConnectorPropertiesSapoDataPropertyOutputRefe
 }
 export interface ServiceNowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7863,7 +7863,7 @@ export class ServiceNowPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SingularProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7914,7 +7914,7 @@ export class SingularPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SlackProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -7965,7 +7965,7 @@ export class SlackPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TrendmicroProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -8016,23 +8016,23 @@ export class TrendmicroPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VeevaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#document_type AwsAppflowFlow#document_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#document_type TfFlow#document_type}
   */
   readonly documentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_all_versions AwsAppflowFlow#include_all_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_all_versions TfFlow#include_all_versions}
   */
   readonly includeAllVersions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_renditions AwsAppflowFlow#include_renditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_renditions TfFlow#include_renditions}
   */
   readonly includeRenditions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_source_files AwsAppflowFlow#include_source_files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#include_source_files TfFlow#include_source_files}
   */
   readonly includeSourceFiles?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -8171,7 +8171,7 @@ export class VeevaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceFlowConfigSourceConnectorPropertiesZendeskProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object AwsAppflowFlow#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#object TfFlow#object}
   */
   readonly object: string;
 }
@@ -8224,97 +8224,97 @@ export interface SourceConnectorPropertiesProperty {
   /**
   * amplitude block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#amplitude AwsAppflowFlow#amplitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#amplitude TfFlow#amplitude}
   */
   readonly amplitude?: AmplitudeProperty;
   /**
   * custom_connector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_connector AwsAppflowFlow#custom_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_connector TfFlow#custom_connector}
   */
   readonly customConnector?: SourceFlowConfigSourceConnectorPropertiesCustomConnectorProperty;
   /**
   * datadog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#datadog AwsAppflowFlow#datadog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#datadog TfFlow#datadog}
   */
   readonly datadog?: DatadogProperty;
   /**
   * dynatrace block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#dynatrace AwsAppflowFlow#dynatrace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#dynatrace TfFlow#dynatrace}
   */
   readonly dynatrace?: DynatraceProperty;
   /**
   * google_analytics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#google_analytics AwsAppflowFlow#google_analytics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#google_analytics TfFlow#google_analytics}
   */
   readonly googleAnalytics?: GoogleAnalyticsProperty;
   /**
   * infor_nexus block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#infor_nexus AwsAppflowFlow#infor_nexus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#infor_nexus TfFlow#infor_nexus}
   */
   readonly inforNexus?: InforNexusProperty;
   /**
   * marketo block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#marketo AwsAppflowFlow#marketo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#marketo TfFlow#marketo}
   */
   readonly marketo?: SourceFlowConfigSourceConnectorPropertiesMarketoProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3 AwsAppflowFlow#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3 TfFlow#s3}
   */
   readonly s3?: SourceFlowConfigSourceConnectorPropertiesS3Property;
   /**
   * salesforce block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#salesforce AwsAppflowFlow#salesforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#salesforce TfFlow#salesforce}
   */
   readonly salesforce?: SourceFlowConfigSourceConnectorPropertiesSalesforceProperty;
   /**
   * sapo_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#sapo_data AwsAppflowFlow#sapo_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#sapo_data TfFlow#sapo_data}
   */
   readonly sapoData?: SourceFlowConfigSourceConnectorPropertiesSapoDataProperty;
   /**
   * service_now block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#service_now AwsAppflowFlow#service_now}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#service_now TfFlow#service_now}
   */
   readonly serviceNow?: ServiceNowProperty;
   /**
   * singular block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#singular AwsAppflowFlow#singular}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#singular TfFlow#singular}
   */
   readonly singular?: SingularProperty;
   /**
   * slack block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#slack AwsAppflowFlow#slack}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#slack TfFlow#slack}
   */
   readonly slack?: SlackProperty;
   /**
   * trendmicro block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trendmicro AwsAppflowFlow#trendmicro}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trendmicro TfFlow#trendmicro}
   */
   readonly trendmicro?: TrendmicroProperty;
   /**
   * veeva block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#veeva AwsAppflowFlow#veeva}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#veeva TfFlow#veeva}
   */
   readonly veeva?: VeevaProperty;
   /**
   * zendesk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#zendesk AwsAppflowFlow#zendesk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#zendesk TfFlow#zendesk}
   */
   readonly zendesk?: SourceFlowConfigSourceConnectorPropertiesZendeskProperty;
 }
@@ -8698,27 +8698,27 @@ export class SourceConnectorPropertiesPropertyOutputReference extends cdktn.Comp
 }
 export interface SourceFlowConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#api_version AwsAppflowFlow#api_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#api_version TfFlow#api_version}
   */
   readonly apiVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_profile_name AwsAppflowFlow#connector_profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_profile_name TfFlow#connector_profile_name}
   */
   readonly connectorProfileName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_type AwsAppflowFlow#connector_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_type TfFlow#connector_type}
   */
   readonly connectorType: string;
   /**
   * incremental_pull_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#incremental_pull_config AwsAppflowFlow#incremental_pull_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#incremental_pull_config TfFlow#incremental_pull_config}
   */
   readonly incrementalPullConfig?: IncrementalPullConfigProperty;
   /**
   * source_connector_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#source_connector_properties AwsAppflowFlow#source_connector_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#source_connector_properties TfFlow#source_connector_properties}
   */
   readonly sourceConnectorProperties: SourceConnectorPropertiesProperty;
 }
@@ -8854,67 +8854,67 @@ export class SourceFlowConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ConnectorOperatorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#amplitude AwsAppflowFlow#amplitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#amplitude TfFlow#amplitude}
   */
   readonly amplitude?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_connector AwsAppflowFlow#custom_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#custom_connector TfFlow#custom_connector}
   */
   readonly customConnector?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#datadog AwsAppflowFlow#datadog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#datadog TfFlow#datadog}
   */
   readonly datadog?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#dynatrace AwsAppflowFlow#dynatrace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#dynatrace TfFlow#dynatrace}
   */
   readonly dynatrace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#google_analytics AwsAppflowFlow#google_analytics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#google_analytics TfFlow#google_analytics}
   */
   readonly googleAnalytics?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#infor_nexus AwsAppflowFlow#infor_nexus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#infor_nexus TfFlow#infor_nexus}
   */
   readonly inforNexus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#marketo AwsAppflowFlow#marketo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#marketo TfFlow#marketo}
   */
   readonly marketo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3 AwsAppflowFlow#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#s3 TfFlow#s3}
   */
   readonly s3?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#salesforce AwsAppflowFlow#salesforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#salesforce TfFlow#salesforce}
   */
   readonly salesforce?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#sapo_data AwsAppflowFlow#sapo_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#sapo_data TfFlow#sapo_data}
   */
   readonly sapoData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#service_now AwsAppflowFlow#service_now}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#service_now TfFlow#service_now}
   */
   readonly serviceNow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#singular AwsAppflowFlow#singular}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#singular TfFlow#singular}
   */
   readonly singular?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#slack AwsAppflowFlow#slack}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#slack TfFlow#slack}
   */
   readonly slack?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trendmicro AwsAppflowFlow#trendmicro}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trendmicro TfFlow#trendmicro}
   */
   readonly trendmicro?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#veeva AwsAppflowFlow#veeva}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#veeva TfFlow#veeva}
   */
   readonly veeva?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#zendesk AwsAppflowFlow#zendesk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#zendesk TfFlow#zendesk}
   */
   readonly zendesk?: string;
 }
@@ -9330,25 +9330,25 @@ export class ConnectorOperatorPropertyList extends cdktn.ComplexList {
 }
 export interface TaskProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#destination_field AwsAppflowFlow#destination_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#destination_field TfFlow#destination_field}
   */
   readonly destinationField?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#source_fields AwsAppflowFlow#source_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#source_fields TfFlow#source_fields}
   */
   readonly sourceFields?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#task_properties AwsAppflowFlow#task_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#task_properties TfFlow#task_properties}
   */
   readonly taskProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#task_type AwsAppflowFlow#task_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#task_type TfFlow#task_type}
   */
   readonly taskType: string;
   /**
   * connector_operator block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_operator AwsAppflowFlow#connector_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#connector_operator TfFlow#connector_operator}
   */
   readonly connectorOperator?: ConnectorOperatorProperty[] | cdktn.IResolvable;
 }
@@ -9519,31 +9519,31 @@ export class TaskPropertyList extends cdktn.ComplexList {
 }
 export interface ScheduledProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#data_pull_mode AwsAppflowFlow#data_pull_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#data_pull_mode TfFlow#data_pull_mode}
   */
   readonly dataPullMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#first_execution_from AwsAppflowFlow#first_execution_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#first_execution_from TfFlow#first_execution_from}
   */
   readonly firstExecutionFrom?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_end_time AwsAppflowFlow#schedule_end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_end_time TfFlow#schedule_end_time}
   */
   readonly scheduleEndTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_expression AwsAppflowFlow#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_expression TfFlow#schedule_expression}
   */
   readonly scheduleExpression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_offset AwsAppflowFlow#schedule_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_offset TfFlow#schedule_offset}
   */
   readonly scheduleOffset?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_start_time AwsAppflowFlow#schedule_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#schedule_start_time TfFlow#schedule_start_time}
   */
   readonly scheduleStartTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#timezone AwsAppflowFlow#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#timezone TfFlow#timezone}
   */
   readonly timezone?: string;
 }
@@ -9728,7 +9728,7 @@ export interface TriggerPropertiesProperty {
   /**
   * scheduled block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#scheduled AwsAppflowFlow#scheduled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#scheduled TfFlow#scheduled}
   */
   readonly scheduled?: ScheduledProperty;
 }
@@ -9782,13 +9782,13 @@ export class TriggerPropertiesPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TriggerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trigger_type AwsAppflowFlow#trigger_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trigger_type TfFlow#trigger_type}
   */
   readonly triggerType: string;
   /**
   * trigger_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trigger_properties AwsAppflowFlow#trigger_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_flow#trigger_properties TfFlow#trigger_properties}
   */
   readonly triggerProperties?: TriggerPropertiesProperty;
 }

@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsInternetmonitorMonitorConfig extends cdktn.TerraformMetaArguments {
+export interface TfMonitorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#id AwsInternetmonitorMonitor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#id TfMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#max_city_networks_to_monitor AwsInternetmonitorMonitor#max_city_networks_to_monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#max_city_networks_to_monitor TfMonitor#max_city_networks_to_monitor}
   */
   readonly maxCityNetworksToMonitor?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#monitor_name AwsInternetmonitorMonitor#monitor_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#monitor_name TfMonitor#monitor_name}
   */
   readonly monitorName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#region AwsInternetmonitorMonitor#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#region TfMonitor#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#resources AwsInternetmonitorMonitor#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#resources TfMonitor#resources}
   */
   readonly resources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#status AwsInternetmonitorMonitor#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#status TfMonitor#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#tags AwsInternetmonitorMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#tags TfMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#tags_all AwsInternetmonitorMonitor#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#tags_all TfMonitor#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#traffic_percentage_to_monitor AwsInternetmonitorMonitor#traffic_percentage_to_monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#traffic_percentage_to_monitor TfMonitor#traffic_percentage_to_monitor}
   */
   readonly trafficPercentageToMonitor?: number;
   /**
   * health_events_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#health_events_config AwsInternetmonitorMonitor#health_events_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#health_events_config TfMonitor#health_events_config}
   */
-  readonly healthEventsConfig?: AwsInternetmonitorMonitor.HealthEventsConfigProperty;
+  readonly healthEventsConfig?: TfMonitor.HealthEventsConfigProperty;
   /**
   * internet_measurements_log_delivery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#internet_measurements_log_delivery AwsInternetmonitorMonitor#internet_measurements_log_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#internet_measurements_log_delivery TfMonitor#internet_measurements_log_delivery}
   */
-  readonly internetMeasurementsLogDelivery?: AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryProperty;
+  readonly internetMeasurementsLogDelivery?: TfMonitor.InternetMeasurementsLogDeliveryProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor aws_internetmonitor_monitor}
 */
-export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
+export class TfMonitor extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsInternetmonitorMonitor resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMonitor resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsInternetmonitorMonitor to import
-  * @param importFromId The id of the existing AwsInternetmonitorMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsInternetmonitorMonitor to import is found
+  * @param importToId The construct id used in the generated config for the TfMonitor to import
+  * @param importFromId The id of the existing TfMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMonitor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_internetmonitor_monitor", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsInternetmonitorMonitorConfig
+  * @param options TfMonitorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsInternetmonitorMonitorConfig) {
+  public constructor(scope: Construct, id: string, config: TfMonitorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_internetmonitor_monitor',
       terraformGeneratorMetadata: {
@@ -276,11 +276,11 @@ export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
   }
 
   // health_events_config - computed: false, optional: true, required: false
-  private _healthEventsConfig = new AwsInternetmonitorMonitor.HealthEventsConfigPropertyOutputReference(this, "health_events_config");
+  private _healthEventsConfig = new TfMonitor.HealthEventsConfigPropertyOutputReference(this, "health_events_config");
   public get healthEventsConfig() {
     return this._healthEventsConfig;
   }
-  public putHealthEventsConfig(value: AwsInternetmonitorMonitor.HealthEventsConfigProperty) {
+  public putHealthEventsConfig(value: TfMonitor.HealthEventsConfigProperty) {
     this._healthEventsConfig.internalValue = value;
   }
   public resetHealthEventsConfig() {
@@ -292,11 +292,11 @@ export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
   }
 
   // internet_measurements_log_delivery - computed: false, optional: true, required: false
-  private _internetMeasurementsLogDelivery = new AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryPropertyOutputReference(this, "internet_measurements_log_delivery");
+  private _internetMeasurementsLogDelivery = new TfMonitor.InternetMeasurementsLogDeliveryPropertyOutputReference(this, "internet_measurements_log_delivery");
   public get internetMeasurementsLogDelivery() {
     return this._internetMeasurementsLogDelivery;
   }
-  public putInternetMeasurementsLogDelivery(value: AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryProperty) {
+  public putInternetMeasurementsLogDelivery(value: TfMonitor.InternetMeasurementsLogDeliveryProperty) {
     this._internetMeasurementsLogDelivery.internalValue = value;
   }
   public resetInternetMeasurementsLogDelivery() {
@@ -322,8 +322,8 @@ export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       traffic_percentage_to_monitor: cdktn.numberToTerraform(this._trafficPercentageToMonitor),
-      health_events_config: awsInternetmonitorMonitorHealthEventsConfigPropertyToTerraform(this._healthEventsConfig.internalValue),
-      internet_measurements_log_delivery: awsInternetmonitorMonitorInternetMeasurementsLogDeliveryPropertyToTerraform(this._internetMeasurementsLogDelivery.internalValue),
+      health_events_config: tfMonitorHealthEventsConfigPropertyToTerraform(this._healthEventsConfig.internalValue),
+      internet_measurements_log_delivery: tfMonitorInternetMeasurementsLogDeliveryPropertyToTerraform(this._internetMeasurementsLogDelivery.internalValue),
     };
   }
 
@@ -384,16 +384,16 @@ export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       health_events_config: {
-        value: awsInternetmonitorMonitorHealthEventsConfigPropertyToHclTerraform(this._healthEventsConfig.internalValue),
+        value: tfMonitorHealthEventsConfigPropertyToHclTerraform(this._healthEventsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInternetmonitorMonitor.HealthEventsConfigPropertyList",
+        storageClassType: "TfMonitor.HealthEventsConfigPropertyList",
       },
       internet_measurements_log_delivery: {
-        value: awsInternetmonitorMonitorInternetMeasurementsLogDeliveryPropertyToHclTerraform(this._internetMeasurementsLogDelivery.internalValue),
+        value: tfMonitorInternetMeasurementsLogDeliveryPropertyToHclTerraform(this._internetMeasurementsLogDelivery.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryPropertyList",
+        storageClassType: "TfMonitor.InternetMeasurementsLogDeliveryPropertyList",
       },
     };
 
@@ -402,7 +402,7 @@ export class AwsInternetmonitorMonitor extends cdktn.TerraformResource {
   }
 }
 
-export function awsInternetmonitorMonitorHealthEventsConfigPropertyToTerraform(struct?: AwsInternetmonitorMonitor.HealthEventsConfigPropertyOutputReference | AwsInternetmonitorMonitor.HealthEventsConfigProperty): any {
+export function tfMonitorHealthEventsConfigPropertyToTerraform(struct?: TfMonitor.HealthEventsConfigPropertyOutputReference | TfMonitor.HealthEventsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function awsInternetmonitorMonitorHealthEventsConfigPropertyToTerraform(s
 }
 
 
-export function awsInternetmonitorMonitorHealthEventsConfigPropertyToHclTerraform(struct?: AwsInternetmonitorMonitor.HealthEventsConfigPropertyOutputReference | AwsInternetmonitorMonitor.HealthEventsConfigProperty): any {
+export function tfMonitorHealthEventsConfigPropertyToHclTerraform(struct?: TfMonitor.HealthEventsConfigPropertyOutputReference | TfMonitor.HealthEventsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function awsInternetmonitorMonitorHealthEventsConfigPropertyToHclTerrafor
 }
 
 
-export function awsInternetmonitorMonitorS3ConfigPropertyToTerraform(struct?: AwsInternetmonitorMonitor.S3ConfigPropertyOutputReference | AwsInternetmonitorMonitor.S3ConfigProperty): any {
+export function tfMonitorS3ConfigPropertyToTerraform(struct?: TfMonitor.S3ConfigPropertyOutputReference | TfMonitor.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsInternetmonitorMonitorS3ConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsInternetmonitorMonitorS3ConfigPropertyToHclTerraform(struct?: AwsInternetmonitorMonitor.S3ConfigPropertyOutputReference | AwsInternetmonitorMonitor.S3ConfigProperty): any {
+export function tfMonitorS3ConfigPropertyToHclTerraform(struct?: TfMonitor.S3ConfigPropertyOutputReference | TfMonitor.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,25 +483,25 @@ export function awsInternetmonitorMonitorS3ConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function awsInternetmonitorMonitorInternetMeasurementsLogDeliveryPropertyToTerraform(struct?: AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryPropertyOutputReference | AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryProperty): any {
+export function tfMonitorInternetMeasurementsLogDeliveryPropertyToTerraform(struct?: TfMonitor.InternetMeasurementsLogDeliveryPropertyOutputReference | TfMonitor.InternetMeasurementsLogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_config: awsInternetmonitorMonitorS3ConfigPropertyToTerraform(struct!.s3Config),
+    s3_config: tfMonitorS3ConfigPropertyToTerraform(struct!.s3Config),
   }
 }
 
 
-export function awsInternetmonitorMonitorInternetMeasurementsLogDeliveryPropertyToHclTerraform(struct?: AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryPropertyOutputReference | AwsInternetmonitorMonitor.InternetMeasurementsLogDeliveryProperty): any {
+export function tfMonitorInternetMeasurementsLogDeliveryPropertyToHclTerraform(struct?: TfMonitor.InternetMeasurementsLogDeliveryPropertyOutputReference | TfMonitor.InternetMeasurementsLogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_config: {
-      value: awsInternetmonitorMonitorS3ConfigPropertyToHclTerraform(struct!.s3Config),
+      value: tfMonitorS3ConfigPropertyToHclTerraform(struct!.s3Config),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigPropertyList",
@@ -513,14 +513,14 @@ export function awsInternetmonitorMonitorInternetMeasurementsLogDeliveryProperty
 }
 
 
-export namespace AwsInternetmonitorMonitor {
+export namespace TfMonitor {
 export interface HealthEventsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#availability_score_threshold AwsInternetmonitorMonitor#availability_score_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#availability_score_threshold TfMonitor#availability_score_threshold}
   */
   readonly availabilityScoreThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#performance_score_threshold AwsInternetmonitorMonitor#performance_score_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#performance_score_threshold TfMonitor#performance_score_threshold}
   */
   readonly performanceScoreThreshold?: number;
 }
@@ -596,15 +596,15 @@ export class HealthEventsConfigPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface S3ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#bucket_name AwsInternetmonitorMonitor#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#bucket_name TfMonitor#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#bucket_prefix AwsInternetmonitorMonitor#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#bucket_prefix TfMonitor#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#log_delivery_status AwsInternetmonitorMonitor#log_delivery_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#log_delivery_status TfMonitor#log_delivery_status}
   */
   readonly logDeliveryStatus?: string;
 }
@@ -701,7 +701,7 @@ export interface InternetMeasurementsLogDeliveryProperty {
   /**
   * s3_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#s3_config AwsInternetmonitorMonitor#s3_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internetmonitor_monitor#s3_config TfMonitor#s3_config}
   */
   readonly s3Config?: S3ConfigProperty;
 }

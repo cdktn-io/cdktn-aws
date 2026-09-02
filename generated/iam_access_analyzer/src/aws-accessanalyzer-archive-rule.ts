@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAccessanalyzerArchiveRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfArchiveRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#analyzer_name AwsAccessanalyzerArchiveRule#analyzer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#analyzer_name TfArchiveRule#analyzer_name}
   */
   readonly analyzerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#id AwsAccessanalyzerArchiveRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#id TfArchiveRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface AwsAccessanalyzerArchiveRuleConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#region AwsAccessanalyzerArchiveRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#region TfArchiveRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#rule_name AwsAccessanalyzerArchiveRule#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#rule_name TfArchiveRule#rule_name}
   */
   readonly ruleName: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#filter AwsAccessanalyzerArchiveRule#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#filter TfArchiveRule#filter}
   */
-  readonly filter: AwsAccessanalyzerArchiveRule.FilterProperty[] | cdktn.IResolvable;
+  readonly filter: TfArchiveRule.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule aws_accessanalyzer_archive_rule}
 */
-export class AwsAccessanalyzerArchiveRule extends cdktn.TerraformResource {
+export class TfArchiveRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsAccessanalyzerArchiveRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAccessanalyzerArchiveRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfArchiveRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAccessanalyzerArchiveRule to import
-  * @param importFromId The id of the existing AwsAccessanalyzerArchiveRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAccessanalyzerArchiveRule to import is found
+  * @param importToId The construct id used in the generated config for the TfArchiveRule to import
+  * @param importFromId The id of the existing TfArchiveRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfArchiveRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_accessanalyzer_archive_rule", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsAccessanalyzerArchiveRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAccessanalyzerArchiveRuleConfig
+  * @param options TfArchiveRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAccessanalyzerArchiveRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfArchiveRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_accessanalyzer_archive_rule',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsAccessanalyzerArchiveRule extends cdktn.TerraformResource {
   }
 
   // filter - computed: false, optional: false, required: true
-  private _filter = new AwsAccessanalyzerArchiveRule.FilterPropertyList(this, "filter", true);
+  private _filter = new TfArchiveRule.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: AwsAccessanalyzerArchiveRule.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfArchiveRule.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -178,7 +178,7 @@ export class AwsAccessanalyzerArchiveRule extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       rule_name: cdktn.stringToTerraform(this._ruleName),
-      filter: cdktn.listMapper(awsAccessanalyzerArchiveRuleFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfArchiveRuleFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -209,10 +209,10 @@ export class AwsAccessanalyzerArchiveRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(awsAccessanalyzerArchiveRuleFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfArchiveRuleFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAccessanalyzerArchiveRule.FilterPropertyList",
+        storageClassType: "TfArchiveRule.FilterPropertyList",
       },
     };
 
@@ -221,7 +221,7 @@ export class AwsAccessanalyzerArchiveRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsAccessanalyzerArchiveRuleFilterPropertyToTerraform(struct?: AwsAccessanalyzerArchiveRule.FilterProperty | cdktn.IResolvable): any {
+export function tfArchiveRuleFilterPropertyToTerraform(struct?: TfArchiveRule.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function awsAccessanalyzerArchiveRuleFilterPropertyToTerraform(struct?: A
 }
 
 
-export function awsAccessanalyzerArchiveRuleFilterPropertyToHclTerraform(struct?: AwsAccessanalyzerArchiveRule.FilterProperty | cdktn.IResolvable): any {
+export function tfArchiveRuleFilterPropertyToHclTerraform(struct?: TfArchiveRule.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,26 +279,26 @@ export function awsAccessanalyzerArchiveRuleFilterPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsAccessanalyzerArchiveRule {
+export namespace TfArchiveRule {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#contains AwsAccessanalyzerArchiveRule#contains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#contains TfArchiveRule#contains}
   */
   readonly contains?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#criteria AwsAccessanalyzerArchiveRule#criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#criteria TfArchiveRule#criteria}
   */
   readonly criteria: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#eq AwsAccessanalyzerArchiveRule#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#eq TfArchiveRule#eq}
   */
   readonly eq?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#exists AwsAccessanalyzerArchiveRule#exists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#exists TfArchiveRule#exists}
   */
   readonly exists?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#neq AwsAccessanalyzerArchiveRule#neq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_archive_rule#neq TfArchiveRule#neq}
   */
   readonly neq?: string[];
 }

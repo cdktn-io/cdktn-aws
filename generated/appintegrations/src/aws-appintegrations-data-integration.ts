@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppintegrationsDataIntegrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataIntegrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#description AwsAppintegrationsDataIntegration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#description TfDataIntegration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#id AwsAppintegrationsDataIntegration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#id TfDataIntegration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#kms_key AwsAppintegrationsDataIntegration#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#kms_key TfDataIntegration#kms_key}
   */
   readonly kmsKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#name AwsAppintegrationsDataIntegration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#name TfDataIntegration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#region AwsAppintegrationsDataIntegration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#region TfDataIntegration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#source_uri AwsAppintegrationsDataIntegration#source_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#source_uri TfDataIntegration#source_uri}
   */
   readonly sourceUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#tags AwsAppintegrationsDataIntegration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#tags TfDataIntegration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#tags_all AwsAppintegrationsDataIntegration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#tags_all TfDataIntegration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * schedule_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#schedule_config AwsAppintegrationsDataIntegration#schedule_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#schedule_config TfDataIntegration#schedule_config}
   */
-  readonly scheduleConfig: AwsAppintegrationsDataIntegration.ScheduleConfigProperty;
+  readonly scheduleConfig: TfDataIntegration.ScheduleConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration aws_appintegrations_data_integration}
 */
-export class AwsAppintegrationsDataIntegration extends cdktn.TerraformResource {
+export class TfDataIntegration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsAppintegrationsDataIntegration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppintegrationsDataIntegration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataIntegration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppintegrationsDataIntegration to import
-  * @param importFromId The id of the existing AwsAppintegrationsDataIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppintegrationsDataIntegration to import is found
+  * @param importToId The construct id used in the generated config for the TfDataIntegration to import
+  * @param importFromId The id of the existing TfDataIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataIntegration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appintegrations_data_integration", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsAppintegrationsDataIntegration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppintegrationsDataIntegrationConfig
+  * @param options TfDataIntegrationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppintegrationsDataIntegrationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataIntegrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appintegrations_data_integration',
       terraformGeneratorMetadata: {
@@ -242,11 +242,11 @@ export class AwsAppintegrationsDataIntegration extends cdktn.TerraformResource {
   }
 
   // schedule_config - computed: false, optional: false, required: true
-  private _scheduleConfig = new AwsAppintegrationsDataIntegration.ScheduleConfigPropertyOutputReference(this, "schedule_config");
+  private _scheduleConfig = new TfDataIntegration.ScheduleConfigPropertyOutputReference(this, "schedule_config");
   public get scheduleConfig() {
     return this._scheduleConfig;
   }
-  public putScheduleConfig(value: AwsAppintegrationsDataIntegration.ScheduleConfigProperty) {
+  public putScheduleConfig(value: TfDataIntegration.ScheduleConfigProperty) {
     this._scheduleConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -268,7 +268,7 @@ export class AwsAppintegrationsDataIntegration extends cdktn.TerraformResource {
       source_uri: cdktn.stringToTerraform(this._sourceUri),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      schedule_config: awsAppintegrationsDataIntegrationScheduleConfigPropertyToTerraform(this._scheduleConfig.internalValue),
+      schedule_config: tfDataIntegrationScheduleConfigPropertyToTerraform(this._scheduleConfig.internalValue),
     };
   }
 
@@ -323,10 +323,10 @@ export class AwsAppintegrationsDataIntegration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       schedule_config: {
-        value: awsAppintegrationsDataIntegrationScheduleConfigPropertyToHclTerraform(this._scheduleConfig.internalValue),
+        value: tfDataIntegrationScheduleConfigPropertyToHclTerraform(this._scheduleConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppintegrationsDataIntegration.ScheduleConfigPropertyList",
+        storageClassType: "TfDataIntegration.ScheduleConfigPropertyList",
       },
     };
 
@@ -335,7 +335,7 @@ export class AwsAppintegrationsDataIntegration extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppintegrationsDataIntegrationScheduleConfigPropertyToTerraform(struct?: AwsAppintegrationsDataIntegration.ScheduleConfigPropertyOutputReference | AwsAppintegrationsDataIntegration.ScheduleConfigProperty): any {
+export function tfDataIntegrationScheduleConfigPropertyToTerraform(struct?: TfDataIntegration.ScheduleConfigPropertyOutputReference | TfDataIntegration.ScheduleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function awsAppintegrationsDataIntegrationScheduleConfigPropertyToTerrafo
 }
 
 
-export function awsAppintegrationsDataIntegrationScheduleConfigPropertyToHclTerraform(struct?: AwsAppintegrationsDataIntegration.ScheduleConfigPropertyOutputReference | AwsAppintegrationsDataIntegration.ScheduleConfigProperty): any {
+export function tfDataIntegrationScheduleConfigPropertyToHclTerraform(struct?: TfDataIntegration.ScheduleConfigPropertyOutputReference | TfDataIntegration.ScheduleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,18 +379,18 @@ export function awsAppintegrationsDataIntegrationScheduleConfigPropertyToHclTerr
 }
 
 
-export namespace AwsAppintegrationsDataIntegration {
+export namespace TfDataIntegration {
 export interface ScheduleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#first_execution_from AwsAppintegrationsDataIntegration#first_execution_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#first_execution_from TfDataIntegration#first_execution_from}
   */
   readonly firstExecutionFrom: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#object AwsAppintegrationsDataIntegration#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#object TfDataIntegration#object}
   */
   readonly object: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#schedule_expression AwsAppintegrationsDataIntegration#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_data_integration#schedule_expression TfDataIntegration#schedule_expression}
   */
   readonly scheduleExpression: string;
 }

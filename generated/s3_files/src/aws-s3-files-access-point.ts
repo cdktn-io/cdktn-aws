@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3FilesAccessPointConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccessPointConfig extends cdktn.TerraformMetaArguments {
   /**
   * File system ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#file_system_id AwsS3FilesAccessPoint#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#file_system_id TfAccessPoint#file_system_id}
   */
   readonly fileSystemId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#region AwsS3FilesAccessPoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#region TfAccessPoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#tags AwsS3FilesAccessPoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#tags TfAccessPoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * posix_user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#posix_user AwsS3FilesAccessPoint#posix_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#posix_user TfAccessPoint#posix_user}
   */
-  readonly posixUser?: AwsS3FilesAccessPoint.PosixUserProperty[] | cdktn.IResolvable;
+  readonly posixUser?: TfAccessPoint.PosixUserProperty[] | cdktn.IResolvable;
   /**
   * root_directory block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#root_directory AwsS3FilesAccessPoint#root_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#root_directory TfAccessPoint#root_directory}
   */
-  readonly rootDirectory?: AwsS3FilesAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable;
+  readonly rootDirectory?: TfAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#timeouts AwsS3FilesAccessPoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#timeouts TfAccessPoint#timeouts}
   */
-  readonly timeouts?: AwsS3FilesAccessPoint.TimeoutsProperty;
+  readonly timeouts?: TfAccessPoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point aws_s3files_access_point}
 */
-export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
+export class TfAccessPoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3FilesAccessPoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccessPoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3FilesAccessPoint to import
-  * @param importFromId The id of the existing AwsS3FilesAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3FilesAccessPoint to import is found
+  * @param importToId The construct id used in the generated config for the TfAccessPoint to import
+  * @param importFromId The id of the existing TfAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccessPoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3files_access_point", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3FilesAccessPointConfig
+  * @param options TfAccessPointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3FilesAccessPointConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccessPointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3files_access_point',
       terraformGeneratorMetadata: {
@@ -182,11 +182,11 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
   }
 
   // posix_user - computed: false, optional: true, required: false
-  private _posixUser = new AwsS3FilesAccessPoint.PosixUserPropertyList(this, "posix_user", false);
+  private _posixUser = new TfAccessPoint.PosixUserPropertyList(this, "posix_user", false);
   public get posixUser() {
     return this._posixUser;
   }
-  public putPosixUser(value: AwsS3FilesAccessPoint.PosixUserProperty[] | cdktn.IResolvable) {
+  public putPosixUser(value: TfAccessPoint.PosixUserProperty[] | cdktn.IResolvable) {
     this._posixUser.internalValue = value;
   }
   public resetPosixUser() {
@@ -198,11 +198,11 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
   }
 
   // root_directory - computed: false, optional: true, required: false
-  private _rootDirectory = new AwsS3FilesAccessPoint.RootDirectoryPropertyList(this, "root_directory", false);
+  private _rootDirectory = new TfAccessPoint.RootDirectoryPropertyList(this, "root_directory", false);
   public get rootDirectory() {
     return this._rootDirectory;
   }
-  public putRootDirectory(value: AwsS3FilesAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable) {
+  public putRootDirectory(value: TfAccessPoint.RootDirectoryProperty[] | cdktn.IResolvable) {
     this._rootDirectory.internalValue = value;
   }
   public resetRootDirectory() {
@@ -214,11 +214,11 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsS3FilesAccessPoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAccessPoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsS3FilesAccessPoint.TimeoutsProperty) {
+  public putTimeouts(value: TfAccessPoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -238,9 +238,9 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
       file_system_id: cdktn.stringToTerraform(this._fileSystemId),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      posix_user: cdktn.listMapper(awsS3FilesAccessPointPosixUserPropertyToTerraform, true)(this._posixUser.internalValue),
-      root_directory: cdktn.listMapper(awsS3FilesAccessPointRootDirectoryPropertyToTerraform, true)(this._rootDirectory.internalValue),
-      timeouts: awsS3FilesAccessPointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      posix_user: cdktn.listMapper(tfAccessPointPosixUserPropertyToTerraform, true)(this._posixUser.internalValue),
+      root_directory: cdktn.listMapper(tfAccessPointRootDirectoryPropertyToTerraform, true)(this._rootDirectory.internalValue),
+      timeouts: tfAccessPointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -265,22 +265,22 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       posix_user: {
-        value: cdktn.listMapperHcl(awsS3FilesAccessPointPosixUserPropertyToHclTerraform, true)(this._posixUser.internalValue),
+        value: cdktn.listMapperHcl(tfAccessPointPosixUserPropertyToHclTerraform, true)(this._posixUser.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3FilesAccessPoint.PosixUserPropertyList",
+        storageClassType: "TfAccessPoint.PosixUserPropertyList",
       },
       root_directory: {
-        value: cdktn.listMapperHcl(awsS3FilesAccessPointRootDirectoryPropertyToHclTerraform, true)(this._rootDirectory.internalValue),
+        value: cdktn.listMapperHcl(tfAccessPointRootDirectoryPropertyToHclTerraform, true)(this._rootDirectory.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3FilesAccessPoint.RootDirectoryPropertyList",
+        storageClassType: "TfAccessPoint.RootDirectoryPropertyList",
       },
       timeouts: {
-        value: awsS3FilesAccessPointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAccessPointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsS3FilesAccessPoint.TimeoutsProperty",
+        storageClassType: "TfAccessPoint.TimeoutsProperty",
       },
     };
 
@@ -289,7 +289,7 @@ export class AwsS3FilesAccessPoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3FilesAccessPointPosixUserPropertyToTerraform(struct?: AwsS3FilesAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
+export function tfAccessPointPosixUserPropertyToTerraform(struct?: TfAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function awsS3FilesAccessPointPosixUserPropertyToTerraform(struct?: AwsS3
 }
 
 
-export function awsS3FilesAccessPointPosixUserPropertyToHclTerraform(struct?: AwsS3FilesAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
+export function tfAccessPointPosixUserPropertyToHclTerraform(struct?: TfAccessPoint.PosixUserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function awsS3FilesAccessPointPosixUserPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsS3FilesAccessPointCreationPermissionsPropertyToTerraform(struct?: AwsS3FilesAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
+export function tfAccessPointCreationPermissionsPropertyToTerraform(struct?: TfAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function awsS3FilesAccessPointCreationPermissionsPropertyToTerraform(stru
 }
 
 
-export function awsS3FilesAccessPointCreationPermissionsPropertyToHclTerraform(struct?: AwsS3FilesAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
+export function tfAccessPointCreationPermissionsPropertyToHclTerraform(struct?: TfAccessPoint.CreationPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,19 +377,19 @@ export function awsS3FilesAccessPointCreationPermissionsPropertyToHclTerraform(s
 }
 
 
-export function awsS3FilesAccessPointRootDirectoryPropertyToTerraform(struct?: AwsS3FilesAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
+export function tfAccessPointRootDirectoryPropertyToTerraform(struct?: TfAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     path: cdktn.stringToTerraform(struct!.path),
-    creation_permissions: cdktn.listMapper(awsS3FilesAccessPointCreationPermissionsPropertyToTerraform, true)(struct!.creationPermissions),
+    creation_permissions: cdktn.listMapper(tfAccessPointCreationPermissionsPropertyToTerraform, true)(struct!.creationPermissions),
   }
 }
 
 
-export function awsS3FilesAccessPointRootDirectoryPropertyToHclTerraform(struct?: AwsS3FilesAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
+export function tfAccessPointRootDirectoryPropertyToHclTerraform(struct?: TfAccessPoint.RootDirectoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function awsS3FilesAccessPointRootDirectoryPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     creation_permissions: {
-      value: cdktn.listMapperHcl(awsS3FilesAccessPointCreationPermissionsPropertyToHclTerraform, true)(struct!.creationPermissions),
+      value: cdktn.listMapperHcl(tfAccessPointCreationPermissionsPropertyToHclTerraform, true)(struct!.creationPermissions),
       isBlock: true,
       type: "list",
       storageClassType: "CreationPermissionsPropertyList",
@@ -414,7 +414,7 @@ export function awsS3FilesAccessPointRootDirectoryPropertyToHclTerraform(struct?
 }
 
 
-export function awsS3FilesAccessPointTimeoutsPropertyToTerraform(struct?: AwsS3FilesAccessPoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccessPointTimeoutsPropertyToTerraform(struct?: TfAccessPoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function awsS3FilesAccessPointTimeoutsPropertyToTerraform(struct?: AwsS3F
 }
 
 
-export function awsS3FilesAccessPointTimeoutsPropertyToHclTerraform(struct?: AwsS3FilesAccessPoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccessPointTimeoutsPropertyToHclTerraform(struct?: TfAccessPoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,24 +451,24 @@ export function awsS3FilesAccessPointTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsS3FilesAccessPoint {
+export namespace TfAccessPoint {
 export interface PosixUserProperty {
   /**
   * POSIX group ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#gid AwsS3FilesAccessPoint#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#gid TfAccessPoint#gid}
   */
   readonly gid: number;
   /**
   * Secondary POSIX group IDs
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#secondary_gids AwsS3FilesAccessPoint#secondary_gids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#secondary_gids TfAccessPoint#secondary_gids}
   */
   readonly secondaryGids?: number[];
   /**
   * POSIX user ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#uid AwsS3FilesAccessPoint#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#uid TfAccessPoint#uid}
   */
   readonly uid: number;
 }
@@ -594,19 +594,19 @@ export interface CreationPermissionsProperty {
   /**
   * Owner group ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#owner_gid AwsS3FilesAccessPoint#owner_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#owner_gid TfAccessPoint#owner_gid}
   */
   readonly ownerGid: number;
   /**
   * Owner user ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#owner_uid AwsS3FilesAccessPoint#owner_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#owner_uid TfAccessPoint#owner_uid}
   */
   readonly ownerUid: number;
   /**
   * POSIX permissions
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#permissions AwsS3FilesAccessPoint#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#permissions TfAccessPoint#permissions}
   */
   readonly permissions: string;
 }
@@ -729,13 +729,13 @@ export interface RootDirectoryProperty {
   /**
   * Root directory path
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#path AwsS3FilesAccessPoint#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#path TfAccessPoint#path}
   */
   readonly path?: string;
   /**
   * creation_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#creation_permissions AwsS3FilesAccessPoint#creation_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#creation_permissions TfAccessPoint#creation_permissions}
   */
   readonly creationPermissions?: CreationPermissionsProperty[] | cdktn.IResolvable;
 }
@@ -845,13 +845,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#create AwsS3FilesAccessPoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#create TfAccessPoint#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#delete AwsS3FilesAccessPoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_access_point#delete TfAccessPoint#delete}
   */
   readonly delete?: string;
 }

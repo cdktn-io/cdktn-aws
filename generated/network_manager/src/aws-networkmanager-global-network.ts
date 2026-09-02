@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerGlobalNetworkConfig extends cdktn.TerraformMetaArguments {
+export interface TfGlobalNetworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#description AwsNetworkmanagerGlobalNetwork#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#description TfGlobalNetwork#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#id AwsNetworkmanagerGlobalNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#id TfGlobalNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#tags AwsNetworkmanagerGlobalNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#tags TfGlobalNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#tags_all AwsNetworkmanagerGlobalNetwork#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#tags_all TfGlobalNetwork#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#timeouts AwsNetworkmanagerGlobalNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#timeouts TfGlobalNetwork#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerGlobalNetwork.TimeoutsProperty;
+  readonly timeouts?: TfGlobalNetwork.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network aws_networkmanager_global_network}
 */
-export class AwsNetworkmanagerGlobalNetwork extends cdktn.TerraformResource {
+export class TfGlobalNetwork extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsNetworkmanagerGlobalNetwork extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerGlobalNetwork resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGlobalNetwork resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerGlobalNetwork to import
-  * @param importFromId The id of the existing AwsNetworkmanagerGlobalNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerGlobalNetwork to import is found
+  * @param importToId The construct id used in the generated config for the TfGlobalNetwork to import
+  * @param importFromId The id of the existing TfGlobalNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGlobalNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_global_network", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsNetworkmanagerGlobalNetwork extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerGlobalNetworkConfig = {}
+  * @param options TfGlobalNetworkConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerGlobalNetworkConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfGlobalNetworkConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_global_network',
       terraformGeneratorMetadata: {
@@ -165,11 +165,11 @@ export class AwsNetworkmanagerGlobalNetwork extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerGlobalNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGlobalNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerGlobalNetwork.TimeoutsProperty) {
+  public putTimeouts(value: TfGlobalNetwork.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -190,7 +190,7 @@ export class AwsNetworkmanagerGlobalNetwork extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsNetworkmanagerGlobalNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfGlobalNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -221,10 +221,10 @@ export class AwsNetworkmanagerGlobalNetwork extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsNetworkmanagerGlobalNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGlobalNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerGlobalNetwork.TimeoutsProperty",
+        storageClassType: "TfGlobalNetwork.TimeoutsProperty",
       },
     };
 
@@ -233,7 +233,7 @@ export class AwsNetworkmanagerGlobalNetwork extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkmanagerGlobalNetworkTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerGlobalNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGlobalNetworkTimeoutsPropertyToTerraform(struct?: TfGlobalNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function awsNetworkmanagerGlobalNetworkTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsNetworkmanagerGlobalNetworkTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerGlobalNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGlobalNetworkTimeoutsPropertyToHclTerraform(struct?: TfGlobalNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,18 +277,18 @@ export function awsNetworkmanagerGlobalNetworkTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsNetworkmanagerGlobalNetwork {
+export namespace TfGlobalNetwork {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#create AwsNetworkmanagerGlobalNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#create TfGlobalNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#delete AwsNetworkmanagerGlobalNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#delete TfGlobalNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#update AwsNetworkmanagerGlobalNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_global_network#update TfGlobalNetwork#update}
   */
   readonly update?: string;
 }

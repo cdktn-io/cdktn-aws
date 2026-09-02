@@ -5,59 +5,59 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsResiliencehubv2ServiceConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#dependency_discovery AwsResiliencehubv2Service#dependency_discovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#dependency_discovery TfService#dependency_discovery}
   */
   readonly dependencyDiscovery?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#description AwsResiliencehubv2Service#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#description TfService#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#kms_key_id AwsResiliencehubv2Service#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#kms_key_id TfService#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#name AwsResiliencehubv2Service#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#name TfService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#policy_arn AwsResiliencehubv2Service#policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#policy_arn TfService#policy_arn}
   */
   readonly policyArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#region AwsResiliencehubv2Service#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#region TfService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#regions AwsResiliencehubv2Service#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#regions TfService#regions}
   */
   readonly regions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#tags AwsResiliencehubv2Service#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#tags TfService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * associated_system block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#associated_system AwsResiliencehubv2Service#associated_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#associated_system TfService#associated_system}
   */
-  readonly associatedSystem?: AwsResiliencehubv2Service.AssociatedSystemProperty[] | cdktn.IResolvable;
+  readonly associatedSystem?: TfService.AssociatedSystemProperty[] | cdktn.IResolvable;
   /**
   * permission_model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#permission_model AwsResiliencehubv2Service#permission_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#permission_model TfService#permission_model}
   */
-  readonly permissionModel?: AwsResiliencehubv2Service.PermissionModelProperty[] | cdktn.IResolvable;
+  readonly permissionModel?: TfService.PermissionModelProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service aws_resiliencehubv2_service}
 */
-export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
+export class TfService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsResiliencehubv2Service resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsResiliencehubv2Service to import
-  * @param importFromId The id of the existing AwsResiliencehubv2Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsResiliencehubv2Service to import is found
+  * @param importToId The construct id used in the generated config for the TfService to import
+  * @param importFromId The id of the existing TfService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_service", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsResiliencehubv2ServiceConfig
+  * @param options TfServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsResiliencehubv2ServiceConfig) {
+  public constructor(scope: Construct, id: string, config: TfServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_service',
       terraformGeneratorMetadata: {
@@ -255,11 +255,11 @@ export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
   }
 
   // associated_system - computed: false, optional: true, required: false
-  private _associatedSystem = new AwsResiliencehubv2Service.AssociatedSystemPropertyList(this, "associated_system", true);
+  private _associatedSystem = new TfService.AssociatedSystemPropertyList(this, "associated_system", true);
   public get associatedSystem() {
     return this._associatedSystem;
   }
-  public putAssociatedSystem(value: AwsResiliencehubv2Service.AssociatedSystemProperty[] | cdktn.IResolvable) {
+  public putAssociatedSystem(value: TfService.AssociatedSystemProperty[] | cdktn.IResolvable) {
     this._associatedSystem.internalValue = value;
   }
   public resetAssociatedSystem() {
@@ -271,11 +271,11 @@ export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
   }
 
   // permission_model - computed: false, optional: true, required: false
-  private _permissionModel = new AwsResiliencehubv2Service.PermissionModelPropertyList(this, "permission_model", false);
+  private _permissionModel = new TfService.PermissionModelPropertyList(this, "permission_model", false);
   public get permissionModel() {
     return this._permissionModel;
   }
-  public putPermissionModel(value: AwsResiliencehubv2Service.PermissionModelProperty[] | cdktn.IResolvable) {
+  public putPermissionModel(value: TfService.PermissionModelProperty[] | cdktn.IResolvable) {
     this._permissionModel.internalValue = value;
   }
   public resetPermissionModel() {
@@ -300,8 +300,8 @@ export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       regions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._regions),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      associated_system: cdktn.listMapper(awsResiliencehubv2ServiceAssociatedSystemPropertyToTerraform, true)(this._associatedSystem.internalValue),
-      permission_model: cdktn.listMapper(awsResiliencehubv2ServicePermissionModelPropertyToTerraform, true)(this._permissionModel.internalValue),
+      associated_system: cdktn.listMapper(tfServiceAssociatedSystemPropertyToTerraform, true)(this._associatedSystem.internalValue),
+      permission_model: cdktn.listMapper(tfServicePermissionModelPropertyToTerraform, true)(this._permissionModel.internalValue),
     };
   }
 
@@ -356,16 +356,16 @@ export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       associated_system: {
-        value: cdktn.listMapperHcl(awsResiliencehubv2ServiceAssociatedSystemPropertyToHclTerraform, true)(this._associatedSystem.internalValue),
+        value: cdktn.listMapperHcl(tfServiceAssociatedSystemPropertyToHclTerraform, true)(this._associatedSystem.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsResiliencehubv2Service.AssociatedSystemPropertyList",
+        storageClassType: "TfService.AssociatedSystemPropertyList",
       },
       permission_model: {
-        value: cdktn.listMapperHcl(awsResiliencehubv2ServicePermissionModelPropertyToHclTerraform, true)(this._permissionModel.internalValue),
+        value: cdktn.listMapperHcl(tfServicePermissionModelPropertyToHclTerraform, true)(this._permissionModel.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsResiliencehubv2Service.PermissionModelPropertyList",
+        storageClassType: "TfService.PermissionModelPropertyList",
       },
     };
 
@@ -374,7 +374,7 @@ export class AwsResiliencehubv2Service extends cdktn.TerraformResource {
   }
 }
 
-export function awsResiliencehubv2ServiceAssociatedSystemPropertyToTerraform(struct?: AwsResiliencehubv2Service.AssociatedSystemProperty | cdktn.IResolvable): any {
+export function tfServiceAssociatedSystemPropertyToTerraform(struct?: TfService.AssociatedSystemProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function awsResiliencehubv2ServiceAssociatedSystemPropertyToTerraform(str
 }
 
 
-export function awsResiliencehubv2ServiceAssociatedSystemPropertyToHclTerraform(struct?: AwsResiliencehubv2Service.AssociatedSystemProperty | cdktn.IResolvable): any {
+export function tfServiceAssociatedSystemPropertyToHclTerraform(struct?: TfService.AssociatedSystemProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function awsResiliencehubv2ServiceAssociatedSystemPropertyToHclTerraform(
 }
 
 
-export function awsResiliencehubv2ServiceCrossAccountRolePropertyToTerraform(struct?: AwsResiliencehubv2Service.CrossAccountRoleProperty | cdktn.IResolvable): any {
+export function tfServiceCrossAccountRolePropertyToTerraform(struct?: TfService.CrossAccountRoleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function awsResiliencehubv2ServiceCrossAccountRolePropertyToTerraform(str
 }
 
 
-export function awsResiliencehubv2ServiceCrossAccountRolePropertyToHclTerraform(struct?: AwsResiliencehubv2Service.CrossAccountRoleProperty | cdktn.IResolvable): any {
+export function tfServiceCrossAccountRolePropertyToHclTerraform(struct?: TfService.CrossAccountRoleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,19 +448,19 @@ export function awsResiliencehubv2ServiceCrossAccountRolePropertyToHclTerraform(
 }
 
 
-export function awsResiliencehubv2ServicePermissionModelPropertyToTerraform(struct?: AwsResiliencehubv2Service.PermissionModelProperty | cdktn.IResolvable): any {
+export function tfServicePermissionModelPropertyToTerraform(struct?: TfService.PermissionModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     invoker_role_name: cdktn.stringToTerraform(struct!.invokerRoleName),
-    cross_account_role: cdktn.listMapper(awsResiliencehubv2ServiceCrossAccountRolePropertyToTerraform, true)(struct!.crossAccountRole),
+    cross_account_role: cdktn.listMapper(tfServiceCrossAccountRolePropertyToTerraform, true)(struct!.crossAccountRole),
   }
 }
 
 
-export function awsResiliencehubv2ServicePermissionModelPropertyToHclTerraform(struct?: AwsResiliencehubv2Service.PermissionModelProperty | cdktn.IResolvable): any {
+export function tfServicePermissionModelPropertyToHclTerraform(struct?: TfService.PermissionModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsResiliencehubv2ServicePermissionModelPropertyToHclTerraform(s
       storageClassType: "string",
     },
     cross_account_role: {
-      value: cdktn.listMapperHcl(awsResiliencehubv2ServiceCrossAccountRolePropertyToHclTerraform, true)(struct!.crossAccountRole),
+      value: cdktn.listMapperHcl(tfServiceCrossAccountRolePropertyToHclTerraform, true)(struct!.crossAccountRole),
       isBlock: true,
       type: "list",
       storageClassType: "CrossAccountRolePropertyList",
@@ -485,14 +485,14 @@ export function awsResiliencehubv2ServicePermissionModelPropertyToHclTerraform(s
 }
 
 
-export namespace AwsResiliencehubv2Service {
+export namespace TfService {
 export interface AssociatedSystemProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#system_arn AwsResiliencehubv2Service#system_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#system_arn TfService#system_arn}
   */
   readonly systemArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#user_journey_ids AwsResiliencehubv2Service#user_journey_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#user_journey_ids TfService#user_journey_ids}
   */
   readonly userJourneyIds?: string[];
 }
@@ -597,11 +597,11 @@ export class AssociatedSystemPropertyList extends cdktn.ComplexList {
 }
 export interface CrossAccountRoleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#cross_account_role_arn AwsResiliencehubv2Service#cross_account_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#cross_account_role_arn TfService#cross_account_role_arn}
   */
   readonly crossAccountRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#external_id AwsResiliencehubv2Service#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#external_id TfService#external_id}
   */
   readonly externalId?: string;
 }
@@ -706,13 +706,13 @@ export class CrossAccountRolePropertyList extends cdktn.ComplexList {
 }
 export interface PermissionModelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#invoker_role_name AwsResiliencehubv2Service#invoker_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#invoker_role_name TfService#invoker_role_name}
   */
   readonly invokerRoleName: string;
   /**
   * cross_account_role block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#cross_account_role AwsResiliencehubv2Service#cross_account_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service#cross_account_role TfService#cross_account_role}
   */
   readonly crossAccountRole?: CrossAccountRoleProperty[] | cdktn.IResolvable;
 }

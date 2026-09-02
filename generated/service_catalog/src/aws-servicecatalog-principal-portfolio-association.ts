@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServicecatalogPrincipalPortfolioAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfPrincipalPortfolioAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#accept_language AwsServicecatalogPrincipalPortfolioAssociation#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#accept_language TfPrincipalPortfolioAssociation#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#id AwsServicecatalogPrincipalPortfolioAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#id TfPrincipalPortfolioAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#portfolio_id AwsServicecatalogPrincipalPortfolioAssociation#portfolio_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#portfolio_id TfPrincipalPortfolioAssociation#portfolio_id}
   */
   readonly portfolioId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#principal_arn AwsServicecatalogPrincipalPortfolioAssociation#principal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#principal_arn TfPrincipalPortfolioAssociation#principal_arn}
   */
   readonly principalArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#principal_type AwsServicecatalogPrincipalPortfolioAssociation#principal_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#principal_type TfPrincipalPortfolioAssociation#principal_type}
   */
   readonly principalType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#region AwsServicecatalogPrincipalPortfolioAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#region TfPrincipalPortfolioAssociation#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#timeouts AwsServicecatalogPrincipalPortfolioAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#timeouts TfPrincipalPortfolioAssociation#timeouts}
   */
-  readonly timeouts?: AwsServicecatalogPrincipalPortfolioAssociation.TimeoutsProperty;
+  readonly timeouts?: TfPrincipalPortfolioAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association aws_servicecatalog_principal_portfolio_association}
 */
-export class AwsServicecatalogPrincipalPortfolioAssociation extends cdktn.TerraformResource {
+export class TfPrincipalPortfolioAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsServicecatalogPrincipalPortfolioAssociation extends cdktn.Terraf
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServicecatalogPrincipalPortfolioAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPrincipalPortfolioAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServicecatalogPrincipalPortfolioAssociation to import
-  * @param importFromId The id of the existing AwsServicecatalogPrincipalPortfolioAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServicecatalogPrincipalPortfolioAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfPrincipalPortfolioAssociation to import
+  * @param importFromId The id of the existing TfPrincipalPortfolioAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPrincipalPortfolioAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_principal_portfolio_association", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsServicecatalogPrincipalPortfolioAssociation extends cdktn.Terraf
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServicecatalogPrincipalPortfolioAssociationConfig
+  * @param options TfPrincipalPortfolioAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServicecatalogPrincipalPortfolioAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfPrincipalPortfolioAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_principal_portfolio_association',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class AwsServicecatalogPrincipalPortfolioAssociation extends cdktn.Terraf
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsServicecatalogPrincipalPortfolioAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPrincipalPortfolioAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsServicecatalogPrincipalPortfolioAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfPrincipalPortfolioAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -225,7 +225,7 @@ export class AwsServicecatalogPrincipalPortfolioAssociation extends cdktn.Terraf
       principal_arn: cdktn.stringToTerraform(this._principalArn),
       principal_type: cdktn.stringToTerraform(this._principalType),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsServicecatalogPrincipalPortfolioAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPrincipalPortfolioAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -268,10 +268,10 @@ export class AwsServicecatalogPrincipalPortfolioAssociation extends cdktn.Terraf
         storageClassType: "string",
       },
       timeouts: {
-        value: awsServicecatalogPrincipalPortfolioAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPrincipalPortfolioAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsServicecatalogPrincipalPortfolioAssociation.TimeoutsProperty",
+        storageClassType: "TfPrincipalPortfolioAssociation.TimeoutsProperty",
       },
     };
 
@@ -280,7 +280,7 @@ export class AwsServicecatalogPrincipalPortfolioAssociation extends cdktn.Terraf
   }
 }
 
-export function awsServicecatalogPrincipalPortfolioAssociationTimeoutsPropertyToTerraform(struct?: AwsServicecatalogPrincipalPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPrincipalPortfolioAssociationTimeoutsPropertyToTerraform(struct?: TfPrincipalPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function awsServicecatalogPrincipalPortfolioAssociationTimeoutsPropertyTo
 }
 
 
-export function awsServicecatalogPrincipalPortfolioAssociationTimeoutsPropertyToHclTerraform(struct?: AwsServicecatalogPrincipalPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPrincipalPortfolioAssociationTimeoutsPropertyToHclTerraform(struct?: TfPrincipalPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,18 +324,18 @@ export function awsServicecatalogPrincipalPortfolioAssociationTimeoutsPropertyTo
 }
 
 
-export namespace AwsServicecatalogPrincipalPortfolioAssociation {
+export namespace TfPrincipalPortfolioAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#create AwsServicecatalogPrincipalPortfolioAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#create TfPrincipalPortfolioAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#delete AwsServicecatalogPrincipalPortfolioAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#delete TfPrincipalPortfolioAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#read AwsServicecatalogPrincipalPortfolioAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_principal_portfolio_association#read TfPrincipalPortfolioAssociation#read}
   */
   readonly read?: string;
 }

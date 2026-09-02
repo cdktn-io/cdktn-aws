@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3BucketNotificationConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketNotificationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#bucket AwsS3BucketNotification#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#bucket TfBucketNotification#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#eventbridge AwsS3BucketNotification#eventbridge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#eventbridge TfBucketNotification#eventbridge}
   */
   readonly eventbridge?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id AwsS3BucketNotification#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id TfBucketNotification#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,33 +24,33 @@ export interface AwsS3BucketNotificationConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#region AwsS3BucketNotification#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#region TfBucketNotification#region}
   */
   readonly region?: string;
   /**
   * lambda_function block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#lambda_function AwsS3BucketNotification#lambda_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#lambda_function TfBucketNotification#lambda_function}
   */
-  readonly lambdaFunction?: AwsS3BucketNotification.LambdaFunctionProperty[] | cdktn.IResolvable;
+  readonly lambdaFunction?: TfBucketNotification.LambdaFunctionProperty[] | cdktn.IResolvable;
   /**
   * queue block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#queue AwsS3BucketNotification#queue}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#queue TfBucketNotification#queue}
   */
-  readonly queue?: AwsS3BucketNotification.QueueProperty[] | cdktn.IResolvable;
+  readonly queue?: TfBucketNotification.QueueProperty[] | cdktn.IResolvable;
   /**
   * topic block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#topic AwsS3BucketNotification#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#topic TfBucketNotification#topic}
   */
-  readonly topic?: AwsS3BucketNotification.TopicProperty[] | cdktn.IResolvable;
+  readonly topic?: TfBucketNotification.TopicProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification aws_s3_bucket_notification}
 */
-export class AwsS3BucketNotification extends cdktn.TerraformResource {
+export class TfBucketNotification extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3BucketNotification resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketNotification resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3BucketNotification to import
-  * @param importFromId The id of the existing AwsS3BucketNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3BucketNotification to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketNotification to import
+  * @param importFromId The id of the existing TfBucketNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketNotification to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_notification", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3BucketNotificationConfig
+  * @param options TfBucketNotificationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3BucketNotificationConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketNotificationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_notification',
       terraformGeneratorMetadata: {
@@ -173,11 +173,11 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
   }
 
   // lambda_function - computed: false, optional: true, required: false
-  private _lambdaFunction = new AwsS3BucketNotification.LambdaFunctionPropertyList(this, "lambda_function", false);
+  private _lambdaFunction = new TfBucketNotification.LambdaFunctionPropertyList(this, "lambda_function", false);
   public get lambdaFunction() {
     return this._lambdaFunction;
   }
-  public putLambdaFunction(value: AwsS3BucketNotification.LambdaFunctionProperty[] | cdktn.IResolvable) {
+  public putLambdaFunction(value: TfBucketNotification.LambdaFunctionProperty[] | cdktn.IResolvable) {
     this._lambdaFunction.internalValue = value;
   }
   public resetLambdaFunction() {
@@ -189,11 +189,11 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
   }
 
   // queue - computed: false, optional: true, required: false
-  private _queue = new AwsS3BucketNotification.QueuePropertyList(this, "queue", false);
+  private _queue = new TfBucketNotification.QueuePropertyList(this, "queue", false);
   public get queue() {
     return this._queue;
   }
-  public putQueue(value: AwsS3BucketNotification.QueueProperty[] | cdktn.IResolvable) {
+  public putQueue(value: TfBucketNotification.QueueProperty[] | cdktn.IResolvable) {
     this._queue.internalValue = value;
   }
   public resetQueue() {
@@ -205,11 +205,11 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
   }
 
   // topic - computed: false, optional: true, required: false
-  private _topic = new AwsS3BucketNotification.TopicPropertyList(this, "topic", false);
+  private _topic = new TfBucketNotification.TopicPropertyList(this, "topic", false);
   public get topic() {
     return this._topic;
   }
-  public putTopic(value: AwsS3BucketNotification.TopicProperty[] | cdktn.IResolvable) {
+  public putTopic(value: TfBucketNotification.TopicProperty[] | cdktn.IResolvable) {
     this._topic.internalValue = value;
   }
   public resetTopic() {
@@ -230,9 +230,9 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
       eventbridge: cdktn.booleanToTerraform(this._eventbridge),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      lambda_function: cdktn.listMapper(awsS3BucketNotificationLambdaFunctionPropertyToTerraform, true)(this._lambdaFunction.internalValue),
-      queue: cdktn.listMapper(awsS3BucketNotificationQueuePropertyToTerraform, true)(this._queue.internalValue),
-      topic: cdktn.listMapper(awsS3BucketNotificationTopicPropertyToTerraform, true)(this._topic.internalValue),
+      lambda_function: cdktn.listMapper(tfBucketNotificationLambdaFunctionPropertyToTerraform, true)(this._lambdaFunction.internalValue),
+      queue: cdktn.listMapper(tfBucketNotificationQueuePropertyToTerraform, true)(this._queue.internalValue),
+      topic: cdktn.listMapper(tfBucketNotificationTopicPropertyToTerraform, true)(this._topic.internalValue),
     };
   }
 
@@ -263,22 +263,22 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       lambda_function: {
-        value: cdktn.listMapperHcl(awsS3BucketNotificationLambdaFunctionPropertyToHclTerraform, true)(this._lambdaFunction.internalValue),
+        value: cdktn.listMapperHcl(tfBucketNotificationLambdaFunctionPropertyToHclTerraform, true)(this._lambdaFunction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketNotification.LambdaFunctionPropertyList",
+        storageClassType: "TfBucketNotification.LambdaFunctionPropertyList",
       },
       queue: {
-        value: cdktn.listMapperHcl(awsS3BucketNotificationQueuePropertyToHclTerraform, true)(this._queue.internalValue),
+        value: cdktn.listMapperHcl(tfBucketNotificationQueuePropertyToHclTerraform, true)(this._queue.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketNotification.QueuePropertyList",
+        storageClassType: "TfBucketNotification.QueuePropertyList",
       },
       topic: {
-        value: cdktn.listMapperHcl(awsS3BucketNotificationTopicPropertyToHclTerraform, true)(this._topic.internalValue),
+        value: cdktn.listMapperHcl(tfBucketNotificationTopicPropertyToHclTerraform, true)(this._topic.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketNotification.TopicPropertyList",
+        storageClassType: "TfBucketNotification.TopicPropertyList",
       },
     };
 
@@ -287,7 +287,7 @@ export class AwsS3BucketNotification extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3BucketNotificationLambdaFunctionPropertyToTerraform(struct?: AwsS3BucketNotification.LambdaFunctionProperty | cdktn.IResolvable): any {
+export function tfBucketNotificationLambdaFunctionPropertyToTerraform(struct?: TfBucketNotification.LambdaFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function awsS3BucketNotificationLambdaFunctionPropertyToTerraform(struct?
 }
 
 
-export function awsS3BucketNotificationLambdaFunctionPropertyToHclTerraform(struct?: AwsS3BucketNotification.LambdaFunctionProperty | cdktn.IResolvable): any {
+export function tfBucketNotificationLambdaFunctionPropertyToHclTerraform(struct?: TfBucketNotification.LambdaFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function awsS3BucketNotificationLambdaFunctionPropertyToHclTerraform(stru
 }
 
 
-export function awsS3BucketNotificationQueuePropertyToTerraform(struct?: AwsS3BucketNotification.QueueProperty | cdktn.IResolvable): any {
+export function tfBucketNotificationQueuePropertyToTerraform(struct?: TfBucketNotification.QueueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function awsS3BucketNotificationQueuePropertyToTerraform(struct?: AwsS3Bu
 }
 
 
-export function awsS3BucketNotificationQueuePropertyToHclTerraform(struct?: AwsS3BucketNotification.QueueProperty | cdktn.IResolvable): any {
+export function tfBucketNotificationQueuePropertyToHclTerraform(struct?: TfBucketNotification.QueueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function awsS3BucketNotificationQueuePropertyToHclTerraform(struct?: AwsS
 }
 
 
-export function awsS3BucketNotificationTopicPropertyToTerraform(struct?: AwsS3BucketNotification.TopicProperty | cdktn.IResolvable): any {
+export function tfBucketNotificationTopicPropertyToTerraform(struct?: TfBucketNotification.TopicProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function awsS3BucketNotificationTopicPropertyToTerraform(struct?: AwsS3Bu
 }
 
 
-export function awsS3BucketNotificationTopicPropertyToHclTerraform(struct?: AwsS3BucketNotification.TopicProperty | cdktn.IResolvable): any {
+export function tfBucketNotificationTopicPropertyToHclTerraform(struct?: TfBucketNotification.TopicProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,29 +461,29 @@ export function awsS3BucketNotificationTopicPropertyToHclTerraform(struct?: AwsS
 }
 
 
-export namespace AwsS3BucketNotification {
+export namespace TfBucketNotification {
 export interface LambdaFunctionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#events AwsS3BucketNotification#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#events TfBucketNotification#events}
   */
   readonly events: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_prefix AwsS3BucketNotification#filter_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_prefix TfBucketNotification#filter_prefix}
   */
   readonly filterPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_suffix AwsS3BucketNotification#filter_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_suffix TfBucketNotification#filter_suffix}
   */
   readonly filterSuffix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id AwsS3BucketNotification#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id TfBucketNotification#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#lambda_function_arn AwsS3BucketNotification#lambda_function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#lambda_function_arn TfBucketNotification#lambda_function_arn}
   */
   readonly lambdaFunctionArn?: string;
 }
@@ -654,26 +654,26 @@ export class LambdaFunctionPropertyList extends cdktn.ComplexList {
 }
 export interface QueueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#events AwsS3BucketNotification#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#events TfBucketNotification#events}
   */
   readonly events: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_prefix AwsS3BucketNotification#filter_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_prefix TfBucketNotification#filter_prefix}
   */
   readonly filterPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_suffix AwsS3BucketNotification#filter_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_suffix TfBucketNotification#filter_suffix}
   */
   readonly filterSuffix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id AwsS3BucketNotification#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id TfBucketNotification#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#queue_arn AwsS3BucketNotification#queue_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#queue_arn TfBucketNotification#queue_arn}
   */
   readonly queueArn: string;
 }
@@ -841,26 +841,26 @@ export class QueuePropertyList extends cdktn.ComplexList {
 }
 export interface TopicProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#events AwsS3BucketNotification#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#events TfBucketNotification#events}
   */
   readonly events: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_prefix AwsS3BucketNotification#filter_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_prefix TfBucketNotification#filter_prefix}
   */
   readonly filterPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_suffix AwsS3BucketNotification#filter_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#filter_suffix TfBucketNotification#filter_suffix}
   */
   readonly filterSuffix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id AwsS3BucketNotification#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#id TfBucketNotification#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#topic_arn AwsS3BucketNotification#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_notification#topic_arn TfBucketNotification#topic_arn}
   */
   readonly topicArn: string;
 }

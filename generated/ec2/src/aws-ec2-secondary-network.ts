@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2SecondaryNetworkConfig extends cdktn.TerraformMetaArguments {
+export interface TfSecondaryNetworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#ipv4_cidr_block AwsEc2SecondaryNetwork#ipv4_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#ipv4_cidr_block TfSecondaryNetwork#ipv4_cidr_block}
   */
   readonly ipv4CidrBlock: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#network_type AwsEc2SecondaryNetwork#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#network_type TfSecondaryNetwork#network_type}
   */
   readonly networkType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#region AwsEc2SecondaryNetwork#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#region TfSecondaryNetwork#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#tags AwsEc2SecondaryNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#tags TfSecondaryNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#timeouts AwsEc2SecondaryNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#timeouts TfSecondaryNetwork#timeouts}
   */
-  readonly timeouts?: AwsEc2SecondaryNetwork.TimeoutsProperty;
+  readonly timeouts?: TfSecondaryNetwork.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network aws_ec2_secondary_network}
 */
-export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
+export class TfSecondaryNetwork extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2SecondaryNetwork resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSecondaryNetwork resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2SecondaryNetwork to import
-  * @param importFromId The id of the existing AwsEc2SecondaryNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2SecondaryNetwork to import is found
+  * @param importToId The construct id used in the generated config for the TfSecondaryNetwork to import
+  * @param importFromId The id of the existing TfSecondaryNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSecondaryNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_secondary_network", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2SecondaryNetworkConfig
+  * @param options TfSecondaryNetworkConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2SecondaryNetworkConfig) {
+  public constructor(scope: Construct, id: string, config: TfSecondaryNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_secondary_network',
       terraformGeneratorMetadata: {
@@ -118,7 +118,7 @@ export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
   }
 
   // ipv4_cidr_block_associations - computed: true, optional: false, required: false
-  private _ipv4CidrBlockAssociations = new AwsEc2SecondaryNetwork.Ipv4CidrBlockAssociationsPropertyList(this, "ipv4_cidr_block_associations", false);
+  private _ipv4CidrBlockAssociations = new TfSecondaryNetwork.Ipv4CidrBlockAssociationsPropertyList(this, "ipv4_cidr_block_associations", false);
   public get ipv4CidrBlockAssociations() {
     return this._ipv4CidrBlockAssociations;
   }
@@ -190,11 +190,11 @@ export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEc2SecondaryNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSecondaryNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEc2SecondaryNetwork.TimeoutsProperty) {
+  public putTimeouts(value: TfSecondaryNetwork.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -215,7 +215,7 @@ export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
       network_type: cdktn.stringToTerraform(this._networkType),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsEc2SecondaryNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfSecondaryNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -246,10 +246,10 @@ export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsEc2SecondaryNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSecondaryNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEc2SecondaryNetwork.TimeoutsProperty",
+        storageClassType: "TfSecondaryNetwork.TimeoutsProperty",
       },
     };
 
@@ -258,7 +258,7 @@ export class AwsEc2SecondaryNetwork extends cdktn.TerraformResource {
   }
 }
 
-export function awsEc2SecondaryNetworkIpv4CidrBlockAssociationsPropertyToTerraform(struct?: AwsEc2SecondaryNetwork.Ipv4CidrBlockAssociationsProperty): any {
+export function tfSecondaryNetworkIpv4CidrBlockAssociationsPropertyToTerraform(struct?: TfSecondaryNetwork.Ipv4CidrBlockAssociationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function awsEc2SecondaryNetworkIpv4CidrBlockAssociationsPropertyToTerrafo
 }
 
 
-export function awsEc2SecondaryNetworkIpv4CidrBlockAssociationsPropertyToHclTerraform(struct?: AwsEc2SecondaryNetwork.Ipv4CidrBlockAssociationsProperty): any {
+export function tfSecondaryNetworkIpv4CidrBlockAssociationsPropertyToHclTerraform(struct?: TfSecondaryNetwork.Ipv4CidrBlockAssociationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function awsEc2SecondaryNetworkIpv4CidrBlockAssociationsPropertyToHclTerr
 }
 
 
-export function awsEc2SecondaryNetworkTimeoutsPropertyToTerraform(struct?: AwsEc2SecondaryNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSecondaryNetworkTimeoutsPropertyToTerraform(struct?: TfSecondaryNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function awsEc2SecondaryNetworkTimeoutsPropertyToTerraform(struct?: AwsEc
 }
 
 
-export function awsEc2SecondaryNetworkTimeoutsPropertyToHclTerraform(struct?: AwsEc2SecondaryNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSecondaryNetworkTimeoutsPropertyToHclTerraform(struct?: TfSecondaryNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function awsEc2SecondaryNetworkTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsEc2SecondaryNetwork {
+export namespace TfSecondaryNetwork {
 export interface Ipv4CidrBlockAssociationsProperty {
 }
 export class Ipv4CidrBlockAssociationsPropertyOutputReference extends cdktn.ComplexObject {
@@ -392,19 +392,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#create AwsEc2SecondaryNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#create TfSecondaryNetwork#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#delete AwsEc2SecondaryNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#delete TfSecondaryNetwork#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#update AwsEc2SecondaryNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_secondary_network#update TfSecondaryNetwork#update}
   */
   readonly update?: string;
 }

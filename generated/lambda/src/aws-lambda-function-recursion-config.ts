@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLambdaFunctionRecursionConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfFunctionRecursionConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#function_name AwsLambdaFunctionRecursionConfig#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#function_name TfFunctionRecursionConfig#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#recursive_loop AwsLambdaFunctionRecursionConfig#recursive_loop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#recursive_loop TfFunctionRecursionConfig#recursive_loop}
   */
   readonly recursiveLoop: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#region AwsLambdaFunctionRecursionConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#region TfFunctionRecursionConfig#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface AwsLambdaFunctionRecursionConfigConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config aws_lambda_function_recursion_config}
 */
-export class AwsLambdaFunctionRecursionConfig extends cdktn.TerraformResource {
+export class TfFunctionRecursionConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsLambdaFunctionRecursionConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLambdaFunctionRecursionConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFunctionRecursionConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLambdaFunctionRecursionConfig to import
-  * @param importFromId The id of the existing AwsLambdaFunctionRecursionConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLambdaFunctionRecursionConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfFunctionRecursionConfig to import
+  * @param importFromId The id of the existing TfFunctionRecursionConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_recursion_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFunctionRecursionConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_function_recursion_config", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsLambdaFunctionRecursionConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLambdaFunctionRecursionConfigConfig
+  * @param options TfFunctionRecursionConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLambdaFunctionRecursionConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfFunctionRecursionConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_function_recursion_config',
       terraformGeneratorMetadata: {

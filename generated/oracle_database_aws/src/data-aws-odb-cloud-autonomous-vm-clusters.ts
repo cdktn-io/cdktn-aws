@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOdbCloudAutonomousVmClustersConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCloudAutonomousVmClustersConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_clusters#region DataAwsOdbCloudAutonomousVmClusters#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_clusters#region DataTfCloudAutonomousVmClusters#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataAwsOdbCloudAutonomousVmClustersConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_clusters aws_odb_cloud_autonomous_vm_clusters}
 */
-export class DataAwsOdbCloudAutonomousVmClusters extends cdktn.TerraformDataSource {
+export class DataTfCloudAutonomousVmClusters extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataAwsOdbCloudAutonomousVmClusters extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOdbCloudAutonomousVmClusters resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCloudAutonomousVmClusters resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOdbCloudAutonomousVmClusters to import
-  * @param importFromId The id of the existing DataAwsOdbCloudAutonomousVmClusters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_clusters#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOdbCloudAutonomousVmClusters to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCloudAutonomousVmClusters to import
+  * @param importFromId The id of the existing DataTfCloudAutonomousVmClusters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_clusters#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCloudAutonomousVmClusters to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_autonomous_vm_clusters", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataAwsOdbCloudAutonomousVmClusters extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOdbCloudAutonomousVmClustersConfig = {}
+  * @param options DataTfCloudAutonomousVmClustersConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOdbCloudAutonomousVmClustersConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfCloudAutonomousVmClustersConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_cloud_autonomous_vm_clusters',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class DataAwsOdbCloudAutonomousVmClusters extends cdktn.TerraformDataSour
   // ==========
 
   // cloud_autonomous_vm_clusters - computed: true, optional: false, required: false
-  private _cloudAutonomousVmClusters = new DataAwsOdbCloudAutonomousVmClusters.CloudAutonomousVmClustersPropertyList(this, "cloud_autonomous_vm_clusters", false);
+  private _cloudAutonomousVmClusters = new DataTfCloudAutonomousVmClusters.CloudAutonomousVmClustersPropertyList(this, "cloud_autonomous_vm_clusters", false);
   public get cloudAutonomousVmClusters() {
     return this._cloudAutonomousVmClusters;
   }
@@ -119,7 +119,7 @@ export class DataAwsOdbCloudAutonomousVmClusters extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsOdbCloudAutonomousVmClustersCloudAutonomousVmClustersPropertyToTerraform(struct?: DataAwsOdbCloudAutonomousVmClusters.CloudAutonomousVmClustersProperty): any {
+export function dataTfCloudAutonomousVmClustersCloudAutonomousVmClustersPropertyToTerraform(struct?: DataTfCloudAutonomousVmClusters.CloudAutonomousVmClustersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -129,7 +129,7 @@ export function dataAwsOdbCloudAutonomousVmClustersCloudAutonomousVmClustersProp
 }
 
 
-export function dataAwsOdbCloudAutonomousVmClustersCloudAutonomousVmClustersPropertyToHclTerraform(struct?: DataAwsOdbCloudAutonomousVmClusters.CloudAutonomousVmClustersProperty): any {
+export function dataTfCloudAutonomousVmClustersCloudAutonomousVmClustersPropertyToHclTerraform(struct?: DataTfCloudAutonomousVmClusters.CloudAutonomousVmClustersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -140,7 +140,7 @@ export function dataAwsOdbCloudAutonomousVmClustersCloudAutonomousVmClustersProp
 }
 
 
-export namespace DataAwsOdbCloudAutonomousVmClusters {
+export namespace DataTfCloudAutonomousVmClusters {
 export interface CloudAutonomousVmClustersProperty {
 }
 export class CloudAutonomousVmClustersPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,108 +5,108 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBudgetsBudgetConfig extends cdktn.TerraformMetaArguments {
+export interface TfBudgetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#account_id AwsBudgetsBudget#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#account_id TfBudget#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#billing_view_arn AwsBudgetsBudget#billing_view_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#billing_view_arn TfBudget#billing_view_arn}
   */
   readonly billingViewArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#budget_type AwsBudgetsBudget#budget_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#budget_type TfBudget#budget_type}
   */
   readonly budgetType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#id AwsBudgetsBudget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#id TfBudget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#limit_amount AwsBudgetsBudget#limit_amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#limit_amount TfBudget#limit_amount}
   */
   readonly limitAmount?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#limit_unit AwsBudgetsBudget#limit_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#limit_unit TfBudget#limit_unit}
   */
   readonly limitUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#metrics AwsBudgetsBudget#metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#metrics TfBudget#metrics}
   */
   readonly metrics?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#name AwsBudgetsBudget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#name TfBudget#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#name_prefix AwsBudgetsBudget#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#name_prefix TfBudget#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags_all AwsBudgetsBudget#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags_all TfBudget#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#time_period_end AwsBudgetsBudget#time_period_end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#time_period_end TfBudget#time_period_end}
   */
   readonly timePeriodEnd?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#time_period_start AwsBudgetsBudget#time_period_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#time_period_start TfBudget#time_period_start}
   */
   readonly timePeriodStart?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#time_unit AwsBudgetsBudget#time_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#time_unit TfBudget#time_unit}
   */
   readonly timeUnit: string;
   /**
   * auto_adjust_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#auto_adjust_data AwsBudgetsBudget#auto_adjust_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#auto_adjust_data TfBudget#auto_adjust_data}
   */
-  readonly autoAdjustData?: AwsBudgetsBudget.AutoAdjustDataProperty;
+  readonly autoAdjustData?: TfBudget.AutoAdjustDataProperty;
   /**
   * cost_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_filter AwsBudgetsBudget#cost_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_filter TfBudget#cost_filter}
   */
-  readonly costFilter?: AwsBudgetsBudget.CostFilterProperty[] | cdktn.IResolvable;
+  readonly costFilter?: TfBudget.CostFilterProperty[] | cdktn.IResolvable;
   /**
   * cost_types block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_types AwsBudgetsBudget#cost_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_types TfBudget#cost_types}
   */
-  readonly costTypes?: AwsBudgetsBudget.CostTypesProperty;
+  readonly costTypes?: TfBudget.CostTypesProperty;
   /**
   * filter_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#filter_expression AwsBudgetsBudget#filter_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#filter_expression TfBudget#filter_expression}
   */
-  readonly filterExpression?: AwsBudgetsBudget.FilterExpressionProperty;
+  readonly filterExpression?: TfBudget.FilterExpressionProperty;
   /**
   * notification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#notification AwsBudgetsBudget#notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#notification TfBudget#notification}
   */
-  readonly notification?: AwsBudgetsBudget.NotificationProperty[] | cdktn.IResolvable;
+  readonly notification?: TfBudget.NotificationProperty[] | cdktn.IResolvable;
   /**
   * planned_limit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#planned_limit AwsBudgetsBudget#planned_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#planned_limit TfBudget#planned_limit}
   */
-  readonly plannedLimit?: AwsBudgetsBudget.PlannedLimitProperty[] | cdktn.IResolvable;
+  readonly plannedLimit?: TfBudget.PlannedLimitProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget aws_budgets_budget}
 */
-export class AwsBudgetsBudget extends cdktn.TerraformResource {
+export class TfBudget extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -117,11 +117,11 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBudgetsBudget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBudget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBudgetsBudget to import
-  * @param importFromId The id of the existing AwsBudgetsBudget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBudgetsBudget to import is found
+  * @param importToId The construct id used in the generated config for the TfBudget to import
+  * @param importFromId The id of the existing TfBudget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBudget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_budgets_budget", importId: importFromId, provider });
@@ -136,9 +136,9 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBudgetsBudgetConfig
+  * @param options TfBudgetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBudgetsBudgetConfig) {
+  public constructor(scope: Construct, id: string, config: TfBudgetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_budgets_budget',
       terraformGeneratorMetadata: {
@@ -404,11 +404,11 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   }
 
   // auto_adjust_data - computed: false, optional: true, required: false
-  private _autoAdjustData = new AwsBudgetsBudget.AutoAdjustDataPropertyOutputReference(this, "auto_adjust_data");
+  private _autoAdjustData = new TfBudget.AutoAdjustDataPropertyOutputReference(this, "auto_adjust_data");
   public get autoAdjustData() {
     return this._autoAdjustData;
   }
-  public putAutoAdjustData(value: AwsBudgetsBudget.AutoAdjustDataProperty) {
+  public putAutoAdjustData(value: TfBudget.AutoAdjustDataProperty) {
     this._autoAdjustData.internalValue = value;
   }
   public resetAutoAdjustData() {
@@ -420,11 +420,11 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   }
 
   // cost_filter - computed: false, optional: true, required: false
-  private _costFilter = new AwsBudgetsBudget.CostFilterPropertyList(this, "cost_filter", true);
+  private _costFilter = new TfBudget.CostFilterPropertyList(this, "cost_filter", true);
   public get costFilter() {
     return this._costFilter;
   }
-  public putCostFilter(value: AwsBudgetsBudget.CostFilterProperty[] | cdktn.IResolvable) {
+  public putCostFilter(value: TfBudget.CostFilterProperty[] | cdktn.IResolvable) {
     this._costFilter.internalValue = value;
   }
   public resetCostFilter() {
@@ -436,11 +436,11 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   }
 
   // cost_types - computed: false, optional: true, required: false
-  private _costTypes = new AwsBudgetsBudget.CostTypesPropertyOutputReference(this, "cost_types");
+  private _costTypes = new TfBudget.CostTypesPropertyOutputReference(this, "cost_types");
   public get costTypes() {
     return this._costTypes;
   }
-  public putCostTypes(value: AwsBudgetsBudget.CostTypesProperty) {
+  public putCostTypes(value: TfBudget.CostTypesProperty) {
     this._costTypes.internalValue = value;
   }
   public resetCostTypes() {
@@ -452,11 +452,11 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   }
 
   // filter_expression - computed: false, optional: true, required: false
-  private _filterExpression = new AwsBudgetsBudget.FilterExpressionPropertyOutputReference(this, "filter_expression");
+  private _filterExpression = new TfBudget.FilterExpressionPropertyOutputReference(this, "filter_expression");
   public get filterExpression() {
     return this._filterExpression;
   }
-  public putFilterExpression(value: AwsBudgetsBudget.FilterExpressionProperty) {
+  public putFilterExpression(value: TfBudget.FilterExpressionProperty) {
     this._filterExpression.internalValue = value;
   }
   public resetFilterExpression() {
@@ -468,11 +468,11 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   }
 
   // notification - computed: false, optional: true, required: false
-  private _notification = new AwsBudgetsBudget.NotificationPropertyList(this, "notification", true);
+  private _notification = new TfBudget.NotificationPropertyList(this, "notification", true);
   public get notification() {
     return this._notification;
   }
-  public putNotification(value: AwsBudgetsBudget.NotificationProperty[] | cdktn.IResolvable) {
+  public putNotification(value: TfBudget.NotificationProperty[] | cdktn.IResolvable) {
     this._notification.internalValue = value;
   }
   public resetNotification() {
@@ -484,11 +484,11 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   }
 
   // planned_limit - computed: false, optional: true, required: false
-  private _plannedLimit = new AwsBudgetsBudget.PlannedLimitPropertyList(this, "planned_limit", true);
+  private _plannedLimit = new TfBudget.PlannedLimitPropertyList(this, "planned_limit", true);
   public get plannedLimit() {
     return this._plannedLimit;
   }
-  public putPlannedLimit(value: AwsBudgetsBudget.PlannedLimitProperty[] | cdktn.IResolvable) {
+  public putPlannedLimit(value: TfBudget.PlannedLimitProperty[] | cdktn.IResolvable) {
     this._plannedLimit.internalValue = value;
   }
   public resetPlannedLimit() {
@@ -519,12 +519,12 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
       time_period_end: cdktn.stringToTerraform(this._timePeriodEnd),
       time_period_start: cdktn.stringToTerraform(this._timePeriodStart),
       time_unit: cdktn.stringToTerraform(this._timeUnit),
-      auto_adjust_data: awsBudgetsBudgetAutoAdjustDataPropertyToTerraform(this._autoAdjustData.internalValue),
-      cost_filter: cdktn.listMapper(awsBudgetsBudgetCostFilterPropertyToTerraform, true)(this._costFilter.internalValue),
-      cost_types: awsBudgetsBudgetCostTypesPropertyToTerraform(this._costTypes.internalValue),
-      filter_expression: awsBudgetsBudgetFilterExpressionPropertyToTerraform(this._filterExpression.internalValue),
-      notification: cdktn.listMapper(awsBudgetsBudgetNotificationPropertyToTerraform, true)(this._notification.internalValue),
-      planned_limit: cdktn.listMapper(awsBudgetsBudgetPlannedLimitPropertyToTerraform, true)(this._plannedLimit.internalValue),
+      auto_adjust_data: tfBudgetAutoAdjustDataPropertyToTerraform(this._autoAdjustData.internalValue),
+      cost_filter: cdktn.listMapper(tfBudgetCostFilterPropertyToTerraform, true)(this._costFilter.internalValue),
+      cost_types: tfBudgetCostTypesPropertyToTerraform(this._costTypes.internalValue),
+      filter_expression: tfBudgetFilterExpressionPropertyToTerraform(this._filterExpression.internalValue),
+      notification: cdktn.listMapper(tfBudgetNotificationPropertyToTerraform, true)(this._notification.internalValue),
+      planned_limit: cdktn.listMapper(tfBudgetPlannedLimitPropertyToTerraform, true)(this._plannedLimit.internalValue),
     };
   }
 
@@ -615,40 +615,40 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       auto_adjust_data: {
-        value: awsBudgetsBudgetAutoAdjustDataPropertyToHclTerraform(this._autoAdjustData.internalValue),
+        value: tfBudgetAutoAdjustDataPropertyToHclTerraform(this._autoAdjustData.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBudgetsBudget.AutoAdjustDataPropertyList",
+        storageClassType: "TfBudget.AutoAdjustDataPropertyList",
       },
       cost_filter: {
-        value: cdktn.listMapperHcl(awsBudgetsBudgetCostFilterPropertyToHclTerraform, true)(this._costFilter.internalValue),
+        value: cdktn.listMapperHcl(tfBudgetCostFilterPropertyToHclTerraform, true)(this._costFilter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBudgetsBudget.CostFilterPropertyList",
+        storageClassType: "TfBudget.CostFilterPropertyList",
       },
       cost_types: {
-        value: awsBudgetsBudgetCostTypesPropertyToHclTerraform(this._costTypes.internalValue),
+        value: tfBudgetCostTypesPropertyToHclTerraform(this._costTypes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBudgetsBudget.CostTypesPropertyList",
+        storageClassType: "TfBudget.CostTypesPropertyList",
       },
       filter_expression: {
-        value: awsBudgetsBudgetFilterExpressionPropertyToHclTerraform(this._filterExpression.internalValue),
+        value: tfBudgetFilterExpressionPropertyToHclTerraform(this._filterExpression.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBudgetsBudget.FilterExpressionPropertyList",
+        storageClassType: "TfBudget.FilterExpressionPropertyList",
       },
       notification: {
-        value: cdktn.listMapperHcl(awsBudgetsBudgetNotificationPropertyToHclTerraform, true)(this._notification.internalValue),
+        value: cdktn.listMapperHcl(tfBudgetNotificationPropertyToHclTerraform, true)(this._notification.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBudgetsBudget.NotificationPropertyList",
+        storageClassType: "TfBudget.NotificationPropertyList",
       },
       planned_limit: {
-        value: cdktn.listMapperHcl(awsBudgetsBudgetPlannedLimitPropertyToHclTerraform, true)(this._plannedLimit.internalValue),
+        value: cdktn.listMapperHcl(tfBudgetPlannedLimitPropertyToHclTerraform, true)(this._plannedLimit.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBudgetsBudget.PlannedLimitPropertyList",
+        storageClassType: "TfBudget.PlannedLimitPropertyList",
       },
     };
 
@@ -657,7 +657,7 @@ export class AwsBudgetsBudget extends cdktn.TerraformResource {
   }
 }
 
-export function awsBudgetsBudgetHistoricalOptionsPropertyToTerraform(struct?: AwsBudgetsBudget.HistoricalOptionsPropertyOutputReference | AwsBudgetsBudget.HistoricalOptionsProperty): any {
+export function tfBudgetHistoricalOptionsPropertyToTerraform(struct?: TfBudget.HistoricalOptionsPropertyOutputReference | TfBudget.HistoricalOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function awsBudgetsBudgetHistoricalOptionsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsBudgetsBudgetHistoricalOptionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.HistoricalOptionsPropertyOutputReference | AwsBudgetsBudget.HistoricalOptionsProperty): any {
+export function tfBudgetHistoricalOptionsPropertyToHclTerraform(struct?: TfBudget.HistoricalOptionsPropertyOutputReference | TfBudget.HistoricalOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -687,19 +687,19 @@ export function awsBudgetsBudgetHistoricalOptionsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsBudgetsBudgetAutoAdjustDataPropertyToTerraform(struct?: AwsBudgetsBudget.AutoAdjustDataPropertyOutputReference | AwsBudgetsBudget.AutoAdjustDataProperty): any {
+export function tfBudgetAutoAdjustDataPropertyToTerraform(struct?: TfBudget.AutoAdjustDataPropertyOutputReference | TfBudget.AutoAdjustDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     auto_adjust_type: cdktn.stringToTerraform(struct!.autoAdjustType),
-    historical_options: awsBudgetsBudgetHistoricalOptionsPropertyToTerraform(struct!.historicalOptions),
+    historical_options: tfBudgetHistoricalOptionsPropertyToTerraform(struct!.historicalOptions),
   }
 }
 
 
-export function awsBudgetsBudgetAutoAdjustDataPropertyToHclTerraform(struct?: AwsBudgetsBudget.AutoAdjustDataPropertyOutputReference | AwsBudgetsBudget.AutoAdjustDataProperty): any {
+export function tfBudgetAutoAdjustDataPropertyToHclTerraform(struct?: TfBudget.AutoAdjustDataPropertyOutputReference | TfBudget.AutoAdjustDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,7 +712,7 @@ export function awsBudgetsBudgetAutoAdjustDataPropertyToHclTerraform(struct?: Aw
       storageClassType: "string",
     },
     historical_options: {
-      value: awsBudgetsBudgetHistoricalOptionsPropertyToHclTerraform(struct!.historicalOptions),
+      value: tfBudgetHistoricalOptionsPropertyToHclTerraform(struct!.historicalOptions),
       isBlock: true,
       type: "list",
       storageClassType: "HistoricalOptionsPropertyList",
@@ -724,7 +724,7 @@ export function awsBudgetsBudgetAutoAdjustDataPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsBudgetsBudgetCostFilterPropertyToTerraform(struct?: AwsBudgetsBudget.CostFilterProperty | cdktn.IResolvable): any {
+export function tfBudgetCostFilterPropertyToTerraform(struct?: TfBudget.CostFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -736,7 +736,7 @@ export function awsBudgetsBudgetCostFilterPropertyToTerraform(struct?: AwsBudget
 }
 
 
-export function awsBudgetsBudgetCostFilterPropertyToHclTerraform(struct?: AwsBudgetsBudget.CostFilterProperty | cdktn.IResolvable): any {
+export function tfBudgetCostFilterPropertyToHclTerraform(struct?: TfBudget.CostFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -761,7 +761,7 @@ export function awsBudgetsBudgetCostFilterPropertyToHclTerraform(struct?: AwsBud
 }
 
 
-export function awsBudgetsBudgetCostTypesPropertyToTerraform(struct?: AwsBudgetsBudget.CostTypesPropertyOutputReference | AwsBudgetsBudget.CostTypesProperty): any {
+export function tfBudgetCostTypesPropertyToTerraform(struct?: TfBudget.CostTypesPropertyOutputReference | TfBudget.CostTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function awsBudgetsBudgetCostTypesPropertyToTerraform(struct?: AwsBudgets
 }
 
 
-export function awsBudgetsBudgetCostTypesPropertyToHclTerraform(struct?: AwsBudgetsBudget.CostTypesPropertyOutputReference | AwsBudgetsBudget.CostTypesProperty): any {
+export function tfBudgetCostTypesPropertyToHclTerraform(struct?: TfBudget.CostTypesPropertyOutputReference | TfBudget.CostTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -861,7 +861,7 @@ export function awsBudgetsBudgetCostTypesPropertyToHclTerraform(struct?: AwsBudg
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndAndCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionAndAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -874,7 +874,7 @@ export function awsBudgetsBudgetFilterExpressionAndAndCostCategoriesPropertyToTe
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndAndCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -905,7 +905,7 @@ export function awsBudgetsBudgetFilterExpressionAndAndCostCategoriesPropertyToHc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndAndDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -918,7 +918,7 @@ export function awsBudgetsBudgetFilterExpressionAndAndDimensionsPropertyToTerraf
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndAndDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -949,7 +949,7 @@ export function awsBudgetsBudgetFilterExpressionAndAndDimensionsPropertyToHclTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndAndTagsProperty): any {
+export function tfBudgetFilterExpressionAndAndTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndAndTagsPropertyOutputReference | TfBudget.FilterExpressionAndAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function awsBudgetsBudgetFilterExpressionAndAndTagsPropertyToTerraform(st
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndAndTagsProperty): any {
+export function tfBudgetFilterExpressionAndAndTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndAndTagsPropertyOutputReference | TfBudget.FilterExpressionAndAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,39 +993,39 @@ export function awsBudgetsBudgetFilterExpressionAndAndTagsPropertyToHclTerraform
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionAndAndPropertyToTerraform(struct?: TfBudget.FilterExpressionAndAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionAndAndCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionAndAndDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionAndAndTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionAndAndCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionAndAndDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionAndAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndAndPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionAndAndPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionAndAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionAndAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndAndCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionAndAndDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionAndAndDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndAndDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionAndAndTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionAndAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndAndTagsPropertyList",
@@ -1037,7 +1037,7 @@ export function awsBudgetsBudgetFilterExpressionAndAndPropertyToHclTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1050,7 +1050,7 @@ export function awsBudgetsBudgetFilterExpressionAndCostCategoriesPropertyToTerra
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1081,7 +1081,7 @@ export function awsBudgetsBudgetFilterExpressionAndCostCategoriesPropertyToHclTe
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1094,7 +1094,7 @@ export function awsBudgetsBudgetFilterExpressionAndDimensionsPropertyToTerraform
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1125,7 +1125,7 @@ export function awsBudgetsBudgetFilterExpressionAndDimensionsPropertyToHclTerraf
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndNotCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionAndNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,7 +1138,7 @@ export function awsBudgetsBudgetFilterExpressionAndNotCostCategoriesPropertyToTe
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndNotCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,7 +1169,7 @@ export function awsBudgetsBudgetFilterExpressionAndNotCostCategoriesPropertyToHc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndNotDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1182,7 +1182,7 @@ export function awsBudgetsBudgetFilterExpressionAndNotDimensionsPropertyToTerraf
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndNotDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1213,7 +1213,7 @@ export function awsBudgetsBudgetFilterExpressionAndNotDimensionsPropertyToHclTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotTagsProperty): any {
+export function tfBudgetFilterExpressionAndNotTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndNotTagsPropertyOutputReference | TfBudget.FilterExpressionAndNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1226,7 +1226,7 @@ export function awsBudgetsBudgetFilterExpressionAndNotTagsPropertyToTerraform(st
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotTagsProperty): any {
+export function tfBudgetFilterExpressionAndNotTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndNotTagsPropertyOutputReference | TfBudget.FilterExpressionAndNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1257,39 +1257,39 @@ export function awsBudgetsBudgetFilterExpressionAndNotTagsPropertyToHclTerraform
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotProperty): any {
+export function tfBudgetFilterExpressionAndNotPropertyToTerraform(struct?: TfBudget.FilterExpressionAndNotPropertyOutputReference | TfBudget.FilterExpressionAndNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionAndNotCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionAndNotDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionAndNotTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionAndNotCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionAndNotDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionAndNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndNotPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndNotProperty): any {
+export function tfBudgetFilterExpressionAndNotPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndNotPropertyOutputReference | TfBudget.FilterExpressionAndNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionAndNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionAndNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndNotCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionAndNotDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionAndNotDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndNotDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionAndNotTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionAndNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndNotTagsPropertyList",
@@ -1301,7 +1301,7 @@ export function awsBudgetsBudgetFilterExpressionAndNotPropertyToHclTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndOrCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionAndOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1314,7 +1314,7 @@ export function awsBudgetsBudgetFilterExpressionAndOrCostCategoriesPropertyToTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionAndOrCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionAndOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1345,7 +1345,7 @@ export function awsBudgetsBudgetFilterExpressionAndOrCostCategoriesPropertyToHcl
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndOrDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1358,7 +1358,7 @@ export function awsBudgetsBudgetFilterExpressionAndOrDimensionsPropertyToTerrafo
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionAndOrDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionAndOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1389,7 +1389,7 @@ export function awsBudgetsBudgetFilterExpressionAndOrDimensionsPropertyToHclTerr
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndOrTagsProperty): any {
+export function tfBudgetFilterExpressionAndOrTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndOrTagsPropertyOutputReference | TfBudget.FilterExpressionAndOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1402,7 +1402,7 @@ export function awsBudgetsBudgetFilterExpressionAndOrTagsPropertyToTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndOrTagsProperty): any {
+export function tfBudgetFilterExpressionAndOrTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndOrTagsPropertyOutputReference | TfBudget.FilterExpressionAndOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1433,39 +1433,39 @@ export function awsBudgetsBudgetFilterExpressionAndOrTagsPropertyToHclTerraform(
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionAndOrPropertyToTerraform(struct?: TfBudget.FilterExpressionAndOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionAndOrCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionAndOrDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionAndOrTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionAndOrCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionAndOrDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionAndOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndOrPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionAndOrPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionAndOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionAndOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndOrCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionAndOrDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionAndOrDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndOrDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionAndOrTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionAndOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndOrTagsPropertyList",
@@ -1477,7 +1477,7 @@ export function awsBudgetsBudgetFilterExpressionAndOrPropertyToHclTerraform(stru
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndTagsProperty): any {
+export function tfBudgetFilterExpressionAndTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionAndTagsPropertyOutputReference | TfBudget.FilterExpressionAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1490,7 +1490,7 @@ export function awsBudgetsBudgetFilterExpressionAndTagsPropertyToTerraform(struc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionAndTagsProperty): any {
+export function tfBudgetFilterExpressionAndTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndTagsPropertyOutputReference | TfBudget.FilterExpressionAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1521,60 +1521,60 @@ export function awsBudgetsBudgetFilterExpressionAndTagsPropertyToHclTerraform(st
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionAndPropertyToTerraform(struct?: TfBudget.FilterExpressionAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(awsBudgetsBudgetFilterExpressionAndAndPropertyToTerraform, true)(struct!.and),
-    cost_categories: awsBudgetsBudgetFilterExpressionAndCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionAndDimensionsPropertyToTerraform(struct!.dimensions),
-    not: awsBudgetsBudgetFilterExpressionAndNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(awsBudgetsBudgetFilterExpressionAndOrPropertyToTerraform, true)(struct!.or),
-    tags: awsBudgetsBudgetFilterExpressionAndTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(tfBudgetFilterExpressionAndAndPropertyToTerraform, true)(struct!.and),
+    cost_categories: tfBudgetFilterExpressionAndCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionAndDimensionsPropertyToTerraform(struct!.dimensions),
+    not: tfBudgetFilterExpressionAndNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(tfBudgetFilterExpressionAndOrPropertyToTerraform, true)(struct!.or),
+    tags: tfBudgetFilterExpressionAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionAndPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionAndPropertyToHclTerraform(struct?: TfBudget.FilterExpressionAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionAndAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionAndAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndAndPropertyList",
     },
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionAndDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionAndDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndDimensionsPropertyList",
     },
     not: {
-      value: awsBudgetsBudgetFilterExpressionAndNotPropertyToHclTerraform(struct!.not),
+      value: tfBudgetFilterExpressionAndNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionAndOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionAndOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndOrPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionAndTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndTagsPropertyList",
@@ -1586,7 +1586,7 @@ export function awsBudgetsBudgetFilterExpressionAndPropertyToHclTerraform(struct
 }
 
 
-export function awsBudgetsBudgetFilterExpressionCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1599,7 +1599,7 @@ export function awsBudgetsBudgetFilterExpressionCostCategoriesPropertyToTerrafor
 }
 
 
-export function awsBudgetsBudgetFilterExpressionCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1630,7 +1630,7 @@ export function awsBudgetsBudgetFilterExpressionCostCategoriesPropertyToHclTerra
 }
 
 
-export function awsBudgetsBudgetFilterExpressionDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionDimensionsProperty): any {
+export function tfBudgetFilterExpressionDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionDimensionsPropertyOutputReference | TfBudget.FilterExpressionDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1643,7 +1643,7 @@ export function awsBudgetsBudgetFilterExpressionDimensionsPropertyToTerraform(st
 }
 
 
-export function awsBudgetsBudgetFilterExpressionDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionDimensionsProperty): any {
+export function tfBudgetFilterExpressionDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionDimensionsPropertyOutputReference | TfBudget.FilterExpressionDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1674,7 +1674,7 @@ export function awsBudgetsBudgetFilterExpressionDimensionsPropertyToHclTerraform
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotAndCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionNotAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1687,7 +1687,7 @@ export function awsBudgetsBudgetFilterExpressionNotAndCostCategoriesPropertyToTe
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotAndCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1718,7 +1718,7 @@ export function awsBudgetsBudgetFilterExpressionNotAndCostCategoriesPropertyToHc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotAndDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1731,7 +1731,7 @@ export function awsBudgetsBudgetFilterExpressionNotAndDimensionsPropertyToTerraf
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotAndDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1762,7 +1762,7 @@ export function awsBudgetsBudgetFilterExpressionNotAndDimensionsPropertyToHclTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotAndTagsProperty): any {
+export function tfBudgetFilterExpressionNotAndTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotAndTagsPropertyOutputReference | TfBudget.FilterExpressionNotAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1775,7 +1775,7 @@ export function awsBudgetsBudgetFilterExpressionNotAndTagsPropertyToTerraform(st
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotAndTagsProperty): any {
+export function tfBudgetFilterExpressionNotAndTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotAndTagsPropertyOutputReference | TfBudget.FilterExpressionNotAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1806,39 +1806,39 @@ export function awsBudgetsBudgetFilterExpressionNotAndTagsPropertyToHclTerraform
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionNotAndPropertyToTerraform(struct?: TfBudget.FilterExpressionNotAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionNotAndCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionNotAndDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionNotAndTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionNotAndCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionNotAndDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionNotAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotAndPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionNotAndPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionNotAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionNotAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotAndCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionNotAndDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionNotAndDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotAndDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionNotAndTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionNotAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotAndTagsPropertyList",
@@ -1850,7 +1850,7 @@ export function awsBudgetsBudgetFilterExpressionNotAndPropertyToHclTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1863,7 +1863,7 @@ export function awsBudgetsBudgetFilterExpressionNotCostCategoriesPropertyToTerra
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1894,7 +1894,7 @@ export function awsBudgetsBudgetFilterExpressionNotCostCategoriesPropertyToHclTe
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1907,7 +1907,7 @@ export function awsBudgetsBudgetFilterExpressionNotDimensionsPropertyToTerraform
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1938,7 +1938,7 @@ export function awsBudgetsBudgetFilterExpressionNotDimensionsPropertyToHclTerraf
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotNotCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionNotNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1951,7 +1951,7 @@ export function awsBudgetsBudgetFilterExpressionNotNotCostCategoriesPropertyToTe
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotNotCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1982,7 +1982,7 @@ export function awsBudgetsBudgetFilterExpressionNotNotCostCategoriesPropertyToHc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotNotDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1995,7 +1995,7 @@ export function awsBudgetsBudgetFilterExpressionNotNotDimensionsPropertyToTerraf
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotNotDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2026,7 +2026,7 @@ export function awsBudgetsBudgetFilterExpressionNotNotDimensionsPropertyToHclTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotTagsProperty): any {
+export function tfBudgetFilterExpressionNotNotTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotNotTagsPropertyOutputReference | TfBudget.FilterExpressionNotNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2039,7 +2039,7 @@ export function awsBudgetsBudgetFilterExpressionNotNotTagsPropertyToTerraform(st
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotTagsProperty): any {
+export function tfBudgetFilterExpressionNotNotTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotNotTagsPropertyOutputReference | TfBudget.FilterExpressionNotNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2070,39 +2070,39 @@ export function awsBudgetsBudgetFilterExpressionNotNotTagsPropertyToHclTerraform
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotProperty): any {
+export function tfBudgetFilterExpressionNotNotPropertyToTerraform(struct?: TfBudget.FilterExpressionNotNotPropertyOutputReference | TfBudget.FilterExpressionNotNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionNotNotCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionNotNotDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionNotNotTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionNotNotCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionNotNotDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionNotNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotNotPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotNotProperty): any {
+export function tfBudgetFilterExpressionNotNotPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotNotPropertyOutputReference | TfBudget.FilterExpressionNotNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionNotNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionNotNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotNotCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionNotNotDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionNotNotDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotNotDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionNotNotTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionNotNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotNotTagsPropertyList",
@@ -2114,7 +2114,7 @@ export function awsBudgetsBudgetFilterExpressionNotNotPropertyToHclTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotOrCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionNotOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2127,7 +2127,7 @@ export function awsBudgetsBudgetFilterExpressionNotOrCostCategoriesPropertyToTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionNotOrCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionNotOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2158,7 +2158,7 @@ export function awsBudgetsBudgetFilterExpressionNotOrCostCategoriesPropertyToHcl
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotOrDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2171,7 +2171,7 @@ export function awsBudgetsBudgetFilterExpressionNotOrDimensionsPropertyToTerrafo
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionNotOrDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionNotOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2202,7 +2202,7 @@ export function awsBudgetsBudgetFilterExpressionNotOrDimensionsPropertyToHclTerr
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotOrTagsProperty): any {
+export function tfBudgetFilterExpressionNotOrTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotOrTagsPropertyOutputReference | TfBudget.FilterExpressionNotOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2215,7 +2215,7 @@ export function awsBudgetsBudgetFilterExpressionNotOrTagsPropertyToTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotOrTagsProperty): any {
+export function tfBudgetFilterExpressionNotOrTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotOrTagsPropertyOutputReference | TfBudget.FilterExpressionNotOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2246,39 +2246,39 @@ export function awsBudgetsBudgetFilterExpressionNotOrTagsPropertyToHclTerraform(
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionNotOrPropertyToTerraform(struct?: TfBudget.FilterExpressionNotOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionNotOrCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionNotOrDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionNotOrTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionNotOrCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionNotOrDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionNotOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotOrPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionNotOrPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionNotOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionNotOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotOrCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionNotOrDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionNotOrDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotOrDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionNotOrTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionNotOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotOrTagsPropertyList",
@@ -2290,7 +2290,7 @@ export function awsBudgetsBudgetFilterExpressionNotOrPropertyToHclTerraform(stru
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotTagsProperty): any {
+export function tfBudgetFilterExpressionNotTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionNotTagsPropertyOutputReference | TfBudget.FilterExpressionNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2303,7 +2303,7 @@ export function awsBudgetsBudgetFilterExpressionNotTagsPropertyToTerraform(struc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotTagsProperty): any {
+export function tfBudgetFilterExpressionNotTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotTagsPropertyOutputReference | TfBudget.FilterExpressionNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2334,60 +2334,60 @@ export function awsBudgetsBudgetFilterExpressionNotTagsPropertyToHclTerraform(st
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotProperty): any {
+export function tfBudgetFilterExpressionNotPropertyToTerraform(struct?: TfBudget.FilterExpressionNotPropertyOutputReference | TfBudget.FilterExpressionNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(awsBudgetsBudgetFilterExpressionNotAndPropertyToTerraform, true)(struct!.and),
-    cost_categories: awsBudgetsBudgetFilterExpressionNotCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionNotDimensionsPropertyToTerraform(struct!.dimensions),
-    not: awsBudgetsBudgetFilterExpressionNotNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(awsBudgetsBudgetFilterExpressionNotOrPropertyToTerraform, true)(struct!.or),
-    tags: awsBudgetsBudgetFilterExpressionNotTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(tfBudgetFilterExpressionNotAndPropertyToTerraform, true)(struct!.and),
+    cost_categories: tfBudgetFilterExpressionNotCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionNotDimensionsPropertyToTerraform(struct!.dimensions),
+    not: tfBudgetFilterExpressionNotNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(tfBudgetFilterExpressionNotOrPropertyToTerraform, true)(struct!.or),
+    tags: tfBudgetFilterExpressionNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionNotPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionNotProperty): any {
+export function tfBudgetFilterExpressionNotPropertyToHclTerraform(struct?: TfBudget.FilterExpressionNotPropertyOutputReference | TfBudget.FilterExpressionNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionNotAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionNotAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotAndPropertyList",
     },
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionNotDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionNotDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotDimensionsPropertyList",
     },
     not: {
-      value: awsBudgetsBudgetFilterExpressionNotNotPropertyToHclTerraform(struct!.not),
+      value: tfBudgetFilterExpressionNotNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionNotOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionNotOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotOrPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionNotTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotTagsPropertyList",
@@ -2399,7 +2399,7 @@ export function awsBudgetsBudgetFilterExpressionNotPropertyToHclTerraform(struct
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrAndCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionOrAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2412,7 +2412,7 @@ export function awsBudgetsBudgetFilterExpressionOrAndCostCategoriesPropertyToTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrAndCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrAndCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrAndCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrAndCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2443,7 +2443,7 @@ export function awsBudgetsBudgetFilterExpressionOrAndCostCategoriesPropertyToHcl
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrAndDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2456,7 +2456,7 @@ export function awsBudgetsBudgetFilterExpressionOrAndDimensionsPropertyToTerrafo
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrAndDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrAndDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrAndDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrAndDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2487,7 +2487,7 @@ export function awsBudgetsBudgetFilterExpressionOrAndDimensionsPropertyToHclTerr
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrAndTagsProperty): any {
+export function tfBudgetFilterExpressionOrAndTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrAndTagsPropertyOutputReference | TfBudget.FilterExpressionOrAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2500,7 +2500,7 @@ export function awsBudgetsBudgetFilterExpressionOrAndTagsPropertyToTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrAndTagsProperty): any {
+export function tfBudgetFilterExpressionOrAndTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrAndTagsPropertyOutputReference | TfBudget.FilterExpressionOrAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2531,39 +2531,39 @@ export function awsBudgetsBudgetFilterExpressionOrAndTagsPropertyToHclTerraform(
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionOrAndPropertyToTerraform(struct?: TfBudget.FilterExpressionOrAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionOrAndCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionOrAndDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionOrAndTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionOrAndCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionOrAndDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionOrAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrAndPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrAndProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionOrAndPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionOrAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionOrAndCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrAndCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionOrAndDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionOrAndDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrAndDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionOrAndTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionOrAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrAndTagsPropertyList",
@@ -2575,7 +2575,7 @@ export function awsBudgetsBudgetFilterExpressionOrAndPropertyToHclTerraform(stru
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2588,7 +2588,7 @@ export function awsBudgetsBudgetFilterExpressionOrCostCategoriesPropertyToTerraf
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2619,7 +2619,7 @@ export function awsBudgetsBudgetFilterExpressionOrCostCategoriesPropertyToHclTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2632,7 +2632,7 @@ export function awsBudgetsBudgetFilterExpressionOrDimensionsPropertyToTerraform(
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2663,7 +2663,7 @@ export function awsBudgetsBudgetFilterExpressionOrDimensionsPropertyToHclTerrafo
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrNotCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionOrNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2676,7 +2676,7 @@ export function awsBudgetsBudgetFilterExpressionOrNotCostCategoriesPropertyToTer
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrNotCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrNotCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrNotCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2707,7 +2707,7 @@ export function awsBudgetsBudgetFilterExpressionOrNotCostCategoriesPropertyToHcl
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrNotDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2720,7 +2720,7 @@ export function awsBudgetsBudgetFilterExpressionOrNotDimensionsPropertyToTerrafo
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrNotDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrNotDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrNotDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2751,7 +2751,7 @@ export function awsBudgetsBudgetFilterExpressionOrNotDimensionsPropertyToHclTerr
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotTagsProperty): any {
+export function tfBudgetFilterExpressionOrNotTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrNotTagsPropertyOutputReference | TfBudget.FilterExpressionOrNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2764,7 +2764,7 @@ export function awsBudgetsBudgetFilterExpressionOrNotTagsPropertyToTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotTagsProperty): any {
+export function tfBudgetFilterExpressionOrNotTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrNotTagsPropertyOutputReference | TfBudget.FilterExpressionOrNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2795,39 +2795,39 @@ export function awsBudgetsBudgetFilterExpressionOrNotTagsPropertyToHclTerraform(
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotProperty): any {
+export function tfBudgetFilterExpressionOrNotPropertyToTerraform(struct?: TfBudget.FilterExpressionOrNotPropertyOutputReference | TfBudget.FilterExpressionOrNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionOrNotCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionOrNotDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionOrNotTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionOrNotCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionOrNotDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionOrNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrNotPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrNotPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrNotProperty): any {
+export function tfBudgetFilterExpressionOrNotPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrNotPropertyOutputReference | TfBudget.FilterExpressionOrNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionOrNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionOrNotCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrNotCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionOrNotDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionOrNotDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrNotDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionOrNotTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionOrNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrNotTagsPropertyList",
@@ -2839,7 +2839,7 @@ export function awsBudgetsBudgetFilterExpressionOrNotPropertyToHclTerraform(stru
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrCostCategoriesPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrOrCostCategoriesPropertyToTerraform(struct?: TfBudget.FilterExpressionOrOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2852,7 +2852,7 @@ export function awsBudgetsBudgetFilterExpressionOrOrCostCategoriesPropertyToTerr
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrCostCategoriesPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrCostCategoriesPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrOrCostCategoriesProperty): any {
+export function tfBudgetFilterExpressionOrOrCostCategoriesPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrOrCostCategoriesPropertyOutputReference | TfBudget.FilterExpressionOrOrCostCategoriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2883,7 +2883,7 @@ export function awsBudgetsBudgetFilterExpressionOrOrCostCategoriesPropertyToHclT
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrDimensionsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrOrDimensionsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2896,7 +2896,7 @@ export function awsBudgetsBudgetFilterExpressionOrOrDimensionsPropertyToTerrafor
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrDimensionsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrDimensionsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrOrDimensionsProperty): any {
+export function tfBudgetFilterExpressionOrOrDimensionsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrOrDimensionsPropertyOutputReference | TfBudget.FilterExpressionOrOrDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2927,7 +2927,7 @@ export function awsBudgetsBudgetFilterExpressionOrOrDimensionsPropertyToHclTerra
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrOrTagsProperty): any {
+export function tfBudgetFilterExpressionOrOrTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrOrTagsPropertyOutputReference | TfBudget.FilterExpressionOrOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2940,7 +2940,7 @@ export function awsBudgetsBudgetFilterExpressionOrOrTagsPropertyToTerraform(stru
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrOrTagsProperty): any {
+export function tfBudgetFilterExpressionOrOrTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrOrTagsPropertyOutputReference | TfBudget.FilterExpressionOrOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2971,39 +2971,39 @@ export function awsBudgetsBudgetFilterExpressionOrOrTagsPropertyToHclTerraform(s
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionOrOrPropertyToTerraform(struct?: TfBudget.FilterExpressionOrOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_categories: awsBudgetsBudgetFilterExpressionOrOrCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionOrOrDimensionsPropertyToTerraform(struct!.dimensions),
-    tags: awsBudgetsBudgetFilterExpressionOrOrTagsPropertyToTerraform(struct!.tags),
+    cost_categories: tfBudgetFilterExpressionOrOrCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionOrOrDimensionsPropertyToTerraform(struct!.dimensions),
+    tags: tfBudgetFilterExpressionOrOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrOrPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionOrOrPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionOrOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionOrOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrOrCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionOrOrDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionOrOrDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrOrDimensionsPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionOrOrTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionOrOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrOrTagsPropertyList",
@@ -3015,7 +3015,7 @@ export function awsBudgetsBudgetFilterExpressionOrOrPropertyToHclTerraform(struc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrTagsProperty): any {
+export function tfBudgetFilterExpressionOrTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionOrTagsPropertyOutputReference | TfBudget.FilterExpressionOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3028,7 +3028,7 @@ export function awsBudgetsBudgetFilterExpressionOrTagsPropertyToTerraform(struct
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionOrTagsProperty): any {
+export function tfBudgetFilterExpressionOrTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrTagsPropertyOutputReference | TfBudget.FilterExpressionOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3059,60 +3059,60 @@ export function awsBudgetsBudgetFilterExpressionOrTagsPropertyToHclTerraform(str
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionOrPropertyToTerraform(struct?: TfBudget.FilterExpressionOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(awsBudgetsBudgetFilterExpressionOrAndPropertyToTerraform, true)(struct!.and),
-    cost_categories: awsBudgetsBudgetFilterExpressionOrCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionOrDimensionsPropertyToTerraform(struct!.dimensions),
-    not: awsBudgetsBudgetFilterExpressionOrNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(awsBudgetsBudgetFilterExpressionOrOrPropertyToTerraform, true)(struct!.or),
-    tags: awsBudgetsBudgetFilterExpressionOrTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(tfBudgetFilterExpressionOrAndPropertyToTerraform, true)(struct!.and),
+    cost_categories: tfBudgetFilterExpressionOrCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionOrDimensionsPropertyToTerraform(struct!.dimensions),
+    not: tfBudgetFilterExpressionOrNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(tfBudgetFilterExpressionOrOrPropertyToTerraform, true)(struct!.or),
+    tags: tfBudgetFilterExpressionOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionOrPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionOrProperty | cdktn.IResolvable): any {
+export function tfBudgetFilterExpressionOrPropertyToHclTerraform(struct?: TfBudget.FilterExpressionOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionOrAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionOrAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrAndPropertyList",
     },
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionOrCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionOrDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionOrDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrDimensionsPropertyList",
     },
     not: {
-      value: awsBudgetsBudgetFilterExpressionOrNotPropertyToHclTerraform(struct!.not),
+      value: tfBudgetFilterExpressionOrNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionOrOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionOrOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrOrPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionOrTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrTagsPropertyList",
@@ -3124,7 +3124,7 @@ export function awsBudgetsBudgetFilterExpressionOrPropertyToHclTerraform(struct?
 }
 
 
-export function awsBudgetsBudgetFilterExpressionTagsPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionTagsProperty): any {
+export function tfBudgetFilterExpressionTagsPropertyToTerraform(struct?: TfBudget.FilterExpressionTagsPropertyOutputReference | TfBudget.FilterExpressionTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3137,7 +3137,7 @@ export function awsBudgetsBudgetFilterExpressionTagsPropertyToTerraform(struct?:
 }
 
 
-export function awsBudgetsBudgetFilterExpressionTagsPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionTagsPropertyOutputReference | AwsBudgetsBudget.FilterExpressionTagsProperty): any {
+export function tfBudgetFilterExpressionTagsPropertyToHclTerraform(struct?: TfBudget.FilterExpressionTagsPropertyOutputReference | TfBudget.FilterExpressionTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3168,60 +3168,60 @@ export function awsBudgetsBudgetFilterExpressionTagsPropertyToHclTerraform(struc
 }
 
 
-export function awsBudgetsBudgetFilterExpressionPropertyToTerraform(struct?: AwsBudgetsBudget.FilterExpressionPropertyOutputReference | AwsBudgetsBudget.FilterExpressionProperty): any {
+export function tfBudgetFilterExpressionPropertyToTerraform(struct?: TfBudget.FilterExpressionPropertyOutputReference | TfBudget.FilterExpressionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(awsBudgetsBudgetFilterExpressionAndPropertyToTerraform, true)(struct!.and),
-    cost_categories: awsBudgetsBudgetFilterExpressionCostCategoriesPropertyToTerraform(struct!.costCategories),
-    dimensions: awsBudgetsBudgetFilterExpressionDimensionsPropertyToTerraform(struct!.dimensions),
-    not: awsBudgetsBudgetFilterExpressionNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(awsBudgetsBudgetFilterExpressionOrPropertyToTerraform, true)(struct!.or),
-    tags: awsBudgetsBudgetFilterExpressionTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(tfBudgetFilterExpressionAndPropertyToTerraform, true)(struct!.and),
+    cost_categories: tfBudgetFilterExpressionCostCategoriesPropertyToTerraform(struct!.costCategories),
+    dimensions: tfBudgetFilterExpressionDimensionsPropertyToTerraform(struct!.dimensions),
+    not: tfBudgetFilterExpressionNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(tfBudgetFilterExpressionOrPropertyToTerraform, true)(struct!.or),
+    tags: tfBudgetFilterExpressionTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsBudgetsBudgetFilterExpressionPropertyToHclTerraform(struct?: AwsBudgetsBudget.FilterExpressionPropertyOutputReference | AwsBudgetsBudget.FilterExpressionProperty): any {
+export function tfBudgetFilterExpressionPropertyToHclTerraform(struct?: TfBudget.FilterExpressionPropertyOutputReference | TfBudget.FilterExpressionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionAndPropertyList",
     },
     cost_categories: {
-      value: awsBudgetsBudgetFilterExpressionCostCategoriesPropertyToHclTerraform(struct!.costCategories),
+      value: tfBudgetFilterExpressionCostCategoriesPropertyToHclTerraform(struct!.costCategories),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionCostCategoriesPropertyList",
     },
     dimensions: {
-      value: awsBudgetsBudgetFilterExpressionDimensionsPropertyToHclTerraform(struct!.dimensions),
+      value: tfBudgetFilterExpressionDimensionsPropertyToHclTerraform(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionDimensionsPropertyList",
     },
     not: {
-      value: awsBudgetsBudgetFilterExpressionNotPropertyToHclTerraform(struct!.not),
+      value: tfBudgetFilterExpressionNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(awsBudgetsBudgetFilterExpressionOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(tfBudgetFilterExpressionOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionOrPropertyList",
     },
     tags: {
-      value: awsBudgetsBudgetFilterExpressionTagsPropertyToHclTerraform(struct!.tags),
+      value: tfBudgetFilterExpressionTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterExpressionTagsPropertyList",
@@ -3233,7 +3233,7 @@ export function awsBudgetsBudgetFilterExpressionPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBudgetsBudgetNotificationPropertyToTerraform(struct?: AwsBudgetsBudget.NotificationProperty | cdktn.IResolvable): any {
+export function tfBudgetNotificationPropertyToTerraform(struct?: TfBudget.NotificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3249,7 +3249,7 @@ export function awsBudgetsBudgetNotificationPropertyToTerraform(struct?: AwsBudg
 }
 
 
-export function awsBudgetsBudgetNotificationPropertyToHclTerraform(struct?: AwsBudgetsBudget.NotificationProperty | cdktn.IResolvable): any {
+export function tfBudgetNotificationPropertyToHclTerraform(struct?: TfBudget.NotificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3298,7 +3298,7 @@ export function awsBudgetsBudgetNotificationPropertyToHclTerraform(struct?: AwsB
 }
 
 
-export function awsBudgetsBudgetPlannedLimitPropertyToTerraform(struct?: AwsBudgetsBudget.PlannedLimitProperty | cdktn.IResolvable): any {
+export function tfBudgetPlannedLimitPropertyToTerraform(struct?: TfBudget.PlannedLimitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3311,7 +3311,7 @@ export function awsBudgetsBudgetPlannedLimitPropertyToTerraform(struct?: AwsBudg
 }
 
 
-export function awsBudgetsBudgetPlannedLimitPropertyToHclTerraform(struct?: AwsBudgetsBudget.PlannedLimitProperty | cdktn.IResolvable): any {
+export function tfBudgetPlannedLimitPropertyToHclTerraform(struct?: TfBudget.PlannedLimitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3342,10 +3342,10 @@ export function awsBudgetsBudgetPlannedLimitPropertyToHclTerraform(struct?: AwsB
 }
 
 
-export namespace AwsBudgetsBudget {
+export namespace TfBudget {
 export interface HistoricalOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#budget_adjustment_period AwsBudgetsBudget#budget_adjustment_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#budget_adjustment_period TfBudget#budget_adjustment_period}
   */
   readonly budgetAdjustmentPeriod: number;
 }
@@ -3401,13 +3401,13 @@ export class HistoricalOptionsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface AutoAdjustDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#auto_adjust_type AwsBudgetsBudget#auto_adjust_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#auto_adjust_type TfBudget#auto_adjust_type}
   */
   readonly autoAdjustType: string;
   /**
   * historical_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#historical_options AwsBudgetsBudget#historical_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#historical_options TfBudget#historical_options}
   */
   readonly historicalOptions?: HistoricalOptionsProperty;
 }
@@ -3485,11 +3485,11 @@ export class AutoAdjustDataPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CostFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#name AwsBudgetsBudget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#name TfBudget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -3591,47 +3591,47 @@ export class CostFilterPropertyList extends cdktn.ComplexList {
 }
 export interface CostTypesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_credit AwsBudgetsBudget#include_credit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_credit TfBudget#include_credit}
   */
   readonly includeCredit?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_discount AwsBudgetsBudget#include_discount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_discount TfBudget#include_discount}
   */
   readonly includeDiscount?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_other_subscription AwsBudgetsBudget#include_other_subscription}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_other_subscription TfBudget#include_other_subscription}
   */
   readonly includeOtherSubscription?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_recurring AwsBudgetsBudget#include_recurring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_recurring TfBudget#include_recurring}
   */
   readonly includeRecurring?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_refund AwsBudgetsBudget#include_refund}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_refund TfBudget#include_refund}
   */
   readonly includeRefund?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_subscription AwsBudgetsBudget#include_subscription}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_subscription TfBudget#include_subscription}
   */
   readonly includeSubscription?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_support AwsBudgetsBudget#include_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_support TfBudget#include_support}
   */
   readonly includeSupport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_tax AwsBudgetsBudget#include_tax}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_tax TfBudget#include_tax}
   */
   readonly includeTax?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_upfront AwsBudgetsBudget#include_upfront}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#include_upfront TfBudget#include_upfront}
   */
   readonly includeUpfront?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#use_amortized AwsBudgetsBudget#use_amortized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#use_amortized TfBudget#use_amortized}
   */
   readonly useAmortized?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#use_blended AwsBudgetsBudget#use_blended}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#use_blended TfBudget#use_blended}
   */
   readonly useBlended?: boolean | cdktn.IResolvable;
 }
@@ -3905,15 +3905,15 @@ export class CostTypesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FilterExpressionAndAndCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -4011,15 +4011,15 @@ export class FilterExpressionAndAndCostCategoriesPropertyOutputReference extends
 }
 export interface FilterExpressionAndAndDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -4111,15 +4111,15 @@ export class FilterExpressionAndAndDimensionsPropertyOutputReference extends cdk
 }
 export interface FilterExpressionAndAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -4219,19 +4219,19 @@ export interface FilterExpressionAndAndProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionAndAndCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionAndAndDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionAndAndTagsProperty;
 }
@@ -4361,15 +4361,15 @@ export class FilterExpressionAndAndPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionAndCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -4467,15 +4467,15 @@ export class FilterExpressionAndCostCategoriesPropertyOutputReference extends cd
 }
 export interface FilterExpressionAndDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -4567,15 +4567,15 @@ export class FilterExpressionAndDimensionsPropertyOutputReference extends cdktn.
 }
 export interface FilterExpressionAndNotCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -4673,15 +4673,15 @@ export class FilterExpressionAndNotCostCategoriesPropertyOutputReference extends
 }
 export interface FilterExpressionAndNotDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -4773,15 +4773,15 @@ export class FilterExpressionAndNotDimensionsPropertyOutputReference extends cdk
 }
 export interface FilterExpressionAndNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -4881,19 +4881,19 @@ export interface FilterExpressionAndNotProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionAndNotCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionAndNotDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionAndNotTagsProperty;
 }
@@ -4991,15 +4991,15 @@ export class FilterExpressionAndNotPropertyOutputReference extends cdktn.Complex
 }
 export interface FilterExpressionAndOrCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -5097,15 +5097,15 @@ export class FilterExpressionAndOrCostCategoriesPropertyOutputReference extends 
 }
 export interface FilterExpressionAndOrDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -5197,15 +5197,15 @@ export class FilterExpressionAndOrDimensionsPropertyOutputReference extends cdkt
 }
 export interface FilterExpressionAndOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -5305,19 +5305,19 @@ export interface FilterExpressionAndOrProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionAndOrCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionAndOrDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionAndOrTagsProperty;
 }
@@ -5447,15 +5447,15 @@ export class FilterExpressionAndOrPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -5555,37 +5555,37 @@ export interface FilterExpressionAndProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and AwsBudgetsBudget#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and TfBudget#and}
   */
   readonly and?: FilterExpressionAndAndProperty[] | cdktn.IResolvable;
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionAndCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionAndDimensionsProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not AwsBudgetsBudget#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not TfBudget#not}
   */
   readonly not?: FilterExpressionAndNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or AwsBudgetsBudget#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or TfBudget#or}
   */
   readonly or?: FilterExpressionAndOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionAndTagsProperty;
 }
@@ -5781,15 +5781,15 @@ export class FilterExpressionAndPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -5887,15 +5887,15 @@ export class FilterExpressionCostCategoriesPropertyOutputReference extends cdktn
 }
 export interface FilterExpressionDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -5987,15 +5987,15 @@ export class FilterExpressionDimensionsPropertyOutputReference extends cdktn.Com
 }
 export interface FilterExpressionNotAndCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -6093,15 +6093,15 @@ export class FilterExpressionNotAndCostCategoriesPropertyOutputReference extends
 }
 export interface FilterExpressionNotAndDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -6193,15 +6193,15 @@ export class FilterExpressionNotAndDimensionsPropertyOutputReference extends cdk
 }
 export interface FilterExpressionNotAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -6301,19 +6301,19 @@ export interface FilterExpressionNotAndProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionNotAndCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionNotAndDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionNotAndTagsProperty;
 }
@@ -6443,15 +6443,15 @@ export class FilterExpressionNotAndPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionNotCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -6549,15 +6549,15 @@ export class FilterExpressionNotCostCategoriesPropertyOutputReference extends cd
 }
 export interface FilterExpressionNotDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -6649,15 +6649,15 @@ export class FilterExpressionNotDimensionsPropertyOutputReference extends cdktn.
 }
 export interface FilterExpressionNotNotCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -6755,15 +6755,15 @@ export class FilterExpressionNotNotCostCategoriesPropertyOutputReference extends
 }
 export interface FilterExpressionNotNotDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -6855,15 +6855,15 @@ export class FilterExpressionNotNotDimensionsPropertyOutputReference extends cdk
 }
 export interface FilterExpressionNotNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -6963,19 +6963,19 @@ export interface FilterExpressionNotNotProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionNotNotCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionNotNotDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionNotNotTagsProperty;
 }
@@ -7073,15 +7073,15 @@ export class FilterExpressionNotNotPropertyOutputReference extends cdktn.Complex
 }
 export interface FilterExpressionNotOrCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -7179,15 +7179,15 @@ export class FilterExpressionNotOrCostCategoriesPropertyOutputReference extends 
 }
 export interface FilterExpressionNotOrDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -7279,15 +7279,15 @@ export class FilterExpressionNotOrDimensionsPropertyOutputReference extends cdkt
 }
 export interface FilterExpressionNotOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -7387,19 +7387,19 @@ export interface FilterExpressionNotOrProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionNotOrCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionNotOrDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionNotOrTagsProperty;
 }
@@ -7529,15 +7529,15 @@ export class FilterExpressionNotOrPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -7637,37 +7637,37 @@ export interface FilterExpressionNotProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and AwsBudgetsBudget#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and TfBudget#and}
   */
   readonly and?: FilterExpressionNotAndProperty[] | cdktn.IResolvable;
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionNotCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionNotDimensionsProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not AwsBudgetsBudget#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not TfBudget#not}
   */
   readonly not?: FilterExpressionNotNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or AwsBudgetsBudget#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or TfBudget#or}
   */
   readonly or?: FilterExpressionNotOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionNotTagsProperty;
 }
@@ -7831,15 +7831,15 @@ export class FilterExpressionNotPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface FilterExpressionOrAndCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -7937,15 +7937,15 @@ export class FilterExpressionOrAndCostCategoriesPropertyOutputReference extends 
 }
 export interface FilterExpressionOrAndDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -8037,15 +8037,15 @@ export class FilterExpressionOrAndDimensionsPropertyOutputReference extends cdkt
 }
 export interface FilterExpressionOrAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -8145,19 +8145,19 @@ export interface FilterExpressionOrAndProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionOrAndCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionOrAndDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionOrAndTagsProperty;
 }
@@ -8287,15 +8287,15 @@ export class FilterExpressionOrAndPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionOrCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -8393,15 +8393,15 @@ export class FilterExpressionOrCostCategoriesPropertyOutputReference extends cdk
 }
 export interface FilterExpressionOrDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -8493,15 +8493,15 @@ export class FilterExpressionOrDimensionsPropertyOutputReference extends cdktn.C
 }
 export interface FilterExpressionOrNotCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -8599,15 +8599,15 @@ export class FilterExpressionOrNotCostCategoriesPropertyOutputReference extends 
 }
 export interface FilterExpressionOrNotDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -8699,15 +8699,15 @@ export class FilterExpressionOrNotDimensionsPropertyOutputReference extends cdkt
 }
 export interface FilterExpressionOrNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -8807,19 +8807,19 @@ export interface FilterExpressionOrNotProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionOrNotCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionOrNotDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionOrNotTagsProperty;
 }
@@ -8917,15 +8917,15 @@ export class FilterExpressionOrNotPropertyOutputReference extends cdktn.ComplexO
 }
 export interface FilterExpressionOrOrCostCategoriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -9023,15 +9023,15 @@ export class FilterExpressionOrOrCostCategoriesPropertyOutputReference extends c
 }
 export interface FilterExpressionOrOrDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values: string[];
 }
@@ -9123,15 +9123,15 @@ export class FilterExpressionOrOrDimensionsPropertyOutputReference extends cdktn
 }
 export interface FilterExpressionOrOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -9231,19 +9231,19 @@ export interface FilterExpressionOrOrProperty {
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionOrOrCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionOrOrDimensionsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionOrOrTagsProperty;
 }
@@ -9373,15 +9373,15 @@ export class FilterExpressionOrOrPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -9481,37 +9481,37 @@ export interface FilterExpressionOrProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and AwsBudgetsBudget#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and TfBudget#and}
   */
   readonly and?: FilterExpressionOrAndProperty[] | cdktn.IResolvable;
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionOrCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionOrDimensionsProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not AwsBudgetsBudget#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not TfBudget#not}
   */
   readonly not?: FilterExpressionOrNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or AwsBudgetsBudget#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or TfBudget#or}
   */
   readonly or?: FilterExpressionOrOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionOrTagsProperty;
 }
@@ -9707,15 +9707,15 @@ export class FilterExpressionOrPropertyList extends cdktn.ComplexList {
 }
 export interface FilterExpressionTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key AwsBudgetsBudget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#key TfBudget#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options AwsBudgetsBudget#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#match_options TfBudget#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values AwsBudgetsBudget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#values TfBudget#values}
   */
   readonly values?: string[];
 }
@@ -9815,37 +9815,37 @@ export interface FilterExpressionProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and AwsBudgetsBudget#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#and TfBudget#and}
   */
   readonly and?: FilterExpressionAndProperty[] | cdktn.IResolvable;
   /**
   * cost_categories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories AwsBudgetsBudget#cost_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#cost_categories TfBudget#cost_categories}
   */
   readonly costCategories?: FilterExpressionCostCategoriesProperty;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions AwsBudgetsBudget#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#dimensions TfBudget#dimensions}
   */
   readonly dimensions?: FilterExpressionDimensionsProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not AwsBudgetsBudget#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#not TfBudget#not}
   */
   readonly not?: FilterExpressionNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or AwsBudgetsBudget#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#or TfBudget#or}
   */
   readonly or?: FilterExpressionOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags AwsBudgetsBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#tags TfBudget#tags}
   */
   readonly tags?: FilterExpressionTagsProperty;
 }
@@ -10009,27 +10009,27 @@ export class FilterExpressionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface NotificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#comparison_operator AwsBudgetsBudget#comparison_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#comparison_operator TfBudget#comparison_operator}
   */
   readonly comparisonOperator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#notification_type AwsBudgetsBudget#notification_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#notification_type TfBudget#notification_type}
   */
   readonly notificationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#subscriber_email_addresses AwsBudgetsBudget#subscriber_email_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#subscriber_email_addresses TfBudget#subscriber_email_addresses}
   */
   readonly subscriberEmailAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#subscriber_sns_topic_arns AwsBudgetsBudget#subscriber_sns_topic_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#subscriber_sns_topic_arns TfBudget#subscriber_sns_topic_arns}
   */
   readonly subscriberSnsTopicArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#threshold AwsBudgetsBudget#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#threshold TfBudget#threshold}
   */
   readonly threshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#threshold_type AwsBudgetsBudget#threshold_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#threshold_type TfBudget#threshold_type}
   */
   readonly thresholdType: string;
 }
@@ -10213,15 +10213,15 @@ export class NotificationPropertyList extends cdktn.ComplexList {
 }
 export interface PlannedLimitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#amount AwsBudgetsBudget#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#amount TfBudget#amount}
   */
   readonly amount: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#start_time AwsBudgetsBudget#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#start_time TfBudget#start_time}
   */
   readonly startTime: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#unit AwsBudgetsBudget#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget#unit TfBudget#unit}
   */
   readonly unit: string;
 }

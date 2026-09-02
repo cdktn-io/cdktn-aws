@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebSessionLoggerConfig extends cdktn.TerraformMetaArguments {
+export interface TfSessionLoggerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#additional_encryption_context AwsWorkspaceswebSessionLogger#additional_encryption_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#additional_encryption_context TfSessionLogger#additional_encryption_context}
   */
   readonly additionalEncryptionContext?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#customer_managed_key AwsWorkspaceswebSessionLogger#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#customer_managed_key TfSessionLogger#customer_managed_key}
   */
   readonly customerManagedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#display_name AwsWorkspaceswebSessionLogger#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#display_name TfSessionLogger#display_name}
   */
   readonly displayName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#region AwsWorkspaceswebSessionLogger#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#region TfSessionLogger#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#tags AwsWorkspaceswebSessionLogger#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#tags TfSessionLogger#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * event_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#event_filter AwsWorkspaceswebSessionLogger#event_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#event_filter TfSessionLogger#event_filter}
   */
-  readonly eventFilter?: AwsWorkspaceswebSessionLogger.EventFilterProperty[] | cdktn.IResolvable;
+  readonly eventFilter?: TfSessionLogger.EventFilterProperty[] | cdktn.IResolvable;
   /**
   * log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#log_configuration AwsWorkspaceswebSessionLogger#log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#log_configuration TfSessionLogger#log_configuration}
   */
-  readonly logConfiguration?: AwsWorkspaceswebSessionLogger.LogConfigurationProperty[] | cdktn.IResolvable;
+  readonly logConfiguration?: TfSessionLogger.LogConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger aws_workspacesweb_session_logger}
 */
-export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
+export class TfSessionLogger extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebSessionLogger resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSessionLogger resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebSessionLogger to import
-  * @param importFromId The id of the existing AwsWorkspaceswebSessionLogger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebSessionLogger to import is found
+  * @param importToId The construct id used in the generated config for the TfSessionLogger to import
+  * @param importFromId The id of the existing TfSessionLogger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSessionLogger to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_session_logger", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebSessionLoggerConfig = {}
+  * @param options TfSessionLoggerConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebSessionLoggerConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfSessionLoggerConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_session_logger',
       terraformGeneratorMetadata: {
@@ -203,11 +203,11 @@ export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
   }
 
   // event_filter - computed: false, optional: true, required: false
-  private _eventFilter = new AwsWorkspaceswebSessionLogger.EventFilterPropertyList(this, "event_filter", false);
+  private _eventFilter = new TfSessionLogger.EventFilterPropertyList(this, "event_filter", false);
   public get eventFilter() {
     return this._eventFilter;
   }
-  public putEventFilter(value: AwsWorkspaceswebSessionLogger.EventFilterProperty[] | cdktn.IResolvable) {
+  public putEventFilter(value: TfSessionLogger.EventFilterProperty[] | cdktn.IResolvable) {
     this._eventFilter.internalValue = value;
   }
   public resetEventFilter() {
@@ -219,11 +219,11 @@ export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
   }
 
   // log_configuration - computed: false, optional: true, required: false
-  private _logConfiguration = new AwsWorkspaceswebSessionLogger.LogConfigurationPropertyList(this, "log_configuration", false);
+  private _logConfiguration = new TfSessionLogger.LogConfigurationPropertyList(this, "log_configuration", false);
   public get logConfiguration() {
     return this._logConfiguration;
   }
-  public putLogConfiguration(value: AwsWorkspaceswebSessionLogger.LogConfigurationProperty[] | cdktn.IResolvable) {
+  public putLogConfiguration(value: TfSessionLogger.LogConfigurationProperty[] | cdktn.IResolvable) {
     this._logConfiguration.internalValue = value;
   }
   public resetLogConfiguration() {
@@ -245,8 +245,8 @@ export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
       display_name: cdktn.stringToTerraform(this._displayName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      event_filter: cdktn.listMapper(awsWorkspaceswebSessionLoggerEventFilterPropertyToTerraform, true)(this._eventFilter.internalValue),
-      log_configuration: cdktn.listMapper(awsWorkspaceswebSessionLoggerLogConfigurationPropertyToTerraform, true)(this._logConfiguration.internalValue),
+      event_filter: cdktn.listMapper(tfSessionLoggerEventFilterPropertyToTerraform, true)(this._eventFilter.internalValue),
+      log_configuration: cdktn.listMapper(tfSessionLoggerLogConfigurationPropertyToTerraform, true)(this._logConfiguration.internalValue),
     };
   }
 
@@ -283,16 +283,16 @@ export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       event_filter: {
-        value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerEventFilterPropertyToHclTerraform, true)(this._eventFilter.internalValue),
+        value: cdktn.listMapperHcl(tfSessionLoggerEventFilterPropertyToHclTerraform, true)(this._eventFilter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWorkspaceswebSessionLogger.EventFilterPropertyList",
+        storageClassType: "TfSessionLogger.EventFilterPropertyList",
       },
       log_configuration: {
-        value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerLogConfigurationPropertyToHclTerraform, true)(this._logConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfSessionLoggerLogConfigurationPropertyToHclTerraform, true)(this._logConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWorkspaceswebSessionLogger.LogConfigurationPropertyList",
+        storageClassType: "TfSessionLogger.LogConfigurationPropertyList",
       },
     };
 
@@ -301,7 +301,7 @@ export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
   }
 }
 
-export function awsWorkspaceswebSessionLoggerAllPropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.AllProperty | cdktn.IResolvable): any {
+export function tfSessionLoggerAllPropertyToTerraform(struct?: TfSessionLogger.AllProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function awsWorkspaceswebSessionLoggerAllPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsWorkspaceswebSessionLoggerAllPropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.AllProperty | cdktn.IResolvable): any {
+export function tfSessionLoggerAllPropertyToHclTerraform(struct?: TfSessionLogger.AllProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,19 +322,19 @@ export function awsWorkspaceswebSessionLoggerAllPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsWorkspaceswebSessionLoggerEventFilterPropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.EventFilterProperty | cdktn.IResolvable): any {
+export function tfSessionLoggerEventFilterPropertyToTerraform(struct?: TfSessionLogger.EventFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     include: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.include),
-    all: cdktn.listMapper(awsWorkspaceswebSessionLoggerAllPropertyToTerraform, true)(struct!.all),
+    all: cdktn.listMapper(tfSessionLoggerAllPropertyToTerraform, true)(struct!.all),
   }
 }
 
 
-export function awsWorkspaceswebSessionLoggerEventFilterPropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.EventFilterProperty | cdktn.IResolvable): any {
+export function tfSessionLoggerEventFilterPropertyToHclTerraform(struct?: TfSessionLogger.EventFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function awsWorkspaceswebSessionLoggerEventFilterPropertyToHclTerraform(s
       storageClassType: "stringList",
     },
     all: {
-      value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerAllPropertyToHclTerraform, true)(struct!.all),
+      value: cdktn.listMapperHcl(tfSessionLoggerAllPropertyToHclTerraform, true)(struct!.all),
       isBlock: true,
       type: "list",
       storageClassType: "AllPropertyList",
@@ -359,7 +359,7 @@ export function awsWorkspaceswebSessionLoggerEventFilterPropertyToHclTerraform(s
 }
 
 
-export function awsWorkspaceswebSessionLoggerS3PropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.S3Property | cdktn.IResolvable): any {
+export function tfSessionLoggerS3PropertyToTerraform(struct?: TfSessionLogger.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function awsWorkspaceswebSessionLoggerS3PropertyToTerraform(struct?: AwsW
 }
 
 
-export function awsWorkspaceswebSessionLoggerS3PropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.S3Property | cdktn.IResolvable): any {
+export function tfSessionLoggerS3PropertyToHclTerraform(struct?: TfSessionLogger.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,25 +417,25 @@ export function awsWorkspaceswebSessionLoggerS3PropertyToHclTerraform(struct?: A
 }
 
 
-export function awsWorkspaceswebSessionLoggerLogConfigurationPropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.LogConfigurationProperty | cdktn.IResolvable): any {
+export function tfSessionLoggerLogConfigurationPropertyToTerraform(struct?: TfSessionLogger.LogConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: cdktn.listMapper(awsWorkspaceswebSessionLoggerS3PropertyToTerraform, true)(struct!.s3),
+    s3: cdktn.listMapper(tfSessionLoggerS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsWorkspaceswebSessionLoggerLogConfigurationPropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.LogConfigurationProperty | cdktn.IResolvable): any {
+export function tfSessionLoggerLogConfigurationPropertyToHclTerraform(struct?: TfSessionLogger.LogConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfSessionLoggerS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -447,7 +447,7 @@ export function awsWorkspaceswebSessionLoggerLogConfigurationPropertyToHclTerraf
 }
 
 
-export namespace AwsWorkspaceswebSessionLogger {
+export namespace TfSessionLogger {
 export interface AllProperty {
 }
 export class AllPropertyOutputReference extends cdktn.ComplexObject {
@@ -510,13 +510,13 @@ export class AllPropertyList extends cdktn.ComplexList {
 }
 export interface EventFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#include AwsWorkspaceswebSessionLogger#include}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#include TfSessionLogger#include}
   */
   readonly include?: string[];
   /**
   * all block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#all AwsWorkspaceswebSessionLogger#all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#all TfSessionLogger#all}
   */
   readonly all?: AllProperty[] | cdktn.IResolvable;
 }
@@ -624,23 +624,23 @@ export class EventFilterPropertyList extends cdktn.ComplexList {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#bucket AwsWorkspaceswebSessionLogger#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#bucket TfSessionLogger#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#bucket_owner AwsWorkspaceswebSessionLogger#bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#bucket_owner TfSessionLogger#bucket_owner}
   */
   readonly bucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#folder_structure AwsWorkspaceswebSessionLogger#folder_structure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#folder_structure TfSessionLogger#folder_structure}
   */
   readonly folderStructure: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#key_prefix AwsWorkspaceswebSessionLogger#key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#key_prefix TfSessionLogger#key_prefix}
   */
   readonly keyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#log_file_format AwsWorkspaceswebSessionLogger#log_file_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#log_file_format TfSessionLogger#log_file_format}
   */
   readonly logFileFormat: string;
 }
@@ -807,7 +807,7 @@ export interface LogConfigurationProperty {
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#s3 AwsWorkspaceswebSessionLogger#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#s3 TfSessionLogger#s3}
   */
   readonly s3?: S3Property[] | cdktn.IResolvable;
 }

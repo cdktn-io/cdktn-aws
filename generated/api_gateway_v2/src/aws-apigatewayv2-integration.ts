@@ -5,102 +5,102 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApigatewayv2IntegrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfIntegrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#api_id AwsApigatewayv2Integration#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#api_id TfIntegration#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#connection_id AwsApigatewayv2Integration#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#connection_id TfIntegration#connection_id}
   */
   readonly connectionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#connection_type AwsApigatewayv2Integration#connection_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#connection_type TfIntegration#connection_type}
   */
   readonly connectionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#content_handling_strategy AwsApigatewayv2Integration#content_handling_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#content_handling_strategy TfIntegration#content_handling_strategy}
   */
   readonly contentHandlingStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#credentials_arn AwsApigatewayv2Integration#credentials_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#credentials_arn TfIntegration#credentials_arn}
   */
   readonly credentialsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#description AwsApigatewayv2Integration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#description TfIntegration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#id AwsApigatewayv2Integration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#id TfIntegration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_method AwsApigatewayv2Integration#integration_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_method TfIntegration#integration_method}
   */
   readonly integrationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_subtype AwsApigatewayv2Integration#integration_subtype}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_subtype TfIntegration#integration_subtype}
   */
   readonly integrationSubtype?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_type AwsApigatewayv2Integration#integration_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_type TfIntegration#integration_type}
   */
   readonly integrationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_uri AwsApigatewayv2Integration#integration_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#integration_uri TfIntegration#integration_uri}
   */
   readonly integrationUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#passthrough_behavior AwsApigatewayv2Integration#passthrough_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#passthrough_behavior TfIntegration#passthrough_behavior}
   */
   readonly passthroughBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#payload_format_version AwsApigatewayv2Integration#payload_format_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#payload_format_version TfIntegration#payload_format_version}
   */
   readonly payloadFormatVersion?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#region AwsApigatewayv2Integration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#region TfIntegration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#request_parameters AwsApigatewayv2Integration#request_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#request_parameters TfIntegration#request_parameters}
   */
   readonly requestParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#request_templates AwsApigatewayv2Integration#request_templates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#request_templates TfIntegration#request_templates}
   */
   readonly requestTemplates?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#template_selection_expression AwsApigatewayv2Integration#template_selection_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#template_selection_expression TfIntegration#template_selection_expression}
   */
   readonly templateSelectionExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#timeout_milliseconds AwsApigatewayv2Integration#timeout_milliseconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#timeout_milliseconds TfIntegration#timeout_milliseconds}
   */
   readonly timeoutMilliseconds?: number;
   /**
   * response_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#response_parameters AwsApigatewayv2Integration#response_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#response_parameters TfIntegration#response_parameters}
   */
-  readonly responseParameters?: AwsApigatewayv2Integration.ResponseParametersProperty[] | cdktn.IResolvable;
+  readonly responseParameters?: TfIntegration.ResponseParametersProperty[] | cdktn.IResolvable;
   /**
   * tls_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#tls_config AwsApigatewayv2Integration#tls_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#tls_config TfIntegration#tls_config}
   */
-  readonly tlsConfig?: AwsApigatewayv2Integration.TlsConfigProperty;
+  readonly tlsConfig?: TfIntegration.TlsConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration aws_apigatewayv2_integration}
 */
-export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
+export class TfIntegration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApigatewayv2Integration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIntegration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApigatewayv2Integration to import
-  * @param importFromId The id of the existing AwsApigatewayv2Integration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApigatewayv2Integration to import is found
+  * @param importToId The construct id used in the generated config for the TfIntegration to import
+  * @param importFromId The id of the existing TfIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIntegration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_integration", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApigatewayv2IntegrationConfig
+  * @param options TfIntegrationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApigatewayv2IntegrationConfig) {
+  public constructor(scope: Construct, id: string, config: TfIntegrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_integration',
       terraformGeneratorMetadata: {
@@ -462,11 +462,11 @@ export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
   }
 
   // response_parameters - computed: false, optional: true, required: false
-  private _responseParameters = new AwsApigatewayv2Integration.ResponseParametersPropertyList(this, "response_parameters", true);
+  private _responseParameters = new TfIntegration.ResponseParametersPropertyList(this, "response_parameters", true);
   public get responseParameters() {
     return this._responseParameters;
   }
-  public putResponseParameters(value: AwsApigatewayv2Integration.ResponseParametersProperty[] | cdktn.IResolvable) {
+  public putResponseParameters(value: TfIntegration.ResponseParametersProperty[] | cdktn.IResolvable) {
     this._responseParameters.internalValue = value;
   }
   public resetResponseParameters() {
@@ -478,11 +478,11 @@ export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
   }
 
   // tls_config - computed: false, optional: true, required: false
-  private _tlsConfig = new AwsApigatewayv2Integration.TlsConfigPropertyOutputReference(this, "tls_config");
+  private _tlsConfig = new TfIntegration.TlsConfigPropertyOutputReference(this, "tls_config");
   public get tlsConfig() {
     return this._tlsConfig;
   }
-  public putTlsConfig(value: AwsApigatewayv2Integration.TlsConfigProperty) {
+  public putTlsConfig(value: TfIntegration.TlsConfigProperty) {
     this._tlsConfig.internalValue = value;
   }
   public resetTlsConfig() {
@@ -517,8 +517,8 @@ export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
       request_templates: cdktn.hashMapper(cdktn.stringToTerraform)(this._requestTemplates),
       template_selection_expression: cdktn.stringToTerraform(this._templateSelectionExpression),
       timeout_milliseconds: cdktn.numberToTerraform(this._timeoutMilliseconds),
-      response_parameters: cdktn.listMapper(awsApigatewayv2IntegrationResponseParametersPropertyToTerraform, true)(this._responseParameters.internalValue),
-      tls_config: awsApigatewayv2IntegrationTlsConfigPropertyToTerraform(this._tlsConfig.internalValue),
+      response_parameters: cdktn.listMapper(tfIntegrationResponseParametersPropertyToTerraform, true)(this._responseParameters.internalValue),
+      tls_config: tfIntegrationTlsConfigPropertyToTerraform(this._tlsConfig.internalValue),
     };
   }
 
@@ -633,16 +633,16 @@ export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       response_parameters: {
-        value: cdktn.listMapperHcl(awsApigatewayv2IntegrationResponseParametersPropertyToHclTerraform, true)(this._responseParameters.internalValue),
+        value: cdktn.listMapperHcl(tfIntegrationResponseParametersPropertyToHclTerraform, true)(this._responseParameters.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsApigatewayv2Integration.ResponseParametersPropertyList",
+        storageClassType: "TfIntegration.ResponseParametersPropertyList",
       },
       tls_config: {
-        value: awsApigatewayv2IntegrationTlsConfigPropertyToHclTerraform(this._tlsConfig.internalValue),
+        value: tfIntegrationTlsConfigPropertyToHclTerraform(this._tlsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApigatewayv2Integration.TlsConfigPropertyList",
+        storageClassType: "TfIntegration.TlsConfigPropertyList",
       },
     };
 
@@ -651,7 +651,7 @@ export class AwsApigatewayv2Integration extends cdktn.TerraformResource {
   }
 }
 
-export function awsApigatewayv2IntegrationResponseParametersPropertyToTerraform(struct?: AwsApigatewayv2Integration.ResponseParametersProperty | cdktn.IResolvable): any {
+export function tfIntegrationResponseParametersPropertyToTerraform(struct?: TfIntegration.ResponseParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function awsApigatewayv2IntegrationResponseParametersPropertyToTerraform(
 }
 
 
-export function awsApigatewayv2IntegrationResponseParametersPropertyToHclTerraform(struct?: AwsApigatewayv2Integration.ResponseParametersProperty | cdktn.IResolvable): any {
+export function tfIntegrationResponseParametersPropertyToHclTerraform(struct?: TfIntegration.ResponseParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function awsApigatewayv2IntegrationResponseParametersPropertyToHclTerrafo
 }
 
 
-export function awsApigatewayv2IntegrationTlsConfigPropertyToTerraform(struct?: AwsApigatewayv2Integration.TlsConfigPropertyOutputReference | AwsApigatewayv2Integration.TlsConfigProperty): any {
+export function tfIntegrationTlsConfigPropertyToTerraform(struct?: TfIntegration.TlsConfigPropertyOutputReference | TfIntegration.TlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -699,7 +699,7 @@ export function awsApigatewayv2IntegrationTlsConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsApigatewayv2IntegrationTlsConfigPropertyToHclTerraform(struct?: AwsApigatewayv2Integration.TlsConfigPropertyOutputReference | AwsApigatewayv2Integration.TlsConfigProperty): any {
+export function tfIntegrationTlsConfigPropertyToHclTerraform(struct?: TfIntegration.TlsConfigPropertyOutputReference | TfIntegration.TlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -718,14 +718,14 @@ export function awsApigatewayv2IntegrationTlsConfigPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsApigatewayv2Integration {
+export namespace TfIntegration {
 export interface ResponseParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#mappings AwsApigatewayv2Integration#mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#mappings TfIntegration#mappings}
   */
   readonly mappings: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#status_code AwsApigatewayv2Integration#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#status_code TfIntegration#status_code}
   */
   readonly statusCode: string;
 }
@@ -827,7 +827,7 @@ export class ResponseParametersPropertyList extends cdktn.ComplexList {
 }
 export interface TlsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#server_name_to_verify AwsApigatewayv2Integration#server_name_to_verify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_integration#server_name_to_verify TfIntegration#server_name_to_verify}
   */
   readonly serverNameToVerify?: string;
 }

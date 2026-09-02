@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMemorydbSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface TfSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#cluster_name AwsMemorydbSnapshot#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#cluster_name TfSnapshot#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#id AwsMemorydbSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#id TfSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#kms_key_arn AwsMemorydbSnapshot#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#kms_key_arn TfSnapshot#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#name AwsMemorydbSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#name TfSnapshot#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#name_prefix AwsMemorydbSnapshot#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#name_prefix TfSnapshot#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#region AwsMemorydbSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#region TfSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#tags AwsMemorydbSnapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#tags TfSnapshot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#tags_all AwsMemorydbSnapshot#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#tags_all TfSnapshot#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#timeouts AwsMemorydbSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#timeouts TfSnapshot#timeouts}
   */
-  readonly timeouts?: AwsMemorydbSnapshot.TimeoutsProperty;
+  readonly timeouts?: TfSnapshot.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot aws_memorydb_snapshot}
 */
-export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
+export class TfSnapshot extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMemorydbSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMemorydbSnapshot to import
-  * @param importFromId The id of the existing AwsMemorydbSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMemorydbSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the TfSnapshot to import
+  * @param importFromId The id of the existing TfSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_memorydb_snapshot", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMemorydbSnapshotConfig
+  * @param options TfSnapshotConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMemorydbSnapshotConfig) {
+  public constructor(scope: Construct, id: string, config: TfSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_memorydb_snapshot',
       terraformGeneratorMetadata: {
@@ -123,7 +123,7 @@ export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
   }
 
   // cluster_configuration - computed: true, optional: false, required: false
-  private _clusterConfiguration = new AwsMemorydbSnapshot.ClusterConfigurationPropertyList(this, "cluster_configuration", false);
+  private _clusterConfiguration = new TfSnapshot.ClusterConfigurationPropertyList(this, "cluster_configuration", false);
   public get clusterConfiguration() {
     return this._clusterConfiguration;
   }
@@ -259,11 +259,11 @@ export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMemorydbSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMemorydbSnapshot.TimeoutsProperty) {
+  public putTimeouts(value: TfSnapshot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -288,7 +288,7 @@ export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsMemorydbSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -343,10 +343,10 @@ export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsMemorydbSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMemorydbSnapshot.TimeoutsProperty",
+        storageClassType: "TfSnapshot.TimeoutsProperty",
       },
     };
 
@@ -355,7 +355,7 @@ export class AwsMemorydbSnapshot extends cdktn.TerraformResource {
   }
 }
 
-export function awsMemorydbSnapshotClusterConfigurationPropertyToTerraform(struct?: AwsMemorydbSnapshot.ClusterConfigurationProperty): any {
+export function tfSnapshotClusterConfigurationPropertyToTerraform(struct?: TfSnapshot.ClusterConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function awsMemorydbSnapshotClusterConfigurationPropertyToTerraform(struc
 }
 
 
-export function awsMemorydbSnapshotClusterConfigurationPropertyToHclTerraform(struct?: AwsMemorydbSnapshot.ClusterConfigurationProperty): any {
+export function tfSnapshotClusterConfigurationPropertyToHclTerraform(struct?: TfSnapshot.ClusterConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,7 +376,7 @@ export function awsMemorydbSnapshotClusterConfigurationPropertyToHclTerraform(st
 }
 
 
-export function awsMemorydbSnapshotTimeoutsPropertyToTerraform(struct?: AwsMemorydbSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSnapshotTimeoutsPropertyToTerraform(struct?: TfSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function awsMemorydbSnapshotTimeoutsPropertyToTerraform(struct?: AwsMemor
 }
 
 
-export function awsMemorydbSnapshotTimeoutsPropertyToHclTerraform(struct?: AwsMemorydbSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSnapshotTimeoutsPropertyToHclTerraform(struct?: TfSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function awsMemorydbSnapshotTimeoutsPropertyToHclTerraform(struct?: AwsMe
 }
 
 
-export namespace AwsMemorydbSnapshot {
+export namespace TfSnapshot {
 export interface ClusterConfigurationProperty {
 }
 export class ClusterConfigurationPropertyOutputReference extends cdktn.ComplexObject {
@@ -535,11 +535,11 @@ export class ClusterConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#create AwsMemorydbSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#create TfSnapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#delete AwsMemorydbSnapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/memorydb_snapshot#delete TfSnapshot#delete}
   */
   readonly delete?: string;
 }

@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayPeeringAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfPeeringAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#id AwsEc2TransitGatewayPeeringAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#id TfPeeringAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_account_id AwsEc2TransitGatewayPeeringAttachment#peer_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_account_id TfPeeringAttachment#peer_account_id}
   */
   readonly peerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_region AwsEc2TransitGatewayPeeringAttachment#peer_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_region TfPeeringAttachment#peer_region}
   */
   readonly peerRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_transit_gateway_id AwsEc2TransitGatewayPeeringAttachment#peer_transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_transit_gateway_id TfPeeringAttachment#peer_transit_gateway_id}
   */
   readonly peerTransitGatewayId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#region AwsEc2TransitGatewayPeeringAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#region TfPeeringAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#tags AwsEc2TransitGatewayPeeringAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#tags TfPeeringAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#tags_all AwsEc2TransitGatewayPeeringAttachment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#tags_all TfPeeringAttachment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#transit_gateway_id AwsEc2TransitGatewayPeeringAttachment#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#transit_gateway_id TfPeeringAttachment#transit_gateway_id}
   */
   readonly transitGatewayId: string;
   /**
   * options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#options AwsEc2TransitGatewayPeeringAttachment#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#options TfPeeringAttachment#options}
   */
-  readonly options?: AwsEc2TransitGatewayPeeringAttachment.OptionsProperty;
+  readonly options?: TfPeeringAttachment.OptionsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment aws_ec2_transit_gateway_peering_attachment}
 */
-export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResource {
+export class TfPeeringAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayPeeringAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPeeringAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayPeeringAttachment to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayPeeringAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayPeeringAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfPeeringAttachment to import
+  * @param importFromId The id of the existing TfPeeringAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPeeringAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_peering_attachment", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayPeeringAttachmentConfig
+  * @param options TfPeeringAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayPeeringAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfPeeringAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_peering_attachment',
       terraformGeneratorMetadata: {
@@ -247,11 +247,11 @@ export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResour
   }
 
   // options - computed: false, optional: true, required: false
-  private _options = new AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyOutputReference(this, "options");
+  private _options = new TfPeeringAttachment.OptionsPropertyOutputReference(this, "options");
   public get options() {
     return this._options;
   }
-  public putOptions(value: AwsEc2TransitGatewayPeeringAttachment.OptionsProperty) {
+  public putOptions(value: TfPeeringAttachment.OptionsProperty) {
     this._options.internalValue = value;
   }
   public resetOptions() {
@@ -276,7 +276,7 @@ export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResour
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transit_gateway_id: cdktn.stringToTerraform(this._transitGatewayId),
-      options: awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToTerraform(this._options.internalValue),
+      options: tfPeeringAttachmentOptionsPropertyToTerraform(this._options.internalValue),
     };
   }
 
@@ -331,10 +331,10 @@ export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResour
         storageClassType: "string",
       },
       options: {
-        value: awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToHclTerraform(this._options.internalValue),
+        value: tfPeeringAttachmentOptionsPropertyToHclTerraform(this._options.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyList",
+        storageClassType: "TfPeeringAttachment.OptionsPropertyList",
       },
     };
 
@@ -343,7 +343,7 @@ export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResour
   }
 }
 
-export function awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToTerraform(struct?: AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyOutputReference | AwsEc2TransitGatewayPeeringAttachment.OptionsProperty): any {
+export function tfPeeringAttachmentOptionsPropertyToTerraform(struct?: TfPeeringAttachment.OptionsPropertyOutputReference | TfPeeringAttachment.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToTerraform(
 }
 
 
-export function awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToHclTerraform(struct?: AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyOutputReference | AwsEc2TransitGatewayPeeringAttachment.OptionsProperty): any {
+export function tfPeeringAttachmentOptionsPropertyToHclTerraform(struct?: TfPeeringAttachment.OptionsPropertyOutputReference | TfPeeringAttachment.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,10 +373,10 @@ export function awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToHclTerrafo
 }
 
 
-export namespace AwsEc2TransitGatewayPeeringAttachment {
+export namespace TfPeeringAttachment {
 export interface OptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#dynamic_routing AwsEc2TransitGatewayPeeringAttachment#dynamic_routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#dynamic_routing TfPeeringAttachment#dynamic_routing}
   */
   readonly dynamicRouting?: string;
 }

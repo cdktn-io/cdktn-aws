@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsShieldDrtAccessLogBucketAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDrtAccessLogBucketAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#log_bucket AwsShieldDrtAccessLogBucketAssociation#log_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#log_bucket TfDrtAccessLogBucketAssociation#log_bucket}
   */
   readonly logBucket: string;
   /**
   * Unused
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#role_arn_association_id AwsShieldDrtAccessLogBucketAssociation#role_arn_association_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#role_arn_association_id TfDrtAccessLogBucketAssociation#role_arn_association_id}
   */
   readonly roleArnAssociationId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#timeouts AwsShieldDrtAccessLogBucketAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#timeouts TfDrtAccessLogBucketAssociation#timeouts}
   */
-  readonly timeouts?: AwsShieldDrtAccessLogBucketAssociation.TimeoutsProperty;
+  readonly timeouts?: TfDrtAccessLogBucketAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association aws_shield_drt_access_log_bucket_association}
 */
-export class AwsShieldDrtAccessLogBucketAssociation extends cdktn.TerraformResource {
+export class TfDrtAccessLogBucketAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsShieldDrtAccessLogBucketAssociation extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsShieldDrtAccessLogBucketAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDrtAccessLogBucketAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsShieldDrtAccessLogBucketAssociation to import
-  * @param importFromId The id of the existing AwsShieldDrtAccessLogBucketAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsShieldDrtAccessLogBucketAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfDrtAccessLogBucketAssociation to import
+  * @param importFromId The id of the existing TfDrtAccessLogBucketAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDrtAccessLogBucketAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_shield_drt_access_log_bucket_association", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsShieldDrtAccessLogBucketAssociation extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsShieldDrtAccessLogBucketAssociationConfig
+  * @param options TfDrtAccessLogBucketAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsShieldDrtAccessLogBucketAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDrtAccessLogBucketAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_shield_drt_access_log_bucket_association',
       terraformGeneratorMetadata: {
@@ -116,11 +116,11 @@ export class AwsShieldDrtAccessLogBucketAssociation extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsShieldDrtAccessLogBucketAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDrtAccessLogBucketAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsShieldDrtAccessLogBucketAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfDrtAccessLogBucketAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -139,7 +139,7 @@ export class AwsShieldDrtAccessLogBucketAssociation extends cdktn.TerraformResou
     return {
       log_bucket: cdktn.stringToTerraform(this._logBucket),
       role_arn_association_id: cdktn.stringToTerraform(this._roleArnAssociationId),
-      timeouts: awsShieldDrtAccessLogBucketAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDrtAccessLogBucketAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -158,10 +158,10 @@ export class AwsShieldDrtAccessLogBucketAssociation extends cdktn.TerraformResou
         storageClassType: "string",
       },
       timeouts: {
-        value: awsShieldDrtAccessLogBucketAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDrtAccessLogBucketAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsShieldDrtAccessLogBucketAssociation.TimeoutsProperty",
+        storageClassType: "TfDrtAccessLogBucketAssociation.TimeoutsProperty",
       },
     };
 
@@ -170,7 +170,7 @@ export class AwsShieldDrtAccessLogBucketAssociation extends cdktn.TerraformResou
   }
 }
 
-export function awsShieldDrtAccessLogBucketAssociationTimeoutsPropertyToTerraform(struct?: AwsShieldDrtAccessLogBucketAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDrtAccessLogBucketAssociationTimeoutsPropertyToTerraform(struct?: TfDrtAccessLogBucketAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -182,7 +182,7 @@ export function awsShieldDrtAccessLogBucketAssociationTimeoutsPropertyToTerrafor
 }
 
 
-export function awsShieldDrtAccessLogBucketAssociationTimeoutsPropertyToHclTerraform(struct?: AwsShieldDrtAccessLogBucketAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDrtAccessLogBucketAssociationTimeoutsPropertyToHclTerraform(struct?: TfDrtAccessLogBucketAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -207,18 +207,18 @@ export function awsShieldDrtAccessLogBucketAssociationTimeoutsPropertyToHclTerra
 }
 
 
-export namespace AwsShieldDrtAccessLogBucketAssociation {
+export namespace TfDrtAccessLogBucketAssociation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#create AwsShieldDrtAccessLogBucketAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#create TfDrtAccessLogBucketAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#delete AwsShieldDrtAccessLogBucketAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_log_bucket_association#delete TfDrtAccessLogBucketAssociation#delete}
   */
   readonly delete?: string;
 }

@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3ControlBucketPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#bucket AwsS3ControlBucketPolicy#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#bucket TfBucketPolicy#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#id AwsS3ControlBucketPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#id TfBucketPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#policy AwsS3ControlBucketPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#policy TfBucketPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#region AwsS3ControlBucketPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#region TfBucketPolicy#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsS3ControlBucketPolicyConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy aws_s3control_bucket_policy}
 */
-export class AwsS3ControlBucketPolicy extends cdktn.TerraformResource {
+export class TfBucketPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsS3ControlBucketPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3ControlBucketPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3ControlBucketPolicy to import
-  * @param importFromId The id of the existing AwsS3ControlBucketPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3ControlBucketPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketPolicy to import
+  * @param importFromId The id of the existing TfBucketPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_bucket_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_bucket_policy", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsS3ControlBucketPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3ControlBucketPolicyConfig
+  * @param options TfBucketPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3ControlBucketPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_bucket_policy',
       terraformGeneratorMetadata: {

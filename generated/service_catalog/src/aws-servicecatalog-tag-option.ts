@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServicecatalogTagOptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfTagOptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#active AwsServicecatalogTagOption#active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#active TfTagOption#active}
   */
   readonly active?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#id AwsServicecatalogTagOption#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#id TfTagOption#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#key AwsServicecatalogTagOption#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#key TfTagOption#key}
   */
   readonly key: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#region AwsServicecatalogTagOption#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#region TfTagOption#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#value AwsServicecatalogTagOption#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#value TfTagOption#value}
   */
   readonly value: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#timeouts AwsServicecatalogTagOption#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#timeouts TfTagOption#timeouts}
   */
-  readonly timeouts?: AwsServicecatalogTagOption.TimeoutsProperty;
+  readonly timeouts?: TfTagOption.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option aws_servicecatalog_tag_option}
 */
-export class AwsServicecatalogTagOption extends cdktn.TerraformResource {
+export class TfTagOption extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsServicecatalogTagOption extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServicecatalogTagOption resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTagOption resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServicecatalogTagOption to import
-  * @param importFromId The id of the existing AwsServicecatalogTagOption that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServicecatalogTagOption to import is found
+  * @param importToId The construct id used in the generated config for the TfTagOption to import
+  * @param importFromId The id of the existing TfTagOption that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTagOption to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_tag_option", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsServicecatalogTagOption extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServicecatalogTagOptionConfig
+  * @param options TfTagOptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServicecatalogTagOptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfTagOptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_tag_option',
       terraformGeneratorMetadata: {
@@ -182,11 +182,11 @@ export class AwsServicecatalogTagOption extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsServicecatalogTagOption.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTagOption.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsServicecatalogTagOption.TimeoutsProperty) {
+  public putTimeouts(value: TfTagOption.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -208,7 +208,7 @@ export class AwsServicecatalogTagOption extends cdktn.TerraformResource {
       key: cdktn.stringToTerraform(this._key),
       region: cdktn.stringToTerraform(this._region),
       value: cdktn.stringToTerraform(this._value),
-      timeouts: awsServicecatalogTagOptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfTagOptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -245,10 +245,10 @@ export class AwsServicecatalogTagOption extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsServicecatalogTagOptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTagOptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsServicecatalogTagOption.TimeoutsProperty",
+        storageClassType: "TfTagOption.TimeoutsProperty",
       },
     };
 
@@ -257,7 +257,7 @@ export class AwsServicecatalogTagOption extends cdktn.TerraformResource {
   }
 }
 
-export function awsServicecatalogTagOptionTimeoutsPropertyToTerraform(struct?: AwsServicecatalogTagOption.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTagOptionTimeoutsPropertyToTerraform(struct?: TfTagOption.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function awsServicecatalogTagOptionTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsServicecatalogTagOptionTimeoutsPropertyToHclTerraform(struct?: AwsServicecatalogTagOption.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTagOptionTimeoutsPropertyToHclTerraform(struct?: TfTagOption.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,22 +308,22 @@ export function awsServicecatalogTagOptionTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsServicecatalogTagOption {
+export namespace TfTagOption {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#create AwsServicecatalogTagOption#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#create TfTagOption#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#delete AwsServicecatalogTagOption#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#delete TfTagOption#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#read AwsServicecatalogTagOption#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#read TfTagOption#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#update AwsServicecatalogTagOption#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option#update TfTagOption#update}
   */
   readonly update?: string;
 }

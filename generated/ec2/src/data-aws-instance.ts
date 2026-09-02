@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#get_password_data DataAwsInstance#get_password_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#get_password_data DataTfInstance#get_password_data}
   */
   readonly fetchPasswordData?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#get_user_data DataAwsInstance#get_user_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#get_user_data DataTfInstance#get_user_data}
   */
   readonly fetchUserData?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#id DataAwsInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#id DataTfInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#instance_id DataAwsInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#instance_id DataTfInstance#instance_id}
   */
   readonly instanceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#instance_tags DataAwsInstance#instance_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#instance_tags DataTfInstance#instance_tags}
   */
   readonly instanceTags?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#region DataAwsInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#region DataTfInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#tags DataAwsInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#tags DataTfInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#filter DataAwsInstance#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#filter DataTfInstance#filter}
   */
-  readonly filter?: DataAwsInstance.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfInstance.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#timeouts DataAwsInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#timeouts DataTfInstance#timeouts}
   */
-  readonly timeouts?: DataAwsInstance.TimeoutsProperty;
+  readonly timeouts?: DataTfInstance.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance aws_instance}
 */
-export class DataAwsInstance extends cdktn.TerraformDataSource {
+export class DataTfInstance extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsInstance to import
-  * @param importFromId The id of the existing DataAwsInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsInstance to import is found
+  * @param importToId The construct id used in the generated config for the DataTfInstance to import
+  * @param importFromId The id of the existing DataTfInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_instance", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsInstanceConfig = {}
+  * @param options DataTfInstanceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsInstanceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfInstanceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_instance',
       terraformGeneratorMetadata: {
@@ -140,7 +140,7 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // credit_specification - computed: true, optional: false, required: false
-  private _creditSpecification = new DataAwsInstance.CreditSpecificationPropertyList(this, "credit_specification", false);
+  private _creditSpecification = new DataTfInstance.CreditSpecificationPropertyList(this, "credit_specification", false);
   public get creditSpecification() {
     return this._creditSpecification;
   }
@@ -156,7 +156,7 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // ebs_block_device - computed: true, optional: false, required: false
-  private _ebsBlockDevice = new DataAwsInstance.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
+  private _ebsBlockDevice = new DataTfInstance.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
   public get ebsBlockDevice() {
     return this._ebsBlockDevice;
   }
@@ -167,13 +167,13 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // enclave_options - computed: true, optional: false, required: false
-  private _enclaveOptions = new DataAwsInstance.EnclaveOptionsPropertyList(this, "enclave_options", false);
+  private _enclaveOptions = new DataTfInstance.EnclaveOptionsPropertyList(this, "enclave_options", false);
   public get enclaveOptions() {
     return this._enclaveOptions;
   }
 
   // ephemeral_block_device - computed: true, optional: false, required: false
-  private _ephemeralBlockDevice = new DataAwsInstance.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", false);
+  private _ephemeralBlockDevice = new DataTfInstance.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", false);
   public get ephemeralBlockDevice() {
     return this._ephemeralBlockDevice;
   }
@@ -299,13 +299,13 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // maintenance_options - computed: true, optional: false, required: false
-  private _maintenanceOptions = new DataAwsInstance.MaintenanceOptionsPropertyList(this, "maintenance_options", false);
+  private _maintenanceOptions = new DataTfInstance.MaintenanceOptionsPropertyList(this, "maintenance_options", false);
   public get maintenanceOptions() {
     return this._maintenanceOptions;
   }
 
   // metadata_options - computed: true, optional: false, required: false
-  private _metadataOptions = new DataAwsInstance.MetadataOptionsPropertyList(this, "metadata_options", false);
+  private _metadataOptions = new DataTfInstance.MetadataOptionsPropertyList(this, "metadata_options", false);
   public get metadataOptions() {
     return this._metadataOptions;
   }
@@ -351,7 +351,7 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // private_dns_name_options - computed: true, optional: false, required: false
-  private _privateDnsNameOptions = new DataAwsInstance.PrivateDnsNameOptionsPropertyList(this, "private_dns_name_options", false);
+  private _privateDnsNameOptions = new DataTfInstance.PrivateDnsNameOptionsPropertyList(this, "private_dns_name_options", false);
   public get privateDnsNameOptions() {
     return this._privateDnsNameOptions;
   }
@@ -388,7 +388,7 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // root_block_device - computed: true, optional: false, required: false
-  private _rootBlockDevice = new DataAwsInstance.RootBlockDevicePropertyList(this, "root_block_device", true);
+  private _rootBlockDevice = new DataTfInstance.RootBlockDevicePropertyList(this, "root_block_device", true);
   public get rootBlockDevice() {
     return this._rootBlockDevice;
   }
@@ -450,11 +450,11 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsInstance.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfInstance.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsInstance.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfInstance.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -466,11 +466,11 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfInstance.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsInstance.TimeoutsProperty) {
+  public putTimeouts(value: DataTfInstance.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -494,8 +494,8 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
       instance_tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._instanceTags),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsInstanceFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfInstanceFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -544,16 +544,16 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsInstanceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfInstanceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsInstance.FilterPropertyList",
+        storageClassType: "DataTfInstance.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsInstance.TimeoutsProperty",
+        storageClassType: "DataTfInstance.TimeoutsProperty",
       },
     };
 
@@ -562,7 +562,7 @@ export class DataAwsInstance extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsInstanceCreditSpecificationPropertyToTerraform(struct?: DataAwsInstance.CreditSpecificationProperty): any {
+export function dataTfInstanceCreditSpecificationPropertyToTerraform(struct?: DataTfInstance.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -572,7 +572,7 @@ export function dataAwsInstanceCreditSpecificationPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsInstanceCreditSpecificationPropertyToHclTerraform(struct?: DataAwsInstance.CreditSpecificationProperty): any {
+export function dataTfInstanceCreditSpecificationPropertyToHclTerraform(struct?: DataTfInstance.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function dataAwsInstanceCreditSpecificationPropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsInstanceEbsBlockDevicePropertyToTerraform(struct?: DataAwsInstance.EbsBlockDeviceProperty): any {
+export function dataTfInstanceEbsBlockDevicePropertyToTerraform(struct?: DataTfInstance.EbsBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function dataAwsInstanceEbsBlockDevicePropertyToTerraform(struct?: DataAw
 }
 
 
-export function dataAwsInstanceEbsBlockDevicePropertyToHclTerraform(struct?: DataAwsInstance.EbsBlockDeviceProperty): any {
+export function dataTfInstanceEbsBlockDevicePropertyToHclTerraform(struct?: DataTfInstance.EbsBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function dataAwsInstanceEbsBlockDevicePropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataAwsInstanceEnclaveOptionsPropertyToTerraform(struct?: DataAwsInstance.EnclaveOptionsProperty): any {
+export function dataTfInstanceEnclaveOptionsPropertyToTerraform(struct?: DataTfInstance.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function dataAwsInstanceEnclaveOptionsPropertyToTerraform(struct?: DataAw
 }
 
 
-export function dataAwsInstanceEnclaveOptionsPropertyToHclTerraform(struct?: DataAwsInstance.EnclaveOptionsProperty): any {
+export function dataTfInstanceEnclaveOptionsPropertyToHclTerraform(struct?: DataTfInstance.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,7 +625,7 @@ export function dataAwsInstanceEnclaveOptionsPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataAwsInstanceEphemeralBlockDevicePropertyToTerraform(struct?: DataAwsInstance.EphemeralBlockDeviceProperty): any {
+export function dataTfInstanceEphemeralBlockDevicePropertyToTerraform(struct?: DataTfInstance.EphemeralBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -635,7 +635,7 @@ export function dataAwsInstanceEphemeralBlockDevicePropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsInstanceEphemeralBlockDevicePropertyToHclTerraform(struct?: DataAwsInstance.EphemeralBlockDeviceProperty): any {
+export function dataTfInstanceEphemeralBlockDevicePropertyToHclTerraform(struct?: DataTfInstance.EphemeralBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function dataAwsInstanceEphemeralBlockDevicePropertyToHclTerraform(struct
 }
 
 
-export function dataAwsInstanceMaintenanceOptionsPropertyToTerraform(struct?: DataAwsInstance.MaintenanceOptionsProperty): any {
+export function dataTfInstanceMaintenanceOptionsPropertyToTerraform(struct?: DataTfInstance.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function dataAwsInstanceMaintenanceOptionsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsInstanceMaintenanceOptionsPropertyToHclTerraform(struct?: DataAwsInstance.MaintenanceOptionsProperty): any {
+export function dataTfInstanceMaintenanceOptionsPropertyToHclTerraform(struct?: DataTfInstance.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -667,7 +667,7 @@ export function dataAwsInstanceMaintenanceOptionsPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsInstanceMetadataOptionsPropertyToTerraform(struct?: DataAwsInstance.MetadataOptionsProperty): any {
+export function dataTfInstanceMetadataOptionsPropertyToTerraform(struct?: DataTfInstance.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function dataAwsInstanceMetadataOptionsPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsInstanceMetadataOptionsPropertyToHclTerraform(struct?: DataAwsInstance.MetadataOptionsProperty): any {
+export function dataTfInstanceMetadataOptionsPropertyToHclTerraform(struct?: DataTfInstance.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function dataAwsInstanceMetadataOptionsPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataAwsInstancePrivateDnsNameOptionsPropertyToTerraform(struct?: DataAwsInstance.PrivateDnsNameOptionsProperty): any {
+export function dataTfInstancePrivateDnsNameOptionsPropertyToTerraform(struct?: DataTfInstance.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -698,7 +698,7 @@ export function dataAwsInstancePrivateDnsNameOptionsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsInstancePrivateDnsNameOptionsPropertyToHclTerraform(struct?: DataAwsInstance.PrivateDnsNameOptionsProperty): any {
+export function dataTfInstancePrivateDnsNameOptionsPropertyToHclTerraform(struct?: DataTfInstance.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -709,7 +709,7 @@ export function dataAwsInstancePrivateDnsNameOptionsPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsInstanceRootBlockDevicePropertyToTerraform(struct?: DataAwsInstance.RootBlockDeviceProperty): any {
+export function dataTfInstanceRootBlockDevicePropertyToTerraform(struct?: DataTfInstance.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -719,7 +719,7 @@ export function dataAwsInstanceRootBlockDevicePropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsInstanceRootBlockDevicePropertyToHclTerraform(struct?: DataAwsInstance.RootBlockDeviceProperty): any {
+export function dataTfInstanceRootBlockDevicePropertyToHclTerraform(struct?: DataTfInstance.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -730,7 +730,7 @@ export function dataAwsInstanceRootBlockDevicePropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataAwsInstanceFilterPropertyToTerraform(struct?: DataAwsInstance.FilterProperty | cdktn.IResolvable): any {
+export function dataTfInstanceFilterPropertyToTerraform(struct?: DataTfInstance.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,7 +742,7 @@ export function dataAwsInstanceFilterPropertyToTerraform(struct?: DataAwsInstanc
 }
 
 
-export function dataAwsInstanceFilterPropertyToHclTerraform(struct?: DataAwsInstance.FilterProperty | cdktn.IResolvable): any {
+export function dataTfInstanceFilterPropertyToHclTerraform(struct?: DataTfInstance.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -767,7 +767,7 @@ export function dataAwsInstanceFilterPropertyToHclTerraform(struct?: DataAwsInst
 }
 
 
-export function dataAwsInstanceTimeoutsPropertyToTerraform(struct?: DataAwsInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfInstanceTimeoutsPropertyToTerraform(struct?: DataTfInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -778,7 +778,7 @@ export function dataAwsInstanceTimeoutsPropertyToTerraform(struct?: DataAwsInsta
 }
 
 
-export function dataAwsInstanceTimeoutsPropertyToHclTerraform(struct?: DataAwsInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfInstanceTimeoutsPropertyToHclTerraform(struct?: DataTfInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -797,7 +797,7 @@ export function dataAwsInstanceTimeoutsPropertyToHclTerraform(struct?: DataAwsIn
 }
 
 
-export namespace DataAwsInstance {
+export namespace DataTfInstance {
 export interface CreditSpecificationProperty {
 }
 export class CreditSpecificationPropertyOutputReference extends cdktn.ComplexObject {
@@ -1369,11 +1369,11 @@ export class RootBlockDevicePropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#name DataAwsInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#name DataTfInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#values DataAwsInstance#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#values DataTfInstance#values}
   */
   readonly values: string[];
 }
@@ -1475,7 +1475,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#read DataAwsInstance#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instance#read DataTfInstance#read}
   */
   readonly read?: string;
 }

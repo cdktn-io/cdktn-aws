@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSsoadminApplicationAssignmentConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationAssignmentConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#application_arn AwsSsoadminApplicationAssignmentConfiguration#application_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#application_arn TfApplicationAssignmentConfiguration#application_arn}
   */
   readonly applicationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#assignment_required AwsSsoadminApplicationAssignmentConfiguration#assignment_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#assignment_required TfApplicationAssignmentConfiguration#assignment_required}
   */
   readonly assignmentRequired: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#region AwsSsoadminApplicationAssignmentConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#region TfApplicationAssignmentConfiguration#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface AwsSsoadminApplicationAssignmentConfigurationConfig extends cdk
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration aws_ssoadmin_application_assignment_configuration}
 */
-export class AwsSsoadminApplicationAssignmentConfiguration extends cdktn.TerraformResource {
+export class TfApplicationAssignmentConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsSsoadminApplicationAssignmentConfiguration extends cdktn.Terrafo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSsoadminApplicationAssignmentConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplicationAssignmentConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSsoadminApplicationAssignmentConfiguration to import
-  * @param importFromId The id of the existing AwsSsoadminApplicationAssignmentConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSsoadminApplicationAssignmentConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfApplicationAssignmentConfiguration to import
+  * @param importFromId The id of the existing TfApplicationAssignmentConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplicationAssignmentConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_application_assignment_configuration", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsSsoadminApplicationAssignmentConfiguration extends cdktn.Terrafo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSsoadminApplicationAssignmentConfigurationConfig
+  * @param options TfApplicationAssignmentConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSsoadminApplicationAssignmentConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationAssignmentConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_application_assignment_configuration',
       terraformGeneratorMetadata: {

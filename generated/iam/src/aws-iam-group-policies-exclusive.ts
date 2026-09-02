@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamGroupPoliciesExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface TfGroupPoliciesExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#group_name AwsIamGroupPoliciesExclusive#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#group_name TfGroupPoliciesExclusive#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#policy_names AwsIamGroupPoliciesExclusive#policy_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#policy_names TfGroupPoliciesExclusive#policy_names}
   */
   readonly policyNames: string[];
 }
@@ -19,7 +19,7 @@ export interface AwsIamGroupPoliciesExclusiveConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive aws_iam_group_policies_exclusive}
 */
-export class AwsIamGroupPoliciesExclusive extends cdktn.TerraformResource {
+export class TfGroupPoliciesExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class AwsIamGroupPoliciesExclusive extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamGroupPoliciesExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGroupPoliciesExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamGroupPoliciesExclusive to import
-  * @param importFromId The id of the existing AwsIamGroupPoliciesExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamGroupPoliciesExclusive to import is found
+  * @param importToId The construct id used in the generated config for the TfGroupPoliciesExclusive to import
+  * @param importFromId The id of the existing TfGroupPoliciesExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGroupPoliciesExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_group_policies_exclusive", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class AwsIamGroupPoliciesExclusive extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamGroupPoliciesExclusiveConfig
+  * @param options TfGroupPoliciesExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamGroupPoliciesExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: TfGroupPoliciesExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_group_policies_exclusive',
       terraformGeneratorMetadata: {

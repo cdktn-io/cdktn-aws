@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53DomainsDelegationSignerRecordConfig extends cdktn.TerraformMetaArguments {
+export interface TfDelegationSignerRecordConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#domain_name AwsRoute53DomainsDelegationSignerRecord#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#domain_name TfDelegationSignerRecord#domain_name}
   */
   readonly domainName: string;
   /**
   * signing_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#signing_attributes AwsRoute53DomainsDelegationSignerRecord#signing_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#signing_attributes TfDelegationSignerRecord#signing_attributes}
   */
-  readonly signingAttributes?: AwsRoute53DomainsDelegationSignerRecord.SigningAttributesProperty[] | cdktn.IResolvable;
+  readonly signingAttributes?: TfDelegationSignerRecord.SigningAttributesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#timeouts AwsRoute53DomainsDelegationSignerRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#timeouts TfDelegationSignerRecord#timeouts}
   */
-  readonly timeouts?: AwsRoute53DomainsDelegationSignerRecord.TimeoutsProperty;
+  readonly timeouts?: TfDelegationSignerRecord.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record aws_route53domains_delegation_signer_record}
 */
-export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformResource {
+export class TfDelegationSignerRecord extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53DomainsDelegationSignerRecord resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDelegationSignerRecord resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53DomainsDelegationSignerRecord to import
-  * @param importFromId The id of the existing AwsRoute53DomainsDelegationSignerRecord that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53DomainsDelegationSignerRecord to import is found
+  * @param importToId The construct id used in the generated config for the TfDelegationSignerRecord to import
+  * @param importFromId The id of the existing TfDelegationSignerRecord that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDelegationSignerRecord to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53domains_delegation_signer_record", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53DomainsDelegationSignerRecordConfig
+  * @param options TfDelegationSignerRecordConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53DomainsDelegationSignerRecordConfig) {
+  public constructor(scope: Construct, id: string, config: TfDelegationSignerRecordConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53domains_delegation_signer_record',
       terraformGeneratorMetadata: {
@@ -108,11 +108,11 @@ export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformReso
   }
 
   // signing_attributes - computed: false, optional: true, required: false
-  private _signingAttributes = new AwsRoute53DomainsDelegationSignerRecord.SigningAttributesPropertyList(this, "signing_attributes", false);
+  private _signingAttributes = new TfDelegationSignerRecord.SigningAttributesPropertyList(this, "signing_attributes", false);
   public get signingAttributes() {
     return this._signingAttributes;
   }
-  public putSigningAttributes(value: AwsRoute53DomainsDelegationSignerRecord.SigningAttributesProperty[] | cdktn.IResolvable) {
+  public putSigningAttributes(value: TfDelegationSignerRecord.SigningAttributesProperty[] | cdktn.IResolvable) {
     this._signingAttributes.internalValue = value;
   }
   public resetSigningAttributes() {
@@ -124,11 +124,11 @@ export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53DomainsDelegationSignerRecord.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDelegationSignerRecord.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53DomainsDelegationSignerRecord.TimeoutsProperty) {
+  public putTimeouts(value: TfDelegationSignerRecord.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -146,8 +146,8 @@ export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformReso
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       domain_name: cdktn.stringToTerraform(this._domainName),
-      signing_attributes: cdktn.listMapper(awsRoute53DomainsDelegationSignerRecordSigningAttributesPropertyToTerraform, true)(this._signingAttributes.internalValue),
-      timeouts: awsRoute53DomainsDelegationSignerRecordTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      signing_attributes: cdktn.listMapper(tfDelegationSignerRecordSigningAttributesPropertyToTerraform, true)(this._signingAttributes.internalValue),
+      timeouts: tfDelegationSignerRecordTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -160,16 +160,16 @@ export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformReso
         storageClassType: "string",
       },
       signing_attributes: {
-        value: cdktn.listMapperHcl(awsRoute53DomainsDelegationSignerRecordSigningAttributesPropertyToHclTerraform, true)(this._signingAttributes.internalValue),
+        value: cdktn.listMapperHcl(tfDelegationSignerRecordSigningAttributesPropertyToHclTerraform, true)(this._signingAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53DomainsDelegationSignerRecord.SigningAttributesPropertyList",
+        storageClassType: "TfDelegationSignerRecord.SigningAttributesPropertyList",
       },
       timeouts: {
-        value: awsRoute53DomainsDelegationSignerRecordTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDelegationSignerRecordTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53DomainsDelegationSignerRecord.TimeoutsProperty",
+        storageClassType: "TfDelegationSignerRecord.TimeoutsProperty",
       },
     };
 
@@ -178,7 +178,7 @@ export class AwsRoute53DomainsDelegationSignerRecord extends cdktn.TerraformReso
   }
 }
 
-export function awsRoute53DomainsDelegationSignerRecordSigningAttributesPropertyToTerraform(struct?: AwsRoute53DomainsDelegationSignerRecord.SigningAttributesProperty | cdktn.IResolvable): any {
+export function tfDelegationSignerRecordSigningAttributesPropertyToTerraform(struct?: TfDelegationSignerRecord.SigningAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function awsRoute53DomainsDelegationSignerRecordSigningAttributesProperty
 }
 
 
-export function awsRoute53DomainsDelegationSignerRecordSigningAttributesPropertyToHclTerraform(struct?: AwsRoute53DomainsDelegationSignerRecord.SigningAttributesProperty | cdktn.IResolvable): any {
+export function tfDelegationSignerRecordSigningAttributesPropertyToHclTerraform(struct?: TfDelegationSignerRecord.SigningAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -222,7 +222,7 @@ export function awsRoute53DomainsDelegationSignerRecordSigningAttributesProperty
 }
 
 
-export function awsRoute53DomainsDelegationSignerRecordTimeoutsPropertyToTerraform(struct?: AwsRoute53DomainsDelegationSignerRecord.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDelegationSignerRecordTimeoutsPropertyToTerraform(struct?: TfDelegationSignerRecord.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function awsRoute53DomainsDelegationSignerRecordTimeoutsPropertyToTerrafo
 }
 
 
-export function awsRoute53DomainsDelegationSignerRecordTimeoutsPropertyToHclTerraform(struct?: AwsRoute53DomainsDelegationSignerRecord.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDelegationSignerRecordTimeoutsPropertyToHclTerraform(struct?: TfDelegationSignerRecord.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,18 +259,18 @@ export function awsRoute53DomainsDelegationSignerRecordTimeoutsPropertyToHclTerr
 }
 
 
-export namespace AwsRoute53DomainsDelegationSignerRecord {
+export namespace TfDelegationSignerRecord {
 export interface SigningAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#algorithm AwsRoute53DomainsDelegationSignerRecord#algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#algorithm TfDelegationSignerRecord#algorithm}
   */
   readonly algorithm: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#flags AwsRoute53DomainsDelegationSignerRecord#flags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#flags TfDelegationSignerRecord#flags}
   */
   readonly flags: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#public_key AwsRoute53DomainsDelegationSignerRecord#public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#public_key TfDelegationSignerRecord#public_key}
   */
   readonly publicKey: string;
 }
@@ -393,13 +393,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#create AwsRoute53DomainsDelegationSignerRecord#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#create TfDelegationSignerRecord#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#delete AwsRoute53DomainsDelegationSignerRecord#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_delegation_signer_record#delete TfDelegationSignerRecord#delete}
   */
   readonly delete?: string;
 }

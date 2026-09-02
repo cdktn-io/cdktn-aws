@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotCaCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface TfCaCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#active AwsIotCaCertificate#active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#active TfCaCertificate#active}
   */
   readonly active: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#allow_auto_registration AwsIotCaCertificate#allow_auto_registration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#allow_auto_registration TfCaCertificate#allow_auto_registration}
   */
   readonly allowAutoRegistration: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#ca_certificate_pem AwsIotCaCertificate#ca_certificate_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#ca_certificate_pem TfCaCertificate#ca_certificate_pem}
   */
   readonly caCertificatePem: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#certificate_mode AwsIotCaCertificate#certificate_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#certificate_mode TfCaCertificate#certificate_mode}
   */
   readonly certificateMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#id AwsIotCaCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#id TfCaCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,33 +32,33 @@ export interface AwsIotCaCertificateConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#region AwsIotCaCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#region TfCaCertificate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#tags AwsIotCaCertificate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#tags TfCaCertificate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#tags_all AwsIotCaCertificate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#tags_all TfCaCertificate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#verification_certificate_pem AwsIotCaCertificate#verification_certificate_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#verification_certificate_pem TfCaCertificate#verification_certificate_pem}
   */
   readonly verificationCertificatePem?: string;
   /**
   * registration_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#registration_config AwsIotCaCertificate#registration_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#registration_config TfCaCertificate#registration_config}
   */
-  readonly registrationConfig?: AwsIotCaCertificate.RegistrationConfigProperty;
+  readonly registrationConfig?: TfCaCertificate.RegistrationConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate aws_iot_ca_certificate}
 */
-export class AwsIotCaCertificate extends cdktn.TerraformResource {
+export class TfCaCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsIotCaCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotCaCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCaCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotCaCertificate to import
-  * @param importFromId The id of the existing AwsIotCaCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotCaCertificate to import is found
+  * @param importToId The construct id used in the generated config for the TfCaCertificate to import
+  * @param importFromId The id of the existing TfCaCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCaCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_ca_certificate", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsIotCaCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotCaCertificateConfig
+  * @param options TfCaCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotCaCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: TfCaCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_ca_certificate',
       terraformGeneratorMetadata: {
@@ -257,7 +257,7 @@ export class AwsIotCaCertificate extends cdktn.TerraformResource {
   }
 
   // validity - computed: true, optional: false, required: false
-  private _validity = new AwsIotCaCertificate.ValidityPropertyList(this, "validity", false);
+  private _validity = new TfCaCertificate.ValidityPropertyList(this, "validity", false);
   public get validity() {
     return this._validity;
   }
@@ -279,11 +279,11 @@ export class AwsIotCaCertificate extends cdktn.TerraformResource {
   }
 
   // registration_config - computed: false, optional: true, required: false
-  private _registrationConfig = new AwsIotCaCertificate.RegistrationConfigPropertyOutputReference(this, "registration_config");
+  private _registrationConfig = new TfCaCertificate.RegistrationConfigPropertyOutputReference(this, "registration_config");
   public get registrationConfig() {
     return this._registrationConfig;
   }
-  public putRegistrationConfig(value: AwsIotCaCertificate.RegistrationConfigProperty) {
+  public putRegistrationConfig(value: TfCaCertificate.RegistrationConfigProperty) {
     this._registrationConfig.internalValue = value;
   }
   public resetRegistrationConfig() {
@@ -309,7 +309,7 @@ export class AwsIotCaCertificate extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       verification_certificate_pem: cdktn.stringToTerraform(this._verificationCertificatePem),
-      registration_config: awsIotCaCertificateRegistrationConfigPropertyToTerraform(this._registrationConfig.internalValue),
+      registration_config: tfCaCertificateRegistrationConfigPropertyToTerraform(this._registrationConfig.internalValue),
     };
   }
 
@@ -370,10 +370,10 @@ export class AwsIotCaCertificate extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       registration_config: {
-        value: awsIotCaCertificateRegistrationConfigPropertyToHclTerraform(this._registrationConfig.internalValue),
+        value: tfCaCertificateRegistrationConfigPropertyToHclTerraform(this._registrationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIotCaCertificate.RegistrationConfigPropertyList",
+        storageClassType: "TfCaCertificate.RegistrationConfigPropertyList",
       },
     };
 
@@ -382,7 +382,7 @@ export class AwsIotCaCertificate extends cdktn.TerraformResource {
   }
 }
 
-export function awsIotCaCertificateValidityPropertyToTerraform(struct?: AwsIotCaCertificate.ValidityProperty): any {
+export function tfCaCertificateValidityPropertyToTerraform(struct?: TfCaCertificate.ValidityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function awsIotCaCertificateValidityPropertyToTerraform(struct?: AwsIotCa
 }
 
 
-export function awsIotCaCertificateValidityPropertyToHclTerraform(struct?: AwsIotCaCertificate.ValidityProperty): any {
+export function tfCaCertificateValidityPropertyToHclTerraform(struct?: TfCaCertificate.ValidityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function awsIotCaCertificateValidityPropertyToHclTerraform(struct?: AwsIo
 }
 
 
-export function awsIotCaCertificateRegistrationConfigPropertyToTerraform(struct?: AwsIotCaCertificate.RegistrationConfigPropertyOutputReference | AwsIotCaCertificate.RegistrationConfigProperty): any {
+export function tfCaCertificateRegistrationConfigPropertyToTerraform(struct?: TfCaCertificate.RegistrationConfigPropertyOutputReference | TfCaCertificate.RegistrationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function awsIotCaCertificateRegistrationConfigPropertyToTerraform(struct?
 }
 
 
-export function awsIotCaCertificateRegistrationConfigPropertyToHclTerraform(struct?: AwsIotCaCertificate.RegistrationConfigPropertyOutputReference | AwsIotCaCertificate.RegistrationConfigProperty): any {
+export function tfCaCertificateRegistrationConfigPropertyToHclTerraform(struct?: TfCaCertificate.RegistrationConfigPropertyOutputReference | TfCaCertificate.RegistrationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function awsIotCaCertificateRegistrationConfigPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsIotCaCertificate {
+export namespace TfCaCertificate {
 export interface ValidityProperty {
 }
 export class ValidityPropertyOutputReference extends cdktn.ComplexObject {
@@ -509,15 +509,15 @@ export class ValidityPropertyList extends cdktn.ComplexList {
 }
 export interface RegistrationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#role_arn AwsIotCaCertificate#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#role_arn TfCaCertificate#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#template_body AwsIotCaCertificate#template_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#template_body TfCaCertificate#template_body}
   */
   readonly templateBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#template_name AwsIotCaCertificate#template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_ca_certificate#template_name TfCaCertificate#template_name}
   */
   readonly templateName?: string;
 }

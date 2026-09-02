@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFsxOntapStorageVirtualMachineConfig extends cdktn.TerraformMetaArguments {
+export interface TfOntapStorageVirtualMachineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#file_system_id AwsFsxOntapStorageVirtualMachine#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#file_system_id TfOntapStorageVirtualMachine#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#id AwsFsxOntapStorageVirtualMachine#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#id TfOntapStorageVirtualMachine#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#name AwsFsxOntapStorageVirtualMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#name TfOntapStorageVirtualMachine#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#region AwsFsxOntapStorageVirtualMachine#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#region TfOntapStorageVirtualMachine#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#root_volume_security_style AwsFsxOntapStorageVirtualMachine#root_volume_security_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#root_volume_security_style TfOntapStorageVirtualMachine#root_volume_security_style}
   */
   readonly rootVolumeSecurityStyle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#svm_admin_password AwsFsxOntapStorageVirtualMachine#svm_admin_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#svm_admin_password TfOntapStorageVirtualMachine#svm_admin_password}
   */
   readonly svmAdminPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#tags AwsFsxOntapStorageVirtualMachine#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#tags TfOntapStorageVirtualMachine#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#tags_all AwsFsxOntapStorageVirtualMachine#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#tags_all TfOntapStorageVirtualMachine#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * active_directory_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#active_directory_configuration AwsFsxOntapStorageVirtualMachine#active_directory_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#active_directory_configuration TfOntapStorageVirtualMachine#active_directory_configuration}
   */
-  readonly activeDirectoryConfiguration?: AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty;
+  readonly activeDirectoryConfiguration?: TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#timeouts AwsFsxOntapStorageVirtualMachine#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#timeouts TfOntapStorageVirtualMachine#timeouts}
   */
-  readonly timeouts?: AwsFsxOntapStorageVirtualMachine.TimeoutsProperty;
+  readonly timeouts?: TfOntapStorageVirtualMachine.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine aws_fsx_ontap_storage_virtual_machine}
 */
-export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
+export class TfOntapStorageVirtualMachine extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFsxOntapStorageVirtualMachine resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOntapStorageVirtualMachine resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFsxOntapStorageVirtualMachine to import
-  * @param importFromId The id of the existing AwsFsxOntapStorageVirtualMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFsxOntapStorageVirtualMachine to import is found
+  * @param importToId The construct id used in the generated config for the TfOntapStorageVirtualMachine to import
+  * @param importFromId The id of the existing TfOntapStorageVirtualMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOntapStorageVirtualMachine to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_ontap_storage_virtual_machine", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFsxOntapStorageVirtualMachineConfig
+  * @param options TfOntapStorageVirtualMachineConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFsxOntapStorageVirtualMachineConfig) {
+  public constructor(scope: Construct, id: string, config: TfOntapStorageVirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_ontap_storage_virtual_machine',
       terraformGeneratorMetadata: {
@@ -130,7 +130,7 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
   }
 
   // endpoints - computed: true, optional: false, required: false
-  private _endpoints = new AwsFsxOntapStorageVirtualMachine.EndpointsPropertyList(this, "endpoints", false);
+  private _endpoints = new TfOntapStorageVirtualMachine.EndpointsPropertyList(this, "endpoints", false);
   public get endpoints() {
     return this._endpoints;
   }
@@ -268,11 +268,11 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
   }
 
   // active_directory_configuration - computed: false, optional: true, required: false
-  private _activeDirectoryConfiguration = new AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyOutputReference(this, "active_directory_configuration");
+  private _activeDirectoryConfiguration = new TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyOutputReference(this, "active_directory_configuration");
   public get activeDirectoryConfiguration() {
     return this._activeDirectoryConfiguration;
   }
-  public putActiveDirectoryConfiguration(value: AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty) {
+  public putActiveDirectoryConfiguration(value: TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty) {
     this._activeDirectoryConfiguration.internalValue = value;
   }
   public resetActiveDirectoryConfiguration() {
@@ -284,11 +284,11 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFsxOntapStorageVirtualMachine.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOntapStorageVirtualMachine.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFsxOntapStorageVirtualMachine.TimeoutsProperty) {
+  public putTimeouts(value: TfOntapStorageVirtualMachine.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -313,8 +313,8 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
       svm_admin_password: cdktn.stringToTerraform(this._svmAdminPassword),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      active_directory_configuration: awsFsxOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToTerraform(this._activeDirectoryConfiguration.internalValue),
-      timeouts: awsFsxOntapStorageVirtualMachineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      active_directory_configuration: tfOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToTerraform(this._activeDirectoryConfiguration.internalValue),
+      timeouts: tfOntapStorageVirtualMachineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -369,16 +369,16 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       active_directory_configuration: {
-        value: awsFsxOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToHclTerraform(this._activeDirectoryConfiguration.internalValue),
+        value: tfOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToHclTerraform(this._activeDirectoryConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyList",
+        storageClassType: "TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyList",
       },
       timeouts: {
-        value: awsFsxOntapStorageVirtualMachineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOntapStorageVirtualMachineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFsxOntapStorageVirtualMachine.TimeoutsProperty",
+        storageClassType: "TfOntapStorageVirtualMachine.TimeoutsProperty",
       },
     };
 
@@ -387,7 +387,7 @@ export class AwsFsxOntapStorageVirtualMachine extends cdktn.TerraformResource {
   }
 }
 
-export function awsFsxOntapStorageVirtualMachineIscsiPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.IscsiProperty): any {
+export function tfOntapStorageVirtualMachineIscsiPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.IscsiProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function awsFsxOntapStorageVirtualMachineIscsiPropertyToTerraform(struct?
 }
 
 
-export function awsFsxOntapStorageVirtualMachineIscsiPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.IscsiProperty): any {
+export function tfOntapStorageVirtualMachineIscsiPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.IscsiProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsFsxOntapStorageVirtualMachineIscsiPropertyToHclTerraform(stru
 }
 
 
-export function awsFsxOntapStorageVirtualMachineManagementPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.ManagementProperty): any {
+export function tfOntapStorageVirtualMachineManagementPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function awsFsxOntapStorageVirtualMachineManagementPropertyToTerraform(st
 }
 
 
-export function awsFsxOntapStorageVirtualMachineManagementPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.ManagementProperty): any {
+export function tfOntapStorageVirtualMachineManagementPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsFsxOntapStorageVirtualMachineManagementPropertyToHclTerraform
 }
 
 
-export function awsFsxOntapStorageVirtualMachineNfsPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.NfsProperty): any {
+export function tfOntapStorageVirtualMachineNfsPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function awsFsxOntapStorageVirtualMachineNfsPropertyToTerraform(struct?: 
 }
 
 
-export function awsFsxOntapStorageVirtualMachineNfsPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.NfsProperty): any {
+export function tfOntapStorageVirtualMachineNfsPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function awsFsxOntapStorageVirtualMachineNfsPropertyToHclTerraform(struct
 }
 
 
-export function awsFsxOntapStorageVirtualMachineSmbPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.SmbProperty): any {
+export function tfOntapStorageVirtualMachineSmbPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.SmbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function awsFsxOntapStorageVirtualMachineSmbPropertyToTerraform(struct?: 
 }
 
 
-export function awsFsxOntapStorageVirtualMachineSmbPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.SmbProperty): any {
+export function tfOntapStorageVirtualMachineSmbPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.SmbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function awsFsxOntapStorageVirtualMachineSmbPropertyToHclTerraform(struct
 }
 
 
-export function awsFsxOntapStorageVirtualMachineEndpointsPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.EndpointsProperty): any {
+export function tfOntapStorageVirtualMachineEndpointsPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function awsFsxOntapStorageVirtualMachineEndpointsPropertyToTerraform(str
 }
 
 
-export function awsFsxOntapStorageVirtualMachineEndpointsPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.EndpointsProperty): any {
+export function tfOntapStorageVirtualMachineEndpointsPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,7 +492,7 @@ export function awsFsxOntapStorageVirtualMachineEndpointsPropertyToHclTerraform(
 }
 
 
-export function awsFsxOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationPropertyOutputReference | AwsFsxOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
+export function tfOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationPropertyOutputReference | TfOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function awsFsxOntapStorageVirtualMachineSelfManagedActiveDirectoryConfig
 }
 
 
-export function awsFsxOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationPropertyOutputReference | AwsFsxOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
+export function tfOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationPropertyOutputReference | TfOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,19 +557,19 @@ export function awsFsxOntapStorageVirtualMachineSelfManagedActiveDirectoryConfig
 }
 
 
-export function awsFsxOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyOutputReference | AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
+export function tfOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyOutputReference | TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     netbios_name: cdktn.stringToTerraform(struct!.netbiosName),
-    self_managed_active_directory_configuration: awsFsxOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToTerraform(struct!.selfManagedActiveDirectoryConfiguration),
+    self_managed_active_directory_configuration: tfOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToTerraform(struct!.selfManagedActiveDirectoryConfiguration),
   }
 }
 
 
-export function awsFsxOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyOutputReference | AwsFsxOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
+export function tfOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyOutputReference | TfOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function awsFsxOntapStorageVirtualMachineActiveDirectoryConfigurationProp
       storageClassType: "string",
     },
     self_managed_active_directory_configuration: {
-      value: awsFsxOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToHclTerraform(struct!.selfManagedActiveDirectoryConfiguration),
+      value: tfOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToHclTerraform(struct!.selfManagedActiveDirectoryConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SelfManagedActiveDirectoryConfigurationPropertyList",
@@ -594,7 +594,7 @@ export function awsFsxOntapStorageVirtualMachineActiveDirectoryConfigurationProp
 }
 
 
-export function awsFsxOntapStorageVirtualMachineTimeoutsPropertyToTerraform(struct?: AwsFsxOntapStorageVirtualMachine.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOntapStorageVirtualMachineTimeoutsPropertyToTerraform(struct?: TfOntapStorageVirtualMachine.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -607,7 +607,7 @@ export function awsFsxOntapStorageVirtualMachineTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsFsxOntapStorageVirtualMachineTimeoutsPropertyToHclTerraform(struct?: AwsFsxOntapStorageVirtualMachine.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOntapStorageVirtualMachineTimeoutsPropertyToHclTerraform(struct?: TfOntapStorageVirtualMachine.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -638,7 +638,7 @@ export function awsFsxOntapStorageVirtualMachineTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsFsxOntapStorageVirtualMachine {
+export namespace TfOntapStorageVirtualMachine {
 export interface IscsiProperty {
 }
 export class IscsiPropertyOutputReference extends cdktn.ComplexObject {
@@ -950,27 +950,27 @@ export class EndpointsPropertyList extends cdktn.ComplexList {
 }
 export interface SelfManagedActiveDirectoryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#dns_ips AwsFsxOntapStorageVirtualMachine#dns_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#dns_ips TfOntapStorageVirtualMachine#dns_ips}
   */
   readonly dnsIps: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#domain_name AwsFsxOntapStorageVirtualMachine#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#domain_name TfOntapStorageVirtualMachine#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#file_system_administrators_group AwsFsxOntapStorageVirtualMachine#file_system_administrators_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#file_system_administrators_group TfOntapStorageVirtualMachine#file_system_administrators_group}
   */
   readonly fileSystemAdministratorsGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#organizational_unit_distinguished_name AwsFsxOntapStorageVirtualMachine#organizational_unit_distinguished_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#organizational_unit_distinguished_name TfOntapStorageVirtualMachine#organizational_unit_distinguished_name}
   */
   readonly organizationalUnitDistinguishedName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#password AwsFsxOntapStorageVirtualMachine#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#password TfOntapStorageVirtualMachine#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#username AwsFsxOntapStorageVirtualMachine#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#username TfOntapStorageVirtualMachine#username}
   */
   readonly username: string;
 }
@@ -1122,13 +1122,13 @@ export class SelfManagedActiveDirectoryConfigurationPropertyOutputReference exte
 }
 export interface ActiveDirectoryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#netbios_name AwsFsxOntapStorageVirtualMachine#netbios_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#netbios_name TfOntapStorageVirtualMachine#netbios_name}
   */
   readonly netbiosName?: string;
   /**
   * self_managed_active_directory_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#self_managed_active_directory_configuration AwsFsxOntapStorageVirtualMachine#self_managed_active_directory_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#self_managed_active_directory_configuration TfOntapStorageVirtualMachine#self_managed_active_directory_configuration}
   */
   readonly selfManagedActiveDirectoryConfiguration?: SelfManagedActiveDirectoryConfigurationProperty;
 }
@@ -1204,15 +1204,15 @@ export class ActiveDirectoryConfigurationPropertyOutputReference extends cdktn.C
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#create AwsFsxOntapStorageVirtualMachine#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#create TfOntapStorageVirtualMachine#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#delete AwsFsxOntapStorageVirtualMachine#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#delete TfOntapStorageVirtualMachine#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#update AwsFsxOntapStorageVirtualMachine#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_storage_virtual_machine#update TfOntapStorageVirtualMachine#update}
   */
   readonly update?: string;
 }

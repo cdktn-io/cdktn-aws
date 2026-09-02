@@ -5,108 +5,108 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightAccountSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#account_name AwsQuicksightAccountSubscription#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#account_name TfAccountSubscription#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#active_directory_name AwsQuicksightAccountSubscription#active_directory_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#active_directory_name TfAccountSubscription#active_directory_name}
   */
   readonly activeDirectoryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#admin_group AwsQuicksightAccountSubscription#admin_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#admin_group TfAccountSubscription#admin_group}
   */
   readonly adminGroup?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#admin_pro_group AwsQuicksightAccountSubscription#admin_pro_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#admin_pro_group TfAccountSubscription#admin_pro_group}
   */
   readonly adminProGroup?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#authentication_method AwsQuicksightAccountSubscription#authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#authentication_method TfAccountSubscription#authentication_method}
   */
   readonly authenticationMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#author_group AwsQuicksightAccountSubscription#author_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#author_group TfAccountSubscription#author_group}
   */
   readonly authorGroup?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#author_pro_group AwsQuicksightAccountSubscription#author_pro_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#author_pro_group TfAccountSubscription#author_pro_group}
   */
   readonly authorProGroup?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#aws_account_id AwsQuicksightAccountSubscription#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#aws_account_id TfAccountSubscription#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#contact_number AwsQuicksightAccountSubscription#contact_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#contact_number TfAccountSubscription#contact_number}
   */
   readonly contactNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#directory_id AwsQuicksightAccountSubscription#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#directory_id TfAccountSubscription#directory_id}
   */
   readonly directoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#edition AwsQuicksightAccountSubscription#edition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#edition TfAccountSubscription#edition}
   */
   readonly edition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#email_address AwsQuicksightAccountSubscription#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#email_address TfAccountSubscription#email_address}
   */
   readonly emailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#first_name AwsQuicksightAccountSubscription#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#first_name TfAccountSubscription#first_name}
   */
   readonly firstName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#iam_identity_center_instance_arn AwsQuicksightAccountSubscription#iam_identity_center_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#iam_identity_center_instance_arn TfAccountSubscription#iam_identity_center_instance_arn}
   */
   readonly iamIdentityCenterInstanceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#id AwsQuicksightAccountSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#id TfAccountSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#last_name AwsQuicksightAccountSubscription#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#last_name TfAccountSubscription#last_name}
   */
   readonly lastName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#notification_email AwsQuicksightAccountSubscription#notification_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#notification_email TfAccountSubscription#notification_email}
   */
   readonly notificationEmail: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#reader_group AwsQuicksightAccountSubscription#reader_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#reader_group TfAccountSubscription#reader_group}
   */
   readonly readerGroup?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#reader_pro_group AwsQuicksightAccountSubscription#reader_pro_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#reader_pro_group TfAccountSubscription#reader_pro_group}
   */
   readonly readerProGroup?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#realm AwsQuicksightAccountSubscription#realm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#realm TfAccountSubscription#realm}
   */
   readonly realm?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#region AwsQuicksightAccountSubscription#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#region TfAccountSubscription#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#timeouts AwsQuicksightAccountSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#timeouts TfAccountSubscription#timeouts}
   */
-  readonly timeouts?: AwsQuicksightAccountSubscription.TimeoutsProperty;
+  readonly timeouts?: TfAccountSubscription.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription aws_quicksight_account_subscription}
 */
-export class AwsQuicksightAccountSubscription extends cdktn.TerraformResource {
+export class TfAccountSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -117,11 +117,11 @@ export class AwsQuicksightAccountSubscription extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightAccountSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccountSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightAccountSubscription to import
-  * @param importFromId The id of the existing AwsQuicksightAccountSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightAccountSubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfAccountSubscription to import
+  * @param importFromId The id of the existing TfAccountSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccountSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_account_subscription", importId: importFromId, provider });
@@ -136,9 +136,9 @@ export class AwsQuicksightAccountSubscription extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightAccountSubscriptionConfig
+  * @param options TfAccountSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightAccountSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccountSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_account_subscription',
       terraformGeneratorMetadata: {
@@ -512,11 +512,11 @@ export class AwsQuicksightAccountSubscription extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsQuicksightAccountSubscription.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAccountSubscription.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsQuicksightAccountSubscription.TimeoutsProperty) {
+  public putTimeouts(value: TfAccountSubscription.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -554,7 +554,7 @@ export class AwsQuicksightAccountSubscription extends cdktn.TerraformResource {
       reader_pro_group: cdktn.listMapper(cdktn.stringToTerraform, false)(this._readerProGroup),
       realm: cdktn.stringToTerraform(this._realm),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsQuicksightAccountSubscriptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfAccountSubscriptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -687,10 +687,10 @@ export class AwsQuicksightAccountSubscription extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsQuicksightAccountSubscriptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAccountSubscriptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsQuicksightAccountSubscription.TimeoutsProperty",
+        storageClassType: "TfAccountSubscription.TimeoutsProperty",
       },
     };
 
@@ -699,7 +699,7 @@ export class AwsQuicksightAccountSubscription extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightAccountSubscriptionTimeoutsPropertyToTerraform(struct?: AwsQuicksightAccountSubscription.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccountSubscriptionTimeoutsPropertyToTerraform(struct?: TfAccountSubscription.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,7 +712,7 @@ export function awsQuicksightAccountSubscriptionTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsQuicksightAccountSubscriptionTimeoutsPropertyToHclTerraform(struct?: AwsQuicksightAccountSubscription.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccountSubscriptionTimeoutsPropertyToHclTerraform(struct?: TfAccountSubscription.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -743,18 +743,18 @@ export function awsQuicksightAccountSubscriptionTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsQuicksightAccountSubscription {
+export namespace TfAccountSubscription {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#create AwsQuicksightAccountSubscription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#create TfAccountSubscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#delete AwsQuicksightAccountSubscription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#delete TfAccountSubscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#read AwsQuicksightAccountSubscription#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_subscription#read TfAccountSubscription#read}
   */
   readonly read?: string;
 }

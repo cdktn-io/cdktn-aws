@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGrafanaWorkspaceSamlConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkspaceSamlConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#admin_role_values AwsGrafanaWorkspaceSamlConfiguration#admin_role_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#admin_role_values TfWorkspaceSamlConfiguration#admin_role_values}
   */
   readonly adminRoleValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#allowed_organizations AwsGrafanaWorkspaceSamlConfiguration#allowed_organizations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#allowed_organizations TfWorkspaceSamlConfiguration#allowed_organizations}
   */
   readonly allowedOrganizations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#editor_role_values AwsGrafanaWorkspaceSamlConfiguration#editor_role_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#editor_role_values TfWorkspaceSamlConfiguration#editor_role_values}
   */
   readonly editorRoleValues: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#email_assertion AwsGrafanaWorkspaceSamlConfiguration#email_assertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#email_assertion TfWorkspaceSamlConfiguration#email_assertion}
   */
   readonly emailAssertion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#groups_assertion AwsGrafanaWorkspaceSamlConfiguration#groups_assertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#groups_assertion TfWorkspaceSamlConfiguration#groups_assertion}
   */
   readonly groupsAssertion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#id AwsGrafanaWorkspaceSamlConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#id TfWorkspaceSamlConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#idp_metadata_url AwsGrafanaWorkspaceSamlConfiguration#idp_metadata_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#idp_metadata_url TfWorkspaceSamlConfiguration#idp_metadata_url}
   */
   readonly idpMetadataUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#idp_metadata_xml AwsGrafanaWorkspaceSamlConfiguration#idp_metadata_xml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#idp_metadata_xml TfWorkspaceSamlConfiguration#idp_metadata_xml}
   */
   readonly idpMetadataXml?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#login_assertion AwsGrafanaWorkspaceSamlConfiguration#login_assertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#login_assertion TfWorkspaceSamlConfiguration#login_assertion}
   */
   readonly loginAssertion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#login_validity_duration AwsGrafanaWorkspaceSamlConfiguration#login_validity_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#login_validity_duration TfWorkspaceSamlConfiguration#login_validity_duration}
   */
   readonly loginValidityDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#name_assertion AwsGrafanaWorkspaceSamlConfiguration#name_assertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#name_assertion TfWorkspaceSamlConfiguration#name_assertion}
   */
   readonly nameAssertion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#org_assertion AwsGrafanaWorkspaceSamlConfiguration#org_assertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#org_assertion TfWorkspaceSamlConfiguration#org_assertion}
   */
   readonly orgAssertion?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#region AwsGrafanaWorkspaceSamlConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#region TfWorkspaceSamlConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#role_assertion AwsGrafanaWorkspaceSamlConfiguration#role_assertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#role_assertion TfWorkspaceSamlConfiguration#role_assertion}
   */
   readonly roleAssertion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#workspace_id AwsGrafanaWorkspaceSamlConfiguration#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#workspace_id TfWorkspaceSamlConfiguration#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#timeouts AwsGrafanaWorkspaceSamlConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#timeouts TfWorkspaceSamlConfiguration#timeouts}
   */
-  readonly timeouts?: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty;
+  readonly timeouts?: TfWorkspaceSamlConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration aws_grafana_workspace_saml_configuration}
 */
-export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResource {
+export class TfWorkspaceSamlConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGrafanaWorkspaceSamlConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkspaceSamlConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGrafanaWorkspaceSamlConfiguration to import
-  * @param importFromId The id of the existing AwsGrafanaWorkspaceSamlConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGrafanaWorkspaceSamlConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkspaceSamlConfiguration to import
+  * @param importFromId The id of the existing TfWorkspaceSamlConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkspaceSamlConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_workspace_saml_configuration", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGrafanaWorkspaceSamlConfigurationConfig
+  * @param options TfWorkspaceSamlConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGrafanaWorkspaceSamlConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfWorkspaceSamlConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_grafana_workspace_saml_configuration',
       terraformGeneratorMetadata: {
@@ -392,11 +392,11 @@ export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGrafanaWorkspaceSamlConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfWorkspaceSamlConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: TfWorkspaceSamlConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -428,7 +428,7 @@ export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResourc
       region: cdktn.stringToTerraform(this._region),
       role_assertion: cdktn.stringToTerraform(this._roleAssertion),
       workspace_id: cdktn.stringToTerraform(this._workspaceId),
-      timeouts: awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfWorkspaceSamlConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -525,10 +525,10 @@ export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResourc
         storageClassType: "string",
       },
       timeouts: {
-        value: awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfWorkspaceSamlConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty",
+        storageClassType: "TfWorkspaceSamlConfiguration.TimeoutsProperty",
       },
     };
 
@@ -537,7 +537,7 @@ export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResourc
   }
 }
 
-export function awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToTerraform(struct?: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfWorkspaceSamlConfigurationTimeoutsPropertyToTerraform(struct?: TfWorkspaceSamlConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToTerraform(
 }
 
 
-export function awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfWorkspaceSamlConfigurationTimeoutsPropertyToHclTerraform(struct?: TfWorkspaceSamlConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,14 +574,14 @@ export function awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToHclTerrafo
 }
 
 
-export namespace AwsGrafanaWorkspaceSamlConfiguration {
+export namespace TfWorkspaceSamlConfiguration {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#create AwsGrafanaWorkspaceSamlConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#create TfWorkspaceSamlConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#delete AwsGrafanaWorkspaceSamlConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#delete TfWorkspaceSamlConfiguration#delete}
   */
   readonly delete?: string;
 }

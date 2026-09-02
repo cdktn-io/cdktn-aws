@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsKinesisStreamConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfStreamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#id DataAwsKinesisStream#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#id DataTfStream#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#name DataAwsKinesisStream#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#name DataTfStream#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#region DataAwsKinesisStream#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#region DataTfStream#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#tags DataAwsKinesisStream#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#tags DataTfStream#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsKinesisStreamConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream aws_kinesis_stream}
 */
-export class DataAwsKinesisStream extends cdktn.TerraformDataSource {
+export class DataTfStream extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsKinesisStream extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsKinesisStream resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfStream resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsKinesisStream to import
-  * @param importFromId The id of the existing DataAwsKinesisStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsKinesisStream to import is found
+  * @param importToId The construct id used in the generated config for the DataTfStream to import
+  * @param importFromId The id of the existing DataTfStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfStream to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kinesis_stream", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsKinesisStream extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsKinesisStreamConfig
+  * @param options DataTfStreamConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsKinesisStreamConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfStreamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kinesis_stream',
       terraformGeneratorMetadata: {
@@ -186,7 +186,7 @@ export class DataAwsKinesisStream extends cdktn.TerraformDataSource {
   }
 
   // stream_mode_details - computed: true, optional: false, required: false
-  private _streamModeDetails = new DataAwsKinesisStream.StreamModeDetailsPropertyList(this, "stream_mode_details", false);
+  private _streamModeDetails = new DataTfStream.StreamModeDetailsPropertyList(this, "stream_mode_details", false);
   public get streamModeDetails() {
     return this._streamModeDetails;
   }
@@ -208,7 +208,7 @@ export class DataAwsKinesisStream extends cdktn.TerraformDataSource {
   }
 
   // warm_throughput - computed: true, optional: false, required: false
-  private _warmThroughput = new DataAwsKinesisStream.WarmThroughputPropertyList(this, "warm_throughput", false);
+  private _warmThroughput = new DataTfStream.WarmThroughputPropertyList(this, "warm_throughput", false);
   public get warmThroughput() {
     return this._warmThroughput;
   }
@@ -259,7 +259,7 @@ export class DataAwsKinesisStream extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsKinesisStreamStreamModeDetailsPropertyToTerraform(struct?: DataAwsKinesisStream.StreamModeDetailsProperty): any {
+export function dataTfStreamStreamModeDetailsPropertyToTerraform(struct?: DataTfStream.StreamModeDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function dataAwsKinesisStreamStreamModeDetailsPropertyToTerraform(struct?
 }
 
 
-export function dataAwsKinesisStreamStreamModeDetailsPropertyToHclTerraform(struct?: DataAwsKinesisStream.StreamModeDetailsProperty): any {
+export function dataTfStreamStreamModeDetailsPropertyToHclTerraform(struct?: DataTfStream.StreamModeDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function dataAwsKinesisStreamStreamModeDetailsPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsKinesisStreamWarmThroughputPropertyToTerraform(struct?: DataAwsKinesisStream.WarmThroughputProperty): any {
+export function dataTfStreamWarmThroughputPropertyToTerraform(struct?: DataTfStream.WarmThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataAwsKinesisStreamWarmThroughputPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsKinesisStreamWarmThroughputPropertyToHclTerraform(struct?: DataAwsKinesisStream.WarmThroughputProperty): any {
+export function dataTfStreamWarmThroughputPropertyToHclTerraform(struct?: DataTfStream.WarmThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataAwsKinesisStreamWarmThroughputPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataAwsKinesisStream {
+export namespace DataTfStream {
 export interface StreamModeDetailsProperty {
 }
 export class StreamModeDetailsPropertyOutputReference extends cdktn.ComplexObject {

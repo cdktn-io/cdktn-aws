@@ -21,6 +21,21 @@
     "VPN (Site-to-Site)": "vpn_site_to_site"
   },
 
+  "stripPrefixOverrides": {
+    "cloud_map": ["service_discovery"],
+    "cloudhsm": ["cloudhsm_v2"],
+    "cloudwatch_logs": ["cloudwatch", "cloudwatch_log"],
+    "elemental_mediaconvert": ["media_convert"],
+    "elemental_mediapackage": ["media_package"],
+    "elemental_mediapackage_version_2": ["media_packagev2"],
+    "elemental_mediastore": ["media_store"],
+    "eventbridge": ["cloudwatch_event"],
+    "meta_data_sources": [],
+    "s3_control": ["s3", "s3control"],
+    "transit_gateway": ["ec2", "ec2_transit_gateway"],
+    "vpn_client": ["ec2_client_vpn"]
+  },
+
   "aliases": {
     "aws_alb": "aws_lb",
     "aws_alb_listener": "aws_lb_listener",

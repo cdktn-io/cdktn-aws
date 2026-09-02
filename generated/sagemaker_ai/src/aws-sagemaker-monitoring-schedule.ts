@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerMonitoringScheduleConfig extends cdktn.TerraformMetaArguments {
+export interface TfMonitoringScheduleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#id AwsSagemakerMonitoringSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#id TfMonitoringSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#name AwsSagemakerMonitoringSchedule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#name TfMonitoringSchedule#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#region AwsSagemakerMonitoringSchedule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#region TfMonitoringSchedule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#tags AwsSagemakerMonitoringSchedule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#tags TfMonitoringSchedule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#tags_all AwsSagemakerMonitoringSchedule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#tags_all TfMonitoringSchedule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * monitoring_schedule_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_schedule_config AwsSagemakerMonitoringSchedule#monitoring_schedule_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_schedule_config TfMonitoringSchedule#monitoring_schedule_config}
   */
-  readonly monitoringScheduleConfig: AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigProperty;
+  readonly monitoringScheduleConfig: TfMonitoringSchedule.MonitoringScheduleConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule aws_sagemaker_monitoring_schedule}
 */
-export class AwsSagemakerMonitoringSchedule extends cdktn.TerraformResource {
+export class TfMonitoringSchedule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsSagemakerMonitoringSchedule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerMonitoringSchedule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMonitoringSchedule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerMonitoringSchedule to import
-  * @param importFromId The id of the existing AwsSagemakerMonitoringSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerMonitoringSchedule to import is found
+  * @param importToId The construct id used in the generated config for the TfMonitoringSchedule to import
+  * @param importFromId The id of the existing TfMonitoringSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMonitoringSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_monitoring_schedule", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsSagemakerMonitoringSchedule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerMonitoringScheduleConfig
+  * @param options TfMonitoringScheduleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerMonitoringScheduleConfig) {
+  public constructor(scope: Construct, id: string, config: TfMonitoringScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_monitoring_schedule',
       terraformGeneratorMetadata: {
@@ -188,11 +188,11 @@ export class AwsSagemakerMonitoringSchedule extends cdktn.TerraformResource {
   }
 
   // monitoring_schedule_config - computed: false, optional: false, required: true
-  private _monitoringScheduleConfig = new AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigPropertyOutputReference(this, "monitoring_schedule_config");
+  private _monitoringScheduleConfig = new TfMonitoringSchedule.MonitoringScheduleConfigPropertyOutputReference(this, "monitoring_schedule_config");
   public get monitoringScheduleConfig() {
     return this._monitoringScheduleConfig;
   }
-  public putMonitoringScheduleConfig(value: AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigProperty) {
+  public putMonitoringScheduleConfig(value: TfMonitoringSchedule.MonitoringScheduleConfigProperty) {
     this._monitoringScheduleConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -211,7 +211,7 @@ export class AwsSagemakerMonitoringSchedule extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      monitoring_schedule_config: awsSagemakerMonitoringScheduleMonitoringScheduleConfigPropertyToTerraform(this._monitoringScheduleConfig.internalValue),
+      monitoring_schedule_config: tfMonitoringScheduleMonitoringScheduleConfigPropertyToTerraform(this._monitoringScheduleConfig.internalValue),
     };
   }
 
@@ -248,10 +248,10 @@ export class AwsSagemakerMonitoringSchedule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       monitoring_schedule_config: {
-        value: awsSagemakerMonitoringScheduleMonitoringScheduleConfigPropertyToHclTerraform(this._monitoringScheduleConfig.internalValue),
+        value: tfMonitoringScheduleMonitoringScheduleConfigPropertyToHclTerraform(this._monitoringScheduleConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigPropertyList",
+        storageClassType: "TfMonitoringSchedule.MonitoringScheduleConfigPropertyList",
       },
     };
 
@@ -260,7 +260,7 @@ export class AwsSagemakerMonitoringSchedule extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerMonitoringScheduleConstraintsResourcePropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.ConstraintsResourcePropertyOutputReference | AwsSagemakerMonitoringSchedule.ConstraintsResourceProperty): any {
+export function tfMonitoringScheduleConstraintsResourcePropertyToTerraform(struct?: TfMonitoringSchedule.ConstraintsResourcePropertyOutputReference | TfMonitoringSchedule.ConstraintsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function awsSagemakerMonitoringScheduleConstraintsResourcePropertyToTerra
 }
 
 
-export function awsSagemakerMonitoringScheduleConstraintsResourcePropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.ConstraintsResourcePropertyOutputReference | AwsSagemakerMonitoringSchedule.ConstraintsResourceProperty): any {
+export function tfMonitoringScheduleConstraintsResourcePropertyToHclTerraform(struct?: TfMonitoringSchedule.ConstraintsResourcePropertyOutputReference | TfMonitoringSchedule.ConstraintsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function awsSagemakerMonitoringScheduleConstraintsResourcePropertyToHclTe
 }
 
 
-export function awsSagemakerMonitoringScheduleStatisticsResourcePropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.StatisticsResourcePropertyOutputReference | AwsSagemakerMonitoringSchedule.StatisticsResourceProperty): any {
+export function tfMonitoringScheduleStatisticsResourcePropertyToTerraform(struct?: TfMonitoringSchedule.StatisticsResourcePropertyOutputReference | TfMonitoringSchedule.StatisticsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function awsSagemakerMonitoringScheduleStatisticsResourcePropertyToTerraf
 }
 
 
-export function awsSagemakerMonitoringScheduleStatisticsResourcePropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.StatisticsResourcePropertyOutputReference | AwsSagemakerMonitoringSchedule.StatisticsResourceProperty): any {
+export function tfMonitoringScheduleStatisticsResourcePropertyToHclTerraform(struct?: TfMonitoringSchedule.StatisticsResourcePropertyOutputReference | TfMonitoringSchedule.StatisticsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,20 +320,20 @@ export function awsSagemakerMonitoringScheduleStatisticsResourcePropertyToHclTer
 }
 
 
-export function awsSagemakerMonitoringScheduleBaselinePropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.BaselinePropertyOutputReference | AwsSagemakerMonitoringSchedule.BaselineProperty): any {
+export function tfMonitoringScheduleBaselinePropertyToTerraform(struct?: TfMonitoringSchedule.BaselinePropertyOutputReference | TfMonitoringSchedule.BaselineProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     baselining_job_name: cdktn.stringToTerraform(struct!.baseliningJobName),
-    constraints_resource: awsSagemakerMonitoringScheduleConstraintsResourcePropertyToTerraform(struct!.constraintsResource),
-    statistics_resource: awsSagemakerMonitoringScheduleStatisticsResourcePropertyToTerraform(struct!.statisticsResource),
+    constraints_resource: tfMonitoringScheduleConstraintsResourcePropertyToTerraform(struct!.constraintsResource),
+    statistics_resource: tfMonitoringScheduleStatisticsResourcePropertyToTerraform(struct!.statisticsResource),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleBaselinePropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.BaselinePropertyOutputReference | AwsSagemakerMonitoringSchedule.BaselineProperty): any {
+export function tfMonitoringScheduleBaselinePropertyToHclTerraform(struct?: TfMonitoringSchedule.BaselinePropertyOutputReference | TfMonitoringSchedule.BaselineProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,13 +346,13 @@ export function awsSagemakerMonitoringScheduleBaselinePropertyToHclTerraform(str
       storageClassType: "string",
     },
     constraints_resource: {
-      value: awsSagemakerMonitoringScheduleConstraintsResourcePropertyToHclTerraform(struct!.constraintsResource),
+      value: tfMonitoringScheduleConstraintsResourcePropertyToHclTerraform(struct!.constraintsResource),
       isBlock: true,
       type: "list",
       storageClassType: "ConstraintsResourcePropertyList",
     },
     statistics_resource: {
-      value: awsSagemakerMonitoringScheduleStatisticsResourcePropertyToHclTerraform(struct!.statisticsResource),
+      value: tfMonitoringScheduleStatisticsResourcePropertyToHclTerraform(struct!.statisticsResource),
       isBlock: true,
       type: "list",
       storageClassType: "StatisticsResourcePropertyList",
@@ -364,7 +364,7 @@ export function awsSagemakerMonitoringScheduleBaselinePropertyToHclTerraform(str
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringAppSpecificationPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringAppSpecificationPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringAppSpecificationProperty): any {
+export function tfMonitoringScheduleMonitoringAppSpecificationPropertyToTerraform(struct?: TfMonitoringSchedule.MonitoringAppSpecificationPropertyOutputReference | TfMonitoringSchedule.MonitoringAppSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsSagemakerMonitoringScheduleMonitoringAppSpecificationProperty
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringAppSpecificationPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringAppSpecificationPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringAppSpecificationProperty): any {
+export function tfMonitoringScheduleMonitoringAppSpecificationPropertyToHclTerraform(struct?: TfMonitoringSchedule.MonitoringAppSpecificationPropertyOutputReference | TfMonitoringSchedule.MonitoringAppSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function awsSagemakerMonitoringScheduleMonitoringAppSpecificationProperty
 }
 
 
-export function awsSagemakerMonitoringScheduleCsvPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.CsvPropertyOutputReference | AwsSagemakerMonitoringSchedule.CsvProperty): any {
+export function tfMonitoringScheduleCsvPropertyToTerraform(struct?: TfMonitoringSchedule.CsvPropertyOutputReference | TfMonitoringSchedule.CsvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function awsSagemakerMonitoringScheduleCsvPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSagemakerMonitoringScheduleCsvPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.CsvPropertyOutputReference | AwsSagemakerMonitoringSchedule.CsvProperty): any {
+export function tfMonitoringScheduleCsvPropertyToHclTerraform(struct?: TfMonitoringSchedule.CsvPropertyOutputReference | TfMonitoringSchedule.CsvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsSagemakerMonitoringScheduleCsvPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSagemakerMonitoringScheduleJsonPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.JsonPropertyOutputReference | AwsSagemakerMonitoringSchedule.JsonProperty): any {
+export function tfMonitoringScheduleJsonPropertyToTerraform(struct?: TfMonitoringSchedule.JsonPropertyOutputReference | TfMonitoringSchedule.JsonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function awsSagemakerMonitoringScheduleJsonPropertyToTerraform(struct?: A
 }
 
 
-export function awsSagemakerMonitoringScheduleJsonPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.JsonPropertyOutputReference | AwsSagemakerMonitoringSchedule.JsonProperty): any {
+export function tfMonitoringScheduleJsonPropertyToHclTerraform(struct?: TfMonitoringSchedule.JsonPropertyOutputReference | TfMonitoringSchedule.JsonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,32 +482,32 @@ export function awsSagemakerMonitoringScheduleJsonPropertyToHclTerraform(struct?
 }
 
 
-export function awsSagemakerMonitoringScheduleDatasetFormatPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.DatasetFormatPropertyOutputReference | AwsSagemakerMonitoringSchedule.DatasetFormatProperty): any {
+export function tfMonitoringScheduleDatasetFormatPropertyToTerraform(struct?: TfMonitoringSchedule.DatasetFormatPropertyOutputReference | TfMonitoringSchedule.DatasetFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    csv: awsSagemakerMonitoringScheduleCsvPropertyToTerraform(struct!.csv),
-    json: awsSagemakerMonitoringScheduleJsonPropertyToTerraform(struct!.json),
+    csv: tfMonitoringScheduleCsvPropertyToTerraform(struct!.csv),
+    json: tfMonitoringScheduleJsonPropertyToTerraform(struct!.json),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleDatasetFormatPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.DatasetFormatPropertyOutputReference | AwsSagemakerMonitoringSchedule.DatasetFormatProperty): any {
+export function tfMonitoringScheduleDatasetFormatPropertyToHclTerraform(struct?: TfMonitoringSchedule.DatasetFormatPropertyOutputReference | TfMonitoringSchedule.DatasetFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     csv: {
-      value: awsSagemakerMonitoringScheduleCsvPropertyToHclTerraform(struct!.csv),
+      value: tfMonitoringScheduleCsvPropertyToHclTerraform(struct!.csv),
       isBlock: true,
       type: "list",
       storageClassType: "CsvPropertyList",
     },
     json: {
-      value: awsSagemakerMonitoringScheduleJsonPropertyToHclTerraform(struct!.json),
+      value: tfMonitoringScheduleJsonPropertyToHclTerraform(struct!.json),
       isBlock: true,
       type: "list",
       storageClassType: "JsonPropertyList",
@@ -519,7 +519,7 @@ export function awsSagemakerMonitoringScheduleDatasetFormatPropertyToHclTerrafor
 }
 
 
-export function awsSagemakerMonitoringScheduleBatchTransformInputPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.BatchTransformInputPropertyOutputReference | AwsSagemakerMonitoringSchedule.BatchTransformInputProperty): any {
+export function tfMonitoringScheduleBatchTransformInputPropertyToTerraform(struct?: TfMonitoringSchedule.BatchTransformInputPropertyOutputReference | TfMonitoringSchedule.BatchTransformInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,12 +536,12 @@ export function awsSagemakerMonitoringScheduleBatchTransformInputPropertyToTerra
     s3_data_distribution_type: cdktn.stringToTerraform(struct!.s3DataDistributionType),
     s3_input_mode: cdktn.stringToTerraform(struct!.s3InputMode),
     start_time_offset: cdktn.stringToTerraform(struct!.startTimeOffset),
-    dataset_format: awsSagemakerMonitoringScheduleDatasetFormatPropertyToTerraform(struct!.datasetFormat),
+    dataset_format: tfMonitoringScheduleDatasetFormatPropertyToTerraform(struct!.datasetFormat),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleBatchTransformInputPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.BatchTransformInputPropertyOutputReference | AwsSagemakerMonitoringSchedule.BatchTransformInputProperty): any {
+export function tfMonitoringScheduleBatchTransformInputPropertyToHclTerraform(struct?: TfMonitoringSchedule.BatchTransformInputPropertyOutputReference | TfMonitoringSchedule.BatchTransformInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function awsSagemakerMonitoringScheduleBatchTransformInputPropertyToHclTe
       storageClassType: "string",
     },
     dataset_format: {
-      value: awsSagemakerMonitoringScheduleDatasetFormatPropertyToHclTerraform(struct!.datasetFormat),
+      value: tfMonitoringScheduleDatasetFormatPropertyToHclTerraform(struct!.datasetFormat),
       isBlock: true,
       type: "list",
       storageClassType: "DatasetFormatPropertyList",
@@ -626,7 +626,7 @@ export function awsSagemakerMonitoringScheduleBatchTransformInputPropertyToHclTe
 }
 
 
-export function awsSagemakerMonitoringScheduleEndpointInputPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.EndpointInputPropertyOutputReference | AwsSagemakerMonitoringSchedule.EndpointInputProperty): any {
+export function tfMonitoringScheduleEndpointInputPropertyToTerraform(struct?: TfMonitoringSchedule.EndpointInputPropertyOutputReference | TfMonitoringSchedule.EndpointInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -647,7 +647,7 @@ export function awsSagemakerMonitoringScheduleEndpointInputPropertyToTerraform(s
 }
 
 
-export function awsSagemakerMonitoringScheduleEndpointInputPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.EndpointInputPropertyOutputReference | AwsSagemakerMonitoringSchedule.EndpointInputProperty): any {
+export function tfMonitoringScheduleEndpointInputPropertyToHclTerraform(struct?: TfMonitoringSchedule.EndpointInputPropertyOutputReference | TfMonitoringSchedule.EndpointInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,32 +726,32 @@ export function awsSagemakerMonitoringScheduleEndpointInputPropertyToHclTerrafor
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringInputsPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringInputsPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringInputsProperty): any {
+export function tfMonitoringScheduleMonitoringInputsPropertyToTerraform(struct?: TfMonitoringSchedule.MonitoringInputsPropertyOutputReference | TfMonitoringSchedule.MonitoringInputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    batch_transform_input: awsSagemakerMonitoringScheduleBatchTransformInputPropertyToTerraform(struct!.batchTransformInput),
-    endpoint_input: awsSagemakerMonitoringScheduleEndpointInputPropertyToTerraform(struct!.endpointInput),
+    batch_transform_input: tfMonitoringScheduleBatchTransformInputPropertyToTerraform(struct!.batchTransformInput),
+    endpoint_input: tfMonitoringScheduleEndpointInputPropertyToTerraform(struct!.endpointInput),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringInputsPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringInputsPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringInputsProperty): any {
+export function tfMonitoringScheduleMonitoringInputsPropertyToHclTerraform(struct?: TfMonitoringSchedule.MonitoringInputsPropertyOutputReference | TfMonitoringSchedule.MonitoringInputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     batch_transform_input: {
-      value: awsSagemakerMonitoringScheduleBatchTransformInputPropertyToHclTerraform(struct!.batchTransformInput),
+      value: tfMonitoringScheduleBatchTransformInputPropertyToHclTerraform(struct!.batchTransformInput),
       isBlock: true,
       type: "list",
       storageClassType: "BatchTransformInputPropertyList",
     },
     endpoint_input: {
-      value: awsSagemakerMonitoringScheduleEndpointInputPropertyToHclTerraform(struct!.endpointInput),
+      value: tfMonitoringScheduleEndpointInputPropertyToHclTerraform(struct!.endpointInput),
       isBlock: true,
       type: "list",
       storageClassType: "EndpointInputPropertyList",
@@ -763,7 +763,7 @@ export function awsSagemakerMonitoringScheduleMonitoringInputsPropertyToHclTerra
 }
 
 
-export function awsSagemakerMonitoringScheduleS3OutputPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.S3OutputPropertyOutputReference | AwsSagemakerMonitoringSchedule.S3OutputProperty): any {
+export function tfMonitoringScheduleS3OutputPropertyToTerraform(struct?: TfMonitoringSchedule.S3OutputPropertyOutputReference | TfMonitoringSchedule.S3OutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function awsSagemakerMonitoringScheduleS3OutputPropertyToTerraform(struct
 }
 
 
-export function awsSagemakerMonitoringScheduleS3OutputPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.S3OutputPropertyOutputReference | AwsSagemakerMonitoringSchedule.S3OutputProperty): any {
+export function tfMonitoringScheduleS3OutputPropertyToHclTerraform(struct?: TfMonitoringSchedule.S3OutputPropertyOutputReference | TfMonitoringSchedule.S3OutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -807,25 +807,25 @@ export function awsSagemakerMonitoringScheduleS3OutputPropertyToHclTerraform(str
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringOutputsPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringOutputsPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringOutputsProperty): any {
+export function tfMonitoringScheduleMonitoringOutputsPropertyToTerraform(struct?: TfMonitoringSchedule.MonitoringOutputsPropertyOutputReference | TfMonitoringSchedule.MonitoringOutputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_output: awsSagemakerMonitoringScheduleS3OutputPropertyToTerraform(struct!.s3Output),
+    s3_output: tfMonitoringScheduleS3OutputPropertyToTerraform(struct!.s3Output),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringOutputsPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringOutputsPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringOutputsProperty): any {
+export function tfMonitoringScheduleMonitoringOutputsPropertyToHclTerraform(struct?: TfMonitoringSchedule.MonitoringOutputsPropertyOutputReference | TfMonitoringSchedule.MonitoringOutputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_output: {
-      value: awsSagemakerMonitoringScheduleS3OutputPropertyToHclTerraform(struct!.s3Output),
+      value: tfMonitoringScheduleS3OutputPropertyToHclTerraform(struct!.s3Output),
       isBlock: true,
       type: "list",
       storageClassType: "S3OutputPropertyList",
@@ -837,19 +837,19 @@ export function awsSagemakerMonitoringScheduleMonitoringOutputsPropertyToHclTerr
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringOutputConfigPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringOutputConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringOutputConfigProperty): any {
+export function tfMonitoringScheduleMonitoringOutputConfigPropertyToTerraform(struct?: TfMonitoringSchedule.MonitoringOutputConfigPropertyOutputReference | TfMonitoringSchedule.MonitoringOutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
-    monitoring_outputs: awsSagemakerMonitoringScheduleMonitoringOutputsPropertyToTerraform(struct!.monitoringOutputs),
+    monitoring_outputs: tfMonitoringScheduleMonitoringOutputsPropertyToTerraform(struct!.monitoringOutputs),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringOutputConfigPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringOutputConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringOutputConfigProperty): any {
+export function tfMonitoringScheduleMonitoringOutputConfigPropertyToHclTerraform(struct?: TfMonitoringSchedule.MonitoringOutputConfigPropertyOutputReference | TfMonitoringSchedule.MonitoringOutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,7 +862,7 @@ export function awsSagemakerMonitoringScheduleMonitoringOutputConfigPropertyToHc
       storageClassType: "string",
     },
     monitoring_outputs: {
-      value: awsSagemakerMonitoringScheduleMonitoringOutputsPropertyToHclTerraform(struct!.monitoringOutputs),
+      value: tfMonitoringScheduleMonitoringOutputsPropertyToHclTerraform(struct!.monitoringOutputs),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringOutputsPropertyList",
@@ -874,7 +874,7 @@ export function awsSagemakerMonitoringScheduleMonitoringOutputConfigPropertyToHc
 }
 
 
-export function awsSagemakerMonitoringScheduleClusterConfigPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.ClusterConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.ClusterConfigProperty): any {
+export function tfMonitoringScheduleClusterConfigPropertyToTerraform(struct?: TfMonitoringSchedule.ClusterConfigPropertyOutputReference | TfMonitoringSchedule.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function awsSagemakerMonitoringScheduleClusterConfigPropertyToTerraform(s
 }
 
 
-export function awsSagemakerMonitoringScheduleClusterConfigPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.ClusterConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.ClusterConfigProperty): any {
+export function tfMonitoringScheduleClusterConfigPropertyToHclTerraform(struct?: TfMonitoringSchedule.ClusterConfigPropertyOutputReference | TfMonitoringSchedule.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -925,25 +925,25 @@ export function awsSagemakerMonitoringScheduleClusterConfigPropertyToHclTerrafor
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringResourcesPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringResourcesPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringResourcesProperty): any {
+export function tfMonitoringScheduleMonitoringResourcesPropertyToTerraform(struct?: TfMonitoringSchedule.MonitoringResourcesPropertyOutputReference | TfMonitoringSchedule.MonitoringResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cluster_config: awsSagemakerMonitoringScheduleClusterConfigPropertyToTerraform(struct!.clusterConfig),
+    cluster_config: tfMonitoringScheduleClusterConfigPropertyToTerraform(struct!.clusterConfig),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringResourcesPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringResourcesPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringResourcesProperty): any {
+export function tfMonitoringScheduleMonitoringResourcesPropertyToHclTerraform(struct?: TfMonitoringSchedule.MonitoringResourcesPropertyOutputReference | TfMonitoringSchedule.MonitoringResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cluster_config: {
-      value: awsSagemakerMonitoringScheduleClusterConfigPropertyToHclTerraform(struct!.clusterConfig),
+      value: tfMonitoringScheduleClusterConfigPropertyToHclTerraform(struct!.clusterConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ClusterConfigPropertyList",
@@ -955,7 +955,7 @@ export function awsSagemakerMonitoringScheduleMonitoringResourcesPropertyToHclTe
 }
 
 
-export function awsSagemakerMonitoringScheduleVpcConfigPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.VpcConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.VpcConfigProperty): any {
+export function tfMonitoringScheduleVpcConfigPropertyToTerraform(struct?: TfMonitoringSchedule.VpcConfigPropertyOutputReference | TfMonitoringSchedule.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function awsSagemakerMonitoringScheduleVpcConfigPropertyToTerraform(struc
 }
 
 
-export function awsSagemakerMonitoringScheduleVpcConfigPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.VpcConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.VpcConfigProperty): any {
+export function tfMonitoringScheduleVpcConfigPropertyToHclTerraform(struct?: TfMonitoringSchedule.VpcConfigPropertyOutputReference | TfMonitoringSchedule.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,7 +992,7 @@ export function awsSagemakerMonitoringScheduleVpcConfigPropertyToHclTerraform(st
 }
 
 
-export function awsSagemakerMonitoringScheduleNetworkConfigPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.NetworkConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.NetworkConfigProperty): any {
+export function tfMonitoringScheduleNetworkConfigPropertyToTerraform(struct?: TfMonitoringSchedule.NetworkConfigPropertyOutputReference | TfMonitoringSchedule.NetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1000,12 +1000,12 @@ export function awsSagemakerMonitoringScheduleNetworkConfigPropertyToTerraform(s
   return {
     enable_inter_container_traffic_encryption: cdktn.booleanToTerraform(struct!.enableInterContainerTrafficEncryption),
     enable_network_isolation: cdktn.booleanToTerraform(struct!.enableNetworkIsolation),
-    vpc_config: awsSagemakerMonitoringScheduleVpcConfigPropertyToTerraform(struct!.vpcConfig),
+    vpc_config: tfMonitoringScheduleVpcConfigPropertyToTerraform(struct!.vpcConfig),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleNetworkConfigPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.NetworkConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.NetworkConfigProperty): any {
+export function tfMonitoringScheduleNetworkConfigPropertyToHclTerraform(struct?: TfMonitoringSchedule.NetworkConfigPropertyOutputReference | TfMonitoringSchedule.NetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1024,7 +1024,7 @@ export function awsSagemakerMonitoringScheduleNetworkConfigPropertyToHclTerrafor
       storageClassType: "boolean",
     },
     vpc_config: {
-      value: awsSagemakerMonitoringScheduleVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
+      value: tfMonitoringScheduleVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigPropertyList",
@@ -1036,7 +1036,7 @@ export function awsSagemakerMonitoringScheduleNetworkConfigPropertyToHclTerrafor
 }
 
 
-export function awsSagemakerMonitoringScheduleStoppingConditionPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.StoppingConditionProperty | cdktn.IResolvable): any {
+export function tfMonitoringScheduleStoppingConditionPropertyToTerraform(struct?: TfMonitoringSchedule.StoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1047,7 +1047,7 @@ export function awsSagemakerMonitoringScheduleStoppingConditionPropertyToTerrafo
 }
 
 
-export function awsSagemakerMonitoringScheduleStoppingConditionPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.StoppingConditionProperty | cdktn.IResolvable): any {
+export function tfMonitoringScheduleStoppingConditionPropertyToHclTerraform(struct?: TfMonitoringSchedule.StoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1066,7 +1066,7 @@ export function awsSagemakerMonitoringScheduleStoppingConditionPropertyToHclTerr
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringJobDefinitionPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringJobDefinitionPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringJobDefinitionProperty): any {
+export function tfMonitoringScheduleMonitoringJobDefinitionPropertyToTerraform(struct?: TfMonitoringSchedule.MonitoringJobDefinitionPropertyOutputReference | TfMonitoringSchedule.MonitoringJobDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1074,18 +1074,18 @@ export function awsSagemakerMonitoringScheduleMonitoringJobDefinitionPropertyToT
   return {
     environment: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.environment),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    baseline: awsSagemakerMonitoringScheduleBaselinePropertyToTerraform(struct!.baseline),
-    monitoring_app_specification: awsSagemakerMonitoringScheduleMonitoringAppSpecificationPropertyToTerraform(struct!.monitoringAppSpecification),
-    monitoring_inputs: awsSagemakerMonitoringScheduleMonitoringInputsPropertyToTerraform(struct!.monitoringInputs),
-    monitoring_output_config: awsSagemakerMonitoringScheduleMonitoringOutputConfigPropertyToTerraform(struct!.monitoringOutputConfig),
-    monitoring_resources: awsSagemakerMonitoringScheduleMonitoringResourcesPropertyToTerraform(struct!.monitoringResources),
-    network_config: awsSagemakerMonitoringScheduleNetworkConfigPropertyToTerraform(struct!.networkConfig),
-    stopping_condition: cdktn.listMapper(awsSagemakerMonitoringScheduleStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
+    baseline: tfMonitoringScheduleBaselinePropertyToTerraform(struct!.baseline),
+    monitoring_app_specification: tfMonitoringScheduleMonitoringAppSpecificationPropertyToTerraform(struct!.monitoringAppSpecification),
+    monitoring_inputs: tfMonitoringScheduleMonitoringInputsPropertyToTerraform(struct!.monitoringInputs),
+    monitoring_output_config: tfMonitoringScheduleMonitoringOutputConfigPropertyToTerraform(struct!.monitoringOutputConfig),
+    monitoring_resources: tfMonitoringScheduleMonitoringResourcesPropertyToTerraform(struct!.monitoringResources),
+    network_config: tfMonitoringScheduleNetworkConfigPropertyToTerraform(struct!.networkConfig),
+    stopping_condition: cdktn.listMapper(tfMonitoringScheduleStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringJobDefinitionPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringJobDefinitionPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringJobDefinitionProperty): any {
+export function tfMonitoringScheduleMonitoringJobDefinitionPropertyToHclTerraform(struct?: TfMonitoringSchedule.MonitoringJobDefinitionPropertyOutputReference | TfMonitoringSchedule.MonitoringJobDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1104,43 +1104,43 @@ export function awsSagemakerMonitoringScheduleMonitoringJobDefinitionPropertyToH
       storageClassType: "string",
     },
     baseline: {
-      value: awsSagemakerMonitoringScheduleBaselinePropertyToHclTerraform(struct!.baseline),
+      value: tfMonitoringScheduleBaselinePropertyToHclTerraform(struct!.baseline),
       isBlock: true,
       type: "list",
       storageClassType: "BaselinePropertyList",
     },
     monitoring_app_specification: {
-      value: awsSagemakerMonitoringScheduleMonitoringAppSpecificationPropertyToHclTerraform(struct!.monitoringAppSpecification),
+      value: tfMonitoringScheduleMonitoringAppSpecificationPropertyToHclTerraform(struct!.monitoringAppSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringAppSpecificationPropertyList",
     },
     monitoring_inputs: {
-      value: awsSagemakerMonitoringScheduleMonitoringInputsPropertyToHclTerraform(struct!.monitoringInputs),
+      value: tfMonitoringScheduleMonitoringInputsPropertyToHclTerraform(struct!.monitoringInputs),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringInputsPropertyList",
     },
     monitoring_output_config: {
-      value: awsSagemakerMonitoringScheduleMonitoringOutputConfigPropertyToHclTerraform(struct!.monitoringOutputConfig),
+      value: tfMonitoringScheduleMonitoringOutputConfigPropertyToHclTerraform(struct!.monitoringOutputConfig),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringOutputConfigPropertyList",
     },
     monitoring_resources: {
-      value: awsSagemakerMonitoringScheduleMonitoringResourcesPropertyToHclTerraform(struct!.monitoringResources),
+      value: tfMonitoringScheduleMonitoringResourcesPropertyToHclTerraform(struct!.monitoringResources),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringResourcesPropertyList",
     },
     network_config: {
-      value: awsSagemakerMonitoringScheduleNetworkConfigPropertyToHclTerraform(struct!.networkConfig),
+      value: tfMonitoringScheduleNetworkConfigPropertyToHclTerraform(struct!.networkConfig),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkConfigPropertyList",
     },
     stopping_condition: {
-      value: cdktn.listMapperHcl(awsSagemakerMonitoringScheduleStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
+      value: cdktn.listMapperHcl(tfMonitoringScheduleStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
       isBlock: true,
       type: "list",
       storageClassType: "StoppingConditionPropertyList",
@@ -1152,7 +1152,7 @@ export function awsSagemakerMonitoringScheduleMonitoringJobDefinitionPropertyToH
 }
 
 
-export function awsSagemakerMonitoringScheduleScheduleConfigPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.ScheduleConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.ScheduleConfigProperty): any {
+export function tfMonitoringScheduleScheduleConfigPropertyToTerraform(struct?: TfMonitoringSchedule.ScheduleConfigPropertyOutputReference | TfMonitoringSchedule.ScheduleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1163,7 +1163,7 @@ export function awsSagemakerMonitoringScheduleScheduleConfigPropertyToTerraform(
 }
 
 
-export function awsSagemakerMonitoringScheduleScheduleConfigPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.ScheduleConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.ScheduleConfigProperty): any {
+export function tfMonitoringScheduleScheduleConfigPropertyToHclTerraform(struct?: TfMonitoringSchedule.ScheduleConfigPropertyOutputReference | TfMonitoringSchedule.ScheduleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1182,7 +1182,7 @@ export function awsSagemakerMonitoringScheduleScheduleConfigPropertyToHclTerrafo
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringScheduleConfigPropertyToTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigProperty): any {
+export function tfMonitoringScheduleMonitoringScheduleConfigPropertyToTerraform(struct?: TfMonitoringSchedule.MonitoringScheduleConfigPropertyOutputReference | TfMonitoringSchedule.MonitoringScheduleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1190,13 +1190,13 @@ export function awsSagemakerMonitoringScheduleMonitoringScheduleConfigPropertyTo
   return {
     monitoring_job_definition_name: cdktn.stringToTerraform(struct!.monitoringJobDefinitionName),
     monitoring_type: cdktn.stringToTerraform(struct!.monitoringType),
-    monitoring_job_definition: awsSagemakerMonitoringScheduleMonitoringJobDefinitionPropertyToTerraform(struct!.monitoringJobDefinition),
-    schedule_config: awsSagemakerMonitoringScheduleScheduleConfigPropertyToTerraform(struct!.scheduleConfig),
+    monitoring_job_definition: tfMonitoringScheduleMonitoringJobDefinitionPropertyToTerraform(struct!.monitoringJobDefinition),
+    schedule_config: tfMonitoringScheduleScheduleConfigPropertyToTerraform(struct!.scheduleConfig),
   }
 }
 
 
-export function awsSagemakerMonitoringScheduleMonitoringScheduleConfigPropertyToHclTerraform(struct?: AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigPropertyOutputReference | AwsSagemakerMonitoringSchedule.MonitoringScheduleConfigProperty): any {
+export function tfMonitoringScheduleMonitoringScheduleConfigPropertyToHclTerraform(struct?: TfMonitoringSchedule.MonitoringScheduleConfigPropertyOutputReference | TfMonitoringSchedule.MonitoringScheduleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1215,13 +1215,13 @@ export function awsSagemakerMonitoringScheduleMonitoringScheduleConfigPropertyTo
       storageClassType: "string",
     },
     monitoring_job_definition: {
-      value: awsSagemakerMonitoringScheduleMonitoringJobDefinitionPropertyToHclTerraform(struct!.monitoringJobDefinition),
+      value: tfMonitoringScheduleMonitoringJobDefinitionPropertyToHclTerraform(struct!.monitoringJobDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringJobDefinitionPropertyList",
     },
     schedule_config: {
-      value: awsSagemakerMonitoringScheduleScheduleConfigPropertyToHclTerraform(struct!.scheduleConfig),
+      value: tfMonitoringScheduleScheduleConfigPropertyToHclTerraform(struct!.scheduleConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ScheduleConfigPropertyList",
@@ -1233,10 +1233,10 @@ export function awsSagemakerMonitoringScheduleMonitoringScheduleConfigPropertyTo
 }
 
 
-export namespace AwsSagemakerMonitoringSchedule {
+export namespace TfMonitoringSchedule {
 export interface ConstraintsResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_uri AwsSagemakerMonitoringSchedule#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_uri TfMonitoringSchedule#s3_uri}
   */
   readonly s3Uri?: string;
 }
@@ -1290,7 +1290,7 @@ export class ConstraintsResourcePropertyOutputReference extends cdktn.ComplexObj
 }
 export interface StatisticsResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_uri AwsSagemakerMonitoringSchedule#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_uri TfMonitoringSchedule#s3_uri}
   */
   readonly s3Uri?: string;
 }
@@ -1344,19 +1344,19 @@ export class StatisticsResourcePropertyOutputReference extends cdktn.ComplexObje
 }
 export interface BaselineProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#baselining_job_name AwsSagemakerMonitoringSchedule#baselining_job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#baselining_job_name TfMonitoringSchedule#baselining_job_name}
   */
   readonly baseliningJobName?: string;
   /**
   * constraints_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#constraints_resource AwsSagemakerMonitoringSchedule#constraints_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#constraints_resource TfMonitoringSchedule#constraints_resource}
   */
   readonly constraintsResource?: ConstraintsResourceProperty;
   /**
   * statistics_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#statistics_resource AwsSagemakerMonitoringSchedule#statistics_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#statistics_resource TfMonitoringSchedule#statistics_resource}
   */
   readonly statisticsResource?: StatisticsResourceProperty;
 }
@@ -1454,23 +1454,23 @@ export class BaselinePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MonitoringAppSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#container_arguments AwsSagemakerMonitoringSchedule#container_arguments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#container_arguments TfMonitoringSchedule#container_arguments}
   */
   readonly containerArguments?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#container_entrypoint AwsSagemakerMonitoringSchedule#container_entrypoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#container_entrypoint TfMonitoringSchedule#container_entrypoint}
   */
   readonly containerEntrypoint?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#image_uri AwsSagemakerMonitoringSchedule#image_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#image_uri TfMonitoringSchedule#image_uri}
   */
   readonly imageUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#post_analytics_processor_source_uri AwsSagemakerMonitoringSchedule#post_analytics_processor_source_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#post_analytics_processor_source_uri TfMonitoringSchedule#post_analytics_processor_source_uri}
   */
   readonly postAnalyticsProcessorSourceUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#record_preprocessor_source_uri AwsSagemakerMonitoringSchedule#record_preprocessor_source_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#record_preprocessor_source_uri TfMonitoringSchedule#record_preprocessor_source_uri}
   */
   readonly recordPreprocessorSourceUri?: string;
 }
@@ -1609,7 +1609,7 @@ export class MonitoringAppSpecificationPropertyOutputReference extends cdktn.Com
 }
 export interface CsvProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#header AwsSagemakerMonitoringSchedule#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#header TfMonitoringSchedule#header}
   */
   readonly header?: boolean | cdktn.IResolvable;
 }
@@ -1663,7 +1663,7 @@ export class CsvPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface JsonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#line AwsSagemakerMonitoringSchedule#line}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#line TfMonitoringSchedule#line}
   */
   readonly line?: boolean | cdktn.IResolvable;
 }
@@ -1719,13 +1719,13 @@ export interface DatasetFormatProperty {
   /**
   * csv block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#csv AwsSagemakerMonitoringSchedule#csv}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#csv TfMonitoringSchedule#csv}
   */
   readonly csv?: CsvProperty;
   /**
   * json block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#json AwsSagemakerMonitoringSchedule#json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#json TfMonitoringSchedule#json}
   */
   readonly json?: JsonProperty;
 }
@@ -1801,53 +1801,53 @@ export class DatasetFormatPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BatchTransformInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#data_captured_destination_s3_uri AwsSagemakerMonitoringSchedule#data_captured_destination_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#data_captured_destination_s3_uri TfMonitoringSchedule#data_captured_destination_s3_uri}
   */
   readonly dataCapturedDestinationS3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#end_time_offset AwsSagemakerMonitoringSchedule#end_time_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#end_time_offset TfMonitoringSchedule#end_time_offset}
   */
   readonly endTimeOffset?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#exclude_features_attribute AwsSagemakerMonitoringSchedule#exclude_features_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#exclude_features_attribute TfMonitoringSchedule#exclude_features_attribute}
   */
   readonly excludeFeaturesAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#features_attribute AwsSagemakerMonitoringSchedule#features_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#features_attribute TfMonitoringSchedule#features_attribute}
   */
   readonly featuresAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#inference_attribute AwsSagemakerMonitoringSchedule#inference_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#inference_attribute TfMonitoringSchedule#inference_attribute}
   */
   readonly inferenceAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#local_path AwsSagemakerMonitoringSchedule#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#local_path TfMonitoringSchedule#local_path}
   */
   readonly localPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_attribute AwsSagemakerMonitoringSchedule#probability_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_attribute TfMonitoringSchedule#probability_attribute}
   */
   readonly probabilityAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_threshold_attribute AwsSagemakerMonitoringSchedule#probability_threshold_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_threshold_attribute TfMonitoringSchedule#probability_threshold_attribute}
   */
   readonly probabilityThresholdAttribute?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_data_distribution_type AwsSagemakerMonitoringSchedule#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_data_distribution_type TfMonitoringSchedule#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_input_mode AwsSagemakerMonitoringSchedule#s3_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_input_mode TfMonitoringSchedule#s3_input_mode}
   */
   readonly s3InputMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#start_time_offset AwsSagemakerMonitoringSchedule#start_time_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#start_time_offset TfMonitoringSchedule#start_time_offset}
   */
   readonly startTimeOffset?: string;
   /**
   * dataset_format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#dataset_format AwsSagemakerMonitoringSchedule#dataset_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#dataset_format TfMonitoringSchedule#dataset_format}
   */
   readonly datasetFormat: DatasetFormatProperty;
 }
@@ -2134,47 +2134,47 @@ export class BatchTransformInputPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EndpointInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#end_time_offset AwsSagemakerMonitoringSchedule#end_time_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#end_time_offset TfMonitoringSchedule#end_time_offset}
   */
   readonly endTimeOffset?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#endpoint_name AwsSagemakerMonitoringSchedule#endpoint_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#endpoint_name TfMonitoringSchedule#endpoint_name}
   */
   readonly endpointName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#exclude_features_attribute AwsSagemakerMonitoringSchedule#exclude_features_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#exclude_features_attribute TfMonitoringSchedule#exclude_features_attribute}
   */
   readonly excludeFeaturesAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#features_attribute AwsSagemakerMonitoringSchedule#features_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#features_attribute TfMonitoringSchedule#features_attribute}
   */
   readonly featuresAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#inference_attribute AwsSagemakerMonitoringSchedule#inference_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#inference_attribute TfMonitoringSchedule#inference_attribute}
   */
   readonly inferenceAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#local_path AwsSagemakerMonitoringSchedule#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#local_path TfMonitoringSchedule#local_path}
   */
   readonly localPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_attribute AwsSagemakerMonitoringSchedule#probability_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_attribute TfMonitoringSchedule#probability_attribute}
   */
   readonly probabilityAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_threshold_attribute AwsSagemakerMonitoringSchedule#probability_threshold_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#probability_threshold_attribute TfMonitoringSchedule#probability_threshold_attribute}
   */
   readonly probabilityThresholdAttribute?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_data_distribution_type AwsSagemakerMonitoringSchedule#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_data_distribution_type TfMonitoringSchedule#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_input_mode AwsSagemakerMonitoringSchedule#s3_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_input_mode TfMonitoringSchedule#s3_input_mode}
   */
   readonly s3InputMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#start_time_offset AwsSagemakerMonitoringSchedule#start_time_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#start_time_offset TfMonitoringSchedule#start_time_offset}
   */
   readonly startTimeOffset?: string;
 }
@@ -2444,13 +2444,13 @@ export interface MonitoringInputsProperty {
   /**
   * batch_transform_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#batch_transform_input AwsSagemakerMonitoringSchedule#batch_transform_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#batch_transform_input TfMonitoringSchedule#batch_transform_input}
   */
   readonly batchTransformInput?: BatchTransformInputProperty;
   /**
   * endpoint_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#endpoint_input AwsSagemakerMonitoringSchedule#endpoint_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#endpoint_input TfMonitoringSchedule#endpoint_input}
   */
   readonly endpointInput?: EndpointInputProperty;
 }
@@ -2526,15 +2526,15 @@ export class MonitoringInputsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface S3OutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#local_path AwsSagemakerMonitoringSchedule#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#local_path TfMonitoringSchedule#local_path}
   */
   readonly localPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_upload_mode AwsSagemakerMonitoringSchedule#s3_upload_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_upload_mode TfMonitoringSchedule#s3_upload_mode}
   */
   readonly s3UploadMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_uri AwsSagemakerMonitoringSchedule#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_uri TfMonitoringSchedule#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -2628,7 +2628,7 @@ export interface MonitoringOutputsProperty {
   /**
   * s3_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_output AwsSagemakerMonitoringSchedule#s3_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#s3_output TfMonitoringSchedule#s3_output}
   */
   readonly s3Output: S3OutputProperty;
 }
@@ -2679,13 +2679,13 @@ export class MonitoringOutputsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface MonitoringOutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#kms_key_id AwsSagemakerMonitoringSchedule#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#kms_key_id TfMonitoringSchedule#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * monitoring_outputs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_outputs AwsSagemakerMonitoringSchedule#monitoring_outputs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_outputs TfMonitoringSchedule#monitoring_outputs}
   */
   readonly monitoringOutputs: MonitoringOutputsProperty;
 }
@@ -2758,19 +2758,19 @@ export class MonitoringOutputConfigPropertyOutputReference extends cdktn.Complex
 }
 export interface ClusterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#instance_count AwsSagemakerMonitoringSchedule#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#instance_count TfMonitoringSchedule#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#instance_type AwsSagemakerMonitoringSchedule#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#instance_type TfMonitoringSchedule#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#volume_kms_key_id AwsSagemakerMonitoringSchedule#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#volume_kms_key_id TfMonitoringSchedule#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#volume_size_in_gb AwsSagemakerMonitoringSchedule#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#volume_size_in_gb TfMonitoringSchedule#volume_size_in_gb}
   */
   readonly volumeSizeInGb: number;
 }
@@ -2883,7 +2883,7 @@ export interface MonitoringResourcesProperty {
   /**
   * cluster_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#cluster_config AwsSagemakerMonitoringSchedule#cluster_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#cluster_config TfMonitoringSchedule#cluster_config}
   */
   readonly clusterConfig: ClusterConfigProperty;
 }
@@ -2934,11 +2934,11 @@ export class MonitoringResourcesPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#security_group_ids AwsSagemakerMonitoringSchedule#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#security_group_ids TfMonitoringSchedule#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#subnets AwsSagemakerMonitoringSchedule#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#subnets TfMonitoringSchedule#subnets}
   */
   readonly subnets: string[];
 }
@@ -3008,17 +3008,17 @@ export class VpcConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NetworkConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#enable_inter_container_traffic_encryption AwsSagemakerMonitoringSchedule#enable_inter_container_traffic_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#enable_inter_container_traffic_encryption TfMonitoringSchedule#enable_inter_container_traffic_encryption}
   */
   readonly enableInterContainerTrafficEncryption?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#enable_network_isolation AwsSagemakerMonitoringSchedule#enable_network_isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#enable_network_isolation TfMonitoringSchedule#enable_network_isolation}
   */
   readonly enableNetworkIsolation?: boolean | cdktn.IResolvable;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#vpc_config AwsSagemakerMonitoringSchedule#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#vpc_config TfMonitoringSchedule#vpc_config}
   */
   readonly vpcConfig?: VpcConfigProperty;
 }
@@ -3116,7 +3116,7 @@ export class NetworkConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StoppingConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#max_runtime_in_seconds AwsSagemakerMonitoringSchedule#max_runtime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#max_runtime_in_seconds TfMonitoringSchedule#max_runtime_in_seconds}
   */
   readonly maxRuntimeInSeconds?: number;
 }
@@ -3202,53 +3202,53 @@ export class StoppingConditionPropertyList extends cdktn.ComplexList {
 }
 export interface MonitoringJobDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#environment AwsSagemakerMonitoringSchedule#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#environment TfMonitoringSchedule#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#role_arn AwsSagemakerMonitoringSchedule#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#role_arn TfMonitoringSchedule#role_arn}
   */
   readonly roleArn: string;
   /**
   * baseline block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#baseline AwsSagemakerMonitoringSchedule#baseline}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#baseline TfMonitoringSchedule#baseline}
   */
   readonly baseline?: BaselineProperty;
   /**
   * monitoring_app_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_app_specification AwsSagemakerMonitoringSchedule#monitoring_app_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_app_specification TfMonitoringSchedule#monitoring_app_specification}
   */
   readonly monitoringAppSpecification: MonitoringAppSpecificationProperty;
   /**
   * monitoring_inputs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_inputs AwsSagemakerMonitoringSchedule#monitoring_inputs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_inputs TfMonitoringSchedule#monitoring_inputs}
   */
   readonly monitoringInputs: MonitoringInputsProperty;
   /**
   * monitoring_output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_output_config AwsSagemakerMonitoringSchedule#monitoring_output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_output_config TfMonitoringSchedule#monitoring_output_config}
   */
   readonly monitoringOutputConfig: MonitoringOutputConfigProperty;
   /**
   * monitoring_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_resources AwsSagemakerMonitoringSchedule#monitoring_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_resources TfMonitoringSchedule#monitoring_resources}
   */
   readonly monitoringResources: MonitoringResourcesProperty;
   /**
   * network_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#network_config AwsSagemakerMonitoringSchedule#network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#network_config TfMonitoringSchedule#network_config}
   */
   readonly networkConfig?: NetworkConfigProperty;
   /**
   * stopping_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#stopping_condition AwsSagemakerMonitoringSchedule#stopping_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#stopping_condition TfMonitoringSchedule#stopping_condition}
   */
   readonly stoppingCondition?: StoppingConditionProperty[] | cdktn.IResolvable;
 }
@@ -3463,7 +3463,7 @@ export class MonitoringJobDefinitionPropertyOutputReference extends cdktn.Comple
 }
 export interface ScheduleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#schedule_expression AwsSagemakerMonitoringSchedule#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#schedule_expression TfMonitoringSchedule#schedule_expression}
   */
   readonly scheduleExpression: string;
 }
@@ -3514,23 +3514,23 @@ export class ScheduleConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MonitoringScheduleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_job_definition_name AwsSagemakerMonitoringSchedule#monitoring_job_definition_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_job_definition_name TfMonitoringSchedule#monitoring_job_definition_name}
   */
   readonly monitoringJobDefinitionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_type AwsSagemakerMonitoringSchedule#monitoring_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_type TfMonitoringSchedule#monitoring_type}
   */
   readonly monitoringType: string;
   /**
   * monitoring_job_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_job_definition AwsSagemakerMonitoringSchedule#monitoring_job_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#monitoring_job_definition TfMonitoringSchedule#monitoring_job_definition}
   */
   readonly monitoringJobDefinition?: MonitoringJobDefinitionProperty;
   /**
   * schedule_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#schedule_config AwsSagemakerMonitoringSchedule#schedule_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_monitoring_schedule#schedule_config TfMonitoringSchedule#schedule_config}
   */
   readonly scheduleConfig?: ScheduleConfigProperty;
 }

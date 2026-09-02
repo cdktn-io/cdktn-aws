@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServicequotasAutoManagementConfig extends cdktn.TerraformMetaArguments {
+export interface TfAutoManagementConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#exclusion_list AwsServicequotasAutoManagement#exclusion_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#exclusion_list TfAutoManagement#exclusion_list}
   */
   readonly exclusionList?: { [key: string]: string[] } | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#notification_arn AwsServicequotasAutoManagement#notification_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#notification_arn TfAutoManagement#notification_arn}
   */
   readonly notificationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#opt_in_level AwsServicequotasAutoManagement#opt_in_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#opt_in_level TfAutoManagement#opt_in_level}
   */
   readonly optInLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#opt_in_type AwsServicequotasAutoManagement#opt_in_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#opt_in_type TfAutoManagement#opt_in_type}
   */
   readonly optInType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#region AwsServicequotasAutoManagement#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#region TfAutoManagement#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface AwsServicequotasAutoManagementConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management aws_servicequotas_auto_management}
 */
-export class AwsServicequotasAutoManagement extends cdktn.TerraformResource {
+export class TfAutoManagement extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsServicequotasAutoManagement extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServicequotasAutoManagement resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAutoManagement resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServicequotasAutoManagement to import
-  * @param importFromId The id of the existing AwsServicequotasAutoManagement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServicequotasAutoManagement to import is found
+  * @param importToId The construct id used in the generated config for the TfAutoManagement to import
+  * @param importFromId The id of the existing TfAutoManagement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_auto_management#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAutoManagement to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicequotas_auto_management", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsServicequotasAutoManagement extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServicequotasAutoManagementConfig
+  * @param options TfAutoManagementConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServicequotasAutoManagementConfig) {
+  public constructor(scope: Construct, id: string, config: TfAutoManagementConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicequotas_auto_management',
       terraformGeneratorMetadata: {

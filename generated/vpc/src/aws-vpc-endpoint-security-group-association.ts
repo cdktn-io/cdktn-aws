@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcEndpointSecurityGroupAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointSecurityGroupAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#id AwsVpcEndpointSecurityGroupAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#id TfEndpointSecurityGroupAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,19 +16,19 @@ export interface AwsVpcEndpointSecurityGroupAssociationConfig extends cdktn.Terr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#region AwsVpcEndpointSecurityGroupAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#region TfEndpointSecurityGroupAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#replace_default_association AwsVpcEndpointSecurityGroupAssociation#replace_default_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#replace_default_association TfEndpointSecurityGroupAssociation#replace_default_association}
   */
   readonly replaceDefaultAssociation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#security_group_id AwsVpcEndpointSecurityGroupAssociation#security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#security_group_id TfEndpointSecurityGroupAssociation#security_group_id}
   */
   readonly securityGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#vpc_endpoint_id AwsVpcEndpointSecurityGroupAssociation#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#vpc_endpoint_id TfEndpointSecurityGroupAssociation#vpc_endpoint_id}
   */
   readonly vpcEndpointId: string;
 }
@@ -36,7 +36,7 @@ export interface AwsVpcEndpointSecurityGroupAssociationConfig extends cdktn.Terr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association aws_vpc_endpoint_security_group_association}
 */
-export class AwsVpcEndpointSecurityGroupAssociation extends cdktn.TerraformResource {
+export class TfEndpointSecurityGroupAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsVpcEndpointSecurityGroupAssociation extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcEndpointSecurityGroupAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpointSecurityGroupAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcEndpointSecurityGroupAssociation to import
-  * @param importFromId The id of the existing AwsVpcEndpointSecurityGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcEndpointSecurityGroupAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpointSecurityGroupAssociation to import
+  * @param importFromId The id of the existing TfEndpointSecurityGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_security_group_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpointSecurityGroupAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_security_group_association", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsVpcEndpointSecurityGroupAssociation extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcEndpointSecurityGroupAssociationConfig
+  * @param options TfEndpointSecurityGroupAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcEndpointSecurityGroupAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointSecurityGroupAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint_security_group_association',
       terraformGeneratorMetadata: {

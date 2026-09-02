@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreOauth2CredentialProviderConfig extends cdktn.TerraformMetaArguments {
+export interface TfOauth2CredentialProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#credential_provider_vendor AwsBedrockagentcoreOauth2CredentialProvider#credential_provider_vendor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#credential_provider_vendor TfOauth2CredentialProvider#credential_provider_vendor}
   */
   readonly credentialProviderVendor: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#name AwsBedrockagentcoreOauth2CredentialProvider#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#name TfOauth2CredentialProvider#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#region AwsBedrockagentcoreOauth2CredentialProvider#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#region TfOauth2CredentialProvider#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#tags AwsBedrockagentcoreOauth2CredentialProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#tags TfOauth2CredentialProvider#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * oauth2_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#oauth2_provider_config AwsBedrockagentcoreOauth2CredentialProvider#oauth2_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#oauth2_provider_config TfOauth2CredentialProvider#oauth2_provider_config}
   */
-  readonly oauth2ProviderConfig?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigProperty[] | cdktn.IResolvable;
+  readonly oauth2ProviderConfig?: TfOauth2CredentialProvider.Oauth2ProviderConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider aws_bedrockagentcore_oauth2_credential_provider}
 */
-export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.TerraformResource {
+export class TfOauth2CredentialProvider extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreOauth2CredentialProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOauth2CredentialProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreOauth2CredentialProvider to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreOauth2CredentialProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreOauth2CredentialProvider to import is found
+  * @param importToId The construct id used in the generated config for the TfOauth2CredentialProvider to import
+  * @param importFromId The id of the existing TfOauth2CredentialProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOauth2CredentialProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_oauth2_credential_provider", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreOauth2CredentialProviderConfig
+  * @param options TfOauth2CredentialProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreOauth2CredentialProviderConfig) {
+  public constructor(scope: Construct, id: string, config: TfOauth2CredentialProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_oauth2_credential_provider',
       terraformGeneratorMetadata: {
@@ -95,7 +95,7 @@ export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.Terraform
   // ==========
 
   // client_secret_arn - computed: true, optional: false, required: false
-  private _clientSecretArn = new AwsBedrockagentcoreOauth2CredentialProvider.ClientSecretArnPropertyList(this, "client_secret_arn", false);
+  private _clientSecretArn = new TfOauth2CredentialProvider.ClientSecretArnPropertyList(this, "client_secret_arn", false);
   public get clientSecretArn() {
     return this._clientSecretArn;
   }
@@ -170,11 +170,11 @@ export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.Terraform
   }
 
   // oauth2_provider_config - computed: false, optional: true, required: false
-  private _oauth2ProviderConfig = new AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigPropertyList(this, "oauth2_provider_config", false);
+  private _oauth2ProviderConfig = new TfOauth2CredentialProvider.Oauth2ProviderConfigPropertyList(this, "oauth2_provider_config", false);
   public get oauth2ProviderConfig() {
     return this._oauth2ProviderConfig;
   }
-  public putOauth2ProviderConfig(value: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigProperty[] | cdktn.IResolvable) {
+  public putOauth2ProviderConfig(value: TfOauth2CredentialProvider.Oauth2ProviderConfigProperty[] | cdktn.IResolvable) {
     this._oauth2ProviderConfig.internalValue = value;
   }
   public resetOauth2ProviderConfig() {
@@ -195,7 +195,7 @@ export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.Terraform
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      oauth2_provider_config: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigPropertyToTerraform, true)(this._oauth2ProviderConfig.internalValue),
+      oauth2_provider_config: cdktn.listMapper(tfOauth2CredentialProviderOauth2ProviderConfigPropertyToTerraform, true)(this._oauth2ProviderConfig.internalValue),
     };
   }
 
@@ -226,10 +226,10 @@ export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.Terraform
         storageClassType: "stringMap",
       },
       oauth2_provider_config: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigPropertyToHclTerraform, true)(this._oauth2ProviderConfig.internalValue),
+        value: cdktn.listMapperHcl(tfOauth2CredentialProviderOauth2ProviderConfigPropertyToHclTerraform, true)(this._oauth2ProviderConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigPropertyList",
+        storageClassType: "TfOauth2CredentialProvider.Oauth2ProviderConfigPropertyList",
       },
     };
 
@@ -238,7 +238,7 @@ export class AwsBedrockagentcoreOauth2CredentialProvider extends cdktn.Terraform
   }
 }
 
-export function awsBedrockagentcoreOauth2CredentialProviderClientSecretArnPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.ClientSecretArnProperty): any {
+export function tfOauth2CredentialProviderClientSecretArnPropertyToTerraform(struct?: TfOauth2CredentialProvider.ClientSecretArnProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderClientSecretArnProper
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderClientSecretArnPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.ClientSecretArnProperty): any {
+export function tfOauth2CredentialProviderClientSecretArnPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.ClientSecretArnProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderClientSecretArnProper
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,19 +310,19 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     discovery_url: cdktn.stringToTerraform(struct!.discoveryUrl),
-    authorization_server_metadata: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform, true)(struct!.authorizationServerMetadata),
+    authorization_server_metadata: cdktn.listMapper(tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform, true)(struct!.authorizationServerMetadata),
   }
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigC
       storageClassType: "string",
     },
     authorization_server_metadata: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform, true)(struct!.authorizationServerMetadata),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform, true)(struct!.authorizationServerMetadata),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyList",
@@ -347,7 +347,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.CustomOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToTerraform(struct?: TfOauth2CredentialProvider.CustomOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,12 +358,12 @@ export function awsBedrockagentcoreOauth2CredentialProviderCustomOauth2ProviderC
     client_id_wo: cdktn.stringToTerraform(struct!.clientIdWo),
     client_secret: cdktn.stringToTerraform(struct!.clientSecret),
     client_secret_wo: cdktn.stringToTerraform(struct!.clientSecretWo),
-    oauth_discovery: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToTerraform, true)(struct!.oauthDiscovery),
+    oauth_discovery: cdktn.listMapper(tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToTerraform, true)(struct!.oauthDiscovery),
   }
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.CustomOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.CustomOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderCustomOauth2ProviderC
       storageClassType: "string",
     },
     oauth_discovery: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform, true)(struct!.oauthDiscovery),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderOauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform, true)(struct!.oauthDiscovery),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropertyList",
@@ -412,7 +412,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderCustomOauth2ProviderC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.GithubOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToTerraform(struct?: TfOauth2CredentialProvider.GithubOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderGithubOauth2ProviderC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.GithubOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.GithubOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,7 +512,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderGithubOauth2ProviderC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -533,7 +533,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -554,7 +554,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigG
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.GoogleOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToTerraform(struct?: TfOauth2CredentialProvider.GoogleOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderGoogleOauth2ProviderC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.GoogleOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.GoogleOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderGoogleOauth2ProviderC
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -622,7 +622,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigM
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigM
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -643,7 +643,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigM
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -654,7 +654,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigM
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.MicrosoftOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToTerraform(struct?: TfOauth2CredentialProvider.MicrosoftOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -669,7 +669,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderMicrosoftOauth2Provid
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.MicrosoftOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.MicrosoftOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,7 +712,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderMicrosoftOauth2Provid
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -722,7 +722,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -733,7 +733,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -743,7 +743,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -754,7 +754,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.SalesforceOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToTerraform(struct?: TfOauth2CredentialProvider.SalesforceOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,7 +769,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderSalesforceOauth2Provi
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.SalesforceOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.SalesforceOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -812,7 +812,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderSalesforceOauth2Provi
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -822,7 +822,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -843,7 +843,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryProperty): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -854,7 +854,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigS
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.SlackOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToTerraform(struct?: TfOauth2CredentialProvider.SlackOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -869,7 +869,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderSlackOauth2ProviderCo
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.SlackOauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.SlackOauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -912,60 +912,60 @@ export function awsBedrockagentcoreOauth2CredentialProviderSlackOauth2ProviderCo
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigPropertyToTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_oauth2_provider_config: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToTerraform, true)(struct!.customOauth2ProviderConfig),
-    github_oauth2_provider_config: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToTerraform, true)(struct!.githubOauth2ProviderConfig),
-    google_oauth2_provider_config: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToTerraform, true)(struct!.googleOauth2ProviderConfig),
-    microsoft_oauth2_provider_config: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToTerraform, true)(struct!.microsoftOauth2ProviderConfig),
-    salesforce_oauth2_provider_config: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToTerraform, true)(struct!.salesforceOauth2ProviderConfig),
-    slack_oauth2_provider_config: cdktn.listMapper(awsBedrockagentcoreOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToTerraform, true)(struct!.slackOauth2ProviderConfig),
+    custom_oauth2_provider_config: cdktn.listMapper(tfOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToTerraform, true)(struct!.customOauth2ProviderConfig),
+    github_oauth2_provider_config: cdktn.listMapper(tfOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToTerraform, true)(struct!.githubOauth2ProviderConfig),
+    google_oauth2_provider_config: cdktn.listMapper(tfOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToTerraform, true)(struct!.googleOauth2ProviderConfig),
+    microsoft_oauth2_provider_config: cdktn.listMapper(tfOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToTerraform, true)(struct!.microsoftOauth2ProviderConfig),
+    salesforce_oauth2_provider_config: cdktn.listMapper(tfOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToTerraform, true)(struct!.salesforceOauth2ProviderConfig),
+    slack_oauth2_provider_config: cdktn.listMapper(tfOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToTerraform, true)(struct!.slackOauth2ProviderConfig),
   }
 }
 
 
-export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOauth2CredentialProvider.Oauth2ProviderConfigProperty | cdktn.IResolvable): any {
+export function tfOauth2CredentialProviderOauth2ProviderConfigPropertyToHclTerraform(struct?: TfOauth2CredentialProvider.Oauth2ProviderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_oauth2_provider_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.customOauth2ProviderConfig),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderCustomOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.customOauth2ProviderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CustomOauth2ProviderConfigPropertyList",
     },
     github_oauth2_provider_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.githubOauth2ProviderConfig),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderGithubOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.githubOauth2ProviderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "GithubOauth2ProviderConfigPropertyList",
     },
     google_oauth2_provider_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.googleOauth2ProviderConfig),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderGoogleOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.googleOauth2ProviderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "GoogleOauth2ProviderConfigPropertyList",
     },
     microsoft_oauth2_provider_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.microsoftOauth2ProviderConfig),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderMicrosoftOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.microsoftOauth2ProviderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "MicrosoftOauth2ProviderConfigPropertyList",
     },
     salesforce_oauth2_provider_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.salesforceOauth2ProviderConfig),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderSalesforceOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.salesforceOauth2ProviderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SalesforceOauth2ProviderConfigPropertyList",
     },
     slack_oauth2_provider_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.slackOauth2ProviderConfig),
+      value: cdktn.listMapperHcl(tfOauth2CredentialProviderSlackOauth2ProviderConfigPropertyToHclTerraform, true)(struct!.slackOauth2ProviderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SlackOauth2ProviderConfigPropertyList",
@@ -977,7 +977,7 @@ export function awsBedrockagentcoreOauth2CredentialProviderOauth2ProviderConfigP
 }
 
 
-export namespace AwsBedrockagentcoreOauth2CredentialProvider {
+export namespace TfOauth2CredentialProvider {
 export interface ClientSecretArnProperty {
 }
 export class ClientSecretArnPropertyOutputReference extends cdktn.ComplexObject {
@@ -1034,19 +1034,19 @@ export class ClientSecretArnPropertyList extends cdktn.ComplexList {
 }
 export interface Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#authorization_endpoint AwsBedrockagentcoreOauth2CredentialProvider#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#authorization_endpoint TfOauth2CredentialProvider#authorization_endpoint}
   */
   readonly authorizationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#issuer AwsBedrockagentcoreOauth2CredentialProvider#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#issuer TfOauth2CredentialProvider#issuer}
   */
   readonly issuer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#response_types AwsBedrockagentcoreOauth2CredentialProvider#response_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#response_types TfOauth2CredentialProvider#response_types}
   */
   readonly responseTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#token_endpoint AwsBedrockagentcoreOauth2CredentialProvider#token_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#token_endpoint TfOauth2CredentialProvider#token_endpoint}
   */
   readonly tokenEndpoint: string;
 }
@@ -1189,13 +1189,13 @@ export class Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthori
 }
 export interface Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#discovery_url AwsBedrockagentcoreOauth2CredentialProvider#discovery_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#discovery_url TfOauth2CredentialProvider#discovery_url}
   */
   readonly discoveryUrl?: string;
   /**
   * authorization_server_metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#authorization_server_metadata AwsBedrockagentcoreOauth2CredentialProvider#authorization_server_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#authorization_server_metadata TfOauth2CredentialProvider#authorization_server_metadata}
   */
   readonly authorizationServerMetadata?: Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryAuthorizationServerMetadataProperty[] | cdktn.IResolvable;
 }
@@ -1303,29 +1303,29 @@ export class Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryPropert
 }
 export interface CustomOauth2ProviderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version AwsBedrockagentcoreOauth2CredentialProvider#client_credentials_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version TfOauth2CredentialProvider#client_credentials_wo_version}
   */
   readonly clientCredentialsWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id AwsBedrockagentcoreOauth2CredentialProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id TfOauth2CredentialProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo AwsBedrockagentcoreOauth2CredentialProvider#client_id_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo TfOauth2CredentialProvider#client_id_wo}
   */
   readonly clientIdWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret AwsBedrockagentcoreOauth2CredentialProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret TfOauth2CredentialProvider#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo AwsBedrockagentcoreOauth2CredentialProvider#client_secret_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo TfOauth2CredentialProvider#client_secret_wo}
   */
   readonly clientSecretWo?: string;
   /**
   * oauth_discovery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#oauth_discovery AwsBedrockagentcoreOauth2CredentialProvider#oauth_discovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#oauth_discovery TfOauth2CredentialProvider#oauth_discovery}
   */
   readonly oauthDiscovery?: Oauth2ProviderConfigCustomOauth2ProviderConfigOauthDiscoveryProperty[] | cdktn.IResolvable;
 }
@@ -1656,23 +1656,23 @@ export class Oauth2ProviderConfigGithubOauth2ProviderConfigOauthDiscoveryPropert
 }
 export interface GithubOauth2ProviderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version AwsBedrockagentcoreOauth2CredentialProvider#client_credentials_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version TfOauth2CredentialProvider#client_credentials_wo_version}
   */
   readonly clientCredentialsWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id AwsBedrockagentcoreOauth2CredentialProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id TfOauth2CredentialProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo AwsBedrockagentcoreOauth2CredentialProvider#client_id_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo TfOauth2CredentialProvider#client_id_wo}
   */
   readonly clientIdWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret AwsBedrockagentcoreOauth2CredentialProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret TfOauth2CredentialProvider#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo AwsBedrockagentcoreOauth2CredentialProvider#client_secret_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo TfOauth2CredentialProvider#client_secret_wo}
   */
   readonly clientSecretWo?: string;
 }
@@ -1987,23 +1987,23 @@ export class Oauth2ProviderConfigGoogleOauth2ProviderConfigOauthDiscoveryPropert
 }
 export interface GoogleOauth2ProviderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version AwsBedrockagentcoreOauth2CredentialProvider#client_credentials_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version TfOauth2CredentialProvider#client_credentials_wo_version}
   */
   readonly clientCredentialsWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id AwsBedrockagentcoreOauth2CredentialProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id TfOauth2CredentialProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo AwsBedrockagentcoreOauth2CredentialProvider#client_id_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo TfOauth2CredentialProvider#client_id_wo}
   */
   readonly clientIdWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret AwsBedrockagentcoreOauth2CredentialProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret TfOauth2CredentialProvider#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo AwsBedrockagentcoreOauth2CredentialProvider#client_secret_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo TfOauth2CredentialProvider#client_secret_wo}
   */
   readonly clientSecretWo?: string;
 }
@@ -2318,23 +2318,23 @@ export class Oauth2ProviderConfigMicrosoftOauth2ProviderConfigOauthDiscoveryProp
 }
 export interface MicrosoftOauth2ProviderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version AwsBedrockagentcoreOauth2CredentialProvider#client_credentials_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version TfOauth2CredentialProvider#client_credentials_wo_version}
   */
   readonly clientCredentialsWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id AwsBedrockagentcoreOauth2CredentialProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id TfOauth2CredentialProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo AwsBedrockagentcoreOauth2CredentialProvider#client_id_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo TfOauth2CredentialProvider#client_id_wo}
   */
   readonly clientIdWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret AwsBedrockagentcoreOauth2CredentialProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret TfOauth2CredentialProvider#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo AwsBedrockagentcoreOauth2CredentialProvider#client_secret_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo TfOauth2CredentialProvider#client_secret_wo}
   */
   readonly clientSecretWo?: string;
 }
@@ -2649,23 +2649,23 @@ export class Oauth2ProviderConfigSalesforceOauth2ProviderConfigOauthDiscoveryPro
 }
 export interface SalesforceOauth2ProviderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version AwsBedrockagentcoreOauth2CredentialProvider#client_credentials_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version TfOauth2CredentialProvider#client_credentials_wo_version}
   */
   readonly clientCredentialsWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id AwsBedrockagentcoreOauth2CredentialProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id TfOauth2CredentialProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo AwsBedrockagentcoreOauth2CredentialProvider#client_id_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo TfOauth2CredentialProvider#client_id_wo}
   */
   readonly clientIdWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret AwsBedrockagentcoreOauth2CredentialProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret TfOauth2CredentialProvider#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo AwsBedrockagentcoreOauth2CredentialProvider#client_secret_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo TfOauth2CredentialProvider#client_secret_wo}
   */
   readonly clientSecretWo?: string;
 }
@@ -2980,23 +2980,23 @@ export class Oauth2ProviderConfigSlackOauth2ProviderConfigOauthDiscoveryProperty
 }
 export interface SlackOauth2ProviderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version AwsBedrockagentcoreOauth2CredentialProvider#client_credentials_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_credentials_wo_version TfOauth2CredentialProvider#client_credentials_wo_version}
   */
   readonly clientCredentialsWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id AwsBedrockagentcoreOauth2CredentialProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id TfOauth2CredentialProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo AwsBedrockagentcoreOauth2CredentialProvider#client_id_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_id_wo TfOauth2CredentialProvider#client_id_wo}
   */
   readonly clientIdWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret AwsBedrockagentcoreOauth2CredentialProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret TfOauth2CredentialProvider#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo AwsBedrockagentcoreOauth2CredentialProvider#client_secret_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#client_secret_wo TfOauth2CredentialProvider#client_secret_wo}
   */
   readonly clientSecretWo?: string;
 }
@@ -3184,37 +3184,37 @@ export interface Oauth2ProviderConfigProperty {
   /**
   * custom_oauth2_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#custom_oauth2_provider_config AwsBedrockagentcoreOauth2CredentialProvider#custom_oauth2_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#custom_oauth2_provider_config TfOauth2CredentialProvider#custom_oauth2_provider_config}
   */
   readonly customOauth2ProviderConfig?: CustomOauth2ProviderConfigProperty[] | cdktn.IResolvable;
   /**
   * github_oauth2_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#github_oauth2_provider_config AwsBedrockagentcoreOauth2CredentialProvider#github_oauth2_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#github_oauth2_provider_config TfOauth2CredentialProvider#github_oauth2_provider_config}
   */
   readonly githubOauth2ProviderConfig?: GithubOauth2ProviderConfigProperty[] | cdktn.IResolvable;
   /**
   * google_oauth2_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#google_oauth2_provider_config AwsBedrockagentcoreOauth2CredentialProvider#google_oauth2_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#google_oauth2_provider_config TfOauth2CredentialProvider#google_oauth2_provider_config}
   */
   readonly googleOauth2ProviderConfig?: GoogleOauth2ProviderConfigProperty[] | cdktn.IResolvable;
   /**
   * microsoft_oauth2_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#microsoft_oauth2_provider_config AwsBedrockagentcoreOauth2CredentialProvider#microsoft_oauth2_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#microsoft_oauth2_provider_config TfOauth2CredentialProvider#microsoft_oauth2_provider_config}
   */
   readonly microsoftOauth2ProviderConfig?: MicrosoftOauth2ProviderConfigProperty[] | cdktn.IResolvable;
   /**
   * salesforce_oauth2_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#salesforce_oauth2_provider_config AwsBedrockagentcoreOauth2CredentialProvider#salesforce_oauth2_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#salesforce_oauth2_provider_config TfOauth2CredentialProvider#salesforce_oauth2_provider_config}
   */
   readonly salesforceOauth2ProviderConfig?: SalesforceOauth2ProviderConfigProperty[] | cdktn.IResolvable;
   /**
   * slack_oauth2_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#slack_oauth2_provider_config AwsBedrockagentcoreOauth2CredentialProvider#slack_oauth2_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_oauth2_credential_provider#slack_oauth2_provider_config TfOauth2CredentialProvider#slack_oauth2_provider_config}
   */
   readonly slackOauth2ProviderConfig?: SlackOauth2ProviderConfigProperty[] | cdktn.IResolvable;
 }

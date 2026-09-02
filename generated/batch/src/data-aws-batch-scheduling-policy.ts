@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsBatchSchedulingPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSchedulingPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#arn DataAwsBatchSchedulingPolicy#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#arn DataTfSchedulingPolicy#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#id DataAwsBatchSchedulingPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#id DataTfSchedulingPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataAwsBatchSchedulingPolicyConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#region DataAwsBatchSchedulingPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#region DataTfSchedulingPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#tags DataAwsBatchSchedulingPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#tags DataTfSchedulingPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsBatchSchedulingPolicyConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy aws_batch_scheduling_policy}
 */
-export class DataAwsBatchSchedulingPolicy extends cdktn.TerraformDataSource {
+export class DataTfSchedulingPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsBatchSchedulingPolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsBatchSchedulingPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSchedulingPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsBatchSchedulingPolicy to import
-  * @param importFromId The id of the existing DataAwsBatchSchedulingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsBatchSchedulingPolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSchedulingPolicy to import
+  * @param importFromId The id of the existing DataTfSchedulingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_scheduling_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSchedulingPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_batch_scheduling_policy", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsBatchSchedulingPolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsBatchSchedulingPolicyConfig
+  * @param options DataTfSchedulingPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsBatchSchedulingPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSchedulingPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_batch_scheduling_policy',
       terraformGeneratorMetadata: {
@@ -104,7 +104,7 @@ export class DataAwsBatchSchedulingPolicy extends cdktn.TerraformDataSource {
   }
 
   // fair_share_policy - computed: true, optional: false, required: false
-  private _fairSharePolicy = new DataAwsBatchSchedulingPolicy.FairSharePolicyPropertyList(this, "fair_share_policy", false);
+  private _fairSharePolicy = new DataTfSchedulingPolicy.FairSharePolicyPropertyList(this, "fair_share_policy", false);
   public get fairSharePolicy() {
     return this._fairSharePolicy;
   }
@@ -208,7 +208,7 @@ export class DataAwsBatchSchedulingPolicy extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsBatchSchedulingPolicyShareDistributionPropertyToTerraform(struct?: DataAwsBatchSchedulingPolicy.ShareDistributionProperty): any {
+export function dataTfSchedulingPolicyShareDistributionPropertyToTerraform(struct?: DataTfSchedulingPolicy.ShareDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -218,7 +218,7 @@ export function dataAwsBatchSchedulingPolicyShareDistributionPropertyToTerraform
 }
 
 
-export function dataAwsBatchSchedulingPolicyShareDistributionPropertyToHclTerraform(struct?: DataAwsBatchSchedulingPolicy.ShareDistributionProperty): any {
+export function dataTfSchedulingPolicyShareDistributionPropertyToHclTerraform(struct?: DataTfSchedulingPolicy.ShareDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,7 +229,7 @@ export function dataAwsBatchSchedulingPolicyShareDistributionPropertyToHclTerraf
 }
 
 
-export function dataAwsBatchSchedulingPolicyFairSharePolicyPropertyToTerraform(struct?: DataAwsBatchSchedulingPolicy.FairSharePolicyProperty): any {
+export function dataTfSchedulingPolicyFairSharePolicyPropertyToTerraform(struct?: DataTfSchedulingPolicy.FairSharePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function dataAwsBatchSchedulingPolicyFairSharePolicyPropertyToTerraform(s
 }
 
 
-export function dataAwsBatchSchedulingPolicyFairSharePolicyPropertyToHclTerraform(struct?: DataAwsBatchSchedulingPolicy.FairSharePolicyProperty): any {
+export function dataTfSchedulingPolicyFairSharePolicyPropertyToHclTerraform(struct?: DataTfSchedulingPolicy.FairSharePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,7 +250,7 @@ export function dataAwsBatchSchedulingPolicyFairSharePolicyPropertyToHclTerrafor
 }
 
 
-export namespace DataAwsBatchSchedulingPolicy {
+export namespace DataTfSchedulingPolicy {
 export interface ShareDistributionProperty {
 }
 export class ShareDistributionPropertyOutputReference extends cdktn.ComplexObject {

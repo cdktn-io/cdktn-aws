@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebTrustStoreConfig extends cdktn.TerraformMetaArguments {
+export interface TfTrustStoreConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#region AwsWorkspaceswebTrustStore#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#region TfTrustStore#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#tags AwsWorkspaceswebTrustStore#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#tags TfTrustStore#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#certificate AwsWorkspaceswebTrustStore#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#certificate TfTrustStore#certificate}
   */
-  readonly certificate?: AwsWorkspaceswebTrustStore.CertificateProperty[] | cdktn.IResolvable;
+  readonly certificate?: TfTrustStore.CertificateProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store aws_workspacesweb_trust_store}
 */
-export class AwsWorkspaceswebTrustStore extends cdktn.TerraformResource {
+export class TfTrustStore extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsWorkspaceswebTrustStore extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebTrustStore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTrustStore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebTrustStore to import
-  * @param importFromId The id of the existing AwsWorkspaceswebTrustStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebTrustStore to import is found
+  * @param importToId The construct id used in the generated config for the TfTrustStore to import
+  * @param importFromId The id of the existing TfTrustStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTrustStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_trust_store", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsWorkspaceswebTrustStore extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebTrustStoreConfig = {}
+  * @param options TfTrustStoreConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebTrustStoreConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfTrustStoreConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_trust_store',
       terraformGeneratorMetadata: {
@@ -133,11 +133,11 @@ export class AwsWorkspaceswebTrustStore extends cdktn.TerraformResource {
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate = new AwsWorkspaceswebTrustStore.CertificatePropertyList(this, "certificate", true);
+  private _certificate = new TfTrustStore.CertificatePropertyList(this, "certificate", true);
   public get certificate() {
     return this._certificate;
   }
-  public putCertificate(value: AwsWorkspaceswebTrustStore.CertificateProperty[] | cdktn.IResolvable) {
+  public putCertificate(value: TfTrustStore.CertificateProperty[] | cdktn.IResolvable) {
     this._certificate.internalValue = value;
   }
   public resetCertificate() {
@@ -156,7 +156,7 @@ export class AwsWorkspaceswebTrustStore extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      certificate: cdktn.listMapper(awsWorkspaceswebTrustStoreCertificatePropertyToTerraform, true)(this._certificate.internalValue),
+      certificate: cdktn.listMapper(tfTrustStoreCertificatePropertyToTerraform, true)(this._certificate.internalValue),
     };
   }
 
@@ -175,10 +175,10 @@ export class AwsWorkspaceswebTrustStore extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       certificate: {
-        value: cdktn.listMapperHcl(awsWorkspaceswebTrustStoreCertificatePropertyToHclTerraform, true)(this._certificate.internalValue),
+        value: cdktn.listMapperHcl(tfTrustStoreCertificatePropertyToHclTerraform, true)(this._certificate.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWorkspaceswebTrustStore.CertificatePropertyList",
+        storageClassType: "TfTrustStore.CertificatePropertyList",
       },
     };
 
@@ -187,7 +187,7 @@ export class AwsWorkspaceswebTrustStore extends cdktn.TerraformResource {
   }
 }
 
-export function awsWorkspaceswebTrustStoreCertificatePropertyToTerraform(struct?: AwsWorkspaceswebTrustStore.CertificateProperty | cdktn.IResolvable): any {
+export function tfTrustStoreCertificatePropertyToTerraform(struct?: TfTrustStore.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function awsWorkspaceswebTrustStoreCertificatePropertyToTerraform(struct?
 }
 
 
-export function awsWorkspaceswebTrustStoreCertificatePropertyToHclTerraform(struct?: AwsWorkspaceswebTrustStore.CertificateProperty | cdktn.IResolvable): any {
+export function tfTrustStoreCertificatePropertyToHclTerraform(struct?: TfTrustStore.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,10 +217,10 @@ export function awsWorkspaceswebTrustStoreCertificatePropertyToHclTerraform(stru
 }
 
 
-export namespace AwsWorkspaceswebTrustStore {
+export namespace TfTrustStore {
 export interface CertificateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#body AwsWorkspaceswebTrustStore#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_trust_store#body TfTrustStore#body}
   */
   readonly body: string;
 }

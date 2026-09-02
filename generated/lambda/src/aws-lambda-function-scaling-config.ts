@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLambdaFunctionScalingConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfFunctionScalingConfigConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name or ARN of the Lambda function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#function_name AwsLambdaFunctionScalingConfig#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#function_name TfFunctionScalingConfig#function_name}
   */
   readonly functionName: string;
   /**
   * Qualifier for the scaling configuration. Valid values: $LATEST.PUBLISHED or a numeric version number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#qualifier AwsLambdaFunctionScalingConfig#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#qualifier TfFunctionScalingConfig#qualifier}
   */
   readonly qualifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#region AwsLambdaFunctionScalingConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#region TfFunctionScalingConfig#region}
   */
   readonly region?: string;
   /**
   * function_scaling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#function_scaling_config AwsLambdaFunctionScalingConfig#function_scaling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#function_scaling_config TfFunctionScalingConfig#function_scaling_config}
   */
-  readonly functionScalingConfig?: AwsLambdaFunctionScalingConfig.FunctionScalingConfigProperty[] | cdktn.IResolvable;
+  readonly functionScalingConfig?: TfFunctionScalingConfig.FunctionScalingConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#timeouts AwsLambdaFunctionScalingConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#timeouts TfFunctionScalingConfig#timeouts}
   */
-  readonly timeouts?: AwsLambdaFunctionScalingConfig.TimeoutsProperty;
+  readonly timeouts?: TfFunctionScalingConfig.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config aws_lambda_function_scaling_config}
 */
-export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
+export class TfFunctionScalingConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLambdaFunctionScalingConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFunctionScalingConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLambdaFunctionScalingConfig to import
-  * @param importFromId The id of the existing AwsLambdaFunctionScalingConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLambdaFunctionScalingConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfFunctionScalingConfig to import
+  * @param importFromId The id of the existing TfFunctionScalingConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFunctionScalingConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_function_scaling_config", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLambdaFunctionScalingConfigConfig
+  * @param options TfFunctionScalingConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLambdaFunctionScalingConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfFunctionScalingConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_function_scaling_config',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
   }
 
   // function_scaling_config - computed: false, optional: true, required: false
-  private _functionScalingConfig = new AwsLambdaFunctionScalingConfig.FunctionScalingConfigPropertyList(this, "function_scaling_config", false);
+  private _functionScalingConfig = new TfFunctionScalingConfig.FunctionScalingConfigPropertyList(this, "function_scaling_config", false);
   public get functionScalingConfig() {
     return this._functionScalingConfig;
   }
-  public putFunctionScalingConfig(value: AwsLambdaFunctionScalingConfig.FunctionScalingConfigProperty[] | cdktn.IResolvable) {
+  public putFunctionScalingConfig(value: TfFunctionScalingConfig.FunctionScalingConfigProperty[] | cdktn.IResolvable) {
     this._functionScalingConfig.internalValue = value;
   }
   public resetFunctionScalingConfig() {
@@ -169,11 +169,11 @@ export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLambdaFunctionScalingConfig.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFunctionScalingConfig.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLambdaFunctionScalingConfig.TimeoutsProperty) {
+  public putTimeouts(value: TfFunctionScalingConfig.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -193,8 +193,8 @@ export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
       function_name: cdktn.stringToTerraform(this._functionName),
       qualifier: cdktn.stringToTerraform(this._qualifier),
       region: cdktn.stringToTerraform(this._region),
-      function_scaling_config: cdktn.listMapper(awsLambdaFunctionScalingConfigFunctionScalingConfigPropertyToTerraform, true)(this._functionScalingConfig.internalValue),
-      timeouts: awsLambdaFunctionScalingConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      function_scaling_config: cdktn.listMapper(tfFunctionScalingConfigFunctionScalingConfigPropertyToTerraform, true)(this._functionScalingConfig.internalValue),
+      timeouts: tfFunctionScalingConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -219,16 +219,16 @@ export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       function_scaling_config: {
-        value: cdktn.listMapperHcl(awsLambdaFunctionScalingConfigFunctionScalingConfigPropertyToHclTerraform, true)(this._functionScalingConfig.internalValue),
+        value: cdktn.listMapperHcl(tfFunctionScalingConfigFunctionScalingConfigPropertyToHclTerraform, true)(this._functionScalingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunctionScalingConfig.FunctionScalingConfigPropertyList",
+        storageClassType: "TfFunctionScalingConfig.FunctionScalingConfigPropertyList",
       },
       timeouts: {
-        value: awsLambdaFunctionScalingConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFunctionScalingConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLambdaFunctionScalingConfig.TimeoutsProperty",
+        storageClassType: "TfFunctionScalingConfig.TimeoutsProperty",
       },
     };
 
@@ -237,7 +237,7 @@ export class AwsLambdaFunctionScalingConfig extends cdktn.TerraformResource {
   }
 }
 
-export function awsLambdaFunctionScalingConfigFunctionScalingConfigPropertyToTerraform(struct?: AwsLambdaFunctionScalingConfig.FunctionScalingConfigProperty | cdktn.IResolvable): any {
+export function tfFunctionScalingConfigFunctionScalingConfigPropertyToTerraform(struct?: TfFunctionScalingConfig.FunctionScalingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function awsLambdaFunctionScalingConfigFunctionScalingConfigPropertyToTer
 }
 
 
-export function awsLambdaFunctionScalingConfigFunctionScalingConfigPropertyToHclTerraform(struct?: AwsLambdaFunctionScalingConfig.FunctionScalingConfigProperty | cdktn.IResolvable): any {
+export function tfFunctionScalingConfigFunctionScalingConfigPropertyToHclTerraform(struct?: TfFunctionScalingConfig.FunctionScalingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function awsLambdaFunctionScalingConfigFunctionScalingConfigPropertyToHcl
 }
 
 
-export function awsLambdaFunctionScalingConfigTimeoutsPropertyToTerraform(struct?: AwsLambdaFunctionScalingConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFunctionScalingConfigTimeoutsPropertyToTerraform(struct?: TfFunctionScalingConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function awsLambdaFunctionScalingConfigTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsLambdaFunctionScalingConfigTimeoutsPropertyToHclTerraform(struct?: AwsLambdaFunctionScalingConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFunctionScalingConfigTimeoutsPropertyToHclTerraform(struct?: TfFunctionScalingConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,18 +318,18 @@ export function awsLambdaFunctionScalingConfigTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsLambdaFunctionScalingConfig {
+export namespace TfFunctionScalingConfig {
 export interface FunctionScalingConfigProperty {
   /**
   * Maximum number of execution environments that can be provisioned for the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#max_execution_environments AwsLambdaFunctionScalingConfig#max_execution_environments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#max_execution_environments TfFunctionScalingConfig#max_execution_environments}
   */
   readonly maxExecutionEnvironments?: number;
   /**
   * Minimum number of execution environments to maintain for the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#min_execution_environments AwsLambdaFunctionScalingConfig#min_execution_environments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#min_execution_environments TfFunctionScalingConfig#min_execution_environments}
   */
   readonly minExecutionEnvironments?: number;
 }
@@ -439,19 +439,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#create AwsLambdaFunctionScalingConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#create TfFunctionScalingConfig#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#delete AwsLambdaFunctionScalingConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#delete TfFunctionScalingConfig#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#update AwsLambdaFunctionScalingConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function_scaling_config#update TfFunctionScalingConfig#update}
   */
   readonly update?: string;
 }

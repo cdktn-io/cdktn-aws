@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafregionalWebAclConfig extends cdktn.TerraformMetaArguments {
+export interface TfWebAclConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#id AwsWafregionalWebAcl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#id TfWebAcl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#metric_name AwsWafregionalWebAcl#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#metric_name TfWebAcl#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#name AwsWafregionalWebAcl#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#name TfWebAcl#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#region AwsWafregionalWebAcl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#region TfWebAcl#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#tags AwsWafregionalWebAcl#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#tags TfWebAcl#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#tags_all AwsWafregionalWebAcl#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#tags_all TfWebAcl#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * default_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#default_action AwsWafregionalWebAcl#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#default_action TfWebAcl#default_action}
   */
-  readonly defaultAction: AwsWafregionalWebAcl.DefaultActionProperty;
+  readonly defaultAction: TfWebAcl.DefaultActionProperty;
   /**
   * logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#logging_configuration AwsWafregionalWebAcl#logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#logging_configuration TfWebAcl#logging_configuration}
   */
-  readonly loggingConfiguration?: AwsWafregionalWebAcl.LoggingConfigurationProperty;
+  readonly loggingConfiguration?: TfWebAcl.LoggingConfigurationProperty;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#rule AwsWafregionalWebAcl#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#rule TfWebAcl#rule}
   */
-  readonly rule?: AwsWafregionalWebAcl.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfWebAcl.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl aws_wafregional_web_acl}
 */
-export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
+export class TfWebAcl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafregionalWebAcl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWebAcl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafregionalWebAcl to import
-  * @param importFromId The id of the existing AwsWafregionalWebAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafregionalWebAcl to import is found
+  * @param importToId The construct id used in the generated config for the TfWebAcl to import
+  * @param importFromId The id of the existing TfWebAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWebAcl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_web_acl", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafregionalWebAclConfig
+  * @param options TfWebAclConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafregionalWebAclConfig) {
+  public constructor(scope: Construct, id: string, config: TfWebAclConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_web_acl',
       terraformGeneratorMetadata: {
@@ -217,11 +217,11 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
   }
 
   // default_action - computed: false, optional: false, required: true
-  private _defaultAction = new AwsWafregionalWebAcl.DefaultActionPropertyOutputReference(this, "default_action");
+  private _defaultAction = new TfWebAcl.DefaultActionPropertyOutputReference(this, "default_action");
   public get defaultAction() {
     return this._defaultAction;
   }
-  public putDefaultAction(value: AwsWafregionalWebAcl.DefaultActionProperty) {
+  public putDefaultAction(value: TfWebAcl.DefaultActionProperty) {
     this._defaultAction.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -230,11 +230,11 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
   }
 
   // logging_configuration - computed: false, optional: true, required: false
-  private _loggingConfiguration = new AwsWafregionalWebAcl.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
+  private _loggingConfiguration = new TfWebAcl.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
   public get loggingConfiguration() {
     return this._loggingConfiguration;
   }
-  public putLoggingConfiguration(value: AwsWafregionalWebAcl.LoggingConfigurationProperty) {
+  public putLoggingConfiguration(value: TfWebAcl.LoggingConfigurationProperty) {
     this._loggingConfiguration.internalValue = value;
   }
   public resetLoggingConfiguration() {
@@ -246,11 +246,11 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsWafregionalWebAcl.RulePropertyList(this, "rule", true);
+  private _rule = new TfWebAcl.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsWafregionalWebAcl.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfWebAcl.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -273,9 +273,9 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      default_action: awsWafregionalWebAclDefaultActionPropertyToTerraform(this._defaultAction.internalValue),
-      logging_configuration: awsWafregionalWebAclLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
-      rule: cdktn.listMapper(awsWafregionalWebAclRulePropertyToTerraform, true)(this._rule.internalValue),
+      default_action: tfWebAclDefaultActionPropertyToTerraform(this._defaultAction.internalValue),
+      logging_configuration: tfWebAclLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
+      rule: cdktn.listMapper(tfWebAclRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -318,22 +318,22 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       default_action: {
-        value: awsWafregionalWebAclDefaultActionPropertyToHclTerraform(this._defaultAction.internalValue),
+        value: tfWebAclDefaultActionPropertyToHclTerraform(this._defaultAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWafregionalWebAcl.DefaultActionPropertyList",
+        storageClassType: "TfWebAcl.DefaultActionPropertyList",
       },
       logging_configuration: {
-        value: awsWafregionalWebAclLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
+        value: tfWebAclLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWafregionalWebAcl.LoggingConfigurationPropertyList",
+        storageClassType: "TfWebAcl.LoggingConfigurationPropertyList",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsWafregionalWebAclRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfWebAclRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafregionalWebAcl.RulePropertyList",
+        storageClassType: "TfWebAcl.RulePropertyList",
       },
     };
 
@@ -342,7 +342,7 @@ export class AwsWafregionalWebAcl extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafregionalWebAclDefaultActionPropertyToTerraform(struct?: AwsWafregionalWebAcl.DefaultActionPropertyOutputReference | AwsWafregionalWebAcl.DefaultActionProperty): any {
+export function tfWebAclDefaultActionPropertyToTerraform(struct?: TfWebAcl.DefaultActionPropertyOutputReference | TfWebAcl.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function awsWafregionalWebAclDefaultActionPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsWafregionalWebAclDefaultActionPropertyToHclTerraform(struct?: AwsWafregionalWebAcl.DefaultActionPropertyOutputReference | AwsWafregionalWebAcl.DefaultActionProperty): any {
+export function tfWebAclDefaultActionPropertyToHclTerraform(struct?: TfWebAcl.DefaultActionPropertyOutputReference | TfWebAcl.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function awsWafregionalWebAclDefaultActionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsWafregionalWebAclFieldToMatchPropertyToTerraform(struct?: AwsWafregionalWebAcl.FieldToMatchProperty | cdktn.IResolvable): any {
+export function tfWebAclFieldToMatchPropertyToTerraform(struct?: TfWebAcl.FieldToMatchProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function awsWafregionalWebAclFieldToMatchPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsWafregionalWebAclFieldToMatchPropertyToHclTerraform(struct?: AwsWafregionalWebAcl.FieldToMatchProperty | cdktn.IResolvable): any {
+export function tfWebAclFieldToMatchPropertyToHclTerraform(struct?: TfWebAcl.FieldToMatchProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,25 +409,25 @@ export function awsWafregionalWebAclFieldToMatchPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsWafregionalWebAclRedactedFieldsPropertyToTerraform(struct?: AwsWafregionalWebAcl.RedactedFieldsPropertyOutputReference | AwsWafregionalWebAcl.RedactedFieldsProperty): any {
+export function tfWebAclRedactedFieldsPropertyToTerraform(struct?: TfWebAcl.RedactedFieldsPropertyOutputReference | TfWebAcl.RedactedFieldsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    field_to_match: cdktn.listMapper(awsWafregionalWebAclFieldToMatchPropertyToTerraform, true)(struct!.fieldToMatch),
+    field_to_match: cdktn.listMapper(tfWebAclFieldToMatchPropertyToTerraform, true)(struct!.fieldToMatch),
   }
 }
 
 
-export function awsWafregionalWebAclRedactedFieldsPropertyToHclTerraform(struct?: AwsWafregionalWebAcl.RedactedFieldsPropertyOutputReference | AwsWafregionalWebAcl.RedactedFieldsProperty): any {
+export function tfWebAclRedactedFieldsPropertyToHclTerraform(struct?: TfWebAcl.RedactedFieldsPropertyOutputReference | TfWebAcl.RedactedFieldsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     field_to_match: {
-      value: cdktn.listMapperHcl(awsWafregionalWebAclFieldToMatchPropertyToHclTerraform, true)(struct!.fieldToMatch),
+      value: cdktn.listMapperHcl(tfWebAclFieldToMatchPropertyToHclTerraform, true)(struct!.fieldToMatch),
       isBlock: true,
       type: "set",
       storageClassType: "FieldToMatchPropertyList",
@@ -439,19 +439,19 @@ export function awsWafregionalWebAclRedactedFieldsPropertyToHclTerraform(struct?
 }
 
 
-export function awsWafregionalWebAclLoggingConfigurationPropertyToTerraform(struct?: AwsWafregionalWebAcl.LoggingConfigurationPropertyOutputReference | AwsWafregionalWebAcl.LoggingConfigurationProperty): any {
+export function tfWebAclLoggingConfigurationPropertyToTerraform(struct?: TfWebAcl.LoggingConfigurationPropertyOutputReference | TfWebAcl.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     log_destination: cdktn.stringToTerraform(struct!.logDestination),
-    redacted_fields: awsWafregionalWebAclRedactedFieldsPropertyToTerraform(struct!.redactedFields),
+    redacted_fields: tfWebAclRedactedFieldsPropertyToTerraform(struct!.redactedFields),
   }
 }
 
 
-export function awsWafregionalWebAclLoggingConfigurationPropertyToHclTerraform(struct?: AwsWafregionalWebAcl.LoggingConfigurationPropertyOutputReference | AwsWafregionalWebAcl.LoggingConfigurationProperty): any {
+export function tfWebAclLoggingConfigurationPropertyToHclTerraform(struct?: TfWebAcl.LoggingConfigurationPropertyOutputReference | TfWebAcl.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function awsWafregionalWebAclLoggingConfigurationPropertyToHclTerraform(s
       storageClassType: "string",
     },
     redacted_fields: {
-      value: awsWafregionalWebAclRedactedFieldsPropertyToHclTerraform(struct!.redactedFields),
+      value: tfWebAclRedactedFieldsPropertyToHclTerraform(struct!.redactedFields),
       isBlock: true,
       type: "list",
       storageClassType: "RedactedFieldsPropertyList",
@@ -476,7 +476,7 @@ export function awsWafregionalWebAclLoggingConfigurationPropertyToHclTerraform(s
 }
 
 
-export function awsWafregionalWebAclActionPropertyToTerraform(struct?: AwsWafregionalWebAcl.ActionPropertyOutputReference | AwsWafregionalWebAcl.ActionProperty): any {
+export function tfWebAclActionPropertyToTerraform(struct?: TfWebAcl.ActionPropertyOutputReference | TfWebAcl.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function awsWafregionalWebAclActionPropertyToTerraform(struct?: AwsWafreg
 }
 
 
-export function awsWafregionalWebAclActionPropertyToHclTerraform(struct?: AwsWafregionalWebAcl.ActionPropertyOutputReference | AwsWafregionalWebAcl.ActionProperty): any {
+export function tfWebAclActionPropertyToHclTerraform(struct?: TfWebAcl.ActionPropertyOutputReference | TfWebAcl.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function awsWafregionalWebAclActionPropertyToHclTerraform(struct?: AwsWaf
 }
 
 
-export function awsWafregionalWebAclOverrideActionPropertyToTerraform(struct?: AwsWafregionalWebAcl.OverrideActionPropertyOutputReference | AwsWafregionalWebAcl.OverrideActionProperty): any {
+export function tfWebAclOverrideActionPropertyToTerraform(struct?: TfWebAcl.OverrideActionPropertyOutputReference | TfWebAcl.OverrideActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function awsWafregionalWebAclOverrideActionPropertyToTerraform(struct?: A
 }
 
 
-export function awsWafregionalWebAclOverrideActionPropertyToHclTerraform(struct?: AwsWafregionalWebAcl.OverrideActionPropertyOutputReference | AwsWafregionalWebAcl.OverrideActionProperty): any {
+export function tfWebAclOverrideActionPropertyToHclTerraform(struct?: TfWebAcl.OverrideActionPropertyOutputReference | TfWebAcl.OverrideActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function awsWafregionalWebAclOverrideActionPropertyToHclTerraform(struct?
 }
 
 
-export function awsWafregionalWebAclRulePropertyToTerraform(struct?: AwsWafregionalWebAcl.RuleProperty | cdktn.IResolvable): any {
+export function tfWebAclRulePropertyToTerraform(struct?: TfWebAcl.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,13 +545,13 @@ export function awsWafregionalWebAclRulePropertyToTerraform(struct?: AwsWafregio
     priority: cdktn.numberToTerraform(struct!.priority),
     rule_id: cdktn.stringToTerraform(struct!.ruleId),
     type: cdktn.stringToTerraform(struct!.type),
-    action: awsWafregionalWebAclActionPropertyToTerraform(struct!.action),
-    override_action: awsWafregionalWebAclOverrideActionPropertyToTerraform(struct!.overrideAction),
+    action: tfWebAclActionPropertyToTerraform(struct!.action),
+    override_action: tfWebAclOverrideActionPropertyToTerraform(struct!.overrideAction),
   }
 }
 
 
-export function awsWafregionalWebAclRulePropertyToHclTerraform(struct?: AwsWafregionalWebAcl.RuleProperty | cdktn.IResolvable): any {
+export function tfWebAclRulePropertyToHclTerraform(struct?: TfWebAcl.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,13 +576,13 @@ export function awsWafregionalWebAclRulePropertyToHclTerraform(struct?: AwsWafre
       storageClassType: "string",
     },
     action: {
-      value: awsWafregionalWebAclActionPropertyToHclTerraform(struct!.action),
+      value: tfWebAclActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     override_action: {
-      value: awsWafregionalWebAclOverrideActionPropertyToHclTerraform(struct!.overrideAction),
+      value: tfWebAclOverrideActionPropertyToHclTerraform(struct!.overrideAction),
       isBlock: true,
       type: "list",
       storageClassType: "OverrideActionPropertyList",
@@ -594,10 +594,10 @@ export function awsWafregionalWebAclRulePropertyToHclTerraform(struct?: AwsWafre
 }
 
 
-export namespace AwsWafregionalWebAcl {
+export namespace TfWebAcl {
 export interface DefaultActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type AwsWafregionalWebAcl#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type TfWebAcl#type}
   */
   readonly type: string;
 }
@@ -648,11 +648,11 @@ export class DefaultActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FieldToMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#data AwsWafregionalWebAcl#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#data TfWebAcl#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type AwsWafregionalWebAcl#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type TfWebAcl#type}
   */
   readonly type: string;
 }
@@ -759,7 +759,7 @@ export interface RedactedFieldsProperty {
   /**
   * field_to_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#field_to_match AwsWafregionalWebAcl#field_to_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#field_to_match TfWebAcl#field_to_match}
   */
   readonly fieldToMatch: FieldToMatchProperty[] | cdktn.IResolvable;
 }
@@ -810,13 +810,13 @@ export class RedactedFieldsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#log_destination AwsWafregionalWebAcl#log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#log_destination TfWebAcl#log_destination}
   */
   readonly logDestination: string;
   /**
   * redacted_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#redacted_fields AwsWafregionalWebAcl#redacted_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#redacted_fields TfWebAcl#redacted_fields}
   */
   readonly redactedFields?: RedactedFieldsProperty;
 }
@@ -889,7 +889,7 @@ export class LoggingConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type AwsWafregionalWebAcl#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type TfWebAcl#type}
   */
   readonly type: string;
 }
@@ -940,7 +940,7 @@ export class ActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OverrideActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type AwsWafregionalWebAcl#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type TfWebAcl#type}
   */
   readonly type: string;
 }
@@ -991,27 +991,27 @@ export class OverrideActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#priority AwsWafregionalWebAcl#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#priority TfWebAcl#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#rule_id AwsWafregionalWebAcl#rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#rule_id TfWebAcl#rule_id}
   */
   readonly ruleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type AwsWafregionalWebAcl#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#type TfWebAcl#type}
   */
   readonly type?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#action AwsWafregionalWebAcl#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#action TfWebAcl#action}
   */
   readonly action?: ActionProperty;
   /**
   * override_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#override_action AwsWafregionalWebAcl#override_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_web_acl#override_action TfWebAcl#override_action}
   */
   readonly overrideAction?: OverrideActionProperty;
 }

@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCognitoResourceServerConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceServerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#id AwsCognitoResourceServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#id TfResourceServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#identifier AwsCognitoResourceServer#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#identifier TfResourceServer#identifier}
   */
   readonly identifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#name AwsCognitoResourceServer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#name TfResourceServer#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#region AwsCognitoResourceServer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#region TfResourceServer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#user_pool_id AwsCognitoResourceServer#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#user_pool_id TfResourceServer#user_pool_id}
   */
   readonly userPoolId: string;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#scope AwsCognitoResourceServer#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#scope TfResourceServer#scope}
   */
-  readonly scope?: AwsCognitoResourceServer.ScopeProperty[] | cdktn.IResolvable;
+  readonly scope?: TfResourceServer.ScopeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server aws_cognito_resource_server}
 */
-export class AwsCognitoResourceServer extends cdktn.TerraformResource {
+export class TfResourceServer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsCognitoResourceServer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCognitoResourceServer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceServer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCognitoResourceServer to import
-  * @param importFromId The id of the existing AwsCognitoResourceServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCognitoResourceServer to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceServer to import
+  * @param importFromId The id of the existing TfResourceServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceServer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_resource_server", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsCognitoResourceServer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCognitoResourceServerConfig
+  * @param options TfResourceServerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCognitoResourceServerConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceServerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_resource_server',
       terraformGeneratorMetadata: {
@@ -179,11 +179,11 @@ export class AwsCognitoResourceServer extends cdktn.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new AwsCognitoResourceServer.ScopePropertyList(this, "scope", true);
+  private _scope = new TfResourceServer.ScopePropertyList(this, "scope", true);
   public get scope() {
     return this._scope;
   }
-  public putScope(value: AwsCognitoResourceServer.ScopeProperty[] | cdktn.IResolvable) {
+  public putScope(value: TfResourceServer.ScopeProperty[] | cdktn.IResolvable) {
     this._scope.internalValue = value;
   }
   public resetScope() {
@@ -205,7 +205,7 @@ export class AwsCognitoResourceServer extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       user_pool_id: cdktn.stringToTerraform(this._userPoolId),
-      scope: cdktn.listMapper(awsCognitoResourceServerScopePropertyToTerraform, true)(this._scope.internalValue),
+      scope: cdktn.listMapper(tfResourceServerScopePropertyToTerraform, true)(this._scope.internalValue),
     };
   }
 
@@ -242,10 +242,10 @@ export class AwsCognitoResourceServer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       scope: {
-        value: cdktn.listMapperHcl(awsCognitoResourceServerScopePropertyToHclTerraform, true)(this._scope.internalValue),
+        value: cdktn.listMapperHcl(tfResourceServerScopePropertyToHclTerraform, true)(this._scope.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCognitoResourceServer.ScopePropertyList",
+        storageClassType: "TfResourceServer.ScopePropertyList",
       },
     };
 
@@ -254,7 +254,7 @@ export class AwsCognitoResourceServer extends cdktn.TerraformResource {
   }
 }
 
-export function awsCognitoResourceServerScopePropertyToTerraform(struct?: AwsCognitoResourceServer.ScopeProperty | cdktn.IResolvable): any {
+export function tfResourceServerScopePropertyToTerraform(struct?: TfResourceServer.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function awsCognitoResourceServerScopePropertyToTerraform(struct?: AwsCog
 }
 
 
-export function awsCognitoResourceServerScopePropertyToHclTerraform(struct?: AwsCognitoResourceServer.ScopeProperty | cdktn.IResolvable): any {
+export function tfResourceServerScopePropertyToHclTerraform(struct?: TfResourceServer.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,14 +291,14 @@ export function awsCognitoResourceServerScopePropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsCognitoResourceServer {
+export namespace TfResourceServer {
 export interface ScopeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#scope_description AwsCognitoResourceServer#scope_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#scope_description TfResourceServer#scope_description}
   */
   readonly scopeDescription: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#scope_name AwsCognitoResourceServer#scope_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_resource_server#scope_name TfResourceServer#scope_name}
   */
   readonly scopeName: string;
 }

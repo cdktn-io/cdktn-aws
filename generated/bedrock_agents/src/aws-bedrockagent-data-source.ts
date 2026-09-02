@@ -5,59 +5,59 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentDataSourceConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataSourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#data_deletion_policy AwsBedrockagentDataSource#data_deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#data_deletion_policy TfDataSource#data_deletion_policy}
   */
   readonly dataDeletionPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#description AwsBedrockagentDataSource#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#description TfDataSource#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#knowledge_base_id AwsBedrockagentDataSource#knowledge_base_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#knowledge_base_id TfDataSource#knowledge_base_id}
   */
   readonly knowledgeBaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#name AwsBedrockagentDataSource#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#name TfDataSource#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#region AwsBedrockagentDataSource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#region TfDataSource#region}
   */
   readonly region?: string;
   /**
   * data_source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#data_source_configuration AwsBedrockagentDataSource#data_source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#data_source_configuration TfDataSource#data_source_configuration}
   */
-  readonly dataSourceConfiguration?: AwsBedrockagentDataSource.DataSourceConfigurationProperty[] | cdktn.IResolvable;
+  readonly dataSourceConfiguration?: TfDataSource.DataSourceConfigurationProperty[] | cdktn.IResolvable;
   /**
   * server_side_encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#server_side_encryption_configuration AwsBedrockagentDataSource#server_side_encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#server_side_encryption_configuration TfDataSource#server_side_encryption_configuration}
   */
-  readonly serverSideEncryptionConfiguration?: AwsBedrockagentDataSource.ServerSideEncryptionConfigurationProperty[] | cdktn.IResolvable;
+  readonly serverSideEncryptionConfiguration?: TfDataSource.ServerSideEncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#timeouts AwsBedrockagentDataSource#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#timeouts TfDataSource#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentDataSource.TimeoutsProperty;
+  readonly timeouts?: TfDataSource.TimeoutsProperty;
   /**
   * vector_ingestion_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#vector_ingestion_configuration AwsBedrockagentDataSource#vector_ingestion_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#vector_ingestion_configuration TfDataSource#vector_ingestion_configuration}
   */
-  readonly vectorIngestionConfiguration?: AwsBedrockagentDataSource.VectorIngestionConfigurationProperty[] | cdktn.IResolvable;
+  readonly vectorIngestionConfiguration?: TfDataSource.VectorIngestionConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source aws_bedrockagent_data_source}
 */
-export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
+export class TfDataSource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentDataSource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataSource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentDataSource to import
-  * @param importFromId The id of the existing AwsBedrockagentDataSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentDataSource to import is found
+  * @param importToId The construct id used in the generated config for the TfDataSource to import
+  * @param importFromId The id of the existing TfDataSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_data_source", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentDataSourceConfig
+  * @param options TfDataSourceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentDataSourceConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataSourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_data_source',
       terraformGeneratorMetadata: {
@@ -205,11 +205,11 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
   }
 
   // data_source_configuration - computed: false, optional: true, required: false
-  private _dataSourceConfiguration = new AwsBedrockagentDataSource.DataSourceConfigurationPropertyList(this, "data_source_configuration", false);
+  private _dataSourceConfiguration = new TfDataSource.DataSourceConfigurationPropertyList(this, "data_source_configuration", false);
   public get dataSourceConfiguration() {
     return this._dataSourceConfiguration;
   }
-  public putDataSourceConfiguration(value: AwsBedrockagentDataSource.DataSourceConfigurationProperty[] | cdktn.IResolvable) {
+  public putDataSourceConfiguration(value: TfDataSource.DataSourceConfigurationProperty[] | cdktn.IResolvable) {
     this._dataSourceConfiguration.internalValue = value;
   }
   public resetDataSourceConfiguration() {
@@ -221,11 +221,11 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
   }
 
   // server_side_encryption_configuration - computed: false, optional: true, required: false
-  private _serverSideEncryptionConfiguration = new AwsBedrockagentDataSource.ServerSideEncryptionConfigurationPropertyList(this, "server_side_encryption_configuration", false);
+  private _serverSideEncryptionConfiguration = new TfDataSource.ServerSideEncryptionConfigurationPropertyList(this, "server_side_encryption_configuration", false);
   public get serverSideEncryptionConfiguration() {
     return this._serverSideEncryptionConfiguration;
   }
-  public putServerSideEncryptionConfiguration(value: AwsBedrockagentDataSource.ServerSideEncryptionConfigurationProperty[] | cdktn.IResolvable) {
+  public putServerSideEncryptionConfiguration(value: TfDataSource.ServerSideEncryptionConfigurationProperty[] | cdktn.IResolvable) {
     this._serverSideEncryptionConfiguration.internalValue = value;
   }
   public resetServerSideEncryptionConfiguration() {
@@ -237,11 +237,11 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentDataSource.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataSource.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentDataSource.TimeoutsProperty) {
+  public putTimeouts(value: TfDataSource.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -253,11 +253,11 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
   }
 
   // vector_ingestion_configuration - computed: false, optional: true, required: false
-  private _vectorIngestionConfiguration = new AwsBedrockagentDataSource.VectorIngestionConfigurationPropertyList(this, "vector_ingestion_configuration", false);
+  private _vectorIngestionConfiguration = new TfDataSource.VectorIngestionConfigurationPropertyList(this, "vector_ingestion_configuration", false);
   public get vectorIngestionConfiguration() {
     return this._vectorIngestionConfiguration;
   }
-  public putVectorIngestionConfiguration(value: AwsBedrockagentDataSource.VectorIngestionConfigurationProperty[] | cdktn.IResolvable) {
+  public putVectorIngestionConfiguration(value: TfDataSource.VectorIngestionConfigurationProperty[] | cdktn.IResolvable) {
     this._vectorIngestionConfiguration.internalValue = value;
   }
   public resetVectorIngestionConfiguration() {
@@ -279,10 +279,10 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
       knowledge_base_id: cdktn.stringToTerraform(this._knowledgeBaseId),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      data_source_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationPropertyToTerraform, true)(this._dataSourceConfiguration.internalValue),
-      server_side_encryption_configuration: cdktn.listMapper(awsBedrockagentDataSourceServerSideEncryptionConfigurationPropertyToTerraform, true)(this._serverSideEncryptionConfiguration.internalValue),
-      timeouts: awsBedrockagentDataSourceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vector_ingestion_configuration: cdktn.listMapper(awsBedrockagentDataSourceVectorIngestionConfigurationPropertyToTerraform, true)(this._vectorIngestionConfiguration.internalValue),
+      data_source_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationPropertyToTerraform, true)(this._dataSourceConfiguration.internalValue),
+      server_side_encryption_configuration: cdktn.listMapper(tfDataSourceServerSideEncryptionConfigurationPropertyToTerraform, true)(this._serverSideEncryptionConfiguration.internalValue),
+      timeouts: tfDataSourceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vector_ingestion_configuration: cdktn.listMapper(tfDataSourceVectorIngestionConfigurationPropertyToTerraform, true)(this._vectorIngestionConfiguration.internalValue),
     };
   }
 
@@ -319,28 +319,28 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       data_source_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationPropertyToHclTerraform, true)(this._dataSourceConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationPropertyToHclTerraform, true)(this._dataSourceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentDataSource.DataSourceConfigurationPropertyList",
+        storageClassType: "TfDataSource.DataSourceConfigurationPropertyList",
       },
       server_side_encryption_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentDataSourceServerSideEncryptionConfigurationPropertyToHclTerraform, true)(this._serverSideEncryptionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfDataSourceServerSideEncryptionConfigurationPropertyToHclTerraform, true)(this._serverSideEncryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentDataSource.ServerSideEncryptionConfigurationPropertyList",
+        storageClassType: "TfDataSource.ServerSideEncryptionConfigurationPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentDataSourceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataSourceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentDataSource.TimeoutsProperty",
+        storageClassType: "TfDataSource.TimeoutsProperty",
       },
       vector_ingestion_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentDataSourceVectorIngestionConfigurationPropertyToHclTerraform, true)(this._vectorIngestionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfDataSourceVectorIngestionConfigurationPropertyToHclTerraform, true)(this._vectorIngestionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentDataSource.VectorIngestionConfigurationPropertyList",
+        storageClassType: "TfDataSource.VectorIngestionConfigurationPropertyList",
       },
     };
 
@@ -349,7 +349,7 @@ export class AwsBedrockagentDataSource extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,25 +393,25 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filters: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform, true)(struct!.filters),
+    filters: cdktn.listMapper(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform, true)(struct!.filters),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filters: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform, true)(struct!.filters),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform, true)(struct!.filters),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyList",
@@ -423,19 +423,19 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    pattern_object_filter: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform, true)(struct!.patternObjectFilter),
+    pattern_object_filter: cdktn.listMapper(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform, true)(struct!.patternObjectFilter),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
       storageClassType: "string",
     },
     pattern_object_filter: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform, true)(struct!.patternObjectFilter),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform, true)(struct!.patternObjectFilter),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyList",
@@ -460,25 +460,25 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filter_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform, true)(struct!.filterConfiguration),
+    filter_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform, true)(struct!.filterConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filter_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform, true)(struct!.filterConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform, true)(struct!.filterConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPropertyList",
@@ -490,7 +490,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationConfluenceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationConfluenceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,32 +541,32 @@ export function awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfig
 }
 
 
-export function awsBedrockagentDataSourceConfluenceConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.ConfluenceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceConfluenceConfigurationPropertyToTerraform(struct?: TfDataSource.ConfluenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    crawler_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
-    source_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
+    crawler_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
+    source_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceConfluenceConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.ConfluenceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceConfluenceConfigurationPropertyToHclTerraform(struct?: TfDataSource.ConfluenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     crawler_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationPropertyList",
     },
     source_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationConfluenceConfigurationSourceConfigurationPropertyList",
@@ -578,7 +578,7 @@ export function awsBedrockagentDataSourceConfluenceConfigurationPropertyToHclTer
 }
 
 
-export function awsBedrockagentDataSourceDeletionProtectionConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DeletionProtectionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDeletionProtectionConfigurationPropertyToTerraform(struct?: TfDataSource.DeletionProtectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -590,7 +590,7 @@ export function awsBedrockagentDataSourceDeletionProtectionConfigurationProperty
 }
 
 
-export function awsBedrockagentDataSourceDeletionProtectionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DeletionProtectionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDeletionProtectionConfigurationPropertyToHclTerraform(struct?: TfDataSource.DeletionProtectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -615,7 +615,7 @@ export function awsBedrockagentDataSourceDeletionProtectionConfigurationProperty
 }
 
 
-export function awsBedrockagentDataSourceAudioExtractionConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.AudioExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceAudioExtractionConfigurationPropertyToTerraform(struct?: TfDataSource.AudioExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function awsBedrockagentDataSourceAudioExtractionConfigurationPropertyToT
 }
 
 
-export function awsBedrockagentDataSourceAudioExtractionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.AudioExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceAudioExtractionConfigurationPropertyToHclTerraform(struct?: TfDataSource.AudioExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,7 +645,7 @@ export function awsBedrockagentDataSourceAudioExtractionConfigurationPropertyToH
 }
 
 
-export function awsBedrockagentDataSourceImageExtractionConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.ImageExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceImageExtractionConfigurationPropertyToTerraform(struct?: TfDataSource.ImageExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function awsBedrockagentDataSourceImageExtractionConfigurationPropertyToT
 }
 
 
-export function awsBedrockagentDataSourceImageExtractionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.ImageExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceImageExtractionConfigurationPropertyToHclTerraform(struct?: TfDataSource.ImageExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,7 +675,7 @@ export function awsBedrockagentDataSourceImageExtractionConfigurationPropertyToH
 }
 
 
-export function awsBedrockagentDataSourceVideoExtractionConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.VideoExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceVideoExtractionConfigurationPropertyToTerraform(struct?: TfDataSource.VideoExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -686,7 +686,7 @@ export function awsBedrockagentDataSourceVideoExtractionConfigurationPropertyToT
 }
 
 
-export function awsBedrockagentDataSourceVideoExtractionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.VideoExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceVideoExtractionConfigurationPropertyToHclTerraform(struct?: TfDataSource.VideoExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,39 +705,39 @@ export function awsBedrockagentDataSourceVideoExtractionConfigurationPropertyToH
 }
 
 
-export function awsBedrockagentDataSourceMediaExtractionConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.MediaExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceMediaExtractionConfigurationPropertyToTerraform(struct?: TfDataSource.MediaExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audio_extraction_configuration: cdktn.listMapper(awsBedrockagentDataSourceAudioExtractionConfigurationPropertyToTerraform, true)(struct!.audioExtractionConfiguration),
-    image_extraction_configuration: cdktn.listMapper(awsBedrockagentDataSourceImageExtractionConfigurationPropertyToTerraform, true)(struct!.imageExtractionConfiguration),
-    video_extraction_configuration: cdktn.listMapper(awsBedrockagentDataSourceVideoExtractionConfigurationPropertyToTerraform, true)(struct!.videoExtractionConfiguration),
+    audio_extraction_configuration: cdktn.listMapper(tfDataSourceAudioExtractionConfigurationPropertyToTerraform, true)(struct!.audioExtractionConfiguration),
+    image_extraction_configuration: cdktn.listMapper(tfDataSourceImageExtractionConfigurationPropertyToTerraform, true)(struct!.imageExtractionConfiguration),
+    video_extraction_configuration: cdktn.listMapper(tfDataSourceVideoExtractionConfigurationPropertyToTerraform, true)(struct!.videoExtractionConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceMediaExtractionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.MediaExtractionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceMediaExtractionConfigurationPropertyToHclTerraform(struct?: TfDataSource.MediaExtractionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audio_extraction_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceAudioExtractionConfigurationPropertyToHclTerraform, true)(struct!.audioExtractionConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceAudioExtractionConfigurationPropertyToHclTerraform, true)(struct!.audioExtractionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AudioExtractionConfigurationPropertyList",
     },
     image_extraction_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceImageExtractionConfigurationPropertyToHclTerraform, true)(struct!.imageExtractionConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceImageExtractionConfigurationPropertyToHclTerraform, true)(struct!.imageExtractionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ImageExtractionConfigurationPropertyList",
     },
     video_extraction_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceVideoExtractionConfigurationPropertyToHclTerraform, true)(struct!.videoExtractionConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceVideoExtractionConfigurationPropertyToHclTerraform, true)(struct!.videoExtractionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "VideoExtractionConfigurationPropertyList",
@@ -749,20 +749,20 @@ export function awsBedrockagentDataSourceMediaExtractionConfigurationPropertyToH
 }
 
 
-export function awsBedrockagentDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.ManagedKnowledgeBaseConnectorConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToTerraform(struct?: TfDataSource.ManagedKnowledgeBaseConnectorConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     connector_parameters: cdktn.stringToTerraform(struct!.connectorParameters),
-    deletion_protection_configuration: cdktn.listMapper(awsBedrockagentDataSourceDeletionProtectionConfigurationPropertyToTerraform, true)(struct!.deletionProtectionConfiguration),
-    media_extraction_configuration: cdktn.listMapper(awsBedrockagentDataSourceMediaExtractionConfigurationPropertyToTerraform, true)(struct!.mediaExtractionConfiguration),
+    deletion_protection_configuration: cdktn.listMapper(tfDataSourceDeletionProtectionConfigurationPropertyToTerraform, true)(struct!.deletionProtectionConfiguration),
+    media_extraction_configuration: cdktn.listMapper(tfDataSourceMediaExtractionConfigurationPropertyToTerraform, true)(struct!.mediaExtractionConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.ManagedKnowledgeBaseConnectorConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToHclTerraform(struct?: TfDataSource.ManagedKnowledgeBaseConnectorConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -775,13 +775,13 @@ export function awsBedrockagentDataSourceManagedKnowledgeBaseConnectorConfigurat
       storageClassType: "string",
     },
     deletion_protection_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDeletionProtectionConfigurationPropertyToHclTerraform, true)(struct!.deletionProtectionConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDeletionProtectionConfigurationPropertyToHclTerraform, true)(struct!.deletionProtectionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DeletionProtectionConfigurationPropertyList",
     },
     media_extraction_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceMediaExtractionConfigurationPropertyToHclTerraform, true)(struct!.mediaExtractionConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceMediaExtractionConfigurationPropertyToHclTerraform, true)(struct!.mediaExtractionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MediaExtractionConfigurationPropertyList",
@@ -793,7 +793,7 @@ export function awsBedrockagentDataSourceManagedKnowledgeBaseConnectorConfigurat
 }
 
 
-export function awsBedrockagentDataSourceS3ConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceS3ConfigurationPropertyToTerraform(struct?: TfDataSource.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -806,7 +806,7 @@ export function awsBedrockagentDataSourceS3ConfigurationPropertyToTerraform(stru
 }
 
 
-export function awsBedrockagentDataSourceS3ConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceS3ConfigurationPropertyToHclTerraform(struct?: TfDataSource.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -837,7 +837,7 @@ export function awsBedrockagentDataSourceS3ConfigurationPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -881,25 +881,25 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filters: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform, true)(struct!.filters),
+    filters: cdktn.listMapper(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform, true)(struct!.filters),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filters: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform, true)(struct!.filters),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform, true)(struct!.filters),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyList",
@@ -911,19 +911,19 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    pattern_object_filter: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform, true)(struct!.patternObjectFilter),
+    pattern_object_filter: cdktn.listMapper(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform, true)(struct!.patternObjectFilter),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -936,7 +936,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
       storageClassType: "string",
     },
     pattern_object_filter: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform, true)(struct!.patternObjectFilter),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform, true)(struct!.patternObjectFilter),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyList",
@@ -948,25 +948,25 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filter_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform, true)(struct!.filterConfiguration),
+    filter_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform, true)(struct!.filterConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filter_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform, true)(struct!.filterConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform, true)(struct!.filterConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPropertyList",
@@ -978,7 +978,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -991,7 +991,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSalesforceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSalesforceConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1022,32 +1022,32 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfig
 }
 
 
-export function awsBedrockagentDataSourceSalesforceConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.SalesforceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceSalesforceConfigurationPropertyToTerraform(struct?: TfDataSource.SalesforceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    crawler_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
-    source_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
+    crawler_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
+    source_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceSalesforceConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.SalesforceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceSalesforceConfigurationPropertyToHclTerraform(struct?: TfDataSource.SalesforceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     crawler_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationPropertyList",
     },
     source_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSalesforceConfigurationSourceConfigurationPropertyList",
@@ -1059,7 +1059,7 @@ export function awsBedrockagentDataSourceSalesforceConfigurationPropertyToHclTer
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1072,7 +1072,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1103,25 +1103,25 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filters: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform, true)(struct!.filters),
+    filters: cdktn.listMapper(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToTerraform, true)(struct!.filters),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filters: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform, true)(struct!.filters),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyToHclTerraform, true)(struct!.filters),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersPropertyList",
@@ -1133,19 +1133,19 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    pattern_object_filter: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform, true)(struct!.patternObjectFilter),
+    pattern_object_filter: cdktn.listMapper(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToTerraform, true)(struct!.patternObjectFilter),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1158,7 +1158,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
       storageClassType: "string",
     },
     pattern_object_filter: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform, true)(struct!.patternObjectFilter),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyToHclTerraform, true)(struct!.patternObjectFilter),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterPropertyList",
@@ -1170,25 +1170,25 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filter_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform, true)(struct!.filterConfiguration),
+    filter_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToTerraform, true)(struct!.filterConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filter_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform, true)(struct!.filterConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyToHclTerraform, true)(struct!.filterConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPropertyList",
@@ -1200,7 +1200,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1216,7 +1216,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationSharePointConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationSharePointConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1265,32 +1265,32 @@ export function awsBedrockagentDataSourceDataSourceConfigurationSharePointConfig
 }
 
 
-export function awsBedrockagentDataSourceSharePointConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.SharePointConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceSharePointConfigurationPropertyToTerraform(struct?: TfDataSource.SharePointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    crawler_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
-    source_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
+    crawler_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
+    source_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceSharePointConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.SharePointConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceSharePointConfigurationPropertyToHclTerraform(struct?: TfDataSource.SharePointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     crawler_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSharePointConfigurationCrawlerConfigurationPropertyList",
     },
     source_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationSharePointConfigurationSourceConfigurationPropertyList",
@@ -1302,7 +1302,7 @@ export function awsBedrockagentDataSourceSharePointConfigurationPropertyToHclTer
 }
 
 
-export function awsBedrockagentDataSourceCrawlerLimitsPropertyToTerraform(struct?: AwsBedrockagentDataSource.CrawlerLimitsProperty | cdktn.IResolvable): any {
+export function tfDataSourceCrawlerLimitsPropertyToTerraform(struct?: TfDataSource.CrawlerLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1314,7 +1314,7 @@ export function awsBedrockagentDataSourceCrawlerLimitsPropertyToTerraform(struct
 }
 
 
-export function awsBedrockagentDataSourceCrawlerLimitsPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.CrawlerLimitsProperty | cdktn.IResolvable): any {
+export function tfDataSourceCrawlerLimitsPropertyToHclTerraform(struct?: TfDataSource.CrawlerLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1339,7 +1339,7 @@ export function awsBedrockagentDataSourceCrawlerLimitsPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationWebConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationWebConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1349,12 +1349,12 @@ export function awsBedrockagentDataSourceDataSourceConfigurationWebConfiguration
     inclusion_filters: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.inclusionFilters),
     scope: cdktn.stringToTerraform(struct!.scope),
     user_agent: cdktn.stringToTerraform(struct!.userAgent),
-    crawler_limits: cdktn.listMapper(awsBedrockagentDataSourceCrawlerLimitsPropertyToTerraform, true)(struct!.crawlerLimits),
+    crawler_limits: cdktn.listMapper(tfDataSourceCrawlerLimitsPropertyToTerraform, true)(struct!.crawlerLimits),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationWebConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationWebConfigurationCrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1385,7 +1385,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationWebConfiguration
       storageClassType: "string",
     },
     crawler_limits: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceCrawlerLimitsPropertyToHclTerraform, true)(struct!.crawlerLimits),
+      value: cdktn.listMapperHcl(tfDataSourceCrawlerLimitsPropertyToHclTerraform, true)(struct!.crawlerLimits),
       isBlock: true,
       type: "list",
       storageClassType: "CrawlerLimitsPropertyList",
@@ -1397,7 +1397,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationWebConfiguration
 }
 
 
-export function awsBedrockagentDataSourceSeedUrlsPropertyToTerraform(struct?: AwsBedrockagentDataSource.SeedUrlsProperty | cdktn.IResolvable): any {
+export function tfDataSourceSeedUrlsPropertyToTerraform(struct?: TfDataSource.SeedUrlsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1408,7 +1408,7 @@ export function awsBedrockagentDataSourceSeedUrlsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsBedrockagentDataSourceSeedUrlsPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.SeedUrlsProperty | cdktn.IResolvable): any {
+export function tfDataSourceSeedUrlsPropertyToHclTerraform(struct?: TfDataSource.SeedUrlsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1427,25 +1427,25 @@ export function awsBedrockagentDataSourceSeedUrlsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsBedrockagentDataSourceUrlConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.UrlConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceUrlConfigurationPropertyToTerraform(struct?: TfDataSource.UrlConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    seed_urls: cdktn.listMapper(awsBedrockagentDataSourceSeedUrlsPropertyToTerraform, true)(struct!.seedUrls),
+    seed_urls: cdktn.listMapper(tfDataSourceSeedUrlsPropertyToTerraform, true)(struct!.seedUrls),
   }
 }
 
 
-export function awsBedrockagentDataSourceUrlConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.UrlConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceUrlConfigurationPropertyToHclTerraform(struct?: TfDataSource.UrlConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     seed_urls: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceSeedUrlsPropertyToHclTerraform, true)(struct!.seedUrls),
+      value: cdktn.listMapperHcl(tfDataSourceSeedUrlsPropertyToHclTerraform, true)(struct!.seedUrls),
       isBlock: true,
       type: "list",
       storageClassType: "SeedUrlsPropertyList",
@@ -1457,25 +1457,25 @@ export function awsBedrockagentDataSourceUrlConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationWebConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationWebConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    url_configuration: cdktn.listMapper(awsBedrockagentDataSourceUrlConfigurationPropertyToTerraform, true)(struct!.urlConfiguration),
+    url_configuration: cdktn.listMapper(tfDataSourceUrlConfigurationPropertyToTerraform, true)(struct!.urlConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationWebConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationWebConfigurationSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     url_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceUrlConfigurationPropertyToHclTerraform, true)(struct!.urlConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceUrlConfigurationPropertyToHclTerraform, true)(struct!.urlConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "UrlConfigurationPropertyList",
@@ -1487,32 +1487,32 @@ export function awsBedrockagentDataSourceDataSourceConfigurationWebConfiguration
 }
 
 
-export function awsBedrockagentDataSourceWebConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.WebConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceWebConfigurationPropertyToTerraform(struct?: TfDataSource.WebConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    crawler_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
-    source_configuration: cdktn.listMapper(awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
+    crawler_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
+    source_configuration: cdktn.listMapper(tfDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceWebConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.WebConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceWebConfigurationPropertyToHclTerraform(struct?: TfDataSource.WebConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     crawler_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationWebConfigurationCrawlerConfigurationPropertyList",
     },
     source_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourceConfigurationWebConfigurationSourceConfigurationPropertyList",
@@ -1524,24 +1524,24 @@ export function awsBedrockagentDataSourceWebConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationPropertyToTerraform(struct?: TfDataSource.DataSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    confluence_configuration: cdktn.listMapper(awsBedrockagentDataSourceConfluenceConfigurationPropertyToTerraform, true)(struct!.confluenceConfiguration),
-    managed_knowledge_base_connector_configuration: cdktn.listMapper(awsBedrockagentDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToTerraform, true)(struct!.managedKnowledgeBaseConnectorConfiguration),
-    s3_configuration: cdktn.listMapper(awsBedrockagentDataSourceS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
-    salesforce_configuration: cdktn.listMapper(awsBedrockagentDataSourceSalesforceConfigurationPropertyToTerraform, true)(struct!.salesforceConfiguration),
-    share_point_configuration: cdktn.listMapper(awsBedrockagentDataSourceSharePointConfigurationPropertyToTerraform, true)(struct!.sharePointConfiguration),
-    web_configuration: cdktn.listMapper(awsBedrockagentDataSourceWebConfigurationPropertyToTerraform, true)(struct!.webConfiguration),
+    confluence_configuration: cdktn.listMapper(tfDataSourceConfluenceConfigurationPropertyToTerraform, true)(struct!.confluenceConfiguration),
+    managed_knowledge_base_connector_configuration: cdktn.listMapper(tfDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToTerraform, true)(struct!.managedKnowledgeBaseConnectorConfiguration),
+    s3_configuration: cdktn.listMapper(tfDataSourceS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
+    salesforce_configuration: cdktn.listMapper(tfDataSourceSalesforceConfigurationPropertyToTerraform, true)(struct!.salesforceConfiguration),
+    share_point_configuration: cdktn.listMapper(tfDataSourceSharePointConfigurationPropertyToTerraform, true)(struct!.sharePointConfiguration),
+    web_configuration: cdktn.listMapper(tfDataSourceWebConfigurationPropertyToTerraform, true)(struct!.webConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceDataSourceConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.DataSourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceDataSourceConfigurationPropertyToHclTerraform(struct?: TfDataSource.DataSourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1554,37 +1554,37 @@ export function awsBedrockagentDataSourceDataSourceConfigurationPropertyToHclTer
       storageClassType: "string",
     },
     confluence_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceConfluenceConfigurationPropertyToHclTerraform, true)(struct!.confluenceConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceConfluenceConfigurationPropertyToHclTerraform, true)(struct!.confluenceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfluenceConfigurationPropertyList",
     },
     managed_knowledge_base_connector_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToHclTerraform, true)(struct!.managedKnowledgeBaseConnectorConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceManagedKnowledgeBaseConnectorConfigurationPropertyToHclTerraform, true)(struct!.managedKnowledgeBaseConnectorConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedKnowledgeBaseConnectorConfigurationPropertyList",
     },
     s3_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
+      value: cdktn.listMapperHcl(tfDataSourceS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigurationPropertyList",
     },
     salesforce_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceSalesforceConfigurationPropertyToHclTerraform, true)(struct!.salesforceConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceSalesforceConfigurationPropertyToHclTerraform, true)(struct!.salesforceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SalesforceConfigurationPropertyList",
     },
     share_point_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceSharePointConfigurationPropertyToHclTerraform, true)(struct!.sharePointConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceSharePointConfigurationPropertyToHclTerraform, true)(struct!.sharePointConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SharePointConfigurationPropertyList",
     },
     web_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceWebConfigurationPropertyToHclTerraform, true)(struct!.webConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceWebConfigurationPropertyToHclTerraform, true)(struct!.webConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "WebConfigurationPropertyList",
@@ -1596,7 +1596,7 @@ export function awsBedrockagentDataSourceDataSourceConfigurationPropertyToHclTer
 }
 
 
-export function awsBedrockagentDataSourceServerSideEncryptionConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.ServerSideEncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceServerSideEncryptionConfigurationPropertyToTerraform(struct?: TfDataSource.ServerSideEncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1607,7 +1607,7 @@ export function awsBedrockagentDataSourceServerSideEncryptionConfigurationProper
 }
 
 
-export function awsBedrockagentDataSourceServerSideEncryptionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.ServerSideEncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceServerSideEncryptionConfigurationPropertyToHclTerraform(struct?: TfDataSource.ServerSideEncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1626,7 +1626,7 @@ export function awsBedrockagentDataSourceServerSideEncryptionConfigurationProper
 }
 
 
-export function awsBedrockagentDataSourceTimeoutsPropertyToTerraform(struct?: AwsBedrockagentDataSource.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataSourceTimeoutsPropertyToTerraform(struct?: TfDataSource.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1639,7 +1639,7 @@ export function awsBedrockagentDataSourceTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsBedrockagentDataSourceTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataSourceTimeoutsPropertyToHclTerraform(struct?: TfDataSource.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1670,7 +1670,7 @@ export function awsBedrockagentDataSourceTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsBedrockagentDataSourceFixedSizeChunkingConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.FixedSizeChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceFixedSizeChunkingConfigurationPropertyToTerraform(struct?: TfDataSource.FixedSizeChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1682,7 +1682,7 @@ export function awsBedrockagentDataSourceFixedSizeChunkingConfigurationPropertyT
 }
 
 
-export function awsBedrockagentDataSourceFixedSizeChunkingConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.FixedSizeChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceFixedSizeChunkingConfigurationPropertyToHclTerraform(struct?: TfDataSource.FixedSizeChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1707,7 +1707,7 @@ export function awsBedrockagentDataSourceFixedSizeChunkingConfigurationPropertyT
 }
 
 
-export function awsBedrockagentDataSourceLevelConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.LevelConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceLevelConfigurationPropertyToTerraform(struct?: TfDataSource.LevelConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1718,7 +1718,7 @@ export function awsBedrockagentDataSourceLevelConfigurationPropertyToTerraform(s
 }
 
 
-export function awsBedrockagentDataSourceLevelConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.LevelConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceLevelConfigurationPropertyToHclTerraform(struct?: TfDataSource.LevelConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1737,19 +1737,19 @@ export function awsBedrockagentDataSourceLevelConfigurationPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentDataSourceHierarchicalChunkingConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.HierarchicalChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceHierarchicalChunkingConfigurationPropertyToTerraform(struct?: TfDataSource.HierarchicalChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     overlap_tokens: cdktn.numberToTerraform(struct!.overlapTokens),
-    level_configuration: cdktn.listMapper(awsBedrockagentDataSourceLevelConfigurationPropertyToTerraform, true)(struct!.levelConfiguration),
+    level_configuration: cdktn.listMapper(tfDataSourceLevelConfigurationPropertyToTerraform, true)(struct!.levelConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceHierarchicalChunkingConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.HierarchicalChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceHierarchicalChunkingConfigurationPropertyToHclTerraform(struct?: TfDataSource.HierarchicalChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1762,7 +1762,7 @@ export function awsBedrockagentDataSourceHierarchicalChunkingConfigurationProper
       storageClassType: "number",
     },
     level_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceLevelConfigurationPropertyToHclTerraform, true)(struct!.levelConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceLevelConfigurationPropertyToHclTerraform, true)(struct!.levelConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LevelConfigurationPropertyList",
@@ -1774,7 +1774,7 @@ export function awsBedrockagentDataSourceHierarchicalChunkingConfigurationProper
 }
 
 
-export function awsBedrockagentDataSourceSemanticChunkingConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.SemanticChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceSemanticChunkingConfigurationPropertyToTerraform(struct?: TfDataSource.SemanticChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1787,7 +1787,7 @@ export function awsBedrockagentDataSourceSemanticChunkingConfigurationPropertyTo
 }
 
 
-export function awsBedrockagentDataSourceSemanticChunkingConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.SemanticChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceSemanticChunkingConfigurationPropertyToHclTerraform(struct?: TfDataSource.SemanticChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1818,21 +1818,21 @@ export function awsBedrockagentDataSourceSemanticChunkingConfigurationPropertyTo
 }
 
 
-export function awsBedrockagentDataSourceChunkingConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.ChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceChunkingConfigurationPropertyToTerraform(struct?: TfDataSource.ChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     chunking_strategy: cdktn.stringToTerraform(struct!.chunkingStrategy),
-    fixed_size_chunking_configuration: cdktn.listMapper(awsBedrockagentDataSourceFixedSizeChunkingConfigurationPropertyToTerraform, true)(struct!.fixedSizeChunkingConfiguration),
-    hierarchical_chunking_configuration: cdktn.listMapper(awsBedrockagentDataSourceHierarchicalChunkingConfigurationPropertyToTerraform, true)(struct!.hierarchicalChunkingConfiguration),
-    semantic_chunking_configuration: cdktn.listMapper(awsBedrockagentDataSourceSemanticChunkingConfigurationPropertyToTerraform, true)(struct!.semanticChunkingConfiguration),
+    fixed_size_chunking_configuration: cdktn.listMapper(tfDataSourceFixedSizeChunkingConfigurationPropertyToTerraform, true)(struct!.fixedSizeChunkingConfiguration),
+    hierarchical_chunking_configuration: cdktn.listMapper(tfDataSourceHierarchicalChunkingConfigurationPropertyToTerraform, true)(struct!.hierarchicalChunkingConfiguration),
+    semantic_chunking_configuration: cdktn.listMapper(tfDataSourceSemanticChunkingConfigurationPropertyToTerraform, true)(struct!.semanticChunkingConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceChunkingConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.ChunkingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceChunkingConfigurationPropertyToHclTerraform(struct?: TfDataSource.ChunkingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1845,19 +1845,19 @@ export function awsBedrockagentDataSourceChunkingConfigurationPropertyToHclTerra
       storageClassType: "string",
     },
     fixed_size_chunking_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceFixedSizeChunkingConfigurationPropertyToHclTerraform, true)(struct!.fixedSizeChunkingConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceFixedSizeChunkingConfigurationPropertyToHclTerraform, true)(struct!.fixedSizeChunkingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "FixedSizeChunkingConfigurationPropertyList",
     },
     hierarchical_chunking_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceHierarchicalChunkingConfigurationPropertyToHclTerraform, true)(struct!.hierarchicalChunkingConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceHierarchicalChunkingConfigurationPropertyToHclTerraform, true)(struct!.hierarchicalChunkingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "HierarchicalChunkingConfigurationPropertyList",
     },
     semantic_chunking_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceSemanticChunkingConfigurationPropertyToHclTerraform, true)(struct!.semanticChunkingConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceSemanticChunkingConfigurationPropertyToHclTerraform, true)(struct!.semanticChunkingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SemanticChunkingConfigurationPropertyList",
@@ -1869,7 +1869,7 @@ export function awsBedrockagentDataSourceChunkingConfigurationPropertyToHclTerra
 }
 
 
-export function awsBedrockagentDataSourceS3LocationPropertyToTerraform(struct?: AwsBedrockagentDataSource.S3LocationProperty | cdktn.IResolvable): any {
+export function tfDataSourceS3LocationPropertyToTerraform(struct?: TfDataSource.S3LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1880,7 +1880,7 @@ export function awsBedrockagentDataSourceS3LocationPropertyToTerraform(struct?: 
 }
 
 
-export function awsBedrockagentDataSourceS3LocationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.S3LocationProperty | cdktn.IResolvable): any {
+export function tfDataSourceS3LocationPropertyToHclTerraform(struct?: TfDataSource.S3LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1899,25 +1899,25 @@ export function awsBedrockagentDataSourceS3LocationPropertyToHclTerraform(struct
 }
 
 
-export function awsBedrockagentDataSourceIntermediateStoragePropertyToTerraform(struct?: AwsBedrockagentDataSource.IntermediateStorageProperty | cdktn.IResolvable): any {
+export function tfDataSourceIntermediateStoragePropertyToTerraform(struct?: TfDataSource.IntermediateStorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_location: cdktn.listMapper(awsBedrockagentDataSourceS3LocationPropertyToTerraform, true)(struct!.s3Location),
+    s3_location: cdktn.listMapper(tfDataSourceS3LocationPropertyToTerraform, true)(struct!.s3Location),
   }
 }
 
 
-export function awsBedrockagentDataSourceIntermediateStoragePropertyToHclTerraform(struct?: AwsBedrockagentDataSource.IntermediateStorageProperty | cdktn.IResolvable): any {
+export function tfDataSourceIntermediateStoragePropertyToHclTerraform(struct?: TfDataSource.IntermediateStorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_location: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceS3LocationPropertyToHclTerraform, true)(struct!.s3Location),
+      value: cdktn.listMapperHcl(tfDataSourceS3LocationPropertyToHclTerraform, true)(struct!.s3Location),
       isBlock: true,
       type: "list",
       storageClassType: "S3LocationPropertyList",
@@ -1929,7 +1929,7 @@ export function awsBedrockagentDataSourceIntermediateStoragePropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentDataSourceTransformationLambdaConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.TransformationLambdaConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceTransformationLambdaConfigurationPropertyToTerraform(struct?: TfDataSource.TransformationLambdaConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1940,7 +1940,7 @@ export function awsBedrockagentDataSourceTransformationLambdaConfigurationProper
 }
 
 
-export function awsBedrockagentDataSourceTransformationLambdaConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.TransformationLambdaConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceTransformationLambdaConfigurationPropertyToHclTerraform(struct?: TfDataSource.TransformationLambdaConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1959,25 +1959,25 @@ export function awsBedrockagentDataSourceTransformationLambdaConfigurationProper
 }
 
 
-export function awsBedrockagentDataSourceTransformationFunctionPropertyToTerraform(struct?: AwsBedrockagentDataSource.TransformationFunctionProperty | cdktn.IResolvable): any {
+export function tfDataSourceTransformationFunctionPropertyToTerraform(struct?: TfDataSource.TransformationFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    transformation_lambda_configuration: cdktn.listMapper(awsBedrockagentDataSourceTransformationLambdaConfigurationPropertyToTerraform, true)(struct!.transformationLambdaConfiguration),
+    transformation_lambda_configuration: cdktn.listMapper(tfDataSourceTransformationLambdaConfigurationPropertyToTerraform, true)(struct!.transformationLambdaConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceTransformationFunctionPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.TransformationFunctionProperty | cdktn.IResolvable): any {
+export function tfDataSourceTransformationFunctionPropertyToHclTerraform(struct?: TfDataSource.TransformationFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     transformation_lambda_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceTransformationLambdaConfigurationPropertyToHclTerraform, true)(struct!.transformationLambdaConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceTransformationLambdaConfigurationPropertyToHclTerraform, true)(struct!.transformationLambdaConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TransformationLambdaConfigurationPropertyList",
@@ -1989,19 +1989,19 @@ export function awsBedrockagentDataSourceTransformationFunctionPropertyToHclTerr
 }
 
 
-export function awsBedrockagentDataSourceTransformationPropertyToTerraform(struct?: AwsBedrockagentDataSource.TransformationProperty | cdktn.IResolvable): any {
+export function tfDataSourceTransformationPropertyToTerraform(struct?: TfDataSource.TransformationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     step_to_apply: cdktn.stringToTerraform(struct!.stepToApply),
-    transformation_function: cdktn.listMapper(awsBedrockagentDataSourceTransformationFunctionPropertyToTerraform, true)(struct!.transformationFunction),
+    transformation_function: cdktn.listMapper(tfDataSourceTransformationFunctionPropertyToTerraform, true)(struct!.transformationFunction),
   }
 }
 
 
-export function awsBedrockagentDataSourceTransformationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.TransformationProperty | cdktn.IResolvable): any {
+export function tfDataSourceTransformationPropertyToHclTerraform(struct?: TfDataSource.TransformationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2014,7 +2014,7 @@ export function awsBedrockagentDataSourceTransformationPropertyToHclTerraform(st
       storageClassType: "string",
     },
     transformation_function: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceTransformationFunctionPropertyToHclTerraform, true)(struct!.transformationFunction),
+      value: cdktn.listMapperHcl(tfDataSourceTransformationFunctionPropertyToHclTerraform, true)(struct!.transformationFunction),
       isBlock: true,
       type: "list",
       storageClassType: "TransformationFunctionPropertyList",
@@ -2026,32 +2026,32 @@ export function awsBedrockagentDataSourceTransformationPropertyToHclTerraform(st
 }
 
 
-export function awsBedrockagentDataSourceCustomTransformationConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.CustomTransformationConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceCustomTransformationConfigurationPropertyToTerraform(struct?: TfDataSource.CustomTransformationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    intermediate_storage: cdktn.listMapper(awsBedrockagentDataSourceIntermediateStoragePropertyToTerraform, true)(struct!.intermediateStorage),
-    transformation: cdktn.listMapper(awsBedrockagentDataSourceTransformationPropertyToTerraform, true)(struct!.transformation),
+    intermediate_storage: cdktn.listMapper(tfDataSourceIntermediateStoragePropertyToTerraform, true)(struct!.intermediateStorage),
+    transformation: cdktn.listMapper(tfDataSourceTransformationPropertyToTerraform, true)(struct!.transformation),
   }
 }
 
 
-export function awsBedrockagentDataSourceCustomTransformationConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.CustomTransformationConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceCustomTransformationConfigurationPropertyToHclTerraform(struct?: TfDataSource.CustomTransformationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     intermediate_storage: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceIntermediateStoragePropertyToHclTerraform, true)(struct!.intermediateStorage),
+      value: cdktn.listMapperHcl(tfDataSourceIntermediateStoragePropertyToHclTerraform, true)(struct!.intermediateStorage),
       isBlock: true,
       type: "list",
       storageClassType: "IntermediateStoragePropertyList",
     },
     transformation: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceTransformationPropertyToHclTerraform, true)(struct!.transformation),
+      value: cdktn.listMapperHcl(tfDataSourceTransformationPropertyToHclTerraform, true)(struct!.transformation),
       isBlock: true,
       type: "list",
       storageClassType: "TransformationPropertyList",
@@ -2063,7 +2063,7 @@ export function awsBedrockagentDataSourceCustomTransformationConfigurationProper
 }
 
 
-export function awsBedrockagentDataSourceBedrockDataAutomationConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.BedrockDataAutomationConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceBedrockDataAutomationConfigurationPropertyToTerraform(struct?: TfDataSource.BedrockDataAutomationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2074,7 +2074,7 @@ export function awsBedrockagentDataSourceBedrockDataAutomationConfigurationPrope
 }
 
 
-export function awsBedrockagentDataSourceBedrockDataAutomationConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.BedrockDataAutomationConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceBedrockDataAutomationConfigurationPropertyToHclTerraform(struct?: TfDataSource.BedrockDataAutomationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2093,7 +2093,7 @@ export function awsBedrockagentDataSourceBedrockDataAutomationConfigurationPrope
 }
 
 
-export function awsBedrockagentDataSourceParsingPromptPropertyToTerraform(struct?: AwsBedrockagentDataSource.ParsingPromptProperty | cdktn.IResolvable): any {
+export function tfDataSourceParsingPromptPropertyToTerraform(struct?: TfDataSource.ParsingPromptProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2104,7 +2104,7 @@ export function awsBedrockagentDataSourceParsingPromptPropertyToTerraform(struct
 }
 
 
-export function awsBedrockagentDataSourceParsingPromptPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.ParsingPromptProperty | cdktn.IResolvable): any {
+export function tfDataSourceParsingPromptPropertyToHclTerraform(struct?: TfDataSource.ParsingPromptProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2123,7 +2123,7 @@ export function awsBedrockagentDataSourceParsingPromptPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockagentDataSourceBedrockFoundationModelConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.BedrockFoundationModelConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceBedrockFoundationModelConfigurationPropertyToTerraform(struct?: TfDataSource.BedrockFoundationModelConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2131,12 +2131,12 @@ export function awsBedrockagentDataSourceBedrockFoundationModelConfigurationProp
   return {
     model_arn: cdktn.stringToTerraform(struct!.modelArn),
     parsing_modality: cdktn.stringToTerraform(struct!.parsingModality),
-    parsing_prompt: cdktn.listMapper(awsBedrockagentDataSourceParsingPromptPropertyToTerraform, true)(struct!.parsingPrompt),
+    parsing_prompt: cdktn.listMapper(tfDataSourceParsingPromptPropertyToTerraform, true)(struct!.parsingPrompt),
   }
 }
 
 
-export function awsBedrockagentDataSourceBedrockFoundationModelConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.BedrockFoundationModelConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceBedrockFoundationModelConfigurationPropertyToHclTerraform(struct?: TfDataSource.BedrockFoundationModelConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2155,7 +2155,7 @@ export function awsBedrockagentDataSourceBedrockFoundationModelConfigurationProp
       storageClassType: "string",
     },
     parsing_prompt: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceParsingPromptPropertyToHclTerraform, true)(struct!.parsingPrompt),
+      value: cdktn.listMapperHcl(tfDataSourceParsingPromptPropertyToHclTerraform, true)(struct!.parsingPrompt),
       isBlock: true,
       type: "list",
       storageClassType: "ParsingPromptPropertyList",
@@ -2167,20 +2167,20 @@ export function awsBedrockagentDataSourceBedrockFoundationModelConfigurationProp
 }
 
 
-export function awsBedrockagentDataSourceParsingConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.ParsingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceParsingConfigurationPropertyToTerraform(struct?: TfDataSource.ParsingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     parsing_strategy: cdktn.stringToTerraform(struct!.parsingStrategy),
-    bedrock_data_automation_configuration: cdktn.listMapper(awsBedrockagentDataSourceBedrockDataAutomationConfigurationPropertyToTerraform, true)(struct!.bedrockDataAutomationConfiguration),
-    bedrock_foundation_model_configuration: cdktn.listMapper(awsBedrockagentDataSourceBedrockFoundationModelConfigurationPropertyToTerraform, true)(struct!.bedrockFoundationModelConfiguration),
+    bedrock_data_automation_configuration: cdktn.listMapper(tfDataSourceBedrockDataAutomationConfigurationPropertyToTerraform, true)(struct!.bedrockDataAutomationConfiguration),
+    bedrock_foundation_model_configuration: cdktn.listMapper(tfDataSourceBedrockFoundationModelConfigurationPropertyToTerraform, true)(struct!.bedrockFoundationModelConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceParsingConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.ParsingConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceParsingConfigurationPropertyToHclTerraform(struct?: TfDataSource.ParsingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2193,13 +2193,13 @@ export function awsBedrockagentDataSourceParsingConfigurationPropertyToHclTerraf
       storageClassType: "string",
     },
     bedrock_data_automation_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceBedrockDataAutomationConfigurationPropertyToHclTerraform, true)(struct!.bedrockDataAutomationConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceBedrockDataAutomationConfigurationPropertyToHclTerraform, true)(struct!.bedrockDataAutomationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "BedrockDataAutomationConfigurationPropertyList",
     },
     bedrock_foundation_model_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceBedrockFoundationModelConfigurationPropertyToHclTerraform, true)(struct!.bedrockFoundationModelConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceBedrockFoundationModelConfigurationPropertyToHclTerraform, true)(struct!.bedrockFoundationModelConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "BedrockFoundationModelConfigurationPropertyList",
@@ -2211,39 +2211,39 @@ export function awsBedrockagentDataSourceParsingConfigurationPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentDataSourceVectorIngestionConfigurationPropertyToTerraform(struct?: AwsBedrockagentDataSource.VectorIngestionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceVectorIngestionConfigurationPropertyToTerraform(struct?: TfDataSource.VectorIngestionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    chunking_configuration: cdktn.listMapper(awsBedrockagentDataSourceChunkingConfigurationPropertyToTerraform, true)(struct!.chunkingConfiguration),
-    custom_transformation_configuration: cdktn.listMapper(awsBedrockagentDataSourceCustomTransformationConfigurationPropertyToTerraform, true)(struct!.customTransformationConfiguration),
-    parsing_configuration: cdktn.listMapper(awsBedrockagentDataSourceParsingConfigurationPropertyToTerraform, true)(struct!.parsingConfiguration),
+    chunking_configuration: cdktn.listMapper(tfDataSourceChunkingConfigurationPropertyToTerraform, true)(struct!.chunkingConfiguration),
+    custom_transformation_configuration: cdktn.listMapper(tfDataSourceCustomTransformationConfigurationPropertyToTerraform, true)(struct!.customTransformationConfiguration),
+    parsing_configuration: cdktn.listMapper(tfDataSourceParsingConfigurationPropertyToTerraform, true)(struct!.parsingConfiguration),
   }
 }
 
 
-export function awsBedrockagentDataSourceVectorIngestionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentDataSource.VectorIngestionConfigurationProperty | cdktn.IResolvable): any {
+export function tfDataSourceVectorIngestionConfigurationPropertyToHclTerraform(struct?: TfDataSource.VectorIngestionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     chunking_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceChunkingConfigurationPropertyToHclTerraform, true)(struct!.chunkingConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceChunkingConfigurationPropertyToHclTerraform, true)(struct!.chunkingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ChunkingConfigurationPropertyList",
     },
     custom_transformation_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceCustomTransformationConfigurationPropertyToHclTerraform, true)(struct!.customTransformationConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceCustomTransformationConfigurationPropertyToHclTerraform, true)(struct!.customTransformationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CustomTransformationConfigurationPropertyList",
     },
     parsing_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentDataSourceParsingConfigurationPropertyToHclTerraform, true)(struct!.parsingConfiguration),
+      value: cdktn.listMapperHcl(tfDataSourceParsingConfigurationPropertyToHclTerraform, true)(struct!.parsingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ParsingConfigurationPropertyList",
@@ -2255,18 +2255,18 @@ export function awsBedrockagentDataSourceVectorIngestionConfigurationPropertyToH
 }
 
 
-export namespace AwsBedrockagentDataSource {
+export namespace TfDataSource {
 export interface DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters AwsBedrockagentDataSource#exclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters TfDataSource#exclusion_filters}
   */
   readonly exclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters AwsBedrockagentDataSource#inclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters TfDataSource#inclusion_filters}
   */
   readonly inclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#object_type AwsBedrockagentDataSource#object_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#object_type TfDataSource#object_type}
   */
   readonly objectType: string;
 }
@@ -2395,7 +2395,7 @@ export interface DataSourceConfigurationConfluenceConfigurationCrawlerConfigurat
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filters AwsBedrockagentDataSource#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filters TfDataSource#filters}
   */
   readonly filters?: DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty[] | cdktn.IResolvable;
 }
@@ -2481,13 +2481,13 @@ export class DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationF
 }
 export interface DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type AwsBedrockagentDataSource#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type TfDataSource#type}
   */
   readonly type: string;
   /**
   * pattern_object_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#pattern_object_filter AwsBedrockagentDataSource#pattern_object_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#pattern_object_filter TfDataSource#pattern_object_filter}
   */
   readonly patternObjectFilter?: DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty[] | cdktn.IResolvable;
 }
@@ -2594,7 +2594,7 @@ export interface DataSourceConfigurationConfluenceConfigurationCrawlerConfigurat
   /**
   * filter_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filter_configuration AwsBedrockagentDataSource#filter_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filter_configuration TfDataSource#filter_configuration}
   */
   readonly filterConfiguration?: DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationFilterConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -2680,19 +2680,19 @@ export class DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationP
 }
 export interface DataSourceConfigurationConfluenceConfigurationSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#auth_type AwsBedrockagentDataSource#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#auth_type TfDataSource#auth_type}
   */
   readonly authType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#credentials_secret_arn AwsBedrockagentDataSource#credentials_secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#credentials_secret_arn TfDataSource#credentials_secret_arn}
   */
   readonly credentialsSecretArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_type AwsBedrockagentDataSource#host_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_type TfDataSource#host_type}
   */
   readonly hostType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_url AwsBedrockagentDataSource#host_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_url TfDataSource#host_url}
   */
   readonly hostUrl: string;
 }
@@ -2834,13 +2834,13 @@ export interface ConfluenceConfigurationProperty {
   /**
   * crawler_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration AwsBedrockagentDataSource#crawler_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration TfDataSource#crawler_configuration}
   */
   readonly crawlerConfiguration?: DataSourceConfigurationConfluenceConfigurationCrawlerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration AwsBedrockagentDataSource#source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration TfDataSource#source_configuration}
   */
   readonly sourceConfiguration?: DataSourceConfigurationConfluenceConfigurationSourceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -2948,11 +2948,11 @@ export class ConfluenceConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DeletionProtectionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#deletion_protection_status AwsBedrockagentDataSource#deletion_protection_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#deletion_protection_status TfDataSource#deletion_protection_status}
   */
   readonly deletionProtectionStatus: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#deletion_protection_threshold AwsBedrockagentDataSource#deletion_protection_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#deletion_protection_threshold TfDataSource#deletion_protection_threshold}
   */
   readonly deletionProtectionThreshold?: number;
 }
@@ -3057,7 +3057,7 @@ export class DeletionProtectionConfigurationPropertyList extends cdktn.ComplexLi
 }
 export interface AudioExtractionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#audio_extraction_status AwsBedrockagentDataSource#audio_extraction_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#audio_extraction_status TfDataSource#audio_extraction_status}
   */
   readonly audioExtractionStatus: string;
 }
@@ -3140,7 +3140,7 @@ export class AudioExtractionConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface ImageExtractionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#image_extraction_status AwsBedrockagentDataSource#image_extraction_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#image_extraction_status TfDataSource#image_extraction_status}
   */
   readonly imageExtractionStatus: string;
 }
@@ -3223,7 +3223,7 @@ export class ImageExtractionConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface VideoExtractionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#video_extraction_status AwsBedrockagentDataSource#video_extraction_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#video_extraction_status TfDataSource#video_extraction_status}
   */
   readonly videoExtractionStatus: string;
 }
@@ -3308,19 +3308,19 @@ export interface MediaExtractionConfigurationProperty {
   /**
   * audio_extraction_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#audio_extraction_configuration AwsBedrockagentDataSource#audio_extraction_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#audio_extraction_configuration TfDataSource#audio_extraction_configuration}
   */
   readonly audioExtractionConfiguration?: AudioExtractionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * image_extraction_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#image_extraction_configuration AwsBedrockagentDataSource#image_extraction_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#image_extraction_configuration TfDataSource#image_extraction_configuration}
   */
   readonly imageExtractionConfiguration?: ImageExtractionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * video_extraction_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#video_extraction_configuration AwsBedrockagentDataSource#video_extraction_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#video_extraction_configuration TfDataSource#video_extraction_configuration}
   */
   readonly videoExtractionConfiguration?: VideoExtractionConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -3450,19 +3450,19 @@ export class MediaExtractionConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface ManagedKnowledgeBaseConnectorConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#connector_parameters AwsBedrockagentDataSource#connector_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#connector_parameters TfDataSource#connector_parameters}
   */
   readonly connectorParameters?: string;
   /**
   * deletion_protection_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#deletion_protection_configuration AwsBedrockagentDataSource#deletion_protection_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#deletion_protection_configuration TfDataSource#deletion_protection_configuration}
   */
   readonly deletionProtectionConfiguration?: DeletionProtectionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * media_extraction_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#media_extraction_configuration AwsBedrockagentDataSource#media_extraction_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#media_extraction_configuration TfDataSource#media_extraction_configuration}
   */
   readonly mediaExtractionConfiguration?: MediaExtractionConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -3592,15 +3592,15 @@ export class ManagedKnowledgeBaseConnectorConfigurationPropertyList extends cdkt
 }
 export interface S3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bucket_arn AwsBedrockagentDataSource#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bucket_arn TfDataSource#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bucket_owner_account_id AwsBedrockagentDataSource#bucket_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bucket_owner_account_id TfDataSource#bucket_owner_account_id}
   */
   readonly bucketOwnerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_prefixes AwsBedrockagentDataSource#inclusion_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_prefixes TfDataSource#inclusion_prefixes}
   */
   readonly inclusionPrefixes?: string[];
 }
@@ -3727,15 +3727,15 @@ export class S3ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters AwsBedrockagentDataSource#exclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters TfDataSource#exclusion_filters}
   */
   readonly exclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters AwsBedrockagentDataSource#inclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters TfDataSource#inclusion_filters}
   */
   readonly inclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#object_type AwsBedrockagentDataSource#object_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#object_type TfDataSource#object_type}
   */
   readonly objectType: string;
 }
@@ -3864,7 +3864,7 @@ export interface DataSourceConfigurationSalesforceConfigurationCrawlerConfigurat
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filters AwsBedrockagentDataSource#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filters TfDataSource#filters}
   */
   readonly filters?: DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty[] | cdktn.IResolvable;
 }
@@ -3950,13 +3950,13 @@ export class DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationF
 }
 export interface DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type AwsBedrockagentDataSource#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type TfDataSource#type}
   */
   readonly type: string;
   /**
   * pattern_object_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#pattern_object_filter AwsBedrockagentDataSource#pattern_object_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#pattern_object_filter TfDataSource#pattern_object_filter}
   */
   readonly patternObjectFilter?: DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty[] | cdktn.IResolvable;
 }
@@ -4063,7 +4063,7 @@ export interface DataSourceConfigurationSalesforceConfigurationCrawlerConfigurat
   /**
   * filter_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filter_configuration AwsBedrockagentDataSource#filter_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filter_configuration TfDataSource#filter_configuration}
   */
   readonly filterConfiguration?: DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4149,15 +4149,15 @@ export class DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationP
 }
 export interface DataSourceConfigurationSalesforceConfigurationSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#auth_type AwsBedrockagentDataSource#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#auth_type TfDataSource#auth_type}
   */
   readonly authType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#credentials_secret_arn AwsBedrockagentDataSource#credentials_secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#credentials_secret_arn TfDataSource#credentials_secret_arn}
   */
   readonly credentialsSecretArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_url AwsBedrockagentDataSource#host_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_url TfDataSource#host_url}
   */
   readonly hostUrl: string;
 }
@@ -4280,13 +4280,13 @@ export interface SalesforceConfigurationProperty {
   /**
   * crawler_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration AwsBedrockagentDataSource#crawler_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration TfDataSource#crawler_configuration}
   */
   readonly crawlerConfiguration?: DataSourceConfigurationSalesforceConfigurationCrawlerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration AwsBedrockagentDataSource#source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration TfDataSource#source_configuration}
   */
   readonly sourceConfiguration?: DataSourceConfigurationSalesforceConfigurationSourceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4394,15 +4394,15 @@ export class SalesforceConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters AwsBedrockagentDataSource#exclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters TfDataSource#exclusion_filters}
   */
   readonly exclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters AwsBedrockagentDataSource#inclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters TfDataSource#inclusion_filters}
   */
   readonly inclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#object_type AwsBedrockagentDataSource#object_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#object_type TfDataSource#object_type}
   */
   readonly objectType: string;
 }
@@ -4531,7 +4531,7 @@ export interface DataSourceConfigurationSharePointConfigurationCrawlerConfigurat
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filters AwsBedrockagentDataSource#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filters TfDataSource#filters}
   */
   readonly filters?: DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterFiltersProperty[] | cdktn.IResolvable;
 }
@@ -4617,13 +4617,13 @@ export class DataSourceConfigurationSharePointConfigurationCrawlerConfigurationF
 }
 export interface DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type AwsBedrockagentDataSource#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type TfDataSource#type}
   */
   readonly type: string;
   /**
   * pattern_object_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#pattern_object_filter AwsBedrockagentDataSource#pattern_object_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#pattern_object_filter TfDataSource#pattern_object_filter}
   */
   readonly patternObjectFilter?: DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilterProperty[] | cdktn.IResolvable;
 }
@@ -4730,7 +4730,7 @@ export interface DataSourceConfigurationSharePointConfigurationCrawlerConfigurat
   /**
   * filter_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filter_configuration AwsBedrockagentDataSource#filter_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#filter_configuration TfDataSource#filter_configuration}
   */
   readonly filterConfiguration?: DataSourceConfigurationSharePointConfigurationCrawlerConfigurationFilterConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4816,27 +4816,27 @@ export class DataSourceConfigurationSharePointConfigurationCrawlerConfigurationP
 }
 export interface DataSourceConfigurationSharePointConfigurationSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#auth_type AwsBedrockagentDataSource#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#auth_type TfDataSource#auth_type}
   */
   readonly authType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#credentials_secret_arn AwsBedrockagentDataSource#credentials_secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#credentials_secret_arn TfDataSource#credentials_secret_arn}
   */
   readonly credentialsSecretArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#domain AwsBedrockagentDataSource#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#domain TfDataSource#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_type AwsBedrockagentDataSource#host_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#host_type TfDataSource#host_type}
   */
   readonly hostType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#site_urls AwsBedrockagentDataSource#site_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#site_urls TfDataSource#site_urls}
   */
   readonly siteUrls: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#tenant_id AwsBedrockagentDataSource#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#tenant_id TfDataSource#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -5019,13 +5019,13 @@ export interface SharePointConfigurationProperty {
   /**
   * crawler_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration AwsBedrockagentDataSource#crawler_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration TfDataSource#crawler_configuration}
   */
   readonly crawlerConfiguration?: DataSourceConfigurationSharePointConfigurationCrawlerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration AwsBedrockagentDataSource#source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration TfDataSource#source_configuration}
   */
   readonly sourceConfiguration?: DataSourceConfigurationSharePointConfigurationSourceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -5133,11 +5133,11 @@ export class SharePointConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface CrawlerLimitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_pages AwsBedrockagentDataSource#max_pages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_pages TfDataSource#max_pages}
   */
   readonly maxPages?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#rate_limit AwsBedrockagentDataSource#rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#rate_limit TfDataSource#rate_limit}
   */
   readonly rateLimit?: number;
 }
@@ -5245,25 +5245,25 @@ export class CrawlerLimitsPropertyList extends cdktn.ComplexList {
 }
 export interface DataSourceConfigurationWebConfigurationCrawlerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters AwsBedrockagentDataSource#exclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#exclusion_filters TfDataSource#exclusion_filters}
   */
   readonly exclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters AwsBedrockagentDataSource#inclusion_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#inclusion_filters TfDataSource#inclusion_filters}
   */
   readonly inclusionFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#scope AwsBedrockagentDataSource#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#scope TfDataSource#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#user_agent AwsBedrockagentDataSource#user_agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#user_agent TfDataSource#user_agent}
   */
   readonly userAgent?: string;
   /**
   * crawler_limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_limits AwsBedrockagentDataSource#crawler_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_limits TfDataSource#crawler_limits}
   */
   readonly crawlerLimits?: CrawlerLimitsProperty[] | cdktn.IResolvable;
 }
@@ -5437,7 +5437,7 @@ export class DataSourceConfigurationWebConfigurationCrawlerConfigurationProperty
 }
 export interface SeedUrlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#url AwsBedrockagentDataSource#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#url TfDataSource#url}
   */
   readonly url?: string;
 }
@@ -5525,7 +5525,7 @@ export interface UrlConfigurationProperty {
   /**
   * seed_urls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#seed_urls AwsBedrockagentDataSource#seed_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#seed_urls TfDataSource#seed_urls}
   */
   readonly seedUrls?: SeedUrlsProperty[] | cdktn.IResolvable;
 }
@@ -5613,7 +5613,7 @@ export interface DataSourceConfigurationWebConfigurationSourceConfigurationPrope
   /**
   * url_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#url_configuration AwsBedrockagentDataSource#url_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#url_configuration TfDataSource#url_configuration}
   */
   readonly urlConfiguration?: UrlConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -5701,13 +5701,13 @@ export interface WebConfigurationProperty {
   /**
   * crawler_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration AwsBedrockagentDataSource#crawler_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#crawler_configuration TfDataSource#crawler_configuration}
   */
   readonly crawlerConfiguration?: DataSourceConfigurationWebConfigurationCrawlerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration AwsBedrockagentDataSource#source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#source_configuration TfDataSource#source_configuration}
   */
   readonly sourceConfiguration?: DataSourceConfigurationWebConfigurationSourceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -5815,43 +5815,43 @@ export class WebConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DataSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type AwsBedrockagentDataSource#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#type TfDataSource#type}
   */
   readonly type: string;
   /**
   * confluence_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#confluence_configuration AwsBedrockagentDataSource#confluence_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#confluence_configuration TfDataSource#confluence_configuration}
   */
   readonly confluenceConfiguration?: ConfluenceConfigurationProperty[] | cdktn.IResolvable;
   /**
   * managed_knowledge_base_connector_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#managed_knowledge_base_connector_configuration AwsBedrockagentDataSource#managed_knowledge_base_connector_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#managed_knowledge_base_connector_configuration TfDataSource#managed_knowledge_base_connector_configuration}
   */
   readonly managedKnowledgeBaseConnectorConfiguration?: ManagedKnowledgeBaseConnectorConfigurationProperty[] | cdktn.IResolvable;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#s3_configuration AwsBedrockagentDataSource#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#s3_configuration TfDataSource#s3_configuration}
   */
   readonly s3Configuration?: S3ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * salesforce_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#salesforce_configuration AwsBedrockagentDataSource#salesforce_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#salesforce_configuration TfDataSource#salesforce_configuration}
   */
   readonly salesforceConfiguration?: SalesforceConfigurationProperty[] | cdktn.IResolvable;
   /**
   * share_point_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#share_point_configuration AwsBedrockagentDataSource#share_point_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#share_point_configuration TfDataSource#share_point_configuration}
   */
   readonly sharePointConfiguration?: SharePointConfigurationProperty[] | cdktn.IResolvable;
   /**
   * web_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#web_configuration AwsBedrockagentDataSource#web_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#web_configuration TfDataSource#web_configuration}
   */
   readonly webConfiguration?: WebConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -6066,7 +6066,7 @@ export class DataSourceConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ServerSideEncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#kms_key_arn AwsBedrockagentDataSource#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#kms_key_arn TfDataSource#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -6154,19 +6154,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#create AwsBedrockagentDataSource#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#create TfDataSource#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#delete AwsBedrockagentDataSource#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#delete TfDataSource#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#update AwsBedrockagentDataSource#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#update TfDataSource#update}
   */
   readonly update?: string;
 }
@@ -6274,11 +6274,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FixedSizeChunkingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_tokens AwsBedrockagentDataSource#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_tokens TfDataSource#max_tokens}
   */
   readonly maxTokens: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#overlap_percentage AwsBedrockagentDataSource#overlap_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#overlap_percentage TfDataSource#overlap_percentage}
   */
   readonly overlapPercentage: number;
 }
@@ -6380,7 +6380,7 @@ export class FixedSizeChunkingConfigurationPropertyList extends cdktn.ComplexLis
 }
 export interface LevelConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_tokens AwsBedrockagentDataSource#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_tokens TfDataSource#max_tokens}
   */
   readonly maxTokens: number;
 }
@@ -6463,13 +6463,13 @@ export class LevelConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface HierarchicalChunkingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#overlap_tokens AwsBedrockagentDataSource#overlap_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#overlap_tokens TfDataSource#overlap_tokens}
   */
   readonly overlapTokens: number;
   /**
   * level_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#level_configuration AwsBedrockagentDataSource#level_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#level_configuration TfDataSource#level_configuration}
   */
   readonly levelConfiguration?: LevelConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -6574,15 +6574,15 @@ export class HierarchicalChunkingConfigurationPropertyList extends cdktn.Complex
 }
 export interface SemanticChunkingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#breakpoint_percentile_threshold AwsBedrockagentDataSource#breakpoint_percentile_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#breakpoint_percentile_threshold TfDataSource#breakpoint_percentile_threshold}
   */
   readonly breakpointPercentileThreshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#buffer_size AwsBedrockagentDataSource#buffer_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#buffer_size TfDataSource#buffer_size}
   */
   readonly bufferSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_token AwsBedrockagentDataSource#max_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#max_token TfDataSource#max_token}
   */
   readonly maxToken: number;
 }
@@ -6703,25 +6703,25 @@ export class SemanticChunkingConfigurationPropertyList extends cdktn.ComplexList
 }
 export interface ChunkingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#chunking_strategy AwsBedrockagentDataSource#chunking_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#chunking_strategy TfDataSource#chunking_strategy}
   */
   readonly chunkingStrategy: string;
   /**
   * fixed_size_chunking_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#fixed_size_chunking_configuration AwsBedrockagentDataSource#fixed_size_chunking_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#fixed_size_chunking_configuration TfDataSource#fixed_size_chunking_configuration}
   */
   readonly fixedSizeChunkingConfiguration?: FixedSizeChunkingConfigurationProperty[] | cdktn.IResolvable;
   /**
   * hierarchical_chunking_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#hierarchical_chunking_configuration AwsBedrockagentDataSource#hierarchical_chunking_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#hierarchical_chunking_configuration TfDataSource#hierarchical_chunking_configuration}
   */
   readonly hierarchicalChunkingConfiguration?: HierarchicalChunkingConfigurationProperty[] | cdktn.IResolvable;
   /**
   * semantic_chunking_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#semantic_chunking_configuration AwsBedrockagentDataSource#semantic_chunking_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#semantic_chunking_configuration TfDataSource#semantic_chunking_configuration}
   */
   readonly semanticChunkingConfiguration?: SemanticChunkingConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -6870,7 +6870,7 @@ export class ChunkingConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface S3LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#uri AwsBedrockagentDataSource#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#uri TfDataSource#uri}
   */
   readonly uri: string;
 }
@@ -6955,7 +6955,7 @@ export interface IntermediateStorageProperty {
   /**
   * s3_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#s3_location AwsBedrockagentDataSource#s3_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#s3_location TfDataSource#s3_location}
   */
   readonly s3Location?: S3LocationProperty[] | cdktn.IResolvable;
 }
@@ -7041,7 +7041,7 @@ export class IntermediateStoragePropertyList extends cdktn.ComplexList {
 }
 export interface TransformationLambdaConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#lambda_arn AwsBedrockagentDataSource#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#lambda_arn TfDataSource#lambda_arn}
   */
   readonly lambdaArn: string;
 }
@@ -7126,7 +7126,7 @@ export interface TransformationFunctionProperty {
   /**
   * transformation_lambda_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#transformation_lambda_configuration AwsBedrockagentDataSource#transformation_lambda_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#transformation_lambda_configuration TfDataSource#transformation_lambda_configuration}
   */
   readonly transformationLambdaConfiguration?: TransformationLambdaConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -7212,13 +7212,13 @@ export class TransformationFunctionPropertyList extends cdktn.ComplexList {
 }
 export interface TransformationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#step_to_apply AwsBedrockagentDataSource#step_to_apply}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#step_to_apply TfDataSource#step_to_apply}
   */
   readonly stepToApply: string;
   /**
   * transformation_function block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#transformation_function AwsBedrockagentDataSource#transformation_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#transformation_function TfDataSource#transformation_function}
   */
   readonly transformationFunction?: TransformationFunctionProperty[] | cdktn.IResolvable;
 }
@@ -7325,13 +7325,13 @@ export interface CustomTransformationConfigurationProperty {
   /**
   * intermediate_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#intermediate_storage AwsBedrockagentDataSource#intermediate_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#intermediate_storage TfDataSource#intermediate_storage}
   */
   readonly intermediateStorage?: IntermediateStorageProperty[] | cdktn.IResolvable;
   /**
   * transformation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#transformation AwsBedrockagentDataSource#transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#transformation TfDataSource#transformation}
   */
   readonly transformation?: TransformationProperty[] | cdktn.IResolvable;
 }
@@ -7439,7 +7439,7 @@ export class CustomTransformationConfigurationPropertyList extends cdktn.Complex
 }
 export interface BedrockDataAutomationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_modality AwsBedrockagentDataSource#parsing_modality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_modality TfDataSource#parsing_modality}
   */
   readonly parsingModality?: string;
 }
@@ -7525,7 +7525,7 @@ export class BedrockDataAutomationConfigurationPropertyList extends cdktn.Comple
 }
 export interface ParsingPromptProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_prompt_string AwsBedrockagentDataSource#parsing_prompt_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_prompt_string TfDataSource#parsing_prompt_string}
   */
   readonly parsingPromptString: string;
 }
@@ -7608,17 +7608,17 @@ export class ParsingPromptPropertyList extends cdktn.ComplexList {
 }
 export interface BedrockFoundationModelConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#model_arn AwsBedrockagentDataSource#model_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#model_arn TfDataSource#model_arn}
   */
   readonly modelArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_modality AwsBedrockagentDataSource#parsing_modality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_modality TfDataSource#parsing_modality}
   */
   readonly parsingModality?: string;
   /**
   * parsing_prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_prompt AwsBedrockagentDataSource#parsing_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_prompt TfDataSource#parsing_prompt}
   */
   readonly parsingPrompt?: ParsingPromptProperty[] | cdktn.IResolvable;
 }
@@ -7745,19 +7745,19 @@ export class BedrockFoundationModelConfigurationPropertyList extends cdktn.Compl
 }
 export interface ParsingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_strategy AwsBedrockagentDataSource#parsing_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_strategy TfDataSource#parsing_strategy}
   */
   readonly parsingStrategy: string;
   /**
   * bedrock_data_automation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bedrock_data_automation_configuration AwsBedrockagentDataSource#bedrock_data_automation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bedrock_data_automation_configuration TfDataSource#bedrock_data_automation_configuration}
   */
   readonly bedrockDataAutomationConfiguration?: BedrockDataAutomationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * bedrock_foundation_model_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bedrock_foundation_model_configuration AwsBedrockagentDataSource#bedrock_foundation_model_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#bedrock_foundation_model_configuration TfDataSource#bedrock_foundation_model_configuration}
   */
   readonly bedrockFoundationModelConfiguration?: BedrockFoundationModelConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -7886,19 +7886,19 @@ export interface VectorIngestionConfigurationProperty {
   /**
   * chunking_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#chunking_configuration AwsBedrockagentDataSource#chunking_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#chunking_configuration TfDataSource#chunking_configuration}
   */
   readonly chunkingConfiguration?: ChunkingConfigurationProperty[] | cdktn.IResolvable;
   /**
   * custom_transformation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#custom_transformation_configuration AwsBedrockagentDataSource#custom_transformation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#custom_transformation_configuration TfDataSource#custom_transformation_configuration}
   */
   readonly customTransformationConfiguration?: CustomTransformationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * parsing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_configuration AwsBedrockagentDataSource#parsing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_data_source#parsing_configuration TfDataSource#parsing_configuration}
   */
   readonly parsingConfiguration?: ParsingConfigurationProperty[] | cdktn.IResolvable;
 }

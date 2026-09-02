@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAutoscalingTrafficSourceAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfTrafficSourceAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#autoscaling_group_name AwsAutoscalingTrafficSourceAttachment#autoscaling_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#autoscaling_group_name TfTrafficSourceAttachment#autoscaling_group_name}
   */
   readonly autoscalingGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#id AwsAutoscalingTrafficSourceAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#id TfTrafficSourceAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,27 +20,27 @@ export interface AwsAutoscalingTrafficSourceAttachmentConfig extends cdktn.Terra
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#region AwsAutoscalingTrafficSourceAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#region TfTrafficSourceAttachment#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#timeouts AwsAutoscalingTrafficSourceAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#timeouts TfTrafficSourceAttachment#timeouts}
   */
-  readonly timeouts?: AwsAutoscalingTrafficSourceAttachment.TimeoutsProperty;
+  readonly timeouts?: TfTrafficSourceAttachment.TimeoutsProperty;
   /**
   * traffic_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#traffic_source AwsAutoscalingTrafficSourceAttachment#traffic_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#traffic_source TfTrafficSourceAttachment#traffic_source}
   */
-  readonly trafficSource?: AwsAutoscalingTrafficSourceAttachment.TrafficSourceProperty;
+  readonly trafficSource?: TfTrafficSourceAttachment.TrafficSourceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment aws_autoscaling_traffic_source_attachment}
 */
-export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResource {
+export class TfTrafficSourceAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAutoscalingTrafficSourceAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTrafficSourceAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAutoscalingTrafficSourceAttachment to import
-  * @param importFromId The id of the existing AwsAutoscalingTrafficSourceAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAutoscalingTrafficSourceAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfTrafficSourceAttachment to import
+  * @param importFromId The id of the existing TfTrafficSourceAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTrafficSourceAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscaling_traffic_source_attachment", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAutoscalingTrafficSourceAttachmentConfig
+  * @param options TfTrafficSourceAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAutoscalingTrafficSourceAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfTrafficSourceAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscaling_traffic_source_attachment',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsAutoscalingTrafficSourceAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTrafficSourceAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsAutoscalingTrafficSourceAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfTrafficSourceAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -161,11 +161,11 @@ export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResour
   }
 
   // traffic_source - computed: false, optional: true, required: false
-  private _trafficSource = new AwsAutoscalingTrafficSourceAttachment.TrafficSourcePropertyOutputReference(this, "traffic_source");
+  private _trafficSource = new TfTrafficSourceAttachment.TrafficSourcePropertyOutputReference(this, "traffic_source");
   public get trafficSource() {
     return this._trafficSource;
   }
-  public putTrafficSource(value: AwsAutoscalingTrafficSourceAttachment.TrafficSourceProperty) {
+  public putTrafficSource(value: TfTrafficSourceAttachment.TrafficSourceProperty) {
     this._trafficSource.internalValue = value;
   }
   public resetTrafficSource() {
@@ -185,8 +185,8 @@ export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResour
       autoscaling_group_name: cdktn.stringToTerraform(this._autoscalingGroupName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsAutoscalingTrafficSourceAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      traffic_source: awsAutoscalingTrafficSourceAttachmentTrafficSourcePropertyToTerraform(this._trafficSource.internalValue),
+      timeouts: tfTrafficSourceAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      traffic_source: tfTrafficSourceAttachmentTrafficSourcePropertyToTerraform(this._trafficSource.internalValue),
     };
   }
 
@@ -211,16 +211,16 @@ export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResour
         storageClassType: "string",
       },
       timeouts: {
-        value: awsAutoscalingTrafficSourceAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTrafficSourceAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsAutoscalingTrafficSourceAttachment.TimeoutsProperty",
+        storageClassType: "TfTrafficSourceAttachment.TimeoutsProperty",
       },
       traffic_source: {
-        value: awsAutoscalingTrafficSourceAttachmentTrafficSourcePropertyToHclTerraform(this._trafficSource.internalValue),
+        value: tfTrafficSourceAttachmentTrafficSourcePropertyToHclTerraform(this._trafficSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAutoscalingTrafficSourceAttachment.TrafficSourcePropertyList",
+        storageClassType: "TfTrafficSourceAttachment.TrafficSourcePropertyList",
       },
     };
 
@@ -229,7 +229,7 @@ export class AwsAutoscalingTrafficSourceAttachment extends cdktn.TerraformResour
   }
 }
 
-export function awsAutoscalingTrafficSourceAttachmentTimeoutsPropertyToTerraform(struct?: AwsAutoscalingTrafficSourceAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTrafficSourceAttachmentTimeoutsPropertyToTerraform(struct?: TfTrafficSourceAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function awsAutoscalingTrafficSourceAttachmentTimeoutsPropertyToTerraform
 }
 
 
-export function awsAutoscalingTrafficSourceAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsAutoscalingTrafficSourceAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTrafficSourceAttachmentTimeoutsPropertyToHclTerraform(struct?: TfTrafficSourceAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function awsAutoscalingTrafficSourceAttachmentTimeoutsPropertyToHclTerraf
 }
 
 
-export function awsAutoscalingTrafficSourceAttachmentTrafficSourcePropertyToTerraform(struct?: AwsAutoscalingTrafficSourceAttachment.TrafficSourcePropertyOutputReference | AwsAutoscalingTrafficSourceAttachment.TrafficSourceProperty): any {
+export function tfTrafficSourceAttachmentTrafficSourcePropertyToTerraform(struct?: TfTrafficSourceAttachment.TrafficSourcePropertyOutputReference | TfTrafficSourceAttachment.TrafficSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function awsAutoscalingTrafficSourceAttachmentTrafficSourcePropertyToTerr
 }
 
 
-export function awsAutoscalingTrafficSourceAttachmentTrafficSourcePropertyToHclTerraform(struct?: AwsAutoscalingTrafficSourceAttachment.TrafficSourcePropertyOutputReference | AwsAutoscalingTrafficSourceAttachment.TrafficSourceProperty): any {
+export function tfTrafficSourceAttachmentTrafficSourcePropertyToHclTerraform(struct?: TfTrafficSourceAttachment.TrafficSourcePropertyOutputReference | TfTrafficSourceAttachment.TrafficSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,14 +303,14 @@ export function awsAutoscalingTrafficSourceAttachmentTrafficSourcePropertyToHclT
 }
 
 
-export namespace AwsAutoscalingTrafficSourceAttachment {
+export namespace TfTrafficSourceAttachment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#create AwsAutoscalingTrafficSourceAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#create TfTrafficSourceAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#delete AwsAutoscalingTrafficSourceAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#delete TfTrafficSourceAttachment#delete}
   */
   readonly delete?: string;
 }
@@ -396,11 +396,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TrafficSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#identifier AwsAutoscalingTrafficSourceAttachment#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#identifier TfTrafficSourceAttachment#identifier}
   */
   readonly identifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#type AwsAutoscalingTrafficSourceAttachment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_traffic_source_attachment#type TfTrafficSourceAttachment#type}
   */
   readonly type: string;
 }

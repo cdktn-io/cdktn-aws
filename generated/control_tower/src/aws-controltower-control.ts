@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsControltowerControlConfig extends cdktn.TerraformMetaArguments {
+export interface TfControlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#control_identifier AwsControltowerControl#control_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#control_identifier TfControl#control_identifier}
   */
   readonly controlIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#id AwsControltowerControl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#id TfControl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,31 +20,31 @@ export interface AwsControltowerControlConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#region AwsControltowerControl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#region TfControl#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#target_identifier AwsControltowerControl#target_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#target_identifier TfControl#target_identifier}
   */
   readonly targetIdentifier: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#parameters AwsControltowerControl#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#parameters TfControl#parameters}
   */
-  readonly parameters?: AwsControltowerControl.ParametersProperty[] | cdktn.IResolvable;
+  readonly parameters?: TfControl.ParametersProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#timeouts AwsControltowerControl#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#timeouts TfControl#timeouts}
   */
-  readonly timeouts?: AwsControltowerControl.TimeoutsProperty;
+  readonly timeouts?: TfControl.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control aws_controltower_control}
 */
-export class AwsControltowerControl extends cdktn.TerraformResource {
+export class TfControl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsControltowerControl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsControltowerControl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfControl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsControltowerControl to import
-  * @param importFromId The id of the existing AwsControltowerControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsControltowerControl to import is found
+  * @param importToId The construct id used in the generated config for the TfControl to import
+  * @param importFromId The id of the existing TfControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfControl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_controltower_control", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsControltowerControl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsControltowerControlConfig
+  * @param options TfControlConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsControltowerControlConfig) {
+  public constructor(scope: Construct, id: string, config: TfControlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_controltower_control',
       terraformGeneratorMetadata: {
@@ -168,11 +168,11 @@ export class AwsControltowerControl extends cdktn.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters = new AwsControltowerControl.ParametersPropertyList(this, "parameters", true);
+  private _parameters = new TfControl.ParametersPropertyList(this, "parameters", true);
   public get parameters() {
     return this._parameters;
   }
-  public putParameters(value: AwsControltowerControl.ParametersProperty[] | cdktn.IResolvable) {
+  public putParameters(value: TfControl.ParametersProperty[] | cdktn.IResolvable) {
     this._parameters.internalValue = value;
   }
   public resetParameters() {
@@ -184,11 +184,11 @@ export class AwsControltowerControl extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsControltowerControl.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfControl.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsControltowerControl.TimeoutsProperty) {
+  public putTimeouts(value: TfControl.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -209,8 +209,8 @@ export class AwsControltowerControl extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       target_identifier: cdktn.stringToTerraform(this._targetIdentifier),
-      parameters: cdktn.listMapper(awsControltowerControlParametersPropertyToTerraform, true)(this._parameters.internalValue),
-      timeouts: awsControltowerControlTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      parameters: cdktn.listMapper(tfControlParametersPropertyToTerraform, true)(this._parameters.internalValue),
+      timeouts: tfControlTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -241,16 +241,16 @@ export class AwsControltowerControl extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       parameters: {
-        value: cdktn.listMapperHcl(awsControltowerControlParametersPropertyToHclTerraform, true)(this._parameters.internalValue),
+        value: cdktn.listMapperHcl(tfControlParametersPropertyToHclTerraform, true)(this._parameters.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsControltowerControl.ParametersPropertyList",
+        storageClassType: "TfControl.ParametersPropertyList",
       },
       timeouts: {
-        value: awsControltowerControlTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfControlTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsControltowerControl.TimeoutsProperty",
+        storageClassType: "TfControl.TimeoutsProperty",
       },
     };
 
@@ -259,7 +259,7 @@ export class AwsControltowerControl extends cdktn.TerraformResource {
   }
 }
 
-export function awsControltowerControlParametersPropertyToTerraform(struct?: AwsControltowerControl.ParametersProperty | cdktn.IResolvable): any {
+export function tfControlParametersPropertyToTerraform(struct?: TfControl.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function awsControltowerControlParametersPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsControltowerControlParametersPropertyToHclTerraform(struct?: AwsControltowerControl.ParametersProperty | cdktn.IResolvable): any {
+export function tfControlParametersPropertyToHclTerraform(struct?: TfControl.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function awsControltowerControlParametersPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsControltowerControlTimeoutsPropertyToTerraform(struct?: AwsControltowerControl.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfControlTimeoutsPropertyToTerraform(struct?: TfControl.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function awsControltowerControlTimeoutsPropertyToTerraform(struct?: AwsCo
 }
 
 
-export function awsControltowerControlTimeoutsPropertyToHclTerraform(struct?: AwsControltowerControl.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfControlTimeoutsPropertyToHclTerraform(struct?: TfControl.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,14 +340,14 @@ export function awsControltowerControlTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsControltowerControl {
+export namespace TfControl {
 export interface ParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#key AwsControltowerControl#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#key TfControl#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#value AwsControltowerControl#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#value TfControl#value}
   */
   readonly value: string;
 }
@@ -449,15 +449,15 @@ export class ParametersPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#create AwsControltowerControl#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#create TfControl#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#delete AwsControltowerControl#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#delete TfControl#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#update AwsControltowerControl#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_control#update TfControl#update}
   */
   readonly update?: string;
 }

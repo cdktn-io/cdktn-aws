@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApprunnerCustomDomainAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfCustomDomainAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#domain_name AwsApprunnerCustomDomainAssociation#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#domain_name TfCustomDomainAssociation#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#enable_www_subdomain AwsApprunnerCustomDomainAssociation#enable_www_subdomain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#enable_www_subdomain TfCustomDomainAssociation#enable_www_subdomain}
   */
   readonly enableWwwSubdomain?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#id AwsApprunnerCustomDomainAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#id TfCustomDomainAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface AwsApprunnerCustomDomainAssociationConfig extends cdktn.Terrafo
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#region AwsApprunnerCustomDomainAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#region TfCustomDomainAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#service_arn AwsApprunnerCustomDomainAssociation#service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#service_arn TfCustomDomainAssociation#service_arn}
   */
   readonly serviceArn: string;
 }
@@ -36,7 +36,7 @@ export interface AwsApprunnerCustomDomainAssociationConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association aws_apprunner_custom_domain_association}
 */
-export class AwsApprunnerCustomDomainAssociation extends cdktn.TerraformResource {
+export class TfCustomDomainAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsApprunnerCustomDomainAssociation extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApprunnerCustomDomainAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCustomDomainAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApprunnerCustomDomainAssociation to import
-  * @param importFromId The id of the existing AwsApprunnerCustomDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApprunnerCustomDomainAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfCustomDomainAssociation to import
+  * @param importFromId The id of the existing TfCustomDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_custom_domain_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCustomDomainAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apprunner_custom_domain_association", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsApprunnerCustomDomainAssociation extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApprunnerCustomDomainAssociationConfig
+  * @param options TfCustomDomainAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApprunnerCustomDomainAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfCustomDomainAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apprunner_custom_domain_association',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class AwsApprunnerCustomDomainAssociation extends cdktn.TerraformResource
   // ==========
 
   // certificate_validation_records - computed: true, optional: false, required: false
-  private _certificateValidationRecords = new AwsApprunnerCustomDomainAssociation.CertificateValidationRecordsPropertyList(this, "certificate_validation_records", true);
+  private _certificateValidationRecords = new TfCustomDomainAssociation.CertificateValidationRecordsPropertyList(this, "certificate_validation_records", true);
   public get certificateValidationRecords() {
     return this._certificateValidationRecords;
   }
@@ -238,7 +238,7 @@ export class AwsApprunnerCustomDomainAssociation extends cdktn.TerraformResource
   }
 }
 
-export function awsApprunnerCustomDomainAssociationCertificateValidationRecordsPropertyToTerraform(struct?: AwsApprunnerCustomDomainAssociation.CertificateValidationRecordsProperty): any {
+export function tfCustomDomainAssociationCertificateValidationRecordsPropertyToTerraform(struct?: TfCustomDomainAssociation.CertificateValidationRecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function awsApprunnerCustomDomainAssociationCertificateValidationRecordsP
 }
 
 
-export function awsApprunnerCustomDomainAssociationCertificateValidationRecordsPropertyToHclTerraform(struct?: AwsApprunnerCustomDomainAssociation.CertificateValidationRecordsProperty): any {
+export function tfCustomDomainAssociationCertificateValidationRecordsPropertyToHclTerraform(struct?: TfCustomDomainAssociation.CertificateValidationRecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsApprunnerCustomDomainAssociationCertificateValidationRecordsP
 }
 
 
-export namespace AwsApprunnerCustomDomainAssociation {
+export namespace TfCustomDomainAssociation {
 export interface CertificateValidationRecordsProperty {
 }
 export class CertificateValidationRecordsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCognitoUserPoolSigningCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfUserPoolSigningCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#id DataAwsCognitoUserPoolSigningCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#id DataTfUserPoolSigningCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataAwsCognitoUserPoolSigningCertificateConfig extends cdktn.Te
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#region DataAwsCognitoUserPoolSigningCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#region DataTfUserPoolSigningCertificate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#user_pool_id DataAwsCognitoUserPoolSigningCertificate#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#user_pool_id DataTfUserPoolSigningCertificate#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsCognitoUserPoolSigningCertificateConfig extends cdktn.Te
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate aws_cognito_user_pool_signing_certificate}
 */
-export class DataAwsCognitoUserPoolSigningCertificate extends cdktn.TerraformDataSource {
+export class DataTfUserPoolSigningCertificate extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsCognitoUserPoolSigningCertificate extends cdktn.TerraformDat
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCognitoUserPoolSigningCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfUserPoolSigningCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCognitoUserPoolSigningCertificate to import
-  * @param importFromId The id of the existing DataAwsCognitoUserPoolSigningCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCognitoUserPoolSigningCertificate to import is found
+  * @param importToId The construct id used in the generated config for the DataTfUserPoolSigningCertificate to import
+  * @param importFromId The id of the existing DataTfUserPoolSigningCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_signing_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfUserPoolSigningCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_pool_signing_certificate", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsCognitoUserPoolSigningCertificate extends cdktn.TerraformDat
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCognitoUserPoolSigningCertificateConfig
+  * @param options DataTfUserPoolSigningCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCognitoUserPoolSigningCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfUserPoolSigningCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_pool_signing_certificate',
       terraformGeneratorMetadata: {

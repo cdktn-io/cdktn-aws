@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsDevopsguruResourceCollectionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfResourceCollectionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_resource_collection#region DataAwsDevopsguruResourceCollection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_resource_collection#region DataTfResourceCollection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_resource_collection#type DataAwsDevopsguruResourceCollection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_resource_collection#type DataTfResourceCollection#type}
   */
   readonly type: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsDevopsguruResourceCollectionConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_resource_collection aws_devopsguru_resource_collection}
 */
-export class DataAwsDevopsguruResourceCollection extends cdktn.TerraformDataSource {
+export class DataTfResourceCollection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsDevopsguruResourceCollection extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsDevopsguruResourceCollection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfResourceCollection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsDevopsguruResourceCollection to import
-  * @param importFromId The id of the existing DataAwsDevopsguruResourceCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_resource_collection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsDevopsguruResourceCollection to import is found
+  * @param importToId The construct id used in the generated config for the DataTfResourceCollection to import
+  * @param importFromId The id of the existing DataTfResourceCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_resource_collection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfResourceCollection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devopsguru_resource_collection", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsDevopsguruResourceCollection extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsDevopsguruResourceCollectionConfig
+  * @param options DataTfResourceCollectionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsDevopsguruResourceCollectionConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfResourceCollectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_devopsguru_resource_collection',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataAwsDevopsguruResourceCollection extends cdktn.TerraformDataSour
   // ==========
 
   // cloudformation - computed: true, optional: false, required: false
-  private _cloudformation = new DataAwsDevopsguruResourceCollection.CloudformationPropertyList(this, "cloudformation", false);
+  private _cloudformation = new DataTfResourceCollection.CloudformationPropertyList(this, "cloudformation", false);
   public get cloudformation() {
     return this._cloudformation;
   }
@@ -105,7 +105,7 @@ export class DataAwsDevopsguruResourceCollection extends cdktn.TerraformDataSour
   }
 
   // tags - computed: true, optional: false, required: false
-  private _tags = new DataAwsDevopsguruResourceCollection.TagsPropertyList(this, "tags", false);
+  private _tags = new DataTfResourceCollection.TagsPropertyList(this, "tags", false);
   public get tags() {
     return this._tags;
   }
@@ -155,7 +155,7 @@ export class DataAwsDevopsguruResourceCollection extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsDevopsguruResourceCollectionCloudformationPropertyToTerraform(struct?: DataAwsDevopsguruResourceCollection.CloudformationProperty): any {
+export function dataTfResourceCollectionCloudformationPropertyToTerraform(struct?: DataTfResourceCollection.CloudformationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -165,7 +165,7 @@ export function dataAwsDevopsguruResourceCollectionCloudformationPropertyToTerra
 }
 
 
-export function dataAwsDevopsguruResourceCollectionCloudformationPropertyToHclTerraform(struct?: DataAwsDevopsguruResourceCollection.CloudformationProperty): any {
+export function dataTfResourceCollectionCloudformationPropertyToHclTerraform(struct?: DataTfResourceCollection.CloudformationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -176,7 +176,7 @@ export function dataAwsDevopsguruResourceCollectionCloudformationPropertyToHclTe
 }
 
 
-export function dataAwsDevopsguruResourceCollectionTagsPropertyToTerraform(struct?: DataAwsDevopsguruResourceCollection.TagsProperty): any {
+export function dataTfResourceCollectionTagsPropertyToTerraform(struct?: DataTfResourceCollection.TagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function dataAwsDevopsguruResourceCollectionTagsPropertyToTerraform(struc
 }
 
 
-export function dataAwsDevopsguruResourceCollectionTagsPropertyToHclTerraform(struct?: DataAwsDevopsguruResourceCollection.TagsProperty): any {
+export function dataTfResourceCollectionTagsPropertyToHclTerraform(struct?: DataTfResourceCollection.TagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -197,7 +197,7 @@ export function dataAwsDevopsguruResourceCollectionTagsPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsDevopsguruResourceCollection {
+export namespace DataTfResourceCollection {
 export interface CloudformationProperty {
 }
 export class CloudformationPropertyOutputReference extends cdktn.ComplexObject {

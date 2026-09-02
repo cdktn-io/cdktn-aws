@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAuditmanagerAccountRegistrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountRegistrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#delegated_admin_account AwsAuditmanagerAccountRegistration#delegated_admin_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#delegated_admin_account TfAccountRegistration#delegated_admin_account}
   */
   readonly delegatedAdminAccount?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#deregister_on_destroy AwsAuditmanagerAccountRegistration#deregister_on_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#deregister_on_destroy TfAccountRegistration#deregister_on_destroy}
   */
   readonly deregisterOnDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#kms_key AwsAuditmanagerAccountRegistration#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#kms_key TfAccountRegistration#kms_key}
   */
   readonly kmsKey?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#region AwsAuditmanagerAccountRegistration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#region TfAccountRegistration#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface AwsAuditmanagerAccountRegistrationConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration aws_auditmanager_account_registration}
 */
-export class AwsAuditmanagerAccountRegistration extends cdktn.TerraformResource {
+export class TfAccountRegistration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsAuditmanagerAccountRegistration extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAuditmanagerAccountRegistration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccountRegistration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAuditmanagerAccountRegistration to import
-  * @param importFromId The id of the existing AwsAuditmanagerAccountRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAuditmanagerAccountRegistration to import is found
+  * @param importToId The construct id used in the generated config for the TfAccountRegistration to import
+  * @param importFromId The id of the existing TfAccountRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_account_registration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccountRegistration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_account_registration", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsAuditmanagerAccountRegistration extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAuditmanagerAccountRegistrationConfig = {}
+  * @param options TfAccountRegistrationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsAuditmanagerAccountRegistrationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfAccountRegistrationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_account_registration',
       terraformGeneratorMetadata: {

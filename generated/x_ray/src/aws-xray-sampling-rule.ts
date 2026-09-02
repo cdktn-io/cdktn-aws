@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsXraySamplingRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfSamplingRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#attributes AwsXraySamplingRule#attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#attributes TfSamplingRule#attributes}
   */
   readonly attributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#fixed_rate AwsXraySamplingRule#fixed_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#fixed_rate TfSamplingRule#fixed_rate}
   */
   readonly fixedRate: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#host AwsXraySamplingRule#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#host TfSamplingRule#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#http_method AwsXraySamplingRule#http_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#http_method TfSamplingRule#http_method}
   */
   readonly httpMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#id AwsXraySamplingRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#id TfSamplingRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#priority AwsXraySamplingRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#priority TfSamplingRule#priority}
   */
   readonly priority: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#region AwsXraySamplingRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#region TfSamplingRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#reservoir_size AwsXraySamplingRule#reservoir_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#reservoir_size TfSamplingRule#reservoir_size}
   */
   readonly reservoirSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#resource_arn AwsXraySamplingRule#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#resource_arn TfSamplingRule#resource_arn}
   */
   readonly resourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#rule_name AwsXraySamplingRule#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#rule_name TfSamplingRule#rule_name}
   */
   readonly ruleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#service_name AwsXraySamplingRule#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#service_name TfSamplingRule#service_name}
   */
   readonly serviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#service_type AwsXraySamplingRule#service_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#service_type TfSamplingRule#service_type}
   */
   readonly serviceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#tags AwsXraySamplingRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#tags TfSamplingRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#tags_all AwsXraySamplingRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#tags_all TfSamplingRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#url_path AwsXraySamplingRule#url_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#url_path TfSamplingRule#url_path}
   */
   readonly urlPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#version AwsXraySamplingRule#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#version TfSamplingRule#version}
   */
   readonly version: number;
 }
@@ -80,7 +80,7 @@ export interface AwsXraySamplingRuleConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule aws_xray_sampling_rule}
 */
-export class AwsXraySamplingRule extends cdktn.TerraformResource {
+export class TfSamplingRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class AwsXraySamplingRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsXraySamplingRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSamplingRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsXraySamplingRule to import
-  * @param importFromId The id of the existing AwsXraySamplingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsXraySamplingRule to import is found
+  * @param importToId The construct id used in the generated config for the TfSamplingRule to import
+  * @param importFromId The id of the existing TfSamplingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_sampling_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSamplingRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_xray_sampling_rule", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class AwsXraySamplingRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsXraySamplingRuleConfig
+  * @param options TfSamplingRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsXraySamplingRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfSamplingRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_xray_sampling_rule',
       terraformGeneratorMetadata: {

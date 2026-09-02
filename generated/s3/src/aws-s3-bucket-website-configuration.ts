@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3BucketWebsiteConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketWebsiteConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#bucket AwsS3BucketWebsiteConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#bucket TfBucketWebsiteConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#expected_bucket_owner AwsS3BucketWebsiteConfiguration#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#expected_bucket_owner TfBucketWebsiteConfiguration#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#id AwsS3BucketWebsiteConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#id TfBucketWebsiteConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,43 +24,43 @@ export interface AwsS3BucketWebsiteConfigurationConfig extends cdktn.TerraformMe
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#region AwsS3BucketWebsiteConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#region TfBucketWebsiteConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#routing_rules AwsS3BucketWebsiteConfiguration#routing_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#routing_rules TfBucketWebsiteConfiguration#routing_rules}
   */
   readonly routingRules?: string;
   /**
   * error_document block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#error_document AwsS3BucketWebsiteConfiguration#error_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#error_document TfBucketWebsiteConfiguration#error_document}
   */
-  readonly errorDocument?: AwsS3BucketWebsiteConfiguration.ErrorDocumentProperty;
+  readonly errorDocument?: TfBucketWebsiteConfiguration.ErrorDocumentProperty;
   /**
   * index_document block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#index_document AwsS3BucketWebsiteConfiguration#index_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#index_document TfBucketWebsiteConfiguration#index_document}
   */
-  readonly indexDocument?: AwsS3BucketWebsiteConfiguration.IndexDocumentProperty;
+  readonly indexDocument?: TfBucketWebsiteConfiguration.IndexDocumentProperty;
   /**
   * redirect_all_requests_to block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#redirect_all_requests_to AwsS3BucketWebsiteConfiguration#redirect_all_requests_to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#redirect_all_requests_to TfBucketWebsiteConfiguration#redirect_all_requests_to}
   */
-  readonly redirectAllRequestsTo?: AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToProperty;
+  readonly redirectAllRequestsTo?: TfBucketWebsiteConfiguration.RedirectAllRequestsToProperty;
   /**
   * routing_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#routing_rule AwsS3BucketWebsiteConfiguration#routing_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#routing_rule TfBucketWebsiteConfiguration#routing_rule}
   */
-  readonly routingRule?: AwsS3BucketWebsiteConfiguration.RoutingRuleProperty[] | cdktn.IResolvable;
+  readonly routingRule?: TfBucketWebsiteConfiguration.RoutingRuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration aws_s3_bucket_website_configuration}
 */
-export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
+export class TfBucketWebsiteConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3BucketWebsiteConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketWebsiteConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3BucketWebsiteConfiguration to import
-  * @param importFromId The id of the existing AwsS3BucketWebsiteConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3BucketWebsiteConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketWebsiteConfiguration to import
+  * @param importFromId The id of the existing TfBucketWebsiteConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketWebsiteConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_website_configuration", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3BucketWebsiteConfigurationConfig
+  * @param options TfBucketWebsiteConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3BucketWebsiteConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketWebsiteConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_website_configuration',
       terraformGeneratorMetadata: {
@@ -211,11 +211,11 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
   }
 
   // error_document - computed: false, optional: true, required: false
-  private _errorDocument = new AwsS3BucketWebsiteConfiguration.ErrorDocumentPropertyOutputReference(this, "error_document");
+  private _errorDocument = new TfBucketWebsiteConfiguration.ErrorDocumentPropertyOutputReference(this, "error_document");
   public get errorDocument() {
     return this._errorDocument;
   }
-  public putErrorDocument(value: AwsS3BucketWebsiteConfiguration.ErrorDocumentProperty) {
+  public putErrorDocument(value: TfBucketWebsiteConfiguration.ErrorDocumentProperty) {
     this._errorDocument.internalValue = value;
   }
   public resetErrorDocument() {
@@ -227,11 +227,11 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
   }
 
   // index_document - computed: false, optional: true, required: false
-  private _indexDocument = new AwsS3BucketWebsiteConfiguration.IndexDocumentPropertyOutputReference(this, "index_document");
+  private _indexDocument = new TfBucketWebsiteConfiguration.IndexDocumentPropertyOutputReference(this, "index_document");
   public get indexDocument() {
     return this._indexDocument;
   }
-  public putIndexDocument(value: AwsS3BucketWebsiteConfiguration.IndexDocumentProperty) {
+  public putIndexDocument(value: TfBucketWebsiteConfiguration.IndexDocumentProperty) {
     this._indexDocument.internalValue = value;
   }
   public resetIndexDocument() {
@@ -243,11 +243,11 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
   }
 
   // redirect_all_requests_to - computed: false, optional: true, required: false
-  private _redirectAllRequestsTo = new AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToPropertyOutputReference(this, "redirect_all_requests_to");
+  private _redirectAllRequestsTo = new TfBucketWebsiteConfiguration.RedirectAllRequestsToPropertyOutputReference(this, "redirect_all_requests_to");
   public get redirectAllRequestsTo() {
     return this._redirectAllRequestsTo;
   }
-  public putRedirectAllRequestsTo(value: AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToProperty) {
+  public putRedirectAllRequestsTo(value: TfBucketWebsiteConfiguration.RedirectAllRequestsToProperty) {
     this._redirectAllRequestsTo.internalValue = value;
   }
   public resetRedirectAllRequestsTo() {
@@ -259,11 +259,11 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
   }
 
   // routing_rule - computed: false, optional: true, required: false
-  private _routingRule = new AwsS3BucketWebsiteConfiguration.RoutingRulePropertyList(this, "routing_rule", false);
+  private _routingRule = new TfBucketWebsiteConfiguration.RoutingRulePropertyList(this, "routing_rule", false);
   public get routingRule() {
     return this._routingRule;
   }
-  public putRoutingRule(value: AwsS3BucketWebsiteConfiguration.RoutingRuleProperty[] | cdktn.IResolvable) {
+  public putRoutingRule(value: TfBucketWebsiteConfiguration.RoutingRuleProperty[] | cdktn.IResolvable) {
     this._routingRule.internalValue = value;
   }
   public resetRoutingRule() {
@@ -285,10 +285,10 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       routing_rules: cdktn.stringToTerraform(this._routingRules),
-      error_document: awsS3BucketWebsiteConfigurationErrorDocumentPropertyToTerraform(this._errorDocument.internalValue),
-      index_document: awsS3BucketWebsiteConfigurationIndexDocumentPropertyToTerraform(this._indexDocument.internalValue),
-      redirect_all_requests_to: awsS3BucketWebsiteConfigurationRedirectAllRequestsToPropertyToTerraform(this._redirectAllRequestsTo.internalValue),
-      routing_rule: cdktn.listMapper(awsS3BucketWebsiteConfigurationRoutingRulePropertyToTerraform, true)(this._routingRule.internalValue),
+      error_document: tfBucketWebsiteConfigurationErrorDocumentPropertyToTerraform(this._errorDocument.internalValue),
+      index_document: tfBucketWebsiteConfigurationIndexDocumentPropertyToTerraform(this._indexDocument.internalValue),
+      redirect_all_requests_to: tfBucketWebsiteConfigurationRedirectAllRequestsToPropertyToTerraform(this._redirectAllRequestsTo.internalValue),
+      routing_rule: cdktn.listMapper(tfBucketWebsiteConfigurationRoutingRulePropertyToTerraform, true)(this._routingRule.internalValue),
     };
   }
 
@@ -325,28 +325,28 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       error_document: {
-        value: awsS3BucketWebsiteConfigurationErrorDocumentPropertyToHclTerraform(this._errorDocument.internalValue),
+        value: tfBucketWebsiteConfigurationErrorDocumentPropertyToHclTerraform(this._errorDocument.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketWebsiteConfiguration.ErrorDocumentPropertyList",
+        storageClassType: "TfBucketWebsiteConfiguration.ErrorDocumentPropertyList",
       },
       index_document: {
-        value: awsS3BucketWebsiteConfigurationIndexDocumentPropertyToHclTerraform(this._indexDocument.internalValue),
+        value: tfBucketWebsiteConfigurationIndexDocumentPropertyToHclTerraform(this._indexDocument.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketWebsiteConfiguration.IndexDocumentPropertyList",
+        storageClassType: "TfBucketWebsiteConfiguration.IndexDocumentPropertyList",
       },
       redirect_all_requests_to: {
-        value: awsS3BucketWebsiteConfigurationRedirectAllRequestsToPropertyToHclTerraform(this._redirectAllRequestsTo.internalValue),
+        value: tfBucketWebsiteConfigurationRedirectAllRequestsToPropertyToHclTerraform(this._redirectAllRequestsTo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToPropertyList",
+        storageClassType: "TfBucketWebsiteConfiguration.RedirectAllRequestsToPropertyList",
       },
       routing_rule: {
-        value: cdktn.listMapperHcl(awsS3BucketWebsiteConfigurationRoutingRulePropertyToHclTerraform, true)(this._routingRule.internalValue),
+        value: cdktn.listMapperHcl(tfBucketWebsiteConfigurationRoutingRulePropertyToHclTerraform, true)(this._routingRule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketWebsiteConfiguration.RoutingRulePropertyList",
+        storageClassType: "TfBucketWebsiteConfiguration.RoutingRulePropertyList",
       },
     };
 
@@ -355,7 +355,7 @@ export class AwsS3BucketWebsiteConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3BucketWebsiteConfigurationErrorDocumentPropertyToTerraform(struct?: AwsS3BucketWebsiteConfiguration.ErrorDocumentPropertyOutputReference | AwsS3BucketWebsiteConfiguration.ErrorDocumentProperty): any {
+export function tfBucketWebsiteConfigurationErrorDocumentPropertyToTerraform(struct?: TfBucketWebsiteConfiguration.ErrorDocumentPropertyOutputReference | TfBucketWebsiteConfiguration.ErrorDocumentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function awsS3BucketWebsiteConfigurationErrorDocumentPropertyToTerraform(
 }
 
 
-export function awsS3BucketWebsiteConfigurationErrorDocumentPropertyToHclTerraform(struct?: AwsS3BucketWebsiteConfiguration.ErrorDocumentPropertyOutputReference | AwsS3BucketWebsiteConfiguration.ErrorDocumentProperty): any {
+export function tfBucketWebsiteConfigurationErrorDocumentPropertyToHclTerraform(struct?: TfBucketWebsiteConfiguration.ErrorDocumentPropertyOutputReference | TfBucketWebsiteConfiguration.ErrorDocumentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsS3BucketWebsiteConfigurationErrorDocumentPropertyToHclTerrafo
 }
 
 
-export function awsS3BucketWebsiteConfigurationIndexDocumentPropertyToTerraform(struct?: AwsS3BucketWebsiteConfiguration.IndexDocumentPropertyOutputReference | AwsS3BucketWebsiteConfiguration.IndexDocumentProperty): any {
+export function tfBucketWebsiteConfigurationIndexDocumentPropertyToTerraform(struct?: TfBucketWebsiteConfiguration.IndexDocumentPropertyOutputReference | TfBucketWebsiteConfiguration.IndexDocumentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function awsS3BucketWebsiteConfigurationIndexDocumentPropertyToTerraform(
 }
 
 
-export function awsS3BucketWebsiteConfigurationIndexDocumentPropertyToHclTerraform(struct?: AwsS3BucketWebsiteConfiguration.IndexDocumentPropertyOutputReference | AwsS3BucketWebsiteConfiguration.IndexDocumentProperty): any {
+export function tfBucketWebsiteConfigurationIndexDocumentPropertyToHclTerraform(struct?: TfBucketWebsiteConfiguration.IndexDocumentPropertyOutputReference | TfBucketWebsiteConfiguration.IndexDocumentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -415,7 +415,7 @@ export function awsS3BucketWebsiteConfigurationIndexDocumentPropertyToHclTerrafo
 }
 
 
-export function awsS3BucketWebsiteConfigurationRedirectAllRequestsToPropertyToTerraform(struct?: AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToPropertyOutputReference | AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToProperty): any {
+export function tfBucketWebsiteConfigurationRedirectAllRequestsToPropertyToTerraform(struct?: TfBucketWebsiteConfiguration.RedirectAllRequestsToPropertyOutputReference | TfBucketWebsiteConfiguration.RedirectAllRequestsToProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function awsS3BucketWebsiteConfigurationRedirectAllRequestsToPropertyToTe
 }
 
 
-export function awsS3BucketWebsiteConfigurationRedirectAllRequestsToPropertyToHclTerraform(struct?: AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToPropertyOutputReference | AwsS3BucketWebsiteConfiguration.RedirectAllRequestsToProperty): any {
+export function tfBucketWebsiteConfigurationRedirectAllRequestsToPropertyToHclTerraform(struct?: TfBucketWebsiteConfiguration.RedirectAllRequestsToPropertyOutputReference | TfBucketWebsiteConfiguration.RedirectAllRequestsToProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsS3BucketWebsiteConfigurationRedirectAllRequestsToPropertyToHc
 }
 
 
-export function awsS3BucketWebsiteConfigurationConditionPropertyToTerraform(struct?: AwsS3BucketWebsiteConfiguration.ConditionPropertyOutputReference | AwsS3BucketWebsiteConfiguration.ConditionProperty): any {
+export function tfBucketWebsiteConfigurationConditionPropertyToTerraform(struct?: TfBucketWebsiteConfiguration.ConditionPropertyOutputReference | TfBucketWebsiteConfiguration.ConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function awsS3BucketWebsiteConfigurationConditionPropertyToTerraform(stru
 }
 
 
-export function awsS3BucketWebsiteConfigurationConditionPropertyToHclTerraform(struct?: AwsS3BucketWebsiteConfiguration.ConditionPropertyOutputReference | AwsS3BucketWebsiteConfiguration.ConditionProperty): any {
+export function tfBucketWebsiteConfigurationConditionPropertyToHclTerraform(struct?: TfBucketWebsiteConfiguration.ConditionPropertyOutputReference | TfBucketWebsiteConfiguration.ConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,7 +489,7 @@ export function awsS3BucketWebsiteConfigurationConditionPropertyToHclTerraform(s
 }
 
 
-export function awsS3BucketWebsiteConfigurationRedirectPropertyToTerraform(struct?: AwsS3BucketWebsiteConfiguration.RedirectPropertyOutputReference | AwsS3BucketWebsiteConfiguration.RedirectProperty): any {
+export function tfBucketWebsiteConfigurationRedirectPropertyToTerraform(struct?: TfBucketWebsiteConfiguration.RedirectPropertyOutputReference | TfBucketWebsiteConfiguration.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function awsS3BucketWebsiteConfigurationRedirectPropertyToTerraform(struc
 }
 
 
-export function awsS3BucketWebsiteConfigurationRedirectPropertyToHclTerraform(struct?: AwsS3BucketWebsiteConfiguration.RedirectPropertyOutputReference | AwsS3BucketWebsiteConfiguration.RedirectProperty): any {
+export function tfBucketWebsiteConfigurationRedirectPropertyToHclTerraform(struct?: TfBucketWebsiteConfiguration.RedirectPropertyOutputReference | TfBucketWebsiteConfiguration.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,32 +547,32 @@ export function awsS3BucketWebsiteConfigurationRedirectPropertyToHclTerraform(st
 }
 
 
-export function awsS3BucketWebsiteConfigurationRoutingRulePropertyToTerraform(struct?: AwsS3BucketWebsiteConfiguration.RoutingRuleProperty | cdktn.IResolvable): any {
+export function tfBucketWebsiteConfigurationRoutingRulePropertyToTerraform(struct?: TfBucketWebsiteConfiguration.RoutingRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    condition: awsS3BucketWebsiteConfigurationConditionPropertyToTerraform(struct!.condition),
-    redirect: awsS3BucketWebsiteConfigurationRedirectPropertyToTerraform(struct!.redirect),
+    condition: tfBucketWebsiteConfigurationConditionPropertyToTerraform(struct!.condition),
+    redirect: tfBucketWebsiteConfigurationRedirectPropertyToTerraform(struct!.redirect),
   }
 }
 
 
-export function awsS3BucketWebsiteConfigurationRoutingRulePropertyToHclTerraform(struct?: AwsS3BucketWebsiteConfiguration.RoutingRuleProperty | cdktn.IResolvable): any {
+export function tfBucketWebsiteConfigurationRoutingRulePropertyToHclTerraform(struct?: TfBucketWebsiteConfiguration.RoutingRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     condition: {
-      value: awsS3BucketWebsiteConfigurationConditionPropertyToHclTerraform(struct!.condition),
+      value: tfBucketWebsiteConfigurationConditionPropertyToHclTerraform(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "ConditionPropertyList",
     },
     redirect: {
-      value: awsS3BucketWebsiteConfigurationRedirectPropertyToHclTerraform(struct!.redirect),
+      value: tfBucketWebsiteConfigurationRedirectPropertyToHclTerraform(struct!.redirect),
       isBlock: true,
       type: "list",
       storageClassType: "RedirectPropertyList",
@@ -584,10 +584,10 @@ export function awsS3BucketWebsiteConfigurationRoutingRulePropertyToHclTerraform
 }
 
 
-export namespace AwsS3BucketWebsiteConfiguration {
+export namespace TfBucketWebsiteConfiguration {
 export interface ErrorDocumentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#key AwsS3BucketWebsiteConfiguration#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#key TfBucketWebsiteConfiguration#key}
   */
   readonly key: string;
 }
@@ -638,7 +638,7 @@ export class ErrorDocumentPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IndexDocumentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#suffix AwsS3BucketWebsiteConfiguration#suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#suffix TfBucketWebsiteConfiguration#suffix}
   */
   readonly suffix: string;
 }
@@ -689,11 +689,11 @@ export class IndexDocumentPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RedirectAllRequestsToProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#host_name AwsS3BucketWebsiteConfiguration#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#host_name TfBucketWebsiteConfiguration#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#protocol AwsS3BucketWebsiteConfiguration#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#protocol TfBucketWebsiteConfiguration#protocol}
   */
   readonly protocol?: string;
 }
@@ -766,11 +766,11 @@ export class RedirectAllRequestsToPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#http_error_code_returned_equals AwsS3BucketWebsiteConfiguration#http_error_code_returned_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#http_error_code_returned_equals TfBucketWebsiteConfiguration#http_error_code_returned_equals}
   */
   readonly httpErrorCodeReturnedEquals?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#key_prefix_equals AwsS3BucketWebsiteConfiguration#key_prefix_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#key_prefix_equals TfBucketWebsiteConfiguration#key_prefix_equals}
   */
   readonly keyPrefixEquals?: string;
 }
@@ -846,23 +846,23 @@ export class ConditionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RedirectProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#host_name AwsS3BucketWebsiteConfiguration#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#host_name TfBucketWebsiteConfiguration#host_name}
   */
   readonly hostName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#http_redirect_code AwsS3BucketWebsiteConfiguration#http_redirect_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#http_redirect_code TfBucketWebsiteConfiguration#http_redirect_code}
   */
   readonly httpRedirectCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#protocol AwsS3BucketWebsiteConfiguration#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#protocol TfBucketWebsiteConfiguration#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#replace_key_prefix_with AwsS3BucketWebsiteConfiguration#replace_key_prefix_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#replace_key_prefix_with TfBucketWebsiteConfiguration#replace_key_prefix_with}
   */
   readonly replaceKeyPrefixWith?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#replace_key_with AwsS3BucketWebsiteConfiguration#replace_key_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#replace_key_with TfBucketWebsiteConfiguration#replace_key_with}
   */
   readonly replaceKeyWith?: string;
 }
@@ -1006,13 +1006,13 @@ export interface RoutingRuleProperty {
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#condition AwsS3BucketWebsiteConfiguration#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#condition TfBucketWebsiteConfiguration#condition}
   */
   readonly condition?: ConditionProperty;
   /**
   * redirect block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#redirect AwsS3BucketWebsiteConfiguration#redirect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_website_configuration#redirect TfBucketWebsiteConfiguration#redirect}
   */
   readonly redirect: RedirectProperty;
 }

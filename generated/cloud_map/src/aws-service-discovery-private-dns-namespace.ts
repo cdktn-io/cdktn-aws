@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServiceDiscoveryPrivateDnsNamespaceConfig extends cdktn.TerraformMetaArguments {
+export interface TfPrivateDnsNamespaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#description AwsServiceDiscoveryPrivateDnsNamespace#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#description TfPrivateDnsNamespace#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#id AwsServiceDiscoveryPrivateDnsNamespace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#id TfPrivateDnsNamespace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#name AwsServiceDiscoveryPrivateDnsNamespace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#name TfPrivateDnsNamespace#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#region AwsServiceDiscoveryPrivateDnsNamespace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#region TfPrivateDnsNamespace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#tags AwsServiceDiscoveryPrivateDnsNamespace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#tags TfPrivateDnsNamespace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#tags_all AwsServiceDiscoveryPrivateDnsNamespace#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#tags_all TfPrivateDnsNamespace#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#vpc AwsServiceDiscoveryPrivateDnsNamespace#vpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#vpc TfPrivateDnsNamespace#vpc}
   */
   readonly vpc: string;
 }
@@ -44,7 +44,7 @@ export interface AwsServiceDiscoveryPrivateDnsNamespaceConfig extends cdktn.Terr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace aws_service_discovery_private_dns_namespace}
 */
-export class AwsServiceDiscoveryPrivateDnsNamespace extends cdktn.TerraformResource {
+export class TfPrivateDnsNamespace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsServiceDiscoveryPrivateDnsNamespace extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServiceDiscoveryPrivateDnsNamespace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPrivateDnsNamespace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServiceDiscoveryPrivateDnsNamespace to import
-  * @param importFromId The id of the existing AwsServiceDiscoveryPrivateDnsNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServiceDiscoveryPrivateDnsNamespace to import is found
+  * @param importToId The construct id used in the generated config for the TfPrivateDnsNamespace to import
+  * @param importFromId The id of the existing TfPrivateDnsNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/service_discovery_private_dns_namespace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPrivateDnsNamespace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_service_discovery_private_dns_namespace", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsServiceDiscoveryPrivateDnsNamespace extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServiceDiscoveryPrivateDnsNamespaceConfig
+  * @param options TfPrivateDnsNamespaceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServiceDiscoveryPrivateDnsNamespaceConfig) {
+  public constructor(scope: Construct, id: string, config: TfPrivateDnsNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_service_discovery_private_dns_namespace',
       terraformGeneratorMetadata: {

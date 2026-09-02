@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsElasticacheServiceUpdateActionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfServiceUpdateActionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#cache_cluster_id DataAwsElasticacheServiceUpdateActions#cache_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#cache_cluster_id DataTfServiceUpdateActions#cache_cluster_id}
   */
   readonly cacheClusterId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#region DataAwsElasticacheServiceUpdateActions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#region DataTfServiceUpdateActions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#replication_group_id DataAwsElasticacheServiceUpdateActions#replication_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#replication_group_id DataTfServiceUpdateActions#replication_group_id}
   */
   readonly replicationGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#service_update_status DataAwsElasticacheServiceUpdateActions#service_update_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#service_update_status DataTfServiceUpdateActions#service_update_status}
   */
   readonly serviceUpdateStatus?: string[];
 }
@@ -29,7 +29,7 @@ export interface DataAwsElasticacheServiceUpdateActionsConfig extends cdktn.Terr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions aws_elasticache_service_update_actions}
 */
-export class DataAwsElasticacheServiceUpdateActions extends cdktn.TerraformDataSource {
+export class DataTfServiceUpdateActions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class DataAwsElasticacheServiceUpdateActions extends cdktn.TerraformDataS
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsElasticacheServiceUpdateActions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfServiceUpdateActions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsElasticacheServiceUpdateActions to import
-  * @param importFromId The id of the existing DataAwsElasticacheServiceUpdateActions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsElasticacheServiceUpdateActions to import is found
+  * @param importToId The construct id used in the generated config for the DataTfServiceUpdateActions to import
+  * @param importFromId The id of the existing DataTfServiceUpdateActions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_service_update_actions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfServiceUpdateActions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_service_update_actions", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class DataAwsElasticacheServiceUpdateActions extends cdktn.TerraformDataS
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsElasticacheServiceUpdateActionsConfig = {}
+  * @param options DataTfServiceUpdateActionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsElasticacheServiceUpdateActionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfServiceUpdateActionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_service_update_actions',
       terraformGeneratorMetadata: {
@@ -152,7 +152,7 @@ export class DataAwsElasticacheServiceUpdateActions extends cdktn.TerraformDataS
   }
 
   // update_actions - computed: true, optional: false, required: false
-  private _updateActions = new DataAwsElasticacheServiceUpdateActions.UpdateActionsPropertyList(this, "update_actions", false);
+  private _updateActions = new DataTfServiceUpdateActions.UpdateActionsPropertyList(this, "update_actions", false);
   public get updateActions() {
     return this._updateActions;
   }
@@ -203,7 +203,7 @@ export class DataAwsElasticacheServiceUpdateActions extends cdktn.TerraformDataS
   }
 }
 
-export function dataAwsElasticacheServiceUpdateActionsUpdateActionsPropertyToTerraform(struct?: DataAwsElasticacheServiceUpdateActions.UpdateActionsProperty): any {
+export function dataTfServiceUpdateActionsUpdateActionsPropertyToTerraform(struct?: DataTfServiceUpdateActions.UpdateActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,7 +213,7 @@ export function dataAwsElasticacheServiceUpdateActionsUpdateActionsPropertyToTer
 }
 
 
-export function dataAwsElasticacheServiceUpdateActionsUpdateActionsPropertyToHclTerraform(struct?: DataAwsElasticacheServiceUpdateActions.UpdateActionsProperty): any {
+export function dataTfServiceUpdateActionsUpdateActionsPropertyToHclTerraform(struct?: DataTfServiceUpdateActions.UpdateActionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function dataAwsElasticacheServiceUpdateActionsUpdateActionsPropertyToHcl
 }
 
 
-export namespace DataAwsElasticacheServiceUpdateActions {
+export namespace DataTfServiceUpdateActions {
 export interface UpdateActionsProperty {
 }
 export class UpdateActionsPropertyOutputReference extends cdktn.ComplexObject {

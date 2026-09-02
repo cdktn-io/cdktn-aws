@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAccessanalyzerAnalyzerConfig extends cdktn.TerraformMetaArguments {
+export interface TfAnalyzerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#analyzer_name AwsAccessanalyzerAnalyzer#analyzer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#analyzer_name TfAnalyzer#analyzer_name}
   */
   readonly analyzerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#id AwsAccessanalyzerAnalyzer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#id TfAnalyzer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,33 +20,33 @@ export interface AwsAccessanalyzerAnalyzerConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#region AwsAccessanalyzerAnalyzer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#region TfAnalyzer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#tags AwsAccessanalyzerAnalyzer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#tags TfAnalyzer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#tags_all AwsAccessanalyzerAnalyzer#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#tags_all TfAnalyzer#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#type AwsAccessanalyzerAnalyzer#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#type TfAnalyzer#type}
   */
   readonly type?: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#configuration AwsAccessanalyzerAnalyzer#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#configuration TfAnalyzer#configuration}
   */
-  readonly configuration?: AwsAccessanalyzerAnalyzer.ConfigurationProperty;
+  readonly configuration?: TfAnalyzer.ConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer aws_accessanalyzer_analyzer}
 */
-export class AwsAccessanalyzerAnalyzer extends cdktn.TerraformResource {
+export class TfAnalyzer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsAccessanalyzerAnalyzer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAccessanalyzerAnalyzer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAnalyzer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAccessanalyzerAnalyzer to import
-  * @param importFromId The id of the existing AwsAccessanalyzerAnalyzer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAccessanalyzerAnalyzer to import is found
+  * @param importToId The construct id used in the generated config for the TfAnalyzer to import
+  * @param importFromId The id of the existing TfAnalyzer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAnalyzer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_accessanalyzer_analyzer", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsAccessanalyzerAnalyzer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAccessanalyzerAnalyzerConfig
+  * @param options TfAnalyzerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAccessanalyzerAnalyzerConfig) {
+  public constructor(scope: Construct, id: string, config: TfAnalyzerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_accessanalyzer_analyzer',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class AwsAccessanalyzerAnalyzer extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsAccessanalyzerAnalyzer.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new TfAnalyzer.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsAccessanalyzerAnalyzer.ConfigurationProperty) {
+  public putConfiguration(value: TfAnalyzer.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -233,7 +233,7 @@ export class AwsAccessanalyzerAnalyzer extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      configuration: awsAccessanalyzerAnalyzerConfigurationPropertyToTerraform(this._configuration.internalValue),
+      configuration: tfAnalyzerConfigurationPropertyToTerraform(this._configuration.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class AwsAccessanalyzerAnalyzer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: awsAccessanalyzerAnalyzerConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: tfAnalyzerConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAccessanalyzerAnalyzer.ConfigurationPropertyList",
+        storageClassType: "TfAnalyzer.ConfigurationPropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class AwsAccessanalyzerAnalyzer extends cdktn.TerraformResource {
   }
 }
 
-export function awsAccessanalyzerAnalyzerInclusionPropertyToTerraform(struct?: AwsAccessanalyzerAnalyzer.InclusionProperty | cdktn.IResolvable): any {
+export function tfAnalyzerInclusionPropertyToTerraform(struct?: TfAnalyzer.InclusionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function awsAccessanalyzerAnalyzerInclusionPropertyToTerraform(struct?: A
 }
 
 
-export function awsAccessanalyzerAnalyzerInclusionPropertyToHclTerraform(struct?: AwsAccessanalyzerAnalyzer.InclusionProperty | cdktn.IResolvable): any {
+export function tfAnalyzerInclusionPropertyToHclTerraform(struct?: TfAnalyzer.InclusionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,25 +332,25 @@ export function awsAccessanalyzerAnalyzerInclusionPropertyToHclTerraform(struct?
 }
 
 
-export function awsAccessanalyzerAnalyzerConfigurationInternalAccessAnalysisRulePropertyToTerraform(struct?: AwsAccessanalyzerAnalyzer.ConfigurationInternalAccessAnalysisRulePropertyOutputReference | AwsAccessanalyzerAnalyzer.ConfigurationInternalAccessAnalysisRuleProperty): any {
+export function tfAnalyzerConfigurationInternalAccessAnalysisRulePropertyToTerraform(struct?: TfAnalyzer.ConfigurationInternalAccessAnalysisRulePropertyOutputReference | TfAnalyzer.ConfigurationInternalAccessAnalysisRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    inclusion: cdktn.listMapper(awsAccessanalyzerAnalyzerInclusionPropertyToTerraform, true)(struct!.inclusion),
+    inclusion: cdktn.listMapper(tfAnalyzerInclusionPropertyToTerraform, true)(struct!.inclusion),
   }
 }
 
 
-export function awsAccessanalyzerAnalyzerConfigurationInternalAccessAnalysisRulePropertyToHclTerraform(struct?: AwsAccessanalyzerAnalyzer.ConfigurationInternalAccessAnalysisRulePropertyOutputReference | AwsAccessanalyzerAnalyzer.ConfigurationInternalAccessAnalysisRuleProperty): any {
+export function tfAnalyzerConfigurationInternalAccessAnalysisRulePropertyToHclTerraform(struct?: TfAnalyzer.ConfigurationInternalAccessAnalysisRulePropertyOutputReference | TfAnalyzer.ConfigurationInternalAccessAnalysisRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     inclusion: {
-      value: cdktn.listMapperHcl(awsAccessanalyzerAnalyzerInclusionPropertyToHclTerraform, true)(struct!.inclusion),
+      value: cdktn.listMapperHcl(tfAnalyzerInclusionPropertyToHclTerraform, true)(struct!.inclusion),
       isBlock: true,
       type: "list",
       storageClassType: "InclusionPropertyList",
@@ -362,25 +362,25 @@ export function awsAccessanalyzerAnalyzerConfigurationInternalAccessAnalysisRule
 }
 
 
-export function awsAccessanalyzerAnalyzerInternalAccessPropertyToTerraform(struct?: AwsAccessanalyzerAnalyzer.InternalAccessPropertyOutputReference | AwsAccessanalyzerAnalyzer.InternalAccessProperty): any {
+export function tfAnalyzerInternalAccessPropertyToTerraform(struct?: TfAnalyzer.InternalAccessPropertyOutputReference | TfAnalyzer.InternalAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    analysis_rule: awsAccessanalyzerAnalyzerConfigurationInternalAccessAnalysisRulePropertyToTerraform(struct!.analysisRule),
+    analysis_rule: tfAnalyzerConfigurationInternalAccessAnalysisRulePropertyToTerraform(struct!.analysisRule),
   }
 }
 
 
-export function awsAccessanalyzerAnalyzerInternalAccessPropertyToHclTerraform(struct?: AwsAccessanalyzerAnalyzer.InternalAccessPropertyOutputReference | AwsAccessanalyzerAnalyzer.InternalAccessProperty): any {
+export function tfAnalyzerInternalAccessPropertyToHclTerraform(struct?: TfAnalyzer.InternalAccessPropertyOutputReference | TfAnalyzer.InternalAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     analysis_rule: {
-      value: awsAccessanalyzerAnalyzerConfigurationInternalAccessAnalysisRulePropertyToHclTerraform(struct!.analysisRule),
+      value: tfAnalyzerConfigurationInternalAccessAnalysisRulePropertyToHclTerraform(struct!.analysisRule),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationInternalAccessAnalysisRulePropertyList",
@@ -392,7 +392,7 @@ export function awsAccessanalyzerAnalyzerInternalAccessPropertyToHclTerraform(st
 }
 
 
-export function awsAccessanalyzerAnalyzerExclusionPropertyToTerraform(struct?: AwsAccessanalyzerAnalyzer.ExclusionProperty | cdktn.IResolvable): any {
+export function tfAnalyzerExclusionPropertyToTerraform(struct?: TfAnalyzer.ExclusionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function awsAccessanalyzerAnalyzerExclusionPropertyToTerraform(struct?: A
 }
 
 
-export function awsAccessanalyzerAnalyzerExclusionPropertyToHclTerraform(struct?: AwsAccessanalyzerAnalyzer.ExclusionProperty | cdktn.IResolvable): any {
+export function tfAnalyzerExclusionPropertyToHclTerraform(struct?: TfAnalyzer.ExclusionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,25 +429,25 @@ export function awsAccessanalyzerAnalyzerExclusionPropertyToHclTerraform(struct?
 }
 
 
-export function awsAccessanalyzerAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToTerraform(struct?: AwsAccessanalyzerAnalyzer.ConfigurationUnusedAccessAnalysisRulePropertyOutputReference | AwsAccessanalyzerAnalyzer.ConfigurationUnusedAccessAnalysisRuleProperty): any {
+export function tfAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToTerraform(struct?: TfAnalyzer.ConfigurationUnusedAccessAnalysisRulePropertyOutputReference | TfAnalyzer.ConfigurationUnusedAccessAnalysisRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    exclusion: cdktn.listMapper(awsAccessanalyzerAnalyzerExclusionPropertyToTerraform, true)(struct!.exclusion),
+    exclusion: cdktn.listMapper(tfAnalyzerExclusionPropertyToTerraform, true)(struct!.exclusion),
   }
 }
 
 
-export function awsAccessanalyzerAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToHclTerraform(struct?: AwsAccessanalyzerAnalyzer.ConfigurationUnusedAccessAnalysisRulePropertyOutputReference | AwsAccessanalyzerAnalyzer.ConfigurationUnusedAccessAnalysisRuleProperty): any {
+export function tfAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToHclTerraform(struct?: TfAnalyzer.ConfigurationUnusedAccessAnalysisRulePropertyOutputReference | TfAnalyzer.ConfigurationUnusedAccessAnalysisRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     exclusion: {
-      value: cdktn.listMapperHcl(awsAccessanalyzerAnalyzerExclusionPropertyToHclTerraform, true)(struct!.exclusion),
+      value: cdktn.listMapperHcl(tfAnalyzerExclusionPropertyToHclTerraform, true)(struct!.exclusion),
       isBlock: true,
       type: "list",
       storageClassType: "ExclusionPropertyList",
@@ -459,19 +459,19 @@ export function awsAccessanalyzerAnalyzerConfigurationUnusedAccessAnalysisRulePr
 }
 
 
-export function awsAccessanalyzerAnalyzerUnusedAccessPropertyToTerraform(struct?: AwsAccessanalyzerAnalyzer.UnusedAccessPropertyOutputReference | AwsAccessanalyzerAnalyzer.UnusedAccessProperty): any {
+export function tfAnalyzerUnusedAccessPropertyToTerraform(struct?: TfAnalyzer.UnusedAccessPropertyOutputReference | TfAnalyzer.UnusedAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     unused_access_age: cdktn.numberToTerraform(struct!.unusedAccessAge),
-    analysis_rule: awsAccessanalyzerAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToTerraform(struct!.analysisRule),
+    analysis_rule: tfAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToTerraform(struct!.analysisRule),
   }
 }
 
 
-export function awsAccessanalyzerAnalyzerUnusedAccessPropertyToHclTerraform(struct?: AwsAccessanalyzerAnalyzer.UnusedAccessPropertyOutputReference | AwsAccessanalyzerAnalyzer.UnusedAccessProperty): any {
+export function tfAnalyzerUnusedAccessPropertyToHclTerraform(struct?: TfAnalyzer.UnusedAccessPropertyOutputReference | TfAnalyzer.UnusedAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function awsAccessanalyzerAnalyzerUnusedAccessPropertyToHclTerraform(stru
       storageClassType: "number",
     },
     analysis_rule: {
-      value: awsAccessanalyzerAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToHclTerraform(struct!.analysisRule),
+      value: tfAnalyzerConfigurationUnusedAccessAnalysisRulePropertyToHclTerraform(struct!.analysisRule),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationUnusedAccessAnalysisRulePropertyList",
@@ -496,32 +496,32 @@ export function awsAccessanalyzerAnalyzerUnusedAccessPropertyToHclTerraform(stru
 }
 
 
-export function awsAccessanalyzerAnalyzerConfigurationPropertyToTerraform(struct?: AwsAccessanalyzerAnalyzer.ConfigurationPropertyOutputReference | AwsAccessanalyzerAnalyzer.ConfigurationProperty): any {
+export function tfAnalyzerConfigurationPropertyToTerraform(struct?: TfAnalyzer.ConfigurationPropertyOutputReference | TfAnalyzer.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    internal_access: awsAccessanalyzerAnalyzerInternalAccessPropertyToTerraform(struct!.internalAccess),
-    unused_access: awsAccessanalyzerAnalyzerUnusedAccessPropertyToTerraform(struct!.unusedAccess),
+    internal_access: tfAnalyzerInternalAccessPropertyToTerraform(struct!.internalAccess),
+    unused_access: tfAnalyzerUnusedAccessPropertyToTerraform(struct!.unusedAccess),
   }
 }
 
 
-export function awsAccessanalyzerAnalyzerConfigurationPropertyToHclTerraform(struct?: AwsAccessanalyzerAnalyzer.ConfigurationPropertyOutputReference | AwsAccessanalyzerAnalyzer.ConfigurationProperty): any {
+export function tfAnalyzerConfigurationPropertyToHclTerraform(struct?: TfAnalyzer.ConfigurationPropertyOutputReference | TfAnalyzer.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     internal_access: {
-      value: awsAccessanalyzerAnalyzerInternalAccessPropertyToHclTerraform(struct!.internalAccess),
+      value: tfAnalyzerInternalAccessPropertyToHclTerraform(struct!.internalAccess),
       isBlock: true,
       type: "list",
       storageClassType: "InternalAccessPropertyList",
     },
     unused_access: {
-      value: awsAccessanalyzerAnalyzerUnusedAccessPropertyToHclTerraform(struct!.unusedAccess),
+      value: tfAnalyzerUnusedAccessPropertyToHclTerraform(struct!.unusedAccess),
       isBlock: true,
       type: "list",
       storageClassType: "UnusedAccessPropertyList",
@@ -533,18 +533,18 @@ export function awsAccessanalyzerAnalyzerConfigurationPropertyToHclTerraform(str
 }
 
 
-export namespace AwsAccessanalyzerAnalyzer {
+export namespace TfAnalyzer {
 export interface InclusionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#account_ids AwsAccessanalyzerAnalyzer#account_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#account_ids TfAnalyzer#account_ids}
   */
   readonly accountIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#resource_arns AwsAccessanalyzerAnalyzer#resource_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#resource_arns TfAnalyzer#resource_arns}
   */
   readonly resourceArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#resource_types AwsAccessanalyzerAnalyzer#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#resource_types TfAnalyzer#resource_types}
   */
   readonly resourceTypes?: string[];
 }
@@ -676,7 +676,7 @@ export interface ConfigurationInternalAccessAnalysisRuleProperty {
   /**
   * inclusion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#inclusion AwsAccessanalyzerAnalyzer#inclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#inclusion TfAnalyzer#inclusion}
   */
   readonly inclusion?: InclusionProperty[] | cdktn.IResolvable;
 }
@@ -732,7 +732,7 @@ export interface InternalAccessProperty {
   /**
   * analysis_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#analysis_rule AwsAccessanalyzerAnalyzer#analysis_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#analysis_rule TfAnalyzer#analysis_rule}
   */
   readonly analysisRule?: ConfigurationInternalAccessAnalysisRuleProperty;
 }
@@ -786,11 +786,11 @@ export class InternalAccessPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExclusionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#account_ids AwsAccessanalyzerAnalyzer#account_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#account_ids TfAnalyzer#account_ids}
   */
   readonly accountIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#resource_tags AwsAccessanalyzerAnalyzer#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#resource_tags TfAnalyzer#resource_tags}
   */
   readonly resourceTags?: { [key: string]: string }[] | cdktn.IResolvable;
 }
@@ -900,7 +900,7 @@ export interface ConfigurationUnusedAccessAnalysisRuleProperty {
   /**
   * exclusion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#exclusion AwsAccessanalyzerAnalyzer#exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#exclusion TfAnalyzer#exclusion}
   */
   readonly exclusion?: ExclusionProperty[] | cdktn.IResolvable;
 }
@@ -954,13 +954,13 @@ export class ConfigurationUnusedAccessAnalysisRulePropertyOutputReference extend
 }
 export interface UnusedAccessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#unused_access_age AwsAccessanalyzerAnalyzer#unused_access_age}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#unused_access_age TfAnalyzer#unused_access_age}
   */
   readonly unusedAccessAge?: number;
   /**
   * analysis_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#analysis_rule AwsAccessanalyzerAnalyzer#analysis_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#analysis_rule TfAnalyzer#analysis_rule}
   */
   readonly analysisRule?: ConfigurationUnusedAccessAnalysisRuleProperty;
 }
@@ -1038,13 +1038,13 @@ export interface ConfigurationProperty {
   /**
   * internal_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#internal_access AwsAccessanalyzerAnalyzer#internal_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#internal_access TfAnalyzer#internal_access}
   */
   readonly internalAccess?: InternalAccessProperty;
   /**
   * unused_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#unused_access AwsAccessanalyzerAnalyzer#unused_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/accessanalyzer_analyzer#unused_access TfAnalyzer#unused_access}
   */
   readonly unusedAccess?: UnusedAccessProperty;
 }

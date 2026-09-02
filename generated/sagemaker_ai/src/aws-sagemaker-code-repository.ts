@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerCodeRepositoryConfig extends cdktn.TerraformMetaArguments {
+export interface TfCodeRepositoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#code_repository_name AwsSagemakerCodeRepository#code_repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#code_repository_name TfCodeRepository#code_repository_name}
   */
   readonly codeRepositoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#id AwsSagemakerCodeRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#id TfCodeRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,29 +20,29 @@ export interface AwsSagemakerCodeRepositoryConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#region AwsSagemakerCodeRepository#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#region TfCodeRepository#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#tags AwsSagemakerCodeRepository#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#tags TfCodeRepository#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#tags_all AwsSagemakerCodeRepository#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#tags_all TfCodeRepository#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * git_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#git_config AwsSagemakerCodeRepository#git_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#git_config TfCodeRepository#git_config}
   */
-  readonly gitConfig: AwsSagemakerCodeRepository.GitConfigProperty;
+  readonly gitConfig: TfCodeRepository.GitConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository aws_sagemaker_code_repository}
 */
-export class AwsSagemakerCodeRepository extends cdktn.TerraformResource {
+export class TfCodeRepository extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsSagemakerCodeRepository extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerCodeRepository resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCodeRepository resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerCodeRepository to import
-  * @param importFromId The id of the existing AwsSagemakerCodeRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerCodeRepository to import is found
+  * @param importToId The construct id used in the generated config for the TfCodeRepository to import
+  * @param importFromId The id of the existing TfCodeRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCodeRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_code_repository", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsSagemakerCodeRepository extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerCodeRepositoryConfig
+  * @param options TfCodeRepositoryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerCodeRepositoryConfig) {
+  public constructor(scope: Construct, id: string, config: TfCodeRepositoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_code_repository',
       terraformGeneratorMetadata: {
@@ -185,11 +185,11 @@ export class AwsSagemakerCodeRepository extends cdktn.TerraformResource {
   }
 
   // git_config - computed: false, optional: false, required: true
-  private _gitConfig = new AwsSagemakerCodeRepository.GitConfigPropertyOutputReference(this, "git_config");
+  private _gitConfig = new TfCodeRepository.GitConfigPropertyOutputReference(this, "git_config");
   public get gitConfig() {
     return this._gitConfig;
   }
-  public putGitConfig(value: AwsSagemakerCodeRepository.GitConfigProperty) {
+  public putGitConfig(value: TfCodeRepository.GitConfigProperty) {
     this._gitConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -208,7 +208,7 @@ export class AwsSagemakerCodeRepository extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      git_config: awsSagemakerCodeRepositoryGitConfigPropertyToTerraform(this._gitConfig.internalValue),
+      git_config: tfCodeRepositoryGitConfigPropertyToTerraform(this._gitConfig.internalValue),
     };
   }
 
@@ -245,10 +245,10 @@ export class AwsSagemakerCodeRepository extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       git_config: {
-        value: awsSagemakerCodeRepositoryGitConfigPropertyToHclTerraform(this._gitConfig.internalValue),
+        value: tfCodeRepositoryGitConfigPropertyToHclTerraform(this._gitConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerCodeRepository.GitConfigPropertyList",
+        storageClassType: "TfCodeRepository.GitConfigPropertyList",
       },
     };
 
@@ -257,7 +257,7 @@ export class AwsSagemakerCodeRepository extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerCodeRepositoryGitConfigPropertyToTerraform(struct?: AwsSagemakerCodeRepository.GitConfigPropertyOutputReference | AwsSagemakerCodeRepository.GitConfigProperty): any {
+export function tfCodeRepositoryGitConfigPropertyToTerraform(struct?: TfCodeRepository.GitConfigPropertyOutputReference | TfCodeRepository.GitConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function awsSagemakerCodeRepositoryGitConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsSagemakerCodeRepositoryGitConfigPropertyToHclTerraform(struct?: AwsSagemakerCodeRepository.GitConfigPropertyOutputReference | AwsSagemakerCodeRepository.GitConfigProperty): any {
+export function tfCodeRepositoryGitConfigPropertyToHclTerraform(struct?: TfCodeRepository.GitConfigPropertyOutputReference | TfCodeRepository.GitConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,18 +301,18 @@ export function awsSagemakerCodeRepositoryGitConfigPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsSagemakerCodeRepository {
+export namespace TfCodeRepository {
 export interface GitConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#branch AwsSagemakerCodeRepository#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#branch TfCodeRepository#branch}
   */
   readonly branch?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#repository_url AwsSagemakerCodeRepository#repository_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#repository_url TfCodeRepository#repository_url}
   */
   readonly repositoryUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#secret_arn AwsSagemakerCodeRepository#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_code_repository#secret_arn TfCodeRepository#secret_arn}
   */
   readonly secretArn?: string;
 }

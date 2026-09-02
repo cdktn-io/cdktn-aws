@@ -5,174 +5,174 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEmrClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#additional_info AwsEmrCluster#additional_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#additional_info TfCluster#additional_info}
   */
   readonly additionalInfo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#applications AwsEmrCluster#applications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#applications TfCluster#applications}
   */
   readonly applications?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#autoscaling_role AwsEmrCluster#autoscaling_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#autoscaling_role TfCluster#autoscaling_role}
   */
   readonly autoscalingRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations AwsEmrCluster#configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations TfCluster#configurations}
   */
   readonly configurations?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations_json AwsEmrCluster#configurations_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations_json TfCluster#configurations_json}
   */
   readonly configurationsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#custom_ami_id AwsEmrCluster#custom_ami_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#custom_ami_id TfCluster#custom_ami_id}
   */
   readonly customAmiId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_root_volume_size AwsEmrCluster#ebs_root_volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_root_volume_size TfCluster#ebs_root_volume_size}
   */
   readonly ebsRootVolumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#id AwsEmrCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#id TfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#keep_job_flow_alive_when_no_steps AwsEmrCluster#keep_job_flow_alive_when_no_steps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#keep_job_flow_alive_when_no_steps TfCluster#keep_job_flow_alive_when_no_steps}
   */
   readonly keepJobFlowAliveWhenNoSteps?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#list_steps_states AwsEmrCluster#list_steps_states}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#list_steps_states TfCluster#list_steps_states}
   */
   readonly listStepsStates?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#log_encryption_kms_key_id AwsEmrCluster#log_encryption_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#log_encryption_kms_key_id TfCluster#log_encryption_kms_key_id}
   */
   readonly logEncryptionKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#log_uri AwsEmrCluster#log_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#log_uri TfCluster#log_uri}
   */
   readonly logUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name AwsEmrCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name TfCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#os_release_label AwsEmrCluster#os_release_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#os_release_label TfCluster#os_release_label}
   */
   readonly osReleaseLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#placement_group_config AwsEmrCluster#placement_group_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#placement_group_config TfCluster#placement_group_config}
   */
-  readonly placementGroupConfig?: AwsEmrCluster.PlacementGroupConfigProperty[] | cdktn.IResolvable;
+  readonly placementGroupConfig?: TfCluster.PlacementGroupConfigProperty[] | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#region AwsEmrCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#region TfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#release_label AwsEmrCluster#release_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#release_label TfCluster#release_label}
   */
   readonly releaseLabel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#scale_down_behavior AwsEmrCluster#scale_down_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#scale_down_behavior TfCluster#scale_down_behavior}
   */
   readonly scaleDownBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#security_configuration AwsEmrCluster#security_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#security_configuration TfCluster#security_configuration}
   */
   readonly securityConfiguration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#service_role AwsEmrCluster#service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#service_role TfCluster#service_role}
   */
   readonly serviceRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#step AwsEmrCluster#step}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#step TfCluster#step}
   */
-  readonly step?: AwsEmrCluster.StepProperty[] | cdktn.IResolvable;
+  readonly step?: TfCluster.StepProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#step_concurrency_level AwsEmrCluster#step_concurrency_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#step_concurrency_level TfCluster#step_concurrency_level}
   */
   readonly stepConcurrencyLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#tags AwsEmrCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#tags TfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#tags_all AwsEmrCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#tags_all TfCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#termination_protection AwsEmrCluster#termination_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#termination_protection TfCluster#termination_protection}
   */
   readonly terminationProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#unhealthy_node_replacement AwsEmrCluster#unhealthy_node_replacement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#unhealthy_node_replacement TfCluster#unhealthy_node_replacement}
   */
   readonly unhealthyNodeReplacement?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#visible_to_all_users AwsEmrCluster#visible_to_all_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#visible_to_all_users TfCluster#visible_to_all_users}
   */
   readonly visibleToAllUsers?: boolean | cdktn.IResolvable;
   /**
   * auto_termination_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#auto_termination_policy AwsEmrCluster#auto_termination_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#auto_termination_policy TfCluster#auto_termination_policy}
   */
-  readonly autoTerminationPolicy?: AwsEmrCluster.AutoTerminationPolicyProperty;
+  readonly autoTerminationPolicy?: TfCluster.AutoTerminationPolicyProperty;
   /**
   * bootstrap_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bootstrap_action AwsEmrCluster#bootstrap_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bootstrap_action TfCluster#bootstrap_action}
   */
-  readonly bootstrapAction?: AwsEmrCluster.BootstrapActionProperty[] | cdktn.IResolvable;
+  readonly bootstrapAction?: TfCluster.BootstrapActionProperty[] | cdktn.IResolvable;
   /**
   * core_instance_fleet block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#core_instance_fleet AwsEmrCluster#core_instance_fleet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#core_instance_fleet TfCluster#core_instance_fleet}
   */
-  readonly coreInstanceFleet?: AwsEmrCluster.CoreInstanceFleetProperty;
+  readonly coreInstanceFleet?: TfCluster.CoreInstanceFleetProperty;
   /**
   * core_instance_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#core_instance_group AwsEmrCluster#core_instance_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#core_instance_group TfCluster#core_instance_group}
   */
-  readonly coreInstanceGroup?: AwsEmrCluster.CoreInstanceGroupProperty;
+  readonly coreInstanceGroup?: TfCluster.CoreInstanceGroupProperty;
   /**
   * ec2_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ec2_attributes AwsEmrCluster#ec2_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ec2_attributes TfCluster#ec2_attributes}
   */
-  readonly ec2Attributes?: AwsEmrCluster.Ec2AttributesProperty;
+  readonly ec2Attributes?: TfCluster.Ec2AttributesProperty;
   /**
   * kerberos_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#kerberos_attributes AwsEmrCluster#kerberos_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#kerberos_attributes TfCluster#kerberos_attributes}
   */
-  readonly kerberosAttributes?: AwsEmrCluster.KerberosAttributesProperty;
+  readonly kerberosAttributes?: TfCluster.KerberosAttributesProperty;
   /**
   * master_instance_fleet block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#master_instance_fleet AwsEmrCluster#master_instance_fleet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#master_instance_fleet TfCluster#master_instance_fleet}
   */
-  readonly masterInstanceFleet?: AwsEmrCluster.MasterInstanceFleetProperty;
+  readonly masterInstanceFleet?: TfCluster.MasterInstanceFleetProperty;
   /**
   * master_instance_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#master_instance_group AwsEmrCluster#master_instance_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#master_instance_group TfCluster#master_instance_group}
   */
-  readonly masterInstanceGroup?: AwsEmrCluster.MasterInstanceGroupProperty;
+  readonly masterInstanceGroup?: TfCluster.MasterInstanceGroupProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster aws_emr_cluster}
 */
-export class AwsEmrCluster extends cdktn.TerraformResource {
+export class TfCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -183,11 +183,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEmrCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEmrCluster to import
-  * @param importFromId The id of the existing AwsEmrCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEmrCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCluster to import
+  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emr_cluster", importId: importFromId, provider });
@@ -202,9 +202,9 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEmrClusterConfig
+  * @param options TfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEmrClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emr_cluster',
       terraformGeneratorMetadata: {
@@ -498,11 +498,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // placement_group_config - computed: false, optional: true, required: false
-  private _placementGroupConfig = new AwsEmrCluster.PlacementGroupConfigPropertyList(this, "placement_group_config", false);
+  private _placementGroupConfig = new TfCluster.PlacementGroupConfigPropertyList(this, "placement_group_config", false);
   public get placementGroupConfig() {
     return this._placementGroupConfig;
   }
-  public putPlacementGroupConfig(value: AwsEmrCluster.PlacementGroupConfigProperty[] | cdktn.IResolvable) {
+  public putPlacementGroupConfig(value: TfCluster.PlacementGroupConfigProperty[] | cdktn.IResolvable) {
     this._placementGroupConfig.internalValue = value;
   }
   public resetPlacementGroupConfig() {
@@ -588,11 +588,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // step - computed: true, optional: true, required: false
-  private _step = new AwsEmrCluster.StepPropertyList(this, "step", false);
+  private _step = new TfCluster.StepPropertyList(this, "step", false);
   public get step() {
     return this._step;
   }
-  public putStep(value: AwsEmrCluster.StepProperty[] | cdktn.IResolvable) {
+  public putStep(value: TfCluster.StepProperty[] | cdktn.IResolvable) {
     this._step.internalValue = value;
   }
   public resetStep() {
@@ -700,11 +700,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // auto_termination_policy - computed: false, optional: true, required: false
-  private _autoTerminationPolicy = new AwsEmrCluster.AutoTerminationPolicyPropertyOutputReference(this, "auto_termination_policy");
+  private _autoTerminationPolicy = new TfCluster.AutoTerminationPolicyPropertyOutputReference(this, "auto_termination_policy");
   public get autoTerminationPolicy() {
     return this._autoTerminationPolicy;
   }
-  public putAutoTerminationPolicy(value: AwsEmrCluster.AutoTerminationPolicyProperty) {
+  public putAutoTerminationPolicy(value: TfCluster.AutoTerminationPolicyProperty) {
     this._autoTerminationPolicy.internalValue = value;
   }
   public resetAutoTerminationPolicy() {
@@ -716,11 +716,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // bootstrap_action - computed: false, optional: true, required: false
-  private _bootstrapAction = new AwsEmrCluster.BootstrapActionPropertyList(this, "bootstrap_action", false);
+  private _bootstrapAction = new TfCluster.BootstrapActionPropertyList(this, "bootstrap_action", false);
   public get bootstrapAction() {
     return this._bootstrapAction;
   }
-  public putBootstrapAction(value: AwsEmrCluster.BootstrapActionProperty[] | cdktn.IResolvable) {
+  public putBootstrapAction(value: TfCluster.BootstrapActionProperty[] | cdktn.IResolvable) {
     this._bootstrapAction.internalValue = value;
   }
   public resetBootstrapAction() {
@@ -732,11 +732,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // core_instance_fleet - computed: false, optional: true, required: false
-  private _coreInstanceFleet = new AwsEmrCluster.CoreInstanceFleetPropertyOutputReference(this, "core_instance_fleet");
+  private _coreInstanceFleet = new TfCluster.CoreInstanceFleetPropertyOutputReference(this, "core_instance_fleet");
   public get coreInstanceFleet() {
     return this._coreInstanceFleet;
   }
-  public putCoreInstanceFleet(value: AwsEmrCluster.CoreInstanceFleetProperty) {
+  public putCoreInstanceFleet(value: TfCluster.CoreInstanceFleetProperty) {
     this._coreInstanceFleet.internalValue = value;
   }
   public resetCoreInstanceFleet() {
@@ -748,11 +748,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // core_instance_group - computed: false, optional: true, required: false
-  private _coreInstanceGroup = new AwsEmrCluster.CoreInstanceGroupPropertyOutputReference(this, "core_instance_group");
+  private _coreInstanceGroup = new TfCluster.CoreInstanceGroupPropertyOutputReference(this, "core_instance_group");
   public get coreInstanceGroup() {
     return this._coreInstanceGroup;
   }
-  public putCoreInstanceGroup(value: AwsEmrCluster.CoreInstanceGroupProperty) {
+  public putCoreInstanceGroup(value: TfCluster.CoreInstanceGroupProperty) {
     this._coreInstanceGroup.internalValue = value;
   }
   public resetCoreInstanceGroup() {
@@ -764,11 +764,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // ec2_attributes - computed: false, optional: true, required: false
-  private _ec2Attributes = new AwsEmrCluster.Ec2AttributesPropertyOutputReference(this, "ec2_attributes");
+  private _ec2Attributes = new TfCluster.Ec2AttributesPropertyOutputReference(this, "ec2_attributes");
   public get ec2Attributes() {
     return this._ec2Attributes;
   }
-  public putEc2Attributes(value: AwsEmrCluster.Ec2AttributesProperty) {
+  public putEc2Attributes(value: TfCluster.Ec2AttributesProperty) {
     this._ec2Attributes.internalValue = value;
   }
   public resetEc2Attributes() {
@@ -780,11 +780,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // kerberos_attributes - computed: false, optional: true, required: false
-  private _kerberosAttributes = new AwsEmrCluster.KerberosAttributesPropertyOutputReference(this, "kerberos_attributes");
+  private _kerberosAttributes = new TfCluster.KerberosAttributesPropertyOutputReference(this, "kerberos_attributes");
   public get kerberosAttributes() {
     return this._kerberosAttributes;
   }
-  public putKerberosAttributes(value: AwsEmrCluster.KerberosAttributesProperty) {
+  public putKerberosAttributes(value: TfCluster.KerberosAttributesProperty) {
     this._kerberosAttributes.internalValue = value;
   }
   public resetKerberosAttributes() {
@@ -796,11 +796,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // master_instance_fleet - computed: false, optional: true, required: false
-  private _masterInstanceFleet = new AwsEmrCluster.MasterInstanceFleetPropertyOutputReference(this, "master_instance_fleet");
+  private _masterInstanceFleet = new TfCluster.MasterInstanceFleetPropertyOutputReference(this, "master_instance_fleet");
   public get masterInstanceFleet() {
     return this._masterInstanceFleet;
   }
-  public putMasterInstanceFleet(value: AwsEmrCluster.MasterInstanceFleetProperty) {
+  public putMasterInstanceFleet(value: TfCluster.MasterInstanceFleetProperty) {
     this._masterInstanceFleet.internalValue = value;
   }
   public resetMasterInstanceFleet() {
@@ -812,11 +812,11 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 
   // master_instance_group - computed: false, optional: true, required: false
-  private _masterInstanceGroup = new AwsEmrCluster.MasterInstanceGroupPropertyOutputReference(this, "master_instance_group");
+  private _masterInstanceGroup = new TfCluster.MasterInstanceGroupPropertyOutputReference(this, "master_instance_group");
   public get masterInstanceGroup() {
     return this._masterInstanceGroup;
   }
-  public putMasterInstanceGroup(value: AwsEmrCluster.MasterInstanceGroupProperty) {
+  public putMasterInstanceGroup(value: TfCluster.MasterInstanceGroupProperty) {
     this._masterInstanceGroup.internalValue = value;
   }
   public resetMasterInstanceGroup() {
@@ -847,27 +847,27 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
       log_uri: cdktn.stringToTerraform(this._logUri),
       name: cdktn.stringToTerraform(this._name),
       os_release_label: cdktn.stringToTerraform(this._osReleaseLabel),
-      placement_group_config: cdktn.listMapper(awsEmrClusterPlacementGroupConfigPropertyToTerraform, false)(this._placementGroupConfig.internalValue),
+      placement_group_config: cdktn.listMapper(tfClusterPlacementGroupConfigPropertyToTerraform, false)(this._placementGroupConfig.internalValue),
       region: cdktn.stringToTerraform(this._region),
       release_label: cdktn.stringToTerraform(this._releaseLabel),
       scale_down_behavior: cdktn.stringToTerraform(this._scaleDownBehavior),
       security_configuration: cdktn.stringToTerraform(this._securityConfiguration),
       service_role: cdktn.stringToTerraform(this._serviceRole),
-      step: cdktn.listMapper(awsEmrClusterStepPropertyToTerraform, false)(this._step.internalValue),
+      step: cdktn.listMapper(tfClusterStepPropertyToTerraform, false)(this._step.internalValue),
       step_concurrency_level: cdktn.numberToTerraform(this._stepConcurrencyLevel),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       termination_protection: cdktn.booleanToTerraform(this._terminationProtection),
       unhealthy_node_replacement: cdktn.booleanToTerraform(this._unhealthyNodeReplacement),
       visible_to_all_users: cdktn.booleanToTerraform(this._visibleToAllUsers),
-      auto_termination_policy: awsEmrClusterAutoTerminationPolicyPropertyToTerraform(this._autoTerminationPolicy.internalValue),
-      bootstrap_action: cdktn.listMapper(awsEmrClusterBootstrapActionPropertyToTerraform, true)(this._bootstrapAction.internalValue),
-      core_instance_fleet: awsEmrClusterCoreInstanceFleetPropertyToTerraform(this._coreInstanceFleet.internalValue),
-      core_instance_group: awsEmrClusterCoreInstanceGroupPropertyToTerraform(this._coreInstanceGroup.internalValue),
-      ec2_attributes: awsEmrClusterEc2AttributesPropertyToTerraform(this._ec2Attributes.internalValue),
-      kerberos_attributes: awsEmrClusterKerberosAttributesPropertyToTerraform(this._kerberosAttributes.internalValue),
-      master_instance_fleet: awsEmrClusterMasterInstanceFleetPropertyToTerraform(this._masterInstanceFleet.internalValue),
-      master_instance_group: awsEmrClusterMasterInstanceGroupPropertyToTerraform(this._masterInstanceGroup.internalValue),
+      auto_termination_policy: tfClusterAutoTerminationPolicyPropertyToTerraform(this._autoTerminationPolicy.internalValue),
+      bootstrap_action: cdktn.listMapper(tfClusterBootstrapActionPropertyToTerraform, true)(this._bootstrapAction.internalValue),
+      core_instance_fleet: tfClusterCoreInstanceFleetPropertyToTerraform(this._coreInstanceFleet.internalValue),
+      core_instance_group: tfClusterCoreInstanceGroupPropertyToTerraform(this._coreInstanceGroup.internalValue),
+      ec2_attributes: tfClusterEc2AttributesPropertyToTerraform(this._ec2Attributes.internalValue),
+      kerberos_attributes: tfClusterKerberosAttributesPropertyToTerraform(this._kerberosAttributes.internalValue),
+      master_instance_fleet: tfClusterMasterInstanceFleetPropertyToTerraform(this._masterInstanceFleet.internalValue),
+      master_instance_group: tfClusterMasterInstanceGroupPropertyToTerraform(this._masterInstanceGroup.internalValue),
     };
   }
 
@@ -958,10 +958,10 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       placement_group_config: {
-        value: cdktn.listMapperHcl(awsEmrClusterPlacementGroupConfigPropertyToHclTerraform, false)(this._placementGroupConfig.internalValue),
+        value: cdktn.listMapperHcl(tfClusterPlacementGroupConfigPropertyToHclTerraform, false)(this._placementGroupConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.PlacementGroupConfigPropertyList",
+        storageClassType: "TfCluster.PlacementGroupConfigPropertyList",
       },
       region: {
         value: cdktn.stringToHclTerraform(this._region),
@@ -994,10 +994,10 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       step: {
-        value: cdktn.listMapperHcl(awsEmrClusterStepPropertyToHclTerraform, false)(this._step.internalValue),
+        value: cdktn.listMapperHcl(tfClusterStepPropertyToHclTerraform, false)(this._step.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.StepPropertyList",
+        storageClassType: "TfCluster.StepPropertyList",
       },
       step_concurrency_level: {
         value: cdktn.numberToHclTerraform(this._stepConcurrencyLevel),
@@ -1036,52 +1036,52 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       auto_termination_policy: {
-        value: awsEmrClusterAutoTerminationPolicyPropertyToHclTerraform(this._autoTerminationPolicy.internalValue),
+        value: tfClusterAutoTerminationPolicyPropertyToHclTerraform(this._autoTerminationPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.AutoTerminationPolicyPropertyList",
+        storageClassType: "TfCluster.AutoTerminationPolicyPropertyList",
       },
       bootstrap_action: {
-        value: cdktn.listMapperHcl(awsEmrClusterBootstrapActionPropertyToHclTerraform, true)(this._bootstrapAction.internalValue),
+        value: cdktn.listMapperHcl(tfClusterBootstrapActionPropertyToHclTerraform, true)(this._bootstrapAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.BootstrapActionPropertyList",
+        storageClassType: "TfCluster.BootstrapActionPropertyList",
       },
       core_instance_fleet: {
-        value: awsEmrClusterCoreInstanceFleetPropertyToHclTerraform(this._coreInstanceFleet.internalValue),
+        value: tfClusterCoreInstanceFleetPropertyToHclTerraform(this._coreInstanceFleet.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.CoreInstanceFleetPropertyList",
+        storageClassType: "TfCluster.CoreInstanceFleetPropertyList",
       },
       core_instance_group: {
-        value: awsEmrClusterCoreInstanceGroupPropertyToHclTerraform(this._coreInstanceGroup.internalValue),
+        value: tfClusterCoreInstanceGroupPropertyToHclTerraform(this._coreInstanceGroup.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.CoreInstanceGroupPropertyList",
+        storageClassType: "TfCluster.CoreInstanceGroupPropertyList",
       },
       ec2_attributes: {
-        value: awsEmrClusterEc2AttributesPropertyToHclTerraform(this._ec2Attributes.internalValue),
+        value: tfClusterEc2AttributesPropertyToHclTerraform(this._ec2Attributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.Ec2AttributesPropertyList",
+        storageClassType: "TfCluster.Ec2AttributesPropertyList",
       },
       kerberos_attributes: {
-        value: awsEmrClusterKerberosAttributesPropertyToHclTerraform(this._kerberosAttributes.internalValue),
+        value: tfClusterKerberosAttributesPropertyToHclTerraform(this._kerberosAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.KerberosAttributesPropertyList",
+        storageClassType: "TfCluster.KerberosAttributesPropertyList",
       },
       master_instance_fleet: {
-        value: awsEmrClusterMasterInstanceFleetPropertyToHclTerraform(this._masterInstanceFleet.internalValue),
+        value: tfClusterMasterInstanceFleetPropertyToHclTerraform(this._masterInstanceFleet.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.MasterInstanceFleetPropertyList",
+        storageClassType: "TfCluster.MasterInstanceFleetPropertyList",
       },
       master_instance_group: {
-        value: awsEmrClusterMasterInstanceGroupPropertyToHclTerraform(this._masterInstanceGroup.internalValue),
+        value: tfClusterMasterInstanceGroupPropertyToHclTerraform(this._masterInstanceGroup.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrCluster.MasterInstanceGroupPropertyList",
+        storageClassType: "TfCluster.MasterInstanceGroupPropertyList",
       },
     };
 
@@ -1090,7 +1090,7 @@ export class AwsEmrCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsEmrClusterPlacementGroupConfigPropertyToTerraform(struct?: AwsEmrCluster.PlacementGroupConfigProperty | cdktn.IResolvable): any {
+export function tfClusterPlacementGroupConfigPropertyToTerraform(struct?: TfCluster.PlacementGroupConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1102,7 +1102,7 @@ export function awsEmrClusterPlacementGroupConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsEmrClusterPlacementGroupConfigPropertyToHclTerraform(struct?: AwsEmrCluster.PlacementGroupConfigProperty | cdktn.IResolvable): any {
+export function tfClusterPlacementGroupConfigPropertyToHclTerraform(struct?: TfCluster.PlacementGroupConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1127,7 +1127,7 @@ export function awsEmrClusterPlacementGroupConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function awsEmrClusterHadoopJarStepPropertyToTerraform(struct?: AwsEmrCluster.HadoopJarStepProperty | cdktn.IResolvable): any {
+export function tfClusterHadoopJarStepPropertyToTerraform(struct?: TfCluster.HadoopJarStepProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1141,7 +1141,7 @@ export function awsEmrClusterHadoopJarStepPropertyToTerraform(struct?: AwsEmrClu
 }
 
 
-export function awsEmrClusterHadoopJarStepPropertyToHclTerraform(struct?: AwsEmrCluster.HadoopJarStepProperty | cdktn.IResolvable): any {
+export function tfClusterHadoopJarStepPropertyToHclTerraform(struct?: TfCluster.HadoopJarStepProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1178,20 +1178,20 @@ export function awsEmrClusterHadoopJarStepPropertyToHclTerraform(struct?: AwsEmr
 }
 
 
-export function awsEmrClusterStepPropertyToTerraform(struct?: AwsEmrCluster.StepProperty | cdktn.IResolvable): any {
+export function tfClusterStepPropertyToTerraform(struct?: TfCluster.StepProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     action_on_failure: struct!.actionOnFailure === undefined ? null : cdktn.stringToTerraform(struct!.actionOnFailure),
-    hadoop_jar_step: struct!.hadoopJarStep === undefined ? null : cdktn.listMapper(awsEmrClusterHadoopJarStepPropertyToTerraform, false)(struct!.hadoopJarStep),
+    hadoop_jar_step: struct!.hadoopJarStep === undefined ? null : cdktn.listMapper(tfClusterHadoopJarStepPropertyToTerraform, false)(struct!.hadoopJarStep),
     name: struct!.name === undefined ? null : cdktn.stringToTerraform(struct!.name),
   }
 }
 
 
-export function awsEmrClusterStepPropertyToHclTerraform(struct?: AwsEmrCluster.StepProperty | cdktn.IResolvable): any {
+export function tfClusterStepPropertyToHclTerraform(struct?: TfCluster.StepProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1204,7 +1204,7 @@ export function awsEmrClusterStepPropertyToHclTerraform(struct?: AwsEmrCluster.S
       storageClassType: "string",
     },
     hadoop_jar_step: {
-      value: struct!.hadoopJarStep === undefined ? null : cdktn.listMapperHcl(awsEmrClusterHadoopJarStepPropertyToHclTerraform, false)(struct!.hadoopJarStep),
+      value: struct!.hadoopJarStep === undefined ? null : cdktn.listMapperHcl(tfClusterHadoopJarStepPropertyToHclTerraform, false)(struct!.hadoopJarStep),
       isBlock: true,
       type: "list",
       storageClassType: "HadoopJarStepPropertyList",
@@ -1222,7 +1222,7 @@ export function awsEmrClusterStepPropertyToHclTerraform(struct?: AwsEmrCluster.S
 }
 
 
-export function awsEmrClusterAutoTerminationPolicyPropertyToTerraform(struct?: AwsEmrCluster.AutoTerminationPolicyPropertyOutputReference | AwsEmrCluster.AutoTerminationPolicyProperty): any {
+export function tfClusterAutoTerminationPolicyPropertyToTerraform(struct?: TfCluster.AutoTerminationPolicyPropertyOutputReference | TfCluster.AutoTerminationPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1233,7 +1233,7 @@ export function awsEmrClusterAutoTerminationPolicyPropertyToTerraform(struct?: A
 }
 
 
-export function awsEmrClusterAutoTerminationPolicyPropertyToHclTerraform(struct?: AwsEmrCluster.AutoTerminationPolicyPropertyOutputReference | AwsEmrCluster.AutoTerminationPolicyProperty): any {
+export function tfClusterAutoTerminationPolicyPropertyToHclTerraform(struct?: TfCluster.AutoTerminationPolicyPropertyOutputReference | TfCluster.AutoTerminationPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1252,7 +1252,7 @@ export function awsEmrClusterAutoTerminationPolicyPropertyToHclTerraform(struct?
 }
 
 
-export function awsEmrClusterBootstrapActionPropertyToTerraform(struct?: AwsEmrCluster.BootstrapActionProperty | cdktn.IResolvable): any {
+export function tfClusterBootstrapActionPropertyToTerraform(struct?: TfCluster.BootstrapActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1265,7 +1265,7 @@ export function awsEmrClusterBootstrapActionPropertyToTerraform(struct?: AwsEmrC
 }
 
 
-export function awsEmrClusterBootstrapActionPropertyToHclTerraform(struct?: AwsEmrCluster.BootstrapActionProperty | cdktn.IResolvable): any {
+export function tfClusterBootstrapActionPropertyToHclTerraform(struct?: TfCluster.BootstrapActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1296,7 +1296,7 @@ export function awsEmrClusterBootstrapActionPropertyToHclTerraform(struct?: AwsE
 }
 
 
-export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform(struct?: TfCluster.CoreInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1308,7 +1308,7 @@ export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsP
 }
 
 
-export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform(struct?: TfCluster.CoreInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1333,7 +1333,7 @@ export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsP
 }
 
 
-export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform(struct?: TfCluster.CoreInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1347,7 +1347,7 @@ export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigProper
 }
 
 
-export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform(struct?: TfCluster.CoreInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1384,7 +1384,7 @@ export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigProper
 }
 
 
-export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetInstanceTypeConfigsPropertyToTerraform(struct?: TfCluster.CoreInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1394,13 +1394,13 @@ export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsPropertyToTerra
     bid_price_as_percentage_of_on_demand_price: cdktn.numberToTerraform(struct!.bidPriceAsPercentageOfOnDemandPrice),
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     weighted_capacity: cdktn.numberToTerraform(struct!.weightedCapacity),
-    configurations: cdktn.listMapper(awsEmrClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform, true)(struct!.configurations),
-    ebs_config: cdktn.listMapper(awsEmrClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
+    configurations: cdktn.listMapper(tfClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform, true)(struct!.configurations),
+    ebs_config: cdktn.listMapper(tfClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
   }
 }
 
 
-export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetInstanceTypeConfigsPropertyToHclTerraform(struct?: TfCluster.CoreInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1431,13 +1431,13 @@ export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsPropertyToHclTe
       storageClassType: "number",
     },
     configurations: {
-      value: cdktn.listMapperHcl(awsEmrClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform, true)(struct!.configurations),
+      value: cdktn.listMapperHcl(tfClusterCoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform, true)(struct!.configurations),
       isBlock: true,
       type: "set",
       storageClassType: "CoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyList",
     },
     ebs_config: {
-      value: cdktn.listMapperHcl(awsEmrClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
+      value: cdktn.listMapperHcl(tfClusterCoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
       isBlock: true,
       type: "set",
       storageClassType: "CoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyList",
@@ -1449,7 +1449,7 @@ export function awsEmrClusterCoreInstanceFleetInstanceTypeConfigsPropertyToHclTe
 }
 
 
-export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform(struct?: TfCluster.CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1460,7 +1460,7 @@ export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecif
 }
 
 
-export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform(struct?: TfCluster.CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1479,7 +1479,7 @@ export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecif
 }
 
 
-export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform(struct?: TfCluster.CoreInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1493,7 +1493,7 @@ export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificat
 }
 
 
-export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform(struct?: TfCluster.CoreInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1530,32 +1530,32 @@ export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificat
 }
 
 
-export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsPropertyOutputReference | AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsProperty): any {
+export function tfClusterCoreInstanceFleetLaunchSpecificationsPropertyToTerraform(struct?: TfCluster.CoreInstanceFleetLaunchSpecificationsPropertyOutputReference | TfCluster.CoreInstanceFleetLaunchSpecificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    on_demand_specification: cdktn.listMapper(awsEmrClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform, true)(struct!.onDemandSpecification),
-    spot_specification: cdktn.listMapper(awsEmrClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform, true)(struct!.spotSpecification),
+    on_demand_specification: cdktn.listMapper(tfClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform, true)(struct!.onDemandSpecification),
+    spot_specification: cdktn.listMapper(tfClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform, true)(struct!.spotSpecification),
   }
 }
 
 
-export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsPropertyOutputReference | AwsEmrCluster.CoreInstanceFleetLaunchSpecificationsProperty): any {
+export function tfClusterCoreInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct?: TfCluster.CoreInstanceFleetLaunchSpecificationsPropertyOutputReference | TfCluster.CoreInstanceFleetLaunchSpecificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     on_demand_specification: {
-      value: cdktn.listMapperHcl(awsEmrClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform, true)(struct!.onDemandSpecification),
+      value: cdktn.listMapperHcl(tfClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform, true)(struct!.onDemandSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyList",
     },
     spot_specification: {
-      value: cdktn.listMapperHcl(awsEmrClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform, true)(struct!.spotSpecification),
+      value: cdktn.listMapperHcl(tfClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform, true)(struct!.spotSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CoreInstanceFleetLaunchSpecificationsSpotSpecificationPropertyList",
@@ -1567,7 +1567,7 @@ export function awsEmrClusterCoreInstanceFleetLaunchSpecificationsPropertyToHclT
 }
 
 
-export function awsEmrClusterCoreInstanceFleetPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceFleetPropertyOutputReference | AwsEmrCluster.CoreInstanceFleetProperty): any {
+export function tfClusterCoreInstanceFleetPropertyToTerraform(struct?: TfCluster.CoreInstanceFleetPropertyOutputReference | TfCluster.CoreInstanceFleetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1576,13 +1576,13 @@ export function awsEmrClusterCoreInstanceFleetPropertyToTerraform(struct?: AwsEm
     name: cdktn.stringToTerraform(struct!.name),
     target_on_demand_capacity: cdktn.numberToTerraform(struct!.targetOnDemandCapacity),
     target_spot_capacity: cdktn.numberToTerraform(struct!.targetSpotCapacity),
-    instance_type_configs: cdktn.listMapper(awsEmrClusterCoreInstanceFleetInstanceTypeConfigsPropertyToTerraform, true)(struct!.instanceTypeConfigs),
-    launch_specifications: awsEmrClusterCoreInstanceFleetLaunchSpecificationsPropertyToTerraform(struct!.launchSpecifications),
+    instance_type_configs: cdktn.listMapper(tfClusterCoreInstanceFleetInstanceTypeConfigsPropertyToTerraform, true)(struct!.instanceTypeConfigs),
+    launch_specifications: tfClusterCoreInstanceFleetLaunchSpecificationsPropertyToTerraform(struct!.launchSpecifications),
   }
 }
 
 
-export function awsEmrClusterCoreInstanceFleetPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceFleetPropertyOutputReference | AwsEmrCluster.CoreInstanceFleetProperty): any {
+export function tfClusterCoreInstanceFleetPropertyToHclTerraform(struct?: TfCluster.CoreInstanceFleetPropertyOutputReference | TfCluster.CoreInstanceFleetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1607,13 +1607,13 @@ export function awsEmrClusterCoreInstanceFleetPropertyToHclTerraform(struct?: Aw
       storageClassType: "number",
     },
     instance_type_configs: {
-      value: cdktn.listMapperHcl(awsEmrClusterCoreInstanceFleetInstanceTypeConfigsPropertyToHclTerraform, true)(struct!.instanceTypeConfigs),
+      value: cdktn.listMapperHcl(tfClusterCoreInstanceFleetInstanceTypeConfigsPropertyToHclTerraform, true)(struct!.instanceTypeConfigs),
       isBlock: true,
       type: "set",
       storageClassType: "CoreInstanceFleetInstanceTypeConfigsPropertyList",
     },
     launch_specifications: {
-      value: awsEmrClusterCoreInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct!.launchSpecifications),
+      value: tfClusterCoreInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct!.launchSpecifications),
       isBlock: true,
       type: "list",
       storageClassType: "CoreInstanceFleetLaunchSpecificationsPropertyList",
@@ -1625,7 +1625,7 @@ export function awsEmrClusterCoreInstanceFleetPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsEmrClusterCoreInstanceGroupEbsConfigPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceGroupEbsConfigPropertyToTerraform(struct?: TfCluster.CoreInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1640,7 +1640,7 @@ export function awsEmrClusterCoreInstanceGroupEbsConfigPropertyToTerraform(struc
 }
 
 
-export function awsEmrClusterCoreInstanceGroupEbsConfigPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterCoreInstanceGroupEbsConfigPropertyToHclTerraform(struct?: TfCluster.CoreInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1683,7 +1683,7 @@ export function awsEmrClusterCoreInstanceGroupEbsConfigPropertyToHclTerraform(st
 }
 
 
-export function awsEmrClusterCoreInstanceGroupPropertyToTerraform(struct?: AwsEmrCluster.CoreInstanceGroupPropertyOutputReference | AwsEmrCluster.CoreInstanceGroupProperty): any {
+export function tfClusterCoreInstanceGroupPropertyToTerraform(struct?: TfCluster.CoreInstanceGroupPropertyOutputReference | TfCluster.CoreInstanceGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1694,12 +1694,12 @@ export function awsEmrClusterCoreInstanceGroupPropertyToTerraform(struct?: AwsEm
     instance_count: cdktn.numberToTerraform(struct!.instanceCount),
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     name: cdktn.stringToTerraform(struct!.name),
-    ebs_config: cdktn.listMapper(awsEmrClusterCoreInstanceGroupEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
+    ebs_config: cdktn.listMapper(tfClusterCoreInstanceGroupEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
   }
 }
 
 
-export function awsEmrClusterCoreInstanceGroupPropertyToHclTerraform(struct?: AwsEmrCluster.CoreInstanceGroupPropertyOutputReference | AwsEmrCluster.CoreInstanceGroupProperty): any {
+export function tfClusterCoreInstanceGroupPropertyToHclTerraform(struct?: TfCluster.CoreInstanceGroupPropertyOutputReference | TfCluster.CoreInstanceGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1736,7 +1736,7 @@ export function awsEmrClusterCoreInstanceGroupPropertyToHclTerraform(struct?: Aw
       storageClassType: "string",
     },
     ebs_config: {
-      value: cdktn.listMapperHcl(awsEmrClusterCoreInstanceGroupEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
+      value: cdktn.listMapperHcl(tfClusterCoreInstanceGroupEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
       isBlock: true,
       type: "set",
       storageClassType: "CoreInstanceGroupEbsConfigPropertyList",
@@ -1748,7 +1748,7 @@ export function awsEmrClusterCoreInstanceGroupPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsEmrClusterEc2AttributesPropertyToTerraform(struct?: AwsEmrCluster.Ec2AttributesPropertyOutputReference | AwsEmrCluster.Ec2AttributesProperty): any {
+export function tfClusterEc2AttributesPropertyToTerraform(struct?: TfCluster.Ec2AttributesPropertyOutputReference | TfCluster.Ec2AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1767,7 +1767,7 @@ export function awsEmrClusterEc2AttributesPropertyToTerraform(struct?: AwsEmrClu
 }
 
 
-export function awsEmrClusterEc2AttributesPropertyToHclTerraform(struct?: AwsEmrCluster.Ec2AttributesPropertyOutputReference | AwsEmrCluster.Ec2AttributesProperty): any {
+export function tfClusterEc2AttributesPropertyToHclTerraform(struct?: TfCluster.Ec2AttributesPropertyOutputReference | TfCluster.Ec2AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1834,7 +1834,7 @@ export function awsEmrClusterEc2AttributesPropertyToHclTerraform(struct?: AwsEmr
 }
 
 
-export function awsEmrClusterKerberosAttributesPropertyToTerraform(struct?: AwsEmrCluster.KerberosAttributesPropertyOutputReference | AwsEmrCluster.KerberosAttributesProperty): any {
+export function tfClusterKerberosAttributesPropertyToTerraform(struct?: TfCluster.KerberosAttributesPropertyOutputReference | TfCluster.KerberosAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1849,7 +1849,7 @@ export function awsEmrClusterKerberosAttributesPropertyToTerraform(struct?: AwsE
 }
 
 
-export function awsEmrClusterKerberosAttributesPropertyToHclTerraform(struct?: AwsEmrCluster.KerberosAttributesPropertyOutputReference | AwsEmrCluster.KerberosAttributesProperty): any {
+export function tfClusterKerberosAttributesPropertyToHclTerraform(struct?: TfCluster.KerberosAttributesPropertyOutputReference | TfCluster.KerberosAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1892,7 +1892,7 @@ export function awsEmrClusterKerberosAttributesPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform(struct?: TfCluster.MasterInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1904,7 +1904,7 @@ export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsConfiguration
 }
 
 
-export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform(struct?: TfCluster.MasterInstanceFleetInstanceTypeConfigsConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1929,7 +1929,7 @@ export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsConfiguration
 }
 
 
-export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform(struct?: TfCluster.MasterInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1943,7 +1943,7 @@ export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigProp
 }
 
 
-export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform(struct?: TfCluster.MasterInstanceFleetInstanceTypeConfigsEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1980,7 +1980,7 @@ export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigProp
 }
 
 
-export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetInstanceTypeConfigsPropertyToTerraform(struct?: TfCluster.MasterInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1990,13 +1990,13 @@ export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsPropertyToTer
     bid_price_as_percentage_of_on_demand_price: cdktn.numberToTerraform(struct!.bidPriceAsPercentageOfOnDemandPrice),
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     weighted_capacity: cdktn.numberToTerraform(struct!.weightedCapacity),
-    configurations: cdktn.listMapper(awsEmrClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform, true)(struct!.configurations),
-    ebs_config: cdktn.listMapper(awsEmrClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
+    configurations: cdktn.listMapper(tfClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToTerraform, true)(struct!.configurations),
+    ebs_config: cdktn.listMapper(tfClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
   }
 }
 
 
-export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetInstanceTypeConfigsPropertyToHclTerraform(struct?: TfCluster.MasterInstanceFleetInstanceTypeConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2027,13 +2027,13 @@ export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsPropertyToHcl
       storageClassType: "number",
     },
     configurations: {
-      value: cdktn.listMapperHcl(awsEmrClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform, true)(struct!.configurations),
+      value: cdktn.listMapperHcl(tfClusterMasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyToHclTerraform, true)(struct!.configurations),
       isBlock: true,
       type: "set",
       storageClassType: "MasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyList",
     },
     ebs_config: {
-      value: cdktn.listMapperHcl(awsEmrClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
+      value: cdktn.listMapperHcl(tfClusterMasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
       isBlock: true,
       type: "set",
       storageClassType: "MasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyList",
@@ -2045,7 +2045,7 @@ export function awsEmrClusterMasterInstanceFleetInstanceTypeConfigsPropertyToHcl
 }
 
 
-export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform(struct?: TfCluster.MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2056,7 +2056,7 @@ export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpec
 }
 
 
-export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform(struct?: TfCluster.MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2075,7 +2075,7 @@ export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpec
 }
 
 
-export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform(struct?: TfCluster.MasterInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2089,7 +2089,7 @@ export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsSpotSpecific
 }
 
 
-export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform(struct?: TfCluster.MasterInstanceFleetLaunchSpecificationsSpotSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2126,32 +2126,32 @@ export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsSpotSpecific
 }
 
 
-export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsPropertyOutputReference | AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsProperty): any {
+export function tfClusterMasterInstanceFleetLaunchSpecificationsPropertyToTerraform(struct?: TfCluster.MasterInstanceFleetLaunchSpecificationsPropertyOutputReference | TfCluster.MasterInstanceFleetLaunchSpecificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    on_demand_specification: cdktn.listMapper(awsEmrClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform, true)(struct!.onDemandSpecification),
-    spot_specification: cdktn.listMapper(awsEmrClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform, true)(struct!.spotSpecification),
+    on_demand_specification: cdktn.listMapper(tfClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToTerraform, true)(struct!.onDemandSpecification),
+    spot_specification: cdktn.listMapper(tfClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToTerraform, true)(struct!.spotSpecification),
   }
 }
 
 
-export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsPropertyOutputReference | AwsEmrCluster.MasterInstanceFleetLaunchSpecificationsProperty): any {
+export function tfClusterMasterInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct?: TfCluster.MasterInstanceFleetLaunchSpecificationsPropertyOutputReference | TfCluster.MasterInstanceFleetLaunchSpecificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     on_demand_specification: {
-      value: cdktn.listMapperHcl(awsEmrClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform, true)(struct!.onDemandSpecification),
+      value: cdktn.listMapperHcl(tfClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyToHclTerraform, true)(struct!.onDemandSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyList",
     },
     spot_specification: {
-      value: cdktn.listMapperHcl(awsEmrClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform, true)(struct!.spotSpecification),
+      value: cdktn.listMapperHcl(tfClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyToHclTerraform, true)(struct!.spotSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "MasterInstanceFleetLaunchSpecificationsSpotSpecificationPropertyList",
@@ -2163,7 +2163,7 @@ export function awsEmrClusterMasterInstanceFleetLaunchSpecificationsPropertyToHc
 }
 
 
-export function awsEmrClusterMasterInstanceFleetPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceFleetPropertyOutputReference | AwsEmrCluster.MasterInstanceFleetProperty): any {
+export function tfClusterMasterInstanceFleetPropertyToTerraform(struct?: TfCluster.MasterInstanceFleetPropertyOutputReference | TfCluster.MasterInstanceFleetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2172,13 +2172,13 @@ export function awsEmrClusterMasterInstanceFleetPropertyToTerraform(struct?: Aws
     name: cdktn.stringToTerraform(struct!.name),
     target_on_demand_capacity: cdktn.numberToTerraform(struct!.targetOnDemandCapacity),
     target_spot_capacity: cdktn.numberToTerraform(struct!.targetSpotCapacity),
-    instance_type_configs: cdktn.listMapper(awsEmrClusterMasterInstanceFleetInstanceTypeConfigsPropertyToTerraform, true)(struct!.instanceTypeConfigs),
-    launch_specifications: awsEmrClusterMasterInstanceFleetLaunchSpecificationsPropertyToTerraform(struct!.launchSpecifications),
+    instance_type_configs: cdktn.listMapper(tfClusterMasterInstanceFleetInstanceTypeConfigsPropertyToTerraform, true)(struct!.instanceTypeConfigs),
+    launch_specifications: tfClusterMasterInstanceFleetLaunchSpecificationsPropertyToTerraform(struct!.launchSpecifications),
   }
 }
 
 
-export function awsEmrClusterMasterInstanceFleetPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceFleetPropertyOutputReference | AwsEmrCluster.MasterInstanceFleetProperty): any {
+export function tfClusterMasterInstanceFleetPropertyToHclTerraform(struct?: TfCluster.MasterInstanceFleetPropertyOutputReference | TfCluster.MasterInstanceFleetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2203,13 +2203,13 @@ export function awsEmrClusterMasterInstanceFleetPropertyToHclTerraform(struct?: 
       storageClassType: "number",
     },
     instance_type_configs: {
-      value: cdktn.listMapperHcl(awsEmrClusterMasterInstanceFleetInstanceTypeConfigsPropertyToHclTerraform, true)(struct!.instanceTypeConfigs),
+      value: cdktn.listMapperHcl(tfClusterMasterInstanceFleetInstanceTypeConfigsPropertyToHclTerraform, true)(struct!.instanceTypeConfigs),
       isBlock: true,
       type: "set",
       storageClassType: "MasterInstanceFleetInstanceTypeConfigsPropertyList",
     },
     launch_specifications: {
-      value: awsEmrClusterMasterInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct!.launchSpecifications),
+      value: tfClusterMasterInstanceFleetLaunchSpecificationsPropertyToHclTerraform(struct!.launchSpecifications),
       isBlock: true,
       type: "list",
       storageClassType: "MasterInstanceFleetLaunchSpecificationsPropertyList",
@@ -2221,7 +2221,7 @@ export function awsEmrClusterMasterInstanceFleetPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEmrClusterMasterInstanceGroupEbsConfigPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceGroupEbsConfigPropertyToTerraform(struct?: TfCluster.MasterInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2236,7 +2236,7 @@ export function awsEmrClusterMasterInstanceGroupEbsConfigPropertyToTerraform(str
 }
 
 
-export function awsEmrClusterMasterInstanceGroupEbsConfigPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
+export function tfClusterMasterInstanceGroupEbsConfigPropertyToHclTerraform(struct?: TfCluster.MasterInstanceGroupEbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2279,7 +2279,7 @@ export function awsEmrClusterMasterInstanceGroupEbsConfigPropertyToHclTerraform(
 }
 
 
-export function awsEmrClusterMasterInstanceGroupPropertyToTerraform(struct?: AwsEmrCluster.MasterInstanceGroupPropertyOutputReference | AwsEmrCluster.MasterInstanceGroupProperty): any {
+export function tfClusterMasterInstanceGroupPropertyToTerraform(struct?: TfCluster.MasterInstanceGroupPropertyOutputReference | TfCluster.MasterInstanceGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2289,12 +2289,12 @@ export function awsEmrClusterMasterInstanceGroupPropertyToTerraform(struct?: Aws
     instance_count: cdktn.numberToTerraform(struct!.instanceCount),
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     name: cdktn.stringToTerraform(struct!.name),
-    ebs_config: cdktn.listMapper(awsEmrClusterMasterInstanceGroupEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
+    ebs_config: cdktn.listMapper(tfClusterMasterInstanceGroupEbsConfigPropertyToTerraform, true)(struct!.ebsConfig),
   }
 }
 
 
-export function awsEmrClusterMasterInstanceGroupPropertyToHclTerraform(struct?: AwsEmrCluster.MasterInstanceGroupPropertyOutputReference | AwsEmrCluster.MasterInstanceGroupProperty): any {
+export function tfClusterMasterInstanceGroupPropertyToHclTerraform(struct?: TfCluster.MasterInstanceGroupPropertyOutputReference | TfCluster.MasterInstanceGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2325,7 +2325,7 @@ export function awsEmrClusterMasterInstanceGroupPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     ebs_config: {
-      value: cdktn.listMapperHcl(awsEmrClusterMasterInstanceGroupEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
+      value: cdktn.listMapperHcl(tfClusterMasterInstanceGroupEbsConfigPropertyToHclTerraform, true)(struct!.ebsConfig),
       isBlock: true,
       type: "set",
       storageClassType: "MasterInstanceGroupEbsConfigPropertyList",
@@ -2337,14 +2337,14 @@ export function awsEmrClusterMasterInstanceGroupPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsEmrCluster {
+export namespace TfCluster {
 export interface PlacementGroupConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_role AwsEmrCluster#instance_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_role TfCluster#instance_role}
   */
   readonly instanceRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#placement_strategy AwsEmrCluster#placement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#placement_strategy TfCluster#placement_strategy}
   */
   readonly placementStrategy?: string;
 }
@@ -2452,19 +2452,19 @@ export class PlacementGroupConfigPropertyList extends cdktn.ComplexList {
 }
 export interface HadoopJarStepProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#args AwsEmrCluster#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#args TfCluster#args}
   */
   readonly args?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#jar AwsEmrCluster#jar}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#jar TfCluster#jar}
   */
   readonly jar?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#main_class AwsEmrCluster#main_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#main_class TfCluster#main_class}
   */
   readonly mainClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#properties AwsEmrCluster#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#properties TfCluster#properties}
   */
   readonly properties?: { [key: string]: string };
 }
@@ -2616,15 +2616,15 @@ export class HadoopJarStepPropertyList extends cdktn.ComplexList {
 }
 export interface StepProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#action_on_failure AwsEmrCluster#action_on_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#action_on_failure TfCluster#action_on_failure}
   */
   readonly actionOnFailure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#hadoop_jar_step AwsEmrCluster#hadoop_jar_step}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#hadoop_jar_step TfCluster#hadoop_jar_step}
   */
   readonly hadoopJarStep?: HadoopJarStepProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name AwsEmrCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name TfCluster#name}
   */
   readonly name?: string;
 }
@@ -2754,7 +2754,7 @@ export class StepPropertyList extends cdktn.ComplexList {
 }
 export interface AutoTerminationPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#idle_timeout AwsEmrCluster#idle_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#idle_timeout TfCluster#idle_timeout}
   */
   readonly idleTimeout?: number;
 }
@@ -2808,15 +2808,15 @@ export class AutoTerminationPolicyPropertyOutputReference extends cdktn.ComplexO
 }
 export interface BootstrapActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#args AwsEmrCluster#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#args TfCluster#args}
   */
   readonly args?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name AwsEmrCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name TfCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#path AwsEmrCluster#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#path TfCluster#path}
   */
   readonly path: string;
 }
@@ -2940,11 +2940,11 @@ export class BootstrapActionPropertyList extends cdktn.ComplexList {
 }
 export interface CoreInstanceFleetInstanceTypeConfigsConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#classification AwsEmrCluster#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#classification TfCluster#classification}
   */
   readonly classification?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#properties AwsEmrCluster#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#properties TfCluster#properties}
   */
   readonly properties?: { [key: string]: string };
 }
@@ -3052,19 +3052,19 @@ export class CoreInstanceFleetInstanceTypeConfigsConfigurationsPropertyList exte
 }
 export interface CoreInstanceFleetInstanceTypeConfigsEbsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops AwsEmrCluster#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops TfCluster#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size AwsEmrCluster#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size TfCluster#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type AwsEmrCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type TfCluster#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance AwsEmrCluster#volumes_per_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance TfCluster#volumes_per_instance}
   */
   readonly volumesPerInstance?: number;
 }
@@ -3210,31 +3210,31 @@ export class CoreInstanceFleetInstanceTypeConfigsEbsConfigPropertyList extends c
 }
 export interface CoreInstanceFleetInstanceTypeConfigsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price AwsEmrCluster#bid_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price TfCluster#bid_price}
   */
   readonly bidPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price_as_percentage_of_on_demand_price AwsEmrCluster#bid_price_as_percentage_of_on_demand_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price_as_percentage_of_on_demand_price TfCluster#bid_price_as_percentage_of_on_demand_price}
   */
   readonly bidPriceAsPercentageOfOnDemandPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type AwsEmrCluster#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type TfCluster#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#weighted_capacity AwsEmrCluster#weighted_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#weighted_capacity TfCluster#weighted_capacity}
   */
   readonly weightedCapacity?: number;
   /**
   * configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations AwsEmrCluster#configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations TfCluster#configurations}
   */
   readonly configurations?: CoreInstanceFleetInstanceTypeConfigsConfigurationsProperty[] | cdktn.IResolvable;
   /**
   * ebs_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config AwsEmrCluster#ebs_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config TfCluster#ebs_config}
   */
   readonly ebsConfig?: CoreInstanceFleetInstanceTypeConfigsEbsConfigProperty[] | cdktn.IResolvable;
 }
@@ -3427,7 +3427,7 @@ export class CoreInstanceFleetInstanceTypeConfigsPropertyList extends cdktn.Comp
 }
 export interface CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy AwsEmrCluster#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy TfCluster#allocation_strategy}
   */
   readonly allocationStrategy: string;
 }
@@ -3510,19 +3510,19 @@ export class CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationPropertyL
 }
 export interface CoreInstanceFleetLaunchSpecificationsSpotSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy AwsEmrCluster#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy TfCluster#allocation_strategy}
   */
   readonly allocationStrategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#block_duration_minutes AwsEmrCluster#block_duration_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#block_duration_minutes TfCluster#block_duration_minutes}
   */
   readonly blockDurationMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_action AwsEmrCluster#timeout_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_action TfCluster#timeout_action}
   */
   readonly timeoutAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_duration_minutes AwsEmrCluster#timeout_duration_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_duration_minutes TfCluster#timeout_duration_minutes}
   */
   readonly timeoutDurationMinutes: number;
 }
@@ -3667,13 +3667,13 @@ export interface CoreInstanceFleetLaunchSpecificationsProperty {
   /**
   * on_demand_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#on_demand_specification AwsEmrCluster#on_demand_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#on_demand_specification TfCluster#on_demand_specification}
   */
   readonly onDemandSpecification?: CoreInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty[] | cdktn.IResolvable;
   /**
   * spot_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#spot_specification AwsEmrCluster#spot_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#spot_specification TfCluster#spot_specification}
   */
   readonly spotSpecification?: CoreInstanceFleetLaunchSpecificationsSpotSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -3749,27 +3749,27 @@ export class CoreInstanceFleetLaunchSpecificationsPropertyOutputReference extend
 }
 export interface CoreInstanceFleetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name AwsEmrCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name TfCluster#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_on_demand_capacity AwsEmrCluster#target_on_demand_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_on_demand_capacity TfCluster#target_on_demand_capacity}
   */
   readonly targetOnDemandCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_spot_capacity AwsEmrCluster#target_spot_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_spot_capacity TfCluster#target_spot_capacity}
   */
   readonly targetSpotCapacity?: number;
   /**
   * instance_type_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type_configs AwsEmrCluster#instance_type_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type_configs TfCluster#instance_type_configs}
   */
   readonly instanceTypeConfigs?: CoreInstanceFleetInstanceTypeConfigsProperty[] | cdktn.IResolvable;
   /**
   * launch_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#launch_specifications AwsEmrCluster#launch_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#launch_specifications TfCluster#launch_specifications}
   */
   readonly launchSpecifications?: CoreInstanceFleetLaunchSpecificationsProperty;
 }
@@ -3926,23 +3926,23 @@ export class CoreInstanceFleetPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface CoreInstanceGroupEbsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops AwsEmrCluster#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops TfCluster#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size AwsEmrCluster#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size TfCluster#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#throughput AwsEmrCluster#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#throughput TfCluster#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type AwsEmrCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type TfCluster#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance AwsEmrCluster#volumes_per_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance TfCluster#volumes_per_instance}
   */
   readonly volumesPerInstance?: number;
 }
@@ -4110,29 +4110,29 @@ export class CoreInstanceGroupEbsConfigPropertyList extends cdktn.ComplexList {
 }
 export interface CoreInstanceGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#autoscaling_policy AwsEmrCluster#autoscaling_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#autoscaling_policy TfCluster#autoscaling_policy}
   */
   readonly autoscalingPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price AwsEmrCluster#bid_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price TfCluster#bid_price}
   */
   readonly bidPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_count AwsEmrCluster#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_count TfCluster#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type AwsEmrCluster#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type TfCluster#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name AwsEmrCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name TfCluster#name}
   */
   readonly name?: string;
   /**
   * ebs_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config AwsEmrCluster#ebs_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config TfCluster#ebs_config}
   */
   readonly ebsConfig?: CoreInstanceGroupEbsConfigProperty[] | cdktn.IResolvable;
 }
@@ -4298,39 +4298,39 @@ export class CoreInstanceGroupPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface Ec2AttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#additional_master_security_groups AwsEmrCluster#additional_master_security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#additional_master_security_groups TfCluster#additional_master_security_groups}
   */
   readonly additionalMasterSecurityGroups?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#additional_slave_security_groups AwsEmrCluster#additional_slave_security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#additional_slave_security_groups TfCluster#additional_slave_security_groups}
   */
   readonly additionalSlaveSecurityGroups?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#emr_managed_master_security_group AwsEmrCluster#emr_managed_master_security_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#emr_managed_master_security_group TfCluster#emr_managed_master_security_group}
   */
   readonly emrManagedMasterSecurityGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#emr_managed_slave_security_group AwsEmrCluster#emr_managed_slave_security_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#emr_managed_slave_security_group TfCluster#emr_managed_slave_security_group}
   */
   readonly emrManagedSlaveSecurityGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_profile AwsEmrCluster#instance_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_profile TfCluster#instance_profile}
   */
   readonly instanceProfile: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#key_name AwsEmrCluster#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#key_name TfCluster#key_name}
   */
   readonly keyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#service_access_security_group AwsEmrCluster#service_access_security_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#service_access_security_group TfCluster#service_access_security_group}
   */
   readonly serviceAccessSecurityGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#subnet_id AwsEmrCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#subnet_id TfCluster#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#subnet_ids AwsEmrCluster#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#subnet_ids TfCluster#subnet_ids}
   */
   readonly subnetIds?: string[];
 }
@@ -4557,23 +4557,23 @@ export class Ec2AttributesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface KerberosAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ad_domain_join_password AwsEmrCluster#ad_domain_join_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ad_domain_join_password TfCluster#ad_domain_join_password}
   */
   readonly adDomainJoinPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ad_domain_join_user AwsEmrCluster#ad_domain_join_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ad_domain_join_user TfCluster#ad_domain_join_user}
   */
   readonly adDomainJoinUser?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#cross_realm_trust_principal_password AwsEmrCluster#cross_realm_trust_principal_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#cross_realm_trust_principal_password TfCluster#cross_realm_trust_principal_password}
   */
   readonly crossRealmTrustPrincipalPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#kdc_admin_password AwsEmrCluster#kdc_admin_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#kdc_admin_password TfCluster#kdc_admin_password}
   */
   readonly kdcAdminPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#realm AwsEmrCluster#realm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#realm TfCluster#realm}
   */
   readonly realm: string;
 }
@@ -4709,11 +4709,11 @@ export class KerberosAttributesPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface MasterInstanceFleetInstanceTypeConfigsConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#classification AwsEmrCluster#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#classification TfCluster#classification}
   */
   readonly classification?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#properties AwsEmrCluster#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#properties TfCluster#properties}
   */
   readonly properties?: { [key: string]: string };
 }
@@ -4821,19 +4821,19 @@ export class MasterInstanceFleetInstanceTypeConfigsConfigurationsPropertyList ex
 }
 export interface MasterInstanceFleetInstanceTypeConfigsEbsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops AwsEmrCluster#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops TfCluster#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size AwsEmrCluster#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size TfCluster#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type AwsEmrCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type TfCluster#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance AwsEmrCluster#volumes_per_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance TfCluster#volumes_per_instance}
   */
   readonly volumesPerInstance?: number;
 }
@@ -4979,31 +4979,31 @@ export class MasterInstanceFleetInstanceTypeConfigsEbsConfigPropertyList extends
 }
 export interface MasterInstanceFleetInstanceTypeConfigsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price AwsEmrCluster#bid_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price TfCluster#bid_price}
   */
   readonly bidPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price_as_percentage_of_on_demand_price AwsEmrCluster#bid_price_as_percentage_of_on_demand_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price_as_percentage_of_on_demand_price TfCluster#bid_price_as_percentage_of_on_demand_price}
   */
   readonly bidPriceAsPercentageOfOnDemandPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type AwsEmrCluster#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type TfCluster#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#weighted_capacity AwsEmrCluster#weighted_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#weighted_capacity TfCluster#weighted_capacity}
   */
   readonly weightedCapacity?: number;
   /**
   * configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations AwsEmrCluster#configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#configurations TfCluster#configurations}
   */
   readonly configurations?: MasterInstanceFleetInstanceTypeConfigsConfigurationsProperty[] | cdktn.IResolvable;
   /**
   * ebs_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config AwsEmrCluster#ebs_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config TfCluster#ebs_config}
   */
   readonly ebsConfig?: MasterInstanceFleetInstanceTypeConfigsEbsConfigProperty[] | cdktn.IResolvable;
 }
@@ -5196,7 +5196,7 @@ export class MasterInstanceFleetInstanceTypeConfigsPropertyList extends cdktn.Co
 }
 export interface MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy AwsEmrCluster#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy TfCluster#allocation_strategy}
   */
   readonly allocationStrategy: string;
 }
@@ -5279,19 +5279,19 @@ export class MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationPropert
 }
 export interface MasterInstanceFleetLaunchSpecificationsSpotSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy AwsEmrCluster#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#allocation_strategy TfCluster#allocation_strategy}
   */
   readonly allocationStrategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#block_duration_minutes AwsEmrCluster#block_duration_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#block_duration_minutes TfCluster#block_duration_minutes}
   */
   readonly blockDurationMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_action AwsEmrCluster#timeout_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_action TfCluster#timeout_action}
   */
   readonly timeoutAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_duration_minutes AwsEmrCluster#timeout_duration_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#timeout_duration_minutes TfCluster#timeout_duration_minutes}
   */
   readonly timeoutDurationMinutes: number;
 }
@@ -5436,13 +5436,13 @@ export interface MasterInstanceFleetLaunchSpecificationsProperty {
   /**
   * on_demand_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#on_demand_specification AwsEmrCluster#on_demand_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#on_demand_specification TfCluster#on_demand_specification}
   */
   readonly onDemandSpecification?: MasterInstanceFleetLaunchSpecificationsOnDemandSpecificationProperty[] | cdktn.IResolvable;
   /**
   * spot_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#spot_specification AwsEmrCluster#spot_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#spot_specification TfCluster#spot_specification}
   */
   readonly spotSpecification?: MasterInstanceFleetLaunchSpecificationsSpotSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -5518,27 +5518,27 @@ export class MasterInstanceFleetLaunchSpecificationsPropertyOutputReference exte
 }
 export interface MasterInstanceFleetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name AwsEmrCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name TfCluster#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_on_demand_capacity AwsEmrCluster#target_on_demand_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_on_demand_capacity TfCluster#target_on_demand_capacity}
   */
   readonly targetOnDemandCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_spot_capacity AwsEmrCluster#target_spot_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#target_spot_capacity TfCluster#target_spot_capacity}
   */
   readonly targetSpotCapacity?: number;
   /**
   * instance_type_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type_configs AwsEmrCluster#instance_type_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type_configs TfCluster#instance_type_configs}
   */
   readonly instanceTypeConfigs?: MasterInstanceFleetInstanceTypeConfigsProperty[] | cdktn.IResolvable;
   /**
   * launch_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#launch_specifications AwsEmrCluster#launch_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#launch_specifications TfCluster#launch_specifications}
   */
   readonly launchSpecifications?: MasterInstanceFleetLaunchSpecificationsProperty;
 }
@@ -5695,23 +5695,23 @@ export class MasterInstanceFleetPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface MasterInstanceGroupEbsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops AwsEmrCluster#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#iops TfCluster#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size AwsEmrCluster#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#size TfCluster#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#throughput AwsEmrCluster#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#throughput TfCluster#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type AwsEmrCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#type TfCluster#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance AwsEmrCluster#volumes_per_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#volumes_per_instance TfCluster#volumes_per_instance}
   */
   readonly volumesPerInstance?: number;
 }
@@ -5879,25 +5879,25 @@ export class MasterInstanceGroupEbsConfigPropertyList extends cdktn.ComplexList 
 }
 export interface MasterInstanceGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price AwsEmrCluster#bid_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#bid_price TfCluster#bid_price}
   */
   readonly bidPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_count AwsEmrCluster#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_count TfCluster#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type AwsEmrCluster#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#instance_type TfCluster#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name AwsEmrCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#name TfCluster#name}
   */
   readonly name?: string;
   /**
   * ebs_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config AwsEmrCluster#ebs_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_cluster#ebs_config TfCluster#ebs_config}
   */
   readonly ebsConfig?: MasterInstanceGroupEbsConfigProperty[] | cdktn.IResolvable;
 }

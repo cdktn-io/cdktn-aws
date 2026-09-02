@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFsxOpenzfsSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface TfOpenzfsSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#id AwsFsxOpenzfsSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#id TfOpenzfsSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#name AwsFsxOpenzfsSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#name TfOpenzfsSnapshot#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#region AwsFsxOpenzfsSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#region TfOpenzfsSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#tags AwsFsxOpenzfsSnapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#tags TfOpenzfsSnapshot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#tags_all AwsFsxOpenzfsSnapshot#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#tags_all TfOpenzfsSnapshot#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#volume_id AwsFsxOpenzfsSnapshot#volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#volume_id TfOpenzfsSnapshot#volume_id}
   */
   readonly volumeId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#timeouts AwsFsxOpenzfsSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#timeouts TfOpenzfsSnapshot#timeouts}
   */
-  readonly timeouts?: AwsFsxOpenzfsSnapshot.TimeoutsProperty;
+  readonly timeouts?: TfOpenzfsSnapshot.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot aws_fsx_openzfs_snapshot}
 */
-export class AwsFsxOpenzfsSnapshot extends cdktn.TerraformResource {
+export class TfOpenzfsSnapshot extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsFsxOpenzfsSnapshot extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFsxOpenzfsSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOpenzfsSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFsxOpenzfsSnapshot to import
-  * @param importFromId The id of the existing AwsFsxOpenzfsSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFsxOpenzfsSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the TfOpenzfsSnapshot to import
+  * @param importFromId The id of the existing TfOpenzfsSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOpenzfsSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_openzfs_snapshot", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsFsxOpenzfsSnapshot extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFsxOpenzfsSnapshotConfig
+  * @param options TfOpenzfsSnapshotConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFsxOpenzfsSnapshotConfig) {
+  public constructor(scope: Construct, id: string, config: TfOpenzfsSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_openzfs_snapshot',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class AwsFsxOpenzfsSnapshot extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFsxOpenzfsSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOpenzfsSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFsxOpenzfsSnapshot.TimeoutsProperty) {
+  public putTimeouts(value: TfOpenzfsSnapshot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -235,7 +235,7 @@ export class AwsFsxOpenzfsSnapshot extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       volume_id: cdktn.stringToTerraform(this._volumeId),
-      timeouts: awsFsxOpenzfsSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfOpenzfsSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class AwsFsxOpenzfsSnapshot extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsFsxOpenzfsSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOpenzfsSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFsxOpenzfsSnapshot.TimeoutsProperty",
+        storageClassType: "TfOpenzfsSnapshot.TimeoutsProperty",
       },
     };
 
@@ -290,7 +290,7 @@ export class AwsFsxOpenzfsSnapshot extends cdktn.TerraformResource {
   }
 }
 
-export function awsFsxOpenzfsSnapshotTimeoutsPropertyToTerraform(struct?: AwsFsxOpenzfsSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOpenzfsSnapshotTimeoutsPropertyToTerraform(struct?: TfOpenzfsSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function awsFsxOpenzfsSnapshotTimeoutsPropertyToTerraform(struct?: AwsFsx
 }
 
 
-export function awsFsxOpenzfsSnapshotTimeoutsPropertyToHclTerraform(struct?: AwsFsxOpenzfsSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOpenzfsSnapshotTimeoutsPropertyToHclTerraform(struct?: TfOpenzfsSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,22 +341,22 @@ export function awsFsxOpenzfsSnapshotTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsFsxOpenzfsSnapshot {
+export namespace TfOpenzfsSnapshot {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#create AwsFsxOpenzfsSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#create TfOpenzfsSnapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#delete AwsFsxOpenzfsSnapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#delete TfOpenzfsSnapshot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#read AwsFsxOpenzfsSnapshot#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#read TfOpenzfsSnapshot#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#update AwsFsxOpenzfsSnapshot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_snapshot#update TfOpenzfsSnapshot#update}
   */
   readonly update?: string;
 }

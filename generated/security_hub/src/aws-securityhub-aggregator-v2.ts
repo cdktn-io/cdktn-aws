@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubAggregatorV2Config extends cdktn.TerraformMetaArguments {
+export interface TfAggregatorV2Config extends cdktn.TerraformMetaArguments {
   /**
   * The list of Regions linked to the aggregation Region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#linked_regions AwsSecurityhubAggregatorV2#linked_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#linked_regions TfAggregatorV2#linked_regions}
   */
   readonly linkedRegions?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#region AwsSecurityhubAggregatorV2#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#region TfAggregatorV2#region}
   */
   readonly region?: string;
   /**
   * Determines how Regions are linked: ALL_REGIONS, ALL_REGIONS_EXCEPT_SPECIFIED, or SPECIFIED_REGIONS.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#region_linking_mode AwsSecurityhubAggregatorV2#region_linking_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#region_linking_mode TfAggregatorV2#region_linking_mode}
   */
   readonly regionLinkingMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#tags AwsSecurityhubAggregatorV2#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#tags TfAggregatorV2#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -33,7 +33,7 @@ export interface AwsSecurityhubAggregatorV2Config extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2 aws_securityhub_aggregator_v2}
 */
-export class AwsSecurityhubAggregatorV2 extends cdktn.TerraformResource {
+export class TfAggregatorV2 extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsSecurityhubAggregatorV2 extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubAggregatorV2 resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAggregatorV2 resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubAggregatorV2 to import
-  * @param importFromId The id of the existing AwsSecurityhubAggregatorV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubAggregatorV2 to import is found
+  * @param importToId The construct id used in the generated config for the TfAggregatorV2 to import
+  * @param importFromId The id of the existing TfAggregatorV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_aggregator_v2#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAggregatorV2 to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_aggregator_v2", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsSecurityhubAggregatorV2 extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubAggregatorV2Config
+  * @param options TfAggregatorV2Config
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubAggregatorV2Config) {
+  public constructor(scope: Construct, id: string, config: TfAggregatorV2Config) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_aggregator_v2',
       terraformGeneratorMetadata: {

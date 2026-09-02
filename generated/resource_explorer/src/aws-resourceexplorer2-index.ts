@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsResourceexplorer2IndexConfig extends cdktn.TerraformMetaArguments {
+export interface TfIndexConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#region AwsResourceexplorer2Index#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#region TfIndex#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#tags AwsResourceexplorer2Index#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#tags TfIndex#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#type AwsResourceexplorer2Index#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#type TfIndex#type}
   */
   readonly type: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#timeouts AwsResourceexplorer2Index#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#timeouts TfIndex#timeouts}
   */
-  readonly timeouts?: AwsResourceexplorer2Index.TimeoutsProperty;
+  readonly timeouts?: TfIndex.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index aws_resourceexplorer2_index}
 */
-export class AwsResourceexplorer2Index extends cdktn.TerraformResource {
+export class TfIndex extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsResourceexplorer2Index extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsResourceexplorer2Index resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIndex resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsResourceexplorer2Index to import
-  * @param importFromId The id of the existing AwsResourceexplorer2Index that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsResourceexplorer2Index to import is found
+  * @param importToId The construct id used in the generated config for the TfIndex to import
+  * @param importFromId The id of the existing TfIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIndex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resourceexplorer2_index", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsResourceexplorer2Index extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsResourceexplorer2IndexConfig
+  * @param options TfIndexConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsResourceexplorer2IndexConfig) {
+  public constructor(scope: Construct, id: string, config: TfIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resourceexplorer2_index',
       terraformGeneratorMetadata: {
@@ -151,11 +151,11 @@ export class AwsResourceexplorer2Index extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsResourceexplorer2Index.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfIndex.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsResourceexplorer2Index.TimeoutsProperty) {
+  public putTimeouts(value: TfIndex.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -175,7 +175,7 @@ export class AwsResourceexplorer2Index extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       type: cdktn.stringToTerraform(this._type),
-      timeouts: awsResourceexplorer2IndexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfIndexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -200,10 +200,10 @@ export class AwsResourceexplorer2Index extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsResourceexplorer2IndexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfIndexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsResourceexplorer2Index.TimeoutsProperty",
+        storageClassType: "TfIndex.TimeoutsProperty",
       },
     };
 
@@ -212,7 +212,7 @@ export class AwsResourceexplorer2Index extends cdktn.TerraformResource {
   }
 }
 
-export function awsResourceexplorer2IndexTimeoutsPropertyToTerraform(struct?: AwsResourceexplorer2Index.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIndexTimeoutsPropertyToTerraform(struct?: TfIndex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function awsResourceexplorer2IndexTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsResourceexplorer2IndexTimeoutsPropertyToHclTerraform(struct?: AwsResourceexplorer2Index.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIndexTimeoutsPropertyToHclTerraform(struct?: TfIndex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,24 +256,24 @@ export function awsResourceexplorer2IndexTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsResourceexplorer2Index {
+export namespace TfIndex {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#create AwsResourceexplorer2Index#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#create TfIndex#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#delete AwsResourceexplorer2Index#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#delete TfIndex#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#update AwsResourceexplorer2Index#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourceexplorer2_index#update TfIndex#update}
   */
   readonly update?: string;
 }

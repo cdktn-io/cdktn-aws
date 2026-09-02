@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmonitorProbeConfig extends cdktn.TerraformMetaArguments {
+export interface TfProbeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#destination AwsNetworkmonitorProbe#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#destination TfProbe#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#destination_port AwsNetworkmonitorProbe#destination_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#destination_port TfProbe#destination_port}
   */
   readonly destinationPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#monitor_name AwsNetworkmonitorProbe#monitor_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#monitor_name TfProbe#monitor_name}
   */
   readonly monitorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#packet_size AwsNetworkmonitorProbe#packet_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#packet_size TfProbe#packet_size}
   */
   readonly packetSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#protocol AwsNetworkmonitorProbe#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#protocol TfProbe#protocol}
   */
   readonly protocol: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#region AwsNetworkmonitorProbe#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#region TfProbe#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#source_arn AwsNetworkmonitorProbe#source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#source_arn TfProbe#source_arn}
   */
   readonly sourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#tags AwsNetworkmonitorProbe#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#tags TfProbe#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -45,7 +45,7 @@ export interface AwsNetworkmonitorProbeConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe aws_networkmonitor_probe}
 */
-export class AwsNetworkmonitorProbe extends cdktn.TerraformResource {
+export class TfProbe extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsNetworkmonitorProbe extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmonitorProbe resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProbe resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmonitorProbe to import
-  * @param importFromId The id of the existing AwsNetworkmonitorProbe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmonitorProbe to import is found
+  * @param importToId The construct id used in the generated config for the TfProbe to import
+  * @param importFromId The id of the existing TfProbe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_probe#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProbe to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmonitor_probe", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsNetworkmonitorProbe extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmonitorProbeConfig
+  * @param options TfProbeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmonitorProbeConfig) {
+  public constructor(scope: Construct, id: string, config: TfProbeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmonitor_probe',
       terraformGeneratorMetadata: {

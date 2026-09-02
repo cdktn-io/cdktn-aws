@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsElasticsearchDomainSamlOptionsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainSamlOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#domain_name AwsElasticsearchDomainSamlOptions#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#domain_name TfDomainSamlOptions#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#id AwsElasticsearchDomainSamlOptions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#id TfDomainSamlOptions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,27 +20,27 @@ export interface AwsElasticsearchDomainSamlOptionsConfig extends cdktn.Terraform
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#region AwsElasticsearchDomainSamlOptions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#region TfDomainSamlOptions#region}
   */
   readonly region?: string;
   /**
   * saml_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#saml_options AwsElasticsearchDomainSamlOptions#saml_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#saml_options TfDomainSamlOptions#saml_options}
   */
-  readonly samlOptions?: AwsElasticsearchDomainSamlOptions.SamlOptionsProperty;
+  readonly samlOptions?: TfDomainSamlOptions.SamlOptionsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#timeouts AwsElasticsearchDomainSamlOptions#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#timeouts TfDomainSamlOptions#timeouts}
   */
-  readonly timeouts?: AwsElasticsearchDomainSamlOptions.TimeoutsProperty;
+  readonly timeouts?: TfDomainSamlOptions.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options aws_elasticsearch_domain_saml_options}
 */
-export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
+export class TfDomainSamlOptions extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsElasticsearchDomainSamlOptions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainSamlOptions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsElasticsearchDomainSamlOptions to import
-  * @param importFromId The id of the existing AwsElasticsearchDomainSamlOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsElasticsearchDomainSamlOptions to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainSamlOptions to import
+  * @param importFromId The id of the existing TfDomainSamlOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainSamlOptions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticsearch_domain_saml_options", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsElasticsearchDomainSamlOptionsConfig
+  * @param options TfDomainSamlOptionsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsElasticsearchDomainSamlOptionsConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainSamlOptionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticsearch_domain_saml_options',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
   }
 
   // saml_options - computed: false, optional: true, required: false
-  private _samlOptions = new AwsElasticsearchDomainSamlOptions.SamlOptionsPropertyOutputReference(this, "saml_options");
+  private _samlOptions = new TfDomainSamlOptions.SamlOptionsPropertyOutputReference(this, "saml_options");
   public get samlOptions() {
     return this._samlOptions;
   }
-  public putSamlOptions(value: AwsElasticsearchDomainSamlOptions.SamlOptionsProperty) {
+  public putSamlOptions(value: TfDomainSamlOptions.SamlOptionsProperty) {
     this._samlOptions.internalValue = value;
   }
   public resetSamlOptions() {
@@ -161,11 +161,11 @@ export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsElasticsearchDomainSamlOptions.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDomainSamlOptions.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsElasticsearchDomainSamlOptions.TimeoutsProperty) {
+  public putTimeouts(value: TfDomainSamlOptions.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -185,8 +185,8 @@ export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
       domain_name: cdktn.stringToTerraform(this._domainName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      saml_options: awsElasticsearchDomainSamlOptionsSamlOptionsPropertyToTerraform(this._samlOptions.internalValue),
-      timeouts: awsElasticsearchDomainSamlOptionsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      saml_options: tfDomainSamlOptionsSamlOptionsPropertyToTerraform(this._samlOptions.internalValue),
+      timeouts: tfDomainSamlOptionsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -211,16 +211,16 @@ export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       saml_options: {
-        value: awsElasticsearchDomainSamlOptionsSamlOptionsPropertyToHclTerraform(this._samlOptions.internalValue),
+        value: tfDomainSamlOptionsSamlOptionsPropertyToHclTerraform(this._samlOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticsearchDomainSamlOptions.SamlOptionsPropertyList",
+        storageClassType: "TfDomainSamlOptions.SamlOptionsPropertyList",
       },
       timeouts: {
-        value: awsElasticsearchDomainSamlOptionsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDomainSamlOptionsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsElasticsearchDomainSamlOptions.TimeoutsProperty",
+        storageClassType: "TfDomainSamlOptions.TimeoutsProperty",
       },
     };
 
@@ -229,7 +229,7 @@ export class AwsElasticsearchDomainSamlOptions extends cdktn.TerraformResource {
   }
 }
 
-export function awsElasticsearchDomainSamlOptionsIdpPropertyToTerraform(struct?: AwsElasticsearchDomainSamlOptions.IdpPropertyOutputReference | AwsElasticsearchDomainSamlOptions.IdpProperty): any {
+export function tfDomainSamlOptionsIdpPropertyToTerraform(struct?: TfDomainSamlOptions.IdpPropertyOutputReference | TfDomainSamlOptions.IdpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function awsElasticsearchDomainSamlOptionsIdpPropertyToTerraform(struct?:
 }
 
 
-export function awsElasticsearchDomainSamlOptionsIdpPropertyToHclTerraform(struct?: AwsElasticsearchDomainSamlOptions.IdpPropertyOutputReference | AwsElasticsearchDomainSamlOptions.IdpProperty): any {
+export function tfDomainSamlOptionsIdpPropertyToHclTerraform(struct?: TfDomainSamlOptions.IdpPropertyOutputReference | TfDomainSamlOptions.IdpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function awsElasticsearchDomainSamlOptionsIdpPropertyToHclTerraform(struc
 }
 
 
-export function awsElasticsearchDomainSamlOptionsSamlOptionsPropertyToTerraform(struct?: AwsElasticsearchDomainSamlOptions.SamlOptionsPropertyOutputReference | AwsElasticsearchDomainSamlOptions.SamlOptionsProperty): any {
+export function tfDomainSamlOptionsSamlOptionsPropertyToTerraform(struct?: TfDomainSamlOptions.SamlOptionsPropertyOutputReference | TfDomainSamlOptions.SamlOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,12 +278,12 @@ export function awsElasticsearchDomainSamlOptionsSamlOptionsPropertyToTerraform(
     roles_key: cdktn.stringToTerraform(struct!.rolesKey),
     session_timeout_minutes: cdktn.numberToTerraform(struct!.sessionTimeoutMinutes),
     subject_key: cdktn.stringToTerraform(struct!.subjectKey),
-    idp: awsElasticsearchDomainSamlOptionsIdpPropertyToTerraform(struct!.idp),
+    idp: tfDomainSamlOptionsIdpPropertyToTerraform(struct!.idp),
   }
 }
 
 
-export function awsElasticsearchDomainSamlOptionsSamlOptionsPropertyToHclTerraform(struct?: AwsElasticsearchDomainSamlOptions.SamlOptionsPropertyOutputReference | AwsElasticsearchDomainSamlOptions.SamlOptionsProperty): any {
+export function tfDomainSamlOptionsSamlOptionsPropertyToHclTerraform(struct?: TfDomainSamlOptions.SamlOptionsPropertyOutputReference | TfDomainSamlOptions.SamlOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function awsElasticsearchDomainSamlOptionsSamlOptionsPropertyToHclTerrafo
       storageClassType: "string",
     },
     idp: {
-      value: awsElasticsearchDomainSamlOptionsIdpPropertyToHclTerraform(struct!.idp),
+      value: tfDomainSamlOptionsIdpPropertyToHclTerraform(struct!.idp),
       isBlock: true,
       type: "list",
       storageClassType: "IdpPropertyList",
@@ -338,7 +338,7 @@ export function awsElasticsearchDomainSamlOptionsSamlOptionsPropertyToHclTerrafo
 }
 
 
-export function awsElasticsearchDomainSamlOptionsTimeoutsPropertyToTerraform(struct?: AwsElasticsearchDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainSamlOptionsTimeoutsPropertyToTerraform(struct?: TfDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function awsElasticsearchDomainSamlOptionsTimeoutsPropertyToTerraform(str
 }
 
 
-export function awsElasticsearchDomainSamlOptionsTimeoutsPropertyToHclTerraform(struct?: AwsElasticsearchDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainSamlOptionsTimeoutsPropertyToHclTerraform(struct?: TfDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,14 +375,14 @@ export function awsElasticsearchDomainSamlOptionsTimeoutsPropertyToHclTerraform(
 }
 
 
-export namespace AwsElasticsearchDomainSamlOptions {
+export namespace TfDomainSamlOptions {
 export interface IdpProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#entity_id AwsElasticsearchDomainSamlOptions#entity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#entity_id TfDomainSamlOptions#entity_id}
   */
   readonly entityId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#metadata_content AwsElasticsearchDomainSamlOptions#metadata_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#metadata_content TfDomainSamlOptions#metadata_content}
   */
   readonly metadataContent: string;
 }
@@ -452,33 +452,33 @@ export class IdpPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SamlOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#enabled AwsElasticsearchDomainSamlOptions#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#enabled TfDomainSamlOptions#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#master_backend_role AwsElasticsearchDomainSamlOptions#master_backend_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#master_backend_role TfDomainSamlOptions#master_backend_role}
   */
   readonly masterBackendRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#master_user_name AwsElasticsearchDomainSamlOptions#master_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#master_user_name TfDomainSamlOptions#master_user_name}
   */
   readonly masterUserName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#roles_key AwsElasticsearchDomainSamlOptions#roles_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#roles_key TfDomainSamlOptions#roles_key}
   */
   readonly rolesKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#session_timeout_minutes AwsElasticsearchDomainSamlOptions#session_timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#session_timeout_minutes TfDomainSamlOptions#session_timeout_minutes}
   */
   readonly sessionTimeoutMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#subject_key AwsElasticsearchDomainSamlOptions#subject_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#subject_key TfDomainSamlOptions#subject_key}
   */
   readonly subjectKey?: string;
   /**
   * idp block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#idp AwsElasticsearchDomainSamlOptions#idp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#idp TfDomainSamlOptions#idp}
   */
   readonly idp?: IdpProperty;
 }
@@ -664,11 +664,11 @@ export class SamlOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#delete AwsElasticsearchDomainSamlOptions#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#delete TfDomainSamlOptions#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#update AwsElasticsearchDomainSamlOptions#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticsearch_domain_saml_options#update TfDomainSamlOptions#update}
   */
   readonly update?: string;
 }

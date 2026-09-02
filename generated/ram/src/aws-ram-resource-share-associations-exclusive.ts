@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRamResourceShareAssociationsExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceShareAssociationsExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#principals AwsRamResourceShareAssociationsExclusive#principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#principals TfResourceShareAssociationsExclusive#principals}
   */
   readonly principals?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#region AwsRamResourceShareAssociationsExclusive#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#region TfResourceShareAssociationsExclusive#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#resource_arns AwsRamResourceShareAssociationsExclusive#resource_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#resource_arns TfResourceShareAssociationsExclusive#resource_arns}
   */
   readonly resourceArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#resource_share_arn AwsRamResourceShareAssociationsExclusive#resource_share_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#resource_share_arn TfResourceShareAssociationsExclusive#resource_share_arn}
   */
   readonly resourceShareArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#sources AwsRamResourceShareAssociationsExclusive#sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#sources TfResourceShareAssociationsExclusive#sources}
   */
   readonly sources?: string[];
 }
@@ -33,7 +33,7 @@ export interface AwsRamResourceShareAssociationsExclusiveConfig extends cdktn.Te
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive aws_ram_resource_share_associations_exclusive}
 */
-export class AwsRamResourceShareAssociationsExclusive extends cdktn.TerraformResource {
+export class TfResourceShareAssociationsExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsRamResourceShareAssociationsExclusive extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRamResourceShareAssociationsExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceShareAssociationsExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRamResourceShareAssociationsExclusive to import
-  * @param importFromId The id of the existing AwsRamResourceShareAssociationsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRamResourceShareAssociationsExclusive to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceShareAssociationsExclusive to import
+  * @param importFromId The id of the existing TfResourceShareAssociationsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_associations_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceShareAssociationsExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ram_resource_share_associations_exclusive", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsRamResourceShareAssociationsExclusive extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRamResourceShareAssociationsExclusiveConfig
+  * @param options TfResourceShareAssociationsExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRamResourceShareAssociationsExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceShareAssociationsExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ram_resource_share_associations_exclusive',
       terraformGeneratorMetadata: {

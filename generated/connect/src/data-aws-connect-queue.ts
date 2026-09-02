@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsConnectQueueConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfQueueConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#id DataAwsConnectQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#id DataTfQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#instance_id DataAwsConnectQueue#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#instance_id DataTfQueue#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#name DataAwsConnectQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#name DataTfQueue#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#queue_id DataAwsConnectQueue#queue_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#queue_id DataTfQueue#queue_id}
   */
   readonly queueId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#region DataAwsConnectQueue#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#region DataTfQueue#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#tags DataAwsConnectQueue#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#tags DataTfQueue#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataAwsConnectQueueConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue aws_connect_queue}
 */
-export class DataAwsConnectQueue extends cdktn.TerraformDataSource {
+export class DataTfQueue extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsConnectQueue extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsConnectQueue resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfQueue resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsConnectQueue to import
-  * @param importFromId The id of the existing DataAwsConnectQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsConnectQueue to import is found
+  * @param importToId The construct id used in the generated config for the DataTfQueue to import
+  * @param importFromId The id of the existing DataTfQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_queue", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsConnectQueue extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsConnectQueueConfig
+  * @param options DataTfQueueConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsConnectQueueConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_queue',
       terraformGeneratorMetadata: {
@@ -166,7 +166,7 @@ export class DataAwsConnectQueue extends cdktn.TerraformDataSource {
   }
 
   // outbound_caller_config - computed: true, optional: false, required: false
-  private _outboundCallerConfig = new DataAwsConnectQueue.OutboundCallerConfigPropertyList(this, "outbound_caller_config", false);
+  private _outboundCallerConfig = new DataTfQueue.OutboundCallerConfigPropertyList(this, "outbound_caller_config", false);
   public get outboundCallerConfig() {
     return this._outboundCallerConfig;
   }
@@ -284,7 +284,7 @@ export class DataAwsConnectQueue extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsConnectQueueOutboundCallerConfigPropertyToTerraform(struct?: DataAwsConnectQueue.OutboundCallerConfigProperty): any {
+export function dataTfQueueOutboundCallerConfigPropertyToTerraform(struct?: DataTfQueue.OutboundCallerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function dataAwsConnectQueueOutboundCallerConfigPropertyToTerraform(struc
 }
 
 
-export function dataAwsConnectQueueOutboundCallerConfigPropertyToHclTerraform(struct?: DataAwsConnectQueue.OutboundCallerConfigProperty): any {
+export function dataTfQueueOutboundCallerConfigPropertyToHclTerraform(struct?: DataTfQueue.OutboundCallerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsConnectQueueOutboundCallerConfigPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsConnectQueue {
+export namespace DataTfQueue {
 export interface OutboundCallerConfigProperty {
 }
 export class OutboundCallerConfigPropertyOutputReference extends cdktn.ComplexObject {

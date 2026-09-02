@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCleanroomsConfiguredTableConfig extends cdktn.TerraformMetaArguments {
+export interface TfConfiguredTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#allowed_columns AwsCleanroomsConfiguredTable#allowed_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#allowed_columns TfConfiguredTable#allowed_columns}
   */
   readonly allowedColumns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#analysis_method AwsCleanroomsConfiguredTable#analysis_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#analysis_method TfConfiguredTable#analysis_method}
   */
   readonly analysisMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#description AwsCleanroomsConfiguredTable#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#description TfConfiguredTable#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#id AwsCleanroomsConfiguredTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#id TfConfiguredTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#name AwsCleanroomsConfiguredTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#name TfConfiguredTable#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#region AwsCleanroomsConfiguredTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#region TfConfiguredTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#tags AwsCleanroomsConfiguredTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#tags TfConfiguredTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#tags_all AwsCleanroomsConfiguredTable#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#tags_all TfConfiguredTable#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * table_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#table_reference AwsCleanroomsConfiguredTable#table_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#table_reference TfConfiguredTable#table_reference}
   */
-  readonly tableReference: AwsCleanroomsConfiguredTable.TableReferenceProperty;
+  readonly tableReference: TfConfiguredTable.TableReferenceProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#timeouts AwsCleanroomsConfiguredTable#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#timeouts TfConfiguredTable#timeouts}
   */
-  readonly timeouts?: AwsCleanroomsConfiguredTable.TimeoutsProperty;
+  readonly timeouts?: TfConfiguredTable.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table aws_cleanrooms_configured_table}
 */
-export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
+export class TfConfiguredTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCleanroomsConfiguredTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConfiguredTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCleanroomsConfiguredTable to import
-  * @param importFromId The id of the existing AwsCleanroomsConfiguredTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCleanroomsConfiguredTable to import is found
+  * @param importToId The construct id used in the generated config for the TfConfiguredTable to import
+  * @param importFromId The id of the existing TfConfiguredTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConfiguredTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cleanrooms_configured_table", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCleanroomsConfiguredTableConfig
+  * @param options TfConfiguredTableConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCleanroomsConfiguredTableConfig) {
+  public constructor(scope: Construct, id: string, config: TfConfiguredTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cleanrooms_configured_table',
       terraformGeneratorMetadata: {
@@ -259,11 +259,11 @@ export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
   }
 
   // table_reference - computed: false, optional: false, required: true
-  private _tableReference = new AwsCleanroomsConfiguredTable.TableReferencePropertyOutputReference(this, "table_reference");
+  private _tableReference = new TfConfiguredTable.TableReferencePropertyOutputReference(this, "table_reference");
   public get tableReference() {
     return this._tableReference;
   }
-  public putTableReference(value: AwsCleanroomsConfiguredTable.TableReferenceProperty) {
+  public putTableReference(value: TfConfiguredTable.TableReferenceProperty) {
     this._tableReference.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -272,11 +272,11 @@ export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCleanroomsConfiguredTable.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfConfiguredTable.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCleanroomsConfiguredTable.TimeoutsProperty) {
+  public putTimeouts(value: TfConfiguredTable.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -301,8 +301,8 @@ export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      table_reference: awsCleanroomsConfiguredTableTableReferencePropertyToTerraform(this._tableReference.internalValue),
-      timeouts: awsCleanroomsConfiguredTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      table_reference: tfConfiguredTableTableReferencePropertyToTerraform(this._tableReference.internalValue),
+      timeouts: tfConfiguredTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -357,16 +357,16 @@ export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       table_reference: {
-        value: awsCleanroomsConfiguredTableTableReferencePropertyToHclTerraform(this._tableReference.internalValue),
+        value: tfConfiguredTableTableReferencePropertyToHclTerraform(this._tableReference.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCleanroomsConfiguredTable.TableReferencePropertyList",
+        storageClassType: "TfConfiguredTable.TableReferencePropertyList",
       },
       timeouts: {
-        value: awsCleanroomsConfiguredTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfConfiguredTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCleanroomsConfiguredTable.TimeoutsProperty",
+        storageClassType: "TfConfiguredTable.TimeoutsProperty",
       },
     };
 
@@ -375,7 +375,7 @@ export class AwsCleanroomsConfiguredTable extends cdktn.TerraformResource {
   }
 }
 
-export function awsCleanroomsConfiguredTableTableReferencePropertyToTerraform(struct?: AwsCleanroomsConfiguredTable.TableReferencePropertyOutputReference | AwsCleanroomsConfiguredTable.TableReferenceProperty): any {
+export function tfConfiguredTableTableReferencePropertyToTerraform(struct?: TfConfiguredTable.TableReferencePropertyOutputReference | TfConfiguredTable.TableReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function awsCleanroomsConfiguredTableTableReferencePropertyToTerraform(st
 }
 
 
-export function awsCleanroomsConfiguredTableTableReferencePropertyToHclTerraform(struct?: AwsCleanroomsConfiguredTable.TableReferencePropertyOutputReference | AwsCleanroomsConfiguredTable.TableReferenceProperty): any {
+export function tfConfiguredTableTableReferencePropertyToHclTerraform(struct?: TfConfiguredTable.TableReferencePropertyOutputReference | TfConfiguredTable.TableReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function awsCleanroomsConfiguredTableTableReferencePropertyToHclTerraform
 }
 
 
-export function awsCleanroomsConfiguredTableTimeoutsPropertyToTerraform(struct?: AwsCleanroomsConfiguredTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConfiguredTableTimeoutsPropertyToTerraform(struct?: TfConfiguredTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function awsCleanroomsConfiguredTableTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsCleanroomsConfiguredTableTimeoutsPropertyToHclTerraform(struct?: AwsCleanroomsConfiguredTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConfiguredTableTimeoutsPropertyToHclTerraform(struct?: TfConfiguredTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,14 +456,14 @@ export function awsCleanroomsConfiguredTableTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsCleanroomsConfiguredTable {
+export namespace TfConfiguredTable {
 export interface TableReferenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#database_name AwsCleanroomsConfiguredTable#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#database_name TfConfiguredTable#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#table_name AwsCleanroomsConfiguredTable#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#table_name TfConfiguredTable#table_name}
   */
   readonly tableName: string;
 }
@@ -533,15 +533,15 @@ export class TableReferencePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#create AwsCleanroomsConfiguredTable#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#create TfConfiguredTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#delete AwsCleanroomsConfiguredTable#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#delete TfConfiguredTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#update AwsCleanroomsConfiguredTable#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_configured_table#update TfConfiguredTable#update}
   */
   readonly update?: string;
 }

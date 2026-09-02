@@ -5,102 +5,102 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMedialiveChannelConfig extends cdktn.TerraformMetaArguments {
+export interface TfChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channel_class AwsMedialiveChannel#channel_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channel_class TfChannel#channel_class}
   */
   readonly channelClass: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#id AwsMedialiveChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#id TfChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#log_level AwsMedialiveChannel#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#log_level TfChannel#log_level}
   */
   readonly logLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#region AwsMedialiveChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#region TfChannel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#role_arn AwsMedialiveChannel#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#role_arn TfChannel#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#start_channel AwsMedialiveChannel#start_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#start_channel TfChannel#start_channel}
   */
   readonly startChannel?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tags AwsMedialiveChannel#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tags TfChannel#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tags_all AwsMedialiveChannel#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tags_all TfChannel#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * cdi_input_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cdi_input_specification AwsMedialiveChannel#cdi_input_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cdi_input_specification TfChannel#cdi_input_specification}
   */
-  readonly cdiInputSpecification?: AwsMedialiveChannel.CdiInputSpecificationProperty;
+  readonly cdiInputSpecification?: TfChannel.CdiInputSpecificationProperty;
   /**
   * destinations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destinations AwsMedialiveChannel#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destinations TfChannel#destinations}
   */
-  readonly destinations: AwsMedialiveChannel.DestinationsProperty[] | cdktn.IResolvable;
+  readonly destinations: TfChannel.DestinationsProperty[] | cdktn.IResolvable;
   /**
   * encoder_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#encoder_settings AwsMedialiveChannel#encoder_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#encoder_settings TfChannel#encoder_settings}
   */
-  readonly encoderSettings: AwsMedialiveChannel.EncoderSettingsProperty;
+  readonly encoderSettings: TfChannel.EncoderSettingsProperty;
   /**
   * input_attachments block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_attachments AwsMedialiveChannel#input_attachments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_attachments TfChannel#input_attachments}
   */
-  readonly inputAttachments: AwsMedialiveChannel.InputAttachmentsProperty[] | cdktn.IResolvable;
+  readonly inputAttachments: TfChannel.InputAttachmentsProperty[] | cdktn.IResolvable;
   /**
   * input_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_specification AwsMedialiveChannel#input_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_specification TfChannel#input_specification}
   */
-  readonly inputSpecification: AwsMedialiveChannel.InputSpecificationProperty;
+  readonly inputSpecification: TfChannel.InputSpecificationProperty;
   /**
   * maintenance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maintenance AwsMedialiveChannel#maintenance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maintenance TfChannel#maintenance}
   */
-  readonly maintenance?: AwsMedialiveChannel.MaintenanceProperty;
+  readonly maintenance?: TfChannel.MaintenanceProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timeouts AwsMedialiveChannel#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timeouts TfChannel#timeouts}
   */
-  readonly timeouts?: AwsMedialiveChannel.TimeoutsProperty;
+  readonly timeouts?: TfChannel.TimeoutsProperty;
   /**
   * vpc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#vpc AwsMedialiveChannel#vpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#vpc TfChannel#vpc}
   */
-  readonly vpc?: AwsMedialiveChannel.VpcProperty;
+  readonly vpc?: TfChannel.VpcProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel aws_medialive_channel}
 */
-export class AwsMedialiveChannel extends cdktn.TerraformResource {
+export class TfChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMedialiveChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMedialiveChannel to import
-  * @param importFromId The id of the existing AwsMedialiveChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMedialiveChannel to import is found
+  * @param importToId The construct id used in the generated config for the TfChannel to import
+  * @param importFromId The id of the existing TfChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_medialive_channel", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMedialiveChannelConfig
+  * @param options TfChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMedialiveChannelConfig) {
+  public constructor(scope: Construct, id: string, config: TfChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_medialive_channel',
       terraformGeneratorMetadata: {
@@ -320,11 +320,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // cdi_input_specification - computed: false, optional: true, required: false
-  private _cdiInputSpecification = new AwsMedialiveChannel.CdiInputSpecificationPropertyOutputReference(this, "cdi_input_specification");
+  private _cdiInputSpecification = new TfChannel.CdiInputSpecificationPropertyOutputReference(this, "cdi_input_specification");
   public get cdiInputSpecification() {
     return this._cdiInputSpecification;
   }
-  public putCdiInputSpecification(value: AwsMedialiveChannel.CdiInputSpecificationProperty) {
+  public putCdiInputSpecification(value: TfChannel.CdiInputSpecificationProperty) {
     this._cdiInputSpecification.internalValue = value;
   }
   public resetCdiInputSpecification() {
@@ -336,11 +336,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // destinations - computed: false, optional: false, required: true
-  private _destinations = new AwsMedialiveChannel.DestinationsPropertyList(this, "destinations", true);
+  private _destinations = new TfChannel.DestinationsPropertyList(this, "destinations", true);
   public get destinations() {
     return this._destinations;
   }
-  public putDestinations(value: AwsMedialiveChannel.DestinationsProperty[] | cdktn.IResolvable) {
+  public putDestinations(value: TfChannel.DestinationsProperty[] | cdktn.IResolvable) {
     this._destinations.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -349,11 +349,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // encoder_settings - computed: false, optional: false, required: true
-  private _encoderSettings = new AwsMedialiveChannel.EncoderSettingsPropertyOutputReference(this, "encoder_settings");
+  private _encoderSettings = new TfChannel.EncoderSettingsPropertyOutputReference(this, "encoder_settings");
   public get encoderSettings() {
     return this._encoderSettings;
   }
-  public putEncoderSettings(value: AwsMedialiveChannel.EncoderSettingsProperty) {
+  public putEncoderSettings(value: TfChannel.EncoderSettingsProperty) {
     this._encoderSettings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -362,11 +362,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // input_attachments - computed: false, optional: false, required: true
-  private _inputAttachments = new AwsMedialiveChannel.InputAttachmentsPropertyList(this, "input_attachments", true);
+  private _inputAttachments = new TfChannel.InputAttachmentsPropertyList(this, "input_attachments", true);
   public get inputAttachments() {
     return this._inputAttachments;
   }
-  public putInputAttachments(value: AwsMedialiveChannel.InputAttachmentsProperty[] | cdktn.IResolvable) {
+  public putInputAttachments(value: TfChannel.InputAttachmentsProperty[] | cdktn.IResolvable) {
     this._inputAttachments.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -375,11 +375,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // input_specification - computed: false, optional: false, required: true
-  private _inputSpecification = new AwsMedialiveChannel.InputSpecificationPropertyOutputReference(this, "input_specification");
+  private _inputSpecification = new TfChannel.InputSpecificationPropertyOutputReference(this, "input_specification");
   public get inputSpecification() {
     return this._inputSpecification;
   }
-  public putInputSpecification(value: AwsMedialiveChannel.InputSpecificationProperty) {
+  public putInputSpecification(value: TfChannel.InputSpecificationProperty) {
     this._inputSpecification.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -388,11 +388,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // maintenance - computed: false, optional: true, required: false
-  private _maintenance = new AwsMedialiveChannel.MaintenancePropertyOutputReference(this, "maintenance");
+  private _maintenance = new TfChannel.MaintenancePropertyOutputReference(this, "maintenance");
   public get maintenance() {
     return this._maintenance;
   }
-  public putMaintenance(value: AwsMedialiveChannel.MaintenanceProperty) {
+  public putMaintenance(value: TfChannel.MaintenanceProperty) {
     this._maintenance.internalValue = value;
   }
   public resetMaintenance() {
@@ -404,11 +404,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMedialiveChannel.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfChannel.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMedialiveChannel.TimeoutsProperty) {
+  public putTimeouts(value: TfChannel.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -420,11 +420,11 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 
   // vpc - computed: false, optional: true, required: false
-  private _vpc = new AwsMedialiveChannel.VpcPropertyOutputReference(this, "vpc");
+  private _vpc = new TfChannel.VpcPropertyOutputReference(this, "vpc");
   public get vpc() {
     return this._vpc;
   }
-  public putVpc(value: AwsMedialiveChannel.VpcProperty) {
+  public putVpc(value: TfChannel.VpcProperty) {
     this._vpc.internalValue = value;
   }
   public resetVpc() {
@@ -450,14 +450,14 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
       start_channel: cdktn.booleanToTerraform(this._startChannel),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      cdi_input_specification: awsMedialiveChannelCdiInputSpecificationPropertyToTerraform(this._cdiInputSpecification.internalValue),
-      destinations: cdktn.listMapper(awsMedialiveChannelDestinationsPropertyToTerraform, true)(this._destinations.internalValue),
-      encoder_settings: awsMedialiveChannelEncoderSettingsPropertyToTerraform(this._encoderSettings.internalValue),
-      input_attachments: cdktn.listMapper(awsMedialiveChannelInputAttachmentsPropertyToTerraform, true)(this._inputAttachments.internalValue),
-      input_specification: awsMedialiveChannelInputSpecificationPropertyToTerraform(this._inputSpecification.internalValue),
-      maintenance: awsMedialiveChannelMaintenancePropertyToTerraform(this._maintenance.internalValue),
-      timeouts: awsMedialiveChannelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc: awsMedialiveChannelVpcPropertyToTerraform(this._vpc.internalValue),
+      cdi_input_specification: tfChannelCdiInputSpecificationPropertyToTerraform(this._cdiInputSpecification.internalValue),
+      destinations: cdktn.listMapper(tfChannelDestinationsPropertyToTerraform, true)(this._destinations.internalValue),
+      encoder_settings: tfChannelEncoderSettingsPropertyToTerraform(this._encoderSettings.internalValue),
+      input_attachments: cdktn.listMapper(tfChannelInputAttachmentsPropertyToTerraform, true)(this._inputAttachments.internalValue),
+      input_specification: tfChannelInputSpecificationPropertyToTerraform(this._inputSpecification.internalValue),
+      maintenance: tfChannelMaintenancePropertyToTerraform(this._maintenance.internalValue),
+      timeouts: tfChannelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc: tfChannelVpcPropertyToTerraform(this._vpc.internalValue),
     };
   }
 
@@ -518,52 +518,52 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       cdi_input_specification: {
-        value: awsMedialiveChannelCdiInputSpecificationPropertyToHclTerraform(this._cdiInputSpecification.internalValue),
+        value: tfChannelCdiInputSpecificationPropertyToHclTerraform(this._cdiInputSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMedialiveChannel.CdiInputSpecificationPropertyList",
+        storageClassType: "TfChannel.CdiInputSpecificationPropertyList",
       },
       destinations: {
-        value: cdktn.listMapperHcl(awsMedialiveChannelDestinationsPropertyToHclTerraform, true)(this._destinations.internalValue),
+        value: cdktn.listMapperHcl(tfChannelDestinationsPropertyToHclTerraform, true)(this._destinations.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsMedialiveChannel.DestinationsPropertyList",
+        storageClassType: "TfChannel.DestinationsPropertyList",
       },
       encoder_settings: {
-        value: awsMedialiveChannelEncoderSettingsPropertyToHclTerraform(this._encoderSettings.internalValue),
+        value: tfChannelEncoderSettingsPropertyToHclTerraform(this._encoderSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMedialiveChannel.EncoderSettingsPropertyList",
+        storageClassType: "TfChannel.EncoderSettingsPropertyList",
       },
       input_attachments: {
-        value: cdktn.listMapperHcl(awsMedialiveChannelInputAttachmentsPropertyToHclTerraform, true)(this._inputAttachments.internalValue),
+        value: cdktn.listMapperHcl(tfChannelInputAttachmentsPropertyToHclTerraform, true)(this._inputAttachments.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsMedialiveChannel.InputAttachmentsPropertyList",
+        storageClassType: "TfChannel.InputAttachmentsPropertyList",
       },
       input_specification: {
-        value: awsMedialiveChannelInputSpecificationPropertyToHclTerraform(this._inputSpecification.internalValue),
+        value: tfChannelInputSpecificationPropertyToHclTerraform(this._inputSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMedialiveChannel.InputSpecificationPropertyList",
+        storageClassType: "TfChannel.InputSpecificationPropertyList",
       },
       maintenance: {
-        value: awsMedialiveChannelMaintenancePropertyToHclTerraform(this._maintenance.internalValue),
+        value: tfChannelMaintenancePropertyToHclTerraform(this._maintenance.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMedialiveChannel.MaintenancePropertyList",
+        storageClassType: "TfChannel.MaintenancePropertyList",
       },
       timeouts: {
-        value: awsMedialiveChannelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfChannelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMedialiveChannel.TimeoutsProperty",
+        storageClassType: "TfChannel.TimeoutsProperty",
       },
       vpc: {
-        value: awsMedialiveChannelVpcPropertyToHclTerraform(this._vpc.internalValue),
+        value: tfChannelVpcPropertyToHclTerraform(this._vpc.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMedialiveChannel.VpcPropertyList",
+        storageClassType: "TfChannel.VpcPropertyList",
       },
     };
 
@@ -572,7 +572,7 @@ export class AwsMedialiveChannel extends cdktn.TerraformResource {
   }
 }
 
-export function awsMedialiveChannelCdiInputSpecificationPropertyToTerraform(struct?: AwsMedialiveChannel.CdiInputSpecificationPropertyOutputReference | AwsMedialiveChannel.CdiInputSpecificationProperty): any {
+export function tfChannelCdiInputSpecificationPropertyToTerraform(struct?: TfChannel.CdiInputSpecificationPropertyOutputReference | TfChannel.CdiInputSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function awsMedialiveChannelCdiInputSpecificationPropertyToTerraform(stru
 }
 
 
-export function awsMedialiveChannelCdiInputSpecificationPropertyToHclTerraform(struct?: AwsMedialiveChannel.CdiInputSpecificationPropertyOutputReference | AwsMedialiveChannel.CdiInputSpecificationProperty): any {
+export function tfChannelCdiInputSpecificationPropertyToHclTerraform(struct?: TfChannel.CdiInputSpecificationPropertyOutputReference | TfChannel.CdiInputSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function awsMedialiveChannelCdiInputSpecificationPropertyToHclTerraform(s
 }
 
 
-export function awsMedialiveChannelMediaPackageSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MediaPackageSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelMediaPackageSettingsPropertyToTerraform(struct?: TfChannel.MediaPackageSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function awsMedialiveChannelMediaPackageSettingsPropertyToTerraform(struc
 }
 
 
-export function awsMedialiveChannelMediaPackageSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MediaPackageSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelMediaPackageSettingsPropertyToHclTerraform(struct?: TfChannel.MediaPackageSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function awsMedialiveChannelMediaPackageSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelMultiplexSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MultiplexSettingsPropertyOutputReference | AwsMedialiveChannel.MultiplexSettingsProperty): any {
+export function tfChannelMultiplexSettingsPropertyToTerraform(struct?: TfChannel.MultiplexSettingsPropertyOutputReference | TfChannel.MultiplexSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function awsMedialiveChannelMultiplexSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelMultiplexSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MultiplexSettingsPropertyOutputReference | AwsMedialiveChannel.MultiplexSettingsProperty): any {
+export function tfChannelMultiplexSettingsPropertyToHclTerraform(struct?: TfChannel.MultiplexSettingsPropertyOutputReference | TfChannel.MultiplexSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -669,7 +669,7 @@ export function awsMedialiveChannelMultiplexSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.SettingsProperty | cdktn.IResolvable): any {
+export function tfChannelSettingsPropertyToTerraform(struct?: TfChannel.SettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -683,7 +683,7 @@ export function awsMedialiveChannelSettingsPropertyToTerraform(struct?: AwsMedia
 }
 
 
-export function awsMedialiveChannelSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.SettingsProperty | cdktn.IResolvable): any {
+export function tfChannelSettingsPropertyToHclTerraform(struct?: TfChannel.SettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,21 +720,21 @@ export function awsMedialiveChannelSettingsPropertyToHclTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelDestinationsPropertyToTerraform(struct?: AwsMedialiveChannel.DestinationsProperty | cdktn.IResolvable): any {
+export function tfChannelDestinationsPropertyToTerraform(struct?: TfChannel.DestinationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     id: cdktn.stringToTerraform(struct!.id),
-    media_package_settings: cdktn.listMapper(awsMedialiveChannelMediaPackageSettingsPropertyToTerraform, true)(struct!.mediaPackageSettings),
-    multiplex_settings: awsMedialiveChannelMultiplexSettingsPropertyToTerraform(struct!.multiplexSettings),
-    settings: cdktn.listMapper(awsMedialiveChannelSettingsPropertyToTerraform, true)(struct!.settings),
+    media_package_settings: cdktn.listMapper(tfChannelMediaPackageSettingsPropertyToTerraform, true)(struct!.mediaPackageSettings),
+    multiplex_settings: tfChannelMultiplexSettingsPropertyToTerraform(struct!.multiplexSettings),
+    settings: cdktn.listMapper(tfChannelSettingsPropertyToTerraform, true)(struct!.settings),
   }
 }
 
 
-export function awsMedialiveChannelDestinationsPropertyToHclTerraform(struct?: AwsMedialiveChannel.DestinationsProperty | cdktn.IResolvable): any {
+export function tfChannelDestinationsPropertyToHclTerraform(struct?: TfChannel.DestinationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -747,19 +747,19 @@ export function awsMedialiveChannelDestinationsPropertyToHclTerraform(struct?: A
       storageClassType: "string",
     },
     media_package_settings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelMediaPackageSettingsPropertyToHclTerraform, true)(struct!.mediaPackageSettings),
+      value: cdktn.listMapperHcl(tfChannelMediaPackageSettingsPropertyToHclTerraform, true)(struct!.mediaPackageSettings),
       isBlock: true,
       type: "set",
       storageClassType: "MediaPackageSettingsPropertyList",
     },
     multiplex_settings: {
-      value: awsMedialiveChannelMultiplexSettingsPropertyToHclTerraform(struct!.multiplexSettings),
+      value: tfChannelMultiplexSettingsPropertyToHclTerraform(struct!.multiplexSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MultiplexSettingsPropertyList",
     },
     settings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelSettingsPropertyToHclTerraform, true)(struct!.settings),
+      value: cdktn.listMapperHcl(tfChannelSettingsPropertyToHclTerraform, true)(struct!.settings),
       isBlock: true,
       type: "set",
       storageClassType: "SettingsPropertyList",
@@ -771,7 +771,7 @@ export function awsMedialiveChannelDestinationsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelAudioNormalizationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AudioNormalizationSettingsPropertyOutputReference | AwsMedialiveChannel.AudioNormalizationSettingsProperty): any {
+export function tfChannelAudioNormalizationSettingsPropertyToTerraform(struct?: TfChannel.AudioNormalizationSettingsPropertyOutputReference | TfChannel.AudioNormalizationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -784,7 +784,7 @@ export function awsMedialiveChannelAudioNormalizationSettingsPropertyToTerraform
 }
 
 
-export function awsMedialiveChannelAudioNormalizationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioNormalizationSettingsPropertyOutputReference | AwsMedialiveChannel.AudioNormalizationSettingsProperty): any {
+export function tfChannelAudioNormalizationSettingsPropertyToHclTerraform(struct?: TfChannel.AudioNormalizationSettingsPropertyOutputReference | TfChannel.AudioNormalizationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,7 +815,7 @@ export function awsMedialiveChannelAudioNormalizationSettingsPropertyToHclTerraf
 }
 
 
-export function awsMedialiveChannelNielsenCbetSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.NielsenCbetSettingsPropertyOutputReference | AwsMedialiveChannel.NielsenCbetSettingsProperty): any {
+export function tfChannelNielsenCbetSettingsPropertyToTerraform(struct?: TfChannel.NielsenCbetSettingsPropertyOutputReference | TfChannel.NielsenCbetSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,7 +828,7 @@ export function awsMedialiveChannelNielsenCbetSettingsPropertyToTerraform(struct
 }
 
 
-export function awsMedialiveChannelNielsenCbetSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.NielsenCbetSettingsPropertyOutputReference | AwsMedialiveChannel.NielsenCbetSettingsProperty): any {
+export function tfChannelNielsenCbetSettingsPropertyToHclTerraform(struct?: TfChannel.NielsenCbetSettingsPropertyOutputReference | TfChannel.NielsenCbetSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -859,7 +859,7 @@ export function awsMedialiveChannelNielsenCbetSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelNielsenNaesIiNwSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.NielsenNaesIiNwSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelNielsenNaesIiNwSettingsPropertyToTerraform(struct?: TfChannel.NielsenNaesIiNwSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -871,7 +871,7 @@ export function awsMedialiveChannelNielsenNaesIiNwSettingsPropertyToTerraform(st
 }
 
 
-export function awsMedialiveChannelNielsenNaesIiNwSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.NielsenNaesIiNwSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelNielsenNaesIiNwSettingsPropertyToHclTerraform(struct?: TfChannel.NielsenNaesIiNwSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -896,20 +896,20 @@ export function awsMedialiveChannelNielsenNaesIiNwSettingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelNielsenWatermarksSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.NielsenWatermarksSettingsPropertyOutputReference | AwsMedialiveChannel.NielsenWatermarksSettingsProperty): any {
+export function tfChannelNielsenWatermarksSettingsPropertyToTerraform(struct?: TfChannel.NielsenWatermarksSettingsPropertyOutputReference | TfChannel.NielsenWatermarksSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     nielsen_distribution_type: cdktn.stringToTerraform(struct!.nielsenDistributionType),
-    nielsen_cbet_settings: awsMedialiveChannelNielsenCbetSettingsPropertyToTerraform(struct!.nielsenCbetSettings),
-    nielsen_naes_ii_nw_settings: cdktn.listMapper(awsMedialiveChannelNielsenNaesIiNwSettingsPropertyToTerraform, true)(struct!.nielsenNaesIiNwSettings),
+    nielsen_cbet_settings: tfChannelNielsenCbetSettingsPropertyToTerraform(struct!.nielsenCbetSettings),
+    nielsen_naes_ii_nw_settings: cdktn.listMapper(tfChannelNielsenNaesIiNwSettingsPropertyToTerraform, true)(struct!.nielsenNaesIiNwSettings),
   }
 }
 
 
-export function awsMedialiveChannelNielsenWatermarksSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.NielsenWatermarksSettingsPropertyOutputReference | AwsMedialiveChannel.NielsenWatermarksSettingsProperty): any {
+export function tfChannelNielsenWatermarksSettingsPropertyToHclTerraform(struct?: TfChannel.NielsenWatermarksSettingsPropertyOutputReference | TfChannel.NielsenWatermarksSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -922,13 +922,13 @@ export function awsMedialiveChannelNielsenWatermarksSettingsPropertyToHclTerrafo
       storageClassType: "string",
     },
     nielsen_cbet_settings: {
-      value: awsMedialiveChannelNielsenCbetSettingsPropertyToHclTerraform(struct!.nielsenCbetSettings),
+      value: tfChannelNielsenCbetSettingsPropertyToHclTerraform(struct!.nielsenCbetSettings),
       isBlock: true,
       type: "list",
       storageClassType: "NielsenCbetSettingsPropertyList",
     },
     nielsen_naes_ii_nw_settings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelNielsenNaesIiNwSettingsPropertyToHclTerraform, true)(struct!.nielsenNaesIiNwSettings),
+      value: cdktn.listMapperHcl(tfChannelNielsenNaesIiNwSettingsPropertyToHclTerraform, true)(struct!.nielsenNaesIiNwSettings),
       isBlock: true,
       type: "list",
       storageClassType: "NielsenNaesIiNwSettingsPropertyList",
@@ -940,25 +940,25 @@ export function awsMedialiveChannelNielsenWatermarksSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelAudioWatermarkSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AudioWatermarkSettingsPropertyOutputReference | AwsMedialiveChannel.AudioWatermarkSettingsProperty): any {
+export function tfChannelAudioWatermarkSettingsPropertyToTerraform(struct?: TfChannel.AudioWatermarkSettingsPropertyOutputReference | TfChannel.AudioWatermarkSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    nielsen_watermarks_settings: awsMedialiveChannelNielsenWatermarksSettingsPropertyToTerraform(struct!.nielsenWatermarksSettings),
+    nielsen_watermarks_settings: tfChannelNielsenWatermarksSettingsPropertyToTerraform(struct!.nielsenWatermarksSettings),
   }
 }
 
 
-export function awsMedialiveChannelAudioWatermarkSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioWatermarkSettingsPropertyOutputReference | AwsMedialiveChannel.AudioWatermarkSettingsProperty): any {
+export function tfChannelAudioWatermarkSettingsPropertyToHclTerraform(struct?: TfChannel.AudioWatermarkSettingsPropertyOutputReference | TfChannel.AudioWatermarkSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     nielsen_watermarks_settings: {
-      value: awsMedialiveChannelNielsenWatermarksSettingsPropertyToHclTerraform(struct!.nielsenWatermarksSettings),
+      value: tfChannelNielsenWatermarksSettingsPropertyToHclTerraform(struct!.nielsenWatermarksSettings),
       isBlock: true,
       type: "list",
       storageClassType: "NielsenWatermarksSettingsPropertyList",
@@ -970,7 +970,7 @@ export function awsMedialiveChannelAudioWatermarkSettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelAacSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AacSettingsPropertyOutputReference | AwsMedialiveChannel.AacSettingsProperty): any {
+export function tfChannelAacSettingsPropertyToTerraform(struct?: TfChannel.AacSettingsPropertyOutputReference | TfChannel.AacSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -989,7 +989,7 @@ export function awsMedialiveChannelAacSettingsPropertyToTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelAacSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AacSettingsPropertyOutputReference | AwsMedialiveChannel.AacSettingsProperty): any {
+export function tfChannelAacSettingsPropertyToHclTerraform(struct?: TfChannel.AacSettingsPropertyOutputReference | TfChannel.AacSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1056,7 +1056,7 @@ export function awsMedialiveChannelAacSettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelAc3SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Ac3SettingsPropertyOutputReference | AwsMedialiveChannel.Ac3SettingsProperty): any {
+export function tfChannelAc3SettingsPropertyToTerraform(struct?: TfChannel.Ac3SettingsPropertyOutputReference | TfChannel.Ac3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1073,7 +1073,7 @@ export function awsMedialiveChannelAc3SettingsPropertyToTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelAc3SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Ac3SettingsPropertyOutputReference | AwsMedialiveChannel.Ac3SettingsProperty): any {
+export function tfChannelAc3SettingsPropertyToHclTerraform(struct?: TfChannel.Ac3SettingsPropertyOutputReference | TfChannel.Ac3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1128,7 +1128,7 @@ export function awsMedialiveChannelAc3SettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelEac3AtmosSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Eac3AtmosSettingsPropertyOutputReference | AwsMedialiveChannel.Eac3AtmosSettingsProperty): any {
+export function tfChannelEac3AtmosSettingsPropertyToTerraform(struct?: TfChannel.Eac3AtmosSettingsPropertyOutputReference | TfChannel.Eac3AtmosSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1145,7 +1145,7 @@ export function awsMedialiveChannelEac3AtmosSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelEac3AtmosSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Eac3AtmosSettingsPropertyOutputReference | AwsMedialiveChannel.Eac3AtmosSettingsProperty): any {
+export function tfChannelEac3AtmosSettingsPropertyToHclTerraform(struct?: TfChannel.Eac3AtmosSettingsPropertyOutputReference | TfChannel.Eac3AtmosSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1200,7 +1200,7 @@ export function awsMedialiveChannelEac3AtmosSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelEac3SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Eac3SettingsPropertyOutputReference | AwsMedialiveChannel.Eac3SettingsProperty): any {
+export function tfChannelEac3SettingsPropertyToTerraform(struct?: TfChannel.Eac3SettingsPropertyOutputReference | TfChannel.Eac3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1230,7 +1230,7 @@ export function awsMedialiveChannelEac3SettingsPropertyToTerraform(struct?: AwsM
 }
 
 
-export function awsMedialiveChannelEac3SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Eac3SettingsPropertyOutputReference | AwsMedialiveChannel.Eac3SettingsProperty): any {
+export function tfChannelEac3SettingsPropertyToHclTerraform(struct?: TfChannel.Eac3SettingsPropertyOutputReference | TfChannel.Eac3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1363,7 +1363,7 @@ export function awsMedialiveChannelEac3SettingsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelMp2SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Mp2SettingsPropertyOutputReference | AwsMedialiveChannel.Mp2SettingsProperty): any {
+export function tfChannelMp2SettingsPropertyToTerraform(struct?: TfChannel.Mp2SettingsPropertyOutputReference | TfChannel.Mp2SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1376,7 +1376,7 @@ export function awsMedialiveChannelMp2SettingsPropertyToTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelMp2SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Mp2SettingsPropertyOutputReference | AwsMedialiveChannel.Mp2SettingsProperty): any {
+export function tfChannelMp2SettingsPropertyToHclTerraform(struct?: TfChannel.Mp2SettingsPropertyOutputReference | TfChannel.Mp2SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1407,7 +1407,7 @@ export function awsMedialiveChannelMp2SettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelPassThroughSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.PassThroughSettingsPropertyOutputReference | AwsMedialiveChannel.PassThroughSettingsProperty): any {
+export function tfChannelPassThroughSettingsPropertyToTerraform(struct?: TfChannel.PassThroughSettingsPropertyOutputReference | TfChannel.PassThroughSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1417,7 +1417,7 @@ export function awsMedialiveChannelPassThroughSettingsPropertyToTerraform(struct
 }
 
 
-export function awsMedialiveChannelPassThroughSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.PassThroughSettingsPropertyOutputReference | AwsMedialiveChannel.PassThroughSettingsProperty): any {
+export function tfChannelPassThroughSettingsPropertyToHclTerraform(struct?: TfChannel.PassThroughSettingsPropertyOutputReference | TfChannel.PassThroughSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1428,7 +1428,7 @@ export function awsMedialiveChannelPassThroughSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelWavSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.WavSettingsPropertyOutputReference | AwsMedialiveChannel.WavSettingsProperty): any {
+export function tfChannelWavSettingsPropertyToTerraform(struct?: TfChannel.WavSettingsPropertyOutputReference | TfChannel.WavSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1441,7 +1441,7 @@ export function awsMedialiveChannelWavSettingsPropertyToTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelWavSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.WavSettingsPropertyOutputReference | AwsMedialiveChannel.WavSettingsProperty): any {
+export function tfChannelWavSettingsPropertyToHclTerraform(struct?: TfChannel.WavSettingsPropertyOutputReference | TfChannel.WavSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1472,67 +1472,67 @@ export function awsMedialiveChannelWavSettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsAudioDescriptionsCodecSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsAudioDescriptionsCodecSettingsProperty): any {
+export function tfChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsAudioDescriptionsCodecSettingsPropertyOutputReference | TfChannel.EncoderSettingsAudioDescriptionsCodecSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aac_settings: awsMedialiveChannelAacSettingsPropertyToTerraform(struct!.aacSettings),
-    ac3_settings: awsMedialiveChannelAc3SettingsPropertyToTerraform(struct!.ac3Settings),
-    eac3_atmos_settings: awsMedialiveChannelEac3AtmosSettingsPropertyToTerraform(struct!.eac3AtmosSettings),
-    eac3_settings: awsMedialiveChannelEac3SettingsPropertyToTerraform(struct!.eac3Settings),
-    mp2_settings: awsMedialiveChannelMp2SettingsPropertyToTerraform(struct!.mp2Settings),
-    pass_through_settings: awsMedialiveChannelPassThroughSettingsPropertyToTerraform(struct!.passThroughSettings),
-    wav_settings: awsMedialiveChannelWavSettingsPropertyToTerraform(struct!.wavSettings),
+    aac_settings: tfChannelAacSettingsPropertyToTerraform(struct!.aacSettings),
+    ac3_settings: tfChannelAc3SettingsPropertyToTerraform(struct!.ac3Settings),
+    eac3_atmos_settings: tfChannelEac3AtmosSettingsPropertyToTerraform(struct!.eac3AtmosSettings),
+    eac3_settings: tfChannelEac3SettingsPropertyToTerraform(struct!.eac3Settings),
+    mp2_settings: tfChannelMp2SettingsPropertyToTerraform(struct!.mp2Settings),
+    pass_through_settings: tfChannelPassThroughSettingsPropertyToTerraform(struct!.passThroughSettings),
+    wav_settings: tfChannelWavSettingsPropertyToTerraform(struct!.wavSettings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsAudioDescriptionsCodecSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsAudioDescriptionsCodecSettingsProperty): any {
+export function tfChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsAudioDescriptionsCodecSettingsPropertyOutputReference | TfChannel.EncoderSettingsAudioDescriptionsCodecSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aac_settings: {
-      value: awsMedialiveChannelAacSettingsPropertyToHclTerraform(struct!.aacSettings),
+      value: tfChannelAacSettingsPropertyToHclTerraform(struct!.aacSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AacSettingsPropertyList",
     },
     ac3_settings: {
-      value: awsMedialiveChannelAc3SettingsPropertyToHclTerraform(struct!.ac3Settings),
+      value: tfChannelAc3SettingsPropertyToHclTerraform(struct!.ac3Settings),
       isBlock: true,
       type: "list",
       storageClassType: "Ac3SettingsPropertyList",
     },
     eac3_atmos_settings: {
-      value: awsMedialiveChannelEac3AtmosSettingsPropertyToHclTerraform(struct!.eac3AtmosSettings),
+      value: tfChannelEac3AtmosSettingsPropertyToHclTerraform(struct!.eac3AtmosSettings),
       isBlock: true,
       type: "list",
       storageClassType: "Eac3AtmosSettingsPropertyList",
     },
     eac3_settings: {
-      value: awsMedialiveChannelEac3SettingsPropertyToHclTerraform(struct!.eac3Settings),
+      value: tfChannelEac3SettingsPropertyToHclTerraform(struct!.eac3Settings),
       isBlock: true,
       type: "list",
       storageClassType: "Eac3SettingsPropertyList",
     },
     mp2_settings: {
-      value: awsMedialiveChannelMp2SettingsPropertyToHclTerraform(struct!.mp2Settings),
+      value: tfChannelMp2SettingsPropertyToHclTerraform(struct!.mp2Settings),
       isBlock: true,
       type: "list",
       storageClassType: "Mp2SettingsPropertyList",
     },
     pass_through_settings: {
-      value: awsMedialiveChannelPassThroughSettingsPropertyToHclTerraform(struct!.passThroughSettings),
+      value: tfChannelPassThroughSettingsPropertyToHclTerraform(struct!.passThroughSettings),
       isBlock: true,
       type: "list",
       storageClassType: "PassThroughSettingsPropertyList",
     },
     wav_settings: {
-      value: awsMedialiveChannelWavSettingsPropertyToHclTerraform(struct!.wavSettings),
+      value: tfChannelWavSettingsPropertyToHclTerraform(struct!.wavSettings),
       isBlock: true,
       type: "list",
       storageClassType: "WavSettingsPropertyList",
@@ -1544,7 +1544,7 @@ export function awsMedialiveChannelEncoderSettingsAudioDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelInputChannelLevelsPropertyToTerraform(struct?: AwsMedialiveChannel.InputChannelLevelsProperty | cdktn.IResolvable): any {
+export function tfChannelInputChannelLevelsPropertyToTerraform(struct?: TfChannel.InputChannelLevelsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1556,7 +1556,7 @@ export function awsMedialiveChannelInputChannelLevelsPropertyToTerraform(struct?
 }
 
 
-export function awsMedialiveChannelInputChannelLevelsPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputChannelLevelsProperty | cdktn.IResolvable): any {
+export function tfChannelInputChannelLevelsPropertyToHclTerraform(struct?: TfChannel.InputChannelLevelsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1581,19 +1581,19 @@ export function awsMedialiveChannelInputChannelLevelsPropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelChannelMappingsPropertyToTerraform(struct?: AwsMedialiveChannel.ChannelMappingsProperty | cdktn.IResolvable): any {
+export function tfChannelChannelMappingsPropertyToTerraform(struct?: TfChannel.ChannelMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     output_channel: cdktn.numberToTerraform(struct!.outputChannel),
-    input_channel_levels: cdktn.listMapper(awsMedialiveChannelInputChannelLevelsPropertyToTerraform, true)(struct!.inputChannelLevels),
+    input_channel_levels: cdktn.listMapper(tfChannelInputChannelLevelsPropertyToTerraform, true)(struct!.inputChannelLevels),
   }
 }
 
 
-export function awsMedialiveChannelChannelMappingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.ChannelMappingsProperty | cdktn.IResolvable): any {
+export function tfChannelChannelMappingsPropertyToHclTerraform(struct?: TfChannel.ChannelMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1606,7 +1606,7 @@ export function awsMedialiveChannelChannelMappingsPropertyToHclTerraform(struct?
       storageClassType: "number",
     },
     input_channel_levels: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelInputChannelLevelsPropertyToHclTerraform, true)(struct!.inputChannelLevels),
+      value: cdktn.listMapperHcl(tfChannelInputChannelLevelsPropertyToHclTerraform, true)(struct!.inputChannelLevels),
       isBlock: true,
       type: "set",
       storageClassType: "InputChannelLevelsPropertyList",
@@ -1618,7 +1618,7 @@ export function awsMedialiveChannelChannelMappingsPropertyToHclTerraform(struct?
 }
 
 
-export function awsMedialiveChannelRemixSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.RemixSettingsPropertyOutputReference | AwsMedialiveChannel.RemixSettingsProperty): any {
+export function tfChannelRemixSettingsPropertyToTerraform(struct?: TfChannel.RemixSettingsPropertyOutputReference | TfChannel.RemixSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1626,12 +1626,12 @@ export function awsMedialiveChannelRemixSettingsPropertyToTerraform(struct?: Aws
   return {
     channels_in: cdktn.numberToTerraform(struct!.channelsIn),
     channels_out: cdktn.numberToTerraform(struct!.channelsOut),
-    channel_mappings: cdktn.listMapper(awsMedialiveChannelChannelMappingsPropertyToTerraform, true)(struct!.channelMappings),
+    channel_mappings: cdktn.listMapper(tfChannelChannelMappingsPropertyToTerraform, true)(struct!.channelMappings),
   }
 }
 
 
-export function awsMedialiveChannelRemixSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.RemixSettingsPropertyOutputReference | AwsMedialiveChannel.RemixSettingsProperty): any {
+export function tfChannelRemixSettingsPropertyToHclTerraform(struct?: TfChannel.RemixSettingsPropertyOutputReference | TfChannel.RemixSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1650,7 +1650,7 @@ export function awsMedialiveChannelRemixSettingsPropertyToHclTerraform(struct?: 
       storageClassType: "number",
     },
     channel_mappings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelChannelMappingsPropertyToHclTerraform, true)(struct!.channelMappings),
+      value: cdktn.listMapperHcl(tfChannelChannelMappingsPropertyToHclTerraform, true)(struct!.channelMappings),
       isBlock: true,
       type: "set",
       storageClassType: "ChannelMappingsPropertyList",
@@ -1662,7 +1662,7 @@ export function awsMedialiveChannelRemixSettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelAudioDescriptionsPropertyToTerraform(struct?: AwsMedialiveChannel.AudioDescriptionsProperty | cdktn.IResolvable): any {
+export function tfChannelAudioDescriptionsPropertyToTerraform(struct?: TfChannel.AudioDescriptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1675,15 +1675,15 @@ export function awsMedialiveChannelAudioDescriptionsPropertyToTerraform(struct?:
     language_code_control: cdktn.stringToTerraform(struct!.languageCodeControl),
     name: cdktn.stringToTerraform(struct!.name),
     stream_name: cdktn.stringToTerraform(struct!.streamName),
-    audio_normalization_settings: awsMedialiveChannelAudioNormalizationSettingsPropertyToTerraform(struct!.audioNormalizationSettings),
-    audio_watermark_settings: awsMedialiveChannelAudioWatermarkSettingsPropertyToTerraform(struct!.audioWatermarkSettings),
-    codec_settings: awsMedialiveChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToTerraform(struct!.codecSettings),
-    remix_settings: awsMedialiveChannelRemixSettingsPropertyToTerraform(struct!.remixSettings),
+    audio_normalization_settings: tfChannelAudioNormalizationSettingsPropertyToTerraform(struct!.audioNormalizationSettings),
+    audio_watermark_settings: tfChannelAudioWatermarkSettingsPropertyToTerraform(struct!.audioWatermarkSettings),
+    codec_settings: tfChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToTerraform(struct!.codecSettings),
+    remix_settings: tfChannelRemixSettingsPropertyToTerraform(struct!.remixSettings),
   }
 }
 
 
-export function awsMedialiveChannelAudioDescriptionsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioDescriptionsProperty | cdktn.IResolvable): any {
+export function tfChannelAudioDescriptionsPropertyToHclTerraform(struct?: TfChannel.AudioDescriptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1732,25 +1732,25 @@ export function awsMedialiveChannelAudioDescriptionsPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     audio_normalization_settings: {
-      value: awsMedialiveChannelAudioNormalizationSettingsPropertyToHclTerraform(struct!.audioNormalizationSettings),
+      value: tfChannelAudioNormalizationSettingsPropertyToHclTerraform(struct!.audioNormalizationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AudioNormalizationSettingsPropertyList",
     },
     audio_watermark_settings: {
-      value: awsMedialiveChannelAudioWatermarkSettingsPropertyToHclTerraform(struct!.audioWatermarkSettings),
+      value: tfChannelAudioWatermarkSettingsPropertyToHclTerraform(struct!.audioWatermarkSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AudioWatermarkSettingsPropertyList",
     },
     codec_settings: {
-      value: awsMedialiveChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToHclTerraform(struct!.codecSettings),
+      value: tfChannelEncoderSettingsAudioDescriptionsCodecSettingsPropertyToHclTerraform(struct!.codecSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsAudioDescriptionsCodecSettingsPropertyList",
     },
     remix_settings: {
-      value: awsMedialiveChannelRemixSettingsPropertyToHclTerraform(struct!.remixSettings),
+      value: tfChannelRemixSettingsPropertyToHclTerraform(struct!.remixSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RemixSettingsPropertyList",
@@ -1762,7 +1762,7 @@ export function awsMedialiveChannelAudioDescriptionsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelAvailBlankingImagePropertyToTerraform(struct?: AwsMedialiveChannel.AvailBlankingImagePropertyOutputReference | AwsMedialiveChannel.AvailBlankingImageProperty): any {
+export function tfChannelAvailBlankingImagePropertyToTerraform(struct?: TfChannel.AvailBlankingImagePropertyOutputReference | TfChannel.AvailBlankingImageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1775,7 +1775,7 @@ export function awsMedialiveChannelAvailBlankingImagePropertyToTerraform(struct?
 }
 
 
-export function awsMedialiveChannelAvailBlankingImagePropertyToHclTerraform(struct?: AwsMedialiveChannel.AvailBlankingImagePropertyOutputReference | AwsMedialiveChannel.AvailBlankingImageProperty): any {
+export function tfChannelAvailBlankingImagePropertyToHclTerraform(struct?: TfChannel.AvailBlankingImagePropertyOutputReference | TfChannel.AvailBlankingImageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1806,19 +1806,19 @@ export function awsMedialiveChannelAvailBlankingImagePropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelAvailBlankingPropertyToTerraform(struct?: AwsMedialiveChannel.AvailBlankingPropertyOutputReference | AwsMedialiveChannel.AvailBlankingProperty): any {
+export function tfChannelAvailBlankingPropertyToTerraform(struct?: TfChannel.AvailBlankingPropertyOutputReference | TfChannel.AvailBlankingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     state: cdktn.stringToTerraform(struct!.state),
-    avail_blanking_image: awsMedialiveChannelAvailBlankingImagePropertyToTerraform(struct!.availBlankingImage),
+    avail_blanking_image: tfChannelAvailBlankingImagePropertyToTerraform(struct!.availBlankingImage),
   }
 }
 
 
-export function awsMedialiveChannelAvailBlankingPropertyToHclTerraform(struct?: AwsMedialiveChannel.AvailBlankingPropertyOutputReference | AwsMedialiveChannel.AvailBlankingProperty): any {
+export function tfChannelAvailBlankingPropertyToHclTerraform(struct?: TfChannel.AvailBlankingPropertyOutputReference | TfChannel.AvailBlankingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1831,7 +1831,7 @@ export function awsMedialiveChannelAvailBlankingPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     avail_blanking_image: {
-      value: awsMedialiveChannelAvailBlankingImagePropertyToHclTerraform(struct!.availBlankingImage),
+      value: tfChannelAvailBlankingImagePropertyToHclTerraform(struct!.availBlankingImage),
       isBlock: true,
       type: "list",
       storageClassType: "AvailBlankingImagePropertyList",
@@ -1843,7 +1843,7 @@ export function awsMedialiveChannelAvailBlankingPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelAribDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AribDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.AribDestinationSettingsProperty): any {
+export function tfChannelAribDestinationSettingsPropertyToTerraform(struct?: TfChannel.AribDestinationSettingsPropertyOutputReference | TfChannel.AribDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1853,7 +1853,7 @@ export function awsMedialiveChannelAribDestinationSettingsPropertyToTerraform(st
 }
 
 
-export function awsMedialiveChannelAribDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AribDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.AribDestinationSettingsProperty): any {
+export function tfChannelAribDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.AribDestinationSettingsPropertyOutputReference | TfChannel.AribDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1864,7 +1864,7 @@ export function awsMedialiveChannelAribDestinationSettingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontProperty): any {
+export function tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToTerraform(struct?: TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyOutputReference | TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1877,7 +1877,7 @@ export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestination
 }
 
 
-export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontProperty): any {
+export function tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyOutputReference | TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1908,7 +1908,7 @@ export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestination
 }
 
 
-export function awsMedialiveChannelBurnInDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.BurnInDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.BurnInDestinationSettingsProperty): any {
+export function tfChannelBurnInDestinationSettingsPropertyToTerraform(struct?: TfChannel.BurnInDestinationSettingsPropertyOutputReference | TfChannel.BurnInDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1930,12 +1930,12 @@ export function awsMedialiveChannelBurnInDestinationSettingsPropertyToTerraform(
     teletext_grid_control: cdktn.stringToTerraform(struct!.teletextGridControl),
     x_position: cdktn.numberToTerraform(struct!.xPosition),
     y_position: cdktn.numberToTerraform(struct!.yPosition),
-    font: awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToTerraform(struct!.font),
+    font: tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToTerraform(struct!.font),
   }
 }
 
 
-export function awsMedialiveChannelBurnInDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.BurnInDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.BurnInDestinationSettingsProperty): any {
+export function tfChannelBurnInDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.BurnInDestinationSettingsPropertyOutputReference | TfChannel.BurnInDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2038,7 +2038,7 @@ export function awsMedialiveChannelBurnInDestinationSettingsPropertyToHclTerrafo
       storageClassType: "number",
     },
     font: {
-      value: awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToHclTerraform(struct!.font),
+      value: tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyToHclTerraform(struct!.font),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontPropertyList",
@@ -2050,7 +2050,7 @@ export function awsMedialiveChannelBurnInDestinationSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontProperty): any {
+export function tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToTerraform(struct?: TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyOutputReference | TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2063,7 +2063,7 @@ export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestination
 }
 
 
-export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontProperty): any {
+export function tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyOutputReference | TfChannel.EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2094,7 +2094,7 @@ export function awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestination
 }
 
 
-export function awsMedialiveChannelDvbSubDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.DvbSubDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.DvbSubDestinationSettingsProperty): any {
+export function tfChannelDvbSubDestinationSettingsPropertyToTerraform(struct?: TfChannel.DvbSubDestinationSettingsPropertyOutputReference | TfChannel.DvbSubDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2116,12 +2116,12 @@ export function awsMedialiveChannelDvbSubDestinationSettingsPropertyToTerraform(
     teletext_grid_control: cdktn.stringToTerraform(struct!.teletextGridControl),
     x_position: cdktn.numberToTerraform(struct!.xPosition),
     y_position: cdktn.numberToTerraform(struct!.yPosition),
-    font: awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToTerraform(struct!.font),
+    font: tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToTerraform(struct!.font),
   }
 }
 
 
-export function awsMedialiveChannelDvbSubDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.DvbSubDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.DvbSubDestinationSettingsProperty): any {
+export function tfChannelDvbSubDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.DvbSubDestinationSettingsPropertyOutputReference | TfChannel.DvbSubDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2224,7 +2224,7 @@ export function awsMedialiveChannelDvbSubDestinationSettingsPropertyToHclTerrafo
       storageClassType: "number",
     },
     font: {
-      value: awsMedialiveChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToHclTerraform(struct!.font),
+      value: tfChannelEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyToHclTerraform(struct!.font),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontPropertyList",
@@ -2236,7 +2236,7 @@ export function awsMedialiveChannelDvbSubDestinationSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelEbuTtDDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EbuTtDDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.EbuTtDDestinationSettingsProperty): any {
+export function tfChannelEbuTtDDestinationSettingsPropertyToTerraform(struct?: TfChannel.EbuTtDDestinationSettingsPropertyOutputReference | TfChannel.EbuTtDDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2250,7 +2250,7 @@ export function awsMedialiveChannelEbuTtDDestinationSettingsPropertyToTerraform(
 }
 
 
-export function awsMedialiveChannelEbuTtDDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EbuTtDDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.EbuTtDDestinationSettingsProperty): any {
+export function tfChannelEbuTtDDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.EbuTtDDestinationSettingsPropertyOutputReference | TfChannel.EbuTtDDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2287,7 +2287,7 @@ export function awsMedialiveChannelEbuTtDDestinationSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelEmbeddedDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EmbeddedDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.EmbeddedDestinationSettingsProperty): any {
+export function tfChannelEmbeddedDestinationSettingsPropertyToTerraform(struct?: TfChannel.EmbeddedDestinationSettingsPropertyOutputReference | TfChannel.EmbeddedDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2297,7 +2297,7 @@ export function awsMedialiveChannelEmbeddedDestinationSettingsPropertyToTerrafor
 }
 
 
-export function awsMedialiveChannelEmbeddedDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EmbeddedDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.EmbeddedDestinationSettingsProperty): any {
+export function tfChannelEmbeddedDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.EmbeddedDestinationSettingsPropertyOutputReference | TfChannel.EmbeddedDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2308,7 +2308,7 @@ export function awsMedialiveChannelEmbeddedDestinationSettingsPropertyToHclTerra
 }
 
 
-export function awsMedialiveChannelEmbeddedPlusScte20DestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EmbeddedPlusScte20DestinationSettingsPropertyOutputReference | AwsMedialiveChannel.EmbeddedPlusScte20DestinationSettingsProperty): any {
+export function tfChannelEmbeddedPlusScte20DestinationSettingsPropertyToTerraform(struct?: TfChannel.EmbeddedPlusScte20DestinationSettingsPropertyOutputReference | TfChannel.EmbeddedPlusScte20DestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2318,7 +2318,7 @@ export function awsMedialiveChannelEmbeddedPlusScte20DestinationSettingsProperty
 }
 
 
-export function awsMedialiveChannelEmbeddedPlusScte20DestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EmbeddedPlusScte20DestinationSettingsPropertyOutputReference | AwsMedialiveChannel.EmbeddedPlusScte20DestinationSettingsProperty): any {
+export function tfChannelEmbeddedPlusScte20DestinationSettingsPropertyToHclTerraform(struct?: TfChannel.EmbeddedPlusScte20DestinationSettingsPropertyOutputReference | TfChannel.EmbeddedPlusScte20DestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2329,7 +2329,7 @@ export function awsMedialiveChannelEmbeddedPlusScte20DestinationSettingsProperty
 }
 
 
-export function awsMedialiveChannelRtmpCaptionInfoDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.RtmpCaptionInfoDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.RtmpCaptionInfoDestinationSettingsProperty): any {
+export function tfChannelRtmpCaptionInfoDestinationSettingsPropertyToTerraform(struct?: TfChannel.RtmpCaptionInfoDestinationSettingsPropertyOutputReference | TfChannel.RtmpCaptionInfoDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2339,7 +2339,7 @@ export function awsMedialiveChannelRtmpCaptionInfoDestinationSettingsPropertyToT
 }
 
 
-export function awsMedialiveChannelRtmpCaptionInfoDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.RtmpCaptionInfoDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.RtmpCaptionInfoDestinationSettingsProperty): any {
+export function tfChannelRtmpCaptionInfoDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.RtmpCaptionInfoDestinationSettingsPropertyOutputReference | TfChannel.RtmpCaptionInfoDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2350,7 +2350,7 @@ export function awsMedialiveChannelRtmpCaptionInfoDestinationSettingsPropertyToH
 }
 
 
-export function awsMedialiveChannelScte20PlusEmbeddedDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Scte20PlusEmbeddedDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.Scte20PlusEmbeddedDestinationSettingsProperty): any {
+export function tfChannelScte20PlusEmbeddedDestinationSettingsPropertyToTerraform(struct?: TfChannel.Scte20PlusEmbeddedDestinationSettingsPropertyOutputReference | TfChannel.Scte20PlusEmbeddedDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2360,7 +2360,7 @@ export function awsMedialiveChannelScte20PlusEmbeddedDestinationSettingsProperty
 }
 
 
-export function awsMedialiveChannelScte20PlusEmbeddedDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Scte20PlusEmbeddedDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.Scte20PlusEmbeddedDestinationSettingsProperty): any {
+export function tfChannelScte20PlusEmbeddedDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.Scte20PlusEmbeddedDestinationSettingsPropertyOutputReference | TfChannel.Scte20PlusEmbeddedDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2371,7 +2371,7 @@ export function awsMedialiveChannelScte20PlusEmbeddedDestinationSettingsProperty
 }
 
 
-export function awsMedialiveChannelScte27DestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Scte27DestinationSettingsPropertyOutputReference | AwsMedialiveChannel.Scte27DestinationSettingsProperty): any {
+export function tfChannelScte27DestinationSettingsPropertyToTerraform(struct?: TfChannel.Scte27DestinationSettingsPropertyOutputReference | TfChannel.Scte27DestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2381,7 +2381,7 @@ export function awsMedialiveChannelScte27DestinationSettingsPropertyToTerraform(
 }
 
 
-export function awsMedialiveChannelScte27DestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Scte27DestinationSettingsPropertyOutputReference | AwsMedialiveChannel.Scte27DestinationSettingsProperty): any {
+export function tfChannelScte27DestinationSettingsPropertyToHclTerraform(struct?: TfChannel.Scte27DestinationSettingsPropertyOutputReference | TfChannel.Scte27DestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2392,7 +2392,7 @@ export function awsMedialiveChannelScte27DestinationSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelSmpteTtDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.SmpteTtDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.SmpteTtDestinationSettingsProperty): any {
+export function tfChannelSmpteTtDestinationSettingsPropertyToTerraform(struct?: TfChannel.SmpteTtDestinationSettingsPropertyOutputReference | TfChannel.SmpteTtDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2402,7 +2402,7 @@ export function awsMedialiveChannelSmpteTtDestinationSettingsPropertyToTerraform
 }
 
 
-export function awsMedialiveChannelSmpteTtDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.SmpteTtDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.SmpteTtDestinationSettingsProperty): any {
+export function tfChannelSmpteTtDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.SmpteTtDestinationSettingsPropertyOutputReference | TfChannel.SmpteTtDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2413,7 +2413,7 @@ export function awsMedialiveChannelSmpteTtDestinationSettingsPropertyToHclTerraf
 }
 
 
-export function awsMedialiveChannelTeletextDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.TeletextDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.TeletextDestinationSettingsProperty): any {
+export function tfChannelTeletextDestinationSettingsPropertyToTerraform(struct?: TfChannel.TeletextDestinationSettingsPropertyOutputReference | TfChannel.TeletextDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2423,7 +2423,7 @@ export function awsMedialiveChannelTeletextDestinationSettingsPropertyToTerrafor
 }
 
 
-export function awsMedialiveChannelTeletextDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.TeletextDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.TeletextDestinationSettingsProperty): any {
+export function tfChannelTeletextDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.TeletextDestinationSettingsPropertyOutputReference | TfChannel.TeletextDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2434,7 +2434,7 @@ export function awsMedialiveChannelTeletextDestinationSettingsPropertyToHclTerra
 }
 
 
-export function awsMedialiveChannelTtmlDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.TtmlDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.TtmlDestinationSettingsProperty): any {
+export function tfChannelTtmlDestinationSettingsPropertyToTerraform(struct?: TfChannel.TtmlDestinationSettingsPropertyOutputReference | TfChannel.TtmlDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2445,7 +2445,7 @@ export function awsMedialiveChannelTtmlDestinationSettingsPropertyToTerraform(st
 }
 
 
-export function awsMedialiveChannelTtmlDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.TtmlDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.TtmlDestinationSettingsProperty): any {
+export function tfChannelTtmlDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.TtmlDestinationSettingsPropertyOutputReference | TfChannel.TtmlDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2464,7 +2464,7 @@ export function awsMedialiveChannelTtmlDestinationSettingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelWebvttDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.WebvttDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.WebvttDestinationSettingsProperty): any {
+export function tfChannelWebvttDestinationSettingsPropertyToTerraform(struct?: TfChannel.WebvttDestinationSettingsPropertyOutputReference | TfChannel.WebvttDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2475,7 +2475,7 @@ export function awsMedialiveChannelWebvttDestinationSettingsPropertyToTerraform(
 }
 
 
-export function awsMedialiveChannelWebvttDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.WebvttDestinationSettingsPropertyOutputReference | AwsMedialiveChannel.WebvttDestinationSettingsProperty): any {
+export function tfChannelWebvttDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.WebvttDestinationSettingsPropertyOutputReference | TfChannel.WebvttDestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2494,109 +2494,109 @@ export function awsMedialiveChannelWebvttDestinationSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelDestinationSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.DestinationSettingsPropertyOutputReference | AwsMedialiveChannel.DestinationSettingsProperty): any {
+export function tfChannelDestinationSettingsPropertyToTerraform(struct?: TfChannel.DestinationSettingsPropertyOutputReference | TfChannel.DestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    arib_destination_settings: awsMedialiveChannelAribDestinationSettingsPropertyToTerraform(struct!.aribDestinationSettings),
-    burn_in_destination_settings: awsMedialiveChannelBurnInDestinationSettingsPropertyToTerraform(struct!.burnInDestinationSettings),
-    dvb_sub_destination_settings: awsMedialiveChannelDvbSubDestinationSettingsPropertyToTerraform(struct!.dvbSubDestinationSettings),
-    ebu_tt_d_destination_settings: awsMedialiveChannelEbuTtDDestinationSettingsPropertyToTerraform(struct!.ebuTtDDestinationSettings),
-    embedded_destination_settings: awsMedialiveChannelEmbeddedDestinationSettingsPropertyToTerraform(struct!.embeddedDestinationSettings),
-    embedded_plus_scte20_destination_settings: awsMedialiveChannelEmbeddedPlusScte20DestinationSettingsPropertyToTerraform(struct!.embeddedPlusScte20DestinationSettings),
-    rtmp_caption_info_destination_settings: awsMedialiveChannelRtmpCaptionInfoDestinationSettingsPropertyToTerraform(struct!.rtmpCaptionInfoDestinationSettings),
-    scte20_plus_embedded_destination_settings: awsMedialiveChannelScte20PlusEmbeddedDestinationSettingsPropertyToTerraform(struct!.scte20PlusEmbeddedDestinationSettings),
-    scte27_destination_settings: awsMedialiveChannelScte27DestinationSettingsPropertyToTerraform(struct!.scte27DestinationSettings),
-    smpte_tt_destination_settings: awsMedialiveChannelSmpteTtDestinationSettingsPropertyToTerraform(struct!.smpteTtDestinationSettings),
-    teletext_destination_settings: awsMedialiveChannelTeletextDestinationSettingsPropertyToTerraform(struct!.teletextDestinationSettings),
-    ttml_destination_settings: awsMedialiveChannelTtmlDestinationSettingsPropertyToTerraform(struct!.ttmlDestinationSettings),
-    webvtt_destination_settings: awsMedialiveChannelWebvttDestinationSettingsPropertyToTerraform(struct!.webvttDestinationSettings),
+    arib_destination_settings: tfChannelAribDestinationSettingsPropertyToTerraform(struct!.aribDestinationSettings),
+    burn_in_destination_settings: tfChannelBurnInDestinationSettingsPropertyToTerraform(struct!.burnInDestinationSettings),
+    dvb_sub_destination_settings: tfChannelDvbSubDestinationSettingsPropertyToTerraform(struct!.dvbSubDestinationSettings),
+    ebu_tt_d_destination_settings: tfChannelEbuTtDDestinationSettingsPropertyToTerraform(struct!.ebuTtDDestinationSettings),
+    embedded_destination_settings: tfChannelEmbeddedDestinationSettingsPropertyToTerraform(struct!.embeddedDestinationSettings),
+    embedded_plus_scte20_destination_settings: tfChannelEmbeddedPlusScte20DestinationSettingsPropertyToTerraform(struct!.embeddedPlusScte20DestinationSettings),
+    rtmp_caption_info_destination_settings: tfChannelRtmpCaptionInfoDestinationSettingsPropertyToTerraform(struct!.rtmpCaptionInfoDestinationSettings),
+    scte20_plus_embedded_destination_settings: tfChannelScte20PlusEmbeddedDestinationSettingsPropertyToTerraform(struct!.scte20PlusEmbeddedDestinationSettings),
+    scte27_destination_settings: tfChannelScte27DestinationSettingsPropertyToTerraform(struct!.scte27DestinationSettings),
+    smpte_tt_destination_settings: tfChannelSmpteTtDestinationSettingsPropertyToTerraform(struct!.smpteTtDestinationSettings),
+    teletext_destination_settings: tfChannelTeletextDestinationSettingsPropertyToTerraform(struct!.teletextDestinationSettings),
+    ttml_destination_settings: tfChannelTtmlDestinationSettingsPropertyToTerraform(struct!.ttmlDestinationSettings),
+    webvtt_destination_settings: tfChannelWebvttDestinationSettingsPropertyToTerraform(struct!.webvttDestinationSettings),
   }
 }
 
 
-export function awsMedialiveChannelDestinationSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.DestinationSettingsPropertyOutputReference | AwsMedialiveChannel.DestinationSettingsProperty): any {
+export function tfChannelDestinationSettingsPropertyToHclTerraform(struct?: TfChannel.DestinationSettingsPropertyOutputReference | TfChannel.DestinationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     arib_destination_settings: {
-      value: awsMedialiveChannelAribDestinationSettingsPropertyToHclTerraform(struct!.aribDestinationSettings),
+      value: tfChannelAribDestinationSettingsPropertyToHclTerraform(struct!.aribDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AribDestinationSettingsPropertyList",
     },
     burn_in_destination_settings: {
-      value: awsMedialiveChannelBurnInDestinationSettingsPropertyToHclTerraform(struct!.burnInDestinationSettings),
+      value: tfChannelBurnInDestinationSettingsPropertyToHclTerraform(struct!.burnInDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "BurnInDestinationSettingsPropertyList",
     },
     dvb_sub_destination_settings: {
-      value: awsMedialiveChannelDvbSubDestinationSettingsPropertyToHclTerraform(struct!.dvbSubDestinationSettings),
+      value: tfChannelDvbSubDestinationSettingsPropertyToHclTerraform(struct!.dvbSubDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DvbSubDestinationSettingsPropertyList",
     },
     ebu_tt_d_destination_settings: {
-      value: awsMedialiveChannelEbuTtDDestinationSettingsPropertyToHclTerraform(struct!.ebuTtDDestinationSettings),
+      value: tfChannelEbuTtDDestinationSettingsPropertyToHclTerraform(struct!.ebuTtDDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EbuTtDDestinationSettingsPropertyList",
     },
     embedded_destination_settings: {
-      value: awsMedialiveChannelEmbeddedDestinationSettingsPropertyToHclTerraform(struct!.embeddedDestinationSettings),
+      value: tfChannelEmbeddedDestinationSettingsPropertyToHclTerraform(struct!.embeddedDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EmbeddedDestinationSettingsPropertyList",
     },
     embedded_plus_scte20_destination_settings: {
-      value: awsMedialiveChannelEmbeddedPlusScte20DestinationSettingsPropertyToHclTerraform(struct!.embeddedPlusScte20DestinationSettings),
+      value: tfChannelEmbeddedPlusScte20DestinationSettingsPropertyToHclTerraform(struct!.embeddedPlusScte20DestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EmbeddedPlusScte20DestinationSettingsPropertyList",
     },
     rtmp_caption_info_destination_settings: {
-      value: awsMedialiveChannelRtmpCaptionInfoDestinationSettingsPropertyToHclTerraform(struct!.rtmpCaptionInfoDestinationSettings),
+      value: tfChannelRtmpCaptionInfoDestinationSettingsPropertyToHclTerraform(struct!.rtmpCaptionInfoDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RtmpCaptionInfoDestinationSettingsPropertyList",
     },
     scte20_plus_embedded_destination_settings: {
-      value: awsMedialiveChannelScte20PlusEmbeddedDestinationSettingsPropertyToHclTerraform(struct!.scte20PlusEmbeddedDestinationSettings),
+      value: tfChannelScte20PlusEmbeddedDestinationSettingsPropertyToHclTerraform(struct!.scte20PlusEmbeddedDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "Scte20PlusEmbeddedDestinationSettingsPropertyList",
     },
     scte27_destination_settings: {
-      value: awsMedialiveChannelScte27DestinationSettingsPropertyToHclTerraform(struct!.scte27DestinationSettings),
+      value: tfChannelScte27DestinationSettingsPropertyToHclTerraform(struct!.scte27DestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "Scte27DestinationSettingsPropertyList",
     },
     smpte_tt_destination_settings: {
-      value: awsMedialiveChannelSmpteTtDestinationSettingsPropertyToHclTerraform(struct!.smpteTtDestinationSettings),
+      value: tfChannelSmpteTtDestinationSettingsPropertyToHclTerraform(struct!.smpteTtDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "SmpteTtDestinationSettingsPropertyList",
     },
     teletext_destination_settings: {
-      value: awsMedialiveChannelTeletextDestinationSettingsPropertyToHclTerraform(struct!.teletextDestinationSettings),
+      value: tfChannelTeletextDestinationSettingsPropertyToHclTerraform(struct!.teletextDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "TeletextDestinationSettingsPropertyList",
     },
     ttml_destination_settings: {
-      value: awsMedialiveChannelTtmlDestinationSettingsPropertyToHclTerraform(struct!.ttmlDestinationSettings),
+      value: tfChannelTtmlDestinationSettingsPropertyToHclTerraform(struct!.ttmlDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "TtmlDestinationSettingsPropertyList",
     },
     webvtt_destination_settings: {
-      value: awsMedialiveChannelWebvttDestinationSettingsPropertyToHclTerraform(struct!.webvttDestinationSettings),
+      value: tfChannelWebvttDestinationSettingsPropertyToHclTerraform(struct!.webvttDestinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "WebvttDestinationSettingsPropertyList",
@@ -2608,7 +2608,7 @@ export function awsMedialiveChannelDestinationSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelCaptionDescriptionsPropertyToTerraform(struct?: AwsMedialiveChannel.CaptionDescriptionsProperty | cdktn.IResolvable): any {
+export function tfChannelCaptionDescriptionsPropertyToTerraform(struct?: TfChannel.CaptionDescriptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2619,12 +2619,12 @@ export function awsMedialiveChannelCaptionDescriptionsPropertyToTerraform(struct
     language_code: cdktn.stringToTerraform(struct!.languageCode),
     language_description: cdktn.stringToTerraform(struct!.languageDescription),
     name: cdktn.stringToTerraform(struct!.name),
-    destination_settings: awsMedialiveChannelDestinationSettingsPropertyToTerraform(struct!.destinationSettings),
+    destination_settings: tfChannelDestinationSettingsPropertyToTerraform(struct!.destinationSettings),
   }
 }
 
 
-export function awsMedialiveChannelCaptionDescriptionsPropertyToHclTerraform(struct?: AwsMedialiveChannel.CaptionDescriptionsProperty | cdktn.IResolvable): any {
+export function tfChannelCaptionDescriptionsPropertyToHclTerraform(struct?: TfChannel.CaptionDescriptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2661,7 +2661,7 @@ export function awsMedialiveChannelCaptionDescriptionsPropertyToHclTerraform(str
       storageClassType: "string",
     },
     destination_settings: {
-      value: awsMedialiveChannelDestinationSettingsPropertyToHclTerraform(struct!.destinationSettings),
+      value: tfChannelDestinationSettingsPropertyToHclTerraform(struct!.destinationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationSettingsPropertyList",
@@ -2673,7 +2673,7 @@ export function awsMedialiveChannelCaptionDescriptionsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelInputLossImageSlatePropertyToTerraform(struct?: AwsMedialiveChannel.InputLossImageSlatePropertyOutputReference | AwsMedialiveChannel.InputLossImageSlateProperty): any {
+export function tfChannelInputLossImageSlatePropertyToTerraform(struct?: TfChannel.InputLossImageSlatePropertyOutputReference | TfChannel.InputLossImageSlateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2686,7 +2686,7 @@ export function awsMedialiveChannelInputLossImageSlatePropertyToTerraform(struct
 }
 
 
-export function awsMedialiveChannelInputLossImageSlatePropertyToHclTerraform(struct?: AwsMedialiveChannel.InputLossImageSlatePropertyOutputReference | AwsMedialiveChannel.InputLossImageSlateProperty): any {
+export function tfChannelInputLossImageSlatePropertyToHclTerraform(struct?: TfChannel.InputLossImageSlatePropertyOutputReference | TfChannel.InputLossImageSlateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2717,7 +2717,7 @@ export function awsMedialiveChannelInputLossImageSlatePropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelInputLossBehaviorPropertyToTerraform(struct?: AwsMedialiveChannel.InputLossBehaviorPropertyOutputReference | AwsMedialiveChannel.InputLossBehaviorProperty): any {
+export function tfChannelInputLossBehaviorPropertyToTerraform(struct?: TfChannel.InputLossBehaviorPropertyOutputReference | TfChannel.InputLossBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2727,12 +2727,12 @@ export function awsMedialiveChannelInputLossBehaviorPropertyToTerraform(struct?:
     input_loss_image_color: cdktn.stringToTerraform(struct!.inputLossImageColor),
     input_loss_image_type: cdktn.stringToTerraform(struct!.inputLossImageType),
     repeat_frame_msec: cdktn.numberToTerraform(struct!.repeatFrameMsec),
-    input_loss_image_slate: awsMedialiveChannelInputLossImageSlatePropertyToTerraform(struct!.inputLossImageSlate),
+    input_loss_image_slate: tfChannelInputLossImageSlatePropertyToTerraform(struct!.inputLossImageSlate),
   }
 }
 
 
-export function awsMedialiveChannelInputLossBehaviorPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputLossBehaviorPropertyOutputReference | AwsMedialiveChannel.InputLossBehaviorProperty): any {
+export function tfChannelInputLossBehaviorPropertyToHclTerraform(struct?: TfChannel.InputLossBehaviorPropertyOutputReference | TfChannel.InputLossBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2763,7 +2763,7 @@ export function awsMedialiveChannelInputLossBehaviorPropertyToHclTerraform(struc
       storageClassType: "number",
     },
     input_loss_image_slate: {
-      value: awsMedialiveChannelInputLossImageSlatePropertyToHclTerraform(struct!.inputLossImageSlate),
+      value: tfChannelInputLossImageSlatePropertyToHclTerraform(struct!.inputLossImageSlate),
       isBlock: true,
       type: "list",
       storageClassType: "InputLossImageSlatePropertyList",
@@ -2775,7 +2775,7 @@ export function awsMedialiveChannelInputLossBehaviorPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelGlobalConfigurationPropertyToTerraform(struct?: AwsMedialiveChannel.GlobalConfigurationPropertyOutputReference | AwsMedialiveChannel.GlobalConfigurationProperty): any {
+export function tfChannelGlobalConfigurationPropertyToTerraform(struct?: TfChannel.GlobalConfigurationPropertyOutputReference | TfChannel.GlobalConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2786,12 +2786,12 @@ export function awsMedialiveChannelGlobalConfigurationPropertyToTerraform(struct
     output_locking_mode: cdktn.stringToTerraform(struct!.outputLockingMode),
     output_timing_source: cdktn.stringToTerraform(struct!.outputTimingSource),
     support_low_framerate_inputs: cdktn.stringToTerraform(struct!.supportLowFramerateInputs),
-    input_loss_behavior: awsMedialiveChannelInputLossBehaviorPropertyToTerraform(struct!.inputLossBehavior),
+    input_loss_behavior: tfChannelInputLossBehaviorPropertyToTerraform(struct!.inputLossBehavior),
   }
 }
 
 
-export function awsMedialiveChannelGlobalConfigurationPropertyToHclTerraform(struct?: AwsMedialiveChannel.GlobalConfigurationPropertyOutputReference | AwsMedialiveChannel.GlobalConfigurationProperty): any {
+export function tfChannelGlobalConfigurationPropertyToHclTerraform(struct?: TfChannel.GlobalConfigurationPropertyOutputReference | TfChannel.GlobalConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2828,7 +2828,7 @@ export function awsMedialiveChannelGlobalConfigurationPropertyToHclTerraform(str
       storageClassType: "string",
     },
     input_loss_behavior: {
-      value: awsMedialiveChannelInputLossBehaviorPropertyToHclTerraform(struct!.inputLossBehavior),
+      value: tfChannelInputLossBehaviorPropertyToHclTerraform(struct!.inputLossBehavior),
       isBlock: true,
       type: "list",
       storageClassType: "InputLossBehaviorPropertyList",
@@ -2840,7 +2840,7 @@ export function awsMedialiveChannelGlobalConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelHtmlMotionGraphicsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HtmlMotionGraphicsSettingsPropertyOutputReference | AwsMedialiveChannel.HtmlMotionGraphicsSettingsProperty): any {
+export function tfChannelHtmlMotionGraphicsSettingsPropertyToTerraform(struct?: TfChannel.HtmlMotionGraphicsSettingsPropertyOutputReference | TfChannel.HtmlMotionGraphicsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2850,7 +2850,7 @@ export function awsMedialiveChannelHtmlMotionGraphicsSettingsPropertyToTerraform
 }
 
 
-export function awsMedialiveChannelHtmlMotionGraphicsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HtmlMotionGraphicsSettingsPropertyOutputReference | AwsMedialiveChannel.HtmlMotionGraphicsSettingsProperty): any {
+export function tfChannelHtmlMotionGraphicsSettingsPropertyToHclTerraform(struct?: TfChannel.HtmlMotionGraphicsSettingsPropertyOutputReference | TfChannel.HtmlMotionGraphicsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2861,25 +2861,25 @@ export function awsMedialiveChannelHtmlMotionGraphicsSettingsPropertyToHclTerraf
 }
 
 
-export function awsMedialiveChannelMotionGraphicsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MotionGraphicsSettingsPropertyOutputReference | AwsMedialiveChannel.MotionGraphicsSettingsProperty): any {
+export function tfChannelMotionGraphicsSettingsPropertyToTerraform(struct?: TfChannel.MotionGraphicsSettingsPropertyOutputReference | TfChannel.MotionGraphicsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    html_motion_graphics_settings: awsMedialiveChannelHtmlMotionGraphicsSettingsPropertyToTerraform(struct!.htmlMotionGraphicsSettings),
+    html_motion_graphics_settings: tfChannelHtmlMotionGraphicsSettingsPropertyToTerraform(struct!.htmlMotionGraphicsSettings),
   }
 }
 
 
-export function awsMedialiveChannelMotionGraphicsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MotionGraphicsSettingsPropertyOutputReference | AwsMedialiveChannel.MotionGraphicsSettingsProperty): any {
+export function tfChannelMotionGraphicsSettingsPropertyToHclTerraform(struct?: TfChannel.MotionGraphicsSettingsPropertyOutputReference | TfChannel.MotionGraphicsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     html_motion_graphics_settings: {
-      value: awsMedialiveChannelHtmlMotionGraphicsSettingsPropertyToHclTerraform(struct!.htmlMotionGraphicsSettings),
+      value: tfChannelHtmlMotionGraphicsSettingsPropertyToHclTerraform(struct!.htmlMotionGraphicsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HtmlMotionGraphicsSettingsPropertyList",
@@ -2891,19 +2891,19 @@ export function awsMedialiveChannelMotionGraphicsSettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelMotionGraphicsConfigurationPropertyToTerraform(struct?: AwsMedialiveChannel.MotionGraphicsConfigurationPropertyOutputReference | AwsMedialiveChannel.MotionGraphicsConfigurationProperty): any {
+export function tfChannelMotionGraphicsConfigurationPropertyToTerraform(struct?: TfChannel.MotionGraphicsConfigurationPropertyOutputReference | TfChannel.MotionGraphicsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     motion_graphics_insertion: cdktn.stringToTerraform(struct!.motionGraphicsInsertion),
-    motion_graphics_settings: awsMedialiveChannelMotionGraphicsSettingsPropertyToTerraform(struct!.motionGraphicsSettings),
+    motion_graphics_settings: tfChannelMotionGraphicsSettingsPropertyToTerraform(struct!.motionGraphicsSettings),
   }
 }
 
 
-export function awsMedialiveChannelMotionGraphicsConfigurationPropertyToHclTerraform(struct?: AwsMedialiveChannel.MotionGraphicsConfigurationPropertyOutputReference | AwsMedialiveChannel.MotionGraphicsConfigurationProperty): any {
+export function tfChannelMotionGraphicsConfigurationPropertyToHclTerraform(struct?: TfChannel.MotionGraphicsConfigurationPropertyOutputReference | TfChannel.MotionGraphicsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2916,7 +2916,7 @@ export function awsMedialiveChannelMotionGraphicsConfigurationPropertyToHclTerra
       storageClassType: "string",
     },
     motion_graphics_settings: {
-      value: awsMedialiveChannelMotionGraphicsSettingsPropertyToHclTerraform(struct!.motionGraphicsSettings),
+      value: tfChannelMotionGraphicsSettingsPropertyToHclTerraform(struct!.motionGraphicsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MotionGraphicsSettingsPropertyList",
@@ -2928,7 +2928,7 @@ export function awsMedialiveChannelMotionGraphicsConfigurationPropertyToHclTerra
 }
 
 
-export function awsMedialiveChannelNielsenConfigurationPropertyToTerraform(struct?: AwsMedialiveChannel.NielsenConfigurationPropertyOutputReference | AwsMedialiveChannel.NielsenConfigurationProperty): any {
+export function tfChannelNielsenConfigurationPropertyToTerraform(struct?: TfChannel.NielsenConfigurationPropertyOutputReference | TfChannel.NielsenConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2940,7 +2940,7 @@ export function awsMedialiveChannelNielsenConfigurationPropertyToTerraform(struc
 }
 
 
-export function awsMedialiveChannelNielsenConfigurationPropertyToHclTerraform(struct?: AwsMedialiveChannel.NielsenConfigurationPropertyOutputReference | AwsMedialiveChannel.NielsenConfigurationProperty): any {
+export function tfChannelNielsenConfigurationPropertyToHclTerraform(struct?: TfChannel.NielsenConfigurationPropertyOutputReference | TfChannel.NielsenConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2965,7 +2965,7 @@ export function awsMedialiveChannelNielsenConfigurationPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelArchiveS3SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.ArchiveS3SettingsPropertyOutputReference | AwsMedialiveChannel.ArchiveS3SettingsProperty): any {
+export function tfChannelArchiveS3SettingsPropertyToTerraform(struct?: TfChannel.ArchiveS3SettingsPropertyOutputReference | TfChannel.ArchiveS3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2976,7 +2976,7 @@ export function awsMedialiveChannelArchiveS3SettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelArchiveS3SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.ArchiveS3SettingsPropertyOutputReference | AwsMedialiveChannel.ArchiveS3SettingsProperty): any {
+export function tfChannelArchiveS3SettingsPropertyToHclTerraform(struct?: TfChannel.ArchiveS3SettingsPropertyOutputReference | TfChannel.ArchiveS3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2995,25 +2995,25 @@ export function awsMedialiveChannelArchiveS3SettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelArchiveCdnSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.ArchiveCdnSettingsPropertyOutputReference | AwsMedialiveChannel.ArchiveCdnSettingsProperty): any {
+export function tfChannelArchiveCdnSettingsPropertyToTerraform(struct?: TfChannel.ArchiveCdnSettingsPropertyOutputReference | TfChannel.ArchiveCdnSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    archive_s3_settings: awsMedialiveChannelArchiveS3SettingsPropertyToTerraform(struct!.archiveS3Settings),
+    archive_s3_settings: tfChannelArchiveS3SettingsPropertyToTerraform(struct!.archiveS3Settings),
   }
 }
 
 
-export function awsMedialiveChannelArchiveCdnSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.ArchiveCdnSettingsPropertyOutputReference | AwsMedialiveChannel.ArchiveCdnSettingsProperty): any {
+export function tfChannelArchiveCdnSettingsPropertyToHclTerraform(struct?: TfChannel.ArchiveCdnSettingsPropertyOutputReference | TfChannel.ArchiveCdnSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     archive_s3_settings: {
-      value: awsMedialiveChannelArchiveS3SettingsPropertyToHclTerraform(struct!.archiveS3Settings),
+      value: tfChannelArchiveS3SettingsPropertyToHclTerraform(struct!.archiveS3Settings),
       isBlock: true,
       type: "list",
       storageClassType: "ArchiveS3SettingsPropertyList",
@@ -3025,7 +3025,7 @@ export function awsMedialiveChannelArchiveCdnSettingsPropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3036,7 +3036,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3055,20 +3055,20 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelArchiveGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.ArchiveGroupSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelArchiveGroupSettingsPropertyToTerraform(struct?: TfChannel.ArchiveGroupSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     rollover_interval: cdktn.numberToTerraform(struct!.rolloverInterval),
-    archive_cdn_settings: awsMedialiveChannelArchiveCdnSettingsPropertyToTerraform(struct!.archiveCdnSettings),
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToTerraform(struct!.destination),
+    archive_cdn_settings: tfChannelArchiveCdnSettingsPropertyToTerraform(struct!.archiveCdnSettings),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToTerraform(struct!.destination),
   }
 }
 
 
-export function awsMedialiveChannelArchiveGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.ArchiveGroupSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelArchiveGroupSettingsPropertyToHclTerraform(struct?: TfChannel.ArchiveGroupSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3081,13 +3081,13 @@ export function awsMedialiveChannelArchiveGroupSettingsPropertyToHclTerraform(st
       storageClassType: "number",
     },
     archive_cdn_settings: {
-      value: awsMedialiveChannelArchiveCdnSettingsPropertyToHclTerraform(struct!.archiveCdnSettings),
+      value: tfChannelArchiveCdnSettingsPropertyToHclTerraform(struct!.archiveCdnSettings),
       isBlock: true,
       type: "list",
       storageClassType: "ArchiveCdnSettingsPropertyList",
     },
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationPropertyList",
@@ -3099,7 +3099,7 @@ export function awsMedialiveChannelArchiveGroupSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3110,7 +3110,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3129,7 +3129,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelFrameCaptureS3SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FrameCaptureS3SettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureS3SettingsProperty): any {
+export function tfChannelFrameCaptureS3SettingsPropertyToTerraform(struct?: TfChannel.FrameCaptureS3SettingsPropertyOutputReference | TfChannel.FrameCaptureS3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3140,7 +3140,7 @@ export function awsMedialiveChannelFrameCaptureS3SettingsPropertyToTerraform(str
 }
 
 
-export function awsMedialiveChannelFrameCaptureS3SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FrameCaptureS3SettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureS3SettingsProperty): any {
+export function tfChannelFrameCaptureS3SettingsPropertyToHclTerraform(struct?: TfChannel.FrameCaptureS3SettingsPropertyOutputReference | TfChannel.FrameCaptureS3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3159,25 +3159,25 @@ export function awsMedialiveChannelFrameCaptureS3SettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelFrameCaptureCdnSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FrameCaptureCdnSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureCdnSettingsProperty): any {
+export function tfChannelFrameCaptureCdnSettingsPropertyToTerraform(struct?: TfChannel.FrameCaptureCdnSettingsPropertyOutputReference | TfChannel.FrameCaptureCdnSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    frame_capture_s3_settings: awsMedialiveChannelFrameCaptureS3SettingsPropertyToTerraform(struct!.frameCaptureS3Settings),
+    frame_capture_s3_settings: tfChannelFrameCaptureS3SettingsPropertyToTerraform(struct!.frameCaptureS3Settings),
   }
 }
 
 
-export function awsMedialiveChannelFrameCaptureCdnSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FrameCaptureCdnSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureCdnSettingsProperty): any {
+export function tfChannelFrameCaptureCdnSettingsPropertyToHclTerraform(struct?: TfChannel.FrameCaptureCdnSettingsPropertyOutputReference | TfChannel.FrameCaptureCdnSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     frame_capture_s3_settings: {
-      value: awsMedialiveChannelFrameCaptureS3SettingsPropertyToHclTerraform(struct!.frameCaptureS3Settings),
+      value: tfChannelFrameCaptureS3SettingsPropertyToHclTerraform(struct!.frameCaptureS3Settings),
       isBlock: true,
       type: "list",
       storageClassType: "FrameCaptureS3SettingsPropertyList",
@@ -3189,32 +3189,32 @@ export function awsMedialiveChannelFrameCaptureCdnSettingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelFrameCaptureGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FrameCaptureGroupSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureGroupSettingsProperty): any {
+export function tfChannelFrameCaptureGroupSettingsPropertyToTerraform(struct?: TfChannel.FrameCaptureGroupSettingsPropertyOutputReference | TfChannel.FrameCaptureGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToTerraform(struct!.destination),
-    frame_capture_cdn_settings: awsMedialiveChannelFrameCaptureCdnSettingsPropertyToTerraform(struct!.frameCaptureCdnSettings),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToTerraform(struct!.destination),
+    frame_capture_cdn_settings: tfChannelFrameCaptureCdnSettingsPropertyToTerraform(struct!.frameCaptureCdnSettings),
   }
 }
 
 
-export function awsMedialiveChannelFrameCaptureGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FrameCaptureGroupSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureGroupSettingsProperty): any {
+export function tfChannelFrameCaptureGroupSettingsPropertyToHclTerraform(struct?: TfChannel.FrameCaptureGroupSettingsPropertyOutputReference | TfChannel.FrameCaptureGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationPropertyList",
     },
     frame_capture_cdn_settings: {
-      value: awsMedialiveChannelFrameCaptureCdnSettingsPropertyToHclTerraform(struct!.frameCaptureCdnSettings),
+      value: tfChannelFrameCaptureCdnSettingsPropertyToHclTerraform(struct!.frameCaptureCdnSettings),
       isBlock: true,
       type: "list",
       storageClassType: "FrameCaptureCdnSettingsPropertyList",
@@ -3226,7 +3226,7 @@ export function awsMedialiveChannelFrameCaptureGroupSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelCaptionLanguageMappingsPropertyToTerraform(struct?: AwsMedialiveChannel.CaptionLanguageMappingsProperty | cdktn.IResolvable): any {
+export function tfChannelCaptionLanguageMappingsPropertyToTerraform(struct?: TfChannel.CaptionLanguageMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3239,7 +3239,7 @@ export function awsMedialiveChannelCaptionLanguageMappingsPropertyToTerraform(st
 }
 
 
-export function awsMedialiveChannelCaptionLanguageMappingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.CaptionLanguageMappingsProperty | cdktn.IResolvable): any {
+export function tfChannelCaptionLanguageMappingsPropertyToHclTerraform(struct?: TfChannel.CaptionLanguageMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3270,7 +3270,7 @@ export function awsMedialiveChannelCaptionLanguageMappingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3281,7 +3281,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3300,7 +3300,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelHlsAkamaiSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsAkamaiSettingsPropertyOutputReference | AwsMedialiveChannel.HlsAkamaiSettingsProperty): any {
+export function tfChannelHlsAkamaiSettingsPropertyToTerraform(struct?: TfChannel.HlsAkamaiSettingsPropertyOutputReference | TfChannel.HlsAkamaiSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3317,7 +3317,7 @@ export function awsMedialiveChannelHlsAkamaiSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelHlsAkamaiSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsAkamaiSettingsPropertyOutputReference | AwsMedialiveChannel.HlsAkamaiSettingsProperty): any {
+export function tfChannelHlsAkamaiSettingsPropertyToHclTerraform(struct?: TfChannel.HlsAkamaiSettingsPropertyOutputReference | TfChannel.HlsAkamaiSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3372,7 +3372,7 @@ export function awsMedialiveChannelHlsAkamaiSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelHlsBasicPutSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsBasicPutSettingsPropertyOutputReference | AwsMedialiveChannel.HlsBasicPutSettingsProperty): any {
+export function tfChannelHlsBasicPutSettingsPropertyToTerraform(struct?: TfChannel.HlsBasicPutSettingsPropertyOutputReference | TfChannel.HlsBasicPutSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3386,7 +3386,7 @@ export function awsMedialiveChannelHlsBasicPutSettingsPropertyToTerraform(struct
 }
 
 
-export function awsMedialiveChannelHlsBasicPutSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsBasicPutSettingsPropertyOutputReference | AwsMedialiveChannel.HlsBasicPutSettingsProperty): any {
+export function tfChannelHlsBasicPutSettingsPropertyToHclTerraform(struct?: TfChannel.HlsBasicPutSettingsPropertyOutputReference | TfChannel.HlsBasicPutSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3423,7 +3423,7 @@ export function awsMedialiveChannelHlsBasicPutSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelHlsMediaStoreSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsMediaStoreSettingsPropertyOutputReference | AwsMedialiveChannel.HlsMediaStoreSettingsProperty): any {
+export function tfChannelHlsMediaStoreSettingsPropertyToTerraform(struct?: TfChannel.HlsMediaStoreSettingsPropertyOutputReference | TfChannel.HlsMediaStoreSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3438,7 +3438,7 @@ export function awsMedialiveChannelHlsMediaStoreSettingsPropertyToTerraform(stru
 }
 
 
-export function awsMedialiveChannelHlsMediaStoreSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsMediaStoreSettingsPropertyOutputReference | AwsMedialiveChannel.HlsMediaStoreSettingsProperty): any {
+export function tfChannelHlsMediaStoreSettingsPropertyToHclTerraform(struct?: TfChannel.HlsMediaStoreSettingsPropertyOutputReference | TfChannel.HlsMediaStoreSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3481,7 +3481,7 @@ export function awsMedialiveChannelHlsMediaStoreSettingsPropertyToHclTerraform(s
 }
 
 
-export function awsMedialiveChannelHlsS3SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsS3SettingsPropertyOutputReference | AwsMedialiveChannel.HlsS3SettingsProperty): any {
+export function tfChannelHlsS3SettingsPropertyToTerraform(struct?: TfChannel.HlsS3SettingsPropertyOutputReference | TfChannel.HlsS3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3492,7 +3492,7 @@ export function awsMedialiveChannelHlsS3SettingsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsMedialiveChannelHlsS3SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsS3SettingsPropertyOutputReference | AwsMedialiveChannel.HlsS3SettingsProperty): any {
+export function tfChannelHlsS3SettingsPropertyToHclTerraform(struct?: TfChannel.HlsS3SettingsPropertyOutputReference | TfChannel.HlsS3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3511,7 +3511,7 @@ export function awsMedialiveChannelHlsS3SettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelHlsWebdavSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsWebdavSettingsPropertyOutputReference | AwsMedialiveChannel.HlsWebdavSettingsProperty): any {
+export function tfChannelHlsWebdavSettingsPropertyToTerraform(struct?: TfChannel.HlsWebdavSettingsPropertyOutputReference | TfChannel.HlsWebdavSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3526,7 +3526,7 @@ export function awsMedialiveChannelHlsWebdavSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelHlsWebdavSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsWebdavSettingsPropertyOutputReference | AwsMedialiveChannel.HlsWebdavSettingsProperty): any {
+export function tfChannelHlsWebdavSettingsPropertyToHclTerraform(struct?: TfChannel.HlsWebdavSettingsPropertyOutputReference | TfChannel.HlsWebdavSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3569,53 +3569,53 @@ export function awsMedialiveChannelHlsWebdavSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelHlsCdnSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsCdnSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelHlsCdnSettingsPropertyToTerraform(struct?: TfChannel.HlsCdnSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    hls_akamai_settings: awsMedialiveChannelHlsAkamaiSettingsPropertyToTerraform(struct!.hlsAkamaiSettings),
-    hls_basic_put_settings: awsMedialiveChannelHlsBasicPutSettingsPropertyToTerraform(struct!.hlsBasicPutSettings),
-    hls_media_store_settings: awsMedialiveChannelHlsMediaStoreSettingsPropertyToTerraform(struct!.hlsMediaStoreSettings),
-    hls_s3_settings: awsMedialiveChannelHlsS3SettingsPropertyToTerraform(struct!.hlsS3Settings),
-    hls_webdav_settings: awsMedialiveChannelHlsWebdavSettingsPropertyToTerraform(struct!.hlsWebdavSettings),
+    hls_akamai_settings: tfChannelHlsAkamaiSettingsPropertyToTerraform(struct!.hlsAkamaiSettings),
+    hls_basic_put_settings: tfChannelHlsBasicPutSettingsPropertyToTerraform(struct!.hlsBasicPutSettings),
+    hls_media_store_settings: tfChannelHlsMediaStoreSettingsPropertyToTerraform(struct!.hlsMediaStoreSettings),
+    hls_s3_settings: tfChannelHlsS3SettingsPropertyToTerraform(struct!.hlsS3Settings),
+    hls_webdav_settings: tfChannelHlsWebdavSettingsPropertyToTerraform(struct!.hlsWebdavSettings),
   }
 }
 
 
-export function awsMedialiveChannelHlsCdnSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsCdnSettingsProperty | cdktn.IResolvable): any {
+export function tfChannelHlsCdnSettingsPropertyToHclTerraform(struct?: TfChannel.HlsCdnSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     hls_akamai_settings: {
-      value: awsMedialiveChannelHlsAkamaiSettingsPropertyToHclTerraform(struct!.hlsAkamaiSettings),
+      value: tfChannelHlsAkamaiSettingsPropertyToHclTerraform(struct!.hlsAkamaiSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsAkamaiSettingsPropertyList",
     },
     hls_basic_put_settings: {
-      value: awsMedialiveChannelHlsBasicPutSettingsPropertyToHclTerraform(struct!.hlsBasicPutSettings),
+      value: tfChannelHlsBasicPutSettingsPropertyToHclTerraform(struct!.hlsBasicPutSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsBasicPutSettingsPropertyList",
     },
     hls_media_store_settings: {
-      value: awsMedialiveChannelHlsMediaStoreSettingsPropertyToHclTerraform(struct!.hlsMediaStoreSettings),
+      value: tfChannelHlsMediaStoreSettingsPropertyToHclTerraform(struct!.hlsMediaStoreSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsMediaStoreSettingsPropertyList",
     },
     hls_s3_settings: {
-      value: awsMedialiveChannelHlsS3SettingsPropertyToHclTerraform(struct!.hlsS3Settings),
+      value: tfChannelHlsS3SettingsPropertyToHclTerraform(struct!.hlsS3Settings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsS3SettingsPropertyList",
     },
     hls_webdav_settings: {
-      value: awsMedialiveChannelHlsWebdavSettingsPropertyToHclTerraform(struct!.hlsWebdavSettings),
+      value: tfChannelHlsWebdavSettingsPropertyToHclTerraform(struct!.hlsWebdavSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsWebdavSettingsPropertyList",
@@ -3627,7 +3627,7 @@ export function awsMedialiveChannelHlsCdnSettingsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelKeyProviderServerPropertyToTerraform(struct?: AwsMedialiveChannel.KeyProviderServerPropertyOutputReference | AwsMedialiveChannel.KeyProviderServerProperty): any {
+export function tfChannelKeyProviderServerPropertyToTerraform(struct?: TfChannel.KeyProviderServerPropertyOutputReference | TfChannel.KeyProviderServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3640,7 +3640,7 @@ export function awsMedialiveChannelKeyProviderServerPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelKeyProviderServerPropertyToHclTerraform(struct?: AwsMedialiveChannel.KeyProviderServerPropertyOutputReference | AwsMedialiveChannel.KeyProviderServerProperty): any {
+export function tfChannelKeyProviderServerPropertyToHclTerraform(struct?: TfChannel.KeyProviderServerPropertyOutputReference | TfChannel.KeyProviderServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3671,19 +3671,19 @@ export function awsMedialiveChannelKeyProviderServerPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelStaticKeySettingsPropertyToTerraform(struct?: AwsMedialiveChannel.StaticKeySettingsProperty | cdktn.IResolvable): any {
+export function tfChannelStaticKeySettingsPropertyToTerraform(struct?: TfChannel.StaticKeySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     static_key_value: cdktn.stringToTerraform(struct!.staticKeyValue),
-    key_provider_server: awsMedialiveChannelKeyProviderServerPropertyToTerraform(struct!.keyProviderServer),
+    key_provider_server: tfChannelKeyProviderServerPropertyToTerraform(struct!.keyProviderServer),
   }
 }
 
 
-export function awsMedialiveChannelStaticKeySettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.StaticKeySettingsProperty | cdktn.IResolvable): any {
+export function tfChannelStaticKeySettingsPropertyToHclTerraform(struct?: TfChannel.StaticKeySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3696,7 +3696,7 @@ export function awsMedialiveChannelStaticKeySettingsPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     key_provider_server: {
-      value: awsMedialiveChannelKeyProviderServerPropertyToHclTerraform(struct!.keyProviderServer),
+      value: tfChannelKeyProviderServerPropertyToHclTerraform(struct!.keyProviderServer),
       isBlock: true,
       type: "list",
       storageClassType: "KeyProviderServerPropertyList",
@@ -3708,25 +3708,25 @@ export function awsMedialiveChannelStaticKeySettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelKeyProviderSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.KeyProviderSettingsPropertyOutputReference | AwsMedialiveChannel.KeyProviderSettingsProperty): any {
+export function tfChannelKeyProviderSettingsPropertyToTerraform(struct?: TfChannel.KeyProviderSettingsPropertyOutputReference | TfChannel.KeyProviderSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    static_key_settings: cdktn.listMapper(awsMedialiveChannelStaticKeySettingsPropertyToTerraform, true)(struct!.staticKeySettings),
+    static_key_settings: cdktn.listMapper(tfChannelStaticKeySettingsPropertyToTerraform, true)(struct!.staticKeySettings),
   }
 }
 
 
-export function awsMedialiveChannelKeyProviderSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.KeyProviderSettingsPropertyOutputReference | AwsMedialiveChannel.KeyProviderSettingsProperty): any {
+export function tfChannelKeyProviderSettingsPropertyToHclTerraform(struct?: TfChannel.KeyProviderSettingsPropertyOutputReference | TfChannel.KeyProviderSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     static_key_settings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelStaticKeySettingsPropertyToHclTerraform, true)(struct!.staticKeySettings),
+      value: cdktn.listMapperHcl(tfChannelStaticKeySettingsPropertyToHclTerraform, true)(struct!.staticKeySettings),
       isBlock: true,
       type: "list",
       storageClassType: "StaticKeySettingsPropertyList",
@@ -3738,7 +3738,7 @@ export function awsMedialiveChannelKeyProviderSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelHlsGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsGroupSettingsPropertyOutputReference | AwsMedialiveChannel.HlsGroupSettingsProperty): any {
+export function tfChannelHlsGroupSettingsPropertyToTerraform(struct?: TfChannel.HlsGroupSettingsPropertyOutputReference | TfChannel.HlsGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3782,15 +3782,15 @@ export function awsMedialiveChannelHlsGroupSettingsPropertyToTerraform(struct?: 
     timed_metadata_id3_period: cdktn.numberToTerraform(struct!.timedMetadataId3Period),
     timestamp_delta_milliseconds: cdktn.numberToTerraform(struct!.timestampDeltaMilliseconds),
     ts_file_mode: cdktn.stringToTerraform(struct!.tsFileMode),
-    caption_language_mappings: cdktn.listMapper(awsMedialiveChannelCaptionLanguageMappingsPropertyToTerraform, true)(struct!.captionLanguageMappings),
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToTerraform(struct!.destination),
-    hls_cdn_settings: cdktn.listMapper(awsMedialiveChannelHlsCdnSettingsPropertyToTerraform, true)(struct!.hlsCdnSettings),
-    key_provider_settings: awsMedialiveChannelKeyProviderSettingsPropertyToTerraform(struct!.keyProviderSettings),
+    caption_language_mappings: cdktn.listMapper(tfChannelCaptionLanguageMappingsPropertyToTerraform, true)(struct!.captionLanguageMappings),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToTerraform(struct!.destination),
+    hls_cdn_settings: cdktn.listMapper(tfChannelHlsCdnSettingsPropertyToTerraform, true)(struct!.hlsCdnSettings),
+    key_provider_settings: tfChannelKeyProviderSettingsPropertyToTerraform(struct!.keyProviderSettings),
   }
 }
 
 
-export function awsMedialiveChannelHlsGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsGroupSettingsPropertyOutputReference | AwsMedialiveChannel.HlsGroupSettingsProperty): any {
+export function tfChannelHlsGroupSettingsPropertyToHclTerraform(struct?: TfChannel.HlsGroupSettingsPropertyOutputReference | TfChannel.HlsGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4025,25 +4025,25 @@ export function awsMedialiveChannelHlsGroupSettingsPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     caption_language_mappings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelCaptionLanguageMappingsPropertyToHclTerraform, true)(struct!.captionLanguageMappings),
+      value: cdktn.listMapperHcl(tfChannelCaptionLanguageMappingsPropertyToHclTerraform, true)(struct!.captionLanguageMappings),
       isBlock: true,
       type: "set",
       storageClassType: "CaptionLanguageMappingsPropertyList",
     },
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationPropertyList",
     },
     hls_cdn_settings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelHlsCdnSettingsPropertyToHclTerraform, true)(struct!.hlsCdnSettings),
+      value: cdktn.listMapperHcl(tfChannelHlsCdnSettingsPropertyToHclTerraform, true)(struct!.hlsCdnSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsCdnSettingsPropertyList",
     },
     key_provider_settings: {
-      value: awsMedialiveChannelKeyProviderSettingsPropertyToHclTerraform(struct!.keyProviderSettings),
+      value: tfChannelKeyProviderSettingsPropertyToHclTerraform(struct!.keyProviderSettings),
       isBlock: true,
       type: "list",
       storageClassType: "KeyProviderSettingsPropertyList",
@@ -4055,7 +4055,7 @@ export function awsMedialiveChannelHlsGroupSettingsPropertyToHclTerraform(struct
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4066,7 +4066,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4085,25 +4085,25 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelMediaPackageGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MediaPackageGroupSettingsPropertyOutputReference | AwsMedialiveChannel.MediaPackageGroupSettingsProperty): any {
+export function tfChannelMediaPackageGroupSettingsPropertyToTerraform(struct?: TfChannel.MediaPackageGroupSettingsPropertyOutputReference | TfChannel.MediaPackageGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToTerraform(struct!.destination),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToTerraform(struct!.destination),
   }
 }
 
 
-export function awsMedialiveChannelMediaPackageGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MediaPackageGroupSettingsPropertyOutputReference | AwsMedialiveChannel.MediaPackageGroupSettingsProperty): any {
+export function tfChannelMediaPackageGroupSettingsPropertyToHclTerraform(struct?: TfChannel.MediaPackageGroupSettingsPropertyOutputReference | TfChannel.MediaPackageGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationPropertyList",
@@ -4115,7 +4115,7 @@ export function awsMedialiveChannelMediaPackageGroupSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4126,7 +4126,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4145,7 +4145,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSetting
 }
 
 
-export function awsMedialiveChannelMsSmoothGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MsSmoothGroupSettingsPropertyOutputReference | AwsMedialiveChannel.MsSmoothGroupSettingsProperty): any {
+export function tfChannelMsSmoothGroupSettingsPropertyToTerraform(struct?: TfChannel.MsSmoothGroupSettingsPropertyOutputReference | TfChannel.MsSmoothGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4169,12 +4169,12 @@ export function awsMedialiveChannelMsSmoothGroupSettingsPropertyToTerraform(stru
     stream_manifest_behavior: cdktn.stringToTerraform(struct!.streamManifestBehavior),
     timestamp_offset: cdktn.stringToTerraform(struct!.timestampOffset),
     timestamp_offset_mode: cdktn.stringToTerraform(struct!.timestampOffsetMode),
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToTerraform(struct!.destination),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToTerraform(struct!.destination),
   }
 }
 
 
-export function awsMedialiveChannelMsSmoothGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MsSmoothGroupSettingsPropertyOutputReference | AwsMedialiveChannel.MsSmoothGroupSettingsProperty): any {
+export function tfChannelMsSmoothGroupSettingsPropertyToHclTerraform(struct?: TfChannel.MsSmoothGroupSettingsPropertyOutputReference | TfChannel.MsSmoothGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4289,7 +4289,7 @@ export function awsMedialiveChannelMsSmoothGroupSettingsPropertyToHclTerraform(s
       storageClassType: "string",
     },
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationPropertyList",
@@ -4301,7 +4301,7 @@ export function awsMedialiveChannelMsSmoothGroupSettingsPropertyToHclTerraform(s
 }
 
 
-export function awsMedialiveChannelMultiplexGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MultiplexGroupSettingsPropertyOutputReference | AwsMedialiveChannel.MultiplexGroupSettingsProperty): any {
+export function tfChannelMultiplexGroupSettingsPropertyToTerraform(struct?: TfChannel.MultiplexGroupSettingsPropertyOutputReference | TfChannel.MultiplexGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4311,7 +4311,7 @@ export function awsMedialiveChannelMultiplexGroupSettingsPropertyToTerraform(str
 }
 
 
-export function awsMedialiveChannelMultiplexGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MultiplexGroupSettingsPropertyOutputReference | AwsMedialiveChannel.MultiplexGroupSettingsProperty): any {
+export function tfChannelMultiplexGroupSettingsPropertyToHclTerraform(struct?: TfChannel.MultiplexGroupSettingsPropertyOutputReference | TfChannel.MultiplexGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4322,7 +4322,7 @@ export function awsMedialiveChannelMultiplexGroupSettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelRtmpGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.RtmpGroupSettingsPropertyOutputReference | AwsMedialiveChannel.RtmpGroupSettingsProperty): any {
+export function tfChannelRtmpGroupSettingsPropertyToTerraform(struct?: TfChannel.RtmpGroupSettingsPropertyOutputReference | TfChannel.RtmpGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4339,7 +4339,7 @@ export function awsMedialiveChannelRtmpGroupSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelRtmpGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.RtmpGroupSettingsPropertyOutputReference | AwsMedialiveChannel.RtmpGroupSettingsProperty): any {
+export function tfChannelRtmpGroupSettingsPropertyToHclTerraform(struct?: TfChannel.RtmpGroupSettingsPropertyOutputReference | TfChannel.RtmpGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4394,7 +4394,7 @@ export function awsMedialiveChannelRtmpGroupSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelUdpGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.UdpGroupSettingsPropertyOutputReference | AwsMedialiveChannel.UdpGroupSettingsProperty): any {
+export function tfChannelUdpGroupSettingsPropertyToTerraform(struct?: TfChannel.UdpGroupSettingsPropertyOutputReference | TfChannel.UdpGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4407,7 +4407,7 @@ export function awsMedialiveChannelUdpGroupSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelUdpGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.UdpGroupSettingsPropertyOutputReference | AwsMedialiveChannel.UdpGroupSettingsProperty): any {
+export function tfChannelUdpGroupSettingsPropertyToHclTerraform(struct?: TfChannel.UdpGroupSettingsPropertyOutputReference | TfChannel.UdpGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4438,74 +4438,74 @@ export function awsMedialiveChannelUdpGroupSettingsPropertyToHclTerraform(struct
 }
 
 
-export function awsMedialiveChannelOutputGroupSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.OutputGroupSettingsPropertyOutputReference | AwsMedialiveChannel.OutputGroupSettingsProperty): any {
+export function tfChannelOutputGroupSettingsPropertyToTerraform(struct?: TfChannel.OutputGroupSettingsPropertyOutputReference | TfChannel.OutputGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    archive_group_settings: cdktn.listMapper(awsMedialiveChannelArchiveGroupSettingsPropertyToTerraform, true)(struct!.archiveGroupSettings),
-    frame_capture_group_settings: awsMedialiveChannelFrameCaptureGroupSettingsPropertyToTerraform(struct!.frameCaptureGroupSettings),
-    hls_group_settings: awsMedialiveChannelHlsGroupSettingsPropertyToTerraform(struct!.hlsGroupSettings),
-    media_package_group_settings: awsMedialiveChannelMediaPackageGroupSettingsPropertyToTerraform(struct!.mediaPackageGroupSettings),
-    ms_smooth_group_settings: awsMedialiveChannelMsSmoothGroupSettingsPropertyToTerraform(struct!.msSmoothGroupSettings),
-    multiplex_group_settings: awsMedialiveChannelMultiplexGroupSettingsPropertyToTerraform(struct!.multiplexGroupSettings),
-    rtmp_group_settings: awsMedialiveChannelRtmpGroupSettingsPropertyToTerraform(struct!.rtmpGroupSettings),
-    udp_group_settings: awsMedialiveChannelUdpGroupSettingsPropertyToTerraform(struct!.udpGroupSettings),
+    archive_group_settings: cdktn.listMapper(tfChannelArchiveGroupSettingsPropertyToTerraform, true)(struct!.archiveGroupSettings),
+    frame_capture_group_settings: tfChannelFrameCaptureGroupSettingsPropertyToTerraform(struct!.frameCaptureGroupSettings),
+    hls_group_settings: tfChannelHlsGroupSettingsPropertyToTerraform(struct!.hlsGroupSettings),
+    media_package_group_settings: tfChannelMediaPackageGroupSettingsPropertyToTerraform(struct!.mediaPackageGroupSettings),
+    ms_smooth_group_settings: tfChannelMsSmoothGroupSettingsPropertyToTerraform(struct!.msSmoothGroupSettings),
+    multiplex_group_settings: tfChannelMultiplexGroupSettingsPropertyToTerraform(struct!.multiplexGroupSettings),
+    rtmp_group_settings: tfChannelRtmpGroupSettingsPropertyToTerraform(struct!.rtmpGroupSettings),
+    udp_group_settings: tfChannelUdpGroupSettingsPropertyToTerraform(struct!.udpGroupSettings),
   }
 }
 
 
-export function awsMedialiveChannelOutputGroupSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.OutputGroupSettingsPropertyOutputReference | AwsMedialiveChannel.OutputGroupSettingsProperty): any {
+export function tfChannelOutputGroupSettingsPropertyToHclTerraform(struct?: TfChannel.OutputGroupSettingsPropertyOutputReference | TfChannel.OutputGroupSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     archive_group_settings: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelArchiveGroupSettingsPropertyToHclTerraform, true)(struct!.archiveGroupSettings),
+      value: cdktn.listMapperHcl(tfChannelArchiveGroupSettingsPropertyToHclTerraform, true)(struct!.archiveGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "ArchiveGroupSettingsPropertyList",
     },
     frame_capture_group_settings: {
-      value: awsMedialiveChannelFrameCaptureGroupSettingsPropertyToHclTerraform(struct!.frameCaptureGroupSettings),
+      value: tfChannelFrameCaptureGroupSettingsPropertyToHclTerraform(struct!.frameCaptureGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "FrameCaptureGroupSettingsPropertyList",
     },
     hls_group_settings: {
-      value: awsMedialiveChannelHlsGroupSettingsPropertyToHclTerraform(struct!.hlsGroupSettings),
+      value: tfChannelHlsGroupSettingsPropertyToHclTerraform(struct!.hlsGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsGroupSettingsPropertyList",
     },
     media_package_group_settings: {
-      value: awsMedialiveChannelMediaPackageGroupSettingsPropertyToHclTerraform(struct!.mediaPackageGroupSettings),
+      value: tfChannelMediaPackageGroupSettingsPropertyToHclTerraform(struct!.mediaPackageGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MediaPackageGroupSettingsPropertyList",
     },
     ms_smooth_group_settings: {
-      value: awsMedialiveChannelMsSmoothGroupSettingsPropertyToHclTerraform(struct!.msSmoothGroupSettings),
+      value: tfChannelMsSmoothGroupSettingsPropertyToHclTerraform(struct!.msSmoothGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MsSmoothGroupSettingsPropertyList",
     },
     multiplex_group_settings: {
-      value: awsMedialiveChannelMultiplexGroupSettingsPropertyToHclTerraform(struct!.multiplexGroupSettings),
+      value: tfChannelMultiplexGroupSettingsPropertyToHclTerraform(struct!.multiplexGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MultiplexGroupSettingsPropertyList",
     },
     rtmp_group_settings: {
-      value: awsMedialiveChannelRtmpGroupSettingsPropertyToHclTerraform(struct!.rtmpGroupSettings),
+      value: tfChannelRtmpGroupSettingsPropertyToHclTerraform(struct!.rtmpGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RtmpGroupSettingsPropertyList",
     },
     udp_group_settings: {
-      value: awsMedialiveChannelUdpGroupSettingsPropertyToHclTerraform(struct!.udpGroupSettings),
+      value: tfChannelUdpGroupSettingsPropertyToHclTerraform(struct!.udpGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "UdpGroupSettingsPropertyList",
@@ -4517,7 +4517,7 @@ export function awsMedialiveChannelOutputGroupSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4530,7 +4530,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4561,7 +4561,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4575,7 +4575,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4612,7 +4612,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4623,7 +4623,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4642,7 +4642,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4692,14 +4692,14 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
     timed_metadata_pid: cdktn.stringToTerraform(struct!.timedMetadataPid),
     transport_stream_id: cdktn.numberToTerraform(struct!.transportStreamId),
     video_pid: cdktn.stringToTerraform(struct!.videoPid),
-    dvb_nit_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct!.dvbNitSettings),
-    dvb_sdt_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct!.dvbSdtSettings),
-    dvb_tdt_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct!.dvbTdtSettings),
+    dvb_nit_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct!.dvbNitSettings),
+    dvb_sdt_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct!.dvbSdtSettings),
+    dvb_tdt_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct!.dvbTdtSettings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4970,19 +4970,19 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
       storageClassType: "string",
     },
     dvb_nit_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct!.dvbNitSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct!.dvbNitSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyList",
     },
     dvb_sdt_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct!.dvbSdtSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct!.dvbSdtSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyList",
     },
     dvb_tdt_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct!.dvbTdtSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct!.dvbTdtSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyList",
@@ -4994,7 +4994,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelRawSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.RawSettingsPropertyOutputReference | AwsMedialiveChannel.RawSettingsProperty): any {
+export function tfChannelRawSettingsPropertyToTerraform(struct?: TfChannel.RawSettingsPropertyOutputReference | TfChannel.RawSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5004,7 +5004,7 @@ export function awsMedialiveChannelRawSettingsPropertyToTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelRawSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.RawSettingsPropertyOutputReference | AwsMedialiveChannel.RawSettingsProperty): any {
+export function tfChannelRawSettingsPropertyToHclTerraform(struct?: TfChannel.RawSettingsPropertyOutputReference | TfChannel.RawSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5015,32 +5015,32 @@ export function awsMedialiveChannelRawSettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    m2ts_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct!.m2TsSettings),
-    raw_settings: awsMedialiveChannelRawSettingsPropertyToTerraform(struct!.rawSettings),
+    m2ts_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct!.m2TsSettings),
+    raw_settings: tfChannelRawSettingsPropertyToTerraform(struct!.rawSettings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     m2ts_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct!.m2TsSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct!.m2TsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsPropertyList",
     },
     raw_settings: {
-      value: awsMedialiveChannelRawSettingsPropertyToHclTerraform(struct!.rawSettings),
+      value: tfChannelRawSettingsPropertyToHclTerraform(struct!.rawSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RawSettingsPropertyList",
@@ -5052,7 +5052,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelArchiveOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.ArchiveOutputSettingsPropertyOutputReference | AwsMedialiveChannel.ArchiveOutputSettingsProperty): any {
+export function tfChannelArchiveOutputSettingsPropertyToTerraform(struct?: TfChannel.ArchiveOutputSettingsPropertyOutputReference | TfChannel.ArchiveOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5060,12 +5060,12 @@ export function awsMedialiveChannelArchiveOutputSettingsPropertyToTerraform(stru
   return {
     extension: cdktn.stringToTerraform(struct!.extension),
     name_modifier: cdktn.stringToTerraform(struct!.nameModifier),
-    container_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToTerraform(struct!.containerSettings),
+    container_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToTerraform(struct!.containerSettings),
   }
 }
 
 
-export function awsMedialiveChannelArchiveOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.ArchiveOutputSettingsPropertyOutputReference | AwsMedialiveChannel.ArchiveOutputSettingsProperty): any {
+export function tfChannelArchiveOutputSettingsPropertyToHclTerraform(struct?: TfChannel.ArchiveOutputSettingsPropertyOutputReference | TfChannel.ArchiveOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5084,7 +5084,7 @@ export function awsMedialiveChannelArchiveOutputSettingsPropertyToHclTerraform(s
       storageClassType: "string",
     },
     container_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToHclTerraform(struct!.containerSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyToHclTerraform(struct!.containerSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsPropertyList",
@@ -5096,7 +5096,7 @@ export function awsMedialiveChannelArchiveOutputSettingsPropertyToHclTerraform(s
 }
 
 
-export function awsMedialiveChannelFrameCaptureOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FrameCaptureOutputSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureOutputSettingsProperty): any {
+export function tfChannelFrameCaptureOutputSettingsPropertyToTerraform(struct?: TfChannel.FrameCaptureOutputSettingsPropertyOutputReference | TfChannel.FrameCaptureOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5107,7 +5107,7 @@ export function awsMedialiveChannelFrameCaptureOutputSettingsPropertyToTerraform
 }
 
 
-export function awsMedialiveChannelFrameCaptureOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FrameCaptureOutputSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureOutputSettingsProperty): any {
+export function tfChannelFrameCaptureOutputSettingsPropertyToHclTerraform(struct?: TfChannel.FrameCaptureOutputSettingsPropertyOutputReference | TfChannel.FrameCaptureOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5126,7 +5126,7 @@ export function awsMedialiveChannelFrameCaptureOutputSettingsPropertyToHclTerraf
 }
 
 
-export function awsMedialiveChannelAudioOnlyImagePropertyToTerraform(struct?: AwsMedialiveChannel.AudioOnlyImagePropertyOutputReference | AwsMedialiveChannel.AudioOnlyImageProperty): any {
+export function tfChannelAudioOnlyImagePropertyToTerraform(struct?: TfChannel.AudioOnlyImagePropertyOutputReference | TfChannel.AudioOnlyImageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5139,7 +5139,7 @@ export function awsMedialiveChannelAudioOnlyImagePropertyToTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelAudioOnlyImagePropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioOnlyImagePropertyOutputReference | AwsMedialiveChannel.AudioOnlyImageProperty): any {
+export function tfChannelAudioOnlyImagePropertyToHclTerraform(struct?: TfChannel.AudioOnlyImagePropertyOutputReference | TfChannel.AudioOnlyImageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5170,7 +5170,7 @@ export function awsMedialiveChannelAudioOnlyImagePropertyToHclTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelAudioOnlyHlsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AudioOnlyHlsSettingsPropertyOutputReference | AwsMedialiveChannel.AudioOnlyHlsSettingsProperty): any {
+export function tfChannelAudioOnlyHlsSettingsPropertyToTerraform(struct?: TfChannel.AudioOnlyHlsSettingsPropertyOutputReference | TfChannel.AudioOnlyHlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5179,12 +5179,12 @@ export function awsMedialiveChannelAudioOnlyHlsSettingsPropertyToTerraform(struc
     audio_group_id: cdktn.stringToTerraform(struct!.audioGroupId),
     audio_track_type: cdktn.stringToTerraform(struct!.audioTrackType),
     segment_type: cdktn.stringToTerraform(struct!.segmentType),
-    audio_only_image: awsMedialiveChannelAudioOnlyImagePropertyToTerraform(struct!.audioOnlyImage),
+    audio_only_image: tfChannelAudioOnlyImagePropertyToTerraform(struct!.audioOnlyImage),
   }
 }
 
 
-export function awsMedialiveChannelAudioOnlyHlsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioOnlyHlsSettingsPropertyOutputReference | AwsMedialiveChannel.AudioOnlyHlsSettingsProperty): any {
+export function tfChannelAudioOnlyHlsSettingsPropertyToHclTerraform(struct?: TfChannel.AudioOnlyHlsSettingsPropertyOutputReference | TfChannel.AudioOnlyHlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5209,7 +5209,7 @@ export function awsMedialiveChannelAudioOnlyHlsSettingsPropertyToHclTerraform(st
       storageClassType: "string",
     },
     audio_only_image: {
-      value: awsMedialiveChannelAudioOnlyImagePropertyToHclTerraform(struct!.audioOnlyImage),
+      value: tfChannelAudioOnlyImagePropertyToHclTerraform(struct!.audioOnlyImage),
       isBlock: true,
       type: "list",
       storageClassType: "AudioOnlyImagePropertyList",
@@ -5221,7 +5221,7 @@ export function awsMedialiveChannelAudioOnlyHlsSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelFmp4HlsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Fmp4HlsSettingsPropertyOutputReference | AwsMedialiveChannel.Fmp4HlsSettingsProperty): any {
+export function tfChannelFmp4HlsSettingsPropertyToTerraform(struct?: TfChannel.Fmp4HlsSettingsPropertyOutputReference | TfChannel.Fmp4HlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5234,7 +5234,7 @@ export function awsMedialiveChannelFmp4HlsSettingsPropertyToTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelFmp4HlsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Fmp4HlsSettingsPropertyOutputReference | AwsMedialiveChannel.Fmp4HlsSettingsProperty): any {
+export function tfChannelFmp4HlsSettingsPropertyToHclTerraform(struct?: TfChannel.Fmp4HlsSettingsPropertyOutputReference | TfChannel.Fmp4HlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5265,7 +5265,7 @@ export function awsMedialiveChannelFmp4HlsSettingsPropertyToHclTerraform(struct?
 }
 
 
-export function awsMedialiveChannelFrameCaptureHlsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FrameCaptureHlsSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureHlsSettingsProperty): any {
+export function tfChannelFrameCaptureHlsSettingsPropertyToTerraform(struct?: TfChannel.FrameCaptureHlsSettingsPropertyOutputReference | TfChannel.FrameCaptureHlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5275,7 +5275,7 @@ export function awsMedialiveChannelFrameCaptureHlsSettingsPropertyToTerraform(st
 }
 
 
-export function awsMedialiveChannelFrameCaptureHlsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FrameCaptureHlsSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureHlsSettingsProperty): any {
+export function tfChannelFrameCaptureHlsSettingsPropertyToHclTerraform(struct?: TfChannel.FrameCaptureHlsSettingsPropertyOutputReference | TfChannel.FrameCaptureHlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5286,7 +5286,7 @@ export function awsMedialiveChannelFrameCaptureHlsSettingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelM3u8SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.M3u8SettingsPropertyOutputReference | AwsMedialiveChannel.M3u8SettingsProperty): any {
+export function tfChannelM3u8SettingsPropertyToTerraform(struct?: TfChannel.M3u8SettingsPropertyOutputReference | TfChannel.M3u8SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5313,7 +5313,7 @@ export function awsMedialiveChannelM3u8SettingsPropertyToTerraform(struct?: AwsM
 }
 
 
-export function awsMedialiveChannelM3u8SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.M3u8SettingsPropertyOutputReference | AwsMedialiveChannel.M3u8SettingsProperty): any {
+export function tfChannelM3u8SettingsPropertyToHclTerraform(struct?: TfChannel.M3u8SettingsPropertyOutputReference | TfChannel.M3u8SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5428,19 +5428,19 @@ export function awsMedialiveChannelM3u8SettingsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelStandardHlsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.StandardHlsSettingsPropertyOutputReference | AwsMedialiveChannel.StandardHlsSettingsProperty): any {
+export function tfChannelStandardHlsSettingsPropertyToTerraform(struct?: TfChannel.StandardHlsSettingsPropertyOutputReference | TfChannel.StandardHlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     audio_rendition_sets: cdktn.stringToTerraform(struct!.audioRenditionSets),
-    m3u8_settings: awsMedialiveChannelM3u8SettingsPropertyToTerraform(struct!.m3U8Settings),
+    m3u8_settings: tfChannelM3u8SettingsPropertyToTerraform(struct!.m3U8Settings),
   }
 }
 
 
-export function awsMedialiveChannelStandardHlsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.StandardHlsSettingsPropertyOutputReference | AwsMedialiveChannel.StandardHlsSettingsProperty): any {
+export function tfChannelStandardHlsSettingsPropertyToHclTerraform(struct?: TfChannel.StandardHlsSettingsPropertyOutputReference | TfChannel.StandardHlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5453,7 +5453,7 @@ export function awsMedialiveChannelStandardHlsSettingsPropertyToHclTerraform(str
       storageClassType: "string",
     },
     m3u8_settings: {
-      value: awsMedialiveChannelM3u8SettingsPropertyToHclTerraform(struct!.m3U8Settings),
+      value: tfChannelM3u8SettingsPropertyToHclTerraform(struct!.m3U8Settings),
       isBlock: true,
       type: "list",
       storageClassType: "M3u8SettingsPropertyList",
@@ -5465,46 +5465,46 @@ export function awsMedialiveChannelStandardHlsSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelHlsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsSettingsPropertyOutputReference | AwsMedialiveChannel.HlsSettingsProperty): any {
+export function tfChannelHlsSettingsPropertyToTerraform(struct?: TfChannel.HlsSettingsPropertyOutputReference | TfChannel.HlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audio_only_hls_settings: awsMedialiveChannelAudioOnlyHlsSettingsPropertyToTerraform(struct!.audioOnlyHlsSettings),
-    fmp4_hls_settings: awsMedialiveChannelFmp4HlsSettingsPropertyToTerraform(struct!.fmp4HlsSettings),
-    frame_capture_hls_settings: awsMedialiveChannelFrameCaptureHlsSettingsPropertyToTerraform(struct!.frameCaptureHlsSettings),
-    standard_hls_settings: awsMedialiveChannelStandardHlsSettingsPropertyToTerraform(struct!.standardHlsSettings),
+    audio_only_hls_settings: tfChannelAudioOnlyHlsSettingsPropertyToTerraform(struct!.audioOnlyHlsSettings),
+    fmp4_hls_settings: tfChannelFmp4HlsSettingsPropertyToTerraform(struct!.fmp4HlsSettings),
+    frame_capture_hls_settings: tfChannelFrameCaptureHlsSettingsPropertyToTerraform(struct!.frameCaptureHlsSettings),
+    standard_hls_settings: tfChannelStandardHlsSettingsPropertyToTerraform(struct!.standardHlsSettings),
   }
 }
 
 
-export function awsMedialiveChannelHlsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsSettingsPropertyOutputReference | AwsMedialiveChannel.HlsSettingsProperty): any {
+export function tfChannelHlsSettingsPropertyToHclTerraform(struct?: TfChannel.HlsSettingsPropertyOutputReference | TfChannel.HlsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audio_only_hls_settings: {
-      value: awsMedialiveChannelAudioOnlyHlsSettingsPropertyToHclTerraform(struct!.audioOnlyHlsSettings),
+      value: tfChannelAudioOnlyHlsSettingsPropertyToHclTerraform(struct!.audioOnlyHlsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AudioOnlyHlsSettingsPropertyList",
     },
     fmp4_hls_settings: {
-      value: awsMedialiveChannelFmp4HlsSettingsPropertyToHclTerraform(struct!.fmp4HlsSettings),
+      value: tfChannelFmp4HlsSettingsPropertyToHclTerraform(struct!.fmp4HlsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "Fmp4HlsSettingsPropertyList",
     },
     frame_capture_hls_settings: {
-      value: awsMedialiveChannelFrameCaptureHlsSettingsPropertyToHclTerraform(struct!.frameCaptureHlsSettings),
+      value: tfChannelFrameCaptureHlsSettingsPropertyToHclTerraform(struct!.frameCaptureHlsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "FrameCaptureHlsSettingsPropertyList",
     },
     standard_hls_settings: {
-      value: awsMedialiveChannelStandardHlsSettingsPropertyToHclTerraform(struct!.standardHlsSettings),
+      value: tfChannelStandardHlsSettingsPropertyToHclTerraform(struct!.standardHlsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "StandardHlsSettingsPropertyList",
@@ -5516,7 +5516,7 @@ export function awsMedialiveChannelHlsSettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelHlsOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsOutputSettingsPropertyOutputReference | AwsMedialiveChannel.HlsOutputSettingsProperty): any {
+export function tfChannelHlsOutputSettingsPropertyToTerraform(struct?: TfChannel.HlsOutputSettingsPropertyOutputReference | TfChannel.HlsOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5525,12 +5525,12 @@ export function awsMedialiveChannelHlsOutputSettingsPropertyToTerraform(struct?:
     h265_packaging_type: cdktn.stringToTerraform(struct!.h265PackagingType),
     name_modifier: cdktn.stringToTerraform(struct!.nameModifier),
     segment_modifier: cdktn.stringToTerraform(struct!.segmentModifier),
-    hls_settings: awsMedialiveChannelHlsSettingsPropertyToTerraform(struct!.hlsSettings),
+    hls_settings: tfChannelHlsSettingsPropertyToTerraform(struct!.hlsSettings),
   }
 }
 
 
-export function awsMedialiveChannelHlsOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsOutputSettingsPropertyOutputReference | AwsMedialiveChannel.HlsOutputSettingsProperty): any {
+export function tfChannelHlsOutputSettingsPropertyToHclTerraform(struct?: TfChannel.HlsOutputSettingsPropertyOutputReference | TfChannel.HlsOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5555,7 +5555,7 @@ export function awsMedialiveChannelHlsOutputSettingsPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     hls_settings: {
-      value: awsMedialiveChannelHlsSettingsPropertyToHclTerraform(struct!.hlsSettings),
+      value: tfChannelHlsSettingsPropertyToHclTerraform(struct!.hlsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsSettingsPropertyList",
@@ -5567,7 +5567,7 @@ export function awsMedialiveChannelHlsOutputSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelMediaPackageOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MediaPackageOutputSettingsPropertyOutputReference | AwsMedialiveChannel.MediaPackageOutputSettingsProperty): any {
+export function tfChannelMediaPackageOutputSettingsPropertyToTerraform(struct?: TfChannel.MediaPackageOutputSettingsPropertyOutputReference | TfChannel.MediaPackageOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5577,7 +5577,7 @@ export function awsMedialiveChannelMediaPackageOutputSettingsPropertyToTerraform
 }
 
 
-export function awsMedialiveChannelMediaPackageOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MediaPackageOutputSettingsPropertyOutputReference | AwsMedialiveChannel.MediaPackageOutputSettingsProperty): any {
+export function tfChannelMediaPackageOutputSettingsPropertyToHclTerraform(struct?: TfChannel.MediaPackageOutputSettingsPropertyOutputReference | TfChannel.MediaPackageOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5588,7 +5588,7 @@ export function awsMedialiveChannelMediaPackageOutputSettingsPropertyToHclTerraf
 }
 
 
-export function awsMedialiveChannelMsSmoothOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MsSmoothOutputSettingsPropertyOutputReference | AwsMedialiveChannel.MsSmoothOutputSettingsProperty): any {
+export function tfChannelMsSmoothOutputSettingsPropertyToTerraform(struct?: TfChannel.MsSmoothOutputSettingsPropertyOutputReference | TfChannel.MsSmoothOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5600,7 +5600,7 @@ export function awsMedialiveChannelMsSmoothOutputSettingsPropertyToTerraform(str
 }
 
 
-export function awsMedialiveChannelMsSmoothOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MsSmoothOutputSettingsPropertyOutputReference | AwsMedialiveChannel.MsSmoothOutputSettingsProperty): any {
+export function tfChannelMsSmoothOutputSettingsPropertyToHclTerraform(struct?: TfChannel.MsSmoothOutputSettingsPropertyOutputReference | TfChannel.MsSmoothOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5625,7 +5625,7 @@ export function awsMedialiveChannelMsSmoothOutputSettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5636,7 +5636,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5655,25 +5655,25 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelMultiplexOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.MultiplexOutputSettingsPropertyOutputReference | AwsMedialiveChannel.MultiplexOutputSettingsProperty): any {
+export function tfChannelMultiplexOutputSettingsPropertyToTerraform(struct?: TfChannel.MultiplexOutputSettingsPropertyOutputReference | TfChannel.MultiplexOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToTerraform(struct!.destination),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToTerraform(struct!.destination),
   }
 }
 
 
-export function awsMedialiveChannelMultiplexOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.MultiplexOutputSettingsPropertyOutputReference | AwsMedialiveChannel.MultiplexOutputSettingsProperty): any {
+export function tfChannelMultiplexOutputSettingsPropertyToHclTerraform(struct?: TfChannel.MultiplexOutputSettingsPropertyOutputReference | TfChannel.MultiplexOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationPropertyList",
@@ -5685,7 +5685,7 @@ export function awsMedialiveChannelMultiplexOutputSettingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5696,7 +5696,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5715,7 +5715,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelRtmpOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.RtmpOutputSettingsPropertyOutputReference | AwsMedialiveChannel.RtmpOutputSettingsProperty): any {
+export function tfChannelRtmpOutputSettingsPropertyToTerraform(struct?: TfChannel.RtmpOutputSettingsPropertyOutputReference | TfChannel.RtmpOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5724,12 +5724,12 @@ export function awsMedialiveChannelRtmpOutputSettingsPropertyToTerraform(struct?
     certificate_mode: cdktn.stringToTerraform(struct!.certificateMode),
     connection_retry_interval: cdktn.numberToTerraform(struct!.connectionRetryInterval),
     num_retries: cdktn.numberToTerraform(struct!.numRetries),
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToTerraform(struct!.destination),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToTerraform(struct!.destination),
   }
 }
 
 
-export function awsMedialiveChannelRtmpOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.RtmpOutputSettingsPropertyOutputReference | AwsMedialiveChannel.RtmpOutputSettingsProperty): any {
+export function tfChannelRtmpOutputSettingsPropertyToHclTerraform(struct?: TfChannel.RtmpOutputSettingsPropertyOutputReference | TfChannel.RtmpOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5754,7 +5754,7 @@ export function awsMedialiveChannelRtmpOutputSettingsPropertyToHclTerraform(stru
       storageClassType: "number",
     },
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationPropertyList",
@@ -5766,7 +5766,7 @@ export function awsMedialiveChannelRtmpOutputSettingsPropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5779,7 +5779,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5810,7 +5810,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5824,7 +5824,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5861,7 +5861,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5872,7 +5872,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5891,7 +5891,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5941,14 +5941,14 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
     timed_metadata_pid: cdktn.stringToTerraform(struct!.timedMetadataPid),
     transport_stream_id: cdktn.numberToTerraform(struct!.transportStreamId),
     video_pid: cdktn.stringToTerraform(struct!.videoPid),
-    dvb_nit_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct!.dvbNitSettings),
-    dvb_sdt_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct!.dvbSdtSettings),
-    dvb_tdt_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct!.dvbTdtSettings),
+    dvb_nit_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToTerraform(struct!.dvbNitSettings),
+    dvb_sdt_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToTerraform(struct!.dvbSdtSettings),
+    dvb_tdt_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToTerraform(struct!.dvbTdtSettings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6219,19 +6219,19 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
       storageClassType: "string",
     },
     dvb_nit_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct!.dvbNitSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyToHclTerraform(struct!.dvbNitSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsPropertyList",
     },
     dvb_sdt_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct!.dvbSdtSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyToHclTerraform(struct!.dvbSdtSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsPropertyList",
     },
     dvb_tdt_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct!.dvbTdtSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyToHclTerraform(struct!.dvbTdtSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsPropertyList",
@@ -6243,25 +6243,25 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    m2ts_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct!.m2TsSettings),
+    m2ts_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToTerraform(struct!.m2TsSettings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     m2ts_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct!.m2TsSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyToHclTerraform(struct!.m2TsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsPropertyList",
@@ -6273,7 +6273,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6284,7 +6284,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationProperty): any {
+export function tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyOutputReference | TfChannel.EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6303,7 +6303,7 @@ export function awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSetti
 }
 
 
-export function awsMedialiveChannelFecOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FecOutputSettingsPropertyOutputReference | AwsMedialiveChannel.FecOutputSettingsProperty): any {
+export function tfChannelFecOutputSettingsPropertyToTerraform(struct?: TfChannel.FecOutputSettingsPropertyOutputReference | TfChannel.FecOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6316,7 +6316,7 @@ export function awsMedialiveChannelFecOutputSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelFecOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FecOutputSettingsPropertyOutputReference | AwsMedialiveChannel.FecOutputSettingsProperty): any {
+export function tfChannelFecOutputSettingsPropertyToHclTerraform(struct?: TfChannel.FecOutputSettingsPropertyOutputReference | TfChannel.FecOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6347,21 +6347,21 @@ export function awsMedialiveChannelFecOutputSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelUdpOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.UdpOutputSettingsPropertyOutputReference | AwsMedialiveChannel.UdpOutputSettingsProperty): any {
+export function tfChannelUdpOutputSettingsPropertyToTerraform(struct?: TfChannel.UdpOutputSettingsPropertyOutputReference | TfChannel.UdpOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     buffer_msec: cdktn.numberToTerraform(struct!.bufferMsec),
-    container_settings: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToTerraform(struct!.containerSettings),
-    destination: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToTerraform(struct!.destination),
-    fec_output_settings: awsMedialiveChannelFecOutputSettingsPropertyToTerraform(struct!.fecOutputSettings),
+    container_settings: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToTerraform(struct!.containerSettings),
+    destination: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToTerraform(struct!.destination),
+    fec_output_settings: tfChannelFecOutputSettingsPropertyToTerraform(struct!.fecOutputSettings),
   }
 }
 
 
-export function awsMedialiveChannelUdpOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.UdpOutputSettingsPropertyOutputReference | AwsMedialiveChannel.UdpOutputSettingsProperty): any {
+export function tfChannelUdpOutputSettingsPropertyToHclTerraform(struct?: TfChannel.UdpOutputSettingsPropertyOutputReference | TfChannel.UdpOutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6374,19 +6374,19 @@ export function awsMedialiveChannelUdpOutputSettingsPropertyToHclTerraform(struc
       storageClassType: "number",
     },
     container_settings: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToHclTerraform(struct!.containerSettings),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyToHclTerraform(struct!.containerSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsPropertyList",
     },
     destination: {
-      value: awsMedialiveChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToHclTerraform(struct!.destination),
+      value: tfChannelEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationPropertyList",
     },
     fec_output_settings: {
-      value: awsMedialiveChannelFecOutputSettingsPropertyToHclTerraform(struct!.fecOutputSettings),
+      value: tfChannelFecOutputSettingsPropertyToHclTerraform(struct!.fecOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "FecOutputSettingsPropertyList",
@@ -6398,74 +6398,74 @@ export function awsMedialiveChannelUdpOutputSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelOutputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.OutputSettingsPropertyOutputReference | AwsMedialiveChannel.OutputSettingsProperty): any {
+export function tfChannelOutputSettingsPropertyToTerraform(struct?: TfChannel.OutputSettingsPropertyOutputReference | TfChannel.OutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    archive_output_settings: awsMedialiveChannelArchiveOutputSettingsPropertyToTerraform(struct!.archiveOutputSettings),
-    frame_capture_output_settings: awsMedialiveChannelFrameCaptureOutputSettingsPropertyToTerraform(struct!.frameCaptureOutputSettings),
-    hls_output_settings: awsMedialiveChannelHlsOutputSettingsPropertyToTerraform(struct!.hlsOutputSettings),
-    media_package_output_settings: awsMedialiveChannelMediaPackageOutputSettingsPropertyToTerraform(struct!.mediaPackageOutputSettings),
-    ms_smooth_output_settings: awsMedialiveChannelMsSmoothOutputSettingsPropertyToTerraform(struct!.msSmoothOutputSettings),
-    multiplex_output_settings: awsMedialiveChannelMultiplexOutputSettingsPropertyToTerraform(struct!.multiplexOutputSettings),
-    rtmp_output_settings: awsMedialiveChannelRtmpOutputSettingsPropertyToTerraform(struct!.rtmpOutputSettings),
-    udp_output_settings: awsMedialiveChannelUdpOutputSettingsPropertyToTerraform(struct!.udpOutputSettings),
+    archive_output_settings: tfChannelArchiveOutputSettingsPropertyToTerraform(struct!.archiveOutputSettings),
+    frame_capture_output_settings: tfChannelFrameCaptureOutputSettingsPropertyToTerraform(struct!.frameCaptureOutputSettings),
+    hls_output_settings: tfChannelHlsOutputSettingsPropertyToTerraform(struct!.hlsOutputSettings),
+    media_package_output_settings: tfChannelMediaPackageOutputSettingsPropertyToTerraform(struct!.mediaPackageOutputSettings),
+    ms_smooth_output_settings: tfChannelMsSmoothOutputSettingsPropertyToTerraform(struct!.msSmoothOutputSettings),
+    multiplex_output_settings: tfChannelMultiplexOutputSettingsPropertyToTerraform(struct!.multiplexOutputSettings),
+    rtmp_output_settings: tfChannelRtmpOutputSettingsPropertyToTerraform(struct!.rtmpOutputSettings),
+    udp_output_settings: tfChannelUdpOutputSettingsPropertyToTerraform(struct!.udpOutputSettings),
   }
 }
 
 
-export function awsMedialiveChannelOutputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.OutputSettingsPropertyOutputReference | AwsMedialiveChannel.OutputSettingsProperty): any {
+export function tfChannelOutputSettingsPropertyToHclTerraform(struct?: TfChannel.OutputSettingsPropertyOutputReference | TfChannel.OutputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     archive_output_settings: {
-      value: awsMedialiveChannelArchiveOutputSettingsPropertyToHclTerraform(struct!.archiveOutputSettings),
+      value: tfChannelArchiveOutputSettingsPropertyToHclTerraform(struct!.archiveOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "ArchiveOutputSettingsPropertyList",
     },
     frame_capture_output_settings: {
-      value: awsMedialiveChannelFrameCaptureOutputSettingsPropertyToHclTerraform(struct!.frameCaptureOutputSettings),
+      value: tfChannelFrameCaptureOutputSettingsPropertyToHclTerraform(struct!.frameCaptureOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "FrameCaptureOutputSettingsPropertyList",
     },
     hls_output_settings: {
-      value: awsMedialiveChannelHlsOutputSettingsPropertyToHclTerraform(struct!.hlsOutputSettings),
+      value: tfChannelHlsOutputSettingsPropertyToHclTerraform(struct!.hlsOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsOutputSettingsPropertyList",
     },
     media_package_output_settings: {
-      value: awsMedialiveChannelMediaPackageOutputSettingsPropertyToHclTerraform(struct!.mediaPackageOutputSettings),
+      value: tfChannelMediaPackageOutputSettingsPropertyToHclTerraform(struct!.mediaPackageOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MediaPackageOutputSettingsPropertyList",
     },
     ms_smooth_output_settings: {
-      value: awsMedialiveChannelMsSmoothOutputSettingsPropertyToHclTerraform(struct!.msSmoothOutputSettings),
+      value: tfChannelMsSmoothOutputSettingsPropertyToHclTerraform(struct!.msSmoothOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MsSmoothOutputSettingsPropertyList",
     },
     multiplex_output_settings: {
-      value: awsMedialiveChannelMultiplexOutputSettingsPropertyToHclTerraform(struct!.multiplexOutputSettings),
+      value: tfChannelMultiplexOutputSettingsPropertyToHclTerraform(struct!.multiplexOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "MultiplexOutputSettingsPropertyList",
     },
     rtmp_output_settings: {
-      value: awsMedialiveChannelRtmpOutputSettingsPropertyToHclTerraform(struct!.rtmpOutputSettings),
+      value: tfChannelRtmpOutputSettingsPropertyToHclTerraform(struct!.rtmpOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RtmpOutputSettingsPropertyList",
     },
     udp_output_settings: {
-      value: awsMedialiveChannelUdpOutputSettingsPropertyToHclTerraform(struct!.udpOutputSettings),
+      value: tfChannelUdpOutputSettingsPropertyToHclTerraform(struct!.udpOutputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "UdpOutputSettingsPropertyList",
@@ -6477,7 +6477,7 @@ export function awsMedialiveChannelOutputSettingsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelOutputsPropertyToTerraform(struct?: AwsMedialiveChannel.OutputsProperty | cdktn.IResolvable): any {
+export function tfChannelOutputsPropertyToTerraform(struct?: TfChannel.OutputsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6487,12 +6487,12 @@ export function awsMedialiveChannelOutputsPropertyToTerraform(struct?: AwsMedial
     caption_description_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.captionDescriptionNames),
     output_name: cdktn.stringToTerraform(struct!.outputName),
     video_description_name: cdktn.stringToTerraform(struct!.videoDescriptionName),
-    output_settings: awsMedialiveChannelOutputSettingsPropertyToTerraform(struct!.outputSettings),
+    output_settings: tfChannelOutputSettingsPropertyToTerraform(struct!.outputSettings),
   }
 }
 
 
-export function awsMedialiveChannelOutputsPropertyToHclTerraform(struct?: AwsMedialiveChannel.OutputsProperty | cdktn.IResolvable): any {
+export function tfChannelOutputsPropertyToHclTerraform(struct?: TfChannel.OutputsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6523,7 +6523,7 @@ export function awsMedialiveChannelOutputsPropertyToHclTerraform(struct?: AwsMed
       storageClassType: "string",
     },
     output_settings: {
-      value: awsMedialiveChannelOutputSettingsPropertyToHclTerraform(struct!.outputSettings),
+      value: tfChannelOutputSettingsPropertyToHclTerraform(struct!.outputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "OutputSettingsPropertyList",
@@ -6535,20 +6535,20 @@ export function awsMedialiveChannelOutputsPropertyToHclTerraform(struct?: AwsMed
 }
 
 
-export function awsMedialiveChannelOutputGroupsPropertyToTerraform(struct?: AwsMedialiveChannel.OutputGroupsProperty | cdktn.IResolvable): any {
+export function tfChannelOutputGroupsPropertyToTerraform(struct?: TfChannel.OutputGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    output_group_settings: awsMedialiveChannelOutputGroupSettingsPropertyToTerraform(struct!.outputGroupSettings),
-    outputs: cdktn.listMapper(awsMedialiveChannelOutputsPropertyToTerraform, true)(struct!.outputs),
+    output_group_settings: tfChannelOutputGroupSettingsPropertyToTerraform(struct!.outputGroupSettings),
+    outputs: cdktn.listMapper(tfChannelOutputsPropertyToTerraform, true)(struct!.outputs),
   }
 }
 
 
-export function awsMedialiveChannelOutputGroupsPropertyToHclTerraform(struct?: AwsMedialiveChannel.OutputGroupsProperty | cdktn.IResolvable): any {
+export function tfChannelOutputGroupsPropertyToHclTerraform(struct?: TfChannel.OutputGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6561,13 +6561,13 @@ export function awsMedialiveChannelOutputGroupsPropertyToHclTerraform(struct?: A
       storageClassType: "string",
     },
     output_group_settings: {
-      value: awsMedialiveChannelOutputGroupSettingsPropertyToHclTerraform(struct!.outputGroupSettings),
+      value: tfChannelOutputGroupSettingsPropertyToHclTerraform(struct!.outputGroupSettings),
       isBlock: true,
       type: "list",
       storageClassType: "OutputGroupSettingsPropertyList",
     },
     outputs: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelOutputsPropertyToHclTerraform, true)(struct!.outputs),
+      value: cdktn.listMapperHcl(tfChannelOutputsPropertyToHclTerraform, true)(struct!.outputs),
       isBlock: true,
       type: "list",
       storageClassType: "OutputsPropertyList",
@@ -6579,7 +6579,7 @@ export function awsMedialiveChannelOutputGroupsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelTimecodeConfigPropertyToTerraform(struct?: AwsMedialiveChannel.TimecodeConfigPropertyOutputReference | AwsMedialiveChannel.TimecodeConfigProperty): any {
+export function tfChannelTimecodeConfigPropertyToTerraform(struct?: TfChannel.TimecodeConfigPropertyOutputReference | TfChannel.TimecodeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6591,7 +6591,7 @@ export function awsMedialiveChannelTimecodeConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelTimecodeConfigPropertyToHclTerraform(struct?: AwsMedialiveChannel.TimecodeConfigPropertyOutputReference | AwsMedialiveChannel.TimecodeConfigProperty): any {
+export function tfChannelTimecodeConfigPropertyToHclTerraform(struct?: TfChannel.TimecodeConfigPropertyOutputReference | TfChannel.TimecodeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6616,7 +6616,7 @@ export function awsMedialiveChannelTimecodeConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelFrameCaptureSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FrameCaptureSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureSettingsProperty): any {
+export function tfChannelFrameCaptureSettingsPropertyToTerraform(struct?: TfChannel.FrameCaptureSettingsPropertyOutputReference | TfChannel.FrameCaptureSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6628,7 +6628,7 @@ export function awsMedialiveChannelFrameCaptureSettingsPropertyToTerraform(struc
 }
 
 
-export function awsMedialiveChannelFrameCaptureSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FrameCaptureSettingsPropertyOutputReference | AwsMedialiveChannel.FrameCaptureSettingsProperty): any {
+export function tfChannelFrameCaptureSettingsPropertyToHclTerraform(struct?: TfChannel.FrameCaptureSettingsPropertyOutputReference | TfChannel.FrameCaptureSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6653,7 +6653,7 @@ export function awsMedialiveChannelFrameCaptureSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6665,7 +6665,7 @@ export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6690,25 +6690,25 @@ export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    temporal_filter_settings: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct!.temporalFilterSettings),
+    temporal_filter_settings: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct!.temporalFilterSettings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     temporal_filter_settings: {
-      value: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct!.temporalFilterSettings),
+      value: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct!.temporalFilterSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsPropertyList",
@@ -6720,7 +6720,7 @@ export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelH264SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.H264SettingsPropertyOutputReference | AwsMedialiveChannel.H264SettingsProperty): any {
+export function tfChannelH264SettingsPropertyToTerraform(struct?: TfChannel.H264SettingsPropertyOutputReference | TfChannel.H264SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -6765,12 +6765,12 @@ export function awsMedialiveChannelH264SettingsPropertyToTerraform(struct?: AwsM
     syntax: cdktn.stringToTerraform(struct!.syntax),
     temporal_aq: cdktn.stringToTerraform(struct!.temporalAq),
     timecode_insertion: cdktn.stringToTerraform(struct!.timecodeInsertion),
-    filter_settings: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToTerraform(struct!.filterSettings),
+    filter_settings: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToTerraform(struct!.filterSettings),
   }
 }
 
 
-export function awsMedialiveChannelH264SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.H264SettingsPropertyOutputReference | AwsMedialiveChannel.H264SettingsProperty): any {
+export function tfChannelH264SettingsPropertyToHclTerraform(struct?: TfChannel.H264SettingsPropertyOutputReference | TfChannel.H264SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7011,7 +7011,7 @@ export function awsMedialiveChannelH264SettingsPropertyToHclTerraform(struct?: A
       storageClassType: "string",
     },
     filter_settings: {
-      value: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToHclTerraform(struct!.filterSettings),
+      value: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyToHclTerraform(struct!.filterSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsPropertyList",
@@ -7023,7 +7023,7 @@ export function awsMedialiveChannelH264SettingsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelColorSpacePassthroughSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.ColorSpacePassthroughSettingsPropertyOutputReference | AwsMedialiveChannel.ColorSpacePassthroughSettingsProperty): any {
+export function tfChannelColorSpacePassthroughSettingsPropertyToTerraform(struct?: TfChannel.ColorSpacePassthroughSettingsPropertyOutputReference | TfChannel.ColorSpacePassthroughSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7033,7 +7033,7 @@ export function awsMedialiveChannelColorSpacePassthroughSettingsPropertyToTerraf
 }
 
 
-export function awsMedialiveChannelColorSpacePassthroughSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.ColorSpacePassthroughSettingsPropertyOutputReference | AwsMedialiveChannel.ColorSpacePassthroughSettingsProperty): any {
+export function tfChannelColorSpacePassthroughSettingsPropertyToHclTerraform(struct?: TfChannel.ColorSpacePassthroughSettingsPropertyOutputReference | TfChannel.ColorSpacePassthroughSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7044,7 +7044,7 @@ export function awsMedialiveChannelColorSpacePassthroughSettingsPropertyToHclTer
 }
 
 
-export function awsMedialiveChannelDolbyVision81SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.DolbyVision81SettingsPropertyOutputReference | AwsMedialiveChannel.DolbyVision81SettingsProperty): any {
+export function tfChannelDolbyVision81SettingsPropertyToTerraform(struct?: TfChannel.DolbyVision81SettingsPropertyOutputReference | TfChannel.DolbyVision81SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7054,7 +7054,7 @@ export function awsMedialiveChannelDolbyVision81SettingsPropertyToTerraform(stru
 }
 
 
-export function awsMedialiveChannelDolbyVision81SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.DolbyVision81SettingsPropertyOutputReference | AwsMedialiveChannel.DolbyVision81SettingsProperty): any {
+export function tfChannelDolbyVision81SettingsPropertyToHclTerraform(struct?: TfChannel.DolbyVision81SettingsPropertyOutputReference | TfChannel.DolbyVision81SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7065,7 +7065,7 @@ export function awsMedialiveChannelDolbyVision81SettingsPropertyToHclTerraform(s
 }
 
 
-export function awsMedialiveChannelHdr10SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Hdr10SettingsPropertyOutputReference | AwsMedialiveChannel.Hdr10SettingsProperty): any {
+export function tfChannelHdr10SettingsPropertyToTerraform(struct?: TfChannel.Hdr10SettingsPropertyOutputReference | TfChannel.Hdr10SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7077,7 +7077,7 @@ export function awsMedialiveChannelHdr10SettingsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsMedialiveChannelHdr10SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Hdr10SettingsPropertyOutputReference | AwsMedialiveChannel.Hdr10SettingsProperty): any {
+export function tfChannelHdr10SettingsPropertyToHclTerraform(struct?: TfChannel.Hdr10SettingsPropertyOutputReference | TfChannel.Hdr10SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7102,7 +7102,7 @@ export function awsMedialiveChannelHdr10SettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelRec601SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Rec601SettingsPropertyOutputReference | AwsMedialiveChannel.Rec601SettingsProperty): any {
+export function tfChannelRec601SettingsPropertyToTerraform(struct?: TfChannel.Rec601SettingsPropertyOutputReference | TfChannel.Rec601SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7112,7 +7112,7 @@ export function awsMedialiveChannelRec601SettingsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelRec601SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Rec601SettingsPropertyOutputReference | AwsMedialiveChannel.Rec601SettingsProperty): any {
+export function tfChannelRec601SettingsPropertyToHclTerraform(struct?: TfChannel.Rec601SettingsPropertyOutputReference | TfChannel.Rec601SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7123,7 +7123,7 @@ export function awsMedialiveChannelRec601SettingsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelRec709SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Rec709SettingsPropertyOutputReference | AwsMedialiveChannel.Rec709SettingsProperty): any {
+export function tfChannelRec709SettingsPropertyToTerraform(struct?: TfChannel.Rec709SettingsPropertyOutputReference | TfChannel.Rec709SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7133,7 +7133,7 @@ export function awsMedialiveChannelRec709SettingsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelRec709SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Rec709SettingsPropertyOutputReference | AwsMedialiveChannel.Rec709SettingsProperty): any {
+export function tfChannelRec709SettingsPropertyToHclTerraform(struct?: TfChannel.Rec709SettingsPropertyOutputReference | TfChannel.Rec709SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7144,53 +7144,53 @@ export function awsMedialiveChannelRec709SettingsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelColorSpaceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.ColorSpaceSettingsPropertyOutputReference | AwsMedialiveChannel.ColorSpaceSettingsProperty): any {
+export function tfChannelColorSpaceSettingsPropertyToTerraform(struct?: TfChannel.ColorSpaceSettingsPropertyOutputReference | TfChannel.ColorSpaceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    color_space_passthrough_settings: awsMedialiveChannelColorSpacePassthroughSettingsPropertyToTerraform(struct!.colorSpacePassthroughSettings),
-    dolby_vision81_settings: awsMedialiveChannelDolbyVision81SettingsPropertyToTerraform(struct!.dolbyVision81Settings),
-    hdr10_settings: awsMedialiveChannelHdr10SettingsPropertyToTerraform(struct!.hdr10Settings),
-    rec601_settings: awsMedialiveChannelRec601SettingsPropertyToTerraform(struct!.rec601Settings),
-    rec709_settings: awsMedialiveChannelRec709SettingsPropertyToTerraform(struct!.rec709Settings),
+    color_space_passthrough_settings: tfChannelColorSpacePassthroughSettingsPropertyToTerraform(struct!.colorSpacePassthroughSettings),
+    dolby_vision81_settings: tfChannelDolbyVision81SettingsPropertyToTerraform(struct!.dolbyVision81Settings),
+    hdr10_settings: tfChannelHdr10SettingsPropertyToTerraform(struct!.hdr10Settings),
+    rec601_settings: tfChannelRec601SettingsPropertyToTerraform(struct!.rec601Settings),
+    rec709_settings: tfChannelRec709SettingsPropertyToTerraform(struct!.rec709Settings),
   }
 }
 
 
-export function awsMedialiveChannelColorSpaceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.ColorSpaceSettingsPropertyOutputReference | AwsMedialiveChannel.ColorSpaceSettingsProperty): any {
+export function tfChannelColorSpaceSettingsPropertyToHclTerraform(struct?: TfChannel.ColorSpaceSettingsPropertyOutputReference | TfChannel.ColorSpaceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     color_space_passthrough_settings: {
-      value: awsMedialiveChannelColorSpacePassthroughSettingsPropertyToHclTerraform(struct!.colorSpacePassthroughSettings),
+      value: tfChannelColorSpacePassthroughSettingsPropertyToHclTerraform(struct!.colorSpacePassthroughSettings),
       isBlock: true,
       type: "list",
       storageClassType: "ColorSpacePassthroughSettingsPropertyList",
     },
     dolby_vision81_settings: {
-      value: awsMedialiveChannelDolbyVision81SettingsPropertyToHclTerraform(struct!.dolbyVision81Settings),
+      value: tfChannelDolbyVision81SettingsPropertyToHclTerraform(struct!.dolbyVision81Settings),
       isBlock: true,
       type: "list",
       storageClassType: "DolbyVision81SettingsPropertyList",
     },
     hdr10_settings: {
-      value: awsMedialiveChannelHdr10SettingsPropertyToHclTerraform(struct!.hdr10Settings),
+      value: tfChannelHdr10SettingsPropertyToHclTerraform(struct!.hdr10Settings),
       isBlock: true,
       type: "list",
       storageClassType: "Hdr10SettingsPropertyList",
     },
     rec601_settings: {
-      value: awsMedialiveChannelRec601SettingsPropertyToHclTerraform(struct!.rec601Settings),
+      value: tfChannelRec601SettingsPropertyToHclTerraform(struct!.rec601Settings),
       isBlock: true,
       type: "list",
       storageClassType: "Rec601SettingsPropertyList",
     },
     rec709_settings: {
-      value: awsMedialiveChannelRec709SettingsPropertyToHclTerraform(struct!.rec709Settings),
+      value: tfChannelRec709SettingsPropertyToHclTerraform(struct!.rec709Settings),
       isBlock: true,
       type: "list",
       storageClassType: "Rec709SettingsPropertyList",
@@ -7202,7 +7202,7 @@ export function awsMedialiveChannelColorSpaceSettingsPropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7214,7 +7214,7 @@ export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7239,25 +7239,25 @@ export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    temporal_filter_settings: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct!.temporalFilterSettings),
+    temporal_filter_settings: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToTerraform(struct!.temporalFilterSettings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     temporal_filter_settings: {
-      value: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct!.temporalFilterSettings),
+      value: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyToHclTerraform(struct!.temporalFilterSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsPropertyList",
@@ -7269,7 +7269,7 @@ export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelTimecodeBurninSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.TimecodeBurninSettingsPropertyOutputReference | AwsMedialiveChannel.TimecodeBurninSettingsProperty): any {
+export function tfChannelTimecodeBurninSettingsPropertyToTerraform(struct?: TfChannel.TimecodeBurninSettingsPropertyOutputReference | TfChannel.TimecodeBurninSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7282,7 +7282,7 @@ export function awsMedialiveChannelTimecodeBurninSettingsPropertyToTerraform(str
 }
 
 
-export function awsMedialiveChannelTimecodeBurninSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.TimecodeBurninSettingsPropertyOutputReference | AwsMedialiveChannel.TimecodeBurninSettingsProperty): any {
+export function tfChannelTimecodeBurninSettingsPropertyToHclTerraform(struct?: TfChannel.TimecodeBurninSettingsPropertyOutputReference | TfChannel.TimecodeBurninSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7313,7 +7313,7 @@ export function awsMedialiveChannelTimecodeBurninSettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelH265SettingsPropertyToTerraform(struct?: AwsMedialiveChannel.H265SettingsPropertyOutputReference | AwsMedialiveChannel.H265SettingsProperty): any {
+export function tfChannelH265SettingsPropertyToTerraform(struct?: TfChannel.H265SettingsPropertyOutputReference | TfChannel.H265SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7353,14 +7353,14 @@ export function awsMedialiveChannelH265SettingsPropertyToTerraform(struct?: AwsM
     tile_width: cdktn.numberToTerraform(struct!.tileWidth),
     timecode_insertion: cdktn.stringToTerraform(struct!.timecodeInsertion),
     treeblock_size: cdktn.stringToTerraform(struct!.treeblockSize),
-    color_space_settings: awsMedialiveChannelColorSpaceSettingsPropertyToTerraform(struct!.colorSpaceSettings),
-    filter_settings: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToTerraform(struct!.filterSettings),
-    timecode_burnin_settings: awsMedialiveChannelTimecodeBurninSettingsPropertyToTerraform(struct!.timecodeBurninSettings),
+    color_space_settings: tfChannelColorSpaceSettingsPropertyToTerraform(struct!.colorSpaceSettings),
+    filter_settings: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToTerraform(struct!.filterSettings),
+    timecode_burnin_settings: tfChannelTimecodeBurninSettingsPropertyToTerraform(struct!.timecodeBurninSettings),
   }
 }
 
 
-export function awsMedialiveChannelH265SettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.H265SettingsPropertyOutputReference | AwsMedialiveChannel.H265SettingsProperty): any {
+export function tfChannelH265SettingsPropertyToHclTerraform(struct?: TfChannel.H265SettingsPropertyOutputReference | TfChannel.H265SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7571,19 +7571,19 @@ export function awsMedialiveChannelH265SettingsPropertyToHclTerraform(struct?: A
       storageClassType: "string",
     },
     color_space_settings: {
-      value: awsMedialiveChannelColorSpaceSettingsPropertyToHclTerraform(struct!.colorSpaceSettings),
+      value: tfChannelColorSpaceSettingsPropertyToHclTerraform(struct!.colorSpaceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "ColorSpaceSettingsPropertyList",
     },
     filter_settings: {
-      value: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToHclTerraform(struct!.filterSettings),
+      value: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyToHclTerraform(struct!.filterSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsPropertyList",
     },
     timecode_burnin_settings: {
-      value: awsMedialiveChannelTimecodeBurninSettingsPropertyToHclTerraform(struct!.timecodeBurninSettings),
+      value: tfChannelTimecodeBurninSettingsPropertyToHclTerraform(struct!.timecodeBurninSettings),
       isBlock: true,
       type: "list",
       storageClassType: "TimecodeBurninSettingsPropertyList",
@@ -7595,39 +7595,39 @@ export function awsMedialiveChannelH265SettingsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    frame_capture_settings: awsMedialiveChannelFrameCaptureSettingsPropertyToTerraform(struct!.frameCaptureSettings),
-    h264_settings: awsMedialiveChannelH264SettingsPropertyToTerraform(struct!.h264Settings),
-    h265_settings: awsMedialiveChannelH265SettingsPropertyToTerraform(struct!.h265Settings),
+    frame_capture_settings: tfChannelFrameCaptureSettingsPropertyToTerraform(struct!.frameCaptureSettings),
+    h264_settings: tfChannelH264SettingsPropertyToTerraform(struct!.h264Settings),
+    h265_settings: tfChannelH265SettingsPropertyToTerraform(struct!.h265Settings),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsVideoDescriptionsCodecSettingsProperty): any {
+export function tfChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsPropertyOutputReference | TfChannel.EncoderSettingsVideoDescriptionsCodecSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     frame_capture_settings: {
-      value: awsMedialiveChannelFrameCaptureSettingsPropertyToHclTerraform(struct!.frameCaptureSettings),
+      value: tfChannelFrameCaptureSettingsPropertyToHclTerraform(struct!.frameCaptureSettings),
       isBlock: true,
       type: "list",
       storageClassType: "FrameCaptureSettingsPropertyList",
     },
     h264_settings: {
-      value: awsMedialiveChannelH264SettingsPropertyToHclTerraform(struct!.h264Settings),
+      value: tfChannelH264SettingsPropertyToHclTerraform(struct!.h264Settings),
       isBlock: true,
       type: "list",
       storageClassType: "H264SettingsPropertyList",
     },
     h265_settings: {
-      value: awsMedialiveChannelH265SettingsPropertyToHclTerraform(struct!.h265Settings),
+      value: tfChannelH265SettingsPropertyToHclTerraform(struct!.h265Settings),
       isBlock: true,
       type: "list",
       storageClassType: "H265SettingsPropertyList",
@@ -7639,7 +7639,7 @@ export function awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettings
 }
 
 
-export function awsMedialiveChannelVideoDescriptionsPropertyToTerraform(struct?: AwsMedialiveChannel.VideoDescriptionsProperty | cdktn.IResolvable): any {
+export function tfChannelVideoDescriptionsPropertyToTerraform(struct?: TfChannel.VideoDescriptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7651,12 +7651,12 @@ export function awsMedialiveChannelVideoDescriptionsPropertyToTerraform(struct?:
     scaling_behavior: cdktn.stringToTerraform(struct!.scalingBehavior),
     sharpness: cdktn.numberToTerraform(struct!.sharpness),
     width: cdktn.numberToTerraform(struct!.width),
-    codec_settings: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToTerraform(struct!.codecSettings),
+    codec_settings: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToTerraform(struct!.codecSettings),
   }
 }
 
 
-export function awsMedialiveChannelVideoDescriptionsPropertyToHclTerraform(struct?: AwsMedialiveChannel.VideoDescriptionsProperty | cdktn.IResolvable): any {
+export function tfChannelVideoDescriptionsPropertyToHclTerraform(struct?: TfChannel.VideoDescriptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7699,7 +7699,7 @@ export function awsMedialiveChannelVideoDescriptionsPropertyToHclTerraform(struc
       storageClassType: "number",
     },
     codec_settings: {
-      value: awsMedialiveChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToHclTerraform(struct!.codecSettings),
+      value: tfChannelEncoderSettingsVideoDescriptionsCodecSettingsPropertyToHclTerraform(struct!.codecSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EncoderSettingsVideoDescriptionsCodecSettingsPropertyList",
@@ -7711,81 +7711,81 @@ export function awsMedialiveChannelVideoDescriptionsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelEncoderSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EncoderSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsProperty): any {
+export function tfChannelEncoderSettingsPropertyToTerraform(struct?: TfChannel.EncoderSettingsPropertyOutputReference | TfChannel.EncoderSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audio_descriptions: cdktn.listMapper(awsMedialiveChannelAudioDescriptionsPropertyToTerraform, true)(struct!.audioDescriptions),
-    avail_blanking: awsMedialiveChannelAvailBlankingPropertyToTerraform(struct!.availBlanking),
-    caption_descriptions: cdktn.listMapper(awsMedialiveChannelCaptionDescriptionsPropertyToTerraform, true)(struct!.captionDescriptions),
-    global_configuration: awsMedialiveChannelGlobalConfigurationPropertyToTerraform(struct!.globalConfiguration),
-    motion_graphics_configuration: awsMedialiveChannelMotionGraphicsConfigurationPropertyToTerraform(struct!.motionGraphicsConfiguration),
-    nielsen_configuration: awsMedialiveChannelNielsenConfigurationPropertyToTerraform(struct!.nielsenConfiguration),
-    output_groups: cdktn.listMapper(awsMedialiveChannelOutputGroupsPropertyToTerraform, true)(struct!.outputGroups),
-    timecode_config: awsMedialiveChannelTimecodeConfigPropertyToTerraform(struct!.timecodeConfig),
-    video_descriptions: cdktn.listMapper(awsMedialiveChannelVideoDescriptionsPropertyToTerraform, true)(struct!.videoDescriptions),
+    audio_descriptions: cdktn.listMapper(tfChannelAudioDescriptionsPropertyToTerraform, true)(struct!.audioDescriptions),
+    avail_blanking: tfChannelAvailBlankingPropertyToTerraform(struct!.availBlanking),
+    caption_descriptions: cdktn.listMapper(tfChannelCaptionDescriptionsPropertyToTerraform, true)(struct!.captionDescriptions),
+    global_configuration: tfChannelGlobalConfigurationPropertyToTerraform(struct!.globalConfiguration),
+    motion_graphics_configuration: tfChannelMotionGraphicsConfigurationPropertyToTerraform(struct!.motionGraphicsConfiguration),
+    nielsen_configuration: tfChannelNielsenConfigurationPropertyToTerraform(struct!.nielsenConfiguration),
+    output_groups: cdktn.listMapper(tfChannelOutputGroupsPropertyToTerraform, true)(struct!.outputGroups),
+    timecode_config: tfChannelTimecodeConfigPropertyToTerraform(struct!.timecodeConfig),
+    video_descriptions: cdktn.listMapper(tfChannelVideoDescriptionsPropertyToTerraform, true)(struct!.videoDescriptions),
   }
 }
 
 
-export function awsMedialiveChannelEncoderSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EncoderSettingsPropertyOutputReference | AwsMedialiveChannel.EncoderSettingsProperty): any {
+export function tfChannelEncoderSettingsPropertyToHclTerraform(struct?: TfChannel.EncoderSettingsPropertyOutputReference | TfChannel.EncoderSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audio_descriptions: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelAudioDescriptionsPropertyToHclTerraform, true)(struct!.audioDescriptions),
+      value: cdktn.listMapperHcl(tfChannelAudioDescriptionsPropertyToHclTerraform, true)(struct!.audioDescriptions),
       isBlock: true,
       type: "set",
       storageClassType: "AudioDescriptionsPropertyList",
     },
     avail_blanking: {
-      value: awsMedialiveChannelAvailBlankingPropertyToHclTerraform(struct!.availBlanking),
+      value: tfChannelAvailBlankingPropertyToHclTerraform(struct!.availBlanking),
       isBlock: true,
       type: "list",
       storageClassType: "AvailBlankingPropertyList",
     },
     caption_descriptions: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelCaptionDescriptionsPropertyToHclTerraform, true)(struct!.captionDescriptions),
+      value: cdktn.listMapperHcl(tfChannelCaptionDescriptionsPropertyToHclTerraform, true)(struct!.captionDescriptions),
       isBlock: true,
       type: "list",
       storageClassType: "CaptionDescriptionsPropertyList",
     },
     global_configuration: {
-      value: awsMedialiveChannelGlobalConfigurationPropertyToHclTerraform(struct!.globalConfiguration),
+      value: tfChannelGlobalConfigurationPropertyToHclTerraform(struct!.globalConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "GlobalConfigurationPropertyList",
     },
     motion_graphics_configuration: {
-      value: awsMedialiveChannelMotionGraphicsConfigurationPropertyToHclTerraform(struct!.motionGraphicsConfiguration),
+      value: tfChannelMotionGraphicsConfigurationPropertyToHclTerraform(struct!.motionGraphicsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MotionGraphicsConfigurationPropertyList",
     },
     nielsen_configuration: {
-      value: awsMedialiveChannelNielsenConfigurationPropertyToHclTerraform(struct!.nielsenConfiguration),
+      value: tfChannelNielsenConfigurationPropertyToHclTerraform(struct!.nielsenConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "NielsenConfigurationPropertyList",
     },
     output_groups: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelOutputGroupsPropertyToHclTerraform, true)(struct!.outputGroups),
+      value: cdktn.listMapperHcl(tfChannelOutputGroupsPropertyToHclTerraform, true)(struct!.outputGroups),
       isBlock: true,
       type: "list",
       storageClassType: "OutputGroupsPropertyList",
     },
     timecode_config: {
-      value: awsMedialiveChannelTimecodeConfigPropertyToHclTerraform(struct!.timecodeConfig),
+      value: tfChannelTimecodeConfigPropertyToHclTerraform(struct!.timecodeConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TimecodeConfigPropertyList",
     },
     video_descriptions: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelVideoDescriptionsPropertyToHclTerraform, true)(struct!.videoDescriptions),
+      value: cdktn.listMapperHcl(tfChannelVideoDescriptionsPropertyToHclTerraform, true)(struct!.videoDescriptions),
       isBlock: true,
       type: "list",
       storageClassType: "VideoDescriptionsPropertyList",
@@ -7797,7 +7797,7 @@ export function awsMedialiveChannelEncoderSettingsPropertyToHclTerraform(struct?
 }
 
 
-export function awsMedialiveChannelAudioSilenceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AudioSilenceSettingsPropertyOutputReference | AwsMedialiveChannel.AudioSilenceSettingsProperty): any {
+export function tfChannelAudioSilenceSettingsPropertyToTerraform(struct?: TfChannel.AudioSilenceSettingsPropertyOutputReference | TfChannel.AudioSilenceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7809,7 +7809,7 @@ export function awsMedialiveChannelAudioSilenceSettingsPropertyToTerraform(struc
 }
 
 
-export function awsMedialiveChannelAudioSilenceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioSilenceSettingsPropertyOutputReference | AwsMedialiveChannel.AudioSilenceSettingsProperty): any {
+export function tfChannelAudioSilenceSettingsPropertyToHclTerraform(struct?: TfChannel.AudioSilenceSettingsPropertyOutputReference | TfChannel.AudioSilenceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7834,7 +7834,7 @@ export function awsMedialiveChannelAudioSilenceSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelInputLossSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.InputLossSettingsPropertyOutputReference | AwsMedialiveChannel.InputLossSettingsProperty): any {
+export function tfChannelInputLossSettingsPropertyToTerraform(struct?: TfChannel.InputLossSettingsPropertyOutputReference | TfChannel.InputLossSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7845,7 +7845,7 @@ export function awsMedialiveChannelInputLossSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelInputLossSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputLossSettingsPropertyOutputReference | AwsMedialiveChannel.InputLossSettingsProperty): any {
+export function tfChannelInputLossSettingsPropertyToHclTerraform(struct?: TfChannel.InputLossSettingsPropertyOutputReference | TfChannel.InputLossSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7864,7 +7864,7 @@ export function awsMedialiveChannelInputLossSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelVideoBlackSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.VideoBlackSettingsPropertyOutputReference | AwsMedialiveChannel.VideoBlackSettingsProperty): any {
+export function tfChannelVideoBlackSettingsPropertyToTerraform(struct?: TfChannel.VideoBlackSettingsPropertyOutputReference | TfChannel.VideoBlackSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7876,7 +7876,7 @@ export function awsMedialiveChannelVideoBlackSettingsPropertyToTerraform(struct?
 }
 
 
-export function awsMedialiveChannelVideoBlackSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.VideoBlackSettingsPropertyOutputReference | AwsMedialiveChannel.VideoBlackSettingsProperty): any {
+export function tfChannelVideoBlackSettingsPropertyToHclTerraform(struct?: TfChannel.VideoBlackSettingsPropertyOutputReference | TfChannel.VideoBlackSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7901,39 +7901,39 @@ export function awsMedialiveChannelVideoBlackSettingsPropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelFailoverConditionSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.FailoverConditionSettingsPropertyOutputReference | AwsMedialiveChannel.FailoverConditionSettingsProperty): any {
+export function tfChannelFailoverConditionSettingsPropertyToTerraform(struct?: TfChannel.FailoverConditionSettingsPropertyOutputReference | TfChannel.FailoverConditionSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audio_silence_settings: awsMedialiveChannelAudioSilenceSettingsPropertyToTerraform(struct!.audioSilenceSettings),
-    input_loss_settings: awsMedialiveChannelInputLossSettingsPropertyToTerraform(struct!.inputLossSettings),
-    video_black_settings: awsMedialiveChannelVideoBlackSettingsPropertyToTerraform(struct!.videoBlackSettings),
+    audio_silence_settings: tfChannelAudioSilenceSettingsPropertyToTerraform(struct!.audioSilenceSettings),
+    input_loss_settings: tfChannelInputLossSettingsPropertyToTerraform(struct!.inputLossSettings),
+    video_black_settings: tfChannelVideoBlackSettingsPropertyToTerraform(struct!.videoBlackSettings),
   }
 }
 
 
-export function awsMedialiveChannelFailoverConditionSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.FailoverConditionSettingsPropertyOutputReference | AwsMedialiveChannel.FailoverConditionSettingsProperty): any {
+export function tfChannelFailoverConditionSettingsPropertyToHclTerraform(struct?: TfChannel.FailoverConditionSettingsPropertyOutputReference | TfChannel.FailoverConditionSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audio_silence_settings: {
-      value: awsMedialiveChannelAudioSilenceSettingsPropertyToHclTerraform(struct!.audioSilenceSettings),
+      value: tfChannelAudioSilenceSettingsPropertyToHclTerraform(struct!.audioSilenceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AudioSilenceSettingsPropertyList",
     },
     input_loss_settings: {
-      value: awsMedialiveChannelInputLossSettingsPropertyToHclTerraform(struct!.inputLossSettings),
+      value: tfChannelInputLossSettingsPropertyToHclTerraform(struct!.inputLossSettings),
       isBlock: true,
       type: "list",
       storageClassType: "InputLossSettingsPropertyList",
     },
     video_black_settings: {
-      value: awsMedialiveChannelVideoBlackSettingsPropertyToHclTerraform(struct!.videoBlackSettings),
+      value: tfChannelVideoBlackSettingsPropertyToHclTerraform(struct!.videoBlackSettings),
       isBlock: true,
       type: "list",
       storageClassType: "VideoBlackSettingsPropertyList",
@@ -7945,25 +7945,25 @@ export function awsMedialiveChannelFailoverConditionSettingsPropertyToHclTerrafo
 }
 
 
-export function awsMedialiveChannelFailoverConditionPropertyToTerraform(struct?: AwsMedialiveChannel.FailoverConditionProperty | cdktn.IResolvable): any {
+export function tfChannelFailoverConditionPropertyToTerraform(struct?: TfChannel.FailoverConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    failover_condition_settings: awsMedialiveChannelFailoverConditionSettingsPropertyToTerraform(struct!.failoverConditionSettings),
+    failover_condition_settings: tfChannelFailoverConditionSettingsPropertyToTerraform(struct!.failoverConditionSettings),
   }
 }
 
 
-export function awsMedialiveChannelFailoverConditionPropertyToHclTerraform(struct?: AwsMedialiveChannel.FailoverConditionProperty | cdktn.IResolvable): any {
+export function tfChannelFailoverConditionPropertyToHclTerraform(struct?: TfChannel.FailoverConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     failover_condition_settings: {
-      value: awsMedialiveChannelFailoverConditionSettingsPropertyToHclTerraform(struct!.failoverConditionSettings),
+      value: tfChannelFailoverConditionSettingsPropertyToHclTerraform(struct!.failoverConditionSettings),
       isBlock: true,
       type: "list",
       storageClassType: "FailoverConditionSettingsPropertyList",
@@ -7975,7 +7975,7 @@ export function awsMedialiveChannelFailoverConditionPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelAutomaticInputFailoverSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AutomaticInputFailoverSettingsPropertyOutputReference | AwsMedialiveChannel.AutomaticInputFailoverSettingsProperty): any {
+export function tfChannelAutomaticInputFailoverSettingsPropertyToTerraform(struct?: TfChannel.AutomaticInputFailoverSettingsPropertyOutputReference | TfChannel.AutomaticInputFailoverSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -7984,12 +7984,12 @@ export function awsMedialiveChannelAutomaticInputFailoverSettingsPropertyToTerra
     error_clear_time_msec: cdktn.numberToTerraform(struct!.errorClearTimeMsec),
     input_preference: cdktn.stringToTerraform(struct!.inputPreference),
     secondary_input_id: cdktn.stringToTerraform(struct!.secondaryInputId),
-    failover_condition: cdktn.listMapper(awsMedialiveChannelFailoverConditionPropertyToTerraform, true)(struct!.failoverCondition),
+    failover_condition: cdktn.listMapper(tfChannelFailoverConditionPropertyToTerraform, true)(struct!.failoverCondition),
   }
 }
 
 
-export function awsMedialiveChannelAutomaticInputFailoverSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AutomaticInputFailoverSettingsPropertyOutputReference | AwsMedialiveChannel.AutomaticInputFailoverSettingsProperty): any {
+export function tfChannelAutomaticInputFailoverSettingsPropertyToHclTerraform(struct?: TfChannel.AutomaticInputFailoverSettingsPropertyOutputReference | TfChannel.AutomaticInputFailoverSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8014,7 +8014,7 @@ export function awsMedialiveChannelAutomaticInputFailoverSettingsPropertyToHclTe
       storageClassType: "string",
     },
     failover_condition: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelFailoverConditionPropertyToHclTerraform, true)(struct!.failoverCondition),
+      value: cdktn.listMapperHcl(tfChannelFailoverConditionPropertyToHclTerraform, true)(struct!.failoverCondition),
       isBlock: true,
       type: "set",
       storageClassType: "FailoverConditionPropertyList",
@@ -8026,7 +8026,7 @@ export function awsMedialiveChannelAutomaticInputFailoverSettingsPropertyToHclTe
 }
 
 
-export function awsMedialiveChannelAudioHlsRenditionSelectionPropertyToTerraform(struct?: AwsMedialiveChannel.AudioHlsRenditionSelectionPropertyOutputReference | AwsMedialiveChannel.AudioHlsRenditionSelectionProperty): any {
+export function tfChannelAudioHlsRenditionSelectionPropertyToTerraform(struct?: TfChannel.AudioHlsRenditionSelectionPropertyOutputReference | TfChannel.AudioHlsRenditionSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8038,7 +8038,7 @@ export function awsMedialiveChannelAudioHlsRenditionSelectionPropertyToTerraform
 }
 
 
-export function awsMedialiveChannelAudioHlsRenditionSelectionPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioHlsRenditionSelectionPropertyOutputReference | AwsMedialiveChannel.AudioHlsRenditionSelectionProperty): any {
+export function tfChannelAudioHlsRenditionSelectionPropertyToHclTerraform(struct?: TfChannel.AudioHlsRenditionSelectionPropertyOutputReference | TfChannel.AudioHlsRenditionSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8063,7 +8063,7 @@ export function awsMedialiveChannelAudioHlsRenditionSelectionPropertyToHclTerraf
 }
 
 
-export function awsMedialiveChannelAudioLanguageSelectionPropertyToTerraform(struct?: AwsMedialiveChannel.AudioLanguageSelectionPropertyOutputReference | AwsMedialiveChannel.AudioLanguageSelectionProperty): any {
+export function tfChannelAudioLanguageSelectionPropertyToTerraform(struct?: TfChannel.AudioLanguageSelectionPropertyOutputReference | TfChannel.AudioLanguageSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8075,7 +8075,7 @@ export function awsMedialiveChannelAudioLanguageSelectionPropertyToTerraform(str
 }
 
 
-export function awsMedialiveChannelAudioLanguageSelectionPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioLanguageSelectionPropertyOutputReference | AwsMedialiveChannel.AudioLanguageSelectionProperty): any {
+export function tfChannelAudioLanguageSelectionPropertyToHclTerraform(struct?: TfChannel.AudioLanguageSelectionPropertyOutputReference | TfChannel.AudioLanguageSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8100,7 +8100,7 @@ export function awsMedialiveChannelAudioLanguageSelectionPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelAudioPidSelectionPropertyToTerraform(struct?: AwsMedialiveChannel.AudioPidSelectionPropertyOutputReference | AwsMedialiveChannel.AudioPidSelectionProperty): any {
+export function tfChannelAudioPidSelectionPropertyToTerraform(struct?: TfChannel.AudioPidSelectionPropertyOutputReference | TfChannel.AudioPidSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8111,7 +8111,7 @@ export function awsMedialiveChannelAudioPidSelectionPropertyToTerraform(struct?:
 }
 
 
-export function awsMedialiveChannelAudioPidSelectionPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioPidSelectionPropertyOutputReference | AwsMedialiveChannel.AudioPidSelectionProperty): any {
+export function tfChannelAudioPidSelectionPropertyToHclTerraform(struct?: TfChannel.AudioPidSelectionPropertyOutputReference | TfChannel.AudioPidSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8130,7 +8130,7 @@ export function awsMedialiveChannelAudioPidSelectionPropertyToHclTerraform(struc
 }
 
 
-export function awsMedialiveChannelDolbyEDecodePropertyToTerraform(struct?: AwsMedialiveChannel.DolbyEDecodePropertyOutputReference | AwsMedialiveChannel.DolbyEDecodeProperty): any {
+export function tfChannelDolbyEDecodePropertyToTerraform(struct?: TfChannel.DolbyEDecodePropertyOutputReference | TfChannel.DolbyEDecodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8141,7 +8141,7 @@ export function awsMedialiveChannelDolbyEDecodePropertyToTerraform(struct?: AwsM
 }
 
 
-export function awsMedialiveChannelDolbyEDecodePropertyToHclTerraform(struct?: AwsMedialiveChannel.DolbyEDecodePropertyOutputReference | AwsMedialiveChannel.DolbyEDecodeProperty): any {
+export function tfChannelDolbyEDecodePropertyToHclTerraform(struct?: TfChannel.DolbyEDecodePropertyOutputReference | TfChannel.DolbyEDecodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8160,7 +8160,7 @@ export function awsMedialiveChannelDolbyEDecodePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelTracksPropertyToTerraform(struct?: AwsMedialiveChannel.TracksProperty | cdktn.IResolvable): any {
+export function tfChannelTracksPropertyToTerraform(struct?: TfChannel.TracksProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8171,7 +8171,7 @@ export function awsMedialiveChannelTracksPropertyToTerraform(struct?: AwsMediali
 }
 
 
-export function awsMedialiveChannelTracksPropertyToHclTerraform(struct?: AwsMedialiveChannel.TracksProperty | cdktn.IResolvable): any {
+export function tfChannelTracksPropertyToHclTerraform(struct?: TfChannel.TracksProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8190,32 +8190,32 @@ export function awsMedialiveChannelTracksPropertyToHclTerraform(struct?: AwsMedi
 }
 
 
-export function awsMedialiveChannelAudioTrackSelectionPropertyToTerraform(struct?: AwsMedialiveChannel.AudioTrackSelectionPropertyOutputReference | AwsMedialiveChannel.AudioTrackSelectionProperty): any {
+export function tfChannelAudioTrackSelectionPropertyToTerraform(struct?: TfChannel.AudioTrackSelectionPropertyOutputReference | TfChannel.AudioTrackSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    dolby_e_decode: awsMedialiveChannelDolbyEDecodePropertyToTerraform(struct!.dolbyEDecode),
-    tracks: cdktn.listMapper(awsMedialiveChannelTracksPropertyToTerraform, true)(struct!.tracks),
+    dolby_e_decode: tfChannelDolbyEDecodePropertyToTerraform(struct!.dolbyEDecode),
+    tracks: cdktn.listMapper(tfChannelTracksPropertyToTerraform, true)(struct!.tracks),
   }
 }
 
 
-export function awsMedialiveChannelAudioTrackSelectionPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioTrackSelectionPropertyOutputReference | AwsMedialiveChannel.AudioTrackSelectionProperty): any {
+export function tfChannelAudioTrackSelectionPropertyToHclTerraform(struct?: TfChannel.AudioTrackSelectionPropertyOutputReference | TfChannel.AudioTrackSelectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     dolby_e_decode: {
-      value: awsMedialiveChannelDolbyEDecodePropertyToHclTerraform(struct!.dolbyEDecode),
+      value: tfChannelDolbyEDecodePropertyToHclTerraform(struct!.dolbyEDecode),
       isBlock: true,
       type: "list",
       storageClassType: "DolbyEDecodePropertyList",
     },
     tracks: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelTracksPropertyToHclTerraform, true)(struct!.tracks),
+      value: cdktn.listMapperHcl(tfChannelTracksPropertyToHclTerraform, true)(struct!.tracks),
       isBlock: true,
       type: "set",
       storageClassType: "TracksPropertyList",
@@ -8227,46 +8227,46 @@ export function awsMedialiveChannelAudioTrackSelectionPropertyToHclTerraform(str
 }
 
 
-export function awsMedialiveChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyOutputReference | AwsMedialiveChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsProperty): any {
+export function tfChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToTerraform(struct?: TfChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyOutputReference | TfChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audio_hls_rendition_selection: awsMedialiveChannelAudioHlsRenditionSelectionPropertyToTerraform(struct!.audioHlsRenditionSelection),
-    audio_language_selection: awsMedialiveChannelAudioLanguageSelectionPropertyToTerraform(struct!.audioLanguageSelection),
-    audio_pid_selection: awsMedialiveChannelAudioPidSelectionPropertyToTerraform(struct!.audioPidSelection),
-    audio_track_selection: awsMedialiveChannelAudioTrackSelectionPropertyToTerraform(struct!.audioTrackSelection),
+    audio_hls_rendition_selection: tfChannelAudioHlsRenditionSelectionPropertyToTerraform(struct!.audioHlsRenditionSelection),
+    audio_language_selection: tfChannelAudioLanguageSelectionPropertyToTerraform(struct!.audioLanguageSelection),
+    audio_pid_selection: tfChannelAudioPidSelectionPropertyToTerraform(struct!.audioPidSelection),
+    audio_track_selection: tfChannelAudioTrackSelectionPropertyToTerraform(struct!.audioTrackSelection),
   }
 }
 
 
-export function awsMedialiveChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyOutputReference | AwsMedialiveChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsProperty): any {
+export function tfChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToHclTerraform(struct?: TfChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyOutputReference | TfChannel.InputAttachmentsInputSettingsAudioSelectorSelectorSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audio_hls_rendition_selection: {
-      value: awsMedialiveChannelAudioHlsRenditionSelectionPropertyToHclTerraform(struct!.audioHlsRenditionSelection),
+      value: tfChannelAudioHlsRenditionSelectionPropertyToHclTerraform(struct!.audioHlsRenditionSelection),
       isBlock: true,
       type: "list",
       storageClassType: "AudioHlsRenditionSelectionPropertyList",
     },
     audio_language_selection: {
-      value: awsMedialiveChannelAudioLanguageSelectionPropertyToHclTerraform(struct!.audioLanguageSelection),
+      value: tfChannelAudioLanguageSelectionPropertyToHclTerraform(struct!.audioLanguageSelection),
       isBlock: true,
       type: "list",
       storageClassType: "AudioLanguageSelectionPropertyList",
     },
     audio_pid_selection: {
-      value: awsMedialiveChannelAudioPidSelectionPropertyToHclTerraform(struct!.audioPidSelection),
+      value: tfChannelAudioPidSelectionPropertyToHclTerraform(struct!.audioPidSelection),
       isBlock: true,
       type: "list",
       storageClassType: "AudioPidSelectionPropertyList",
     },
     audio_track_selection: {
-      value: awsMedialiveChannelAudioTrackSelectionPropertyToHclTerraform(struct!.audioTrackSelection),
+      value: tfChannelAudioTrackSelectionPropertyToHclTerraform(struct!.audioTrackSelection),
       isBlock: true,
       type: "list",
       storageClassType: "AudioTrackSelectionPropertyList",
@@ -8278,19 +8278,19 @@ export function awsMedialiveChannelInputAttachmentsInputSettingsAudioSelectorSel
 }
 
 
-export function awsMedialiveChannelAudioSelectorPropertyToTerraform(struct?: AwsMedialiveChannel.AudioSelectorProperty | cdktn.IResolvable): any {
+export function tfChannelAudioSelectorPropertyToTerraform(struct?: TfChannel.AudioSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    selector_settings: awsMedialiveChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToTerraform(struct!.selectorSettings),
+    selector_settings: tfChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToTerraform(struct!.selectorSettings),
   }
 }
 
 
-export function awsMedialiveChannelAudioSelectorPropertyToHclTerraform(struct?: AwsMedialiveChannel.AudioSelectorProperty | cdktn.IResolvable): any {
+export function tfChannelAudioSelectorPropertyToHclTerraform(struct?: TfChannel.AudioSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8303,7 +8303,7 @@ export function awsMedialiveChannelAudioSelectorPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     selector_settings: {
-      value: awsMedialiveChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToHclTerraform(struct!.selectorSettings),
+      value: tfChannelInputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyToHclTerraform(struct!.selectorSettings),
       isBlock: true,
       type: "list",
       storageClassType: "InputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyList",
@@ -8315,7 +8315,7 @@ export function awsMedialiveChannelAudioSelectorPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelAncillarySourceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AncillarySourceSettingsPropertyOutputReference | AwsMedialiveChannel.AncillarySourceSettingsProperty): any {
+export function tfChannelAncillarySourceSettingsPropertyToTerraform(struct?: TfChannel.AncillarySourceSettingsPropertyOutputReference | TfChannel.AncillarySourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8326,7 +8326,7 @@ export function awsMedialiveChannelAncillarySourceSettingsPropertyToTerraform(st
 }
 
 
-export function awsMedialiveChannelAncillarySourceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AncillarySourceSettingsPropertyOutputReference | AwsMedialiveChannel.AncillarySourceSettingsProperty): any {
+export function tfChannelAncillarySourceSettingsPropertyToHclTerraform(struct?: TfChannel.AncillarySourceSettingsPropertyOutputReference | TfChannel.AncillarySourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8345,7 +8345,7 @@ export function awsMedialiveChannelAncillarySourceSettingsPropertyToHclTerraform
 }
 
 
-export function awsMedialiveChannelAribSourceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.AribSourceSettingsPropertyOutputReference | AwsMedialiveChannel.AribSourceSettingsProperty): any {
+export function tfChannelAribSourceSettingsPropertyToTerraform(struct?: TfChannel.AribSourceSettingsPropertyOutputReference | TfChannel.AribSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8355,7 +8355,7 @@ export function awsMedialiveChannelAribSourceSettingsPropertyToTerraform(struct?
 }
 
 
-export function awsMedialiveChannelAribSourceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.AribSourceSettingsPropertyOutputReference | AwsMedialiveChannel.AribSourceSettingsProperty): any {
+export function tfChannelAribSourceSettingsPropertyToHclTerraform(struct?: TfChannel.AribSourceSettingsPropertyOutputReference | TfChannel.AribSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8366,7 +8366,7 @@ export function awsMedialiveChannelAribSourceSettingsPropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelDvbSubSourceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.DvbSubSourceSettingsPropertyOutputReference | AwsMedialiveChannel.DvbSubSourceSettingsProperty): any {
+export function tfChannelDvbSubSourceSettingsPropertyToTerraform(struct?: TfChannel.DvbSubSourceSettingsPropertyOutputReference | TfChannel.DvbSubSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8378,7 +8378,7 @@ export function awsMedialiveChannelDvbSubSourceSettingsPropertyToTerraform(struc
 }
 
 
-export function awsMedialiveChannelDvbSubSourceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.DvbSubSourceSettingsPropertyOutputReference | AwsMedialiveChannel.DvbSubSourceSettingsProperty): any {
+export function tfChannelDvbSubSourceSettingsPropertyToHclTerraform(struct?: TfChannel.DvbSubSourceSettingsPropertyOutputReference | TfChannel.DvbSubSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8403,7 +8403,7 @@ export function awsMedialiveChannelDvbSubSourceSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelEmbeddedSourceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.EmbeddedSourceSettingsPropertyOutputReference | AwsMedialiveChannel.EmbeddedSourceSettingsProperty): any {
+export function tfChannelEmbeddedSourceSettingsPropertyToTerraform(struct?: TfChannel.EmbeddedSourceSettingsPropertyOutputReference | TfChannel.EmbeddedSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8416,7 +8416,7 @@ export function awsMedialiveChannelEmbeddedSourceSettingsPropertyToTerraform(str
 }
 
 
-export function awsMedialiveChannelEmbeddedSourceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.EmbeddedSourceSettingsPropertyOutputReference | AwsMedialiveChannel.EmbeddedSourceSettingsProperty): any {
+export function tfChannelEmbeddedSourceSettingsPropertyToHclTerraform(struct?: TfChannel.EmbeddedSourceSettingsPropertyOutputReference | TfChannel.EmbeddedSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8447,7 +8447,7 @@ export function awsMedialiveChannelEmbeddedSourceSettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelScte20SourceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Scte20SourceSettingsPropertyOutputReference | AwsMedialiveChannel.Scte20SourceSettingsProperty): any {
+export function tfChannelScte20SourceSettingsPropertyToTerraform(struct?: TfChannel.Scte20SourceSettingsPropertyOutputReference | TfChannel.Scte20SourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8459,7 +8459,7 @@ export function awsMedialiveChannelScte20SourceSettingsPropertyToTerraform(struc
 }
 
 
-export function awsMedialiveChannelScte20SourceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Scte20SourceSettingsPropertyOutputReference | AwsMedialiveChannel.Scte20SourceSettingsProperty): any {
+export function tfChannelScte20SourceSettingsPropertyToHclTerraform(struct?: TfChannel.Scte20SourceSettingsPropertyOutputReference | TfChannel.Scte20SourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8484,7 +8484,7 @@ export function awsMedialiveChannelScte20SourceSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelScte27SourceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.Scte27SourceSettingsPropertyOutputReference | AwsMedialiveChannel.Scte27SourceSettingsProperty): any {
+export function tfChannelScte27SourceSettingsPropertyToTerraform(struct?: TfChannel.Scte27SourceSettingsPropertyOutputReference | TfChannel.Scte27SourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8496,7 +8496,7 @@ export function awsMedialiveChannelScte27SourceSettingsPropertyToTerraform(struc
 }
 
 
-export function awsMedialiveChannelScte27SourceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.Scte27SourceSettingsPropertyOutputReference | AwsMedialiveChannel.Scte27SourceSettingsProperty): any {
+export function tfChannelScte27SourceSettingsPropertyToHclTerraform(struct?: TfChannel.Scte27SourceSettingsPropertyOutputReference | TfChannel.Scte27SourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8521,7 +8521,7 @@ export function awsMedialiveChannelScte27SourceSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelOutputRectanglePropertyToTerraform(struct?: AwsMedialiveChannel.OutputRectanglePropertyOutputReference | AwsMedialiveChannel.OutputRectangleProperty): any {
+export function tfChannelOutputRectanglePropertyToTerraform(struct?: TfChannel.OutputRectanglePropertyOutputReference | TfChannel.OutputRectangleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8535,7 +8535,7 @@ export function awsMedialiveChannelOutputRectanglePropertyToTerraform(struct?: A
 }
 
 
-export function awsMedialiveChannelOutputRectanglePropertyToHclTerraform(struct?: AwsMedialiveChannel.OutputRectanglePropertyOutputReference | AwsMedialiveChannel.OutputRectangleProperty): any {
+export function tfChannelOutputRectanglePropertyToHclTerraform(struct?: TfChannel.OutputRectanglePropertyOutputReference | TfChannel.OutputRectangleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8572,19 +8572,19 @@ export function awsMedialiveChannelOutputRectanglePropertyToHclTerraform(struct?
 }
 
 
-export function awsMedialiveChannelTeletextSourceSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.TeletextSourceSettingsPropertyOutputReference | AwsMedialiveChannel.TeletextSourceSettingsProperty): any {
+export function tfChannelTeletextSourceSettingsPropertyToTerraform(struct?: TfChannel.TeletextSourceSettingsPropertyOutputReference | TfChannel.TeletextSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     page_number: cdktn.stringToTerraform(struct!.pageNumber),
-    output_rectangle: awsMedialiveChannelOutputRectanglePropertyToTerraform(struct!.outputRectangle),
+    output_rectangle: tfChannelOutputRectanglePropertyToTerraform(struct!.outputRectangle),
   }
 }
 
 
-export function awsMedialiveChannelTeletextSourceSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.TeletextSourceSettingsPropertyOutputReference | AwsMedialiveChannel.TeletextSourceSettingsProperty): any {
+export function tfChannelTeletextSourceSettingsPropertyToHclTerraform(struct?: TfChannel.TeletextSourceSettingsPropertyOutputReference | TfChannel.TeletextSourceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8597,7 +8597,7 @@ export function awsMedialiveChannelTeletextSourceSettingsPropertyToHclTerraform(
       storageClassType: "string",
     },
     output_rectangle: {
-      value: awsMedialiveChannelOutputRectanglePropertyToHclTerraform(struct!.outputRectangle),
+      value: tfChannelOutputRectanglePropertyToHclTerraform(struct!.outputRectangle),
       isBlock: true,
       type: "list",
       storageClassType: "OutputRectanglePropertyList",
@@ -8609,67 +8609,67 @@ export function awsMedialiveChannelTeletextSourceSettingsPropertyToHclTerraform(
 }
 
 
-export function awsMedialiveChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyOutputReference | AwsMedialiveChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsProperty): any {
+export function tfChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToTerraform(struct?: TfChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyOutputReference | TfChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ancillary_source_settings: awsMedialiveChannelAncillarySourceSettingsPropertyToTerraform(struct!.ancillarySourceSettings),
-    arib_source_settings: awsMedialiveChannelAribSourceSettingsPropertyToTerraform(struct!.aribSourceSettings),
-    dvb_sub_source_settings: awsMedialiveChannelDvbSubSourceSettingsPropertyToTerraform(struct!.dvbSubSourceSettings),
-    embedded_source_settings: awsMedialiveChannelEmbeddedSourceSettingsPropertyToTerraform(struct!.embeddedSourceSettings),
-    scte20_source_settings: awsMedialiveChannelScte20SourceSettingsPropertyToTerraform(struct!.scte20SourceSettings),
-    scte27_source_settings: awsMedialiveChannelScte27SourceSettingsPropertyToTerraform(struct!.scte27SourceSettings),
-    teletext_source_settings: awsMedialiveChannelTeletextSourceSettingsPropertyToTerraform(struct!.teletextSourceSettings),
+    ancillary_source_settings: tfChannelAncillarySourceSettingsPropertyToTerraform(struct!.ancillarySourceSettings),
+    arib_source_settings: tfChannelAribSourceSettingsPropertyToTerraform(struct!.aribSourceSettings),
+    dvb_sub_source_settings: tfChannelDvbSubSourceSettingsPropertyToTerraform(struct!.dvbSubSourceSettings),
+    embedded_source_settings: tfChannelEmbeddedSourceSettingsPropertyToTerraform(struct!.embeddedSourceSettings),
+    scte20_source_settings: tfChannelScte20SourceSettingsPropertyToTerraform(struct!.scte20SourceSettings),
+    scte27_source_settings: tfChannelScte27SourceSettingsPropertyToTerraform(struct!.scte27SourceSettings),
+    teletext_source_settings: tfChannelTeletextSourceSettingsPropertyToTerraform(struct!.teletextSourceSettings),
   }
 }
 
 
-export function awsMedialiveChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyOutputReference | AwsMedialiveChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsProperty): any {
+export function tfChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToHclTerraform(struct?: TfChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyOutputReference | TfChannel.InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ancillary_source_settings: {
-      value: awsMedialiveChannelAncillarySourceSettingsPropertyToHclTerraform(struct!.ancillarySourceSettings),
+      value: tfChannelAncillarySourceSettingsPropertyToHclTerraform(struct!.ancillarySourceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AncillarySourceSettingsPropertyList",
     },
     arib_source_settings: {
-      value: awsMedialiveChannelAribSourceSettingsPropertyToHclTerraform(struct!.aribSourceSettings),
+      value: tfChannelAribSourceSettingsPropertyToHclTerraform(struct!.aribSourceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AribSourceSettingsPropertyList",
     },
     dvb_sub_source_settings: {
-      value: awsMedialiveChannelDvbSubSourceSettingsPropertyToHclTerraform(struct!.dvbSubSourceSettings),
+      value: tfChannelDvbSubSourceSettingsPropertyToHclTerraform(struct!.dvbSubSourceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DvbSubSourceSettingsPropertyList",
     },
     embedded_source_settings: {
-      value: awsMedialiveChannelEmbeddedSourceSettingsPropertyToHclTerraform(struct!.embeddedSourceSettings),
+      value: tfChannelEmbeddedSourceSettingsPropertyToHclTerraform(struct!.embeddedSourceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EmbeddedSourceSettingsPropertyList",
     },
     scte20_source_settings: {
-      value: awsMedialiveChannelScte20SourceSettingsPropertyToHclTerraform(struct!.scte20SourceSettings),
+      value: tfChannelScte20SourceSettingsPropertyToHclTerraform(struct!.scte20SourceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "Scte20SourceSettingsPropertyList",
     },
     scte27_source_settings: {
-      value: awsMedialiveChannelScte27SourceSettingsPropertyToHclTerraform(struct!.scte27SourceSettings),
+      value: tfChannelScte27SourceSettingsPropertyToHclTerraform(struct!.scte27SourceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "Scte27SourceSettingsPropertyList",
     },
     teletext_source_settings: {
-      value: awsMedialiveChannelTeletextSourceSettingsPropertyToHclTerraform(struct!.teletextSourceSettings),
+      value: tfChannelTeletextSourceSettingsPropertyToHclTerraform(struct!.teletextSourceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "TeletextSourceSettingsPropertyList",
@@ -8681,7 +8681,7 @@ export function awsMedialiveChannelInputAttachmentsInputSettingsCaptionSelectorS
 }
 
 
-export function awsMedialiveChannelCaptionSelectorPropertyToTerraform(struct?: AwsMedialiveChannel.CaptionSelectorProperty | cdktn.IResolvable): any {
+export function tfChannelCaptionSelectorPropertyToTerraform(struct?: TfChannel.CaptionSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8689,12 +8689,12 @@ export function awsMedialiveChannelCaptionSelectorPropertyToTerraform(struct?: A
   return {
     language_code: cdktn.stringToTerraform(struct!.languageCode),
     name: cdktn.stringToTerraform(struct!.name),
-    selector_settings: awsMedialiveChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToTerraform(struct!.selectorSettings),
+    selector_settings: tfChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToTerraform(struct!.selectorSettings),
   }
 }
 
 
-export function awsMedialiveChannelCaptionSelectorPropertyToHclTerraform(struct?: AwsMedialiveChannel.CaptionSelectorProperty | cdktn.IResolvable): any {
+export function tfChannelCaptionSelectorPropertyToHclTerraform(struct?: TfChannel.CaptionSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8713,7 +8713,7 @@ export function awsMedialiveChannelCaptionSelectorPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     selector_settings: {
-      value: awsMedialiveChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToHclTerraform(struct!.selectorSettings),
+      value: tfChannelInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyToHclTerraform(struct!.selectorSettings),
       isBlock: true,
       type: "list",
       storageClassType: "InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropertyList",
@@ -8725,7 +8725,7 @@ export function awsMedialiveChannelCaptionSelectorPropertyToHclTerraform(struct?
 }
 
 
-export function awsMedialiveChannelHlsInputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.HlsInputSettingsPropertyOutputReference | AwsMedialiveChannel.HlsInputSettingsProperty): any {
+export function tfChannelHlsInputSettingsPropertyToTerraform(struct?: TfChannel.HlsInputSettingsPropertyOutputReference | TfChannel.HlsInputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8740,7 +8740,7 @@ export function awsMedialiveChannelHlsInputSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelHlsInputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.HlsInputSettingsPropertyOutputReference | AwsMedialiveChannel.HlsInputSettingsProperty): any {
+export function tfChannelHlsInputSettingsPropertyToHclTerraform(struct?: TfChannel.HlsInputSettingsPropertyOutputReference | TfChannel.HlsInputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8783,19 +8783,19 @@ export function awsMedialiveChannelHlsInputSettingsPropertyToHclTerraform(struct
 }
 
 
-export function awsMedialiveChannelNetworkInputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.NetworkInputSettingsPropertyOutputReference | AwsMedialiveChannel.NetworkInputSettingsProperty): any {
+export function tfChannelNetworkInputSettingsPropertyToTerraform(struct?: TfChannel.NetworkInputSettingsPropertyOutputReference | TfChannel.NetworkInputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     server_validation: cdktn.stringToTerraform(struct!.serverValidation),
-    hls_input_settings: awsMedialiveChannelHlsInputSettingsPropertyToTerraform(struct!.hlsInputSettings),
+    hls_input_settings: tfChannelHlsInputSettingsPropertyToTerraform(struct!.hlsInputSettings),
   }
 }
 
 
-export function awsMedialiveChannelNetworkInputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.NetworkInputSettingsPropertyOutputReference | AwsMedialiveChannel.NetworkInputSettingsProperty): any {
+export function tfChannelNetworkInputSettingsPropertyToHclTerraform(struct?: TfChannel.NetworkInputSettingsPropertyOutputReference | TfChannel.NetworkInputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8808,7 +8808,7 @@ export function awsMedialiveChannelNetworkInputSettingsPropertyToHclTerraform(st
       storageClassType: "string",
     },
     hls_input_settings: {
-      value: awsMedialiveChannelHlsInputSettingsPropertyToHclTerraform(struct!.hlsInputSettings),
+      value: tfChannelHlsInputSettingsPropertyToHclTerraform(struct!.hlsInputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "HlsInputSettingsPropertyList",
@@ -8820,7 +8820,7 @@ export function awsMedialiveChannelNetworkInputSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsMedialiveChannelVideoSelectorPropertyToTerraform(struct?: AwsMedialiveChannel.VideoSelectorPropertyOutputReference | AwsMedialiveChannel.VideoSelectorProperty): any {
+export function tfChannelVideoSelectorPropertyToTerraform(struct?: TfChannel.VideoSelectorPropertyOutputReference | TfChannel.VideoSelectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8832,7 +8832,7 @@ export function awsMedialiveChannelVideoSelectorPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsMedialiveChannelVideoSelectorPropertyToHclTerraform(struct?: AwsMedialiveChannel.VideoSelectorPropertyOutputReference | AwsMedialiveChannel.VideoSelectorProperty): any {
+export function tfChannelVideoSelectorPropertyToHclTerraform(struct?: TfChannel.VideoSelectorPropertyOutputReference | TfChannel.VideoSelectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8857,7 +8857,7 @@ export function awsMedialiveChannelVideoSelectorPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelInputSettingsPropertyToTerraform(struct?: AwsMedialiveChannel.InputSettingsPropertyOutputReference | AwsMedialiveChannel.InputSettingsProperty): any {
+export function tfChannelInputSettingsPropertyToTerraform(struct?: TfChannel.InputSettingsPropertyOutputReference | TfChannel.InputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8870,15 +8870,15 @@ export function awsMedialiveChannelInputSettingsPropertyToTerraform(struct?: Aws
     scte35_pid: cdktn.numberToTerraform(struct!.scte35Pid),
     smpte2038_data_preference: cdktn.stringToTerraform(struct!.smpte2038DataPreference),
     source_end_behavior: cdktn.stringToTerraform(struct!.sourceEndBehavior),
-    audio_selector: cdktn.listMapper(awsMedialiveChannelAudioSelectorPropertyToTerraform, true)(struct!.audioSelector),
-    caption_selector: cdktn.listMapper(awsMedialiveChannelCaptionSelectorPropertyToTerraform, true)(struct!.captionSelector),
-    network_input_settings: awsMedialiveChannelNetworkInputSettingsPropertyToTerraform(struct!.networkInputSettings),
-    video_selector: awsMedialiveChannelVideoSelectorPropertyToTerraform(struct!.videoSelector),
+    audio_selector: cdktn.listMapper(tfChannelAudioSelectorPropertyToTerraform, true)(struct!.audioSelector),
+    caption_selector: cdktn.listMapper(tfChannelCaptionSelectorPropertyToTerraform, true)(struct!.captionSelector),
+    network_input_settings: tfChannelNetworkInputSettingsPropertyToTerraform(struct!.networkInputSettings),
+    video_selector: tfChannelVideoSelectorPropertyToTerraform(struct!.videoSelector),
   }
 }
 
 
-export function awsMedialiveChannelInputSettingsPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputSettingsPropertyOutputReference | AwsMedialiveChannel.InputSettingsProperty): any {
+export function tfChannelInputSettingsPropertyToHclTerraform(struct?: TfChannel.InputSettingsPropertyOutputReference | TfChannel.InputSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8927,25 +8927,25 @@ export function awsMedialiveChannelInputSettingsPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     audio_selector: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelAudioSelectorPropertyToHclTerraform, true)(struct!.audioSelector),
+      value: cdktn.listMapperHcl(tfChannelAudioSelectorPropertyToHclTerraform, true)(struct!.audioSelector),
       isBlock: true,
       type: "list",
       storageClassType: "AudioSelectorPropertyList",
     },
     caption_selector: {
-      value: cdktn.listMapperHcl(awsMedialiveChannelCaptionSelectorPropertyToHclTerraform, true)(struct!.captionSelector),
+      value: cdktn.listMapperHcl(tfChannelCaptionSelectorPropertyToHclTerraform, true)(struct!.captionSelector),
       isBlock: true,
       type: "list",
       storageClassType: "CaptionSelectorPropertyList",
     },
     network_input_settings: {
-      value: awsMedialiveChannelNetworkInputSettingsPropertyToHclTerraform(struct!.networkInputSettings),
+      value: tfChannelNetworkInputSettingsPropertyToHclTerraform(struct!.networkInputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkInputSettingsPropertyList",
     },
     video_selector: {
-      value: awsMedialiveChannelVideoSelectorPropertyToHclTerraform(struct!.videoSelector),
+      value: tfChannelVideoSelectorPropertyToHclTerraform(struct!.videoSelector),
       isBlock: true,
       type: "list",
       storageClassType: "VideoSelectorPropertyList",
@@ -8957,7 +8957,7 @@ export function awsMedialiveChannelInputSettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsMedialiveChannelInputAttachmentsPropertyToTerraform(struct?: AwsMedialiveChannel.InputAttachmentsProperty | cdktn.IResolvable): any {
+export function tfChannelInputAttachmentsPropertyToTerraform(struct?: TfChannel.InputAttachmentsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8965,13 +8965,13 @@ export function awsMedialiveChannelInputAttachmentsPropertyToTerraform(struct?: 
   return {
     input_attachment_name: cdktn.stringToTerraform(struct!.inputAttachmentName),
     input_id: cdktn.stringToTerraform(struct!.inputId),
-    automatic_input_failover_settings: awsMedialiveChannelAutomaticInputFailoverSettingsPropertyToTerraform(struct!.automaticInputFailoverSettings),
-    input_settings: awsMedialiveChannelInputSettingsPropertyToTerraform(struct!.inputSettings),
+    automatic_input_failover_settings: tfChannelAutomaticInputFailoverSettingsPropertyToTerraform(struct!.automaticInputFailoverSettings),
+    input_settings: tfChannelInputSettingsPropertyToTerraform(struct!.inputSettings),
   }
 }
 
 
-export function awsMedialiveChannelInputAttachmentsPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputAttachmentsProperty | cdktn.IResolvable): any {
+export function tfChannelInputAttachmentsPropertyToHclTerraform(struct?: TfChannel.InputAttachmentsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -8990,13 +8990,13 @@ export function awsMedialiveChannelInputAttachmentsPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     automatic_input_failover_settings: {
-      value: awsMedialiveChannelAutomaticInputFailoverSettingsPropertyToHclTerraform(struct!.automaticInputFailoverSettings),
+      value: tfChannelAutomaticInputFailoverSettingsPropertyToHclTerraform(struct!.automaticInputFailoverSettings),
       isBlock: true,
       type: "list",
       storageClassType: "AutomaticInputFailoverSettingsPropertyList",
     },
     input_settings: {
-      value: awsMedialiveChannelInputSettingsPropertyToHclTerraform(struct!.inputSettings),
+      value: tfChannelInputSettingsPropertyToHclTerraform(struct!.inputSettings),
       isBlock: true,
       type: "list",
       storageClassType: "InputSettingsPropertyList",
@@ -9008,7 +9008,7 @@ export function awsMedialiveChannelInputAttachmentsPropertyToHclTerraform(struct
 }
 
 
-export function awsMedialiveChannelInputSpecificationPropertyToTerraform(struct?: AwsMedialiveChannel.InputSpecificationPropertyOutputReference | AwsMedialiveChannel.InputSpecificationProperty): any {
+export function tfChannelInputSpecificationPropertyToTerraform(struct?: TfChannel.InputSpecificationPropertyOutputReference | TfChannel.InputSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9021,7 +9021,7 @@ export function awsMedialiveChannelInputSpecificationPropertyToTerraform(struct?
 }
 
 
-export function awsMedialiveChannelInputSpecificationPropertyToHclTerraform(struct?: AwsMedialiveChannel.InputSpecificationPropertyOutputReference | AwsMedialiveChannel.InputSpecificationProperty): any {
+export function tfChannelInputSpecificationPropertyToHclTerraform(struct?: TfChannel.InputSpecificationPropertyOutputReference | TfChannel.InputSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9052,7 +9052,7 @@ export function awsMedialiveChannelInputSpecificationPropertyToHclTerraform(stru
 }
 
 
-export function awsMedialiveChannelMaintenancePropertyToTerraform(struct?: AwsMedialiveChannel.MaintenancePropertyOutputReference | AwsMedialiveChannel.MaintenanceProperty): any {
+export function tfChannelMaintenancePropertyToTerraform(struct?: TfChannel.MaintenancePropertyOutputReference | TfChannel.MaintenanceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9064,7 +9064,7 @@ export function awsMedialiveChannelMaintenancePropertyToTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelMaintenancePropertyToHclTerraform(struct?: AwsMedialiveChannel.MaintenancePropertyOutputReference | AwsMedialiveChannel.MaintenanceProperty): any {
+export function tfChannelMaintenancePropertyToHclTerraform(struct?: TfChannel.MaintenancePropertyOutputReference | TfChannel.MaintenanceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9089,7 +9089,7 @@ export function awsMedialiveChannelMaintenancePropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsMedialiveChannelTimeoutsPropertyToTerraform(struct?: AwsMedialiveChannel.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfChannelTimeoutsPropertyToTerraform(struct?: TfChannel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9102,7 +9102,7 @@ export function awsMedialiveChannelTimeoutsPropertyToTerraform(struct?: AwsMedia
 }
 
 
-export function awsMedialiveChannelTimeoutsPropertyToHclTerraform(struct?: AwsMedialiveChannel.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfChannelTimeoutsPropertyToHclTerraform(struct?: TfChannel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9133,7 +9133,7 @@ export function awsMedialiveChannelTimeoutsPropertyToHclTerraform(struct?: AwsMe
 }
 
 
-export function awsMedialiveChannelVpcPropertyToTerraform(struct?: AwsMedialiveChannel.VpcPropertyOutputReference | AwsMedialiveChannel.VpcProperty): any {
+export function tfChannelVpcPropertyToTerraform(struct?: TfChannel.VpcPropertyOutputReference | TfChannel.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9146,7 +9146,7 @@ export function awsMedialiveChannelVpcPropertyToTerraform(struct?: AwsMedialiveC
 }
 
 
-export function awsMedialiveChannelVpcPropertyToHclTerraform(struct?: AwsMedialiveChannel.VpcPropertyOutputReference | AwsMedialiveChannel.VpcProperty): any {
+export function tfChannelVpcPropertyToHclTerraform(struct?: TfChannel.VpcPropertyOutputReference | TfChannel.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -9177,10 +9177,10 @@ export function awsMedialiveChannelVpcPropertyToHclTerraform(struct?: AwsMediali
 }
 
 
-export namespace AwsMedialiveChannel {
+export namespace TfChannel {
 export interface CdiInputSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#resolution AwsMedialiveChannel#resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#resolution TfChannel#resolution}
   */
   readonly resolution: string;
 }
@@ -9231,7 +9231,7 @@ export class CdiInputSpecificationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface MediaPackageSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channel_id AwsMedialiveChannel#channel_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channel_id TfChannel#channel_id}
   */
   readonly channelId: string;
 }
@@ -9314,11 +9314,11 @@ export class MediaPackageSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface MultiplexSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_id AwsMedialiveChannel#multiplex_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_id TfChannel#multiplex_id}
   */
   readonly multiplexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_name AwsMedialiveChannel#program_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_name TfChannel#program_name}
   */
   readonly programName: string;
 }
@@ -9388,19 +9388,19 @@ export class MultiplexSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param AwsMedialiveChannel#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param TfChannel#password_param}
   */
   readonly passwordParam?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_name AwsMedialiveChannel#stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_name TfChannel#stream_name}
   */
   readonly streamName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#url AwsMedialiveChannel#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#url TfChannel#url}
   */
   readonly url?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username AwsMedialiveChannel#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username TfChannel#username}
   */
   readonly username?: string;
 }
@@ -9552,7 +9552,7 @@ export class SettingsPropertyList extends cdktn.ComplexList {
 }
 export interface DestinationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#id AwsMedialiveChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#id TfChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -9561,19 +9561,19 @@ export interface DestinationsProperty {
   /**
   * media_package_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_package_settings AwsMedialiveChannel#media_package_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_package_settings TfChannel#media_package_settings}
   */
   readonly mediaPackageSettings?: MediaPackageSettingsProperty[] | cdktn.IResolvable;
   /**
   * multiplex_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_settings AwsMedialiveChannel#multiplex_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_settings TfChannel#multiplex_settings}
   */
   readonly multiplexSettings?: MultiplexSettingsProperty;
   /**
   * settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#settings AwsMedialiveChannel#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#settings TfChannel#settings}
   */
   readonly settings?: SettingsProperty[] | cdktn.IResolvable;
 }
@@ -9722,15 +9722,15 @@ export class DestinationsPropertyList extends cdktn.ComplexList {
 }
 export interface AudioNormalizationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#algorithm AwsMedialiveChannel#algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#algorithm TfChannel#algorithm}
   */
   readonly algorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#algorithm_control AwsMedialiveChannel#algorithm_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#algorithm_control TfChannel#algorithm_control}
   */
   readonly algorithmControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#target_lkfs AwsMedialiveChannel#target_lkfs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#target_lkfs TfChannel#target_lkfs}
   */
   readonly targetLkfs?: number;
 }
@@ -9828,15 +9828,15 @@ export class AudioNormalizationSettingsPropertyOutputReference extends cdktn.Com
 }
 export interface NielsenCbetSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cbet_check_digit_string AwsMedialiveChannel#cbet_check_digit_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cbet_check_digit_string TfChannel#cbet_check_digit_string}
   */
   readonly cbetCheckDigitString: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cbet_stepaside AwsMedialiveChannel#cbet_stepaside}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cbet_stepaside TfChannel#cbet_stepaside}
   */
   readonly cbetStepaside: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#csid AwsMedialiveChannel#csid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#csid TfChannel#csid}
   */
   readonly csid: string;
 }
@@ -9925,11 +9925,11 @@ export class NielsenCbetSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface NielsenNaesIiNwSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#check_digit_string AwsMedialiveChannel#check_digit_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#check_digit_string TfChannel#check_digit_string}
   */
   readonly checkDigitString: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sid AwsMedialiveChannel#sid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sid TfChannel#sid}
   */
   readonly sid: number;
 }
@@ -10031,19 +10031,19 @@ export class NielsenNaesIiNwSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface NielsenWatermarksSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_distribution_type AwsMedialiveChannel#nielsen_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_distribution_type TfChannel#nielsen_distribution_type}
   */
   readonly nielsenDistributionType?: string;
   /**
   * nielsen_cbet_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_cbet_settings AwsMedialiveChannel#nielsen_cbet_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_cbet_settings TfChannel#nielsen_cbet_settings}
   */
   readonly nielsenCbetSettings?: NielsenCbetSettingsProperty;
   /**
   * nielsen_naes_ii_nw_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_naes_ii_nw_settings AwsMedialiveChannel#nielsen_naes_ii_nw_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_naes_ii_nw_settings TfChannel#nielsen_naes_ii_nw_settings}
   */
   readonly nielsenNaesIiNwSettings?: NielsenNaesIiNwSettingsProperty[] | cdktn.IResolvable;
 }
@@ -10143,7 +10143,7 @@ export interface AudioWatermarkSettingsProperty {
   /**
   * nielsen_watermarks_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_watermarks_settings AwsMedialiveChannel#nielsen_watermarks_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_watermarks_settings TfChannel#nielsen_watermarks_settings}
   */
   readonly nielsenWatermarksSettings?: NielsenWatermarksSettingsProperty;
 }
@@ -10197,39 +10197,39 @@ export class AudioWatermarkSettingsPropertyOutputReference extends cdktn.Complex
 }
 export interface AacSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode AwsMedialiveChannel#coding_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode TfChannel#coding_mode}
   */
   readonly codingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_type AwsMedialiveChannel#input_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_type TfChannel#input_type}
   */
   readonly inputType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#profile AwsMedialiveChannel#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#profile TfChannel#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_control_mode AwsMedialiveChannel#rate_control_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_control_mode TfChannel#rate_control_mode}
   */
   readonly rateControlMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#raw_format AwsMedialiveChannel#raw_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#raw_format TfChannel#raw_format}
   */
   readonly rawFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sample_rate AwsMedialiveChannel#sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sample_rate TfChannel#sample_rate}
   */
   readonly sampleRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#spec AwsMedialiveChannel#spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#spec TfChannel#spec}
   */
   readonly spec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#vbr_quality AwsMedialiveChannel#vbr_quality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#vbr_quality TfChannel#vbr_quality}
   */
   readonly vbrQuality?: string;
 }
@@ -10459,31 +10459,31 @@ export class AacSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface Ac3SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitstream_mode AwsMedialiveChannel#bitstream_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitstream_mode TfChannel#bitstream_mode}
   */
   readonly bitstreamMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode AwsMedialiveChannel#coding_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode TfChannel#coding_mode}
   */
   readonly codingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dialnorm AwsMedialiveChannel#dialnorm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dialnorm TfChannel#dialnorm}
   */
   readonly dialnorm?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_profile AwsMedialiveChannel#drc_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_profile TfChannel#drc_profile}
   */
   readonly drcProfile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lfe_filter AwsMedialiveChannel#lfe_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lfe_filter TfChannel#lfe_filter}
   */
   readonly lfeFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#metadata_control AwsMedialiveChannel#metadata_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#metadata_control TfChannel#metadata_control}
   */
   readonly metadataControl?: string;
 }
@@ -10669,31 +10669,31 @@ export class Ac3SettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface Eac3AtmosSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode AwsMedialiveChannel#coding_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode TfChannel#coding_mode}
   */
   readonly codingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dialnorm AwsMedialiveChannel#dialnorm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dialnorm TfChannel#dialnorm}
   */
   readonly dialnorm?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_line AwsMedialiveChannel#drc_line}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_line TfChannel#drc_line}
   */
   readonly drcLine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_rf AwsMedialiveChannel#drc_rf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_rf TfChannel#drc_rf}
   */
   readonly drcRf?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#height_trim AwsMedialiveChannel#height_trim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#height_trim TfChannel#height_trim}
   */
   readonly heightTrim?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#surround_trim AwsMedialiveChannel#surround_trim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#surround_trim TfChannel#surround_trim}
   */
   readonly surroundTrim?: number;
 }
@@ -10879,83 +10879,83 @@ export class Eac3AtmosSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface Eac3SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#attenuation_control AwsMedialiveChannel#attenuation_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#attenuation_control TfChannel#attenuation_control}
   */
   readonly attenuationControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitstream_mode AwsMedialiveChannel#bitstream_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitstream_mode TfChannel#bitstream_mode}
   */
   readonly bitstreamMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode AwsMedialiveChannel#coding_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode TfChannel#coding_mode}
   */
   readonly codingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dc_filter AwsMedialiveChannel#dc_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dc_filter TfChannel#dc_filter}
   */
   readonly dcFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dialnorm AwsMedialiveChannel#dialnorm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dialnorm TfChannel#dialnorm}
   */
   readonly dialnorm?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_line AwsMedialiveChannel#drc_line}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_line TfChannel#drc_line}
   */
   readonly drcLine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_rf AwsMedialiveChannel#drc_rf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#drc_rf TfChannel#drc_rf}
   */
   readonly drcRf?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lfe_control AwsMedialiveChannel#lfe_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lfe_control TfChannel#lfe_control}
   */
   readonly lfeControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lfe_filter AwsMedialiveChannel#lfe_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lfe_filter TfChannel#lfe_filter}
   */
   readonly lfeFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lo_ro_center_mix_level AwsMedialiveChannel#lo_ro_center_mix_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lo_ro_center_mix_level TfChannel#lo_ro_center_mix_level}
   */
   readonly loRoCenterMixLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lo_ro_surround_mix_level AwsMedialiveChannel#lo_ro_surround_mix_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lo_ro_surround_mix_level TfChannel#lo_ro_surround_mix_level}
   */
   readonly loRoSurroundMixLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lt_rt_center_mix_level AwsMedialiveChannel#lt_rt_center_mix_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lt_rt_center_mix_level TfChannel#lt_rt_center_mix_level}
   */
   readonly ltRtCenterMixLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lt_rt_surround_mix_level AwsMedialiveChannel#lt_rt_surround_mix_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#lt_rt_surround_mix_level TfChannel#lt_rt_surround_mix_level}
   */
   readonly ltRtSurroundMixLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#metadata_control AwsMedialiveChannel#metadata_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#metadata_control TfChannel#metadata_control}
   */
   readonly metadataControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#passthrough_control AwsMedialiveChannel#passthrough_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#passthrough_control TfChannel#passthrough_control}
   */
   readonly passthroughControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#phase_control AwsMedialiveChannel#phase_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#phase_control TfChannel#phase_control}
   */
   readonly phaseControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stereo_downmix AwsMedialiveChannel#stereo_downmix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stereo_downmix TfChannel#stereo_downmix}
   */
   readonly stereoDownmix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#surround_ex_mode AwsMedialiveChannel#surround_ex_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#surround_ex_mode TfChannel#surround_ex_mode}
   */
   readonly surroundExMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#surround_mode AwsMedialiveChannel#surround_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#surround_mode TfChannel#surround_mode}
   */
   readonly surroundMode?: string;
 }
@@ -11427,15 +11427,15 @@ export class Eac3SettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface Mp2SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode AwsMedialiveChannel#coding_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode TfChannel#coding_mode}
   */
   readonly codingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sample_rate AwsMedialiveChannel#sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sample_rate TfChannel#sample_rate}
   */
   readonly sampleRate?: number;
 }
@@ -11561,15 +11561,15 @@ export class PassThroughSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface WavSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bit_depth AwsMedialiveChannel#bit_depth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bit_depth TfChannel#bit_depth}
   */
   readonly bitDepth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode AwsMedialiveChannel#coding_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#coding_mode TfChannel#coding_mode}
   */
   readonly codingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sample_rate AwsMedialiveChannel#sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sample_rate TfChannel#sample_rate}
   */
   readonly sampleRate?: number;
 }
@@ -11669,43 +11669,43 @@ export interface EncoderSettingsAudioDescriptionsCodecSettingsProperty {
   /**
   * aac_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#aac_settings AwsMedialiveChannel#aac_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#aac_settings TfChannel#aac_settings}
   */
   readonly aacSettings?: AacSettingsProperty;
   /**
   * ac3_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ac3_settings AwsMedialiveChannel#ac3_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ac3_settings TfChannel#ac3_settings}
   */
   readonly ac3Settings?: Ac3SettingsProperty;
   /**
   * eac3_atmos_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#eac3_atmos_settings AwsMedialiveChannel#eac3_atmos_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#eac3_atmos_settings TfChannel#eac3_atmos_settings}
   */
   readonly eac3AtmosSettings?: Eac3AtmosSettingsProperty;
   /**
   * eac3_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#eac3_settings AwsMedialiveChannel#eac3_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#eac3_settings TfChannel#eac3_settings}
   */
   readonly eac3Settings?: Eac3SettingsProperty;
   /**
   * mp2_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mp2_settings AwsMedialiveChannel#mp2_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mp2_settings TfChannel#mp2_settings}
   */
   readonly mp2Settings?: Mp2SettingsProperty;
   /**
   * pass_through_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pass_through_settings AwsMedialiveChannel#pass_through_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pass_through_settings TfChannel#pass_through_settings}
   */
   readonly passThroughSettings?: PassThroughSettingsProperty;
   /**
   * wav_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#wav_settings AwsMedialiveChannel#wav_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#wav_settings TfChannel#wav_settings}
   */
   readonly wavSettings?: WavSettingsProperty;
 }
@@ -11891,11 +11891,11 @@ export class EncoderSettingsAudioDescriptionsCodecSettingsPropertyOutputReferenc
 }
 export interface InputChannelLevelsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gain AwsMedialiveChannel#gain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gain TfChannel#gain}
   */
   readonly gain: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_channel AwsMedialiveChannel#input_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_channel TfChannel#input_channel}
   */
   readonly inputChannel: number;
 }
@@ -11997,13 +11997,13 @@ export class InputChannelLevelsPropertyList extends cdktn.ComplexList {
 }
 export interface ChannelMappingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_channel AwsMedialiveChannel#output_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_channel TfChannel#output_channel}
   */
   readonly outputChannel: number;
   /**
   * input_channel_levels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_channel_levels AwsMedialiveChannel#input_channel_levels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_channel_levels TfChannel#input_channel_levels}
   */
   readonly inputChannelLevels: InputChannelLevelsProperty[] | cdktn.IResolvable;
 }
@@ -12105,17 +12105,17 @@ export class ChannelMappingsPropertyList extends cdktn.ComplexList {
 }
 export interface RemixSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channels_in AwsMedialiveChannel#channels_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channels_in TfChannel#channels_in}
   */
   readonly channelsIn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channels_out AwsMedialiveChannel#channels_out}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channels_out TfChannel#channels_out}
   */
   readonly channelsOut?: number;
   /**
   * channel_mappings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channel_mappings AwsMedialiveChannel#channel_mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#channel_mappings TfChannel#channel_mappings}
   */
   readonly channelMappings: ChannelMappingsProperty[] | cdktn.IResolvable;
 }
@@ -12210,55 +12210,55 @@ export class RemixSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AudioDescriptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_selector_name AwsMedialiveChannel#audio_selector_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_selector_name TfChannel#audio_selector_name}
   */
   readonly audioSelectorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_type AwsMedialiveChannel#audio_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_type TfChannel#audio_type}
   */
   readonly audioType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_type_control AwsMedialiveChannel#audio_type_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_type_control TfChannel#audio_type_control}
   */
   readonly audioTypeControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code AwsMedialiveChannel#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code TfChannel#language_code}
   */
   readonly languageCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code_control AwsMedialiveChannel#language_code_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code_control TfChannel#language_code_control}
   */
   readonly languageCodeControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_name AwsMedialiveChannel#stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_name TfChannel#stream_name}
   */
   readonly streamName?: string;
   /**
   * audio_normalization_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_normalization_settings AwsMedialiveChannel#audio_normalization_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_normalization_settings TfChannel#audio_normalization_settings}
   */
   readonly audioNormalizationSettings?: AudioNormalizationSettingsProperty;
   /**
   * audio_watermark_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_watermark_settings AwsMedialiveChannel#audio_watermark_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_watermark_settings TfChannel#audio_watermark_settings}
   */
   readonly audioWatermarkSettings?: AudioWatermarkSettingsProperty;
   /**
   * codec_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec_settings AwsMedialiveChannel#codec_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec_settings TfChannel#codec_settings}
   */
   readonly codecSettings?: EncoderSettingsAudioDescriptionsCodecSettingsProperty;
   /**
   * remix_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#remix_settings AwsMedialiveChannel#remix_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#remix_settings TfChannel#remix_settings}
   */
   readonly remixSettings?: RemixSettingsProperty;
 }
@@ -12558,15 +12558,15 @@ export class AudioDescriptionsPropertyList extends cdktn.ComplexList {
 }
 export interface AvailBlankingImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param AwsMedialiveChannel#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param TfChannel#password_param}
   */
   readonly passwordParam?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri AwsMedialiveChannel#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri TfChannel#uri}
   */
   readonly uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username AwsMedialiveChannel#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username TfChannel#username}
   */
   readonly username?: string;
 }
@@ -12661,13 +12661,13 @@ export class AvailBlankingImagePropertyOutputReference extends cdktn.ComplexObje
 }
 export interface AvailBlankingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#state AwsMedialiveChannel#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#state TfChannel#state}
   */
   readonly state?: string;
   /**
   * avail_blanking_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#avail_blanking_image AwsMedialiveChannel#avail_blanking_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#avail_blanking_image TfChannel#avail_blanking_image}
   */
   readonly availBlankingImage?: AvailBlankingImageProperty;
 }
@@ -12771,15 +12771,15 @@ export class AribDestinationSettingsPropertyOutputReference extends cdktn.Comple
 }
 export interface EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param AwsMedialiveChannel#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param TfChannel#password_param}
   */
   readonly passwordParam?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri AwsMedialiveChannel#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri TfChannel#uri}
   */
   readonly uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username AwsMedialiveChannel#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username TfChannel#username}
   */
   readonly username?: string;
 }
@@ -12874,73 +12874,73 @@ export class EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinat
 }
 export interface BurnInDestinationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#alignment AwsMedialiveChannel#alignment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#alignment TfChannel#alignment}
   */
   readonly alignment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_color AwsMedialiveChannel#background_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_color TfChannel#background_color}
   */
   readonly backgroundColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_opacity AwsMedialiveChannel#background_opacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_opacity TfChannel#background_opacity}
   */
   readonly backgroundOpacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_color AwsMedialiveChannel#font_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_color TfChannel#font_color}
   */
   readonly fontColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_opacity AwsMedialiveChannel#font_opacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_opacity TfChannel#font_opacity}
   */
   readonly fontOpacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_resolution AwsMedialiveChannel#font_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_resolution TfChannel#font_resolution}
   */
   readonly fontResolution?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_size AwsMedialiveChannel#font_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_size TfChannel#font_size}
   */
   readonly fontSize?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_color AwsMedialiveChannel#outline_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_color TfChannel#outline_color}
   */
   readonly outlineColor: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_size AwsMedialiveChannel#outline_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_size TfChannel#outline_size}
   */
   readonly outlineSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_color AwsMedialiveChannel#shadow_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_color TfChannel#shadow_color}
   */
   readonly shadowColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_opacity AwsMedialiveChannel#shadow_opacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_opacity TfChannel#shadow_opacity}
   */
   readonly shadowOpacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_x_offset AwsMedialiveChannel#shadow_x_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_x_offset TfChannel#shadow_x_offset}
   */
   readonly shadowXOffset?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_y_offset AwsMedialiveChannel#shadow_y_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_y_offset TfChannel#shadow_y_offset}
   */
   readonly shadowYOffset?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_grid_control AwsMedialiveChannel#teletext_grid_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_grid_control TfChannel#teletext_grid_control}
   */
   readonly teletextGridControl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#x_position AwsMedialiveChannel#x_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#x_position TfChannel#x_position}
   */
   readonly xPosition?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#y_position AwsMedialiveChannel#y_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#y_position TfChannel#y_position}
   */
   readonly yPosition?: number;
   /**
   * font block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font AwsMedialiveChannel#font}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font TfChannel#font}
   */
   readonly font?: EncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFontProperty;
 }
@@ -13340,15 +13340,15 @@ export class BurnInDestinationSettingsPropertyOutputReference extends cdktn.Comp
 }
 export interface EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param AwsMedialiveChannel#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param TfChannel#password_param}
   */
   readonly passwordParam?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri AwsMedialiveChannel#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri TfChannel#uri}
   */
   readonly uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username AwsMedialiveChannel#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username TfChannel#username}
   */
   readonly username?: string;
 }
@@ -13443,73 +13443,73 @@ export class EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinat
 }
 export interface DvbSubDestinationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#alignment AwsMedialiveChannel#alignment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#alignment TfChannel#alignment}
   */
   readonly alignment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_color AwsMedialiveChannel#background_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_color TfChannel#background_color}
   */
   readonly backgroundColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_opacity AwsMedialiveChannel#background_opacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#background_opacity TfChannel#background_opacity}
   */
   readonly backgroundOpacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_color AwsMedialiveChannel#font_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_color TfChannel#font_color}
   */
   readonly fontColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_opacity AwsMedialiveChannel#font_opacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_opacity TfChannel#font_opacity}
   */
   readonly fontOpacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_resolution AwsMedialiveChannel#font_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_resolution TfChannel#font_resolution}
   */
   readonly fontResolution?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_size AwsMedialiveChannel#font_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_size TfChannel#font_size}
   */
   readonly fontSize?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_color AwsMedialiveChannel#outline_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_color TfChannel#outline_color}
   */
   readonly outlineColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_size AwsMedialiveChannel#outline_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outline_size TfChannel#outline_size}
   */
   readonly outlineSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_color AwsMedialiveChannel#shadow_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_color TfChannel#shadow_color}
   */
   readonly shadowColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_opacity AwsMedialiveChannel#shadow_opacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_opacity TfChannel#shadow_opacity}
   */
   readonly shadowOpacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_x_offset AwsMedialiveChannel#shadow_x_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_x_offset TfChannel#shadow_x_offset}
   */
   readonly shadowXOffset?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_y_offset AwsMedialiveChannel#shadow_y_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#shadow_y_offset TfChannel#shadow_y_offset}
   */
   readonly shadowYOffset?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_grid_control AwsMedialiveChannel#teletext_grid_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_grid_control TfChannel#teletext_grid_control}
   */
   readonly teletextGridControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#x_position AwsMedialiveChannel#x_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#x_position TfChannel#x_position}
   */
   readonly xPosition?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#y_position AwsMedialiveChannel#y_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#y_position TfChannel#y_position}
   */
   readonly yPosition?: number;
   /**
   * font block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font AwsMedialiveChannel#font}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font TfChannel#font}
   */
   readonly font?: EncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFontProperty;
 }
@@ -13915,19 +13915,19 @@ export class DvbSubDestinationSettingsPropertyOutputReference extends cdktn.Comp
 }
 export interface EbuTtDDestinationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#copyright_holder AwsMedialiveChannel#copyright_holder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#copyright_holder TfChannel#copyright_holder}
   */
   readonly copyrightHolder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fill_line_gap AwsMedialiveChannel#fill_line_gap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fill_line_gap TfChannel#fill_line_gap}
   */
   readonly fillLineGap?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_family AwsMedialiveChannel#font_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#font_family TfChannel#font_family}
   */
   readonly fontFamily?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#style_control AwsMedialiveChannel#style_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#style_control TfChannel#style_control}
   */
   readonly styleControl?: string;
 }
@@ -14243,7 +14243,7 @@ export class TeletextDestinationSettingsPropertyOutputReference extends cdktn.Co
 }
 export interface TtmlDestinationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#style_control AwsMedialiveChannel#style_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#style_control TfChannel#style_control}
   */
   readonly styleControl: string;
 }
@@ -14294,7 +14294,7 @@ export class TtmlDestinationSettingsPropertyOutputReference extends cdktn.Comple
 }
 export interface WebvttDestinationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#style_control AwsMedialiveChannel#style_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#style_control TfChannel#style_control}
   */
   readonly styleControl: string;
 }
@@ -14347,79 +14347,79 @@ export interface DestinationSettingsProperty {
   /**
   * arib_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_destination_settings AwsMedialiveChannel#arib_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_destination_settings TfChannel#arib_destination_settings}
   */
   readonly aribDestinationSettings?: AribDestinationSettingsProperty;
   /**
   * burn_in_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#burn_in_destination_settings AwsMedialiveChannel#burn_in_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#burn_in_destination_settings TfChannel#burn_in_destination_settings}
   */
   readonly burnInDestinationSettings?: BurnInDestinationSettingsProperty;
   /**
   * dvb_sub_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_destination_settings AwsMedialiveChannel#dvb_sub_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_destination_settings TfChannel#dvb_sub_destination_settings}
   */
   readonly dvbSubDestinationSettings?: DvbSubDestinationSettingsProperty;
   /**
   * ebu_tt_d_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebu_tt_d_destination_settings AwsMedialiveChannel#ebu_tt_d_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebu_tt_d_destination_settings TfChannel#ebu_tt_d_destination_settings}
   */
   readonly ebuTtDDestinationSettings?: EbuTtDDestinationSettingsProperty;
   /**
   * embedded_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#embedded_destination_settings AwsMedialiveChannel#embedded_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#embedded_destination_settings TfChannel#embedded_destination_settings}
   */
   readonly embeddedDestinationSettings?: EmbeddedDestinationSettingsProperty;
   /**
   * embedded_plus_scte20_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#embedded_plus_scte20_destination_settings AwsMedialiveChannel#embedded_plus_scte20_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#embedded_plus_scte20_destination_settings TfChannel#embedded_plus_scte20_destination_settings}
   */
   readonly embeddedPlusScte20DestinationSettings?: EmbeddedPlusScte20DestinationSettingsProperty;
   /**
   * rtmp_caption_info_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rtmp_caption_info_destination_settings AwsMedialiveChannel#rtmp_caption_info_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rtmp_caption_info_destination_settings TfChannel#rtmp_caption_info_destination_settings}
   */
   readonly rtmpCaptionInfoDestinationSettings?: RtmpCaptionInfoDestinationSettingsProperty;
   /**
   * scte20_plus_embedded_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte20_plus_embedded_destination_settings AwsMedialiveChannel#scte20_plus_embedded_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte20_plus_embedded_destination_settings TfChannel#scte20_plus_embedded_destination_settings}
   */
   readonly scte20PlusEmbeddedDestinationSettings?: Scte20PlusEmbeddedDestinationSettingsProperty;
   /**
   * scte27_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_destination_settings AwsMedialiveChannel#scte27_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_destination_settings TfChannel#scte27_destination_settings}
   */
   readonly scte27DestinationSettings?: Scte27DestinationSettingsProperty;
   /**
   * smpte_tt_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#smpte_tt_destination_settings AwsMedialiveChannel#smpte_tt_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#smpte_tt_destination_settings TfChannel#smpte_tt_destination_settings}
   */
   readonly smpteTtDestinationSettings?: SmpteTtDestinationSettingsProperty;
   /**
   * teletext_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_destination_settings AwsMedialiveChannel#teletext_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_destination_settings TfChannel#teletext_destination_settings}
   */
   readonly teletextDestinationSettings?: TeletextDestinationSettingsProperty;
   /**
   * ttml_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ttml_destination_settings AwsMedialiveChannel#ttml_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ttml_destination_settings TfChannel#ttml_destination_settings}
   */
   readonly ttmlDestinationSettings?: TtmlDestinationSettingsProperty;
   /**
   * webvtt_destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#webvtt_destination_settings AwsMedialiveChannel#webvtt_destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#webvtt_destination_settings TfChannel#webvtt_destination_settings}
   */
   readonly webvttDestinationSettings?: WebvttDestinationSettingsProperty;
 }
@@ -14737,29 +14737,29 @@ export class DestinationSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface CaptionDescriptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#accessibility AwsMedialiveChannel#accessibility}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#accessibility TfChannel#accessibility}
   */
   readonly accessibility?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_selector_name AwsMedialiveChannel#caption_selector_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_selector_name TfChannel#caption_selector_name}
   */
   readonly captionSelectorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code AwsMedialiveChannel#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code TfChannel#language_code}
   */
   readonly languageCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_description AwsMedialiveChannel#language_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_description TfChannel#language_description}
   */
   readonly languageDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name: string;
   /**
   * destination_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_settings AwsMedialiveChannel#destination_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_settings TfChannel#destination_settings}
   */
   readonly destinationSettings?: DestinationSettingsProperty;
 }
@@ -14949,15 +14949,15 @@ export class CaptionDescriptionsPropertyList extends cdktn.ComplexList {
 }
 export interface InputLossImageSlateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param AwsMedialiveChannel#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param TfChannel#password_param}
   */
   readonly passwordParam?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri AwsMedialiveChannel#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri TfChannel#uri}
   */
   readonly uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username AwsMedialiveChannel#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username TfChannel#username}
   */
   readonly username?: string;
 }
@@ -15052,25 +15052,25 @@ export class InputLossImageSlatePropertyOutputReference extends cdktn.ComplexObj
 }
 export interface InputLossBehaviorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#black_frame_msec AwsMedialiveChannel#black_frame_msec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#black_frame_msec TfChannel#black_frame_msec}
   */
   readonly blackFrameMsec?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_image_color AwsMedialiveChannel#input_loss_image_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_image_color TfChannel#input_loss_image_color}
   */
   readonly inputLossImageColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_image_type AwsMedialiveChannel#input_loss_image_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_image_type TfChannel#input_loss_image_type}
   */
   readonly inputLossImageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#repeat_frame_msec AwsMedialiveChannel#repeat_frame_msec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#repeat_frame_msec TfChannel#repeat_frame_msec}
   */
   readonly repeatFrameMsec?: number;
   /**
   * input_loss_image_slate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_image_slate AwsMedialiveChannel#input_loss_image_slate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_image_slate TfChannel#input_loss_image_slate}
   */
   readonly inputLossImageSlate?: InputLossImageSlateProperty;
 }
@@ -15212,29 +15212,29 @@ export class InputLossBehaviorPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface GlobalConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#initial_audio_gain AwsMedialiveChannel#initial_audio_gain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#initial_audio_gain TfChannel#initial_audio_gain}
   */
   readonly initialAudioGain?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_end_action AwsMedialiveChannel#input_end_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_end_action TfChannel#input_end_action}
   */
   readonly inputEndAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_locking_mode AwsMedialiveChannel#output_locking_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_locking_mode TfChannel#output_locking_mode}
   */
   readonly outputLockingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_timing_source AwsMedialiveChannel#output_timing_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_timing_source TfChannel#output_timing_source}
   */
   readonly outputTimingSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#support_low_framerate_inputs AwsMedialiveChannel#support_low_framerate_inputs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#support_low_framerate_inputs TfChannel#support_low_framerate_inputs}
   */
   readonly supportLowFramerateInputs?: string;
   /**
   * input_loss_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_behavior AwsMedialiveChannel#input_loss_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_behavior TfChannel#input_loss_behavior}
   */
   readonly inputLossBehavior?: InputLossBehaviorProperty;
 }
@@ -15428,7 +15428,7 @@ export interface MotionGraphicsSettingsProperty {
   /**
   * html_motion_graphics_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#html_motion_graphics_settings AwsMedialiveChannel#html_motion_graphics_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#html_motion_graphics_settings TfChannel#html_motion_graphics_settings}
   */
   readonly htmlMotionGraphicsSettings?: HtmlMotionGraphicsSettingsProperty;
 }
@@ -15482,13 +15482,13 @@ export class MotionGraphicsSettingsPropertyOutputReference extends cdktn.Complex
 }
 export interface MotionGraphicsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#motion_graphics_insertion AwsMedialiveChannel#motion_graphics_insertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#motion_graphics_insertion TfChannel#motion_graphics_insertion}
   */
   readonly motionGraphicsInsertion?: string;
   /**
   * motion_graphics_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#motion_graphics_settings AwsMedialiveChannel#motion_graphics_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#motion_graphics_settings TfChannel#motion_graphics_settings}
   */
   readonly motionGraphicsSettings: MotionGraphicsSettingsProperty;
 }
@@ -15561,11 +15561,11 @@ export class MotionGraphicsConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface NielsenConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#distributor_id AwsMedialiveChannel#distributor_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#distributor_id TfChannel#distributor_id}
   */
   readonly distributorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_pcm_to_id3_tagging AwsMedialiveChannel#nielsen_pcm_to_id3_tagging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_pcm_to_id3_tagging TfChannel#nielsen_pcm_to_id3_tagging}
   */
   readonly nielsenPcmToId3Tagging?: string;
 }
@@ -15641,7 +15641,7 @@ export class NielsenConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ArchiveS3SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#canned_acl AwsMedialiveChannel#canned_acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#canned_acl TfChannel#canned_acl}
   */
   readonly cannedAcl?: string;
 }
@@ -15697,7 +15697,7 @@ export interface ArchiveCdnSettingsProperty {
   /**
   * archive_s3_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_s3_settings AwsMedialiveChannel#archive_s3_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_s3_settings TfChannel#archive_s3_settings}
   */
   readonly archiveS3Settings?: ArchiveS3SettingsProperty;
 }
@@ -15751,7 +15751,7 @@ export class ArchiveCdnSettingsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -15802,19 +15802,19 @@ export class EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsD
 }
 export interface ArchiveGroupSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rollover_interval AwsMedialiveChannel#rollover_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rollover_interval TfChannel#rollover_interval}
   */
   readonly rolloverInterval?: number;
   /**
   * archive_cdn_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_cdn_settings AwsMedialiveChannel#archive_cdn_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_cdn_settings TfChannel#archive_cdn_settings}
   */
   readonly archiveCdnSettings?: ArchiveCdnSettingsProperty;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestinationProperty;
 }
@@ -15941,7 +15941,7 @@ export class ArchiveGroupSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -15992,7 +15992,7 @@ export class EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSett
 }
 export interface FrameCaptureS3SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#canned_acl AwsMedialiveChannel#canned_acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#canned_acl TfChannel#canned_acl}
   */
   readonly cannedAcl?: string;
 }
@@ -16048,7 +16048,7 @@ export interface FrameCaptureCdnSettingsProperty {
   /**
   * frame_capture_s3_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_s3_settings AwsMedialiveChannel#frame_capture_s3_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_s3_settings TfChannel#frame_capture_s3_settings}
   */
   readonly frameCaptureS3Settings?: FrameCaptureS3SettingsProperty;
 }
@@ -16104,13 +16104,13 @@ export interface FrameCaptureGroupSettingsProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestinationProperty;
   /**
   * frame_capture_cdn_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_cdn_settings AwsMedialiveChannel#frame_capture_cdn_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_cdn_settings TfChannel#frame_capture_cdn_settings}
   */
   readonly frameCaptureCdnSettings?: FrameCaptureCdnSettingsProperty;
 }
@@ -16183,15 +16183,15 @@ export class FrameCaptureGroupSettingsPropertyOutputReference extends cdktn.Comp
 }
 export interface CaptionLanguageMappingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_channel AwsMedialiveChannel#caption_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_channel TfChannel#caption_channel}
   */
   readonly captionChannel: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code AwsMedialiveChannel#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code TfChannel#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_description AwsMedialiveChannel#language_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_description TfChannel#language_description}
   */
   readonly languageDescription: string;
 }
@@ -16312,7 +16312,7 @@ export class CaptionLanguageMappingsPropertyList extends cdktn.ComplexList {
 }
 export interface EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -16363,31 +16363,31 @@ export class EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDesti
 }
 export interface HlsAkamaiSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval AwsMedialiveChannel#connection_retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval TfChannel#connection_retry_interval}
   */
   readonly connectionRetryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration AwsMedialiveChannel#filecache_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration TfChannel#filecache_duration}
   */
   readonly filecacheDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#http_transfer_mode AwsMedialiveChannel#http_transfer_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#http_transfer_mode TfChannel#http_transfer_mode}
   */
   readonly httpTransferMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries AwsMedialiveChannel#num_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries TfChannel#num_retries}
   */
   readonly numRetries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay AwsMedialiveChannel#restart_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay TfChannel#restart_delay}
   */
   readonly restartDelay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#salt AwsMedialiveChannel#salt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#salt TfChannel#salt}
   */
   readonly salt?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#token AwsMedialiveChannel#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#token TfChannel#token}
   */
   readonly token?: string;
 }
@@ -16573,19 +16573,19 @@ export class HlsAkamaiSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface HlsBasicPutSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval AwsMedialiveChannel#connection_retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval TfChannel#connection_retry_interval}
   */
   readonly connectionRetryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration AwsMedialiveChannel#filecache_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration TfChannel#filecache_duration}
   */
   readonly filecacheDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries AwsMedialiveChannel#num_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries TfChannel#num_retries}
   */
   readonly numRetries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay AwsMedialiveChannel#restart_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay TfChannel#restart_delay}
   */
   readonly restartDelay?: number;
 }
@@ -16705,23 +16705,23 @@ export class HlsBasicPutSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface HlsMediaStoreSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval AwsMedialiveChannel#connection_retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval TfChannel#connection_retry_interval}
   */
   readonly connectionRetryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration AwsMedialiveChannel#filecache_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration TfChannel#filecache_duration}
   */
   readonly filecacheDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_store_storage_class AwsMedialiveChannel#media_store_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_store_storage_class TfChannel#media_store_storage_class}
   */
   readonly mediaStoreStorageClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries AwsMedialiveChannel#num_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries TfChannel#num_retries}
   */
   readonly numRetries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay AwsMedialiveChannel#restart_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay TfChannel#restart_delay}
   */
   readonly restartDelay?: number;
 }
@@ -16863,7 +16863,7 @@ export class HlsMediaStoreSettingsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface HlsS3SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#canned_acl AwsMedialiveChannel#canned_acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#canned_acl TfChannel#canned_acl}
   */
   readonly cannedAcl?: string;
 }
@@ -16917,23 +16917,23 @@ export class HlsS3SettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HlsWebdavSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval AwsMedialiveChannel#connection_retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval TfChannel#connection_retry_interval}
   */
   readonly connectionRetryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration AwsMedialiveChannel#filecache_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration TfChannel#filecache_duration}
   */
   readonly filecacheDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#http_transfer_mode AwsMedialiveChannel#http_transfer_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#http_transfer_mode TfChannel#http_transfer_mode}
   */
   readonly httpTransferMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries AwsMedialiveChannel#num_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries TfChannel#num_retries}
   */
   readonly numRetries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay AwsMedialiveChannel#restart_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay TfChannel#restart_delay}
   */
   readonly restartDelay?: number;
 }
@@ -17077,31 +17077,31 @@ export interface HlsCdnSettingsProperty {
   /**
   * hls_akamai_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_akamai_settings AwsMedialiveChannel#hls_akamai_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_akamai_settings TfChannel#hls_akamai_settings}
   */
   readonly hlsAkamaiSettings?: HlsAkamaiSettingsProperty;
   /**
   * hls_basic_put_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_basic_put_settings AwsMedialiveChannel#hls_basic_put_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_basic_put_settings TfChannel#hls_basic_put_settings}
   */
   readonly hlsBasicPutSettings?: HlsBasicPutSettingsProperty;
   /**
   * hls_media_store_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_media_store_settings AwsMedialiveChannel#hls_media_store_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_media_store_settings TfChannel#hls_media_store_settings}
   */
   readonly hlsMediaStoreSettings?: HlsMediaStoreSettingsProperty;
   /**
   * hls_s3_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_s3_settings AwsMedialiveChannel#hls_s3_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_s3_settings TfChannel#hls_s3_settings}
   */
   readonly hlsS3Settings?: HlsS3SettingsProperty;
   /**
   * hls_webdav_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_webdav_settings AwsMedialiveChannel#hls_webdav_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_webdav_settings TfChannel#hls_webdav_settings}
   */
   readonly hlsWebdavSettings?: HlsWebdavSettingsProperty;
 }
@@ -17275,15 +17275,15 @@ export class HlsCdnSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface KeyProviderServerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param AwsMedialiveChannel#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param TfChannel#password_param}
   */
   readonly passwordParam?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri AwsMedialiveChannel#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri TfChannel#uri}
   */
   readonly uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username AwsMedialiveChannel#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username TfChannel#username}
   */
   readonly username?: string;
 }
@@ -17378,13 +17378,13 @@ export class KeyProviderServerPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface StaticKeySettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#static_key_value AwsMedialiveChannel#static_key_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#static_key_value TfChannel#static_key_value}
   */
   readonly staticKeyValue: string;
   /**
   * key_provider_server block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_provider_server AwsMedialiveChannel#key_provider_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_provider_server TfChannel#key_provider_server}
   */
   readonly keyProviderServer?: KeyProviderServerProperty;
 }
@@ -17491,7 +17491,7 @@ export interface KeyProviderSettingsProperty {
   /**
   * static_key_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#static_key_settings AwsMedialiveChannel#static_key_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#static_key_settings TfChannel#static_key_settings}
   */
   readonly staticKeySettings?: StaticKeySettingsProperty[] | cdktn.IResolvable;
 }
@@ -17545,179 +17545,179 @@ export class KeyProviderSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface HlsGroupSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ad_markers AwsMedialiveChannel#ad_markers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ad_markers TfChannel#ad_markers}
   */
   readonly adMarkers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_content AwsMedialiveChannel#base_url_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_content TfChannel#base_url_content}
   */
   readonly baseUrlContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_content1 AwsMedialiveChannel#base_url_content1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_content1 TfChannel#base_url_content1}
   */
   readonly baseUrlContent1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_manifest AwsMedialiveChannel#base_url_manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_manifest TfChannel#base_url_manifest}
   */
   readonly baseUrlManifest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_manifest1 AwsMedialiveChannel#base_url_manifest1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#base_url_manifest1 TfChannel#base_url_manifest1}
   */
   readonly baseUrlManifest1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_language_setting AwsMedialiveChannel#caption_language_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_language_setting TfChannel#caption_language_setting}
   */
   readonly captionLanguageSetting?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#client_cache AwsMedialiveChannel#client_cache}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#client_cache TfChannel#client_cache}
   */
   readonly clientCache?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec_specification AwsMedialiveChannel#codec_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec_specification TfChannel#codec_specification}
   */
   readonly codecSpecification?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#constant_iv AwsMedialiveChannel#constant_iv}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#constant_iv TfChannel#constant_iv}
   */
   readonly constantIv?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#directory_structure AwsMedialiveChannel#directory_structure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#directory_structure TfChannel#directory_structure}
   */
   readonly directoryStructure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#discontinuity_tags AwsMedialiveChannel#discontinuity_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#discontinuity_tags TfChannel#discontinuity_tags}
   */
   readonly discontinuityTags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#encryption_type AwsMedialiveChannel#encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#encryption_type TfChannel#encryption_type}
   */
   readonly encryptionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_id3_segment_tagging AwsMedialiveChannel#hls_id3_segment_tagging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_id3_segment_tagging TfChannel#hls_id3_segment_tagging}
   */
   readonly hlsId3SegmentTagging?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#iframe_only_playlists AwsMedialiveChannel#iframe_only_playlists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#iframe_only_playlists TfChannel#iframe_only_playlists}
   */
   readonly iframeOnlyPlaylists?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#incomplete_segment_behavior AwsMedialiveChannel#incomplete_segment_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#incomplete_segment_behavior TfChannel#incomplete_segment_behavior}
   */
   readonly incompleteSegmentBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#index_n_segments AwsMedialiveChannel#index_n_segments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#index_n_segments TfChannel#index_n_segments}
   */
   readonly indexNSegments?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action AwsMedialiveChannel#input_loss_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action TfChannel#input_loss_action}
   */
   readonly inputLossAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#iv_in_manifest AwsMedialiveChannel#iv_in_manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#iv_in_manifest TfChannel#iv_in_manifest}
   */
   readonly ivInManifest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#iv_source AwsMedialiveChannel#iv_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#iv_source TfChannel#iv_source}
   */
   readonly ivSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#keep_segments AwsMedialiveChannel#keep_segments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#keep_segments TfChannel#keep_segments}
   */
   readonly keepSegments?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_format AwsMedialiveChannel#key_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_format TfChannel#key_format}
   */
   readonly keyFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_format_versions AwsMedialiveChannel#key_format_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_format_versions TfChannel#key_format_versions}
   */
   readonly keyFormatVersions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#manifest_compression AwsMedialiveChannel#manifest_compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#manifest_compression TfChannel#manifest_compression}
   */
   readonly manifestCompression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#manifest_duration_format AwsMedialiveChannel#manifest_duration_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#manifest_duration_format TfChannel#manifest_duration_format}
   */
   readonly manifestDurationFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_segment_length AwsMedialiveChannel#min_segment_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_segment_length TfChannel#min_segment_length}
   */
   readonly minSegmentLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mode AwsMedialiveChannel#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mode TfChannel#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_selection AwsMedialiveChannel#output_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_selection TfChannel#output_selection}
   */
   readonly outputSelection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_date_time AwsMedialiveChannel#program_date_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_date_time TfChannel#program_date_time}
   */
   readonly programDateTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_date_time_clock AwsMedialiveChannel#program_date_time_clock}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_date_time_clock TfChannel#program_date_time_clock}
   */
   readonly programDateTimeClock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_date_time_period AwsMedialiveChannel#program_date_time_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_date_time_period TfChannel#program_date_time_period}
   */
   readonly programDateTimePeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#redundant_manifest AwsMedialiveChannel#redundant_manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#redundant_manifest TfChannel#redundant_manifest}
   */
   readonly redundantManifest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segment_length AwsMedialiveChannel#segment_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segment_length TfChannel#segment_length}
   */
   readonly segmentLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segments_per_subdirectory AwsMedialiveChannel#segments_per_subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segments_per_subdirectory TfChannel#segments_per_subdirectory}
   */
   readonly segmentsPerSubdirectory?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_inf_resolution AwsMedialiveChannel#stream_inf_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_inf_resolution TfChannel#stream_inf_resolution}
   */
   readonly streamInfResolution?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_frame AwsMedialiveChannel#timed_metadata_id3_frame}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_frame TfChannel#timed_metadata_id3_frame}
   */
   readonly timedMetadataId3Frame?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_period AwsMedialiveChannel#timed_metadata_id3_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_period TfChannel#timed_metadata_id3_period}
   */
   readonly timedMetadataId3Period?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timestamp_delta_milliseconds AwsMedialiveChannel#timestamp_delta_milliseconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timestamp_delta_milliseconds TfChannel#timestamp_delta_milliseconds}
   */
   readonly timestampDeltaMilliseconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ts_file_mode AwsMedialiveChannel#ts_file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ts_file_mode TfChannel#ts_file_mode}
   */
   readonly tsFileMode?: string;
   /**
   * caption_language_mappings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_language_mappings AwsMedialiveChannel#caption_language_mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_language_mappings TfChannel#caption_language_mappings}
   */
   readonly captionLanguageMappings?: CaptionLanguageMappingsProperty[] | cdktn.IResolvable;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestinationProperty;
   /**
   * hls_cdn_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_cdn_settings AwsMedialiveChannel#hls_cdn_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_cdn_settings TfChannel#hls_cdn_settings}
   */
   readonly hlsCdnSettings?: HlsCdnSettingsProperty[] | cdktn.IResolvable;
   /**
   * key_provider_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_provider_settings AwsMedialiveChannel#key_provider_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#key_provider_settings TfChannel#key_provider_settings}
   */
   readonly keyProviderSettings?: KeyProviderSettingsProperty;
 }
@@ -18670,7 +18670,7 @@ export class HlsGroupSettingsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -18723,7 +18723,7 @@ export interface MediaPackageGroupSettingsProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestinationProperty;
 }
@@ -18774,7 +18774,7 @@ export class MediaPackageGroupSettingsPropertyOutputReference extends cdktn.Comp
 }
 export interface EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -18825,81 +18825,81 @@ export class EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings
 }
 export interface MsSmoothGroupSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#acquisition_point_id AwsMedialiveChannel#acquisition_point_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#acquisition_point_id TfChannel#acquisition_point_id}
   */
   readonly acquisitionPointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_only_timecode_control AwsMedialiveChannel#audio_only_timecode_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_only_timecode_control TfChannel#audio_only_timecode_control}
   */
   readonly audioOnlyTimecodeControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#certificate_mode AwsMedialiveChannel#certificate_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#certificate_mode TfChannel#certificate_mode}
   */
   readonly certificateMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval AwsMedialiveChannel#connection_retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval TfChannel#connection_retry_interval}
   */
   readonly connectionRetryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#event_id AwsMedialiveChannel#event_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#event_id TfChannel#event_id}
   */
   readonly eventId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#event_id_mode AwsMedialiveChannel#event_id_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#event_id_mode TfChannel#event_id_mode}
   */
   readonly eventIdMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#event_stop_behavior AwsMedialiveChannel#event_stop_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#event_stop_behavior TfChannel#event_stop_behavior}
   */
   readonly eventStopBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration AwsMedialiveChannel#filecache_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filecache_duration TfChannel#filecache_duration}
   */
   readonly filecacheDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fragment_length AwsMedialiveChannel#fragment_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fragment_length TfChannel#fragment_length}
   */
   readonly fragmentLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action AwsMedialiveChannel#input_loss_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action TfChannel#input_loss_action}
   */
   readonly inputLossAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries AwsMedialiveChannel#num_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries TfChannel#num_retries}
   */
   readonly numRetries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay AwsMedialiveChannel#restart_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay TfChannel#restart_delay}
   */
   readonly restartDelay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_mode AwsMedialiveChannel#segmentation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_mode TfChannel#segmentation_mode}
   */
   readonly segmentationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#send_delay_ms AwsMedialiveChannel#send_delay_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#send_delay_ms TfChannel#send_delay_ms}
   */
   readonly sendDelayMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sparse_track_type AwsMedialiveChannel#sparse_track_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sparse_track_type TfChannel#sparse_track_type}
   */
   readonly sparseTrackType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_manifest_behavior AwsMedialiveChannel#stream_manifest_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#stream_manifest_behavior TfChannel#stream_manifest_behavior}
   */
   readonly streamManifestBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timestamp_offset AwsMedialiveChannel#timestamp_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timestamp_offset TfChannel#timestamp_offset}
   */
   readonly timestampOffset?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timestamp_offset_mode AwsMedialiveChannel#timestamp_offset_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timestamp_offset_mode TfChannel#timestamp_offset_mode}
   */
   readonly timestampOffsetMode?: string;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestinationProperty;
 }
@@ -19374,31 +19374,31 @@ export class MultiplexGroupSettingsPropertyOutputReference extends cdktn.Complex
 }
 export interface RtmpGroupSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ad_markers AwsMedialiveChannel#ad_markers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ad_markers TfChannel#ad_markers}
   */
   readonly adMarkers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#authentication_scheme AwsMedialiveChannel#authentication_scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#authentication_scheme TfChannel#authentication_scheme}
   */
   readonly authenticationScheme?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cache_full_behavior AwsMedialiveChannel#cache_full_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cache_full_behavior TfChannel#cache_full_behavior}
   */
   readonly cacheFullBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cache_length AwsMedialiveChannel#cache_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cache_length TfChannel#cache_length}
   */
   readonly cacheLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_data AwsMedialiveChannel#caption_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_data TfChannel#caption_data}
   */
   readonly captionData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action AwsMedialiveChannel#input_loss_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action TfChannel#input_loss_action}
   */
   readonly inputLossAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay AwsMedialiveChannel#restart_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#restart_delay TfChannel#restart_delay}
   */
   readonly restartDelay?: number;
 }
@@ -19584,15 +19584,15 @@ export class RtmpGroupSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface UdpGroupSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action AwsMedialiveChannel#input_loss_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_action TfChannel#input_loss_action}
   */
   readonly inputLossAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_frame AwsMedialiveChannel#timed_metadata_id3_frame}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_frame TfChannel#timed_metadata_id3_frame}
   */
   readonly timedMetadataId3Frame?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_period AwsMedialiveChannel#timed_metadata_id3_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_id3_period TfChannel#timed_metadata_id3_period}
   */
   readonly timedMetadataId3Period?: number;
 }
@@ -19692,49 +19692,49 @@ export interface OutputGroupSettingsProperty {
   /**
   * archive_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_group_settings AwsMedialiveChannel#archive_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_group_settings TfChannel#archive_group_settings}
   */
   readonly archiveGroupSettings?: ArchiveGroupSettingsProperty[] | cdktn.IResolvable;
   /**
   * frame_capture_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_group_settings AwsMedialiveChannel#frame_capture_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_group_settings TfChannel#frame_capture_group_settings}
   */
   readonly frameCaptureGroupSettings?: FrameCaptureGroupSettingsProperty;
   /**
   * hls_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_group_settings AwsMedialiveChannel#hls_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_group_settings TfChannel#hls_group_settings}
   */
   readonly hlsGroupSettings?: HlsGroupSettingsProperty;
   /**
   * media_package_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_package_group_settings AwsMedialiveChannel#media_package_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_package_group_settings TfChannel#media_package_group_settings}
   */
   readonly mediaPackageGroupSettings?: MediaPackageGroupSettingsProperty;
   /**
   * ms_smooth_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ms_smooth_group_settings AwsMedialiveChannel#ms_smooth_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ms_smooth_group_settings TfChannel#ms_smooth_group_settings}
   */
   readonly msSmoothGroupSettings?: MsSmoothGroupSettingsProperty;
   /**
   * multiplex_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_group_settings AwsMedialiveChannel#multiplex_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_group_settings TfChannel#multiplex_group_settings}
   */
   readonly multiplexGroupSettings?: MultiplexGroupSettingsProperty;
   /**
   * rtmp_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rtmp_group_settings AwsMedialiveChannel#rtmp_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rtmp_group_settings TfChannel#rtmp_group_settings}
   */
   readonly rtmpGroupSettings?: RtmpGroupSettingsProperty;
   /**
   * udp_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#udp_group_settings AwsMedialiveChannel#udp_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#udp_group_settings TfChannel#udp_group_settings}
   */
   readonly udpGroupSettings?: UdpGroupSettingsProperty;
 }
@@ -19942,15 +19942,15 @@ export class OutputGroupSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_id AwsMedialiveChannel#network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_id TfChannel#network_id}
   */
   readonly networkId: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_name AwsMedialiveChannel#network_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_name TfChannel#network_name}
   */
   readonly networkName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval AwsMedialiveChannel#rep_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval TfChannel#rep_interval}
   */
   readonly repInterval?: number;
 }
@@ -20042,19 +20042,19 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettin
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_sdt AwsMedialiveChannel#output_sdt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_sdt TfChannel#output_sdt}
   */
   readonly outputSdt?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval AwsMedialiveChannel#rep_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval TfChannel#rep_interval}
   */
   readonly repInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_name AwsMedialiveChannel#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_name TfChannel#service_name}
   */
   readonly serviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_provider_name AwsMedialiveChannel#service_provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_provider_name TfChannel#service_provider_name}
   */
   readonly serviceProviderName?: string;
 }
@@ -20174,7 +20174,7 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettin
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval AwsMedialiveChannel#rep_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval TfChannel#rep_interval}
   */
   readonly repInterval?: number;
 }
@@ -20228,197 +20228,197 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettin
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#absent_input_audio_behavior AwsMedialiveChannel#absent_input_audio_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#absent_input_audio_behavior TfChannel#absent_input_audio_behavior}
   */
   readonly absentInputAudioBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib AwsMedialiveChannel#arib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib TfChannel#arib}
   */
   readonly arib?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid AwsMedialiveChannel#arib_captions_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid TfChannel#arib_captions_pid}
   */
   readonly aribCaptionsPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid_control AwsMedialiveChannel#arib_captions_pid_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid_control TfChannel#arib_captions_pid_control}
   */
   readonly aribCaptionsPidControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_buffer_model AwsMedialiveChannel#audio_buffer_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_buffer_model TfChannel#audio_buffer_model}
   */
   readonly audioBufferModel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_frames_per_pes AwsMedialiveChannel#audio_frames_per_pes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_frames_per_pes TfChannel#audio_frames_per_pes}
   */
   readonly audioFramesPerPes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pids AwsMedialiveChannel#audio_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pids TfChannel#audio_pids}
   */
   readonly audioPids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_stream_type AwsMedialiveChannel#audio_stream_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_stream_type TfChannel#audio_stream_type}
   */
   readonly audioStreamType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_model AwsMedialiveChannel#buffer_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_model TfChannel#buffer_model}
   */
   readonly bufferModel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cc_descriptor AwsMedialiveChannel#cc_descriptor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cc_descriptor TfChannel#cc_descriptor}
   */
   readonly ccDescriptor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_pids AwsMedialiveChannel#dvb_sub_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_pids TfChannel#dvb_sub_pids}
   */
   readonly dvbSubPids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_teletext_pid AwsMedialiveChannel#dvb_teletext_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_teletext_pid TfChannel#dvb_teletext_pid}
   */
   readonly dvbTeletextPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebif AwsMedialiveChannel#ebif}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebif TfChannel#ebif}
   */
   readonly ebif?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_audio_interval AwsMedialiveChannel#ebp_audio_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_audio_interval TfChannel#ebp_audio_interval}
   */
   readonly ebpAudioInterval?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_lookahead_ms AwsMedialiveChannel#ebp_lookahead_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_lookahead_ms TfChannel#ebp_lookahead_ms}
   */
   readonly ebpLookaheadMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_placement AwsMedialiveChannel#ebp_placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_placement TfChannel#ebp_placement}
   */
   readonly ebpPlacement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ecm_pid AwsMedialiveChannel#ecm_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ecm_pid TfChannel#ecm_pid}
   */
   readonly ecmPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#es_rate_in_pes AwsMedialiveChannel#es_rate_in_pes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#es_rate_in_pes TfChannel#es_rate_in_pes}
   */
   readonly esRateInPes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_platform_pid AwsMedialiveChannel#etv_platform_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_platform_pid TfChannel#etv_platform_pid}
   */
   readonly etvPlatformPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_signal_pid AwsMedialiveChannel#etv_signal_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_signal_pid TfChannel#etv_signal_pid}
   */
   readonly etvSignalPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fragment_time AwsMedialiveChannel#fragment_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fragment_time TfChannel#fragment_time}
   */
   readonly fragmentTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv AwsMedialiveChannel#klv}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv TfChannel#klv}
   */
   readonly klv?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv_data_pids AwsMedialiveChannel#klv_data_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv_data_pids TfChannel#klv_data_pids}
   */
   readonly klvDataPids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior AwsMedialiveChannel#nielsen_id3_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior TfChannel#nielsen_id3_behavior}
   */
   readonly nielsenId3Behavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#null_packet_bitrate AwsMedialiveChannel#null_packet_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#null_packet_bitrate TfChannel#null_packet_bitrate}
   */
   readonly nullPacketBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pat_interval AwsMedialiveChannel#pat_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pat_interval TfChannel#pat_interval}
   */
   readonly patInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_control AwsMedialiveChannel#pcr_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_control TfChannel#pcr_control}
   */
   readonly pcrControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_period AwsMedialiveChannel#pcr_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_period TfChannel#pcr_period}
   */
   readonly pcrPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_pid AwsMedialiveChannel#pcr_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_pid TfChannel#pcr_pid}
   */
   readonly pcrPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_interval AwsMedialiveChannel#pmt_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_interval TfChannel#pmt_interval}
   */
   readonly pmtInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_pid AwsMedialiveChannel#pmt_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_pid TfChannel#pmt_pid}
   */
   readonly pmtPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_num AwsMedialiveChannel#program_num}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_num TfChannel#program_num}
   */
   readonly programNum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_mode AwsMedialiveChannel#rate_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_mode TfChannel#rate_mode}
   */
   readonly rateMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_pids AwsMedialiveChannel#scte27_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_pids TfChannel#scte27_pids}
   */
   readonly scte27Pids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_control AwsMedialiveChannel#scte35_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_control TfChannel#scte35_control}
   */
   readonly scte35Control?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid AwsMedialiveChannel#scte35_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid TfChannel#scte35_pid}
   */
   readonly scte35Pid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_markers AwsMedialiveChannel#segmentation_markers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_markers TfChannel#segmentation_markers}
   */
   readonly segmentationMarkers?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_style AwsMedialiveChannel#segmentation_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_style TfChannel#segmentation_style}
   */
   readonly segmentationStyle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_time AwsMedialiveChannel#segmentation_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_time TfChannel#segmentation_time}
   */
   readonly segmentationTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior AwsMedialiveChannel#timed_metadata_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior TfChannel#timed_metadata_behavior}
   */
   readonly timedMetadataBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_pid AwsMedialiveChannel#timed_metadata_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_pid TfChannel#timed_metadata_pid}
   */
   readonly timedMetadataPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#transport_stream_id AwsMedialiveChannel#transport_stream_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#transport_stream_id TfChannel#transport_stream_id}
   */
   readonly transportStreamId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_pid AwsMedialiveChannel#video_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_pid TfChannel#video_pid}
   */
   readonly videoPid?: string;
   /**
   * dvb_nit_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_nit_settings AwsMedialiveChannel#dvb_nit_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_nit_settings TfChannel#dvb_nit_settings}
   */
   readonly dvbNitSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty;
   /**
   * dvb_sdt_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sdt_settings AwsMedialiveChannel#dvb_sdt_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sdt_settings TfChannel#dvb_sdt_settings}
   */
   readonly dvbSdtSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty;
   /**
   * dvb_tdt_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_tdt_settings AwsMedialiveChannel#dvb_tdt_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_tdt_settings TfChannel#dvb_tdt_settings}
   */
   readonly dvbTdtSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty;
 }
@@ -21514,13 +21514,13 @@ export interface EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSe
   /**
   * m2ts_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#m2ts_settings AwsMedialiveChannel#m2ts_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#m2ts_settings TfChannel#m2ts_settings}
   */
   readonly m2TsSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsProperty;
   /**
   * raw_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#raw_settings AwsMedialiveChannel#raw_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#raw_settings TfChannel#raw_settings}
   */
   readonly rawSettings?: RawSettingsProperty;
 }
@@ -21596,17 +21596,17 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettin
 }
 export interface ArchiveOutputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#extension AwsMedialiveChannel#extension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#extension TfChannel#extension}
   */
   readonly extension?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier AwsMedialiveChannel#name_modifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier TfChannel#name_modifier}
   */
   readonly nameModifier?: string;
   /**
   * container_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#container_settings AwsMedialiveChannel#container_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#container_settings TfChannel#container_settings}
   */
   readonly containerSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsProperty;
 }
@@ -21704,7 +21704,7 @@ export class ArchiveOutputSettingsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface FrameCaptureOutputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier AwsMedialiveChannel#name_modifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier TfChannel#name_modifier}
   */
   readonly nameModifier?: string;
 }
@@ -21758,15 +21758,15 @@ export class FrameCaptureOutputSettingsPropertyOutputReference extends cdktn.Com
 }
 export interface AudioOnlyImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param AwsMedialiveChannel#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#password_param TfChannel#password_param}
   */
   readonly passwordParam?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri AwsMedialiveChannel#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#uri TfChannel#uri}
   */
   readonly uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username AwsMedialiveChannel#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#username TfChannel#username}
   */
   readonly username?: string;
 }
@@ -21861,21 +21861,21 @@ export class AudioOnlyImagePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AudioOnlyHlsSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_group_id AwsMedialiveChannel#audio_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_group_id TfChannel#audio_group_id}
   */
   readonly audioGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_track_type AwsMedialiveChannel#audio_track_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_track_type TfChannel#audio_track_type}
   */
   readonly audioTrackType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segment_type AwsMedialiveChannel#segment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segment_type TfChannel#segment_type}
   */
   readonly segmentType?: string;
   /**
   * audio_only_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_only_image AwsMedialiveChannel#audio_only_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_only_image TfChannel#audio_only_image}
   */
   readonly audioOnlyImage?: AudioOnlyImageProperty;
 }
@@ -21995,15 +21995,15 @@ export class AudioOnlyHlsSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface Fmp4HlsSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_rendition_sets AwsMedialiveChannel#audio_rendition_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_rendition_sets TfChannel#audio_rendition_sets}
   */
   readonly audioRenditionSets?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior AwsMedialiveChannel#nielsen_id3_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior TfChannel#nielsen_id3_behavior}
   */
   readonly nielsenId3Behavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior AwsMedialiveChannel#timed_metadata_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior TfChannel#timed_metadata_behavior}
   */
   readonly timedMetadataBehavior?: string;
 }
@@ -22129,71 +22129,71 @@ export class FrameCaptureHlsSettingsPropertyOutputReference extends cdktn.Comple
 }
 export interface M3u8SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_frames_per_pes AwsMedialiveChannel#audio_frames_per_pes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_frames_per_pes TfChannel#audio_frames_per_pes}
   */
   readonly audioFramesPerPes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pids AwsMedialiveChannel#audio_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pids TfChannel#audio_pids}
   */
   readonly audioPids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ecm_pid AwsMedialiveChannel#ecm_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ecm_pid TfChannel#ecm_pid}
   */
   readonly ecmPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior AwsMedialiveChannel#nielsen_id3_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior TfChannel#nielsen_id3_behavior}
   */
   readonly nielsenId3Behavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pat_interval AwsMedialiveChannel#pat_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pat_interval TfChannel#pat_interval}
   */
   readonly patInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_control AwsMedialiveChannel#pcr_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_control TfChannel#pcr_control}
   */
   readonly pcrControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_period AwsMedialiveChannel#pcr_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_period TfChannel#pcr_period}
   */
   readonly pcrPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_pid AwsMedialiveChannel#pcr_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_pid TfChannel#pcr_pid}
   */
   readonly pcrPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_interval AwsMedialiveChannel#pmt_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_interval TfChannel#pmt_interval}
   */
   readonly pmtInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_pid AwsMedialiveChannel#pmt_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_pid TfChannel#pmt_pid}
   */
   readonly pmtPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_num AwsMedialiveChannel#program_num}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_num TfChannel#program_num}
   */
   readonly programNum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_behavior AwsMedialiveChannel#scte35_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_behavior TfChannel#scte35_behavior}
   */
   readonly scte35Behavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid AwsMedialiveChannel#scte35_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid TfChannel#scte35_pid}
   */
   readonly scte35Pid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior AwsMedialiveChannel#timed_metadata_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior TfChannel#timed_metadata_behavior}
   */
   readonly timedMetadataBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_pid AwsMedialiveChannel#timed_metadata_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_pid TfChannel#timed_metadata_pid}
   */
   readonly timedMetadataPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#transport_stream_id AwsMedialiveChannel#transport_stream_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#transport_stream_id TfChannel#transport_stream_id}
   */
   readonly transportStreamId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_pid AwsMedialiveChannel#video_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_pid TfChannel#video_pid}
   */
   readonly videoPid?: string;
 }
@@ -22599,13 +22599,13 @@ export class M3u8SettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StandardHlsSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_rendition_sets AwsMedialiveChannel#audio_rendition_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_rendition_sets TfChannel#audio_rendition_sets}
   */
   readonly audioRenditionSets?: string;
   /**
   * m3u8_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#m3u8_settings AwsMedialiveChannel#m3u8_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#m3u8_settings TfChannel#m3u8_settings}
   */
   readonly m3U8Settings: M3u8SettingsProperty;
 }
@@ -22680,25 +22680,25 @@ export interface HlsSettingsProperty {
   /**
   * audio_only_hls_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_only_hls_settings AwsMedialiveChannel#audio_only_hls_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_only_hls_settings TfChannel#audio_only_hls_settings}
   */
   readonly audioOnlyHlsSettings?: AudioOnlyHlsSettingsProperty;
   /**
   * fmp4_hls_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fmp4_hls_settings AwsMedialiveChannel#fmp4_hls_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fmp4_hls_settings TfChannel#fmp4_hls_settings}
   */
   readonly fmp4HlsSettings?: Fmp4HlsSettingsProperty;
   /**
   * frame_capture_hls_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_hls_settings AwsMedialiveChannel#frame_capture_hls_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_hls_settings TfChannel#frame_capture_hls_settings}
   */
   readonly frameCaptureHlsSettings?: FrameCaptureHlsSettingsProperty;
   /**
   * standard_hls_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#standard_hls_settings AwsMedialiveChannel#standard_hls_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#standard_hls_settings TfChannel#standard_hls_settings}
   */
   readonly standardHlsSettings?: StandardHlsSettingsProperty;
 }
@@ -22818,21 +22818,21 @@ export class HlsSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HlsOutputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h265_packaging_type AwsMedialiveChannel#h265_packaging_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h265_packaging_type TfChannel#h265_packaging_type}
   */
   readonly h265PackagingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier AwsMedialiveChannel#name_modifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier TfChannel#name_modifier}
   */
   readonly nameModifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segment_modifier AwsMedialiveChannel#segment_modifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segment_modifier TfChannel#segment_modifier}
   */
   readonly segmentModifier?: string;
   /**
   * hls_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_settings AwsMedialiveChannel#hls_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_settings TfChannel#hls_settings}
   */
   readonly hlsSettings: HlsSettingsProperty;
 }
@@ -22977,11 +22977,11 @@ export class MediaPackageOutputSettingsPropertyOutputReference extends cdktn.Com
 }
 export interface MsSmoothOutputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h265_packaging_type AwsMedialiveChannel#h265_packaging_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h265_packaging_type TfChannel#h265_packaging_type}
   */
   readonly h265PackagingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier AwsMedialiveChannel#name_modifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name_modifier TfChannel#name_modifier}
   */
   readonly nameModifier?: string;
 }
@@ -23057,7 +23057,7 @@ export class MsSmoothOutputSettingsPropertyOutputReference extends cdktn.Complex
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -23110,7 +23110,7 @@ export interface MultiplexOutputSettingsProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestinationProperty;
 }
@@ -23161,7 +23161,7 @@ export class MultiplexOutputSettingsPropertyOutputReference extends cdktn.Comple
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -23212,21 +23212,21 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsD
 }
 export interface RtmpOutputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#certificate_mode AwsMedialiveChannel#certificate_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#certificate_mode TfChannel#certificate_mode}
   */
   readonly certificateMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval AwsMedialiveChannel#connection_retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#connection_retry_interval TfChannel#connection_retry_interval}
   */
   readonly connectionRetryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries AwsMedialiveChannel#num_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_retries TfChannel#num_retries}
   */
   readonly numRetries?: number;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestinationProperty;
 }
@@ -23343,15 +23343,15 @@ export class RtmpOutputSettingsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_id AwsMedialiveChannel#network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_id TfChannel#network_id}
   */
   readonly networkId: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_name AwsMedialiveChannel#network_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_name TfChannel#network_name}
   */
   readonly networkName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval AwsMedialiveChannel#rep_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval TfChannel#rep_interval}
   */
   readonly repInterval?: number;
 }
@@ -23443,19 +23443,19 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsCo
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_sdt AwsMedialiveChannel#output_sdt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_sdt TfChannel#output_sdt}
   */
   readonly outputSdt?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval AwsMedialiveChannel#rep_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval TfChannel#rep_interval}
   */
   readonly repInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_name AwsMedialiveChannel#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_name TfChannel#service_name}
   */
   readonly serviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_provider_name AwsMedialiveChannel#service_provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#service_provider_name TfChannel#service_provider_name}
   */
   readonly serviceProviderName?: string;
 }
@@ -23575,7 +23575,7 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsCo
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval AwsMedialiveChannel#rep_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rep_interval TfChannel#rep_interval}
   */
   readonly repInterval?: number;
 }
@@ -23629,197 +23629,197 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsCo
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#absent_input_audio_behavior AwsMedialiveChannel#absent_input_audio_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#absent_input_audio_behavior TfChannel#absent_input_audio_behavior}
   */
   readonly absentInputAudioBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib AwsMedialiveChannel#arib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib TfChannel#arib}
   */
   readonly arib?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid AwsMedialiveChannel#arib_captions_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid TfChannel#arib_captions_pid}
   */
   readonly aribCaptionsPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid_control AwsMedialiveChannel#arib_captions_pid_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_captions_pid_control TfChannel#arib_captions_pid_control}
   */
   readonly aribCaptionsPidControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_buffer_model AwsMedialiveChannel#audio_buffer_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_buffer_model TfChannel#audio_buffer_model}
   */
   readonly audioBufferModel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_frames_per_pes AwsMedialiveChannel#audio_frames_per_pes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_frames_per_pes TfChannel#audio_frames_per_pes}
   */
   readonly audioFramesPerPes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pids AwsMedialiveChannel#audio_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pids TfChannel#audio_pids}
   */
   readonly audioPids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_stream_type AwsMedialiveChannel#audio_stream_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_stream_type TfChannel#audio_stream_type}
   */
   readonly audioStreamType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_model AwsMedialiveChannel#buffer_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_model TfChannel#buffer_model}
   */
   readonly bufferModel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cc_descriptor AwsMedialiveChannel#cc_descriptor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#cc_descriptor TfChannel#cc_descriptor}
   */
   readonly ccDescriptor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_pids AwsMedialiveChannel#dvb_sub_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_pids TfChannel#dvb_sub_pids}
   */
   readonly dvbSubPids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_teletext_pid AwsMedialiveChannel#dvb_teletext_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_teletext_pid TfChannel#dvb_teletext_pid}
   */
   readonly dvbTeletextPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebif AwsMedialiveChannel#ebif}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebif TfChannel#ebif}
   */
   readonly ebif?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_audio_interval AwsMedialiveChannel#ebp_audio_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_audio_interval TfChannel#ebp_audio_interval}
   */
   readonly ebpAudioInterval?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_lookahead_ms AwsMedialiveChannel#ebp_lookahead_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_lookahead_ms TfChannel#ebp_lookahead_ms}
   */
   readonly ebpLookaheadMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_placement AwsMedialiveChannel#ebp_placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ebp_placement TfChannel#ebp_placement}
   */
   readonly ebpPlacement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ecm_pid AwsMedialiveChannel#ecm_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ecm_pid TfChannel#ecm_pid}
   */
   readonly ecmPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#es_rate_in_pes AwsMedialiveChannel#es_rate_in_pes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#es_rate_in_pes TfChannel#es_rate_in_pes}
   */
   readonly esRateInPes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_platform_pid AwsMedialiveChannel#etv_platform_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_platform_pid TfChannel#etv_platform_pid}
   */
   readonly etvPlatformPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_signal_pid AwsMedialiveChannel#etv_signal_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#etv_signal_pid TfChannel#etv_signal_pid}
   */
   readonly etvSignalPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fragment_time AwsMedialiveChannel#fragment_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fragment_time TfChannel#fragment_time}
   */
   readonly fragmentTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv AwsMedialiveChannel#klv}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv TfChannel#klv}
   */
   readonly klv?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv_data_pids AwsMedialiveChannel#klv_data_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#klv_data_pids TfChannel#klv_data_pids}
   */
   readonly klvDataPids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior AwsMedialiveChannel#nielsen_id3_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_id3_behavior TfChannel#nielsen_id3_behavior}
   */
   readonly nielsenId3Behavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#null_packet_bitrate AwsMedialiveChannel#null_packet_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#null_packet_bitrate TfChannel#null_packet_bitrate}
   */
   readonly nullPacketBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pat_interval AwsMedialiveChannel#pat_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pat_interval TfChannel#pat_interval}
   */
   readonly patInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_control AwsMedialiveChannel#pcr_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_control TfChannel#pcr_control}
   */
   readonly pcrControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_period AwsMedialiveChannel#pcr_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_period TfChannel#pcr_period}
   */
   readonly pcrPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_pid AwsMedialiveChannel#pcr_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pcr_pid TfChannel#pcr_pid}
   */
   readonly pcrPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_interval AwsMedialiveChannel#pmt_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_interval TfChannel#pmt_interval}
   */
   readonly pmtInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_pid AwsMedialiveChannel#pmt_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pmt_pid TfChannel#pmt_pid}
   */
   readonly pmtPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_num AwsMedialiveChannel#program_num}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_num TfChannel#program_num}
   */
   readonly programNum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_mode AwsMedialiveChannel#rate_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_mode TfChannel#rate_mode}
   */
   readonly rateMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_pids AwsMedialiveChannel#scte27_pids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_pids TfChannel#scte27_pids}
   */
   readonly scte27Pids?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_control AwsMedialiveChannel#scte35_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_control TfChannel#scte35_control}
   */
   readonly scte35Control?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid AwsMedialiveChannel#scte35_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid TfChannel#scte35_pid}
   */
   readonly scte35Pid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_markers AwsMedialiveChannel#segmentation_markers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_markers TfChannel#segmentation_markers}
   */
   readonly segmentationMarkers?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_style AwsMedialiveChannel#segmentation_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_style TfChannel#segmentation_style}
   */
   readonly segmentationStyle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_time AwsMedialiveChannel#segmentation_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#segmentation_time TfChannel#segmentation_time}
   */
   readonly segmentationTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior AwsMedialiveChannel#timed_metadata_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_behavior TfChannel#timed_metadata_behavior}
   */
   readonly timedMetadataBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_pid AwsMedialiveChannel#timed_metadata_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timed_metadata_pid TfChannel#timed_metadata_pid}
   */
   readonly timedMetadataPid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#transport_stream_id AwsMedialiveChannel#transport_stream_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#transport_stream_id TfChannel#transport_stream_id}
   */
   readonly transportStreamId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_pid AwsMedialiveChannel#video_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_pid TfChannel#video_pid}
   */
   readonly videoPid?: string;
   /**
   * dvb_nit_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_nit_settings AwsMedialiveChannel#dvb_nit_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_nit_settings TfChannel#dvb_nit_settings}
   */
   readonly dvbNitSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettingsProperty;
   /**
   * dvb_sdt_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sdt_settings AwsMedialiveChannel#dvb_sdt_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sdt_settings TfChannel#dvb_sdt_settings}
   */
   readonly dvbSdtSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettingsProperty;
   /**
   * dvb_tdt_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_tdt_settings AwsMedialiveChannel#dvb_tdt_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_tdt_settings TfChannel#dvb_tdt_settings}
   */
   readonly dvbTdtSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettingsProperty;
 }
@@ -24887,7 +24887,7 @@ export interface EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettin
   /**
   * m2ts_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#m2ts_settings AwsMedialiveChannel#m2ts_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#m2ts_settings TfChannel#m2ts_settings}
   */
   readonly m2TsSettings?: EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsProperty;
 }
@@ -24941,7 +24941,7 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsCo
 }
 export interface EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id AwsMedialiveChannel#destination_ref_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination_ref_id TfChannel#destination_ref_id}
   */
   readonly destinationRefId: string;
 }
@@ -24992,15 +24992,15 @@ export class EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDe
 }
 export interface FecOutputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#column_depth AwsMedialiveChannel#column_depth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#column_depth TfChannel#column_depth}
   */
   readonly columnDepth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#include_fec AwsMedialiveChannel#include_fec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#include_fec TfChannel#include_fec}
   */
   readonly includeFec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#row_length AwsMedialiveChannel#row_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#row_length TfChannel#row_length}
   */
   readonly rowLength?: number;
 }
@@ -25098,25 +25098,25 @@ export class FecOutputSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface UdpOutputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_msec AwsMedialiveChannel#buffer_msec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_msec TfChannel#buffer_msec}
   */
   readonly bufferMsec?: number;
   /**
   * container_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#container_settings AwsMedialiveChannel#container_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#container_settings TfChannel#container_settings}
   */
   readonly containerSettings: EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsProperty;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination AwsMedialiveChannel#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#destination TfChannel#destination}
   */
   readonly destination: EncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestinationProperty;
   /**
   * fec_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fec_output_settings AwsMedialiveChannel#fec_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fec_output_settings TfChannel#fec_output_settings}
   */
   readonly fecOutputSettings?: FecOutputSettingsProperty;
 }
@@ -25232,49 +25232,49 @@ export interface OutputSettingsProperty {
   /**
   * archive_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_output_settings AwsMedialiveChannel#archive_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#archive_output_settings TfChannel#archive_output_settings}
   */
   readonly archiveOutputSettings?: ArchiveOutputSettingsProperty;
   /**
   * frame_capture_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_output_settings AwsMedialiveChannel#frame_capture_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_output_settings TfChannel#frame_capture_output_settings}
   */
   readonly frameCaptureOutputSettings?: FrameCaptureOutputSettingsProperty;
   /**
   * hls_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_output_settings AwsMedialiveChannel#hls_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_output_settings TfChannel#hls_output_settings}
   */
   readonly hlsOutputSettings?: HlsOutputSettingsProperty;
   /**
   * media_package_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_package_output_settings AwsMedialiveChannel#media_package_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#media_package_output_settings TfChannel#media_package_output_settings}
   */
   readonly mediaPackageOutputSettings?: MediaPackageOutputSettingsProperty;
   /**
   * ms_smooth_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ms_smooth_output_settings AwsMedialiveChannel#ms_smooth_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ms_smooth_output_settings TfChannel#ms_smooth_output_settings}
   */
   readonly msSmoothOutputSettings?: MsSmoothOutputSettingsProperty;
   /**
   * multiplex_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_output_settings AwsMedialiveChannel#multiplex_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#multiplex_output_settings TfChannel#multiplex_output_settings}
   */
   readonly multiplexOutputSettings?: MultiplexOutputSettingsProperty;
   /**
   * rtmp_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rtmp_output_settings AwsMedialiveChannel#rtmp_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rtmp_output_settings TfChannel#rtmp_output_settings}
   */
   readonly rtmpOutputSettings?: RtmpOutputSettingsProperty;
   /**
   * udp_output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#udp_output_settings AwsMedialiveChannel#udp_output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#udp_output_settings TfChannel#udp_output_settings}
   */
   readonly udpOutputSettings?: UdpOutputSettingsProperty;
 }
@@ -25482,25 +25482,25 @@ export class OutputSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OutputsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_description_names AwsMedialiveChannel#audio_description_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_description_names TfChannel#audio_description_names}
   */
   readonly audioDescriptionNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_description_names AwsMedialiveChannel#caption_description_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_description_names TfChannel#caption_description_names}
   */
   readonly captionDescriptionNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_name AwsMedialiveChannel#output_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_name TfChannel#output_name}
   */
   readonly outputName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_description_name AwsMedialiveChannel#video_description_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_description_name TfChannel#video_description_name}
   */
   readonly videoDescriptionName?: string;
   /**
   * output_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_settings AwsMedialiveChannel#output_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_settings TfChannel#output_settings}
   */
   readonly outputSettings: OutputSettingsProperty;
 }
@@ -25671,19 +25671,19 @@ export class OutputsPropertyList extends cdktn.ComplexList {
 }
 export interface OutputGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name?: string;
   /**
   * output_group_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_group_settings AwsMedialiveChannel#output_group_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_group_settings TfChannel#output_group_settings}
   */
   readonly outputGroupSettings: OutputGroupSettingsProperty;
   /**
   * outputs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outputs AwsMedialiveChannel#outputs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#outputs TfChannel#outputs}
   */
   readonly outputs: OutputsProperty[] | cdktn.IResolvable;
 }
@@ -25807,11 +25807,11 @@ export class OutputGroupsPropertyList extends cdktn.ComplexList {
 }
 export interface TimecodeConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source AwsMedialiveChannel#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source TfChannel#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sync_threshold AwsMedialiveChannel#sync_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sync_threshold TfChannel#sync_threshold}
   */
   readonly syncThreshold?: number;
 }
@@ -25884,11 +25884,11 @@ export class TimecodeConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FrameCaptureSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#capture_interval AwsMedialiveChannel#capture_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#capture_interval TfChannel#capture_interval}
   */
   readonly captureInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#capture_interval_units AwsMedialiveChannel#capture_interval_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#capture_interval_units TfChannel#capture_interval_units}
   */
   readonly captureIntervalUnits?: string;
 }
@@ -25964,11 +25964,11 @@ export class FrameCaptureSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#post_filter_sharpening AwsMedialiveChannel#post_filter_sharpening}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#post_filter_sharpening TfChannel#post_filter_sharpening}
   */
   readonly postFilterSharpening?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#strength AwsMedialiveChannel#strength}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#strength TfChannel#strength}
   */
   readonly strength?: string;
 }
@@ -26046,7 +26046,7 @@ export interface EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilter
   /**
   * temporal_filter_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#temporal_filter_settings AwsMedialiveChannel#temporal_filter_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#temporal_filter_settings TfChannel#temporal_filter_settings}
   */
   readonly temporalFilterSettings?: EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettingsProperty;
 }
@@ -26100,165 +26100,165 @@ export class EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSett
 }
 export interface H264SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#adaptive_quantization AwsMedialiveChannel#adaptive_quantization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#adaptive_quantization TfChannel#adaptive_quantization}
   */
   readonly adaptiveQuantization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#afd_signaling AwsMedialiveChannel#afd_signaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#afd_signaling TfChannel#afd_signaling}
   */
   readonly afdSignaling?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buf_fill_pct AwsMedialiveChannel#buf_fill_pct}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buf_fill_pct TfChannel#buf_fill_pct}
   */
   readonly bufFillPct?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buf_size AwsMedialiveChannel#buf_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buf_size TfChannel#buf_size}
   */
   readonly bufSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_metadata AwsMedialiveChannel#color_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_metadata TfChannel#color_metadata}
   */
   readonly colorMetadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#entropy_encoding AwsMedialiveChannel#entropy_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#entropy_encoding TfChannel#entropy_encoding}
   */
   readonly entropyEncoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fixed_afd AwsMedialiveChannel#fixed_afd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fixed_afd TfChannel#fixed_afd}
   */
   readonly fixedAfd?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#flicker_aq AwsMedialiveChannel#flicker_aq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#flicker_aq TfChannel#flicker_aq}
   */
   readonly flickerAq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#force_field_pictures AwsMedialiveChannel#force_field_pictures}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#force_field_pictures TfChannel#force_field_pictures}
   */
   readonly forceFieldPictures?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_control AwsMedialiveChannel#framerate_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_control TfChannel#framerate_control}
   */
   readonly framerateControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_denominator AwsMedialiveChannel#framerate_denominator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_denominator TfChannel#framerate_denominator}
   */
   readonly framerateDenominator?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_numerator AwsMedialiveChannel#framerate_numerator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_numerator TfChannel#framerate_numerator}
   */
   readonly framerateNumerator?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_b_reference AwsMedialiveChannel#gop_b_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_b_reference TfChannel#gop_b_reference}
   */
   readonly gopBReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_closed_cadence AwsMedialiveChannel#gop_closed_cadence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_closed_cadence TfChannel#gop_closed_cadence}
   */
   readonly gopClosedCadence?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_num_b_frames AwsMedialiveChannel#gop_num_b_frames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_num_b_frames TfChannel#gop_num_b_frames}
   */
   readonly gopNumBFrames?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size AwsMedialiveChannel#gop_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size TfChannel#gop_size}
   */
   readonly gopSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size_units AwsMedialiveChannel#gop_size_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size_units TfChannel#gop_size_units}
   */
   readonly gopSizeUnits?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#level AwsMedialiveChannel#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#level TfChannel#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#look_ahead_rate_control AwsMedialiveChannel#look_ahead_rate_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#look_ahead_rate_control TfChannel#look_ahead_rate_control}
   */
   readonly lookAheadRateControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_bitrate AwsMedialiveChannel#max_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_bitrate TfChannel#max_bitrate}
   */
   readonly maxBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_i_interval AwsMedialiveChannel#min_i_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_i_interval TfChannel#min_i_interval}
   */
   readonly minIInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_ref_frames AwsMedialiveChannel#num_ref_frames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#num_ref_frames TfChannel#num_ref_frames}
   */
   readonly numRefFrames?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_control AwsMedialiveChannel#par_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_control TfChannel#par_control}
   */
   readonly parControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_denominator AwsMedialiveChannel#par_denominator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_denominator TfChannel#par_denominator}
   */
   readonly parDenominator?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_numerator AwsMedialiveChannel#par_numerator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_numerator TfChannel#par_numerator}
   */
   readonly parNumerator?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#profile AwsMedialiveChannel#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#profile TfChannel#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#quality_level AwsMedialiveChannel#quality_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#quality_level TfChannel#quality_level}
   */
   readonly qualityLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#qvbr_quality_level AwsMedialiveChannel#qvbr_quality_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#qvbr_quality_level TfChannel#qvbr_quality_level}
   */
   readonly qvbrQualityLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_control_mode AwsMedialiveChannel#rate_control_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_control_mode TfChannel#rate_control_mode}
   */
   readonly rateControlMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scan_type AwsMedialiveChannel#scan_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scan_type TfChannel#scan_type}
   */
   readonly scanType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scene_change_detect AwsMedialiveChannel#scene_change_detect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scene_change_detect TfChannel#scene_change_detect}
   */
   readonly sceneChangeDetect?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#slices AwsMedialiveChannel#slices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#slices TfChannel#slices}
   */
   readonly slices?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#softness AwsMedialiveChannel#softness}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#softness TfChannel#softness}
   */
   readonly softness?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#spatial_aq AwsMedialiveChannel#spatial_aq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#spatial_aq TfChannel#spatial_aq}
   */
   readonly spatialAq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#subgop_length AwsMedialiveChannel#subgop_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#subgop_length TfChannel#subgop_length}
   */
   readonly subgopLength?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#syntax AwsMedialiveChannel#syntax}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#syntax TfChannel#syntax}
   */
   readonly syntax?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#temporal_aq AwsMedialiveChannel#temporal_aq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#temporal_aq TfChannel#temporal_aq}
   */
   readonly temporalAq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_insertion AwsMedialiveChannel#timecode_insertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_insertion TfChannel#timecode_insertion}
   */
   readonly timecodeInsertion?: string;
   /**
   * filter_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filter_settings AwsMedialiveChannel#filter_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filter_settings TfChannel#filter_settings}
   */
   readonly filterSettings?: EncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsProperty;
 }
@@ -27226,11 +27226,11 @@ export class DolbyVision81SettingsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface Hdr10SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_cll AwsMedialiveChannel#max_cll}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_cll TfChannel#max_cll}
   */
   readonly maxCll?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_fall AwsMedialiveChannel#max_fall}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_fall TfChannel#max_fall}
   */
   readonly maxFall?: number;
 }
@@ -27364,31 +27364,31 @@ export interface ColorSpaceSettingsProperty {
   /**
   * color_space_passthrough_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space_passthrough_settings AwsMedialiveChannel#color_space_passthrough_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space_passthrough_settings TfChannel#color_space_passthrough_settings}
   */
   readonly colorSpacePassthroughSettings?: ColorSpacePassthroughSettingsProperty;
   /**
   * dolby_vision81_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dolby_vision81_settings AwsMedialiveChannel#dolby_vision81_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dolby_vision81_settings TfChannel#dolby_vision81_settings}
   */
   readonly dolbyVision81Settings?: DolbyVision81SettingsProperty;
   /**
   * hdr10_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hdr10_settings AwsMedialiveChannel#hdr10_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hdr10_settings TfChannel#hdr10_settings}
   */
   readonly hdr10Settings?: Hdr10SettingsProperty;
   /**
   * rec601_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rec601_settings AwsMedialiveChannel#rec601_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rec601_settings TfChannel#rec601_settings}
   */
   readonly rec601Settings?: Rec601SettingsProperty;
   /**
   * rec709_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rec709_settings AwsMedialiveChannel#rec709_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rec709_settings TfChannel#rec709_settings}
   */
   readonly rec709Settings?: Rec709SettingsProperty;
 }
@@ -27530,11 +27530,11 @@ export class ColorSpaceSettingsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#post_filter_sharpening AwsMedialiveChannel#post_filter_sharpening}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#post_filter_sharpening TfChannel#post_filter_sharpening}
   */
   readonly postFilterSharpening?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#strength AwsMedialiveChannel#strength}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#strength TfChannel#strength}
   */
   readonly strength?: string;
 }
@@ -27612,7 +27612,7 @@ export interface EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilter
   /**
   * temporal_filter_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#temporal_filter_settings AwsMedialiveChannel#temporal_filter_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#temporal_filter_settings TfChannel#temporal_filter_settings}
   */
   readonly temporalFilterSettings?: EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettingsProperty;
 }
@@ -27666,15 +27666,15 @@ export class EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSett
 }
 export interface TimecodeBurninSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#prefix AwsMedialiveChannel#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#prefix TfChannel#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_burnin_font_size AwsMedialiveChannel#timecode_burnin_font_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_burnin_font_size TfChannel#timecode_burnin_font_size}
   */
   readonly timecodeBurninFontSize?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_burnin_position AwsMedialiveChannel#timecode_burnin_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_burnin_position TfChannel#timecode_burnin_position}
   */
   readonly timecodeBurninPosition?: string;
 }
@@ -27772,157 +27772,157 @@ export class TimecodeBurninSettingsPropertyOutputReference extends cdktn.Complex
 }
 export interface H265SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#adaptive_quantization AwsMedialiveChannel#adaptive_quantization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#adaptive_quantization TfChannel#adaptive_quantization}
   */
   readonly adaptiveQuantization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#afd_signaling AwsMedialiveChannel#afd_signaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#afd_signaling TfChannel#afd_signaling}
   */
   readonly afdSignaling?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#alternative_transfer_function AwsMedialiveChannel#alternative_transfer_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#alternative_transfer_function TfChannel#alternative_transfer_function}
   */
   readonly alternativeTransferFunction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate AwsMedialiveChannel#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bitrate TfChannel#bitrate}
   */
   readonly bitrate: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buf_size AwsMedialiveChannel#buf_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buf_size TfChannel#buf_size}
   */
   readonly bufSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_metadata AwsMedialiveChannel#color_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_metadata TfChannel#color_metadata}
   */
   readonly colorMetadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fixed_afd AwsMedialiveChannel#fixed_afd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#fixed_afd TfChannel#fixed_afd}
   */
   readonly fixedAfd?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#flicker_aq AwsMedialiveChannel#flicker_aq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#flicker_aq TfChannel#flicker_aq}
   */
   readonly flickerAq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_denominator AwsMedialiveChannel#framerate_denominator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_denominator TfChannel#framerate_denominator}
   */
   readonly framerateDenominator: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_numerator AwsMedialiveChannel#framerate_numerator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#framerate_numerator TfChannel#framerate_numerator}
   */
   readonly framerateNumerator: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_closed_cadence AwsMedialiveChannel#gop_closed_cadence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_closed_cadence TfChannel#gop_closed_cadence}
   */
   readonly gopClosedCadence?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size AwsMedialiveChannel#gop_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size TfChannel#gop_size}
   */
   readonly gopSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size_units AwsMedialiveChannel#gop_size_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#gop_size_units TfChannel#gop_size_units}
   */
   readonly gopSizeUnits?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#level AwsMedialiveChannel#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#level TfChannel#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#look_ahead_rate_control AwsMedialiveChannel#look_ahead_rate_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#look_ahead_rate_control TfChannel#look_ahead_rate_control}
   */
   readonly lookAheadRateControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_bitrate AwsMedialiveChannel#max_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#max_bitrate TfChannel#max_bitrate}
   */
   readonly maxBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_i_interval AwsMedialiveChannel#min_i_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_i_interval TfChannel#min_i_interval}
   */
   readonly minIInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_qp AwsMedialiveChannel#min_qp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#min_qp TfChannel#min_qp}
   */
   readonly minQp?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mv_over_picture_boundaries AwsMedialiveChannel#mv_over_picture_boundaries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mv_over_picture_boundaries TfChannel#mv_over_picture_boundaries}
   */
   readonly mvOverPictureBoundaries?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mv_temporal_predictor AwsMedialiveChannel#mv_temporal_predictor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#mv_temporal_predictor TfChannel#mv_temporal_predictor}
   */
   readonly mvTemporalPredictor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_denominator AwsMedialiveChannel#par_denominator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_denominator TfChannel#par_denominator}
   */
   readonly parDenominator?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_numerator AwsMedialiveChannel#par_numerator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#par_numerator TfChannel#par_numerator}
   */
   readonly parNumerator?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#profile AwsMedialiveChannel#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#profile TfChannel#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#qvbr_quality_level AwsMedialiveChannel#qvbr_quality_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#qvbr_quality_level TfChannel#qvbr_quality_level}
   */
   readonly qvbrQualityLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_control_mode AwsMedialiveChannel#rate_control_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#rate_control_mode TfChannel#rate_control_mode}
   */
   readonly rateControlMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scan_type AwsMedialiveChannel#scan_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scan_type TfChannel#scan_type}
   */
   readonly scanType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scene_change_detect AwsMedialiveChannel#scene_change_detect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scene_change_detect TfChannel#scene_change_detect}
   */
   readonly sceneChangeDetect?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#slices AwsMedialiveChannel#slices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#slices TfChannel#slices}
   */
   readonly slices?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tier AwsMedialiveChannel#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tier TfChannel#tier}
   */
   readonly tier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tile_height AwsMedialiveChannel#tile_height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tile_height TfChannel#tile_height}
   */
   readonly tileHeight?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tile_padding AwsMedialiveChannel#tile_padding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tile_padding TfChannel#tile_padding}
   */
   readonly tilePadding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tile_width AwsMedialiveChannel#tile_width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tile_width TfChannel#tile_width}
   */
   readonly tileWidth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_insertion AwsMedialiveChannel#timecode_insertion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_insertion TfChannel#timecode_insertion}
   */
   readonly timecodeInsertion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#treeblock_size AwsMedialiveChannel#treeblock_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#treeblock_size TfChannel#treeblock_size}
   */
   readonly treeblockSize?: string;
   /**
   * color_space_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space_settings AwsMedialiveChannel#color_space_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space_settings TfChannel#color_space_settings}
   */
   readonly colorSpaceSettings?: ColorSpaceSettingsProperty;
   /**
   * filter_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filter_settings AwsMedialiveChannel#filter_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filter_settings TfChannel#filter_settings}
   */
   readonly filterSettings?: EncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsProperty;
   /**
   * timecode_burnin_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_burnin_settings AwsMedialiveChannel#timecode_burnin_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_burnin_settings TfChannel#timecode_burnin_settings}
   */
   readonly timecodeBurninSettings?: TimecodeBurninSettingsProperty;
 }
@@ -28761,19 +28761,19 @@ export interface EncoderSettingsVideoDescriptionsCodecSettingsProperty {
   /**
   * frame_capture_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_settings AwsMedialiveChannel#frame_capture_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#frame_capture_settings TfChannel#frame_capture_settings}
   */
   readonly frameCaptureSettings?: FrameCaptureSettingsProperty;
   /**
   * h264_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h264_settings AwsMedialiveChannel#h264_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h264_settings TfChannel#h264_settings}
   */
   readonly h264Settings?: H264SettingsProperty;
   /**
   * h265_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h265_settings AwsMedialiveChannel#h265_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#h265_settings TfChannel#h265_settings}
   */
   readonly h265Settings?: H265SettingsProperty;
 }
@@ -28871,33 +28871,33 @@ export class EncoderSettingsVideoDescriptionsCodecSettingsPropertyOutputReferenc
 }
 export interface VideoDescriptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#height AwsMedialiveChannel#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#height TfChannel#height}
   */
   readonly height?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#respond_to_afd AwsMedialiveChannel#respond_to_afd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#respond_to_afd TfChannel#respond_to_afd}
   */
   readonly respondToAfd?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scaling_behavior AwsMedialiveChannel#scaling_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scaling_behavior TfChannel#scaling_behavior}
   */
   readonly scalingBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sharpness AwsMedialiveChannel#sharpness}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#sharpness TfChannel#sharpness}
   */
   readonly sharpness?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#width AwsMedialiveChannel#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#width TfChannel#width}
   */
   readonly width?: number;
   /**
   * codec_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec_settings AwsMedialiveChannel#codec_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec_settings TfChannel#codec_settings}
   */
   readonly codecSettings?: EncoderSettingsVideoDescriptionsCodecSettingsProperty;
 }
@@ -29114,55 +29114,55 @@ export interface EncoderSettingsProperty {
   /**
   * audio_descriptions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_descriptions AwsMedialiveChannel#audio_descriptions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_descriptions TfChannel#audio_descriptions}
   */
   readonly audioDescriptions?: AudioDescriptionsProperty[] | cdktn.IResolvable;
   /**
   * avail_blanking block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#avail_blanking AwsMedialiveChannel#avail_blanking}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#avail_blanking TfChannel#avail_blanking}
   */
   readonly availBlanking?: AvailBlankingProperty;
   /**
   * caption_descriptions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_descriptions AwsMedialiveChannel#caption_descriptions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_descriptions TfChannel#caption_descriptions}
   */
   readonly captionDescriptions?: CaptionDescriptionsProperty[] | cdktn.IResolvable;
   /**
   * global_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#global_configuration AwsMedialiveChannel#global_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#global_configuration TfChannel#global_configuration}
   */
   readonly globalConfiguration?: GlobalConfigurationProperty;
   /**
   * motion_graphics_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#motion_graphics_configuration AwsMedialiveChannel#motion_graphics_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#motion_graphics_configuration TfChannel#motion_graphics_configuration}
   */
   readonly motionGraphicsConfiguration?: MotionGraphicsConfigurationProperty;
   /**
   * nielsen_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_configuration AwsMedialiveChannel#nielsen_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#nielsen_configuration TfChannel#nielsen_configuration}
   */
   readonly nielsenConfiguration?: NielsenConfigurationProperty;
   /**
   * output_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_groups AwsMedialiveChannel#output_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_groups TfChannel#output_groups}
   */
   readonly outputGroups: OutputGroupsProperty[] | cdktn.IResolvable;
   /**
   * timecode_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_config AwsMedialiveChannel#timecode_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#timecode_config TfChannel#timecode_config}
   */
   readonly timecodeConfig: TimecodeConfigProperty;
   /**
   * video_descriptions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_descriptions AwsMedialiveChannel#video_descriptions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_descriptions TfChannel#video_descriptions}
   */
   readonly videoDescriptions?: VideoDescriptionsProperty[] | cdktn.IResolvable;
 }
@@ -29386,11 +29386,11 @@ export class EncoderSettingsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface AudioSilenceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_selector_name AwsMedialiveChannel#audio_selector_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_selector_name TfChannel#audio_selector_name}
   */
   readonly audioSelectorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_silence_threshold_msec AwsMedialiveChannel#audio_silence_threshold_msec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_silence_threshold_msec TfChannel#audio_silence_threshold_msec}
   */
   readonly audioSilenceThresholdMsec?: number;
 }
@@ -29463,7 +29463,7 @@ export class AudioSilenceSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface InputLossSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_threshold_msec AwsMedialiveChannel#input_loss_threshold_msec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_threshold_msec TfChannel#input_loss_threshold_msec}
   */
   readonly inputLossThresholdMsec?: number;
 }
@@ -29517,11 +29517,11 @@ export class InputLossSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface VideoBlackSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#black_detect_threshold AwsMedialiveChannel#black_detect_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#black_detect_threshold TfChannel#black_detect_threshold}
   */
   readonly blackDetectThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_black_threshold_msec AwsMedialiveChannel#video_black_threshold_msec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_black_threshold_msec TfChannel#video_black_threshold_msec}
   */
   readonly videoBlackThresholdMsec?: number;
 }
@@ -29599,19 +29599,19 @@ export interface FailoverConditionSettingsProperty {
   /**
   * audio_silence_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_silence_settings AwsMedialiveChannel#audio_silence_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_silence_settings TfChannel#audio_silence_settings}
   */
   readonly audioSilenceSettings?: AudioSilenceSettingsProperty;
   /**
   * input_loss_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_settings AwsMedialiveChannel#input_loss_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_loss_settings TfChannel#input_loss_settings}
   */
   readonly inputLossSettings?: InputLossSettingsProperty;
   /**
   * video_black_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_black_settings AwsMedialiveChannel#video_black_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_black_settings TfChannel#video_black_settings}
   */
   readonly videoBlackSettings?: VideoBlackSettingsProperty;
 }
@@ -29711,7 +29711,7 @@ export interface FailoverConditionProperty {
   /**
   * failover_condition_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#failover_condition_settings AwsMedialiveChannel#failover_condition_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#failover_condition_settings TfChannel#failover_condition_settings}
   */
   readonly failoverConditionSettings?: FailoverConditionSettingsProperty;
 }
@@ -29797,21 +29797,21 @@ export class FailoverConditionPropertyList extends cdktn.ComplexList {
 }
 export interface AutomaticInputFailoverSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#error_clear_time_msec AwsMedialiveChannel#error_clear_time_msec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#error_clear_time_msec TfChannel#error_clear_time_msec}
   */
   readonly errorClearTimeMsec?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_preference AwsMedialiveChannel#input_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_preference TfChannel#input_preference}
   */
   readonly inputPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#secondary_input_id AwsMedialiveChannel#secondary_input_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#secondary_input_id TfChannel#secondary_input_id}
   */
   readonly secondaryInputId: string;
   /**
   * failover_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#failover_condition AwsMedialiveChannel#failover_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#failover_condition TfChannel#failover_condition}
   */
   readonly failoverCondition?: FailoverConditionProperty[] | cdktn.IResolvable;
 }
@@ -29928,11 +29928,11 @@ export class AutomaticInputFailoverSettingsPropertyOutputReference extends cdktn
 }
 export interface AudioHlsRenditionSelectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#group_id AwsMedialiveChannel#group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#group_id TfChannel#group_id}
   */
   readonly groupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name: string;
 }
@@ -30002,11 +30002,11 @@ export class AudioHlsRenditionSelectionPropertyOutputReference extends cdktn.Com
 }
 export interface AudioLanguageSelectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code AwsMedialiveChannel#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code TfChannel#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_selection_policy AwsMedialiveChannel#language_selection_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_selection_policy TfChannel#language_selection_policy}
   */
   readonly languageSelectionPolicy?: string;
 }
@@ -30079,7 +30079,7 @@ export class AudioLanguageSelectionPropertyOutputReference extends cdktn.Complex
 }
 export interface AudioPidSelectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pid AwsMedialiveChannel#pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pid TfChannel#pid}
   */
   readonly pid: number;
 }
@@ -30130,7 +30130,7 @@ export class AudioPidSelectionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface DolbyEDecodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_selection AwsMedialiveChannel#program_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#program_selection TfChannel#program_selection}
   */
   readonly programSelection: string;
 }
@@ -30181,7 +30181,7 @@ export class DolbyEDecodePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TracksProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#track AwsMedialiveChannel#track}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#track TfChannel#track}
   */
   readonly track: number;
 }
@@ -30266,13 +30266,13 @@ export interface AudioTrackSelectionProperty {
   /**
   * dolby_e_decode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dolby_e_decode AwsMedialiveChannel#dolby_e_decode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dolby_e_decode TfChannel#dolby_e_decode}
   */
   readonly dolbyEDecode?: DolbyEDecodeProperty;
   /**
   * tracks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tracks AwsMedialiveChannel#tracks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#tracks TfChannel#tracks}
   */
   readonly tracks: TracksProperty[] | cdktn.IResolvable;
 }
@@ -30347,25 +30347,25 @@ export interface InputAttachmentsInputSettingsAudioSelectorSelectorSettingsPrope
   /**
   * audio_hls_rendition_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_hls_rendition_selection AwsMedialiveChannel#audio_hls_rendition_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_hls_rendition_selection TfChannel#audio_hls_rendition_selection}
   */
   readonly audioHlsRenditionSelection?: AudioHlsRenditionSelectionProperty;
   /**
   * audio_language_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_language_selection AwsMedialiveChannel#audio_language_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_language_selection TfChannel#audio_language_selection}
   */
   readonly audioLanguageSelection?: AudioLanguageSelectionProperty;
   /**
   * audio_pid_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pid_selection AwsMedialiveChannel#audio_pid_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_pid_selection TfChannel#audio_pid_selection}
   */
   readonly audioPidSelection?: AudioPidSelectionProperty;
   /**
   * audio_track_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_track_selection AwsMedialiveChannel#audio_track_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_track_selection TfChannel#audio_track_selection}
   */
   readonly audioTrackSelection?: AudioTrackSelectionProperty;
 }
@@ -30485,13 +30485,13 @@ export class InputAttachmentsInputSettingsAudioSelectorSelectorSettingsPropertyO
 }
 export interface AudioSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name: string;
   /**
   * selector_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#selector_settings AwsMedialiveChannel#selector_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#selector_settings TfChannel#selector_settings}
   */
   readonly selectorSettings?: InputAttachmentsInputSettingsAudioSelectorSelectorSettingsProperty;
 }
@@ -30596,7 +30596,7 @@ export class AudioSelectorPropertyList extends cdktn.ComplexList {
 }
 export interface AncillarySourceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_ancillary_channel_number AwsMedialiveChannel#source_ancillary_channel_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_ancillary_channel_number TfChannel#source_ancillary_channel_number}
   */
   readonly sourceAncillaryChannelNumber?: number;
 }
@@ -30678,11 +30678,11 @@ export class AribSourceSettingsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface DvbSubSourceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ocr_language AwsMedialiveChannel#ocr_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ocr_language TfChannel#ocr_language}
   */
   readonly ocrLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pid AwsMedialiveChannel#pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pid TfChannel#pid}
   */
   readonly pid?: number;
 }
@@ -30758,15 +30758,15 @@ export class DvbSubSourceSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface EmbeddedSourceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#convert_608_to_708 AwsMedialiveChannel#convert_608_to_708}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#convert_608_to_708 TfChannel#convert_608_to_708}
   */
   readonly convert608To708?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte20_detection AwsMedialiveChannel#scte20_detection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte20_detection TfChannel#scte20_detection}
   */
   readonly scte20Detection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_608_channel_number AwsMedialiveChannel#source_608_channel_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_608_channel_number TfChannel#source_608_channel_number}
   */
   readonly source608ChannelNumber?: number;
 }
@@ -30864,11 +30864,11 @@ export class EmbeddedSourceSettingsPropertyOutputReference extends cdktn.Complex
 }
 export interface Scte20SourceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#convert_608_to_708 AwsMedialiveChannel#convert_608_to_708}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#convert_608_to_708 TfChannel#convert_608_to_708}
   */
   readonly convert608To708?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_608_channel_number AwsMedialiveChannel#source_608_channel_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_608_channel_number TfChannel#source_608_channel_number}
   */
   readonly source608ChannelNumber?: number;
 }
@@ -30944,11 +30944,11 @@ export class Scte20SourceSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface Scte27SourceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ocr_language AwsMedialiveChannel#ocr_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ocr_language TfChannel#ocr_language}
   */
   readonly ocrLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pid AwsMedialiveChannel#pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#pid TfChannel#pid}
   */
   readonly pid?: number;
 }
@@ -31024,19 +31024,19 @@ export class Scte27SourceSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface OutputRectangleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#height AwsMedialiveChannel#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#height TfChannel#height}
   */
   readonly height: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#left_offset AwsMedialiveChannel#left_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#left_offset TfChannel#left_offset}
   */
   readonly leftOffset: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#top_offset AwsMedialiveChannel#top_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#top_offset TfChannel#top_offset}
   */
   readonly topOffset: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#width AwsMedialiveChannel#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#width TfChannel#width}
   */
   readonly width: number;
 }
@@ -31144,13 +31144,13 @@ export class OutputRectanglePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TeletextSourceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#page_number AwsMedialiveChannel#page_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#page_number TfChannel#page_number}
   */
   readonly pageNumber?: string;
   /**
   * output_rectangle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_rectangle AwsMedialiveChannel#output_rectangle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#output_rectangle TfChannel#output_rectangle}
   */
   readonly outputRectangle?: OutputRectangleProperty;
 }
@@ -31228,43 +31228,43 @@ export interface InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPro
   /**
   * ancillary_source_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ancillary_source_settings AwsMedialiveChannel#ancillary_source_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#ancillary_source_settings TfChannel#ancillary_source_settings}
   */
   readonly ancillarySourceSettings?: AncillarySourceSettingsProperty;
   /**
   * arib_source_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_source_settings AwsMedialiveChannel#arib_source_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#arib_source_settings TfChannel#arib_source_settings}
   */
   readonly aribSourceSettings?: AribSourceSettingsProperty;
   /**
   * dvb_sub_source_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_source_settings AwsMedialiveChannel#dvb_sub_source_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#dvb_sub_source_settings TfChannel#dvb_sub_source_settings}
   */
   readonly dvbSubSourceSettings?: DvbSubSourceSettingsProperty;
   /**
   * embedded_source_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#embedded_source_settings AwsMedialiveChannel#embedded_source_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#embedded_source_settings TfChannel#embedded_source_settings}
   */
   readonly embeddedSourceSettings?: EmbeddedSourceSettingsProperty;
   /**
   * scte20_source_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte20_source_settings AwsMedialiveChannel#scte20_source_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte20_source_settings TfChannel#scte20_source_settings}
   */
   readonly scte20SourceSettings?: Scte20SourceSettingsProperty;
   /**
   * scte27_source_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_source_settings AwsMedialiveChannel#scte27_source_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte27_source_settings TfChannel#scte27_source_settings}
   */
   readonly scte27SourceSettings?: Scte27SourceSettingsProperty;
   /**
   * teletext_source_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_source_settings AwsMedialiveChannel#teletext_source_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#teletext_source_settings TfChannel#teletext_source_settings}
   */
   readonly teletextSourceSettings?: TeletextSourceSettingsProperty;
 }
@@ -31450,17 +31450,17 @@ export class InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsPropert
 }
 export interface CaptionSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code AwsMedialiveChannel#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#language_code TfChannel#language_code}
   */
   readonly languageCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name AwsMedialiveChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#name TfChannel#name}
   */
   readonly name: string;
   /**
   * selector_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#selector_settings AwsMedialiveChannel#selector_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#selector_settings TfChannel#selector_settings}
   */
   readonly selectorSettings?: InputAttachmentsInputSettingsCaptionSelectorSelectorSettingsProperty;
 }
@@ -31587,23 +31587,23 @@ export class CaptionSelectorPropertyList extends cdktn.ComplexList {
 }
 export interface HlsInputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bandwidth AwsMedialiveChannel#bandwidth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#bandwidth TfChannel#bandwidth}
   */
   readonly bandwidth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_segments AwsMedialiveChannel#buffer_segments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#buffer_segments TfChannel#buffer_segments}
   */
   readonly bufferSegments?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#retries AwsMedialiveChannel#retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#retries TfChannel#retries}
   */
   readonly retries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#retry_interval AwsMedialiveChannel#retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#retry_interval TfChannel#retry_interval}
   */
   readonly retryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_source AwsMedialiveChannel#scte35_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_source TfChannel#scte35_source}
   */
   readonly scte35Source?: string;
 }
@@ -31745,13 +31745,13 @@ export class HlsInputSettingsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface NetworkInputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#server_validation AwsMedialiveChannel#server_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#server_validation TfChannel#server_validation}
   */
   readonly serverValidation?: string;
   /**
   * hls_input_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_input_settings AwsMedialiveChannel#hls_input_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#hls_input_settings TfChannel#hls_input_settings}
   */
   readonly hlsInputSettings?: HlsInputSettingsProperty;
 }
@@ -31827,11 +31827,11 @@ export class NetworkInputSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface VideoSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space AwsMedialiveChannel#color_space}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space TfChannel#color_space}
   */
   readonly colorSpace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space_usage AwsMedialiveChannel#color_space_usage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#color_space_usage TfChannel#color_space_usage}
   */
   readonly colorSpaceUsage?: string;
 }
@@ -31907,55 +31907,55 @@ export class VideoSelectorPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InputSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#deblock_filter AwsMedialiveChannel#deblock_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#deblock_filter TfChannel#deblock_filter}
   */
   readonly deblockFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#denoise_filter AwsMedialiveChannel#denoise_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#denoise_filter TfChannel#denoise_filter}
   */
   readonly denoiseFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filter_strength AwsMedialiveChannel#filter_strength}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#filter_strength TfChannel#filter_strength}
   */
   readonly filterStrength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_filter AwsMedialiveChannel#input_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_filter TfChannel#input_filter}
   */
   readonly inputFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid AwsMedialiveChannel#scte35_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#scte35_pid TfChannel#scte35_pid}
   */
   readonly scte35Pid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#smpte2038_data_preference AwsMedialiveChannel#smpte2038_data_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#smpte2038_data_preference TfChannel#smpte2038_data_preference}
   */
   readonly smpte2038DataPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_end_behavior AwsMedialiveChannel#source_end_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#source_end_behavior TfChannel#source_end_behavior}
   */
   readonly sourceEndBehavior?: string;
   /**
   * audio_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_selector AwsMedialiveChannel#audio_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#audio_selector TfChannel#audio_selector}
   */
   readonly audioSelector?: AudioSelectorProperty[] | cdktn.IResolvable;
   /**
   * caption_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_selector AwsMedialiveChannel#caption_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#caption_selector TfChannel#caption_selector}
   */
   readonly captionSelector?: CaptionSelectorProperty[] | cdktn.IResolvable;
   /**
   * network_input_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_input_settings AwsMedialiveChannel#network_input_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#network_input_settings TfChannel#network_input_settings}
   */
   readonly networkInputSettings?: NetworkInputSettingsProperty;
   /**
   * video_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_selector AwsMedialiveChannel#video_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#video_selector TfChannel#video_selector}
   */
   readonly videoSelector?: VideoSelectorProperty;
 }
@@ -32229,23 +32229,23 @@ export class InputSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InputAttachmentsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_attachment_name AwsMedialiveChannel#input_attachment_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_attachment_name TfChannel#input_attachment_name}
   */
   readonly inputAttachmentName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_id AwsMedialiveChannel#input_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_id TfChannel#input_id}
   */
   readonly inputId: string;
   /**
   * automatic_input_failover_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#automatic_input_failover_settings AwsMedialiveChannel#automatic_input_failover_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#automatic_input_failover_settings TfChannel#automatic_input_failover_settings}
   */
   readonly automaticInputFailoverSettings?: AutomaticInputFailoverSettingsProperty;
   /**
   * input_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_settings AwsMedialiveChannel#input_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_settings TfChannel#input_settings}
   */
   readonly inputSettings?: InputSettingsProperty;
 }
@@ -32391,15 +32391,15 @@ export class InputAttachmentsPropertyList extends cdktn.ComplexList {
 }
 export interface InputSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec AwsMedialiveChannel#codec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#codec TfChannel#codec}
   */
   readonly codec: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_resolution AwsMedialiveChannel#input_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#input_resolution TfChannel#input_resolution}
   */
   readonly inputResolution: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maximum_bitrate AwsMedialiveChannel#maximum_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maximum_bitrate TfChannel#maximum_bitrate}
   */
   readonly maximumBitrate: string;
 }
@@ -32488,11 +32488,11 @@ export class InputSpecificationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface MaintenanceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maintenance_day AwsMedialiveChannel#maintenance_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maintenance_day TfChannel#maintenance_day}
   */
   readonly maintenanceDay: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maintenance_start_time AwsMedialiveChannel#maintenance_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#maintenance_start_time TfChannel#maintenance_start_time}
   */
   readonly maintenanceStartTime: string;
 }
@@ -32562,15 +32562,15 @@ export class MaintenancePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#create AwsMedialiveChannel#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#create TfChannel#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#delete AwsMedialiveChannel#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#delete TfChannel#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#update AwsMedialiveChannel#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#update TfChannel#update}
   */
   readonly update?: string;
 }
@@ -32678,15 +32678,15 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#public_address_allocation_ids AwsMedialiveChannel#public_address_allocation_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#public_address_allocation_ids TfChannel#public_address_allocation_ids}
   */
   readonly publicAddressAllocationIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#security_group_ids AwsMedialiveChannel#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#security_group_ids TfChannel#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#subnet_ids AwsMedialiveChannel#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_channel#subnet_ids TfChannel#subnet_ids}
   */
   readonly subnetIds: string[];
 }

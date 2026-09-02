@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerModelCardConfig extends cdktn.TerraformMetaArguments {
+export interface TfModelCardConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#content AwsSagemakerModelCard#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#content TfModelCard#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#model_card_name AwsSagemakerModelCard#model_card_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#model_card_name TfModelCard#model_card_name}
   */
   readonly modelCardName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#model_card_status AwsSagemakerModelCard#model_card_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#model_card_status TfModelCard#model_card_status}
   */
   readonly modelCardStatus: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#region AwsSagemakerModelCard#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#region TfModelCard#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#tags AwsSagemakerModelCard#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#tags TfModelCard#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * security_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#security_config AwsSagemakerModelCard#security_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#security_config TfModelCard#security_config}
   */
-  readonly securityConfig?: AwsSagemakerModelCard.SecurityConfigProperty[] | cdktn.IResolvable;
+  readonly securityConfig?: TfModelCard.SecurityConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#timeouts AwsSagemakerModelCard#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#timeouts TfModelCard#timeouts}
   */
-  readonly timeouts?: AwsSagemakerModelCard.TimeoutsProperty;
+  readonly timeouts?: TfModelCard.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card aws_sagemaker_model_card}
 */
-export class AwsSagemakerModelCard extends cdktn.TerraformResource {
+export class TfModelCard extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsSagemakerModelCard extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerModelCard resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfModelCard resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerModelCard to import
-  * @param importFromId The id of the existing AwsSagemakerModelCard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerModelCard to import is found
+  * @param importToId The construct id used in the generated config for the TfModelCard to import
+  * @param importFromId The id of the existing TfModelCard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfModelCard to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_model_card", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsSagemakerModelCard extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerModelCardConfig
+  * @param options TfModelCardConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerModelCardConfig) {
+  public constructor(scope: Construct, id: string, config: TfModelCardConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_model_card',
       terraformGeneratorMetadata: {
@@ -189,11 +189,11 @@ export class AwsSagemakerModelCard extends cdktn.TerraformResource {
   }
 
   // security_config - computed: false, optional: true, required: false
-  private _securityConfig = new AwsSagemakerModelCard.SecurityConfigPropertyList(this, "security_config", false);
+  private _securityConfig = new TfModelCard.SecurityConfigPropertyList(this, "security_config", false);
   public get securityConfig() {
     return this._securityConfig;
   }
-  public putSecurityConfig(value: AwsSagemakerModelCard.SecurityConfigProperty[] | cdktn.IResolvable) {
+  public putSecurityConfig(value: TfModelCard.SecurityConfigProperty[] | cdktn.IResolvable) {
     this._securityConfig.internalValue = value;
   }
   public resetSecurityConfig() {
@@ -205,11 +205,11 @@ export class AwsSagemakerModelCard extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSagemakerModelCard.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfModelCard.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSagemakerModelCard.TimeoutsProperty) {
+  public putTimeouts(value: TfModelCard.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -231,8 +231,8 @@ export class AwsSagemakerModelCard extends cdktn.TerraformResource {
       model_card_status: cdktn.stringToTerraform(this._modelCardStatus),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      security_config: cdktn.listMapper(awsSagemakerModelCardSecurityConfigPropertyToTerraform, true)(this._securityConfig.internalValue),
-      timeouts: awsSagemakerModelCardTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      security_config: cdktn.listMapper(tfModelCardSecurityConfigPropertyToTerraform, true)(this._securityConfig.internalValue),
+      timeouts: tfModelCardTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -269,16 +269,16 @@ export class AwsSagemakerModelCard extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       security_config: {
-        value: cdktn.listMapperHcl(awsSagemakerModelCardSecurityConfigPropertyToHclTerraform, true)(this._securityConfig.internalValue),
+        value: cdktn.listMapperHcl(tfModelCardSecurityConfigPropertyToHclTerraform, true)(this._securityConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerModelCard.SecurityConfigPropertyList",
+        storageClassType: "TfModelCard.SecurityConfigPropertyList",
       },
       timeouts: {
-        value: awsSagemakerModelCardTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfModelCardTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSagemakerModelCard.TimeoutsProperty",
+        storageClassType: "TfModelCard.TimeoutsProperty",
       },
     };
 
@@ -287,7 +287,7 @@ export class AwsSagemakerModelCard extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerModelCardSecurityConfigPropertyToTerraform(struct?: AwsSagemakerModelCard.SecurityConfigProperty | cdktn.IResolvable): any {
+export function tfModelCardSecurityConfigPropertyToTerraform(struct?: TfModelCard.SecurityConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function awsSagemakerModelCardSecurityConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsSagemakerModelCardSecurityConfigPropertyToHclTerraform(struct?: AwsSagemakerModelCard.SecurityConfigProperty | cdktn.IResolvable): any {
+export function tfModelCardSecurityConfigPropertyToHclTerraform(struct?: TfModelCard.SecurityConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function awsSagemakerModelCardSecurityConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsSagemakerModelCardTimeoutsPropertyToTerraform(struct?: AwsSagemakerModelCard.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfModelCardTimeoutsPropertyToTerraform(struct?: TfModelCard.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function awsSagemakerModelCardTimeoutsPropertyToTerraform(struct?: AwsSag
 }
 
 
-export function awsSagemakerModelCardTimeoutsPropertyToHclTerraform(struct?: AwsSagemakerModelCard.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfModelCardTimeoutsPropertyToHclTerraform(struct?: TfModelCard.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,10 +347,10 @@ export function awsSagemakerModelCardTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsSagemakerModelCard {
+export namespace TfModelCard {
 export interface SecurityConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#kms_key_id AwsSagemakerModelCard#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#kms_key_id TfModelCard#kms_key_id}
   */
   readonly kmsKeyId: string;
 }
@@ -435,7 +435,7 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#delete AwsSagemakerModelCard#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card#delete TfModelCard#delete}
   */
   readonly delete?: string;
 }

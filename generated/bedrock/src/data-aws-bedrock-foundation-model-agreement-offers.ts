@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsBedrockFoundationModelAgreementOffersConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfFoundationModelAgreementOffersConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#model_id DataAwsBedrockFoundationModelAgreementOffers#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#model_id DataTfFoundationModelAgreementOffers#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#offer_type DataAwsBedrockFoundationModelAgreementOffers#offer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#offer_type DataTfFoundationModelAgreementOffers#offer_type}
   */
   readonly offerType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#region DataAwsBedrockFoundationModelAgreementOffers#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#region DataTfFoundationModelAgreementOffers#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface DataAwsBedrockFoundationModelAgreementOffersConfig extends cdkt
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers aws_bedrock_foundation_model_agreement_offers}
 */
-export class DataAwsBedrockFoundationModelAgreementOffers extends cdktn.TerraformDataSource {
+export class DataTfFoundationModelAgreementOffers extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataAwsBedrockFoundationModelAgreementOffers extends cdktn.Terrafor
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsBedrockFoundationModelAgreementOffers resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfFoundationModelAgreementOffers resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsBedrockFoundationModelAgreementOffers to import
-  * @param importFromId The id of the existing DataAwsBedrockFoundationModelAgreementOffers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsBedrockFoundationModelAgreementOffers to import is found
+  * @param importToId The construct id used in the generated config for the DataTfFoundationModelAgreementOffers to import
+  * @param importFromId The id of the existing DataTfFoundationModelAgreementOffers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_model_agreement_offers#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfFoundationModelAgreementOffers to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_foundation_model_agreement_offers", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataAwsBedrockFoundationModelAgreementOffers extends cdktn.Terrafor
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsBedrockFoundationModelAgreementOffersConfig
+  * @param options DataTfFoundationModelAgreementOffersConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsBedrockFoundationModelAgreementOffersConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfFoundationModelAgreementOffersConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_foundation_model_agreement_offers',
       terraformGeneratorMetadata: {
@@ -112,7 +112,7 @@ export class DataAwsBedrockFoundationModelAgreementOffers extends cdktn.Terrafor
   }
 
   // offers - computed: true, optional: false, required: false
-  private _offers = new DataAwsBedrockFoundationModelAgreementOffers.OffersPropertyList(this, "offers", false);
+  private _offers = new DataTfFoundationModelAgreementOffers.OffersPropertyList(this, "offers", false);
   public get offers() {
     return this._offers;
   }
@@ -172,7 +172,7 @@ export class DataAwsBedrockFoundationModelAgreementOffers extends cdktn.Terrafor
   }
 }
 
-export function dataAwsBedrockFoundationModelAgreementOffersLegalTermPropertyToTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.LegalTermProperty): any {
+export function dataTfFoundationModelAgreementOffersLegalTermPropertyToTerraform(struct?: DataTfFoundationModelAgreementOffers.LegalTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -182,7 +182,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersLegalTermPropertyToT
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersLegalTermPropertyToHclTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.LegalTermProperty): any {
+export function dataTfFoundationModelAgreementOffersLegalTermPropertyToHclTerraform(struct?: DataTfFoundationModelAgreementOffers.LegalTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -193,7 +193,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersLegalTermPropertyToH
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersSupportTermPropertyToTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.SupportTermProperty): any {
+export function dataTfFoundationModelAgreementOffersSupportTermPropertyToTerraform(struct?: DataTfFoundationModelAgreementOffers.SupportTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -203,7 +203,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersSupportTermPropertyT
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersSupportTermPropertyToHclTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.SupportTermProperty): any {
+export function dataTfFoundationModelAgreementOffersSupportTermPropertyToHclTerraform(struct?: DataTfFoundationModelAgreementOffers.SupportTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,7 +214,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersSupportTermPropertyT
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersRateCardPropertyToTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.RateCardProperty): any {
+export function dataTfFoundationModelAgreementOffersRateCardPropertyToTerraform(struct?: DataTfFoundationModelAgreementOffers.RateCardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersRateCardPropertyToTe
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersRateCardPropertyToHclTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.RateCardProperty): any {
+export function dataTfFoundationModelAgreementOffersRateCardPropertyToHclTerraform(struct?: DataTfFoundationModelAgreementOffers.RateCardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersRateCardPropertyToHc
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersUsageBasedPricingTermPropertyToTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.UsageBasedPricingTermProperty): any {
+export function dataTfFoundationModelAgreementOffersUsageBasedPricingTermPropertyToTerraform(struct?: DataTfFoundationModelAgreementOffers.UsageBasedPricingTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersUsageBasedPricingTer
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersUsageBasedPricingTermPropertyToHclTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.UsageBasedPricingTermProperty): any {
+export function dataTfFoundationModelAgreementOffersUsageBasedPricingTermPropertyToHclTerraform(struct?: DataTfFoundationModelAgreementOffers.UsageBasedPricingTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersUsageBasedPricingTer
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersValidityTermPropertyToTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.ValidityTermProperty): any {
+export function dataTfFoundationModelAgreementOffersValidityTermPropertyToTerraform(struct?: DataTfFoundationModelAgreementOffers.ValidityTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersValidityTermProperty
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersValidityTermPropertyToHclTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.ValidityTermProperty): any {
+export function dataTfFoundationModelAgreementOffersValidityTermPropertyToHclTerraform(struct?: DataTfFoundationModelAgreementOffers.ValidityTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersValidityTermProperty
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersTermDetailsPropertyToTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.TermDetailsProperty): any {
+export function dataTfFoundationModelAgreementOffersTermDetailsPropertyToTerraform(struct?: DataTfFoundationModelAgreementOffers.TermDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersTermDetailsPropertyT
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersTermDetailsPropertyToHclTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.TermDetailsProperty): any {
+export function dataTfFoundationModelAgreementOffersTermDetailsPropertyToHclTerraform(struct?: DataTfFoundationModelAgreementOffers.TermDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersTermDetailsPropertyT
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersOffersPropertyToTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.OffersProperty): any {
+export function dataTfFoundationModelAgreementOffersOffersPropertyToTerraform(struct?: DataTfFoundationModelAgreementOffers.OffersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersOffersPropertyToTerr
 }
 
 
-export function dataAwsBedrockFoundationModelAgreementOffersOffersPropertyToHclTerraform(struct?: DataAwsBedrockFoundationModelAgreementOffers.OffersProperty): any {
+export function dataTfFoundationModelAgreementOffersOffersPropertyToHclTerraform(struct?: DataTfFoundationModelAgreementOffers.OffersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function dataAwsBedrockFoundationModelAgreementOffersOffersPropertyToHclT
 }
 
 
-export namespace DataAwsBedrockFoundationModelAgreementOffers {
+export namespace DataTfFoundationModelAgreementOffers {
 export interface LegalTermProperty {
 }
 export class LegalTermPropertyOutputReference extends cdktn.ComplexObject {

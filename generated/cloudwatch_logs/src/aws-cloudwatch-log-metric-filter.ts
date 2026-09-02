@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchLogMetricFilterConfig extends cdktn.TerraformMetaArguments {
+export interface TfMetricFilterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#apply_on_transformed_logs AwsCloudwatchLogMetricFilter#apply_on_transformed_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#apply_on_transformed_logs TfMetricFilter#apply_on_transformed_logs}
   */
   readonly applyOnTransformedLogs?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#id AwsCloudwatchLogMetricFilter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#id TfMetricFilter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#log_group_name AwsCloudwatchLogMetricFilter#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#log_group_name TfMetricFilter#log_group_name}
   */
   readonly logGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#name AwsCloudwatchLogMetricFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#name TfMetricFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#pattern AwsCloudwatchLogMetricFilter#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#pattern TfMetricFilter#pattern}
   */
   readonly pattern: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#region AwsCloudwatchLogMetricFilter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#region TfMetricFilter#region}
   */
   readonly region?: string;
   /**
   * metric_transformation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#metric_transformation AwsCloudwatchLogMetricFilter#metric_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#metric_transformation TfMetricFilter#metric_transformation}
   */
-  readonly metricTransformation: AwsCloudwatchLogMetricFilter.MetricTransformationProperty;
+  readonly metricTransformation: TfMetricFilter.MetricTransformationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter aws_cloudwatch_log_metric_filter}
 */
-export class AwsCloudwatchLogMetricFilter extends cdktn.TerraformResource {
+export class TfMetricFilter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsCloudwatchLogMetricFilter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchLogMetricFilter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMetricFilter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchLogMetricFilter to import
-  * @param importFromId The id of the existing AwsCloudwatchLogMetricFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchLogMetricFilter to import is found
+  * @param importToId The construct id used in the generated config for the TfMetricFilter to import
+  * @param importFromId The id of the existing TfMetricFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMetricFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_log_metric_filter", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsCloudwatchLogMetricFilter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchLogMetricFilterConfig
+  * @param options TfMetricFilterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchLogMetricFilterConfig) {
+  public constructor(scope: Construct, id: string, config: TfMetricFilterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_log_metric_filter',
       terraformGeneratorMetadata: {
@@ -195,11 +195,11 @@ export class AwsCloudwatchLogMetricFilter extends cdktn.TerraformResource {
   }
 
   // metric_transformation - computed: false, optional: false, required: true
-  private _metricTransformation = new AwsCloudwatchLogMetricFilter.MetricTransformationPropertyOutputReference(this, "metric_transformation");
+  private _metricTransformation = new TfMetricFilter.MetricTransformationPropertyOutputReference(this, "metric_transformation");
   public get metricTransformation() {
     return this._metricTransformation;
   }
-  public putMetricTransformation(value: AwsCloudwatchLogMetricFilter.MetricTransformationProperty) {
+  public putMetricTransformation(value: TfMetricFilter.MetricTransformationProperty) {
     this._metricTransformation.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -219,7 +219,7 @@ export class AwsCloudwatchLogMetricFilter extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       pattern: cdktn.stringToTerraform(this._pattern),
       region: cdktn.stringToTerraform(this._region),
-      metric_transformation: awsCloudwatchLogMetricFilterMetricTransformationPropertyToTerraform(this._metricTransformation.internalValue),
+      metric_transformation: tfMetricFilterMetricTransformationPropertyToTerraform(this._metricTransformation.internalValue),
     };
   }
 
@@ -262,10 +262,10 @@ export class AwsCloudwatchLogMetricFilter extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       metric_transformation: {
-        value: awsCloudwatchLogMetricFilterMetricTransformationPropertyToHclTerraform(this._metricTransformation.internalValue),
+        value: tfMetricFilterMetricTransformationPropertyToHclTerraform(this._metricTransformation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchLogMetricFilter.MetricTransformationPropertyList",
+        storageClassType: "TfMetricFilter.MetricTransformationPropertyList",
       },
     };
 
@@ -274,7 +274,7 @@ export class AwsCloudwatchLogMetricFilter extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchLogMetricFilterMetricTransformationPropertyToTerraform(struct?: AwsCloudwatchLogMetricFilter.MetricTransformationPropertyOutputReference | AwsCloudwatchLogMetricFilter.MetricTransformationProperty): any {
+export function tfMetricFilterMetricTransformationPropertyToTerraform(struct?: TfMetricFilter.MetricTransformationPropertyOutputReference | TfMetricFilter.MetricTransformationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function awsCloudwatchLogMetricFilterMetricTransformationPropertyToTerraf
 }
 
 
-export function awsCloudwatchLogMetricFilterMetricTransformationPropertyToHclTerraform(struct?: AwsCloudwatchLogMetricFilter.MetricTransformationPropertyOutputReference | AwsCloudwatchLogMetricFilter.MetricTransformationProperty): any {
+export function tfMetricFilterMetricTransformationPropertyToHclTerraform(struct?: TfMetricFilter.MetricTransformationPropertyOutputReference | TfMetricFilter.MetricTransformationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,30 +339,30 @@ export function awsCloudwatchLogMetricFilterMetricTransformationPropertyToHclTer
 }
 
 
-export namespace AwsCloudwatchLogMetricFilter {
+export namespace TfMetricFilter {
 export interface MetricTransformationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#default_value AwsCloudwatchLogMetricFilter#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#default_value TfMetricFilter#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#dimensions AwsCloudwatchLogMetricFilter#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#dimensions TfMetricFilter#dimensions}
   */
   readonly dimensions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#name AwsCloudwatchLogMetricFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#name TfMetricFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#namespace AwsCloudwatchLogMetricFilter#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#namespace TfMetricFilter#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#unit AwsCloudwatchLogMetricFilter#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#unit TfMetricFilter#unit}
   */
   readonly unit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#value AwsCloudwatchLogMetricFilter#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_metric_filter#value TfMetricFilter#value}
   */
   readonly value: string;
 }

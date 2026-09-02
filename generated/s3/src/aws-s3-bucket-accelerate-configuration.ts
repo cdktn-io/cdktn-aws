@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3BucketAccelerateConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketAccelerateConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#bucket AwsS3BucketAccelerateConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#bucket TfBucketAccelerateConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#expected_bucket_owner AwsS3BucketAccelerateConfiguration#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#expected_bucket_owner TfBucketAccelerateConfiguration#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#id AwsS3BucketAccelerateConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#id TfBucketAccelerateConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface AwsS3BucketAccelerateConfigurationConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#region AwsS3BucketAccelerateConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#region TfBucketAccelerateConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#status AwsS3BucketAccelerateConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#status TfBucketAccelerateConfiguration#status}
   */
   readonly status: string;
 }
@@ -36,7 +36,7 @@ export interface AwsS3BucketAccelerateConfigurationConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration aws_s3_bucket_accelerate_configuration}
 */
-export class AwsS3BucketAccelerateConfiguration extends cdktn.TerraformResource {
+export class TfBucketAccelerateConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsS3BucketAccelerateConfiguration extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3BucketAccelerateConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketAccelerateConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3BucketAccelerateConfiguration to import
-  * @param importFromId The id of the existing AwsS3BucketAccelerateConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3BucketAccelerateConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketAccelerateConfiguration to import
+  * @param importFromId The id of the existing TfBucketAccelerateConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_accelerate_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketAccelerateConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_accelerate_configuration", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsS3BucketAccelerateConfiguration extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3BucketAccelerateConfigurationConfig
+  * @param options TfBucketAccelerateConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3BucketAccelerateConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketAccelerateConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_accelerate_configuration',
       terraformGeneratorMetadata: {

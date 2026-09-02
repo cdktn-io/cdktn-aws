@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsServicecatalogLaunchPathsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLaunchPathsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#accept_language DataAwsServicecatalogLaunchPaths#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#accept_language DataTfLaunchPaths#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#id DataAwsServicecatalogLaunchPaths#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#id DataTfLaunchPaths#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#product_id DataAwsServicecatalogLaunchPaths#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#product_id DataTfLaunchPaths#product_id}
   */
   readonly productId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#region DataAwsServicecatalogLaunchPaths#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#region DataTfLaunchPaths#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#timeouts DataAwsServicecatalogLaunchPaths#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#timeouts DataTfLaunchPaths#timeouts}
   */
-  readonly timeouts?: DataAwsServicecatalogLaunchPaths.TimeoutsProperty;
+  readonly timeouts?: DataTfLaunchPaths.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths aws_servicecatalog_launch_paths}
 */
-export class DataAwsServicecatalogLaunchPaths extends cdktn.TerraformDataSource {
+export class DataTfLaunchPaths extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataAwsServicecatalogLaunchPaths extends cdktn.TerraformDataSource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsServicecatalogLaunchPaths resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLaunchPaths resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsServicecatalogLaunchPaths to import
-  * @param importFromId The id of the existing DataAwsServicecatalogLaunchPaths that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsServicecatalogLaunchPaths to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLaunchPaths to import
+  * @param importFromId The id of the existing DataTfLaunchPaths that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLaunchPaths to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_launch_paths", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataAwsServicecatalogLaunchPaths extends cdktn.TerraformDataSource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsServicecatalogLaunchPathsConfig
+  * @param options DataTfLaunchPathsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsServicecatalogLaunchPathsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfLaunchPathsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_launch_paths',
       terraformGeneratorMetadata: {
@@ -159,17 +159,17 @@ export class DataAwsServicecatalogLaunchPaths extends cdktn.TerraformDataSource 
   }
 
   // summaries - computed: true, optional: false, required: false
-  private _summaries = new DataAwsServicecatalogLaunchPaths.SummariesPropertyList(this, "summaries", false);
+  private _summaries = new DataTfLaunchPaths.SummariesPropertyList(this, "summaries", false);
   public get summaries() {
     return this._summaries;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsServicecatalogLaunchPaths.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfLaunchPaths.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsServicecatalogLaunchPaths.TimeoutsProperty) {
+  public putTimeouts(value: DataTfLaunchPaths.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -190,7 +190,7 @@ export class DataAwsServicecatalogLaunchPaths extends cdktn.TerraformDataSource 
       id: cdktn.stringToTerraform(this._id),
       product_id: cdktn.stringToTerraform(this._productId),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: dataAwsServicecatalogLaunchPathsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataTfLaunchPathsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -221,10 +221,10 @@ export class DataAwsServicecatalogLaunchPaths extends cdktn.TerraformDataSource 
         storageClassType: "string",
       },
       timeouts: {
-        value: dataAwsServicecatalogLaunchPathsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfLaunchPathsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsServicecatalogLaunchPaths.TimeoutsProperty",
+        storageClassType: "DataTfLaunchPaths.TimeoutsProperty",
       },
     };
 
@@ -233,7 +233,7 @@ export class DataAwsServicecatalogLaunchPaths extends cdktn.TerraformDataSource 
   }
 }
 
-export function dataAwsServicecatalogLaunchPathsConstraintSummariesPropertyToTerraform(struct?: DataAwsServicecatalogLaunchPaths.ConstraintSummariesProperty): any {
+export function dataTfLaunchPathsConstraintSummariesPropertyToTerraform(struct?: DataTfLaunchPaths.ConstraintSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function dataAwsServicecatalogLaunchPathsConstraintSummariesPropertyToTer
 }
 
 
-export function dataAwsServicecatalogLaunchPathsConstraintSummariesPropertyToHclTerraform(struct?: DataAwsServicecatalogLaunchPaths.ConstraintSummariesProperty): any {
+export function dataTfLaunchPathsConstraintSummariesPropertyToHclTerraform(struct?: DataTfLaunchPaths.ConstraintSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function dataAwsServicecatalogLaunchPathsConstraintSummariesPropertyToHcl
 }
 
 
-export function dataAwsServicecatalogLaunchPathsSummariesPropertyToTerraform(struct?: DataAwsServicecatalogLaunchPaths.SummariesProperty): any {
+export function dataTfLaunchPathsSummariesPropertyToTerraform(struct?: DataTfLaunchPaths.SummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function dataAwsServicecatalogLaunchPathsSummariesPropertyToTerraform(str
 }
 
 
-export function dataAwsServicecatalogLaunchPathsSummariesPropertyToHclTerraform(struct?: DataAwsServicecatalogLaunchPaths.SummariesProperty): any {
+export function dataTfLaunchPathsSummariesPropertyToHclTerraform(struct?: DataTfLaunchPaths.SummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function dataAwsServicecatalogLaunchPathsSummariesPropertyToHclTerraform(
 }
 
 
-export function dataAwsServicecatalogLaunchPathsTimeoutsPropertyToTerraform(struct?: DataAwsServicecatalogLaunchPaths.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLaunchPathsTimeoutsPropertyToTerraform(struct?: DataTfLaunchPaths.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function dataAwsServicecatalogLaunchPathsTimeoutsPropertyToTerraform(stru
 }
 
 
-export function dataAwsServicecatalogLaunchPathsTimeoutsPropertyToHclTerraform(struct?: DataAwsServicecatalogLaunchPaths.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLaunchPathsTimeoutsPropertyToHclTerraform(struct?: DataTfLaunchPaths.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsServicecatalogLaunchPathsTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace DataAwsServicecatalogLaunchPaths {
+export namespace DataTfLaunchPaths {
 export interface ConstraintSummariesProperty {
 }
 export class ConstraintSummariesPropertyOutputReference extends cdktn.ComplexObject {
@@ -438,7 +438,7 @@ export class SummariesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#read DataAwsServicecatalogLaunchPaths#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_launch_paths#read DataTfLaunchPaths#read}
   */
   readonly read?: string;
 }

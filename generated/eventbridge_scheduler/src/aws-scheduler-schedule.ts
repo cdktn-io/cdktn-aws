@@ -5,82 +5,82 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSchedulerScheduleConfig extends cdktn.TerraformMetaArguments {
+export interface TfScheduleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#action_after_completion AwsSchedulerSchedule#action_after_completion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#action_after_completion TfSchedule#action_after_completion}
   */
   readonly actionAfterCompletion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#description AwsSchedulerSchedule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#description TfSchedule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#end_date AwsSchedulerSchedule#end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#end_date TfSchedule#end_date}
   */
   readonly endDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#group_name AwsSchedulerSchedule#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#group_name TfSchedule#group_name}
   */
   readonly groupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#id AwsSchedulerSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#id TfSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#kms_key_arn AwsSchedulerSchedule#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#kms_key_arn TfSchedule#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#name AwsSchedulerSchedule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#name TfSchedule#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#name_prefix AwsSchedulerSchedule#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#name_prefix TfSchedule#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#region AwsSchedulerSchedule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#region TfSchedule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#schedule_expression AwsSchedulerSchedule#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#schedule_expression TfSchedule#schedule_expression}
   */
   readonly scheduleExpression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#schedule_expression_timezone AwsSchedulerSchedule#schedule_expression_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#schedule_expression_timezone TfSchedule#schedule_expression_timezone}
   */
   readonly scheduleExpressionTimezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#start_date AwsSchedulerSchedule#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#start_date TfSchedule#start_date}
   */
   readonly startDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#state AwsSchedulerSchedule#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#state TfSchedule#state}
   */
   readonly state?: string;
   /**
   * flexible_time_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#flexible_time_window AwsSchedulerSchedule#flexible_time_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#flexible_time_window TfSchedule#flexible_time_window}
   */
-  readonly flexibleTimeWindow: AwsSchedulerSchedule.FlexibleTimeWindowProperty;
+  readonly flexibleTimeWindow: TfSchedule.FlexibleTimeWindowProperty;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#target AwsSchedulerSchedule#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#target TfSchedule#target}
   */
-  readonly target: AwsSchedulerSchedule.TargetProperty;
+  readonly target: TfSchedule.TargetProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule aws_scheduler_schedule}
 */
-export class AwsSchedulerSchedule extends cdktn.TerraformResource {
+export class TfSchedule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class AwsSchedulerSchedule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSchedulerSchedule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSchedule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSchedulerSchedule to import
-  * @param importFromId The id of the existing AwsSchedulerSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSchedulerSchedule to import is found
+  * @param importToId The construct id used in the generated config for the TfSchedule to import
+  * @param importFromId The id of the existing TfSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_scheduler_schedule", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class AwsSchedulerSchedule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSchedulerScheduleConfig
+  * @param options TfScheduleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSchedulerScheduleConfig) {
+  public constructor(scope: Construct, id: string, config: TfScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_scheduler_schedule',
       terraformGeneratorMetadata: {
@@ -360,11 +360,11 @@ export class AwsSchedulerSchedule extends cdktn.TerraformResource {
   }
 
   // flexible_time_window - computed: false, optional: false, required: true
-  private _flexibleTimeWindow = new AwsSchedulerSchedule.FlexibleTimeWindowPropertyOutputReference(this, "flexible_time_window");
+  private _flexibleTimeWindow = new TfSchedule.FlexibleTimeWindowPropertyOutputReference(this, "flexible_time_window");
   public get flexibleTimeWindow() {
     return this._flexibleTimeWindow;
   }
-  public putFlexibleTimeWindow(value: AwsSchedulerSchedule.FlexibleTimeWindowProperty) {
+  public putFlexibleTimeWindow(value: TfSchedule.FlexibleTimeWindowProperty) {
     this._flexibleTimeWindow.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -373,11 +373,11 @@ export class AwsSchedulerSchedule extends cdktn.TerraformResource {
   }
 
   // target - computed: false, optional: false, required: true
-  private _target = new AwsSchedulerSchedule.TargetPropertyOutputReference(this, "target");
+  private _target = new TfSchedule.TargetPropertyOutputReference(this, "target");
   public get target() {
     return this._target;
   }
-  public putTarget(value: AwsSchedulerSchedule.TargetProperty) {
+  public putTarget(value: TfSchedule.TargetProperty) {
     this._target.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -404,8 +404,8 @@ export class AwsSchedulerSchedule extends cdktn.TerraformResource {
       schedule_expression_timezone: cdktn.stringToTerraform(this._scheduleExpressionTimezone),
       start_date: cdktn.stringToTerraform(this._startDate),
       state: cdktn.stringToTerraform(this._state),
-      flexible_time_window: awsSchedulerScheduleFlexibleTimeWindowPropertyToTerraform(this._flexibleTimeWindow.internalValue),
-      target: awsSchedulerScheduleTargetPropertyToTerraform(this._target.internalValue),
+      flexible_time_window: tfScheduleFlexibleTimeWindowPropertyToTerraform(this._flexibleTimeWindow.internalValue),
+      target: tfScheduleTargetPropertyToTerraform(this._target.internalValue),
     };
   }
 
@@ -490,16 +490,16 @@ export class AwsSchedulerSchedule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       flexible_time_window: {
-        value: awsSchedulerScheduleFlexibleTimeWindowPropertyToHclTerraform(this._flexibleTimeWindow.internalValue),
+        value: tfScheduleFlexibleTimeWindowPropertyToHclTerraform(this._flexibleTimeWindow.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSchedulerSchedule.FlexibleTimeWindowPropertyList",
+        storageClassType: "TfSchedule.FlexibleTimeWindowPropertyList",
       },
       target: {
-        value: awsSchedulerScheduleTargetPropertyToHclTerraform(this._target.internalValue),
+        value: tfScheduleTargetPropertyToHclTerraform(this._target.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSchedulerSchedule.TargetPropertyList",
+        storageClassType: "TfSchedule.TargetPropertyList",
       },
     };
 
@@ -508,7 +508,7 @@ export class AwsSchedulerSchedule extends cdktn.TerraformResource {
   }
 }
 
-export function awsSchedulerScheduleFlexibleTimeWindowPropertyToTerraform(struct?: AwsSchedulerSchedule.FlexibleTimeWindowPropertyOutputReference | AwsSchedulerSchedule.FlexibleTimeWindowProperty): any {
+export function tfScheduleFlexibleTimeWindowPropertyToTerraform(struct?: TfSchedule.FlexibleTimeWindowPropertyOutputReference | TfSchedule.FlexibleTimeWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,7 +520,7 @@ export function awsSchedulerScheduleFlexibleTimeWindowPropertyToTerraform(struct
 }
 
 
-export function awsSchedulerScheduleFlexibleTimeWindowPropertyToHclTerraform(struct?: AwsSchedulerSchedule.FlexibleTimeWindowPropertyOutputReference | AwsSchedulerSchedule.FlexibleTimeWindowProperty): any {
+export function tfScheduleFlexibleTimeWindowPropertyToHclTerraform(struct?: TfSchedule.FlexibleTimeWindowPropertyOutputReference | TfSchedule.FlexibleTimeWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function awsSchedulerScheduleFlexibleTimeWindowPropertyToHclTerraform(str
 }
 
 
-export function awsSchedulerScheduleDeadLetterConfigPropertyToTerraform(struct?: AwsSchedulerSchedule.DeadLetterConfigPropertyOutputReference | AwsSchedulerSchedule.DeadLetterConfigProperty): any {
+export function tfScheduleDeadLetterConfigPropertyToTerraform(struct?: TfSchedule.DeadLetterConfigPropertyOutputReference | TfSchedule.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function awsSchedulerScheduleDeadLetterConfigPropertyToTerraform(struct?:
 }
 
 
-export function awsSchedulerScheduleDeadLetterConfigPropertyToHclTerraform(struct?: AwsSchedulerSchedule.DeadLetterConfigPropertyOutputReference | AwsSchedulerSchedule.DeadLetterConfigProperty): any {
+export function tfScheduleDeadLetterConfigPropertyToHclTerraform(struct?: TfSchedule.DeadLetterConfigPropertyOutputReference | TfSchedule.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,7 +575,7 @@ export function awsSchedulerScheduleDeadLetterConfigPropertyToHclTerraform(struc
 }
 
 
-export function awsSchedulerScheduleCapacityProviderStrategyPropertyToTerraform(struct?: AwsSchedulerSchedule.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function tfScheduleCapacityProviderStrategyPropertyToTerraform(struct?: TfSchedule.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function awsSchedulerScheduleCapacityProviderStrategyPropertyToTerraform(
 }
 
 
-export function awsSchedulerScheduleCapacityProviderStrategyPropertyToHclTerraform(struct?: AwsSchedulerSchedule.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function tfScheduleCapacityProviderStrategyPropertyToHclTerraform(struct?: TfSchedule.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function awsSchedulerScheduleCapacityProviderStrategyPropertyToHclTerrafo
 }
 
 
-export function awsSchedulerScheduleNetworkConfigurationPropertyToTerraform(struct?: AwsSchedulerSchedule.NetworkConfigurationPropertyOutputReference | AwsSchedulerSchedule.NetworkConfigurationProperty): any {
+export function tfScheduleNetworkConfigurationPropertyToTerraform(struct?: TfSchedule.NetworkConfigurationPropertyOutputReference | TfSchedule.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function awsSchedulerScheduleNetworkConfigurationPropertyToTerraform(stru
 }
 
 
-export function awsSchedulerScheduleNetworkConfigurationPropertyToHclTerraform(struct?: AwsSchedulerSchedule.NetworkConfigurationPropertyOutputReference | AwsSchedulerSchedule.NetworkConfigurationProperty): any {
+export function tfScheduleNetworkConfigurationPropertyToHclTerraform(struct?: TfSchedule.NetworkConfigurationPropertyOutputReference | TfSchedule.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function awsSchedulerScheduleNetworkConfigurationPropertyToHclTerraform(s
 }
 
 
-export function awsSchedulerSchedulePlacementConstraintsPropertyToTerraform(struct?: AwsSchedulerSchedule.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function tfSchedulePlacementConstraintsPropertyToTerraform(struct?: TfSchedule.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,7 +675,7 @@ export function awsSchedulerSchedulePlacementConstraintsPropertyToTerraform(stru
 }
 
 
-export function awsSchedulerSchedulePlacementConstraintsPropertyToHclTerraform(struct?: AwsSchedulerSchedule.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function tfSchedulePlacementConstraintsPropertyToHclTerraform(struct?: TfSchedule.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function awsSchedulerSchedulePlacementConstraintsPropertyToHclTerraform(s
 }
 
 
-export function awsSchedulerSchedulePlacementStrategyPropertyToTerraform(struct?: AwsSchedulerSchedule.PlacementStrategyProperty | cdktn.IResolvable): any {
+export function tfSchedulePlacementStrategyPropertyToTerraform(struct?: TfSchedule.PlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,7 +712,7 @@ export function awsSchedulerSchedulePlacementStrategyPropertyToTerraform(struct?
 }
 
 
-export function awsSchedulerSchedulePlacementStrategyPropertyToHclTerraform(struct?: AwsSchedulerSchedule.PlacementStrategyProperty | cdktn.IResolvable): any {
+export function tfSchedulePlacementStrategyPropertyToHclTerraform(struct?: TfSchedule.PlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function awsSchedulerSchedulePlacementStrategyPropertyToHclTerraform(stru
 }
 
 
-export function awsSchedulerScheduleEcsParametersPropertyToTerraform(struct?: AwsSchedulerSchedule.EcsParametersPropertyOutputReference | AwsSchedulerSchedule.EcsParametersProperty): any {
+export function tfScheduleEcsParametersPropertyToTerraform(struct?: TfSchedule.EcsParametersPropertyOutputReference | TfSchedule.EcsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,15 +753,15 @@ export function awsSchedulerScheduleEcsParametersPropertyToTerraform(struct?: Aw
     tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
     task_count: cdktn.numberToTerraform(struct!.taskCount),
     task_definition_arn: cdktn.stringToTerraform(struct!.taskDefinitionArn),
-    capacity_provider_strategy: cdktn.listMapper(awsSchedulerScheduleCapacityProviderStrategyPropertyToTerraform, true)(struct!.capacityProviderStrategy),
-    network_configuration: awsSchedulerScheduleNetworkConfigurationPropertyToTerraform(struct!.networkConfiguration),
-    placement_constraints: cdktn.listMapper(awsSchedulerSchedulePlacementConstraintsPropertyToTerraform, true)(struct!.placementConstraints),
-    placement_strategy: cdktn.listMapper(awsSchedulerSchedulePlacementStrategyPropertyToTerraform, true)(struct!.placementStrategy),
+    capacity_provider_strategy: cdktn.listMapper(tfScheduleCapacityProviderStrategyPropertyToTerraform, true)(struct!.capacityProviderStrategy),
+    network_configuration: tfScheduleNetworkConfigurationPropertyToTerraform(struct!.networkConfiguration),
+    placement_constraints: cdktn.listMapper(tfSchedulePlacementConstraintsPropertyToTerraform, true)(struct!.placementConstraints),
+    placement_strategy: cdktn.listMapper(tfSchedulePlacementStrategyPropertyToTerraform, true)(struct!.placementStrategy),
   }
 }
 
 
-export function awsSchedulerScheduleEcsParametersPropertyToHclTerraform(struct?: AwsSchedulerSchedule.EcsParametersPropertyOutputReference | AwsSchedulerSchedule.EcsParametersProperty): any {
+export function tfScheduleEcsParametersPropertyToHclTerraform(struct?: TfSchedule.EcsParametersPropertyOutputReference | TfSchedule.EcsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,25 +828,25 @@ export function awsSchedulerScheduleEcsParametersPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     capacity_provider_strategy: {
-      value: cdktn.listMapperHcl(awsSchedulerScheduleCapacityProviderStrategyPropertyToHclTerraform, true)(struct!.capacityProviderStrategy),
+      value: cdktn.listMapperHcl(tfScheduleCapacityProviderStrategyPropertyToHclTerraform, true)(struct!.capacityProviderStrategy),
       isBlock: true,
       type: "set",
       storageClassType: "CapacityProviderStrategyPropertyList",
     },
     network_configuration: {
-      value: awsSchedulerScheduleNetworkConfigurationPropertyToHclTerraform(struct!.networkConfiguration),
+      value: tfScheduleNetworkConfigurationPropertyToHclTerraform(struct!.networkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkConfigurationPropertyList",
     },
     placement_constraints: {
-      value: cdktn.listMapperHcl(awsSchedulerSchedulePlacementConstraintsPropertyToHclTerraform, true)(struct!.placementConstraints),
+      value: cdktn.listMapperHcl(tfSchedulePlacementConstraintsPropertyToHclTerraform, true)(struct!.placementConstraints),
       isBlock: true,
       type: "set",
       storageClassType: "PlacementConstraintsPropertyList",
     },
     placement_strategy: {
-      value: cdktn.listMapperHcl(awsSchedulerSchedulePlacementStrategyPropertyToHclTerraform, true)(struct!.placementStrategy),
+      value: cdktn.listMapperHcl(tfSchedulePlacementStrategyPropertyToHclTerraform, true)(struct!.placementStrategy),
       isBlock: true,
       type: "set",
       storageClassType: "PlacementStrategyPropertyList",
@@ -858,7 +858,7 @@ export function awsSchedulerScheduleEcsParametersPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSchedulerScheduleEventbridgeParametersPropertyToTerraform(struct?: AwsSchedulerSchedule.EventbridgeParametersPropertyOutputReference | AwsSchedulerSchedule.EventbridgeParametersProperty): any {
+export function tfScheduleEventbridgeParametersPropertyToTerraform(struct?: TfSchedule.EventbridgeParametersPropertyOutputReference | TfSchedule.EventbridgeParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,7 +870,7 @@ export function awsSchedulerScheduleEventbridgeParametersPropertyToTerraform(str
 }
 
 
-export function awsSchedulerScheduleEventbridgeParametersPropertyToHclTerraform(struct?: AwsSchedulerSchedule.EventbridgeParametersPropertyOutputReference | AwsSchedulerSchedule.EventbridgeParametersProperty): any {
+export function tfScheduleEventbridgeParametersPropertyToHclTerraform(struct?: TfSchedule.EventbridgeParametersPropertyOutputReference | TfSchedule.EventbridgeParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -895,7 +895,7 @@ export function awsSchedulerScheduleEventbridgeParametersPropertyToHclTerraform(
 }
 
 
-export function awsSchedulerScheduleKinesisParametersPropertyToTerraform(struct?: AwsSchedulerSchedule.KinesisParametersPropertyOutputReference | AwsSchedulerSchedule.KinesisParametersProperty): any {
+export function tfScheduleKinesisParametersPropertyToTerraform(struct?: TfSchedule.KinesisParametersPropertyOutputReference | TfSchedule.KinesisParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -906,7 +906,7 @@ export function awsSchedulerScheduleKinesisParametersPropertyToTerraform(struct?
 }
 
 
-export function awsSchedulerScheduleKinesisParametersPropertyToHclTerraform(struct?: AwsSchedulerSchedule.KinesisParametersPropertyOutputReference | AwsSchedulerSchedule.KinesisParametersProperty): any {
+export function tfScheduleKinesisParametersPropertyToHclTerraform(struct?: TfSchedule.KinesisParametersPropertyOutputReference | TfSchedule.KinesisParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -925,7 +925,7 @@ export function awsSchedulerScheduleKinesisParametersPropertyToHclTerraform(stru
 }
 
 
-export function awsSchedulerScheduleRetryPolicyPropertyToTerraform(struct?: AwsSchedulerSchedule.RetryPolicyPropertyOutputReference | AwsSchedulerSchedule.RetryPolicyProperty): any {
+export function tfScheduleRetryPolicyPropertyToTerraform(struct?: TfSchedule.RetryPolicyPropertyOutputReference | TfSchedule.RetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,7 +937,7 @@ export function awsSchedulerScheduleRetryPolicyPropertyToTerraform(struct?: AwsS
 }
 
 
-export function awsSchedulerScheduleRetryPolicyPropertyToHclTerraform(struct?: AwsSchedulerSchedule.RetryPolicyPropertyOutputReference | AwsSchedulerSchedule.RetryPolicyProperty): any {
+export function tfScheduleRetryPolicyPropertyToHclTerraform(struct?: TfSchedule.RetryPolicyPropertyOutputReference | TfSchedule.RetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function awsSchedulerScheduleRetryPolicyPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsSchedulerSchedulePipelineParameterPropertyToTerraform(struct?: AwsSchedulerSchedule.PipelineParameterProperty | cdktn.IResolvable): any {
+export function tfSchedulePipelineParameterPropertyToTerraform(struct?: TfSchedule.PipelineParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -974,7 +974,7 @@ export function awsSchedulerSchedulePipelineParameterPropertyToTerraform(struct?
 }
 
 
-export function awsSchedulerSchedulePipelineParameterPropertyToHclTerraform(struct?: AwsSchedulerSchedule.PipelineParameterProperty | cdktn.IResolvable): any {
+export function tfSchedulePipelineParameterPropertyToHclTerraform(struct?: TfSchedule.PipelineParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -999,25 +999,25 @@ export function awsSchedulerSchedulePipelineParameterPropertyToHclTerraform(stru
 }
 
 
-export function awsSchedulerScheduleSagemakerPipelineParametersPropertyToTerraform(struct?: AwsSchedulerSchedule.SagemakerPipelineParametersPropertyOutputReference | AwsSchedulerSchedule.SagemakerPipelineParametersProperty): any {
+export function tfScheduleSagemakerPipelineParametersPropertyToTerraform(struct?: TfSchedule.SagemakerPipelineParametersPropertyOutputReference | TfSchedule.SagemakerPipelineParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    pipeline_parameter: cdktn.listMapper(awsSchedulerSchedulePipelineParameterPropertyToTerraform, true)(struct!.pipelineParameter),
+    pipeline_parameter: cdktn.listMapper(tfSchedulePipelineParameterPropertyToTerraform, true)(struct!.pipelineParameter),
   }
 }
 
 
-export function awsSchedulerScheduleSagemakerPipelineParametersPropertyToHclTerraform(struct?: AwsSchedulerSchedule.SagemakerPipelineParametersPropertyOutputReference | AwsSchedulerSchedule.SagemakerPipelineParametersProperty): any {
+export function tfScheduleSagemakerPipelineParametersPropertyToHclTerraform(struct?: TfSchedule.SagemakerPipelineParametersPropertyOutputReference | TfSchedule.SagemakerPipelineParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     pipeline_parameter: {
-      value: cdktn.listMapperHcl(awsSchedulerSchedulePipelineParameterPropertyToHclTerraform, true)(struct!.pipelineParameter),
+      value: cdktn.listMapperHcl(tfSchedulePipelineParameterPropertyToHclTerraform, true)(struct!.pipelineParameter),
       isBlock: true,
       type: "set",
       storageClassType: "PipelineParameterPropertyList",
@@ -1029,7 +1029,7 @@ export function awsSchedulerScheduleSagemakerPipelineParametersPropertyToHclTerr
 }
 
 
-export function awsSchedulerScheduleSqsParametersPropertyToTerraform(struct?: AwsSchedulerSchedule.SqsParametersPropertyOutputReference | AwsSchedulerSchedule.SqsParametersProperty): any {
+export function tfScheduleSqsParametersPropertyToTerraform(struct?: TfSchedule.SqsParametersPropertyOutputReference | TfSchedule.SqsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1040,7 +1040,7 @@ export function awsSchedulerScheduleSqsParametersPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSchedulerScheduleSqsParametersPropertyToHclTerraform(struct?: AwsSchedulerSchedule.SqsParametersPropertyOutputReference | AwsSchedulerSchedule.SqsParametersProperty): any {
+export function tfScheduleSqsParametersPropertyToHclTerraform(struct?: TfSchedule.SqsParametersPropertyOutputReference | TfSchedule.SqsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1059,7 +1059,7 @@ export function awsSchedulerScheduleSqsParametersPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSchedulerScheduleTargetPropertyToTerraform(struct?: AwsSchedulerSchedule.TargetPropertyOutputReference | AwsSchedulerSchedule.TargetProperty): any {
+export function tfScheduleTargetPropertyToTerraform(struct?: TfSchedule.TargetPropertyOutputReference | TfSchedule.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1068,18 +1068,18 @@ export function awsSchedulerScheduleTargetPropertyToTerraform(struct?: AwsSchedu
     arn: cdktn.stringToTerraform(struct!.arn),
     input: cdktn.stringToTerraform(struct!.input),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    dead_letter_config: awsSchedulerScheduleDeadLetterConfigPropertyToTerraform(struct!.deadLetterConfig),
-    ecs_parameters: awsSchedulerScheduleEcsParametersPropertyToTerraform(struct!.ecsParameters),
-    eventbridge_parameters: awsSchedulerScheduleEventbridgeParametersPropertyToTerraform(struct!.eventbridgeParameters),
-    kinesis_parameters: awsSchedulerScheduleKinesisParametersPropertyToTerraform(struct!.kinesisParameters),
-    retry_policy: awsSchedulerScheduleRetryPolicyPropertyToTerraform(struct!.retryPolicy),
-    sagemaker_pipeline_parameters: awsSchedulerScheduleSagemakerPipelineParametersPropertyToTerraform(struct!.sagemakerPipelineParameters),
-    sqs_parameters: awsSchedulerScheduleSqsParametersPropertyToTerraform(struct!.sqsParameters),
+    dead_letter_config: tfScheduleDeadLetterConfigPropertyToTerraform(struct!.deadLetterConfig),
+    ecs_parameters: tfScheduleEcsParametersPropertyToTerraform(struct!.ecsParameters),
+    eventbridge_parameters: tfScheduleEventbridgeParametersPropertyToTerraform(struct!.eventbridgeParameters),
+    kinesis_parameters: tfScheduleKinesisParametersPropertyToTerraform(struct!.kinesisParameters),
+    retry_policy: tfScheduleRetryPolicyPropertyToTerraform(struct!.retryPolicy),
+    sagemaker_pipeline_parameters: tfScheduleSagemakerPipelineParametersPropertyToTerraform(struct!.sagemakerPipelineParameters),
+    sqs_parameters: tfScheduleSqsParametersPropertyToTerraform(struct!.sqsParameters),
   }
 }
 
 
-export function awsSchedulerScheduleTargetPropertyToHclTerraform(struct?: AwsSchedulerSchedule.TargetPropertyOutputReference | AwsSchedulerSchedule.TargetProperty): any {
+export function tfScheduleTargetPropertyToHclTerraform(struct?: TfSchedule.TargetPropertyOutputReference | TfSchedule.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1104,43 +1104,43 @@ export function awsSchedulerScheduleTargetPropertyToHclTerraform(struct?: AwsSch
       storageClassType: "string",
     },
     dead_letter_config: {
-      value: awsSchedulerScheduleDeadLetterConfigPropertyToHclTerraform(struct!.deadLetterConfig),
+      value: tfScheduleDeadLetterConfigPropertyToHclTerraform(struct!.deadLetterConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DeadLetterConfigPropertyList",
     },
     ecs_parameters: {
-      value: awsSchedulerScheduleEcsParametersPropertyToHclTerraform(struct!.ecsParameters),
+      value: tfScheduleEcsParametersPropertyToHclTerraform(struct!.ecsParameters),
       isBlock: true,
       type: "list",
       storageClassType: "EcsParametersPropertyList",
     },
     eventbridge_parameters: {
-      value: awsSchedulerScheduleEventbridgeParametersPropertyToHclTerraform(struct!.eventbridgeParameters),
+      value: tfScheduleEventbridgeParametersPropertyToHclTerraform(struct!.eventbridgeParameters),
       isBlock: true,
       type: "list",
       storageClassType: "EventbridgeParametersPropertyList",
     },
     kinesis_parameters: {
-      value: awsSchedulerScheduleKinesisParametersPropertyToHclTerraform(struct!.kinesisParameters),
+      value: tfScheduleKinesisParametersPropertyToHclTerraform(struct!.kinesisParameters),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisParametersPropertyList",
     },
     retry_policy: {
-      value: awsSchedulerScheduleRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
+      value: tfScheduleRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "RetryPolicyPropertyList",
     },
     sagemaker_pipeline_parameters: {
-      value: awsSchedulerScheduleSagemakerPipelineParametersPropertyToHclTerraform(struct!.sagemakerPipelineParameters),
+      value: tfScheduleSagemakerPipelineParametersPropertyToHclTerraform(struct!.sagemakerPipelineParameters),
       isBlock: true,
       type: "list",
       storageClassType: "SagemakerPipelineParametersPropertyList",
     },
     sqs_parameters: {
-      value: awsSchedulerScheduleSqsParametersPropertyToHclTerraform(struct!.sqsParameters),
+      value: tfScheduleSqsParametersPropertyToHclTerraform(struct!.sqsParameters),
       isBlock: true,
       type: "list",
       storageClassType: "SqsParametersPropertyList",
@@ -1152,14 +1152,14 @@ export function awsSchedulerScheduleTargetPropertyToHclTerraform(struct?: AwsSch
 }
 
 
-export namespace AwsSchedulerSchedule {
+export namespace TfSchedule {
 export interface FlexibleTimeWindowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#maximum_window_in_minutes AwsSchedulerSchedule#maximum_window_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#maximum_window_in_minutes TfSchedule#maximum_window_in_minutes}
   */
   readonly maximumWindowInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#mode AwsSchedulerSchedule#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#mode TfSchedule#mode}
   */
   readonly mode: string;
 }
@@ -1232,7 +1232,7 @@ export class FlexibleTimeWindowPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface DeadLetterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#arn AwsSchedulerSchedule#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#arn TfSchedule#arn}
   */
   readonly arn: string;
 }
@@ -1283,15 +1283,15 @@ export class DeadLetterConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface CapacityProviderStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#base AwsSchedulerSchedule#base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#base TfSchedule#base}
   */
   readonly base?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#capacity_provider AwsSchedulerSchedule#capacity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#capacity_provider TfSchedule#capacity_provider}
   */
   readonly capacityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#weight AwsSchedulerSchedule#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#weight TfSchedule#weight}
   */
   readonly weight?: number;
 }
@@ -1418,15 +1418,15 @@ export class CapacityProviderStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#assign_public_ip AwsSchedulerSchedule#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#assign_public_ip TfSchedule#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#security_groups AwsSchedulerSchedule#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#security_groups TfSchedule#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#subnets AwsSchedulerSchedule#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#subnets TfSchedule#subnets}
   */
   readonly subnets: string[];
 }
@@ -1521,11 +1521,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface PlacementConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#expression AwsSchedulerSchedule#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#expression TfSchedule#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#type AwsSchedulerSchedule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#type TfSchedule#type}
   */
   readonly type: string;
 }
@@ -1630,11 +1630,11 @@ export class PlacementConstraintsPropertyList extends cdktn.ComplexList {
 }
 export interface PlacementStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#field AwsSchedulerSchedule#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#field TfSchedule#field}
   */
   readonly field?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#type AwsSchedulerSchedule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#type TfSchedule#type}
   */
   readonly type: string;
 }
@@ -1739,67 +1739,67 @@ export class PlacementStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface EcsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#enable_ecs_managed_tags AwsSchedulerSchedule#enable_ecs_managed_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#enable_ecs_managed_tags TfSchedule#enable_ecs_managed_tags}
   */
   readonly enableEcsManagedTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#enable_execute_command AwsSchedulerSchedule#enable_execute_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#enable_execute_command TfSchedule#enable_execute_command}
   */
   readonly enableExecuteCommand?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#group AwsSchedulerSchedule#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#group TfSchedule#group}
   */
   readonly group?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#launch_type AwsSchedulerSchedule#launch_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#launch_type TfSchedule#launch_type}
   */
   readonly launchType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#platform_version AwsSchedulerSchedule#platform_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#platform_version TfSchedule#platform_version}
   */
   readonly platformVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#propagate_tags AwsSchedulerSchedule#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#propagate_tags TfSchedule#propagate_tags}
   */
   readonly propagateTags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#reference_id AwsSchedulerSchedule#reference_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#reference_id TfSchedule#reference_id}
   */
   readonly referenceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#tags AwsSchedulerSchedule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#tags TfSchedule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#task_count AwsSchedulerSchedule#task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#task_count TfSchedule#task_count}
   */
   readonly taskCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#task_definition_arn AwsSchedulerSchedule#task_definition_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#task_definition_arn TfSchedule#task_definition_arn}
   */
   readonly taskDefinitionArn: string;
   /**
   * capacity_provider_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#capacity_provider_strategy AwsSchedulerSchedule#capacity_provider_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#capacity_provider_strategy TfSchedule#capacity_provider_strategy}
   */
   readonly capacityProviderStrategy?: CapacityProviderStrategyProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#network_configuration AwsSchedulerSchedule#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#network_configuration TfSchedule#network_configuration}
   */
   readonly networkConfiguration?: NetworkConfigurationProperty;
   /**
   * placement_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#placement_constraints AwsSchedulerSchedule#placement_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#placement_constraints TfSchedule#placement_constraints}
   */
   readonly placementConstraints?: PlacementConstraintsProperty[] | cdktn.IResolvable;
   /**
   * placement_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#placement_strategy AwsSchedulerSchedule#placement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#placement_strategy TfSchedule#placement_strategy}
   */
   readonly placementStrategy?: PlacementStrategyProperty[] | cdktn.IResolvable;
 }
@@ -2136,11 +2136,11 @@ export class EcsParametersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EventbridgeParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#detail_type AwsSchedulerSchedule#detail_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#detail_type TfSchedule#detail_type}
   */
   readonly detailType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#source AwsSchedulerSchedule#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#source TfSchedule#source}
   */
   readonly source: string;
 }
@@ -2210,7 +2210,7 @@ export class EventbridgeParametersPropertyOutputReference extends cdktn.ComplexO
 }
 export interface KinesisParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#partition_key AwsSchedulerSchedule#partition_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#partition_key TfSchedule#partition_key}
   */
   readonly partitionKey: string;
 }
@@ -2261,11 +2261,11 @@ export class KinesisParametersPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface RetryPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#maximum_event_age_in_seconds AwsSchedulerSchedule#maximum_event_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#maximum_event_age_in_seconds TfSchedule#maximum_event_age_in_seconds}
   */
   readonly maximumEventAgeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#maximum_retry_attempts AwsSchedulerSchedule#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#maximum_retry_attempts TfSchedule#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
 }
@@ -2341,11 +2341,11 @@ export class RetryPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PipelineParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#name AwsSchedulerSchedule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#name TfSchedule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#value AwsSchedulerSchedule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#value TfSchedule#value}
   */
   readonly value: string;
 }
@@ -2449,7 +2449,7 @@ export interface SagemakerPipelineParametersProperty {
   /**
   * pipeline_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#pipeline_parameter AwsSchedulerSchedule#pipeline_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#pipeline_parameter TfSchedule#pipeline_parameter}
   */
   readonly pipelineParameter?: PipelineParameterProperty[] | cdktn.IResolvable;
 }
@@ -2503,7 +2503,7 @@ export class SagemakerPipelineParametersPropertyOutputReference extends cdktn.Co
 }
 export interface SqsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#message_group_id AwsSchedulerSchedule#message_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#message_group_id TfSchedule#message_group_id}
   */
   readonly messageGroupId?: string;
 }
@@ -2557,57 +2557,57 @@ export class SqsParametersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#arn AwsSchedulerSchedule#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#arn TfSchedule#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#input AwsSchedulerSchedule#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#input TfSchedule#input}
   */
   readonly input?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#role_arn AwsSchedulerSchedule#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#role_arn TfSchedule#role_arn}
   */
   readonly roleArn: string;
   /**
   * dead_letter_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#dead_letter_config AwsSchedulerSchedule#dead_letter_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#dead_letter_config TfSchedule#dead_letter_config}
   */
   readonly deadLetterConfig?: DeadLetterConfigProperty;
   /**
   * ecs_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#ecs_parameters AwsSchedulerSchedule#ecs_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#ecs_parameters TfSchedule#ecs_parameters}
   */
   readonly ecsParameters?: EcsParametersProperty;
   /**
   * eventbridge_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#eventbridge_parameters AwsSchedulerSchedule#eventbridge_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#eventbridge_parameters TfSchedule#eventbridge_parameters}
   */
   readonly eventbridgeParameters?: EventbridgeParametersProperty;
   /**
   * kinesis_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#kinesis_parameters AwsSchedulerSchedule#kinesis_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#kinesis_parameters TfSchedule#kinesis_parameters}
   */
   readonly kinesisParameters?: KinesisParametersProperty;
   /**
   * retry_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#retry_policy AwsSchedulerSchedule#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#retry_policy TfSchedule#retry_policy}
   */
   readonly retryPolicy?: RetryPolicyProperty;
   /**
   * sagemaker_pipeline_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#sagemaker_pipeline_parameters AwsSchedulerSchedule#sagemaker_pipeline_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#sagemaker_pipeline_parameters TfSchedule#sagemaker_pipeline_parameters}
   */
   readonly sagemakerPipelineParameters?: SagemakerPipelineParametersProperty;
   /**
   * sqs_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#sqs_parameters AwsSchedulerSchedule#sqs_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule#sqs_parameters TfSchedule#sqs_parameters}
   */
   readonly sqsParameters?: SqsParametersProperty;
 }

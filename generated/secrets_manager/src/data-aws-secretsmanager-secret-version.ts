@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSecretsmanagerSecretVersionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSecretVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#id DataAwsSecretsmanagerSecretVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#id DataTfSecretVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,19 +16,19 @@ export interface DataAwsSecretsmanagerSecretVersionConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#region DataAwsSecretsmanagerSecretVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#region DataTfSecretVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#secret_id DataAwsSecretsmanagerSecretVersion#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#secret_id DataTfSecretVersion#secret_id}
   */
   readonly secretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#version_id DataAwsSecretsmanagerSecretVersion#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#version_id DataTfSecretVersion#version_id}
   */
   readonly versionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#version_stage DataAwsSecretsmanagerSecretVersion#version_stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#version_stage DataTfSecretVersion#version_stage}
   */
   readonly versionStage?: string;
 }
@@ -36,7 +36,7 @@ export interface DataAwsSecretsmanagerSecretVersionConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version aws_secretsmanager_secret_version}
 */
-export class DataAwsSecretsmanagerSecretVersion extends cdktn.TerraformDataSource {
+export class DataTfSecretVersion extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsSecretsmanagerSecretVersion extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSecretsmanagerSecretVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSecretVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSecretsmanagerSecretVersion to import
-  * @param importFromId The id of the existing DataAwsSecretsmanagerSecretVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSecretsmanagerSecretVersion to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSecretVersion to import
+  * @param importFromId The id of the existing DataTfSecretVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSecretVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_secretsmanager_secret_version", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsSecretsmanagerSecretVersion extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSecretsmanagerSecretVersionConfig
+  * @param options DataTfSecretVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSecretsmanagerSecretVersionConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSecretVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_secret_version',
       terraformGeneratorMetadata: {

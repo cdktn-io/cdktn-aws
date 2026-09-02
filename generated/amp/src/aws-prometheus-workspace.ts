@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsPrometheusWorkspaceConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkspaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#alias AwsPrometheusWorkspace#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#alias TfWorkspace#alias}
   */
   readonly alias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#id AwsPrometheusWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#id TfWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#kms_key_arn AwsPrometheusWorkspace#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#kms_key_arn TfWorkspace#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#region AwsPrometheusWorkspace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#region TfWorkspace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#tags AwsPrometheusWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#tags TfWorkspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#tags_all AwsPrometheusWorkspace#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#tags_all TfWorkspace#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#logging_configuration AwsPrometheusWorkspace#logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#logging_configuration TfWorkspace#logging_configuration}
   */
-  readonly loggingConfiguration?: AwsPrometheusWorkspace.LoggingConfigurationProperty;
+  readonly loggingConfiguration?: TfWorkspace.LoggingConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace aws_prometheus_workspace}
 */
-export class AwsPrometheusWorkspace extends cdktn.TerraformResource {
+export class TfWorkspace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsPrometheusWorkspace extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsPrometheusWorkspace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkspace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsPrometheusWorkspace to import
-  * @param importFromId The id of the existing AwsPrometheusWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsPrometheusWorkspace to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkspace to import
+  * @param importFromId The id of the existing TfWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_workspace", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsPrometheusWorkspace extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsPrometheusWorkspaceConfig = {}
+  * @param options TfWorkspaceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsPrometheusWorkspaceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfWorkspaceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_workspace',
       terraformGeneratorMetadata: {
@@ -214,11 +214,11 @@ export class AwsPrometheusWorkspace extends cdktn.TerraformResource {
   }
 
   // logging_configuration - computed: false, optional: true, required: false
-  private _loggingConfiguration = new AwsPrometheusWorkspace.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
+  private _loggingConfiguration = new TfWorkspace.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
   public get loggingConfiguration() {
     return this._loggingConfiguration;
   }
-  public putLoggingConfiguration(value: AwsPrometheusWorkspace.LoggingConfigurationProperty) {
+  public putLoggingConfiguration(value: TfWorkspace.LoggingConfigurationProperty) {
     this._loggingConfiguration.internalValue = value;
   }
   public resetLoggingConfiguration() {
@@ -241,7 +241,7 @@ export class AwsPrometheusWorkspace extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      logging_configuration: awsPrometheusWorkspaceLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
+      logging_configuration: tfWorkspaceLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
     };
   }
 
@@ -284,10 +284,10 @@ export class AwsPrometheusWorkspace extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       logging_configuration: {
-        value: awsPrometheusWorkspaceLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
+        value: tfWorkspaceLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsPrometheusWorkspace.LoggingConfigurationPropertyList",
+        storageClassType: "TfWorkspace.LoggingConfigurationPropertyList",
       },
     };
 
@@ -296,7 +296,7 @@ export class AwsPrometheusWorkspace extends cdktn.TerraformResource {
   }
 }
 
-export function awsPrometheusWorkspaceLoggingConfigurationPropertyToTerraform(struct?: AwsPrometheusWorkspace.LoggingConfigurationPropertyOutputReference | AwsPrometheusWorkspace.LoggingConfigurationProperty): any {
+export function tfWorkspaceLoggingConfigurationPropertyToTerraform(struct?: TfWorkspace.LoggingConfigurationPropertyOutputReference | TfWorkspace.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function awsPrometheusWorkspaceLoggingConfigurationPropertyToTerraform(st
 }
 
 
-export function awsPrometheusWorkspaceLoggingConfigurationPropertyToHclTerraform(struct?: AwsPrometheusWorkspace.LoggingConfigurationPropertyOutputReference | AwsPrometheusWorkspace.LoggingConfigurationProperty): any {
+export function tfWorkspaceLoggingConfigurationPropertyToHclTerraform(struct?: TfWorkspace.LoggingConfigurationPropertyOutputReference | TfWorkspace.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,10 +326,10 @@ export function awsPrometheusWorkspaceLoggingConfigurationPropertyToHclTerraform
 }
 
 
-export namespace AwsPrometheusWorkspace {
+export namespace TfWorkspace {
 export interface LoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#log_group_arn AwsPrometheusWorkspace#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace#log_group_arn TfWorkspace#log_group_arn}
   */
   readonly logGroupArn: string;
 }

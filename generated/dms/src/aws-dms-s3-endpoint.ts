@@ -5,228 +5,228 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDmsS3EndpointConfig extends cdktn.TerraformMetaArguments {
+export interface TfS3EndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#add_column_name AwsDmsS3Endpoint#add_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#add_column_name TfS3Endpoint#add_column_name}
   */
   readonly addColumnName?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#add_trailing_padding_character AwsDmsS3Endpoint#add_trailing_padding_character}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#add_trailing_padding_character TfS3Endpoint#add_trailing_padding_character}
   */
   readonly addTrailingPaddingCharacter?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#bucket_folder AwsDmsS3Endpoint#bucket_folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#bucket_folder TfS3Endpoint#bucket_folder}
   */
   readonly bucketFolder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#bucket_name AwsDmsS3Endpoint#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#bucket_name TfS3Endpoint#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#canned_acl_for_objects AwsDmsS3Endpoint#canned_acl_for_objects}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#canned_acl_for_objects TfS3Endpoint#canned_acl_for_objects}
   */
   readonly cannedAclForObjects?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_inserts_and_updates AwsDmsS3Endpoint#cdc_inserts_and_updates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_inserts_and_updates TfS3Endpoint#cdc_inserts_and_updates}
   */
   readonly cdcInsertsAndUpdates?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_inserts_only AwsDmsS3Endpoint#cdc_inserts_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_inserts_only TfS3Endpoint#cdc_inserts_only}
   */
   readonly cdcInsertsOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_max_batch_interval AwsDmsS3Endpoint#cdc_max_batch_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_max_batch_interval TfS3Endpoint#cdc_max_batch_interval}
   */
   readonly cdcMaxBatchInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_min_file_size AwsDmsS3Endpoint#cdc_min_file_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_min_file_size TfS3Endpoint#cdc_min_file_size}
   */
   readonly cdcMinFileSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_path AwsDmsS3Endpoint#cdc_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#cdc_path TfS3Endpoint#cdc_path}
   */
   readonly cdcPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#certificate_arn AwsDmsS3Endpoint#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#certificate_arn TfS3Endpoint#certificate_arn}
   */
   readonly certificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#compression_type AwsDmsS3Endpoint#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#compression_type TfS3Endpoint#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_delimiter AwsDmsS3Endpoint#csv_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_delimiter TfS3Endpoint#csv_delimiter}
   */
   readonly csvDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_no_sup_value AwsDmsS3Endpoint#csv_no_sup_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_no_sup_value TfS3Endpoint#csv_no_sup_value}
   */
   readonly csvNoSupValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_null_value AwsDmsS3Endpoint#csv_null_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_null_value TfS3Endpoint#csv_null_value}
   */
   readonly csvNullValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_row_delimiter AwsDmsS3Endpoint#csv_row_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#csv_row_delimiter TfS3Endpoint#csv_row_delimiter}
   */
   readonly csvRowDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#data_format AwsDmsS3Endpoint#data_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#data_format TfS3Endpoint#data_format}
   */
   readonly dataFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#data_page_size AwsDmsS3Endpoint#data_page_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#data_page_size TfS3Endpoint#data_page_size}
   */
   readonly dataPageSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_delimiter AwsDmsS3Endpoint#date_partition_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_delimiter TfS3Endpoint#date_partition_delimiter}
   */
   readonly datePartitionDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_enabled AwsDmsS3Endpoint#date_partition_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_enabled TfS3Endpoint#date_partition_enabled}
   */
   readonly datePartitionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_sequence AwsDmsS3Endpoint#date_partition_sequence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_sequence TfS3Endpoint#date_partition_sequence}
   */
   readonly datePartitionSequence?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_timezone AwsDmsS3Endpoint#date_partition_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#date_partition_timezone TfS3Endpoint#date_partition_timezone}
   */
   readonly datePartitionTimezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#detach_target_on_lob_lookup_failure_parquet AwsDmsS3Endpoint#detach_target_on_lob_lookup_failure_parquet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#detach_target_on_lob_lookup_failure_parquet TfS3Endpoint#detach_target_on_lob_lookup_failure_parquet}
   */
   readonly detachTargetOnLobLookupFailureParquet?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#dict_page_size_limit AwsDmsS3Endpoint#dict_page_size_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#dict_page_size_limit TfS3Endpoint#dict_page_size_limit}
   */
   readonly dictPageSizeLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#enable_statistics AwsDmsS3Endpoint#enable_statistics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#enable_statistics TfS3Endpoint#enable_statistics}
   */
   readonly enableStatistics?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#encoding_type AwsDmsS3Endpoint#encoding_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#encoding_type TfS3Endpoint#encoding_type}
   */
   readonly encodingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#encryption_mode AwsDmsS3Endpoint#encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#encryption_mode TfS3Endpoint#encryption_mode}
   */
   readonly encryptionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#endpoint_id AwsDmsS3Endpoint#endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#endpoint_id TfS3Endpoint#endpoint_id}
   */
   readonly endpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#endpoint_type AwsDmsS3Endpoint#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#endpoint_type TfS3Endpoint#endpoint_type}
   */
   readonly endpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#expected_bucket_owner AwsDmsS3Endpoint#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#expected_bucket_owner TfS3Endpoint#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#external_table_definition AwsDmsS3Endpoint#external_table_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#external_table_definition TfS3Endpoint#external_table_definition}
   */
   readonly externalTableDefinition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#glue_catalog_generation AwsDmsS3Endpoint#glue_catalog_generation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#glue_catalog_generation TfS3Endpoint#glue_catalog_generation}
   */
   readonly glueCatalogGeneration?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#id AwsDmsS3Endpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#id TfS3Endpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#ignore_header_rows AwsDmsS3Endpoint#ignore_header_rows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#ignore_header_rows TfS3Endpoint#ignore_header_rows}
   */
   readonly ignoreHeaderRows?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#include_op_for_full_load AwsDmsS3Endpoint#include_op_for_full_load}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#include_op_for_full_load TfS3Endpoint#include_op_for_full_load}
   */
   readonly includeOpForFullLoad?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#kms_key_arn AwsDmsS3Endpoint#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#kms_key_arn TfS3Endpoint#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#max_file_size AwsDmsS3Endpoint#max_file_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#max_file_size TfS3Endpoint#max_file_size}
   */
   readonly maxFileSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#parquet_timestamp_in_millisecond AwsDmsS3Endpoint#parquet_timestamp_in_millisecond}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#parquet_timestamp_in_millisecond TfS3Endpoint#parquet_timestamp_in_millisecond}
   */
   readonly parquetTimestampInMillisecond?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#parquet_version AwsDmsS3Endpoint#parquet_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#parquet_version TfS3Endpoint#parquet_version}
   */
   readonly parquetVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#preserve_transactions AwsDmsS3Endpoint#preserve_transactions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#preserve_transactions TfS3Endpoint#preserve_transactions}
   */
   readonly preserveTransactions?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#region AwsDmsS3Endpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#region TfS3Endpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#rfc_4180 AwsDmsS3Endpoint#rfc_4180}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#rfc_4180 TfS3Endpoint#rfc_4180}
   */
   readonly rfc4180?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#row_group_length AwsDmsS3Endpoint#row_group_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#row_group_length TfS3Endpoint#row_group_length}
   */
   readonly rowGroupLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#server_side_encryption_kms_key_id AwsDmsS3Endpoint#server_side_encryption_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#server_side_encryption_kms_key_id TfS3Endpoint#server_side_encryption_kms_key_id}
   */
   readonly serverSideEncryptionKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#service_access_role_arn AwsDmsS3Endpoint#service_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#service_access_role_arn TfS3Endpoint#service_access_role_arn}
   */
   readonly serviceAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#ssl_mode AwsDmsS3Endpoint#ssl_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#ssl_mode TfS3Endpoint#ssl_mode}
   */
   readonly sslMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#tags AwsDmsS3Endpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#tags TfS3Endpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#tags_all AwsDmsS3Endpoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#tags_all TfS3Endpoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#timestamp_column_name AwsDmsS3Endpoint#timestamp_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#timestamp_column_name TfS3Endpoint#timestamp_column_name}
   */
   readonly timestampColumnName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#use_csv_no_sup_value AwsDmsS3Endpoint#use_csv_no_sup_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#use_csv_no_sup_value TfS3Endpoint#use_csv_no_sup_value}
   */
   readonly useCsvNoSupValue?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#use_task_start_time_for_full_load_timestamp AwsDmsS3Endpoint#use_task_start_time_for_full_load_timestamp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#use_task_start_time_for_full_load_timestamp TfS3Endpoint#use_task_start_time_for_full_load_timestamp}
   */
   readonly useTaskStartTimeForFullLoadTimestamp?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#timeouts AwsDmsS3Endpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#timeouts TfS3Endpoint#timeouts}
   */
-  readonly timeouts?: AwsDmsS3Endpoint.TimeoutsProperty;
+  readonly timeouts?: TfS3Endpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint aws_dms_s3_endpoint}
 */
-export class AwsDmsS3Endpoint extends cdktn.TerraformResource {
+export class TfS3Endpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -237,11 +237,11 @@ export class AwsDmsS3Endpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDmsS3Endpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfS3Endpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDmsS3Endpoint to import
-  * @param importFromId The id of the existing AwsDmsS3Endpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDmsS3Endpoint to import is found
+  * @param importToId The construct id used in the generated config for the TfS3Endpoint to import
+  * @param importFromId The id of the existing TfS3Endpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfS3Endpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_s3_endpoint", importId: importFromId, provider });
@@ -256,9 +256,9 @@ export class AwsDmsS3Endpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDmsS3EndpointConfig
+  * @param options TfS3EndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDmsS3EndpointConfig) {
+  public constructor(scope: Construct, id: string, config: TfS3EndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dms_s3_endpoint',
       terraformGeneratorMetadata: {
@@ -1157,11 +1157,11 @@ export class AwsDmsS3Endpoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDmsS3Endpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfS3Endpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDmsS3Endpoint.TimeoutsProperty) {
+  public putTimeouts(value: TfS3Endpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -1229,7 +1229,7 @@ export class AwsDmsS3Endpoint extends cdktn.TerraformResource {
       timestamp_column_name: cdktn.stringToTerraform(this._timestampColumnName),
       use_csv_no_sup_value: cdktn.booleanToTerraform(this._useCsvNoSupValue),
       use_task_start_time_for_full_load_timestamp: cdktn.booleanToTerraform(this._useTaskStartTimeForFullLoadTimestamp),
-      timeouts: awsDmsS3EndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfS3EndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -1542,10 +1542,10 @@ export class AwsDmsS3Endpoint extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: awsDmsS3EndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfS3EndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDmsS3Endpoint.TimeoutsProperty",
+        storageClassType: "TfS3Endpoint.TimeoutsProperty",
       },
     };
 
@@ -1554,7 +1554,7 @@ export class AwsDmsS3Endpoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsDmsS3EndpointTimeoutsPropertyToTerraform(struct?: AwsDmsS3Endpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfS3EndpointTimeoutsPropertyToTerraform(struct?: TfS3Endpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1566,7 +1566,7 @@ export function awsDmsS3EndpointTimeoutsPropertyToTerraform(struct?: AwsDmsS3End
 }
 
 
-export function awsDmsS3EndpointTimeoutsPropertyToHclTerraform(struct?: AwsDmsS3Endpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfS3EndpointTimeoutsPropertyToHclTerraform(struct?: TfS3Endpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1591,14 +1591,14 @@ export function awsDmsS3EndpointTimeoutsPropertyToHclTerraform(struct?: AwsDmsS3
 }
 
 
-export namespace AwsDmsS3Endpoint {
+export namespace TfS3Endpoint {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#create AwsDmsS3Endpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#create TfS3Endpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#delete AwsDmsS3Endpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_s3_endpoint#delete TfS3Endpoint#delete}
   */
   readonly delete?: string;
 }

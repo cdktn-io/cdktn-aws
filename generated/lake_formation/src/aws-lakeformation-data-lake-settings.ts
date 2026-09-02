@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLakeformationDataLakeSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataLakeSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#admins AwsLakeformationDataLakeSettings#admins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#admins TfDataLakeSettings#admins}
   */
   readonly admins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#allow_external_data_filtering AwsLakeformationDataLakeSettings#allow_external_data_filtering}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#allow_external_data_filtering TfDataLakeSettings#allow_external_data_filtering}
   */
   readonly allowExternalDataFiltering?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#allow_full_table_external_data_access AwsLakeformationDataLakeSettings#allow_full_table_external_data_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#allow_full_table_external_data_access TfDataLakeSettings#allow_full_table_external_data_access}
   */
   readonly allowFullTableExternalDataAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#authorized_session_tag_value_list AwsLakeformationDataLakeSettings#authorized_session_tag_value_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#authorized_session_tag_value_list TfDataLakeSettings#authorized_session_tag_value_list}
   */
   readonly authorizedSessionTagValueList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#catalog_id AwsLakeformationDataLakeSettings#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#catalog_id TfDataLakeSettings#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#external_data_filtering_allow_list AwsLakeformationDataLakeSettings#external_data_filtering_allow_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#external_data_filtering_allow_list TfDataLakeSettings#external_data_filtering_allow_list}
   */
   readonly externalDataFilteringAllowList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#id AwsLakeformationDataLakeSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#id TfDataLakeSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#parameters AwsLakeformationDataLakeSettings#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#parameters TfDataLakeSettings#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#read_only_admins AwsLakeformationDataLakeSettings#read_only_admins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#read_only_admins TfDataLakeSettings#read_only_admins}
   */
   readonly readOnlyAdmins?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#region AwsLakeformationDataLakeSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#region TfDataLakeSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#trusted_resource_owners AwsLakeformationDataLakeSettings#trusted_resource_owners}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#trusted_resource_owners TfDataLakeSettings#trusted_resource_owners}
   */
   readonly trustedResourceOwners?: string[];
   /**
   * create_database_default_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#create_database_default_permissions AwsLakeformationDataLakeSettings#create_database_default_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#create_database_default_permissions TfDataLakeSettings#create_database_default_permissions}
   */
-  readonly createDatabaseDefaultPermissions?: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable;
+  readonly createDatabaseDefaultPermissions?: TfDataLakeSettings.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable;
   /**
   * create_table_default_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#create_table_default_permissions AwsLakeformationDataLakeSettings#create_table_default_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#create_table_default_permissions TfDataLakeSettings#create_table_default_permissions}
   */
-  readonly createTableDefaultPermissions?: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable;
+  readonly createTableDefaultPermissions?: TfDataLakeSettings.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings aws_lakeformation_data_lake_settings}
 */
-export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
+export class TfDataLakeSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLakeformationDataLakeSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataLakeSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLakeformationDataLakeSettings to import
-  * @param importFromId The id of the existing AwsLakeformationDataLakeSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLakeformationDataLakeSettings to import is found
+  * @param importToId The construct id used in the generated config for the TfDataLakeSettings to import
+  * @param importFromId The id of the existing TfDataLakeSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataLakeSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_data_lake_settings", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLakeformationDataLakeSettingsConfig = {}
+  * @param options TfDataLakeSettingsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsLakeformationDataLakeSettingsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataLakeSettingsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_data_lake_settings',
       terraformGeneratorMetadata: {
@@ -316,11 +316,11 @@ export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
   }
 
   // create_database_default_permissions - computed: false, optional: true, required: false
-  private _createDatabaseDefaultPermissions = new AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
+  private _createDatabaseDefaultPermissions = new TfDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
   public get createDatabaseDefaultPermissions() {
     return this._createDatabaseDefaultPermissions;
   }
-  public putCreateDatabaseDefaultPermissions(value: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable) {
+  public putCreateDatabaseDefaultPermissions(value: TfDataLakeSettings.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable) {
     this._createDatabaseDefaultPermissions.internalValue = value;
   }
   public resetCreateDatabaseDefaultPermissions() {
@@ -332,11 +332,11 @@ export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
   }
 
   // create_table_default_permissions - computed: false, optional: true, required: false
-  private _createTableDefaultPermissions = new AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
+  private _createTableDefaultPermissions = new TfDataLakeSettings.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
   public get createTableDefaultPermissions() {
     return this._createTableDefaultPermissions;
   }
-  public putCreateTableDefaultPermissions(value: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable) {
+  public putCreateTableDefaultPermissions(value: TfDataLakeSettings.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable) {
     this._createTableDefaultPermissions.internalValue = value;
   }
   public resetCreateTableDefaultPermissions() {
@@ -364,8 +364,8 @@ export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
       read_only_admins: cdktn.listMapper(cdktn.stringToTerraform, false)(this._readOnlyAdmins),
       region: cdktn.stringToTerraform(this._region),
       trusted_resource_owners: cdktn.listMapper(cdktn.stringToTerraform, false)(this._trustedResourceOwners),
-      create_database_default_permissions: cdktn.listMapper(awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
-      create_table_default_permissions: cdktn.listMapper(awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform, true)(this._createTableDefaultPermissions.internalValue),
+      create_database_default_permissions: cdktn.listMapper(tfDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
+      create_table_default_permissions: cdktn.listMapper(tfDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform, true)(this._createTableDefaultPermissions.internalValue),
     };
   }
 
@@ -438,16 +438,16 @@ export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       create_database_default_permissions: {
-        value: cdktn.listMapperHcl(awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
+        value: cdktn.listMapperHcl(tfDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList",
+        storageClassType: "TfDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList",
       },
       create_table_default_permissions: {
-        value: cdktn.listMapperHcl(awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform, true)(this._createTableDefaultPermissions.internalValue),
+        value: cdktn.listMapperHcl(tfDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform, true)(this._createTableDefaultPermissions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsPropertyList",
+        storageClassType: "TfDataLakeSettings.CreateTableDefaultPermissionsPropertyList",
       },
     };
 
@@ -456,7 +456,7 @@ export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
   }
 }
 
-export function awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: TfDataLakeSettings.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,7 +468,7 @@ export function awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissions
 }
 
 
-export function awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: TfDataLakeSettings.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissions
 }
 
 
-export function awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform(struct?: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform(struct?: TfDataLakeSettings.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPro
 }
 
 
-export function awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
+export function tfDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: TfDataLakeSettings.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,14 +530,14 @@ export function awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPro
 }
 
 
-export namespace AwsLakeformationDataLakeSettings {
+export namespace TfDataLakeSettings {
 export interface CreateDatabaseDefaultPermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#permissions AwsLakeformationDataLakeSettings#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#permissions TfDataLakeSettings#permissions}
   */
   readonly permissions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#principal AwsLakeformationDataLakeSettings#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#principal TfDataLakeSettings#principal}
   */
   readonly principal?: string;
 }
@@ -645,11 +645,11 @@ export class CreateDatabaseDefaultPermissionsPropertyList extends cdktn.ComplexL
 }
 export interface CreateTableDefaultPermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#permissions AwsLakeformationDataLakeSettings#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#permissions TfDataLakeSettings#permissions}
   */
   readonly permissions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#principal AwsLakeformationDataLakeSettings#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#principal TfDataLakeSettings#principal}
   */
   readonly principal?: string;
 }

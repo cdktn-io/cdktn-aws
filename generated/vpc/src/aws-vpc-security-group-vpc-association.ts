@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcSecurityGroupVpcAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfSecurityGroupVpcAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#region AwsVpcSecurityGroupVpcAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#region TfSecurityGroupVpcAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#security_group_id AwsVpcSecurityGroupVpcAssociation#security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#security_group_id TfSecurityGroupVpcAssociation#security_group_id}
   */
   readonly securityGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#vpc_id AwsVpcSecurityGroupVpcAssociation#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#vpc_id TfSecurityGroupVpcAssociation#vpc_id}
   */
   readonly vpcId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#timeouts AwsVpcSecurityGroupVpcAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#timeouts TfSecurityGroupVpcAssociation#timeouts}
   */
-  readonly timeouts?: AwsVpcSecurityGroupVpcAssociation.TimeoutsProperty;
+  readonly timeouts?: TfSecurityGroupVpcAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association aws_vpc_security_group_vpc_association}
 */
-export class AwsVpcSecurityGroupVpcAssociation extends cdktn.TerraformResource {
+export class TfSecurityGroupVpcAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsVpcSecurityGroupVpcAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcSecurityGroupVpcAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSecurityGroupVpcAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcSecurityGroupVpcAssociation to import
-  * @param importFromId The id of the existing AwsVpcSecurityGroupVpcAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcSecurityGroupVpcAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfSecurityGroupVpcAssociation to import
+  * @param importFromId The id of the existing TfSecurityGroupVpcAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSecurityGroupVpcAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_security_group_vpc_association", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsVpcSecurityGroupVpcAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcSecurityGroupVpcAssociationConfig
+  * @param options TfSecurityGroupVpcAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcSecurityGroupVpcAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfSecurityGroupVpcAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_security_group_vpc_association',
       terraformGeneratorMetadata: {
@@ -137,11 +137,11 @@ export class AwsVpcSecurityGroupVpcAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpcSecurityGroupVpcAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSecurityGroupVpcAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpcSecurityGroupVpcAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfSecurityGroupVpcAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -161,7 +161,7 @@ export class AwsVpcSecurityGroupVpcAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       security_group_id: cdktn.stringToTerraform(this._securityGroupId),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: awsVpcSecurityGroupVpcAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfSecurityGroupVpcAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -186,10 +186,10 @@ export class AwsVpcSecurityGroupVpcAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsVpcSecurityGroupVpcAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSecurityGroupVpcAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpcSecurityGroupVpcAssociation.TimeoutsProperty",
+        storageClassType: "TfSecurityGroupVpcAssociation.TimeoutsProperty",
       },
     };
 
@@ -198,7 +198,7 @@ export class AwsVpcSecurityGroupVpcAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpcSecurityGroupVpcAssociationTimeoutsPropertyToTerraform(struct?: AwsVpcSecurityGroupVpcAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSecurityGroupVpcAssociationTimeoutsPropertyToTerraform(struct?: TfSecurityGroupVpcAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function awsVpcSecurityGroupVpcAssociationTimeoutsPropertyToTerraform(str
 }
 
 
-export function awsVpcSecurityGroupVpcAssociationTimeoutsPropertyToHclTerraform(struct?: AwsVpcSecurityGroupVpcAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSecurityGroupVpcAssociationTimeoutsPropertyToHclTerraform(struct?: TfSecurityGroupVpcAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,18 +235,18 @@ export function awsVpcSecurityGroupVpcAssociationTimeoutsPropertyToHclTerraform(
 }
 
 
-export namespace AwsVpcSecurityGroupVpcAssociation {
+export namespace TfSecurityGroupVpcAssociation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#create AwsVpcSecurityGroupVpcAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#create TfSecurityGroupVpcAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#delete AwsVpcSecurityGroupVpcAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_security_group_vpc_association#delete TfSecurityGroupVpcAssociation#delete}
   */
   readonly delete?: string;
 }

@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53RecoveryreadinessReadinessCheckConfig extends cdktn.TerraformMetaArguments {
+export interface TfReadinessCheckConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#id AwsRoute53RecoveryreadinessReadinessCheck#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#id TfReadinessCheck#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#readiness_check_name AwsRoute53RecoveryreadinessReadinessCheck#readiness_check_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#readiness_check_name TfReadinessCheck#readiness_check_name}
   */
   readonly readinessCheckName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#resource_set_name AwsRoute53RecoveryreadinessReadinessCheck#resource_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#resource_set_name TfReadinessCheck#resource_set_name}
   */
   readonly resourceSetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#tags AwsRoute53RecoveryreadinessReadinessCheck#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#tags TfReadinessCheck#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#tags_all AwsRoute53RecoveryreadinessReadinessCheck#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#tags_all TfReadinessCheck#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#timeouts AwsRoute53RecoveryreadinessReadinessCheck#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#timeouts TfReadinessCheck#timeouts}
   */
-  readonly timeouts?: AwsRoute53RecoveryreadinessReadinessCheck.TimeoutsProperty;
+  readonly timeouts?: TfReadinessCheck.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check aws_route53recoveryreadiness_readiness_check}
 */
-export class AwsRoute53RecoveryreadinessReadinessCheck extends cdktn.TerraformResource {
+export class TfReadinessCheck extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsRoute53RecoveryreadinessReadinessCheck extends cdktn.TerraformRe
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53RecoveryreadinessReadinessCheck resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReadinessCheck resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53RecoveryreadinessReadinessCheck to import
-  * @param importFromId The id of the existing AwsRoute53RecoveryreadinessReadinessCheck that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53RecoveryreadinessReadinessCheck to import is found
+  * @param importToId The construct id used in the generated config for the TfReadinessCheck to import
+  * @param importFromId The id of the existing TfReadinessCheck that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReadinessCheck to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53recoveryreadiness_readiness_check", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsRoute53RecoveryreadinessReadinessCheck extends cdktn.TerraformRe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53RecoveryreadinessReadinessCheckConfig
+  * @param options TfReadinessCheckConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53RecoveryreadinessReadinessCheckConfig) {
+  public constructor(scope: Construct, id: string, config: TfReadinessCheckConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53recoveryreadiness_readiness_check',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class AwsRoute53RecoveryreadinessReadinessCheck extends cdktn.TerraformRe
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53RecoveryreadinessReadinessCheck.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfReadinessCheck.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53RecoveryreadinessReadinessCheck.TimeoutsProperty) {
+  public putTimeouts(value: TfReadinessCheck.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -206,7 +206,7 @@ export class AwsRoute53RecoveryreadinessReadinessCheck extends cdktn.TerraformRe
       resource_set_name: cdktn.stringToTerraform(this._resourceSetName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsRoute53RecoveryreadinessReadinessCheckTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfReadinessCheckTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -243,10 +243,10 @@ export class AwsRoute53RecoveryreadinessReadinessCheck extends cdktn.TerraformRe
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsRoute53RecoveryreadinessReadinessCheckTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfReadinessCheckTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53RecoveryreadinessReadinessCheck.TimeoutsProperty",
+        storageClassType: "TfReadinessCheck.TimeoutsProperty",
       },
     };
 
@@ -255,7 +255,7 @@ export class AwsRoute53RecoveryreadinessReadinessCheck extends cdktn.TerraformRe
   }
 }
 
-export function awsRoute53RecoveryreadinessReadinessCheckTimeoutsPropertyToTerraform(struct?: AwsRoute53RecoveryreadinessReadinessCheck.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReadinessCheckTimeoutsPropertyToTerraform(struct?: TfReadinessCheck.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function awsRoute53RecoveryreadinessReadinessCheckTimeoutsPropertyToTerra
 }
 
 
-export function awsRoute53RecoveryreadinessReadinessCheckTimeoutsPropertyToHclTerraform(struct?: AwsRoute53RecoveryreadinessReadinessCheck.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReadinessCheckTimeoutsPropertyToHclTerraform(struct?: TfReadinessCheck.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,10 +285,10 @@ export function awsRoute53RecoveryreadinessReadinessCheckTimeoutsPropertyToHclTe
 }
 
 
-export namespace AwsRoute53RecoveryreadinessReadinessCheck {
+export namespace TfReadinessCheck {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#delete AwsRoute53RecoveryreadinessReadinessCheck#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_readiness_check#delete TfReadinessCheck#delete}
   */
   readonly delete?: string;
 }

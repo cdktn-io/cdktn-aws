@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatasyncLocationFsxOntapFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface TfLocationFsxOntapFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#id AwsDatasyncLocationFsxOntapFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#id TfLocationFsxOntapFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,41 +16,41 @@ export interface AwsDatasyncLocationFsxOntapFileSystemConfig extends cdktn.Terra
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#region AwsDatasyncLocationFsxOntapFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#region TfLocationFsxOntapFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#security_group_arns AwsDatasyncLocationFsxOntapFileSystem#security_group_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#security_group_arns TfLocationFsxOntapFileSystem#security_group_arns}
   */
   readonly securityGroupArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#storage_virtual_machine_arn AwsDatasyncLocationFsxOntapFileSystem#storage_virtual_machine_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#storage_virtual_machine_arn TfLocationFsxOntapFileSystem#storage_virtual_machine_arn}
   */
   readonly storageVirtualMachineArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#subdirectory AwsDatasyncLocationFsxOntapFileSystem#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#subdirectory TfLocationFsxOntapFileSystem#subdirectory}
   */
   readonly subdirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#tags AwsDatasyncLocationFsxOntapFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#tags TfLocationFsxOntapFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#tags_all AwsDatasyncLocationFsxOntapFileSystem#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#tags_all TfLocationFsxOntapFileSystem#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * protocol block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#protocol AwsDatasyncLocationFsxOntapFileSystem#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#protocol TfLocationFsxOntapFileSystem#protocol}
   */
-  readonly protocol: AwsDatasyncLocationFsxOntapFileSystem.ProtocolProperty;
+  readonly protocol: TfLocationFsxOntapFileSystem.ProtocolProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system aws_datasync_location_fsx_ontap_file_system}
 */
-export class AwsDatasyncLocationFsxOntapFileSystem extends cdktn.TerraformResource {
+export class TfLocationFsxOntapFileSystem extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsDatasyncLocationFsxOntapFileSystem extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatasyncLocationFsxOntapFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLocationFsxOntapFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatasyncLocationFsxOntapFileSystem to import
-  * @param importFromId The id of the existing AwsDatasyncLocationFsxOntapFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatasyncLocationFsxOntapFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the TfLocationFsxOntapFileSystem to import
+  * @param importFromId The id of the existing TfLocationFsxOntapFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLocationFsxOntapFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_fsx_ontap_file_system", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsDatasyncLocationFsxOntapFileSystem extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatasyncLocationFsxOntapFileSystemConfig
+  * @param options TfLocationFsxOntapFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatasyncLocationFsxOntapFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: TfLocationFsxOntapFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_fsx_ontap_file_system',
       terraformGeneratorMetadata: {
@@ -239,11 +239,11 @@ export class AwsDatasyncLocationFsxOntapFileSystem extends cdktn.TerraformResour
   }
 
   // protocol - computed: false, optional: false, required: true
-  private _protocol = new AwsDatasyncLocationFsxOntapFileSystem.ProtocolPropertyOutputReference(this, "protocol");
+  private _protocol = new TfLocationFsxOntapFileSystem.ProtocolPropertyOutputReference(this, "protocol");
   public get protocol() {
     return this._protocol;
   }
-  public putProtocol(value: AwsDatasyncLocationFsxOntapFileSystem.ProtocolProperty) {
+  public putProtocol(value: TfLocationFsxOntapFileSystem.ProtocolProperty) {
     this._protocol.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -264,7 +264,7 @@ export class AwsDatasyncLocationFsxOntapFileSystem extends cdktn.TerraformResour
       subdirectory: cdktn.stringToTerraform(this._subdirectory),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      protocol: awsDatasyncLocationFsxOntapFileSystemProtocolPropertyToTerraform(this._protocol.internalValue),
+      protocol: tfLocationFsxOntapFileSystemProtocolPropertyToTerraform(this._protocol.internalValue),
     };
   }
 
@@ -313,10 +313,10 @@ export class AwsDatasyncLocationFsxOntapFileSystem extends cdktn.TerraformResour
         storageClassType: "stringMap",
       },
       protocol: {
-        value: awsDatasyncLocationFsxOntapFileSystemProtocolPropertyToHclTerraform(this._protocol.internalValue),
+        value: tfLocationFsxOntapFileSystemProtocolPropertyToHclTerraform(this._protocol.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncLocationFsxOntapFileSystem.ProtocolPropertyList",
+        storageClassType: "TfLocationFsxOntapFileSystem.ProtocolPropertyList",
       },
     };
 
@@ -325,7 +325,7 @@ export class AwsDatasyncLocationFsxOntapFileSystem extends cdktn.TerraformResour
   }
 }
 
-export function awsDatasyncLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.ProtocolNfsMountOptionsPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.ProtocolNfsMountOptionsProperty): any {
+export function tfLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToTerraform(struct?: TfLocationFsxOntapFileSystem.ProtocolNfsMountOptionsPropertyOutputReference | TfLocationFsxOntapFileSystem.ProtocolNfsMountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function awsDatasyncLocationFsxOntapFileSystemProtocolNfsMountOptionsProp
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToHclTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.ProtocolNfsMountOptionsPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.ProtocolNfsMountOptionsProperty): any {
+export function tfLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToHclTerraform(struct?: TfLocationFsxOntapFileSystem.ProtocolNfsMountOptionsPropertyOutputReference | TfLocationFsxOntapFileSystem.ProtocolNfsMountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,25 +355,25 @@ export function awsDatasyncLocationFsxOntapFileSystemProtocolNfsMountOptionsProp
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemNfsPropertyToTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.NfsPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.NfsProperty): any {
+export function tfLocationFsxOntapFileSystemNfsPropertyToTerraform(struct?: TfLocationFsxOntapFileSystem.NfsPropertyOutputReference | TfLocationFsxOntapFileSystem.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    mount_options: awsDatasyncLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToTerraform(struct!.mountOptions),
+    mount_options: tfLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToTerraform(struct!.mountOptions),
   }
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemNfsPropertyToHclTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.NfsPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.NfsProperty): any {
+export function tfLocationFsxOntapFileSystemNfsPropertyToHclTerraform(struct?: TfLocationFsxOntapFileSystem.NfsPropertyOutputReference | TfLocationFsxOntapFileSystem.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     mount_options: {
-      value: awsDatasyncLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToHclTerraform(struct!.mountOptions),
+      value: tfLocationFsxOntapFileSystemProtocolNfsMountOptionsPropertyToHclTerraform(struct!.mountOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ProtocolNfsMountOptionsPropertyList",
@@ -385,7 +385,7 @@ export function awsDatasyncLocationFsxOntapFileSystemNfsPropertyToHclTerraform(s
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.ProtocolSmbMountOptionsPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.ProtocolSmbMountOptionsProperty): any {
+export function tfLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToTerraform(struct?: TfLocationFsxOntapFileSystem.ProtocolSmbMountOptionsPropertyOutputReference | TfLocationFsxOntapFileSystem.ProtocolSmbMountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function awsDatasyncLocationFsxOntapFileSystemProtocolSmbMountOptionsProp
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToHclTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.ProtocolSmbMountOptionsPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.ProtocolSmbMountOptionsProperty): any {
+export function tfLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToHclTerraform(struct?: TfLocationFsxOntapFileSystem.ProtocolSmbMountOptionsPropertyOutputReference | TfLocationFsxOntapFileSystem.ProtocolSmbMountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -415,7 +415,7 @@ export function awsDatasyncLocationFsxOntapFileSystemProtocolSmbMountOptionsProp
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemSmbPropertyToTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.SmbPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.SmbProperty): any {
+export function tfLocationFsxOntapFileSystemSmbPropertyToTerraform(struct?: TfLocationFsxOntapFileSystem.SmbPropertyOutputReference | TfLocationFsxOntapFileSystem.SmbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,12 +424,12 @@ export function awsDatasyncLocationFsxOntapFileSystemSmbPropertyToTerraform(stru
     domain: cdktn.stringToTerraform(struct!.domain),
     password: cdktn.stringToTerraform(struct!.password),
     user: cdktn.stringToTerraform(struct!.user),
-    mount_options: awsDatasyncLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToTerraform(struct!.mountOptions),
+    mount_options: tfLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToTerraform(struct!.mountOptions),
   }
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemSmbPropertyToHclTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.SmbPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.SmbProperty): any {
+export function tfLocationFsxOntapFileSystemSmbPropertyToHclTerraform(struct?: TfLocationFsxOntapFileSystem.SmbPropertyOutputReference | TfLocationFsxOntapFileSystem.SmbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function awsDatasyncLocationFsxOntapFileSystemSmbPropertyToHclTerraform(s
       storageClassType: "string",
     },
     mount_options: {
-      value: awsDatasyncLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToHclTerraform(struct!.mountOptions),
+      value: tfLocationFsxOntapFileSystemProtocolSmbMountOptionsPropertyToHclTerraform(struct!.mountOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ProtocolSmbMountOptionsPropertyList",
@@ -466,32 +466,32 @@ export function awsDatasyncLocationFsxOntapFileSystemSmbPropertyToHclTerraform(s
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemProtocolPropertyToTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.ProtocolPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.ProtocolProperty): any {
+export function tfLocationFsxOntapFileSystemProtocolPropertyToTerraform(struct?: TfLocationFsxOntapFileSystem.ProtocolPropertyOutputReference | TfLocationFsxOntapFileSystem.ProtocolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    nfs: awsDatasyncLocationFsxOntapFileSystemNfsPropertyToTerraform(struct!.nfs),
-    smb: awsDatasyncLocationFsxOntapFileSystemSmbPropertyToTerraform(struct!.smb),
+    nfs: tfLocationFsxOntapFileSystemNfsPropertyToTerraform(struct!.nfs),
+    smb: tfLocationFsxOntapFileSystemSmbPropertyToTerraform(struct!.smb),
   }
 }
 
 
-export function awsDatasyncLocationFsxOntapFileSystemProtocolPropertyToHclTerraform(struct?: AwsDatasyncLocationFsxOntapFileSystem.ProtocolPropertyOutputReference | AwsDatasyncLocationFsxOntapFileSystem.ProtocolProperty): any {
+export function tfLocationFsxOntapFileSystemProtocolPropertyToHclTerraform(struct?: TfLocationFsxOntapFileSystem.ProtocolPropertyOutputReference | TfLocationFsxOntapFileSystem.ProtocolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     nfs: {
-      value: awsDatasyncLocationFsxOntapFileSystemNfsPropertyToHclTerraform(struct!.nfs),
+      value: tfLocationFsxOntapFileSystemNfsPropertyToHclTerraform(struct!.nfs),
       isBlock: true,
       type: "list",
       storageClassType: "NfsPropertyList",
     },
     smb: {
-      value: awsDatasyncLocationFsxOntapFileSystemSmbPropertyToHclTerraform(struct!.smb),
+      value: tfLocationFsxOntapFileSystemSmbPropertyToHclTerraform(struct!.smb),
       isBlock: true,
       type: "list",
       storageClassType: "SmbPropertyList",
@@ -503,10 +503,10 @@ export function awsDatasyncLocationFsxOntapFileSystemProtocolPropertyToHclTerraf
 }
 
 
-export namespace AwsDatasyncLocationFsxOntapFileSystem {
+export namespace TfLocationFsxOntapFileSystem {
 export interface ProtocolNfsMountOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#version AwsDatasyncLocationFsxOntapFileSystem#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#version TfLocationFsxOntapFileSystem#version}
   */
   readonly version?: string;
 }
@@ -562,7 +562,7 @@ export interface NfsProperty {
   /**
   * mount_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#mount_options AwsDatasyncLocationFsxOntapFileSystem#mount_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#mount_options TfLocationFsxOntapFileSystem#mount_options}
   */
   readonly mountOptions: ProtocolNfsMountOptionsProperty;
 }
@@ -613,7 +613,7 @@ export class NfsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ProtocolSmbMountOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#version AwsDatasyncLocationFsxOntapFileSystem#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#version TfLocationFsxOntapFileSystem#version}
   */
   readonly version?: string;
 }
@@ -667,21 +667,21 @@ export class ProtocolSmbMountOptionsPropertyOutputReference extends cdktn.Comple
 }
 export interface SmbProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#domain AwsDatasyncLocationFsxOntapFileSystem#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#domain TfLocationFsxOntapFileSystem#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#password AwsDatasyncLocationFsxOntapFileSystem#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#password TfLocationFsxOntapFileSystem#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#user AwsDatasyncLocationFsxOntapFileSystem#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#user TfLocationFsxOntapFileSystem#user}
   */
   readonly user: string;
   /**
   * mount_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#mount_options AwsDatasyncLocationFsxOntapFileSystem#mount_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#mount_options TfLocationFsxOntapFileSystem#mount_options}
   */
   readonly mountOptions: ProtocolSmbMountOptionsProperty;
 }
@@ -794,13 +794,13 @@ export interface ProtocolProperty {
   /**
   * nfs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#nfs AwsDatasyncLocationFsxOntapFileSystem#nfs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#nfs TfLocationFsxOntapFileSystem#nfs}
   */
   readonly nfs?: NfsProperty;
   /**
   * smb block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#smb AwsDatasyncLocationFsxOntapFileSystem#smb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_ontap_file_system#smb TfLocationFsxOntapFileSystem#smb}
   */
   readonly smb?: SmbProperty;
 }

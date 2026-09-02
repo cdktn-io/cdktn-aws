@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRamResourceShareConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceShareConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#allow_external_principals AwsRamResourceShare#allow_external_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#allow_external_principals TfResourceShare#allow_external_principals}
   */
   readonly allowExternalPrincipals?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#id AwsRamResourceShare#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#id TfResourceShare#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#name AwsRamResourceShare#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#name TfResourceShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#permission_arns AwsRamResourceShare#permission_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#permission_arns TfResourceShare#permission_arns}
   */
   readonly permissionArns?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#region AwsRamResourceShare#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#region TfResourceShare#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#tags AwsRamResourceShare#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#tags TfResourceShare#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#tags_all AwsRamResourceShare#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#tags_all TfResourceShare#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * resource_share_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#resource_share_configuration AwsRamResourceShare#resource_share_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#resource_share_configuration TfResourceShare#resource_share_configuration}
   */
-  readonly resourceShareConfiguration?: AwsRamResourceShare.ResourceShareConfigurationProperty;
+  readonly resourceShareConfiguration?: TfResourceShare.ResourceShareConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#timeouts AwsRamResourceShare#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#timeouts TfResourceShare#timeouts}
   */
-  readonly timeouts?: AwsRamResourceShare.TimeoutsProperty;
+  readonly timeouts?: TfResourceShare.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share aws_ram_resource_share}
 */
-export class AwsRamResourceShare extends cdktn.TerraformResource {
+export class TfResourceShare extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsRamResourceShare extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRamResourceShare resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceShare resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRamResourceShare to import
-  * @param importFromId The id of the existing AwsRamResourceShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRamResourceShare to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceShare to import
+  * @param importFromId The id of the existing TfResourceShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceShare to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ram_resource_share", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsRamResourceShare extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRamResourceShareConfig
+  * @param options TfResourceShareConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRamResourceShareConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceShareConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ram_resource_share',
       terraformGeneratorMetadata: {
@@ -234,11 +234,11 @@ export class AwsRamResourceShare extends cdktn.TerraformResource {
   }
 
   // resource_share_configuration - computed: false, optional: true, required: false
-  private _resourceShareConfiguration = new AwsRamResourceShare.ResourceShareConfigurationPropertyOutputReference(this, "resource_share_configuration");
+  private _resourceShareConfiguration = new TfResourceShare.ResourceShareConfigurationPropertyOutputReference(this, "resource_share_configuration");
   public get resourceShareConfiguration() {
     return this._resourceShareConfiguration;
   }
-  public putResourceShareConfiguration(value: AwsRamResourceShare.ResourceShareConfigurationProperty) {
+  public putResourceShareConfiguration(value: TfResourceShare.ResourceShareConfigurationProperty) {
     this._resourceShareConfiguration.internalValue = value;
   }
   public resetResourceShareConfiguration() {
@@ -250,11 +250,11 @@ export class AwsRamResourceShare extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRamResourceShare.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfResourceShare.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRamResourceShare.TimeoutsProperty) {
+  public putTimeouts(value: TfResourceShare.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -278,8 +278,8 @@ export class AwsRamResourceShare extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      resource_share_configuration: awsRamResourceShareResourceShareConfigurationPropertyToTerraform(this._resourceShareConfiguration.internalValue),
-      timeouts: awsRamResourceShareTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      resource_share_configuration: tfResourceShareResourceShareConfigurationPropertyToTerraform(this._resourceShareConfiguration.internalValue),
+      timeouts: tfResourceShareTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -328,16 +328,16 @@ export class AwsRamResourceShare extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       resource_share_configuration: {
-        value: awsRamResourceShareResourceShareConfigurationPropertyToHclTerraform(this._resourceShareConfiguration.internalValue),
+        value: tfResourceShareResourceShareConfigurationPropertyToHclTerraform(this._resourceShareConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRamResourceShare.ResourceShareConfigurationPropertyList",
+        storageClassType: "TfResourceShare.ResourceShareConfigurationPropertyList",
       },
       timeouts: {
-        value: awsRamResourceShareTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfResourceShareTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRamResourceShare.TimeoutsProperty",
+        storageClassType: "TfResourceShare.TimeoutsProperty",
       },
     };
 
@@ -346,7 +346,7 @@ export class AwsRamResourceShare extends cdktn.TerraformResource {
   }
 }
 
-export function awsRamResourceShareResourceShareConfigurationPropertyToTerraform(struct?: AwsRamResourceShare.ResourceShareConfigurationPropertyOutputReference | AwsRamResourceShare.ResourceShareConfigurationProperty): any {
+export function tfResourceShareResourceShareConfigurationPropertyToTerraform(struct?: TfResourceShare.ResourceShareConfigurationPropertyOutputReference | TfResourceShare.ResourceShareConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function awsRamResourceShareResourceShareConfigurationPropertyToTerraform
 }
 
 
-export function awsRamResourceShareResourceShareConfigurationPropertyToHclTerraform(struct?: AwsRamResourceShare.ResourceShareConfigurationPropertyOutputReference | AwsRamResourceShare.ResourceShareConfigurationProperty): any {
+export function tfResourceShareResourceShareConfigurationPropertyToHclTerraform(struct?: TfResourceShare.ResourceShareConfigurationPropertyOutputReference | TfResourceShare.ResourceShareConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,7 +376,7 @@ export function awsRamResourceShareResourceShareConfigurationPropertyToHclTerraf
 }
 
 
-export function awsRamResourceShareTimeoutsPropertyToTerraform(struct?: AwsRamResourceShare.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceShareTimeoutsPropertyToTerraform(struct?: TfResourceShare.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function awsRamResourceShareTimeoutsPropertyToTerraform(struct?: AwsRamRe
 }
 
 
-export function awsRamResourceShareTimeoutsPropertyToHclTerraform(struct?: AwsRamResourceShare.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceShareTimeoutsPropertyToHclTerraform(struct?: TfResourceShare.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,10 +413,10 @@ export function awsRamResourceShareTimeoutsPropertyToHclTerraform(struct?: AwsRa
 }
 
 
-export namespace AwsRamResourceShare {
+export namespace TfResourceShare {
 export interface ResourceShareConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#retain_sharing_on_account_leave_organization AwsRamResourceShare#retain_sharing_on_account_leave_organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#retain_sharing_on_account_leave_organization TfResourceShare#retain_sharing_on_account_leave_organization}
   */
   readonly retainSharingOnAccountLeaveOrganization?: boolean | cdktn.IResolvable;
 }
@@ -470,11 +470,11 @@ export class ResourceShareConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#create AwsRamResourceShare#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#create TfResourceShare#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#delete AwsRamResourceShare#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share#delete TfResourceShare#delete}
   */
   readonly delete?: string;
 }

@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAutoscalingGroupsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfGroupsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#id DataAwsAutoscalingGroups#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#id DataTfGroups#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#names DataAwsAutoscalingGroups#names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#names DataTfGroups#names}
   */
   readonly names?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#region DataAwsAutoscalingGroups#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#region DataTfGroups#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#filter DataAwsAutoscalingGroups#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#filter DataTfGroups#filter}
   */
-  readonly filter?: DataAwsAutoscalingGroups.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfGroups.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups aws_autoscaling_groups}
 */
-export class DataAwsAutoscalingGroups extends cdktn.TerraformDataSource {
+export class DataTfGroups extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class DataAwsAutoscalingGroups extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAutoscalingGroups resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfGroups resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAutoscalingGroups to import
-  * @param importFromId The id of the existing DataAwsAutoscalingGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAutoscalingGroups to import is found
+  * @param importToId The construct id used in the generated config for the DataTfGroups to import
+  * @param importFromId The id of the existing DataTfGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfGroups to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscaling_groups", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class DataAwsAutoscalingGroups extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAutoscalingGroupsConfig = {}
+  * @param options DataTfGroupsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAutoscalingGroupsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfGroupsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscaling_groups',
       terraformGeneratorMetadata: {
@@ -146,11 +146,11 @@ export class DataAwsAutoscalingGroups extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsAutoscalingGroups.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfGroups.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsAutoscalingGroups.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfGroups.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -170,7 +170,7 @@ export class DataAwsAutoscalingGroups extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       names: cdktn.listMapper(cdktn.stringToTerraform, false)(this._names),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataAwsAutoscalingGroupsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfGroupsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -195,10 +195,10 @@ export class DataAwsAutoscalingGroups extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsAutoscalingGroupsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfGroupsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsAutoscalingGroups.FilterPropertyList",
+        storageClassType: "DataTfGroups.FilterPropertyList",
       },
     };
 
@@ -207,7 +207,7 @@ export class DataAwsAutoscalingGroups extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsAutoscalingGroupsFilterPropertyToTerraform(struct?: DataAwsAutoscalingGroups.FilterProperty | cdktn.IResolvable): any {
+export function dataTfGroupsFilterPropertyToTerraform(struct?: DataTfGroups.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,7 +219,7 @@ export function dataAwsAutoscalingGroupsFilterPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsAutoscalingGroupsFilterPropertyToHclTerraform(struct?: DataAwsAutoscalingGroups.FilterProperty | cdktn.IResolvable): any {
+export function dataTfGroupsFilterPropertyToHclTerraform(struct?: DataTfGroups.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,14 +244,14 @@ export function dataAwsAutoscalingGroupsFilterPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataAwsAutoscalingGroups {
+export namespace DataTfGroups {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#name DataAwsAutoscalingGroups#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#name DataTfGroups#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#values DataAwsAutoscalingGroups#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/autoscaling_groups#values DataTfGroups#values}
   */
   readonly values: string[];
 }

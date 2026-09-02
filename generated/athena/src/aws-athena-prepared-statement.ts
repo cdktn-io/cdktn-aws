@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAthenaPreparedStatementConfig extends cdktn.TerraformMetaArguments {
+export interface TfPreparedStatementConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#description AwsAthenaPreparedStatement#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#description TfPreparedStatement#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#id AwsAthenaPreparedStatement#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#id TfPreparedStatement#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#name AwsAthenaPreparedStatement#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#name TfPreparedStatement#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#query_statement AwsAthenaPreparedStatement#query_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#query_statement TfPreparedStatement#query_statement}
   */
   readonly queryStatement: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#region AwsAthenaPreparedStatement#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#region TfPreparedStatement#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#workgroup AwsAthenaPreparedStatement#workgroup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#workgroup TfPreparedStatement#workgroup}
   */
   readonly workgroup: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#timeouts AwsAthenaPreparedStatement#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#timeouts TfPreparedStatement#timeouts}
   */
-  readonly timeouts?: AwsAthenaPreparedStatement.TimeoutsProperty;
+  readonly timeouts?: TfPreparedStatement.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement aws_athena_prepared_statement}
 */
-export class AwsAthenaPreparedStatement extends cdktn.TerraformResource {
+export class TfPreparedStatement extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsAthenaPreparedStatement extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAthenaPreparedStatement resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPreparedStatement resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAthenaPreparedStatement to import
-  * @param importFromId The id of the existing AwsAthenaPreparedStatement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAthenaPreparedStatement to import is found
+  * @param importToId The construct id used in the generated config for the TfPreparedStatement to import
+  * @param importFromId The id of the existing TfPreparedStatement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPreparedStatement to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_athena_prepared_statement", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsAthenaPreparedStatement extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAthenaPreparedStatementConfig
+  * @param options TfPreparedStatementConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAthenaPreparedStatementConfig) {
+  public constructor(scope: Construct, id: string, config: TfPreparedStatementConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_athena_prepared_statement',
       terraformGeneratorMetadata: {
@@ -195,11 +195,11 @@ export class AwsAthenaPreparedStatement extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsAthenaPreparedStatement.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPreparedStatement.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsAthenaPreparedStatement.TimeoutsProperty) {
+  public putTimeouts(value: TfPreparedStatement.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -222,7 +222,7 @@ export class AwsAthenaPreparedStatement extends cdktn.TerraformResource {
       query_statement: cdktn.stringToTerraform(this._queryStatement),
       region: cdktn.stringToTerraform(this._region),
       workgroup: cdktn.stringToTerraform(this._workgroup),
-      timeouts: awsAthenaPreparedStatementTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPreparedStatementTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -265,10 +265,10 @@ export class AwsAthenaPreparedStatement extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsAthenaPreparedStatementTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPreparedStatementTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsAthenaPreparedStatement.TimeoutsProperty",
+        storageClassType: "TfPreparedStatement.TimeoutsProperty",
       },
     };
 
@@ -277,7 +277,7 @@ export class AwsAthenaPreparedStatement extends cdktn.TerraformResource {
   }
 }
 
-export function awsAthenaPreparedStatementTimeoutsPropertyToTerraform(struct?: AwsAthenaPreparedStatement.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPreparedStatementTimeoutsPropertyToTerraform(struct?: TfPreparedStatement.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function awsAthenaPreparedStatementTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsAthenaPreparedStatementTimeoutsPropertyToHclTerraform(struct?: AwsAthenaPreparedStatement.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPreparedStatementTimeoutsPropertyToHclTerraform(struct?: TfPreparedStatement.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,18 +321,18 @@ export function awsAthenaPreparedStatementTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsAthenaPreparedStatement {
+export namespace TfPreparedStatement {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#create AwsAthenaPreparedStatement#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#create TfPreparedStatement#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#delete AwsAthenaPreparedStatement#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#delete TfPreparedStatement#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#update AwsAthenaPreparedStatement#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_prepared_statement#update TfPreparedStatement#update}
   */
   readonly update?: string;
 }

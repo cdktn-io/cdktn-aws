@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConnectQueueConfig extends cdktn.TerraformMetaArguments {
+export interface TfQueueConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#description AwsConnectQueue#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#description TfQueue#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#hours_of_operation_id AwsConnectQueue#hours_of_operation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#hours_of_operation_id TfQueue#hours_of_operation_id}
   */
   readonly hoursOfOperationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#id AwsConnectQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#id TfQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#instance_id AwsConnectQueue#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#instance_id TfQueue#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#max_contacts AwsConnectQueue#max_contacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#max_contacts TfQueue#max_contacts}
   */
   readonly maxContacts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#name AwsConnectQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#name TfQueue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#quick_connect_ids AwsConnectQueue#quick_connect_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#quick_connect_ids TfQueue#quick_connect_ids}
   */
   readonly quickConnectIds?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#region AwsConnectQueue#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#region TfQueue#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#status AwsConnectQueue#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#status TfQueue#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#tags AwsConnectQueue#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#tags TfQueue#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#tags_all AwsConnectQueue#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#tags_all TfQueue#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * outbound_caller_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_caller_config AwsConnectQueue#outbound_caller_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_caller_config TfQueue#outbound_caller_config}
   */
-  readonly outboundCallerConfig?: AwsConnectQueue.OutboundCallerConfigProperty;
+  readonly outboundCallerConfig?: TfQueue.OutboundCallerConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue aws_connect_queue}
 */
-export class AwsConnectQueue extends cdktn.TerraformResource {
+export class TfQueue extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsConnectQueue extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConnectQueue resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfQueue resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConnectQueue to import
-  * @param importFromId The id of the existing AwsConnectQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConnectQueue to import is found
+  * @param importToId The construct id used in the generated config for the TfQueue to import
+  * @param importFromId The id of the existing TfQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_queue", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsConnectQueue extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConnectQueueConfig
+  * @param options TfQueueConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConnectQueueConfig) {
+  public constructor(scope: Construct, id: string, config: TfQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_queue',
       terraformGeneratorMetadata: {
@@ -310,11 +310,11 @@ export class AwsConnectQueue extends cdktn.TerraformResource {
   }
 
   // outbound_caller_config - computed: false, optional: true, required: false
-  private _outboundCallerConfig = new AwsConnectQueue.OutboundCallerConfigPropertyOutputReference(this, "outbound_caller_config");
+  private _outboundCallerConfig = new TfQueue.OutboundCallerConfigPropertyOutputReference(this, "outbound_caller_config");
   public get outboundCallerConfig() {
     return this._outboundCallerConfig;
   }
-  public putOutboundCallerConfig(value: AwsConnectQueue.OutboundCallerConfigProperty) {
+  public putOutboundCallerConfig(value: TfQueue.OutboundCallerConfigProperty) {
     this._outboundCallerConfig.internalValue = value;
   }
   public resetOutboundCallerConfig() {
@@ -342,7 +342,7 @@ export class AwsConnectQueue extends cdktn.TerraformResource {
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      outbound_caller_config: awsConnectQueueOutboundCallerConfigPropertyToTerraform(this._outboundCallerConfig.internalValue),
+      outbound_caller_config: tfQueueOutboundCallerConfigPropertyToTerraform(this._outboundCallerConfig.internalValue),
     };
   }
 
@@ -415,10 +415,10 @@ export class AwsConnectQueue extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       outbound_caller_config: {
-        value: awsConnectQueueOutboundCallerConfigPropertyToHclTerraform(this._outboundCallerConfig.internalValue),
+        value: tfQueueOutboundCallerConfigPropertyToHclTerraform(this._outboundCallerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConnectQueue.OutboundCallerConfigPropertyList",
+        storageClassType: "TfQueue.OutboundCallerConfigPropertyList",
       },
     };
 
@@ -427,7 +427,7 @@ export class AwsConnectQueue extends cdktn.TerraformResource {
   }
 }
 
-export function awsConnectQueueOutboundCallerConfigPropertyToTerraform(struct?: AwsConnectQueue.OutboundCallerConfigPropertyOutputReference | AwsConnectQueue.OutboundCallerConfigProperty): any {
+export function tfQueueOutboundCallerConfigPropertyToTerraform(struct?: TfQueue.OutboundCallerConfigPropertyOutputReference | TfQueue.OutboundCallerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function awsConnectQueueOutboundCallerConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsConnectQueueOutboundCallerConfigPropertyToHclTerraform(struct?: AwsConnectQueue.OutboundCallerConfigPropertyOutputReference | AwsConnectQueue.OutboundCallerConfigProperty): any {
+export function tfQueueOutboundCallerConfigPropertyToHclTerraform(struct?: TfQueue.OutboundCallerConfigPropertyOutputReference | TfQueue.OutboundCallerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,18 +471,18 @@ export function awsConnectQueueOutboundCallerConfigPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsConnectQueue {
+export namespace TfQueue {
 export interface OutboundCallerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_caller_id_name AwsConnectQueue#outbound_caller_id_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_caller_id_name TfQueue#outbound_caller_id_name}
   */
   readonly outboundCallerIdName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_caller_id_number_id AwsConnectQueue#outbound_caller_id_number_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_caller_id_number_id TfQueue#outbound_caller_id_number_id}
   */
   readonly outboundCallerIdNumberId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_flow_id AwsConnectQueue#outbound_flow_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_queue#outbound_flow_id TfQueue#outbound_flow_id}
   */
   readonly outboundFlowId?: string;
 }

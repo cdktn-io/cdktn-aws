@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerSiteConfig extends cdktn.TerraformMetaArguments {
+export interface TfSiteConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#description AwsNetworkmanagerSite#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#description TfSite#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#global_network_id AwsNetworkmanagerSite#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#global_network_id TfSite#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#id AwsNetworkmanagerSite#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#id TfSite#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#tags AwsNetworkmanagerSite#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#tags TfSite#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#tags_all AwsNetworkmanagerSite#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#tags_all TfSite#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#location AwsNetworkmanagerSite#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#location TfSite#location}
   */
-  readonly location?: AwsNetworkmanagerSite.LocationProperty;
+  readonly location?: TfSite.LocationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#timeouts AwsNetworkmanagerSite#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#timeouts TfSite#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerSite.TimeoutsProperty;
+  readonly timeouts?: TfSite.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site aws_networkmanager_site}
 */
-export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
+export class TfSite extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerSite resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSite resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerSite to import
-  * @param importFromId The id of the existing AwsNetworkmanagerSite that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerSite to import is found
+  * @param importToId The construct id used in the generated config for the TfSite to import
+  * @param importFromId The id of the existing TfSite that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSite to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_site", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerSiteConfig
+  * @param options TfSiteConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerSiteConfig) {
+  public constructor(scope: Construct, id: string, config: TfSiteConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_site',
       terraformGeneratorMetadata: {
@@ -190,11 +190,11 @@ export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location = new AwsNetworkmanagerSite.LocationPropertyOutputReference(this, "location");
+  private _location = new TfSite.LocationPropertyOutputReference(this, "location");
   public get location() {
     return this._location;
   }
-  public putLocation(value: AwsNetworkmanagerSite.LocationProperty) {
+  public putLocation(value: TfSite.LocationProperty) {
     this._location.internalValue = value;
   }
   public resetLocation() {
@@ -206,11 +206,11 @@ export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerSite.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSite.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerSite.TimeoutsProperty) {
+  public putTimeouts(value: TfSite.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -232,8 +232,8 @@ export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      location: awsNetworkmanagerSiteLocationPropertyToTerraform(this._location.internalValue),
-      timeouts: awsNetworkmanagerSiteTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      location: tfSiteLocationPropertyToTerraform(this._location.internalValue),
+      timeouts: tfSiteTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -270,16 +270,16 @@ export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       location: {
-        value: awsNetworkmanagerSiteLocationPropertyToHclTerraform(this._location.internalValue),
+        value: tfSiteLocationPropertyToHclTerraform(this._location.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkmanagerSite.LocationPropertyList",
+        storageClassType: "TfSite.LocationPropertyList",
       },
       timeouts: {
-        value: awsNetworkmanagerSiteTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSiteTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerSite.TimeoutsProperty",
+        storageClassType: "TfSite.TimeoutsProperty",
       },
     };
 
@@ -288,7 +288,7 @@ export class AwsNetworkmanagerSite extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkmanagerSiteLocationPropertyToTerraform(struct?: AwsNetworkmanagerSite.LocationPropertyOutputReference | AwsNetworkmanagerSite.LocationProperty): any {
+export function tfSiteLocationPropertyToTerraform(struct?: TfSite.LocationPropertyOutputReference | TfSite.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function awsNetworkmanagerSiteLocationPropertyToTerraform(struct?: AwsNet
 }
 
 
-export function awsNetworkmanagerSiteLocationPropertyToHclTerraform(struct?: AwsNetworkmanagerSite.LocationPropertyOutputReference | AwsNetworkmanagerSite.LocationProperty): any {
+export function tfSiteLocationPropertyToHclTerraform(struct?: TfSite.LocationPropertyOutputReference | TfSite.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function awsNetworkmanagerSiteLocationPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsNetworkmanagerSiteTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerSite.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSiteTimeoutsPropertyToTerraform(struct?: TfSite.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function awsNetworkmanagerSiteTimeoutsPropertyToTerraform(struct?: AwsNet
 }
 
 
-export function awsNetworkmanagerSiteTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerSite.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSiteTimeoutsPropertyToHclTerraform(struct?: TfSite.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,18 +376,18 @@ export function awsNetworkmanagerSiteTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsNetworkmanagerSite {
+export namespace TfSite {
 export interface LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#address AwsNetworkmanagerSite#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#address TfSite#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#latitude AwsNetworkmanagerSite#latitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#latitude TfSite#latitude}
   */
   readonly latitude?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#longitude AwsNetworkmanagerSite#longitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#longitude TfSite#longitude}
   */
   readonly longitude?: string;
 }
@@ -485,15 +485,15 @@ export class LocationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#create AwsNetworkmanagerSite#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#create TfSite#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#delete AwsNetworkmanagerSite#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#delete TfSite#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#update AwsNetworkmanagerSite#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_site#update TfSite#update}
   */
   readonly update?: string;
 }

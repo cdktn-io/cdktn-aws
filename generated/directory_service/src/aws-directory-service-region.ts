@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDirectoryServiceRegionConfig extends cdktn.TerraformMetaArguments {
+export interface TfRegionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#desired_number_of_domain_controllers AwsDirectoryServiceRegion#desired_number_of_domain_controllers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#desired_number_of_domain_controllers TfRegion#desired_number_of_domain_controllers}
   */
   readonly desiredNumberOfDomainControllers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#directory_id AwsDirectoryServiceRegion#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#directory_id TfRegion#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#id AwsDirectoryServiceRegion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#id TfRegion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,39 +24,39 @@ export interface AwsDirectoryServiceRegionConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#region AwsDirectoryServiceRegion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#region TfRegion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#region_name AwsDirectoryServiceRegion#region_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#region_name TfRegion#region_name}
   */
   readonly regionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#tags AwsDirectoryServiceRegion#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#tags TfRegion#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#tags_all AwsDirectoryServiceRegion#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#tags_all TfRegion#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#timeouts AwsDirectoryServiceRegion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#timeouts TfRegion#timeouts}
   */
-  readonly timeouts?: AwsDirectoryServiceRegion.TimeoutsProperty;
+  readonly timeouts?: TfRegion.TimeoutsProperty;
   /**
   * vpc_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#vpc_settings AwsDirectoryServiceRegion#vpc_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#vpc_settings TfRegion#vpc_settings}
   */
-  readonly vpcSettings: AwsDirectoryServiceRegion.VpcSettingsProperty;
+  readonly vpcSettings: TfRegion.VpcSettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region aws_directory_service_region}
 */
-export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
+export class TfRegion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDirectoryServiceRegion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRegion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDirectoryServiceRegion to import
-  * @param importFromId The id of the existing AwsDirectoryServiceRegion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDirectoryServiceRegion to import is found
+  * @param importToId The construct id used in the generated config for the TfRegion to import
+  * @param importFromId The id of the existing TfRegion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRegion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_region", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDirectoryServiceRegionConfig
+  * @param options TfRegionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDirectoryServiceRegionConfig) {
+  public constructor(scope: Construct, id: string, config: TfRegionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_directory_service_region',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDirectoryServiceRegion.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRegion.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDirectoryServiceRegion.TimeoutsProperty) {
+  public putTimeouts(value: TfRegion.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -242,11 +242,11 @@ export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
   }
 
   // vpc_settings - computed: false, optional: false, required: true
-  private _vpcSettings = new AwsDirectoryServiceRegion.VpcSettingsPropertyOutputReference(this, "vpc_settings");
+  private _vpcSettings = new TfRegion.VpcSettingsPropertyOutputReference(this, "vpc_settings");
   public get vpcSettings() {
     return this._vpcSettings;
   }
-  public putVpcSettings(value: AwsDirectoryServiceRegion.VpcSettingsProperty) {
+  public putVpcSettings(value: TfRegion.VpcSettingsProperty) {
     this._vpcSettings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -267,8 +267,8 @@ export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
       region_name: cdktn.stringToTerraform(this._regionName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsDirectoryServiceRegionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_settings: awsDirectoryServiceRegionVpcSettingsPropertyToTerraform(this._vpcSettings.internalValue),
+      timeouts: tfRegionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_settings: tfRegionVpcSettingsPropertyToTerraform(this._vpcSettings.internalValue),
     };
   }
 
@@ -317,16 +317,16 @@ export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsDirectoryServiceRegionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRegionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDirectoryServiceRegion.TimeoutsProperty",
+        storageClassType: "TfRegion.TimeoutsProperty",
       },
       vpc_settings: {
-        value: awsDirectoryServiceRegionVpcSettingsPropertyToHclTerraform(this._vpcSettings.internalValue),
+        value: tfRegionVpcSettingsPropertyToHclTerraform(this._vpcSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDirectoryServiceRegion.VpcSettingsPropertyList",
+        storageClassType: "TfRegion.VpcSettingsPropertyList",
       },
     };
 
@@ -335,7 +335,7 @@ export class AwsDirectoryServiceRegion extends cdktn.TerraformResource {
   }
 }
 
-export function awsDirectoryServiceRegionTimeoutsPropertyToTerraform(struct?: AwsDirectoryServiceRegion.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRegionTimeoutsPropertyToTerraform(struct?: TfRegion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function awsDirectoryServiceRegionTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsDirectoryServiceRegionTimeoutsPropertyToHclTerraform(struct?: AwsDirectoryServiceRegion.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRegionTimeoutsPropertyToHclTerraform(struct?: TfRegion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsDirectoryServiceRegionTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsDirectoryServiceRegionVpcSettingsPropertyToTerraform(struct?: AwsDirectoryServiceRegion.VpcSettingsPropertyOutputReference | AwsDirectoryServiceRegion.VpcSettingsProperty): any {
+export function tfRegionVpcSettingsPropertyToTerraform(struct?: TfRegion.VpcSettingsPropertyOutputReference | TfRegion.VpcSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function awsDirectoryServiceRegionVpcSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsDirectoryServiceRegionVpcSettingsPropertyToHclTerraform(struct?: AwsDirectoryServiceRegion.VpcSettingsPropertyOutputReference | AwsDirectoryServiceRegion.VpcSettingsProperty): any {
+export function tfRegionVpcSettingsPropertyToHclTerraform(struct?: TfRegion.VpcSettingsPropertyOutputReference | TfRegion.VpcSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,18 +416,18 @@ export function awsDirectoryServiceRegionVpcSettingsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsDirectoryServiceRegion {
+export namespace TfRegion {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#create AwsDirectoryServiceRegion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#create TfRegion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#delete AwsDirectoryServiceRegion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#delete TfRegion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#update AwsDirectoryServiceRegion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#update TfRegion#update}
   */
   readonly update?: string;
 }
@@ -535,11 +535,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#subnet_ids AwsDirectoryServiceRegion#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#subnet_ids TfRegion#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#vpc_id AwsDirectoryServiceRegion#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_region#vpc_id TfRegion#vpc_id}
   */
   readonly vpcId: string;
 }

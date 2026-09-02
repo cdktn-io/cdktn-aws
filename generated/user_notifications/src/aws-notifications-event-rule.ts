@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNotificationsEventRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfEventRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#event_pattern AwsNotificationsEventRule#event_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#event_pattern TfEventRule#event_pattern}
   */
   readonly eventPattern?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#event_type AwsNotificationsEventRule#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#event_type TfEventRule#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#notification_configuration_arn AwsNotificationsEventRule#notification_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#notification_configuration_arn TfEventRule#notification_configuration_arn}
   */
   readonly notificationConfigurationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#regions AwsNotificationsEventRule#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#regions TfEventRule#regions}
   */
   readonly regions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#source AwsNotificationsEventRule#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#source TfEventRule#source}
   */
   readonly source: string;
 }
@@ -31,7 +31,7 @@ export interface AwsNotificationsEventRuleConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule aws_notifications_event_rule}
 */
-export class AwsNotificationsEventRule extends cdktn.TerraformResource {
+export class TfEventRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsNotificationsEventRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNotificationsEventRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEventRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNotificationsEventRule to import
-  * @param importFromId The id of the existing AwsNotificationsEventRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNotificationsEventRule to import is found
+  * @param importToId The construct id used in the generated config for the TfEventRule to import
+  * @param importFromId The id of the existing TfEventRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_event_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEventRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_notifications_event_rule", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsNotificationsEventRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNotificationsEventRuleConfig
+  * @param options TfEventRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNotificationsEventRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfEventRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_notifications_event_rule',
       terraformGeneratorMetadata: {

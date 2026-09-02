@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3TablesTablePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfTablePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#name AwsS3TablesTablePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#name TfTablePolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#namespace AwsS3TablesTablePolicy#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#namespace TfTablePolicy#namespace}
   */
   readonly namespace: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#region AwsS3TablesTablePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#region TfTablePolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#resource_policy AwsS3TablesTablePolicy#resource_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#resource_policy TfTablePolicy#resource_policy}
   */
   readonly resourcePolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#table_bucket_arn AwsS3TablesTablePolicy#table_bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#table_bucket_arn TfTablePolicy#table_bucket_arn}
   */
   readonly tableBucketArn: string;
 }
@@ -33,7 +33,7 @@ export interface AwsS3TablesTablePolicyConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy aws_s3tables_table_policy}
 */
-export class AwsS3TablesTablePolicy extends cdktn.TerraformResource {
+export class TfTablePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsS3TablesTablePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3TablesTablePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTablePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3TablesTablePolicy to import
-  * @param importFromId The id of the existing AwsS3TablesTablePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3TablesTablePolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfTablePolicy to import
+  * @param importFromId The id of the existing TfTablePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTablePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3tables_table_policy", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsS3TablesTablePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3TablesTablePolicyConfig
+  * @param options TfTablePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3TablesTablePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfTablePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3tables_table_policy',
       terraformGeneratorMetadata: {

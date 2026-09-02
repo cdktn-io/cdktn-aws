@@ -5,72 +5,72 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBatchComputeEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfComputeEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#id AwsBatchComputeEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#id TfComputeEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#name AwsBatchComputeEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#name TfComputeEnvironment#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#name_prefix AwsBatchComputeEnvironment#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#name_prefix TfComputeEnvironment#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#region AwsBatchComputeEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#region TfComputeEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#service_role AwsBatchComputeEnvironment#service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#service_role TfComputeEnvironment#service_role}
   */
   readonly serviceRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#state AwsBatchComputeEnvironment#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#state TfComputeEnvironment#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#tags AwsBatchComputeEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#tags TfComputeEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#tags_all AwsBatchComputeEnvironment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#tags_all TfComputeEnvironment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#type AwsBatchComputeEnvironment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#type TfComputeEnvironment#type}
   */
   readonly type: string;
   /**
   * compute_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#compute_resources AwsBatchComputeEnvironment#compute_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#compute_resources TfComputeEnvironment#compute_resources}
   */
-  readonly computeResources?: AwsBatchComputeEnvironment.ComputeResourcesProperty;
+  readonly computeResources?: TfComputeEnvironment.ComputeResourcesProperty;
   /**
   * eks_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#eks_configuration AwsBatchComputeEnvironment#eks_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#eks_configuration TfComputeEnvironment#eks_configuration}
   */
-  readonly eksConfiguration?: AwsBatchComputeEnvironment.EksConfigurationProperty;
+  readonly eksConfiguration?: TfComputeEnvironment.EksConfigurationProperty;
   /**
   * update_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#update_policy AwsBatchComputeEnvironment#update_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#update_policy TfComputeEnvironment#update_policy}
   */
-  readonly updatePolicy?: AwsBatchComputeEnvironment.UpdatePolicyProperty;
+  readonly updatePolicy?: TfComputeEnvironment.UpdatePolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment aws_batch_compute_environment}
 */
-export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
+export class TfComputeEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBatchComputeEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfComputeEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBatchComputeEnvironment to import
-  * @param importFromId The id of the existing AwsBatchComputeEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBatchComputeEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the TfComputeEnvironment to import
+  * @param importFromId The id of the existing TfComputeEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfComputeEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_batch_compute_environment", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBatchComputeEnvironmentConfig
+  * @param options TfComputeEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBatchComputeEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfComputeEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_batch_compute_environment',
       terraformGeneratorMetadata: {
@@ -298,11 +298,11 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
   }
 
   // compute_resources - computed: false, optional: true, required: false
-  private _computeResources = new AwsBatchComputeEnvironment.ComputeResourcesPropertyOutputReference(this, "compute_resources");
+  private _computeResources = new TfComputeEnvironment.ComputeResourcesPropertyOutputReference(this, "compute_resources");
   public get computeResources() {
     return this._computeResources;
   }
-  public putComputeResources(value: AwsBatchComputeEnvironment.ComputeResourcesProperty) {
+  public putComputeResources(value: TfComputeEnvironment.ComputeResourcesProperty) {
     this._computeResources.internalValue = value;
   }
   public resetComputeResources() {
@@ -314,11 +314,11 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
   }
 
   // eks_configuration - computed: false, optional: true, required: false
-  private _eksConfiguration = new AwsBatchComputeEnvironment.EksConfigurationPropertyOutputReference(this, "eks_configuration");
+  private _eksConfiguration = new TfComputeEnvironment.EksConfigurationPropertyOutputReference(this, "eks_configuration");
   public get eksConfiguration() {
     return this._eksConfiguration;
   }
-  public putEksConfiguration(value: AwsBatchComputeEnvironment.EksConfigurationProperty) {
+  public putEksConfiguration(value: TfComputeEnvironment.EksConfigurationProperty) {
     this._eksConfiguration.internalValue = value;
   }
   public resetEksConfiguration() {
@@ -330,11 +330,11 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
   }
 
   // update_policy - computed: false, optional: true, required: false
-  private _updatePolicy = new AwsBatchComputeEnvironment.UpdatePolicyPropertyOutputReference(this, "update_policy");
+  private _updatePolicy = new TfComputeEnvironment.UpdatePolicyPropertyOutputReference(this, "update_policy");
   public get updatePolicy() {
     return this._updatePolicy;
   }
-  public putUpdatePolicy(value: AwsBatchComputeEnvironment.UpdatePolicyProperty) {
+  public putUpdatePolicy(value: TfComputeEnvironment.UpdatePolicyProperty) {
     this._updatePolicy.internalValue = value;
   }
   public resetUpdatePolicy() {
@@ -360,9 +360,9 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      compute_resources: awsBatchComputeEnvironmentComputeResourcesPropertyToTerraform(this._computeResources.internalValue),
-      eks_configuration: awsBatchComputeEnvironmentEksConfigurationPropertyToTerraform(this._eksConfiguration.internalValue),
-      update_policy: awsBatchComputeEnvironmentUpdatePolicyPropertyToTerraform(this._updatePolicy.internalValue),
+      compute_resources: tfComputeEnvironmentComputeResourcesPropertyToTerraform(this._computeResources.internalValue),
+      eks_configuration: tfComputeEnvironmentEksConfigurationPropertyToTerraform(this._eksConfiguration.internalValue),
+      update_policy: tfComputeEnvironmentUpdatePolicyPropertyToTerraform(this._updatePolicy.internalValue),
     };
   }
 
@@ -423,22 +423,22 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       compute_resources: {
-        value: awsBatchComputeEnvironmentComputeResourcesPropertyToHclTerraform(this._computeResources.internalValue),
+        value: tfComputeEnvironmentComputeResourcesPropertyToHclTerraform(this._computeResources.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBatchComputeEnvironment.ComputeResourcesPropertyList",
+        storageClassType: "TfComputeEnvironment.ComputeResourcesPropertyList",
       },
       eks_configuration: {
-        value: awsBatchComputeEnvironmentEksConfigurationPropertyToHclTerraform(this._eksConfiguration.internalValue),
+        value: tfComputeEnvironmentEksConfigurationPropertyToHclTerraform(this._eksConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBatchComputeEnvironment.EksConfigurationPropertyList",
+        storageClassType: "TfComputeEnvironment.EksConfigurationPropertyList",
       },
       update_policy: {
-        value: awsBatchComputeEnvironmentUpdatePolicyPropertyToHclTerraform(this._updatePolicy.internalValue),
+        value: tfComputeEnvironmentUpdatePolicyPropertyToHclTerraform(this._updatePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBatchComputeEnvironment.UpdatePolicyPropertyList",
+        storageClassType: "TfComputeEnvironment.UpdatePolicyPropertyList",
       },
     };
 
@@ -447,7 +447,7 @@ export class AwsBatchComputeEnvironment extends cdktn.TerraformResource {
   }
 }
 
-export function awsBatchComputeEnvironmentEc2ConfigurationPropertyToTerraform(struct?: AwsBatchComputeEnvironment.Ec2ConfigurationProperty | cdktn.IResolvable): any {
+export function tfComputeEnvironmentEc2ConfigurationPropertyToTerraform(struct?: TfComputeEnvironment.Ec2ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function awsBatchComputeEnvironmentEc2ConfigurationPropertyToTerraform(st
 }
 
 
-export function awsBatchComputeEnvironmentEc2ConfigurationPropertyToHclTerraform(struct?: AwsBatchComputeEnvironment.Ec2ConfigurationProperty | cdktn.IResolvable): any {
+export function tfComputeEnvironmentEc2ConfigurationPropertyToHclTerraform(struct?: TfComputeEnvironment.Ec2ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function awsBatchComputeEnvironmentEc2ConfigurationPropertyToHclTerraform
 }
 
 
-export function awsBatchComputeEnvironmentLaunchTemplatePropertyToTerraform(struct?: AwsBatchComputeEnvironment.LaunchTemplatePropertyOutputReference | AwsBatchComputeEnvironment.LaunchTemplateProperty): any {
+export function tfComputeEnvironmentLaunchTemplatePropertyToTerraform(struct?: TfComputeEnvironment.LaunchTemplatePropertyOutputReference | TfComputeEnvironment.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function awsBatchComputeEnvironmentLaunchTemplatePropertyToTerraform(stru
 }
 
 
-export function awsBatchComputeEnvironmentLaunchTemplatePropertyToHclTerraform(struct?: AwsBatchComputeEnvironment.LaunchTemplatePropertyOutputReference | AwsBatchComputeEnvironment.LaunchTemplateProperty): any {
+export function tfComputeEnvironmentLaunchTemplatePropertyToHclTerraform(struct?: TfComputeEnvironment.LaunchTemplatePropertyOutputReference | TfComputeEnvironment.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function awsBatchComputeEnvironmentLaunchTemplatePropertyToHclTerraform(s
 }
 
 
-export function awsBatchComputeEnvironmentComputeResourcesPropertyToTerraform(struct?: AwsBatchComputeEnvironment.ComputeResourcesPropertyOutputReference | AwsBatchComputeEnvironment.ComputeResourcesProperty): any {
+export function tfComputeEnvironmentComputeResourcesPropertyToTerraform(struct?: TfComputeEnvironment.ComputeResourcesPropertyOutputReference | TfComputeEnvironment.ComputeResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,13 +556,13 @@ export function awsBatchComputeEnvironmentComputeResourcesPropertyToTerraform(st
     subnets: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnets),
     tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
     type: cdktn.stringToTerraform(struct!.type),
-    ec2_configuration: cdktn.listMapper(awsBatchComputeEnvironmentEc2ConfigurationPropertyToTerraform, true)(struct!.ec2Configuration),
-    launch_template: awsBatchComputeEnvironmentLaunchTemplatePropertyToTerraform(struct!.launchTemplate),
+    ec2_configuration: cdktn.listMapper(tfComputeEnvironmentEc2ConfigurationPropertyToTerraform, true)(struct!.ec2Configuration),
+    launch_template: tfComputeEnvironmentLaunchTemplatePropertyToTerraform(struct!.launchTemplate),
   }
 }
 
 
-export function awsBatchComputeEnvironmentComputeResourcesPropertyToHclTerraform(struct?: AwsBatchComputeEnvironment.ComputeResourcesPropertyOutputReference | AwsBatchComputeEnvironment.ComputeResourcesProperty): any {
+export function tfComputeEnvironmentComputeResourcesPropertyToHclTerraform(struct?: TfComputeEnvironment.ComputeResourcesPropertyOutputReference | TfComputeEnvironment.ComputeResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -659,13 +659,13 @@ export function awsBatchComputeEnvironmentComputeResourcesPropertyToHclTerraform
       storageClassType: "string",
     },
     ec2_configuration: {
-      value: cdktn.listMapperHcl(awsBatchComputeEnvironmentEc2ConfigurationPropertyToHclTerraform, true)(struct!.ec2Configuration),
+      value: cdktn.listMapperHcl(tfComputeEnvironmentEc2ConfigurationPropertyToHclTerraform, true)(struct!.ec2Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "Ec2ConfigurationPropertyList",
     },
     launch_template: {
-      value: awsBatchComputeEnvironmentLaunchTemplatePropertyToHclTerraform(struct!.launchTemplate),
+      value: tfComputeEnvironmentLaunchTemplatePropertyToHclTerraform(struct!.launchTemplate),
       isBlock: true,
       type: "list",
       storageClassType: "LaunchTemplatePropertyList",
@@ -677,7 +677,7 @@ export function awsBatchComputeEnvironmentComputeResourcesPropertyToHclTerraform
 }
 
 
-export function awsBatchComputeEnvironmentEksConfigurationPropertyToTerraform(struct?: AwsBatchComputeEnvironment.EksConfigurationPropertyOutputReference | AwsBatchComputeEnvironment.EksConfigurationProperty): any {
+export function tfComputeEnvironmentEksConfigurationPropertyToTerraform(struct?: TfComputeEnvironment.EksConfigurationPropertyOutputReference | TfComputeEnvironment.EksConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function awsBatchComputeEnvironmentEksConfigurationPropertyToTerraform(st
 }
 
 
-export function awsBatchComputeEnvironmentEksConfigurationPropertyToHclTerraform(struct?: AwsBatchComputeEnvironment.EksConfigurationPropertyOutputReference | AwsBatchComputeEnvironment.EksConfigurationProperty): any {
+export function tfComputeEnvironmentEksConfigurationPropertyToHclTerraform(struct?: TfComputeEnvironment.EksConfigurationPropertyOutputReference | TfComputeEnvironment.EksConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function awsBatchComputeEnvironmentEksConfigurationPropertyToHclTerraform
 }
 
 
-export function awsBatchComputeEnvironmentUpdatePolicyPropertyToTerraform(struct?: AwsBatchComputeEnvironment.UpdatePolicyPropertyOutputReference | AwsBatchComputeEnvironment.UpdatePolicyProperty): any {
+export function tfComputeEnvironmentUpdatePolicyPropertyToTerraform(struct?: TfComputeEnvironment.UpdatePolicyPropertyOutputReference | TfComputeEnvironment.UpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,7 +726,7 @@ export function awsBatchComputeEnvironmentUpdatePolicyPropertyToTerraform(struct
 }
 
 
-export function awsBatchComputeEnvironmentUpdatePolicyPropertyToHclTerraform(struct?: AwsBatchComputeEnvironment.UpdatePolicyPropertyOutputReference | AwsBatchComputeEnvironment.UpdatePolicyProperty): any {
+export function tfComputeEnvironmentUpdatePolicyPropertyToHclTerraform(struct?: TfComputeEnvironment.UpdatePolicyPropertyOutputReference | TfComputeEnvironment.UpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -751,18 +751,18 @@ export function awsBatchComputeEnvironmentUpdatePolicyPropertyToHclTerraform(str
 }
 
 
-export namespace AwsBatchComputeEnvironment {
+export namespace TfComputeEnvironment {
 export interface Ec2ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_id_override AwsBatchComputeEnvironment#image_id_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_id_override TfComputeEnvironment#image_id_override}
   */
   readonly imageIdOverride?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_kubernetes_version AwsBatchComputeEnvironment#image_kubernetes_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_kubernetes_version TfComputeEnvironment#image_kubernetes_version}
   */
   readonly imageKubernetesVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_type AwsBatchComputeEnvironment#image_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_type TfComputeEnvironment#image_type}
   */
   readonly imageType?: string;
 }
@@ -892,15 +892,15 @@ export class Ec2ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface LaunchTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#launch_template_id AwsBatchComputeEnvironment#launch_template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#launch_template_id TfComputeEnvironment#launch_template_id}
   */
   readonly launchTemplateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#launch_template_name AwsBatchComputeEnvironment#launch_template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#launch_template_name TfComputeEnvironment#launch_template_name}
   */
   readonly launchTemplateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#version AwsBatchComputeEnvironment#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#version TfComputeEnvironment#version}
   */
   readonly version?: string;
 }
@@ -998,75 +998,75 @@ export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ComputeResourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#allocation_strategy AwsBatchComputeEnvironment#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#allocation_strategy TfComputeEnvironment#allocation_strategy}
   */
   readonly allocationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#bid_percentage AwsBatchComputeEnvironment#bid_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#bid_percentage TfComputeEnvironment#bid_percentage}
   */
   readonly bidPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#desired_vcpus AwsBatchComputeEnvironment#desired_vcpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#desired_vcpus TfComputeEnvironment#desired_vcpus}
   */
   readonly desiredVcpus?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#ec2_key_pair AwsBatchComputeEnvironment#ec2_key_pair}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#ec2_key_pair TfComputeEnvironment#ec2_key_pair}
   */
   readonly ec2KeyPair?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_id AwsBatchComputeEnvironment#image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#image_id TfComputeEnvironment#image_id}
   */
   readonly imageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#instance_role AwsBatchComputeEnvironment#instance_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#instance_role TfComputeEnvironment#instance_role}
   */
   readonly instanceRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#instance_type AwsBatchComputeEnvironment#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#instance_type TfComputeEnvironment#instance_type}
   */
   readonly instanceType?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#max_vcpus AwsBatchComputeEnvironment#max_vcpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#max_vcpus TfComputeEnvironment#max_vcpus}
   */
   readonly maxVcpus: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#min_vcpus AwsBatchComputeEnvironment#min_vcpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#min_vcpus TfComputeEnvironment#min_vcpus}
   */
   readonly minVcpus?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#placement_group AwsBatchComputeEnvironment#placement_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#placement_group TfComputeEnvironment#placement_group}
   */
   readonly placementGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#security_group_ids AwsBatchComputeEnvironment#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#security_group_ids TfComputeEnvironment#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#spot_iam_fleet_role AwsBatchComputeEnvironment#spot_iam_fleet_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#spot_iam_fleet_role TfComputeEnvironment#spot_iam_fleet_role}
   */
   readonly spotIamFleetRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#subnets AwsBatchComputeEnvironment#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#subnets TfComputeEnvironment#subnets}
   */
   readonly subnets: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#tags AwsBatchComputeEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#tags TfComputeEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#type AwsBatchComputeEnvironment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#type TfComputeEnvironment#type}
   */
   readonly type: string;
   /**
   * ec2_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#ec2_configuration AwsBatchComputeEnvironment#ec2_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#ec2_configuration TfComputeEnvironment#ec2_configuration}
   */
   readonly ec2Configuration?: Ec2ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * launch_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#launch_template AwsBatchComputeEnvironment#launch_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#launch_template TfComputeEnvironment#launch_template}
   */
   readonly launchTemplate?: LaunchTemplateProperty;
 }
@@ -1463,11 +1463,11 @@ export class ComputeResourcesPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface EksConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#eks_cluster_arn AwsBatchComputeEnvironment#eks_cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#eks_cluster_arn TfComputeEnvironment#eks_cluster_arn}
   */
   readonly eksClusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#kubernetes_namespace AwsBatchComputeEnvironment#kubernetes_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#kubernetes_namespace TfComputeEnvironment#kubernetes_namespace}
   */
   readonly kubernetesNamespace: string;
 }
@@ -1537,11 +1537,11 @@ export class EksConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface UpdatePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#job_execution_timeout_minutes AwsBatchComputeEnvironment#job_execution_timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#job_execution_timeout_minutes TfComputeEnvironment#job_execution_timeout_minutes}
   */
   readonly jobExecutionTimeoutMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#terminate_jobs_on_update AwsBatchComputeEnvironment#terminate_jobs_on_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_compute_environment#terminate_jobs_on_update TfComputeEnvironment#terminate_jobs_on_update}
   */
   readonly terminateJobsOnUpdate?: boolean | cdktn.IResolvable;
 }

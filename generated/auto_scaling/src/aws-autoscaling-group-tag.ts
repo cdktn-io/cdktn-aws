@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAutoscalingGroupTagConfig extends cdktn.TerraformMetaArguments {
+export interface TfGroupTagConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#autoscaling_group_name AwsAutoscalingGroupTag#autoscaling_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#autoscaling_group_name TfGroupTag#autoscaling_group_name}
   */
   readonly autoscalingGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#id AwsAutoscalingGroupTag#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#id TfGroupTag#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface AwsAutoscalingGroupTagConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#region AwsAutoscalingGroupTag#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#region TfGroupTag#region}
   */
   readonly region?: string;
   /**
   * tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#tag AwsAutoscalingGroupTag#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#tag TfGroupTag#tag}
   */
-  readonly tag: AwsAutoscalingGroupTag.TagProperty;
+  readonly tag: TfGroupTag.TagProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag aws_autoscaling_group_tag}
 */
-export class AwsAutoscalingGroupTag extends cdktn.TerraformResource {
+export class TfGroupTag extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsAutoscalingGroupTag extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAutoscalingGroupTag resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGroupTag resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAutoscalingGroupTag to import
-  * @param importFromId The id of the existing AwsAutoscalingGroupTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAutoscalingGroupTag to import is found
+  * @param importToId The construct id used in the generated config for the TfGroupTag to import
+  * @param importFromId The id of the existing TfGroupTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGroupTag to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscaling_group_tag", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsAutoscalingGroupTag extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAutoscalingGroupTagConfig
+  * @param options TfGroupTagConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAutoscalingGroupTagConfig) {
+  public constructor(scope: Construct, id: string, config: TfGroupTagConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscaling_group_tag',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class AwsAutoscalingGroupTag extends cdktn.TerraformResource {
   }
 
   // tag - computed: false, optional: false, required: true
-  private _tag = new AwsAutoscalingGroupTag.TagPropertyOutputReference(this, "tag");
+  private _tag = new TfGroupTag.TagPropertyOutputReference(this, "tag");
   public get tag() {
     return this._tag;
   }
-  public putTag(value: AwsAutoscalingGroupTag.TagProperty) {
+  public putTag(value: TfGroupTag.TagProperty) {
     this._tag.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class AwsAutoscalingGroupTag extends cdktn.TerraformResource {
       autoscaling_group_name: cdktn.stringToTerraform(this._autoscalingGroupName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      tag: awsAutoscalingGroupTagTagPropertyToTerraform(this._tag.internalValue),
+      tag: tfGroupTagTagPropertyToTerraform(this._tag.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class AwsAutoscalingGroupTag extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       tag: {
-        value: awsAutoscalingGroupTagTagPropertyToHclTerraform(this._tag.internalValue),
+        value: tfGroupTagTagPropertyToHclTerraform(this._tag.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAutoscalingGroupTag.TagPropertyList",
+        storageClassType: "TfGroupTag.TagPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class AwsAutoscalingGroupTag extends cdktn.TerraformResource {
   }
 }
 
-export function awsAutoscalingGroupTagTagPropertyToTerraform(struct?: AwsAutoscalingGroupTag.TagPropertyOutputReference | AwsAutoscalingGroupTag.TagProperty): any {
+export function tfGroupTagTagPropertyToTerraform(struct?: TfGroupTag.TagPropertyOutputReference | TfGroupTag.TagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function awsAutoscalingGroupTagTagPropertyToTerraform(struct?: AwsAutosca
 }
 
 
-export function awsAutoscalingGroupTagTagPropertyToHclTerraform(struct?: AwsAutoscalingGroupTag.TagPropertyOutputReference | AwsAutoscalingGroupTag.TagProperty): any {
+export function tfGroupTagTagPropertyToHclTerraform(struct?: TfGroupTag.TagPropertyOutputReference | TfGroupTag.TagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,18 +240,18 @@ export function awsAutoscalingGroupTagTagPropertyToHclTerraform(struct?: AwsAuto
 }
 
 
-export namespace AwsAutoscalingGroupTag {
+export namespace TfGroupTag {
 export interface TagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#key AwsAutoscalingGroupTag#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#key TfGroupTag#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#propagate_at_launch AwsAutoscalingGroupTag#propagate_at_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#propagate_at_launch TfGroupTag#propagate_at_launch}
   */
   readonly propagateAtLaunch: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#value AwsAutoscalingGroupTag#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group_tag#value TfGroupTag#value}
   */
   readonly value: string;
 }
