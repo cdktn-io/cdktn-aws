@@ -92,6 +92,34 @@ There is no misc bucket, by design: an unmapped name is a curation decision, nev
    is a mandatory `slugOverrides` decision; it never invents a tiebreaker. The existing four
    collision pairs and the principle behind them are in `curation.md`.
 
+## (b2) Gate C fails: the class-name prefixes no longer fit
+
+`stripPrefixes` is per group and curated, so a bump can invalidate it in three ways. All three are
+gate C failures, and all three are decided in `mine-config.json#stripPrefixOverrides` — never by
+loosening the gate.
+
+```
+gate C: group "foo" has no stripPrefixes (see docs/curation.md)
+gate C: group "foo" prefix "bar" matches no member — an unused prefix is a curation error
+gate C: group "foo" derives TfThing from both "aws_foo_thing" and "aws_thing"
+```
+
+1. **A new group** arrives with a mechanically proposed list. Read it against the rule — strip
+   exactly the service-name tokens the group title already conveys, never a token that names the
+   resource itself — and override it if it is wrong. This is the same "only free moment" as the
+   slug decision in (b): the class names become someone's import the day the group is published.
+2. **A new type stops a prefix from matching** — rare, but a prefix whose only member was removed
+   upstream must be removed too, or gate C fails on the unused entry.
+3. **A new type collides** with an existing class name (case-insensitively, across all three
+   surfaces of that group). Either the group's list is too aggressive — shorten it and accept the
+   longer names — or the two types genuinely want different prefixes; add the longer one, since the
+   longest match wins. A collision is never resolved by renaming a class by hand: the rule is a
+   pure function of (type, surface, prefixes) and must stay one.
+
+A prefix change renames every class it touches, which is a breaking change for consumers exactly
+like a group move. Say so in the release notes, and check `naming-map.json`'s diff — it is the
+review table for any renaming (`git diff naming-map.json` after `pnpm generate`).
+
 ## (c) Upstream renames a subcategory
 
 **Slugs are our API; titles are display.** So the default is: keep our slug, take the new title.
@@ -272,6 +300,8 @@ into a provider bump.
 [ ] schema.json regenerated at the new version
 [ ] pnpm mine -- --refresh    (proposal; groups.json diff read line by line)
 [ ] every new subcategory has a deliberate slug, recorded in docs/curation.md
+[ ] every new group has a deliberate stripPrefixes list, recorded in docs/curation.md
+[ ] naming-map.json diff read: every rename is intended and listed in the release notes
 [ ] every gate B move is either acknowledged in docs/group-moves.md or pinned via manualAssignments
 [ ] pnpm check:groups PASS
 [ ] pnpm typecheck && pnpm test

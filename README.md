@@ -16,10 +16,10 @@ cdk-terrain core would take, and the three decisions still waiting on a human �
 
 | path | what |
 | --- | --- |
-| `groups.json` | **the source of truth**: 257 slugs → `{ title, resources, dataSources, ephemeralResources }`, plus an `aliases` table. Covers 100 % of the aws 6.62.0 schema. |
-| `mine-config.json` | every human decision the miner must preserve: slug overrides, aliases, hand assignments. |
+| `groups.json` | **the source of truth**: 257 slugs → `{ title, stripPrefixes, resources, dataSources, ephemeralResources }`, plus an `aliases` table. Covers 100 % of the aws 6.62.0 schema. |
+| `mine-config.json` | every human decision the miner must preserve: slug overrides, `stripPrefixes` overrides, aliases, hand assignments. |
 | `tools/mine-groups` | one-time miner: sparse-clones the provider at the pinned tag, parses the doc frontmatter, joins it against the schema, proposes `groups.json`. **Unstable for automation** — see its README. |
-| `tools/check-groups` | the CI gate: 100 % coverage with no duplicates and no misc bucket (gate A), plus breaking-change detection on any resource that changes group (gate B). |
+| `tools/check-groups` | the CI gate: 100 % coverage with no duplicates and no misc bucket (gate A), breaking-change detection on any resource that changes group (gate B), and the `stripPrefixes` lists that name every class (gate C). |
 | `tools/groups-core` | shared types, schema reader, slug rule, deterministic serializer. |
 | `docs/curation.md` | why every curated entry is what it is; counts; what M0 leaves out. |
 | `docs/group-moves.md` | the breaking-change marker file gate B reads. |
@@ -55,11 +55,10 @@ a breaking change for us because the slug becomes the submodule name.
 * **M0 — grouping map (this slice).** `groups.json` at a pinned provider version, the miner, the CI
   gate, the curation record. No generator, no jsii, no publishing.
 * **M1 — generator fork.** Fork the cdktn provider generator to emit one submodule per group.
-  Class naming is **PascalCase of the full terraform type**: `aws_lambda_function` →
-  `AwsLambdaFunction`, reached as `aws_lambda.AwsLambdaFunction`. The `Aws` prefix is kept
-  deliberately — it makes every class name globally unique, which keeps struct-name collisions at
-  zero (the sibling PoC measured 141/277 collisions for the shortened variants). Property structs
-  get mounted into the resource class's namespace rather than living flat at module scope.
+  Class naming was **PascalCase of the full terraform type** (`aws_lambda_function` →
+  `AwsLambdaFunction`) — **superseded by M6**, which is where the `Tf` rule and the reasoning behind
+  dropping the group's own prefix live. Property structs get mounted into the resource class's
+  namespace rather than living flat at module scope.
 * **M2 — full generation + jsii.** Generate all 257 groups, compile the jsii assembly, package for
   JS/Python, and measure against the published `@cdktn/provider-aws`: JS cold start, Python import,
   `.jsii` size, doc-file count, compile time and peak RSS. **Done** — stage 1 (full generation,
@@ -77,6 +76,10 @@ a breaking change for us because the slug becomes the submodule name.
   upstreaming list and the open risks are in [`REPORT.md`](./REPORT.md). Still nothing published:
   neither GitHub repository exists, no workflow has ever run, and `scripts/release.mjs` has no mode
   that tags.
+* **M6 — `Tf` naming. Done.** The L1 classes become `Tf<Stem>` with the group's own service prefix
+  stripped (`awss3.TfBucket`), the curated `stripPrefixes` list that decides the stem lands in
+  `groups.json`, and `naming-map.json` records every rename for the migration tool —
+  [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
 
 ## M3 — the Go fleet (done)
 
@@ -111,7 +114,7 @@ that only broke at scale are in [`docs/m2-scale.md`](./docs/m2-scale.md).
 ## M2 — the monolithic build (stage 2, done)
 
 The published shape is **one** jsii assembly, `@cdktn/aws`, whose barrel re-exports each group as a
-submodule (`import { lambda } from '@cdktn/aws'; new lambda.AwsLambdaFunction(...)`). It compiles in
+submodule (`import { lambda } from '@cdktn/aws'; new lambda.TfFunction(...)`). It compiles in
 **39.5 s** with a 16 GB heap and 7.2 GB peak RSS, with **zero JSII3/JSII6**, into a 150 MB assembly
 carrying **exactly the same 30,714 types** as `@cdktn/provider-aws` 25.3.0 — reachable through 258
 doors instead of 2,402.
@@ -137,12 +140,24 @@ Headline, measured not argued (full method and every caveat in
   11.5 % of the cap. M3's split is now the only shape a Go distribution can take, not a size
   hypothesis.
 
+## M6 — the `Tf` naming (done)
+
+An L1 class is `Tf` + the terraform type with its group's own service prefix removed:
+`aws_s3_bucket_versioning` in group `s3` is `awss3.TfBucketVersioning`, `data aws_s3_bucket` is
+`TfDataBucket`, `ephemeral aws_lambda_invocation` is `TfEphemeralInvocation`. `Tf` is the
+source-layer marker — the analogue of `aws-cdk-lib`'s `Cfn` — so the bare name (`s3.Bucket`) stays
+free for a future L2, and the group already says "s3" so the class does not repeat it. Which tokens
+count as the group's own is curated per group in `groups.json#stripPrefixes`, never inferred; an
+exact match backs off (`aws_vpc` → `TfVpc`). `AwsProvider` is unchanged — it is not an L1 resource.
+`naming-map.json` at the repo root records every 0.1.x name against its new one. The decision, the
+algorithm and the curated overrides are in [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
+
 ## M1 — the generator (done)
 
 `tools/aws2cdk` reads the pinned schema plus `groups.json` and emits one **standalone jsii package
-per service group**: classes named after the full terraform type (`AwsLambdaFunction`, `DataAwsLb`,
-`EphemeralAwsLambdaInvocation`), `<Class>Config` interfaces, and every nested block type mounted on
-the class through a merged `namespace`. `generated/` carries the three M1 packages (`elb`,
+per service group**: classes named by the rule above (M1 named them after the full terraform type;
+see M6), `<Class>Config` interfaces, and every nested block type mounted on the class through a
+merged `namespace`. `generated/` carries the three M1 packages (`elb`,
 `lambda`, `provider`); the decisions behind them are in
 [`docs/m1-generator.md`](./docs/m1-generator.md), the fork provenance in
 [`tools/aws2cdk/README.md`](./tools/aws2cdk/README.md).

@@ -260,3 +260,41 @@ The step-by-step procedure, including what to do when each gate fails, lives in
 Decisions taken while building the generator — group selection, the naming choices the spec left
 open, what the awscc2cdk fork dropped and what it had to put back, and what is deferred to M2 —
 live in [`m1-generator.md`](./m1-generator.md), so this file stays the M0 record.
+
+## `stripPrefixes` (M6)
+
+Every group carries a `stripPrefixes` list: the service-name tokens the group title already conveys,
+removed from a member's terraform type before it becomes a class name (`aws_s3_bucket` in `s3` →
+`TfBucket`). The rule, the algorithm and the empty-stem back-off are in
+[`m6-tf-naming.md`](./m6-tf-naming.md); this section is the curation record.
+
+`tools/mine-groups` proposes one list per group — the slug when it actually prefixes a member,
+otherwise the shortest leading 1–3-token prefix with maximal member coverage — and
+`mine-config.json#stripPrefixOverrides` overrules it, exactly the way `slugOverrides` overrules a
+derived slug. `groups.json` stays the source of truth; `pnpm mine` must propose no diff against it.
+
+The curation rule: **strip exactly the service-name tokens the group title already conveys, never a
+token that names the resource itself.** Nine of the 257 proposals broke it.
+
+| slug | proposed | curated | why |
+| --- | --- | --- | --- |
+| `cloud_map` | `service` | `service_discovery` | the service is "service discovery"; the proposal split it and left `aws_service_discovery_http_namespace` as `TfDiscoveryHttpNamespace` |
+| `cloudhsm` | `cloudhsm` | `cloudhsm`, `cloudhsm_v2` | `v2` is part of the service's terraform prefix, not of the resource: `TfV2Cluster` → `TfCluster` |
+| `cloudwatch_logs` | `cloudwatch` | `cloudwatch`, `cloudwatch_log` | the group is CloudWatch **Logs**: `aws_cloudwatch_log_group` → `TfGroup`, while the one non-`log` member (`aws_cloudwatch_query_definition`) still sheds `cloudwatch` |
+| `elemental_mediaconvert` | `media` | `media_convert` | `convert` names the service, not the queue: `TfConvertQueue` → `TfQueue` |
+| `elemental_mediapackage` | `media` | `media_package` | same, for MediaPackage |
+| `elemental_mediapackage_version_2` | `media` | `media_packagev2` | same, for MediaPackage v2 — the version token travels with the service name |
+| `elemental_mediastore` | `media` | `media_store` | same, for MediaStore |
+| `eventbridge` | `cloudwatch` | `cloudwatch_event` | EventBridge's types are still spelled `aws_cloudwatch_event_*`: `TfEventApiDestination` → `TfApiDestination` |
+| `meta_data_sources` | `service` | `arn` | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all. `arn` matches exactly one member *exactly*, so the empty-stem back-off makes the list inert and every name is kept whole — where the proposed `service` would have turned `aws_service_principal` into `TfDataPrincipal` |
+
+Eight groups the M6 brief expected to need an override did not, because the mechanical proposal
+already produces the curated value: `auto_scaling_plans`, `chime_sdk_media_pipelines`,
+`codeguru_profiler`, `codeguru_reviewer`, `codestar_notifications`, `cost_and_usage_report`
+(`cur`), `elb_classic` (`elb`), `lambda_core` and `resilience_hub`. An override equal to its
+proposal is dead configuration, so none was written.
+
+One deviation from the brief: `elb` is `[lb]`, not `[elb, lb]`. The `elb` group holds only
+`aws_lb_*` (the `aws_elb*` types are in `elb_classic`), so listing `elb` would fail gate C's
+"every prefix matches a member" check. The class names the brief specifies are unaffected —
+`aws_lb` → `TfLb`, `aws_lb_listener` → `TfListener`, `aws_alb` → `TfAlb`.

@@ -138,3 +138,16 @@ block leaf, theirs prefixes the whole parent path because all their types share 
 scope — the correspondence is declared explicitly with `--alias Ours=Ref` rather than guessed.
 
 Result: `aws_lb` 22/22 units identical, `aws_lambda_function` 42/42 identical (one alias declared).
+
+## Addendum (M6) — the class-naming decision is superseded
+
+Everything above is the M1 record and stays as written. One decision in it no longer holds: class
+names are no longer PascalCase of the full terraform type. Since M6 an L1 class is `Tf` + the type
+with its group's own service prefix removed — `aws_lambda_function` in group `lambda` is
+`TfFunction`, not `AwsLambdaFunction` — and `naming-map.json` records the 0.1.x name of every class
+against its new one. The rule, its gates and what it deliberately left alone are in
+[`m6-tf-naming.md`](./m6-tf-naming.md).
+
+Nothing else in this file moved: file names, the `Config` suffix, the nested-type namespace mount,
+the mapper-name collision fallback, `AwsProvider`, and the runtime-contract result (`aws_lb` 22/22)
+are all as recorded.

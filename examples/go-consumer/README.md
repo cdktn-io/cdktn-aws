@@ -22,11 +22,19 @@ node scripts/go-consumer.mjs --root /elsewhere/cdktn-aws-go
 The fleet root defaults to `../cdktn-aws-go` and honours `CDKTN_AWS_GO_ROOT`, the same convention
 `scripts/check-go-size.mjs` and the manifest tests use.
 
+**Since M6 the fleet root has to be rebuilt from this tree, not left at the last release.** The
+example calls `awss3.NewTfBucket` / `&awss3.TfBucketConfig{…}`, and the published **v0.1.1** modules
+still export `NewAwsS3Bucket` — the rename lands in 0.2.0. So `main.go` here tracks `main` and
+compiles against the *next* release: repack with `pnpm pacmak:go` and copy each
+`generated/<group>/dist/go/<packageName>/` into the fleet root (the copy commands are printed by
+`node scripts/release.mjs --from <ref>`) before pointing `--root` at it. `docs/m6-tf-naming.md` has
+the before/after spelling side by side.
+
 A *consumer* needs none of this. The fleet is published: every module under
 `github.com/cdktn-io/cdktn-aws-go` resolves at **v0.1.1** through `proxy.golang.org` — verified
 against the proxy directly (`.../awsprovider/@latest` → `v0.1.1`, tag `awsprovider/v0.1.1`). Outside
 this repository, `go get github.com/cdktn-io/cdktn-aws-go/awss3@v0.1.1` and no workspace at all is
-the whole story.
+the whole story — at the v0.1.1 *names*, which this file no longer uses.
 
 ## Why `go.work` is generated and not committed
 

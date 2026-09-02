@@ -1,0 +1,158 @@
+# M6 — `Tf` naming for the L1 classes
+
+The record of one decision and its blast radius: what an L1 class is called, why, and what was
+deliberately left alone. Taken 2026-09-02, against `terraform-provider-aws` 6.62.0. No version
+bump — 0.2.0 is cut once the nested-type milestone lands too.
+
+## The decision
+
+`Aws` as a class prefix is replaced by **`Tf`**, and the group's own service prefix is dropped from
+the stem:
+
+```ts
+import { s3, lambda } from '@cdktn/aws';
+
+new s3.TfBucket(this, 'b', { bucket: 'x' });                // was  s3.AwsS3Bucket
+new s3.TfBucketVersioning(this, 'v', { … });                // was  s3.AwsS3BucketVersioning
+new lambda.TfFunction(this, 'fn', { functionName: 'f' });   // was  lambda.AwsLambdaFunction
+```
+
+Two things are going on, and they are separable:
+
+**`Tf` is a source-layer marker, not decoration.** It is the analogue of aws-cdk-lib's `Cfn`:
+
+| aws-cdk-lib | cdktn-aws |
+| --- | --- |
+| `AWS::S3::Bucket` → `aws_s3.CfnBucket` | `aws_s3_bucket` → `awss3.TfBucket` |
+| `Cfn` = generated 1:1 from the CloudFormation resource spec | `Tf` = generated 1:1 from the terraform resource schema |
+| `aws_s3.Bucket` is the hand-written L2 | `awss3.Bucket` is free for a future L2 |
+
+That last row is the whole point. `s3.AwsS3Bucket` and `s3.Bucket` look like unrelated things;
+`s3.TfBucket` and `s3.Bucket` read as the two layers over one resource, which is the vocabulary the
+CDK ecosystem already has.
+
+**The group already names the service, so the class does not repeat it.** `awss3.TfS3Bucket` says
+"s3" three times over. The tokens to strip are not inferred from the type — they are curated per
+group in `groups.json#stripPrefixes`, because the terraform prefix, the subcategory title and the
+slug all disagree often enough that a rule that guesses would be wrong in both directions.
+
+## The algorithm
+
+Pure, deterministic, a function of (terraform type, surface, that group's `stripPrefixes`) and
+nothing else — `tools/aws2cdk/src/naming.ts#classNameForEntry`:
+
+```
+parserType:  aws_s3_bucket_versioning | data_aws_s3_bucket | ephemeral_aws_lambda_invocation
+surface:     resource                 | data_source        | ephemeral        (the marker decides)
+raw:         drop the surface marker, then the `aws_` provider prefix   -> s3_bucket_versioning
+stem:        the LONGEST p in stripPrefixes (ties alphabetical) with
+               raw === p            -> stem = raw     (the empty-stem back-off, below)
+               raw startsWith p+"_" -> stem = raw without p_
+             no match               -> stem = raw
+className:   "Tf" + ("" | "Data" | "Ephemeral") + toPascalCase(stem)
+configName:  className + "Config"
+```
+
+The surface marker comes **first**, so every L1 symbol of a module starts with `Tf`:
+`TfDataBucket`, `TfEphemeralInvocation` — never `DataTfBucket`. It sorts the way it reads.
+
+**The empty-stem back-off.** When the type *is* the prefix there is nothing left to name the class
+after, so the raw type is kept: `aws_vpc` → `TfVpc`, not `Tf`. Seven terraform types in the pinned
+schema land here — `aws_vpc`, `aws_vpc_ipam`, `aws_lb`, `aws_elb`, `aws_cloudtrail`,
+`aws_codepipeline` and the meta data source `aws_arn` (eleven schema entries, counting the ones that
+exist on two surfaces) — and it is the only place the stripping backs off.
+
+Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`:
+
+| terraform type | group | stripPrefixes | class |
+| --- | --- | --- | --- |
+| `aws_s3_bucket_versioning` | `s3` | `[s3]` | `TfBucketVersioning` |
+| data `aws_s3_bucket` | `s3` | `[s3]` | `TfDataBucket` |
+| `aws_instance` | `ec2` | `[ec2]` | `TfInstance` |
+| `aws_ec2_capacity_reservation` | `ec2` | `[ec2]` | `TfCapacityReservation` |
+| `aws_prometheus_workspace` | `amp` | `[prometheus]` | `TfWorkspace` |
+| `aws_acmpca_certificate_authority` | `acm_pca` | `[acmpca]` | `TfCertificateAuthority` |
+| `aws_vpc` | `vpc` | `[vpc]` | `TfVpc` (empty stem) |
+| `aws_lb` / `aws_alb` (alias) | `elb` | `[lb]` | `TfLb` / `TfAlb` |
+| `aws_lb_listener` | `elb` | `[lb]` | `TfListener` |
+| `aws_lambda_function` | `lambda` | `[lambda]` | `TfFunction` |
+| ephemeral `aws_lambda_invocation` | `lambda` | `[lambda]` | `TfEphemeralInvocation` |
+| data `aws_identitystore_user` | `sso_identity_store` | `[identitystore]` | `TfDataUser` |
+| `aws_cloudwatch_log_group` | `cloudwatch_logs` | `[cloudwatch, cloudwatch_log]` | `TfGroup` |
+| the provider block | `provider` | — | `AwsProvider` (unchanged) |
+
+## The gates
+
+Class names must be unique **within a group**, compared **case-insensitively**, across all three
+surfaces at once — jsii-pacmak's Go emitter writes one file per type and `go build` rejects a
+package whose file names differ only in case. That is asserted twice, on purpose:
+
+* `tools/check-groups` gate C, over `groups.json` + the schema, before anything is generated. It
+  also checks that each list is present, well-formed, sorted, unique, and that **every** listed
+  prefix matches at least one member — an unused prefix is a curation error, not a harmless extra.
+* `generate.ts`, per group, at emission time. A collision aborts the run loudly.
+
+Gate C calls the generator's own `classNameForEntry` rather than a second copy of the rule, so it
+cannot pass on a tree the generator would not emit. The pinned schema produces zero collisions; the
+asserts exist so a provider bump cannot introduce one silently.
+
+## The curated `stripPrefixes`
+
+Nine groups needed a hand-written list; the table and the reasoning are in
+[`curation.md`](./curation.md) (§ `stripPrefixes`). The rule of thumb is: strip exactly the
+service-name tokens the group title already conveys, never a token that names the resource itself.
+
+## What did NOT change
+
+* **File names.** `generated/s3/src/aws-s3-bucket-versioning.ts` still exports what it always did,
+  under a new name. Paths are keyed on the terraform type through `fileNameForTerraformType`, so the
+  tree layout, `hashes.json`'s inputs and the deep-path identity of all 3,434 files are stable; the
+  regeneration commit is 2,401 modified files under `generated/` (2,400 sources plus `hashes.json`)
+  and zero renames. The two files that did not change at all are the provider's.
+* **The provider construct.** `AwsProvider`, `AwsProviderConfig`, `AwsProviderFunctions`. It is not
+  an L1 resource — it is the thing every L1 resource needs in its stack — and it is the one
+  documented exception to `NAME_GRAMMAR`.
+* **Nested block types.** Still `<Class>.<Leaf>Property`, mounted on the class's merged namespace,
+  with `…PropertyOutputReference` / `…PropertyList` / `…PropertyMap`. Their fate is a separate
+  milestone.
+* **The `Config` suffix.** `TfBucketConfig`, never `Props` (see `curation.md`).
+* **The runtime contract.** `pnpm check:contract --strict` still reports 22/22 units identical to
+  the reference `@cdktn/provider-aws` build after naming normalization. Renaming changed what the
+  declarations are called and nothing about what they do.
+
+## `naming-map.json`
+
+A full `pnpm generate` writes the rename map to the repo root — one entry per generated class,
+keyed by the surface-marked terraform type:
+
+```json
+"aws_s3_bucket_versioning": {
+  "surface": "resource", "group": "s3",
+  "className": "TfBucketVersioning", "previous": "AwsS3BucketVersioning"
+}
+```
+
+`previous` is produced by `naming.legacyClassName`, the 0.1.x rule kept and frozen for exactly this
+purpose. The file is the input of the upcoming migration-tool milestone, and the review table for
+this change: 2,401 entries, sorted, committed.
+
+## Go, before and after
+
+The Go fleet inherits the rename through jsii-pacmak — module paths and package names are
+unaffected, since those come from the slug, not from any class name:
+
+```go
+// before (v0.1.1)
+awss3.NewAwsS3Bucket(stack, jsii.String("b"), &awss3.AwsS3BucketConfig{Bucket: jsii.String("x")})
+awss3.NewAwsS3BucketVersioning(stack, jsii.String("v"), &awss3.AwsS3BucketVersioningConfig{
+    VersioningConfiguration: &awss3.AwsS3BucketVersioning_VersioningConfigurationProperty{…},
+})
+
+// after
+awss3.NewTfBucket(stack, jsii.String("b"), &awss3.TfBucketConfig{Bucket: jsii.String("x")})
+awss3.NewTfBucketVersioning(stack, jsii.String("v"), &awss3.TfBucketVersioningConfig{
+    VersioningConfiguration: &awss3.TfBucketVersioning_VersioningConfigurationProperty{…},
+})
+```
+
+`examples/go-consumer/main.go` is the compiled proof of that spelling.

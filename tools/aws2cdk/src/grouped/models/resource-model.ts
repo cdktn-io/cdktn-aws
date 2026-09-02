@@ -5,8 +5,9 @@
 // Two differences from the vendored original:
 //
 //  1. `className`/`configStructName` are public and set by the caller (src/naming.ts derives them
-//     from the full terraform type — `aws_instance` -> `AwsInstance`/`AwsInstanceConfig`), instead
-//     of by the parser's order-dependent cross-resource dedup.
+//     from the terraform type and the group's stripPrefixes — `aws_instance` in group `ec2` ->
+//     `TfInstance`/`TfInstanceConfig`), instead of by the parser's order-dependent cross-resource
+//     dedup.
 //  2. No `filePath`/`fileName`/`structsFolderPath`/`structsRequireSharding`: the grouped emitter
 //     writes one file per resource with every nested type inside the resource's merged namespace,
 //     so the vendored sharding machinery (which exists to keep one flat module under jsii's export
