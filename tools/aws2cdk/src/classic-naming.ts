@@ -29,6 +29,13 @@ export interface ClassicName {
   /** the source directory, i.e. `src/<module>/index.ts` in the classic tree */
   readonly module: string;
   readonly className: string;
+  /**
+   * The Config interface's class name. It is NOT `<className>Config`: the config struct is drawn
+   * from the same `uniqueClassName` pool as everything else, so it takes a dedup suffix when a
+   * nested struct got there first — `aws_wafv2_web_acl_association` is `Wafv2WebAclAssociationConfigA`.
+   * Recorded per entry because no rule predicts it, exactly like the `…A` class names.
+   */
+  readonly configClassName: string;
   /** jsii-pacmak's Go package for that submodule — see `goPackageForSubmodule` */
   readonly go: string;
   /** jsii-pacmak's Python submodule — see `pythonModuleForSubmodule` */
@@ -100,11 +107,12 @@ export function buildClassicNameIndex(schema: any, fqpn: string = AWS_FQPN): Cla
       identity: {
         module,
         className: model.className,
+        configClassName: model.structs[0].name,
         go: goPackageForSubmodule(submodule),
         python: pythonModuleForSubmodule(submodule),
       },
-      // `ResourceModel#structs` is `[configStruct, ...nested]`; the config struct is named by the
-      // `<className>Config` rule the map records per entry, so only the tail is a nested type.
+      // `ResourceModel#structs` is `[configStruct, ...nested]` — the head is the entry's own Config
+      // interface, recorded above, so only the tail is a nested type.
       nested: model.structs.slice(1).map((s) => s.name),
     };
   };

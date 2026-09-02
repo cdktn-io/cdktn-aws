@@ -49,7 +49,12 @@ interface NamingMapEntry {
   readonly group: string;
   readonly className: string;
   readonly mapperPrefix?: string;
-  readonly classic: { readonly module: string; readonly className: string };
+  readonly classic: {
+    readonly module: string;
+    readonly className: string;
+    /** the Config interface's classic name — recorded, because a dedup suffix can land on it */
+    readonly configClassName: string;
+  };
   readonly nested?: Record<string, NamingMapNested>;
 }
 
@@ -120,7 +125,7 @@ export function buildSymbolIndex(map: NamingMapFile): SymbolIndex {
     const target = (member: string): Target => ({ group: entry.group, member });
 
     symbols.set(entry.classic.className, target(entry.className));
-    symbols.set(`${entry.classic.className}Config`, target(`${entry.className}Config`));
+    symbols.set(entry.classic.configClassName, target(`${entry.className}Config`));
 
     const mapperPrefix = lowerFirst(entry.mapperPrefix ?? entry.className);
     for (const nested of Object.values(entry.nested ?? {})) {

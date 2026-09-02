@@ -319,3 +319,13 @@ mapper functions on both sides. The classic side still comes from the vendored p
 parses are joined positionally and every row is checked to end in the PascalCased terraform path it
 claims. 9,856 nested rows; the file went from 866 KB to 3.0 MB. Nothing under `generated/` changed.
 The record is [`docs/m8-migration.md`](./m8-migration.md).
+
+### The Config interface's classic name is recorded too, 2026-09-02 (M8)
+
+The map published `<classic.className>Config` as a derivation rule for the classic Config
+interface. It is false for one entry in 2,401: the config struct is drawn from the same
+`uniqueClassName` pool as every nested struct, so `aws_wafv2_web_acl_association` — whose
+`Wafv2WebAclAssociationConfig` name was taken first — is `Wafv2WebAclAssociationConfigA`, and the
+migration tool had no row for the one symbol a consumer of that resource's config type holds. Each
+entry now carries `classic.configClassName`, read off the same parser models the class names are,
+and the rule is gone. `classic-naming.test.ts` asserts all 2,401 against `../ref-provider-aws`.

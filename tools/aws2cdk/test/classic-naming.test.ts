@@ -35,10 +35,17 @@ describe("the classic name derivation", () => {
   const index = buildClassicNameIndex(miniSchema());
 
   it("names a resource after its terraform type with the provider prefix dropped", () => {
-    expect(index["aws_lb"].identity).toEqual({ module: "lb", className: "Lb", go: "lb", python: "lb" });
+    expect(index["aws_lb"].identity).toEqual({
+      module: "lb",
+      className: "Lb",
+      configClassName: "LbConfig",
+      go: "lb",
+      python: "lb",
+    });
     expect(index["aws_lambda_function"].identity).toEqual({
       module: "lambda-function",
       className: "LambdaFunction",
+      configClassName: "LambdaFunctionConfig",
       go: "lambdafunction",
       python: "lambda_function",
     });
@@ -56,6 +63,7 @@ describe("the classic name derivation", () => {
     expect(index["aws_provider"].identity).toEqual({
       module: "provider",
       className: "AwsProvider",
+      configClassName: "AwsProviderConfig",
       go: "provider",
       python: "provider",
     });
@@ -116,6 +124,18 @@ describe("naming-map.json", () => {
     expect(entry.classic.module).toBe(classicModule);
     expect(entry.classic.go).toBe(goPackageForSubmodule(submoduleForModule(classicModule)));
     expect(entry.classic.python).toBe(pythonModuleForSubmodule(submoduleForModule(classicModule)));
+  });
+
+  it("records the config interface's classic name, because one entry breaks the obvious rule", () => {
+    // `<className>Config` is what 2,400 of them are called; the config struct competes for the same
+    // `uniqueClassName` pool as the nested ones, so the map records the name instead of deriving it.
+    const recorded = Object.entries(map.entries).filter(
+      ([, e]) => e.classic.configClassName !== `${e.classic.className}Config`,
+    );
+    expect(recorded.map(([key, e]) => [key, e.classic.configClassName])).toEqual([
+      ["aws_wafv2_web_acl_association", "Wafv2WebAclAssociationConfigA"],
+    ]);
+    expect(Object.values(map.entries).filter((e) => !e.classic.configClassName)).toEqual([]);
   });
 
   it("has a classic module for every entry, and no two entries share one", () => {
@@ -229,6 +249,21 @@ describeClassic(`the classic library at ${classicRepo}`, () => {
       const declaration = `export class ${entry.classic.className} extends cdktn.${BASE_CLASS[entry.surface]}`;
       if (!fs.readFileSync(file, "utf-8").includes(declaration)) {
         missing.push(`${key}: src/${entry.classic.module}/index.ts has no "${declaration}"`);
+      }
+    }
+    expect(missing).toEqual([]);
+  });
+
+  it("declares every entry's Config interface under the name the map records", () => {
+    // The migration tool keys `<class>Config` off this field for all 2,401 entries; a rule instead
+    // of a record missed exactly one of them, and only a sweep this wide can see that.
+    const missing: string[] = [];
+    for (const [key, entry] of Object.entries(map.entries)) {
+      const file = path.join(classicRepo, "src", entry.classic.module, "index.ts");
+      if (!fs.existsSync(file)) continue; // reported by the class sweep above
+      const declared = new RegExp(`^export interface ${entry.classic.configClassName}[ ]*(extends |\\{)`, "m");
+      if (!declared.test(fs.readFileSync(file, "utf-8"))) {
+        missing.push(`${key}: src/${entry.classic.module}/index.ts has no "${entry.classic.configClassName}"`);
       }
     }
     expect(missing).toEqual([]);

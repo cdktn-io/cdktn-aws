@@ -45,7 +45,13 @@ export const NESTED_SUFFIX_RULES = {
     classic: "<classic with a lowercased first letter>ToTerraform / ToHclTerraform",
     grouped: "<mapper><property>ToTerraform / ToHclTerraform",
   },
-  configInterface: { classic: "<classic.className>Config", grouped: "<class>Config" },
+  configInterface: {
+    classic:
+      "recorded, not derived: `classic.configClassName`. The config struct competes for the same " +
+      "`uniqueClassName` pool as every other struct, so it is not always `<classic.className>Config` " +
+      "— `aws_wafv2_web_acl_association`'s is `Wafv2WebAclAssociationConfigA`.",
+    grouped: "<class>Config",
+  },
 } as const;
 
 export interface NamingMapNested {

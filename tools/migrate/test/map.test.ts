@@ -45,6 +45,17 @@ describe("the symbol index", () => {
     );
   });
 
+  it("keys the config interface off the recorded name, not a `<className>Config` rule", () => {
+    // The one entry where the rule is wrong: the config struct lost the pool race to a nested one.
+    expect(
+      index.byModule.get("wafv2-web-acl-association")!.symbols.get("Wafv2WebAclAssociationConfigA"),
+    ).toEqual({ group: "waf", member: "TfWebAclAssociationConfig" });
+    expect(index.byModule.get("s3-bucket")!.symbols.get("S3BucketConfig")).toEqual({
+      group: "s3",
+      member: "TfBucketConfig",
+    });
+  });
+
   it("recognises every spelling of the classic package specifier", () => {
     expect(isClassicSpecifier("@cdktn/provider-aws")).toBe(true);
     expect(isClassicSpecifier("@cdktn/provider-aws/lib/s3-bucket")).toBe(true);

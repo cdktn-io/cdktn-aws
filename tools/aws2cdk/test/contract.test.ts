@@ -164,7 +164,7 @@ describe("naming", () => {
       surface: "resource",
       group: "elb",
       className: "TfLb",
-      classic: { module: "lb", className: "Lb", go: "lb", python: "lb" },
+      classic: { module: "lb", className: "Lb", configClassName: "LbConfig", go: "lb", python: "lb" },
       // one row per nested struct; the four wrapper spellings and the two mappers are derived from
       // it by `NESTED_SUFFIX_RULES` rather than repeated four times over
       nested: {
@@ -185,7 +185,13 @@ describe("naming", () => {
       surface: "provider",
       group: "provider",
       className: "AwsProvider",
-      classic: { module: "provider", className: "AwsProvider", go: "provider", python: "provider" },
+      classic: {
+        module: "provider",
+        className: "AwsProvider",
+        configClassName: "AwsProviderConfig",
+        go: "provider",
+        python: "provider",
+      },
       nested: {
         assume_role: { className: "AssumeRoleProperty", classic: "AwsProviderAssumeRole" },
         assume_role_with_web_identity: {
