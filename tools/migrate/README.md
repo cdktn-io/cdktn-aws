@@ -44,8 +44,11 @@ positions (`typeof`, generics, `satisfies`, `extends`) need no separate code pat
 
 A symbol the map does not cover is **never guessed at**. It is listed in the report table, and the
 import it comes through is kept — reduced to just the symbols that could not move — so the file
-still compiles while a human decides. `docs/migrating-from-provider-aws.md` lists the known limits
-(JSDoc `@type`, dynamic `require`, string-keyed access).
+still compiles while a human decides; `package.json` keeps `@cdktn/provider-aws` beside
+`@cdktn/aws` for as long as that is true. An import FORM the tool does not rewrite (`export … from`,
+`import x = require(…)`, `import('…')`) is reported by the same table, so a run that leaves a
+classic specifier behind can never end at exit 0. `docs/migrating-from-provider-aws.md` lists the
+known limits (JSDoc `@type`, dynamic `require`, string-keyed access, re-exports, type-only imports).
 
 ## Layout
 

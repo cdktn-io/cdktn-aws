@@ -93,6 +93,16 @@ describe("package.json", () => {
     });
   });
 
+  it("keeps the classic dependency while the run has residual imports to install", () => {
+    const file = write({ name: "example", dependencies: { "@cdktn/provider-aws": "^25.3.0" } });
+    const change = migrateManifest(file, "package.json", true)!;
+    expect(change.keptClassic).toBe(true);
+    expect(JSON.parse(change.after).dependencies).toEqual({
+      "@cdktn/aws": "^0.2.0",
+      "@cdktn/provider-aws": "^25.3.0",
+    });
+  });
+
   it("says nothing about a manifest that never depended on the classic library", () => {
     expect(migrateManifest(write({ name: "example", dependencies: { cdktn: "0.24.0" } }), "package.json")).toBeUndefined();
   });

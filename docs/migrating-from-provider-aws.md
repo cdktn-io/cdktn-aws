@@ -82,8 +82,10 @@ If the group name is already bound in a file, the barrel member is aliased deter
 
 A symbol the map does not cover is **never guessed at**. It goes in the report table with its file,
 line and the reason, and the import it comes through is kept — reduced to just the symbols that
-could not move — so the file still compiles while you decide. **The exit code is non-zero while
-anything is unmapped**, which is what lets a CI job gate on the tool.
+could not move — so the file still compiles while you decide. While anything is unmapped,
+`package.json` also keeps `@cdktn/provider-aws` *beside* `@cdktn/aws`, because those residual
+imports still have to install. **The exit code is non-zero while anything is unmapped**, which is
+what lets a CI job gate on the tool.
 
 Known limits, all of them reported rather than silently wrong:
 
@@ -94,6 +96,11 @@ Known limits, all of them reported rather than silently wrong:
 | string-keyed access, `aws['s3Bucket']['S3Bucket']` | not recognised; nothing is rewritten |
 | a classic submodule passed around as a value (`const m = s3Bucket;`) | reported — there is no single symbol to rename |
 | a shorthand property assignment (`{ S3Bucket }`) | reported — renaming it would rename the property too |
+| a re-export of a classic binding (`export { S3Bucket };`) | reported — `export { s3.TfBucket }` is not valid syntax; re-export it by hand |
+| `export … from '@cdktn/provider-aws/…'`, `export *` | reported — the classic names are part of *your* API there, so the choice is yours |
+| `import x = require('@cdktn/provider-aws/…')`, `import('…')` | reported — the specifier is recognised, the form is not rewritten |
+| a subpath with no map row | reported, and its import kept whole |
+| `import type { … }` of a classic type | rewritten to a plain `import { s3 } from '@cdktn/aws'` — under `verbatimModuleSyntax` that is a runtime import the file did not have before |
 
 After a `--write` run, `grep -r '@cdktn/provider-aws' .` is the honest last step.
 

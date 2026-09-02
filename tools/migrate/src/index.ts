@@ -58,8 +58,11 @@ export function run(options: RunOptions): RunResult {
   const relative = (absolute: string) => path.relative(options.root, absolute) || absolute;
   const files: FileResult[] = migrateProject({ project, index, relative });
 
+  // A file that kept a residual classic import still needs the classic dependency to install, so
+  // the manifest adds `@cdktn/aws` beside it rather than replacing it until the run is clean.
+  const keepClassic = files.some((f) => f.unmapped.length > 0);
   const manifests: ManifestChange[] = manifestsFor(options)
-    .map((f) => migrateManifest(f, relative(f)))
+    .map((f) => migrateManifest(f, relative(f), keepClassic))
     .filter((m): m is ManifestChange => m !== undefined);
 
   const diff = [

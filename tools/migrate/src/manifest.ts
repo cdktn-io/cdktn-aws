@@ -14,11 +14,21 @@ export interface ManifestChange {
   readonly file: string;
   readonly block: string;
   readonly from: string;
+  /** the classic dependency was kept beside the new one, because something is still unmapped */
+  readonly keptClassic: boolean;
   readonly before: string;
   readonly after: string;
 }
 
-export function migrateManifest(file: string, relative: string): ManifestChange | undefined {
+/**
+ * `keepClassic` when the run left symbols unmapped: those files keep a residual
+ * `@cdktn/provider-aws` import, and a manifest that has dropped the dependency would not install.
+ */
+export function migrateManifest(
+  file: string,
+  relative: string,
+  keepClassic = false,
+): ManifestChange | undefined {
   const before = fs.readFileSync(file, "utf-8");
   const manifest = JSON.parse(before) as Record<string, Record<string, string> | unknown>;
   const block = BLOCKS.find((b) => {
@@ -31,8 +41,10 @@ export function migrateManifest(file: string, relative: string): ManifestChange 
   const from = deps[CLASSIC_PACKAGE];
   const rebuilt: Record<string, string> = {};
   for (const [name, range] of Object.entries(deps)) {
-    if (name === CLASSIC_PACKAGE) rebuilt[TARGET_PACKAGE] = TARGET_RANGE;
-    else rebuilt[name] = range;
+    if (name === CLASSIC_PACKAGE) {
+      rebuilt[TARGET_PACKAGE] = TARGET_RANGE;
+      if (keepClassic) rebuilt[name] = range;
+    } else rebuilt[name] = range;
   }
   // Dependency blocks are conventionally sorted; re-sorting only the one we touched keeps that
   // true without reformatting blocks we did not.
@@ -42,5 +54,5 @@ export function migrateManifest(file: string, relative: string): ManifestChange 
 
   const indent = /^\{\n(\s+)"/.exec(before)?.[1].length ?? 2;
   const after = `${JSON.stringify(manifest, null, indent)}\n`;
-  return { file: relative, block, from, before, after };
+  return { file: relative, block, from, keptClassic: keepClassic, before, after };
 }

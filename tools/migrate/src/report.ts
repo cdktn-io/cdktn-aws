@@ -50,7 +50,14 @@ export function renderReport(report: Report): string {
       "",
       ...table(
         ["file", "block", "was", "becomes"],
-        report.manifests.map((m) => [m.file, m.block, `\`@cdktn/provider-aws@${m.from}\``, "`@cdktn/aws@^0.2.0`"]),
+        report.manifests.map((m) => [
+          m.file,
+          m.block,
+          `\`@cdktn/provider-aws@${m.from}\``,
+          m.keptClassic
+            ? "`@cdktn/aws@^0.2.0`, classic kept — the residual imports still need it"
+            : "`@cdktn/aws@^0.2.0`",
+        ]),
       ),
       "",
     );

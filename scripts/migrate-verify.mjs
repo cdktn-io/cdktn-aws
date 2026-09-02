@@ -97,7 +97,8 @@ for (const file of committed.filter((f) => produced.includes(f))) {
   if (a !== b) fail(`migrated/${file} is not what the tool produces — re-run \`pnpm migrate:example\``);
   else console.log(`  ok   migrated/${file} byte-equal`);
 }
-if (!readFileSync(report, "utf8").includes("0 unmapped")) {
+// The whole claim, anchored: `includes("0 unmapped")` is also true of "10 unmapped".
+if (!/\b0 unmapped\.$/m.test(readFileSync(report, "utf8"))) {
   fail("the tool reported unmapped symbols on the example — see the report above");
 } else {
   console.log("  ok   0 unmapped symbols");

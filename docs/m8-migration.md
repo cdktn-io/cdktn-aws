@@ -119,3 +119,29 @@ Every gate, run on this tree at the commit that closed the slice (macOS, 12 core
   exist. `docs/migrating-from-provider-aws.md` states the target spellings and says they are planned.
 * **JSDoc `@type` annotations** are neither rewritten nor reported — they are comments, and the tool
   does not read them. The migration guide says to grep for `@cdktn/provider-aws` afterwards.
+
+## Round 1 review fixes
+
+Three defects an adversarial review found, all of them the same shape — the tool being *silent*
+about something it had not decided:
+
+* **`export { B }` where `B` is a classic import** was rewritten to `export { s3.TfBucket };`, which
+  does not parse. An export clause takes names, not qualified names. It now joins the shorthand
+  property assignment as a reported position (`rewrite.ts#resolve`).
+* **`declaredNames` read the imported name of an import specifier**, so
+  `import { readFileSync as s3 }` never marked `s3` as taken and the group barrel collided with it.
+  It reads the local name now — the only one that is bound.
+* **Import forms the tool does not model were passed over in silence** — `export … from`,
+  `export *`, `import x = require(…)`, `import('…')`, and the `index-structs/` subpath where the
+  large modules declare their structs. `package.json` had already dropped the classic dependency, so
+  a green run could leave a project importing a package it no longer depends on. There is now a
+  backstop that cannot be outgrown: after the edits, every classic specifier still in a
+  module-specifier position that this run did not decide about is reported, and the exit code says
+  so. `index-structs` is resolved properly (the module's index re-exports it), and a named import or
+  namespace binding whose submodule has no map row is kept and reported rather than dropped.
+
+Two cheaper follow-ons in the same pass: `package.json` keeps `@cdktn/provider-aws` beside
+`@cdktn/aws` while anything is unmapped (a residual import still has to install), and
+`migrate-verify`'s `includes("0 unmapped")` — which "10 unmapped" also satisfies — is anchored.
+8 new tests, 35 in the tool's suite. Deferred: emitting `import type` when every merged binding came
+from a type-only import; the behaviour is documented in the guide's limits table instead.
