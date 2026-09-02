@@ -83,8 +83,6 @@ export interface EmittedEntry {
   readonly parserType: string;
   readonly schemaType: TerraformSchemaType;
   readonly className: string;
-  /** the 0.1.x name of this same entry — `naming.legacyClassName`, for the migration map */
-  readonly previousClassName: string;
   readonly fileBase: string;
   readonly nestedTypes: number;
 }
@@ -111,7 +109,7 @@ export interface GenerateResult {
  *  - `parserType` is the full terraform type as the vendored parser spells it (`aws_lb`,
  *    `data_aws_lb`, `ephemeral_aws_lambda_invocation`, `aws_provider`). It feeds BOTH names a file
  *    has: the class name, through the owning group's `stripPrefixes` (`aws_lambda_function` ->
- *    `TfFunction`), and the FILE name, through the frozen 0.1.x spelling (`aws-lambda-function.ts`)
+ *    `TfFunction`), and the FILE name, through its own dashed spelling (`aws-lambda-function.ts`)
  *    — which is why the two are derived by two different functions in `src/naming.ts`.
  *  - `baseName` is the vendored parser's `baseName`, i.e. `parserType` with the `aws_` prefix
  *    removed (`lb`, but `data_aws_lb` unchanged). Nothing is named after it; it exists only
@@ -345,7 +343,6 @@ function emitEntry(built: BuiltEntry, srcDir: string, mapperPrefix: string): Emi
     parserType: planned.parserType,
     schemaType: planned.schemaType,
     className,
-    previousClassName: naming.legacyClassName(planned.parserType),
     fileBase,
     nestedTypes: resource.structs.length,
   };

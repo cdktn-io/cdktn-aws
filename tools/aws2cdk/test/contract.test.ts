@@ -26,10 +26,10 @@ import {
   classNameForEntry,
   fileNameForTerraformType,
   isProviderExport,
-  legacyClassName,
   propertyTypeNamesForResource,
 } from "../src/naming";
 import { buildNamingMap } from "../src/naming-map";
+import { CLASSIC_ROOTS, buildClassicNameIndex } from "../src/classic-naming";
 import { assertUniqueGoPackageNames, goPackageName, membersOf, npmPackageName, readGroups } from "../src/groups";
 import { groupsJsonPath } from "../src/groups";
 
@@ -157,34 +157,30 @@ describe("naming", () => {
 
   it("builds a naming map keyed by the surface-marked terraform type", () => {
     // Two classes, one terraform name: the key has to carry the surface or the migration tool
-    // cannot tell `AwsLb` from `DataAwsLb`.
-    const map = buildNamingMap(result);
-    expect(map["aws_lb"]).toEqual({
+    // cannot tell `Lb` from `DataAwsLb`.
+    const map = buildNamingMap(result, buildClassicNameIndex(miniSchema()));
+    expect(map.classicRoots).toBe(CLASSIC_ROOTS);
+    expect(map.entries["aws_lb"]).toEqual({
       surface: "resource",
       group: "elb",
       className: "TfLb",
-      previous: "AwsLb",
+      classic: { module: "lb", className: "Lb", go: "lb", python: "lb" },
     });
-    expect(map["data_aws_lb"].className).toBe("DataTfLb");
-    expect(map["aws_provider"]).toEqual({
+    expect(map.entries["data_aws_lb"].className).toBe("DataTfLb");
+    expect(map.entries["aws_provider"]).toEqual({
       surface: "provider",
       group: "provider",
       className: "AwsProvider",
-      previous: "AwsProvider",
+      classic: { module: "provider", className: "AwsProvider", go: "provider", python: "provider" },
     });
-    expect(Object.keys(map)).toEqual([...Object.keys(map)].sort());
+    expect(Object.keys(map.entries)).toEqual([...Object.keys(map.entries)].sort());
   });
 
-  it("records every entry's 0.1.x name for the migration map", () => {
-    const byName = new Map(
-      result.groups.flatMap((g) => g.entries.map((e) => [`${g.slug}:${e.terraformName}:${e.schemaType}`, e])),
-    );
-    expect(byName.get("lambda:aws_lambda_function:resource")!.previousClassName).toBe("AwsLambdaFunction");
-    expect(byName.get("elb:aws_lb:data_source")!.previousClassName).toBe("DataAwsLb");
-    expect(byName.get("lambda:aws_lambda_invocation:ephemeral_resource")!.previousClassName).toBe(
-      "EphemeralAwsLambdaInvocation",
-    );
-    expect(legacyClassName("aws_s3_bucket_versioning")).toBe("AwsS3BucketVersioning");
+  it("refuses to write a map row it has no @cdktn/provider-aws identity for", () => {
+    // A missing classic side is the migration tool losing a rename silently, so it aborts the run.
+    const holed = buildClassicNameIndex(miniSchema());
+    delete holed["aws_lb"];
+    expect(() => buildNamingMap(result, holed)).toThrow(/no @cdktn\/provider-aws identity for "aws_lb"/);
   });
 
   it("suffixes the config interface with Config, never Props", () => {

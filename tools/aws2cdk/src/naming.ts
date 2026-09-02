@@ -23,9 +23,9 @@
  * stripped from the stem — `awss3.TfBucket`, not `awss3.TfS3Bucket`. Which tokens those are is not
  * inferred here: it is the curated `stripPrefixes` list groups.json carries per group.
  *
- * The 0.1.x rule (PascalCase of the full terraform type, `AwsLambdaFunction`) survives as
- * `legacyClassName`, frozen: it is what `naming-map.json` records as the `previous` name, and the
- * migration tool's only definition of what a 0.1.x symbol was called.
+ * What a migrating consumer is coming FROM is not computed here: the `@cdktn/provider-aws` name of
+ * the same terraform type is read off the vendored parser's own models in `classic-naming.ts`,
+ * because that rule is stateful across the whole schema and no local function can reproduce it.
  */
 import { toPascalCase } from "codemaker";
 
@@ -58,12 +58,15 @@ const SURFACE_PREFIX: Record<EntrySurface, string> = {
 
 /**
  * The provider construct is not an L1 resource — it is the thing every L1 resource needs in its
- * stack — so it keeps its 0.1.x names, and they are the one exception to `NAME_GRAMMAR`.
+ * stack — so it keeps the name `@cdktn/provider-aws` gives it, and its three exports are the one
+ * exception to `NAME_GRAMMAR`.
  */
+export const PROVIDER_CLASS_NAME = "AwsProvider";
+
 export const PROVIDER_EXPORT_NAMES: readonly string[] = [
-  "AwsProvider",
-  "AwsProviderConfig",
-  "AwsProviderFunctions",
+  PROVIDER_CLASS_NAME,
+  `${PROVIDER_CLASS_NAME}Config`,
+  `${PROVIDER_CLASS_NAME}Functions`,
 ];
 
 export function isProviderExport(name: string): boolean {
@@ -129,7 +132,7 @@ export function stemFor(raw: string, stripPrefixes: readonly string[]): string {
  */
 export function classNameForEntry(entry: ClassNameEntry): string {
   const surface = entry.surface ?? surfaceOf(entry.parserType);
-  if (surface === "provider") return legacyClassName(entry.parserType);
+  if (surface === "provider") return PROVIDER_CLASS_NAME;
   // An EMPTY list is a legal, explicit "this group has no service prefix" (the provider's meta data
   // sources): nothing is stripped. A group missing the key entirely is the error, caught where
   // groups.json is read — the naming rule itself has nothing to decide there.
@@ -138,24 +141,13 @@ export function classNameForEntry(entry: ClassNameEntry): string {
 }
 
 /**
- * The 0.1.x rule, FROZEN: PascalCase of the full terraform type, provider prefix kept —
- * `aws_lambda_function` -> `AwsLambdaFunction`, `data_aws_vpc` -> `DataAwsVpc`.
- *
- * It has two live jobs and no third: it is the `previous` column of `naming-map.json` (the input of
- * the migration tool), and it is what file names are still derived from. It must not follow any
- * future naming decision.
- */
-export function legacyClassName(parserType: string): string {
-  return ensureIdentifierStart(toPascalCase(parserType));
-}
-
-/**
  * FILE NAMES DO NOT FOLLOW CLASS NAMES. `generated/s3/src/aws-s3-bucket-versioning.ts` is keyed on
- * the terraform type, so the tree layout, the `hashes.json` inputs and the deep-path identity of
- * every generated file stay stable across a rename of what is exported from them.
+ * the terraform type — PascalCased, then dashed — so the tree layout, the `hashes.json` inputs and
+ * the deep-path identity of every generated file stay stable across a rename of what is exported
+ * from them.
  */
 export function fileNameForTerraformType(parserType: string): string {
-  return fileNameFor(legacyClassName(parserType));
+  return fileNameFor(ensureIdentifierStart(toPascalCase(parserType)));
 }
 
 /**
@@ -191,7 +183,7 @@ export function configInterfaceName(className: string): string {
 
 /**
  * `AwsVpc` -> `aws-vpc`, `AwsDbInstance` -> `aws-db-instance`, `DataAwsVpc` -> `data-aws-vpc`.
- * Fed the LEGACY name of the terraform type, never the emitted class name — see
+ * Fed the PascalCased terraform type, never the emitted class name — see
  * `fileNameForTerraformType`.
  */
 export function fileNameFor(cls: string): string {
