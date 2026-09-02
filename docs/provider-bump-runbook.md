@@ -129,9 +129,11 @@ The migration example is pinned to the same library. `examples/migrate/typescrip
 is the synth of the classic project against a PUBLISHED `@cdktn/provider-aws`, and
 `scripts/migrate-golden.mjs` refuses to write it when that build's `cdktn.provider.version` does not
 match `schemas/PROVIDER_VERSION` — so a bump needs the classic library to have published the new
-provider version first (`npm view @cdktn/provider-aws versions`), the example's dependency range
-moved to it, and `pnpm migrate:golden:refresh` re-run. The refreshed golden's diff is worth reading:
-it is the same rename, seen as terraform.
+provider version first (`npm view @cdktn/provider-aws versions`), the example's EXACT pin moved to
+it, and `pnpm migrate:golden:refresh` re-run. The pin is exact (`"@cdktn/provider-aws": "25.3.0"`,
+no caret) precisely so that a refresh cannot quietly install a different published build under a
+`golden/VERSION` that then records it: the golden moves when someone moves the pin, never
+otherwise. The refreshed golden's diff is worth reading: it is the same rename, seen as terraform.
 
 ## (c) Upstream renames a subcategory
 
@@ -322,8 +324,9 @@ into a provider bump.
 [ ] pnpm check:groups PASS
 [ ] pnpm typecheck && pnpm test
 [ ] pnpm generate leaves git status clean
-[ ] examples/migrate/typescript/classic/package.json moved to the @cdktn/provider-aws release that
-    pins the new provider version, pnpm migrate:golden:refresh re-run, pnpm migrate:verify PASS
+[ ] examples/migrate/typescript/classic/package.json's EXACT pin ("@cdktn/provider-aws": "25.3.0"
+    today, no caret) moved to the @cdktn/provider-aws release that pins the new provider version,
+    pnpm migrate:golden:refresh re-run, pnpm migrate:verify PASS
 [ ] release notes list every acknowledged move as a breaking change
 ```
 
