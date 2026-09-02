@@ -88,6 +88,17 @@ jobs:
       - name: typecheck (tools, and all 258 generated packages separately)
         run: pnpm typecheck
 
+      - name: check out the classic @cdktn/provider-aws tree the naming map is verified against
+        # classic-naming.test.ts cross-checks all 2,401 naming-map.json rows against the real
+        # per-resource library. Pinned to the commit that took it to aws 6.62.0 — the same pin as
+        # schemas/PROVIDER_VERSION; a provider bump moves both (docs/provider-bump-runbook.md).
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          repository: cdktn-io/cdktn-provider-aws
+          ref: e1e64038595ed83f9a1c12a396f187178817b778
+          path: ref-provider-aws
+          persist-credentials: false
+
       - name: contract, scale, manifest and inventory tests
         # `manifests.test.ts` covers VERDICT risks #4 and #5 — the 258 machine-generated manifests
         # whose three permanent strings are unrepairable after the first Go tag, and the four
@@ -100,6 +111,7 @@ jobs:
         # check the repo out here the moment it has a reachable remote.
         env:
           CDKTN_AWS_GO_ROOT: none
+          CDKTN_PROVIDER_AWS_ROOT: ${{ github.workspace }}/ref-provider-aws
         run: pnpm test
 
       - name: no cross-group imports (TypeScript)

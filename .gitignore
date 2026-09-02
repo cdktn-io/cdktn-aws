@@ -34,3 +34,6 @@ examples/go-consumer/go.work
 examples/go-consumer/go.work.sum
 examples/go-consumer/go-consumer
 examples/*/cdktn.out/
+
+# CI checks the classic @cdktn/provider-aws tree out here (ci.yml); locally it is a sibling clone.
+/ref-provider-aws/
