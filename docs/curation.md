@@ -273,6 +273,10 @@ otherwise the shortest leading 1–3-token prefix with maximal member coverage �
 `mine-config.json#stripPrefixOverrides` overrules it, exactly the way `slugOverrides` overrules a
 derived slug. `groups.json` stays the source of truth; `pnpm mine` must propose no diff against it.
 
+An **empty list is legal and means "strip nothing"** — the group has no service prefix; the
+provider's meta data sources are the one case. What is not legal is omitting the key: absence means
+nobody decided, and both the generator and gate C refuse it.
+
 The curation rule: **strip exactly the service-name tokens the group title already conveys, never a
 token that names the resource itself.** Nine of the 257 proposals broke it.
 
@@ -286,7 +290,7 @@ token that names the resource itself.** Nine of the 257 proposals broke it.
 | `elemental_mediapackage_version_2` | `media` | `media_packagev2` | same, for MediaPackage v2 — the version token travels with the service name |
 | `elemental_mediastore` | `media` | `media_store` | same, for MediaStore |
 | `eventbridge` | `cloudwatch` | `cloudwatch_event` | EventBridge's types are still spelled `aws_cloudwatch_event_*`: `TfEventApiDestination` → `TfApiDestination` |
-| `meta_data_sources` | `service` | `arn` | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all. `arn` matches exactly one member *exactly*, so the empty-stem back-off makes the list inert and every name is kept whole — where the proposed `service` would have turned `aws_service_principal` into `DataTfPrincipal` |
+| `meta_data_sources` | `service` | *(empty)* | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all, so there is nothing to strip — where the proposed `service` would have turned `aws_service_principal` into `DataTfPrincipal` |
 
 Eight groups the M6 brief expected to need an override did not, because the mechanical proposal
 already produces the curated value: `auto_scaling_plans`, `chime_sdk_media_pipelines`,

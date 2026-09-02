@@ -154,6 +154,8 @@ function main(): number {
     const members = [...g.resources, ...g.dataSources, ...g.ephemeralResources].sort();
     const proposed = proposeStripPrefixes(slug, members);
     const override = cfg.stripPrefixOverrides[slug];
+    // `?? proposed`, never `|| proposed`: an empty override is a curated "this group has no service
+    // prefix, strip nothing", not an unset one.
     const final = [...new Set(override ?? proposed)].sort();
     for (const p of final) {
       if (!STRIP_PREFIX_PATTERN.test(p)) {

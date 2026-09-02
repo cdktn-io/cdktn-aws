@@ -128,12 +128,9 @@ export function stemFor(raw: string, stripPrefixes: readonly string[]): string {
 export function classNameForEntry(entry: ClassNameEntry): string {
   const surface = entry.surface ?? surfaceOf(entry.parserType);
   if (surface === "provider") return legacyClassName(entry.parserType);
-  if (entry.stripPrefixes.length === 0) {
-    throw new Error(
-      `no stripPrefixes for "${entry.parserType}" — every group in groups.json must carry a ` +
-        `non-empty stripPrefixes list (gate: pnpm check:groups)`,
-    );
-  }
+  // An EMPTY list is a legal, explicit "this group has no service prefix" (the provider's meta data
+  // sources): nothing is stripped. A group missing the key entirely is the error, caught where
+  // groups.json is read — the naming rule itself has nothing to decide there.
   const stem = stemFor(rawTypeFor(entry.parserType, surface), entry.stripPrefixes);
   return `${SURFACE_PREFIX[surface]}${CLASS_PREFIX}${ensureIdentifierStart(toPascalCase(stem))}`;
 }

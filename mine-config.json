@@ -30,7 +30,7 @@
     "elemental_mediapackage_version_2": ["media_packagev2"],
     "elemental_mediastore": ["media_store"],
     "eventbridge": ["cloudwatch_event"],
-    "meta_data_sources": ["arn"]
+    "meta_data_sources": []
   },
 
   "aliases": {

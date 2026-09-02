@@ -164,12 +164,15 @@ function main(): number {
   };
   let prefixCount = 0;
   for (const slug of Object.keys(groups.groups).sort()) {
-    const prefixes = groups.groups[slug].stripPrefixes ?? [];
-    prefixCount += prefixes.length;
-    if (prefixes.length === 0) {
+    // Absence is the failure, not emptiness: `[]` is an explicit "this group has no service prefix"
+    // (the provider's meta data sources), and it still has to pass the collision check below.
+    const declared = groups.groups[slug].stripPrefixes;
+    if (!Array.isArray(declared)) {
       fail(`gate C: group "${slug}" has no stripPrefixes (see docs/curation.md)`);
       continue;
     }
+    const prefixes = declared;
+    prefixCount += prefixes.length;
     for (const p of prefixes) {
       if (!STRIP_PREFIX_PATTERN.test(p)) {
         fail(`gate C: group "${slug}" prefix "${p}" is not lowercase \`_\`-separated tokens`);

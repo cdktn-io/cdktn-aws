@@ -2984,9 +2984,7 @@
     },
     "meta_data_sources": {
       "title": "Meta Data Sources",
-      "stripPrefixes": [
-        "arn"
-      ],
+      "stripPrefixes": [],
       "resources": [],
       "dataSources": [
         "aws_arn",

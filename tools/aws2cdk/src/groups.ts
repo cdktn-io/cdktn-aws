@@ -42,12 +42,12 @@ export function readGroups(file = groupsJsonPath): GroupsFile {
   if (!parsed.groups || typeof parsed.groups !== "object") {
     throw new Error(`${file}: missing "groups" object`);
   }
-  // There is no implicit default for stripPrefixes: a missing list would silently name every class
+  // There is no implicit default for stripPrefixes: an absent list would silently name every class
   // in that group after its full terraform type again, which is exactly the 0.1.x spelling M6
-  // replaced. `check:groups` is the authority on the list's content; this is the generator refusing
-  // to guess.
+  // replaced. An EMPTY list is different — it is an explicit "this group has no service prefix" —
+  // so absence, not emptiness, is the error. `check:groups` is the authority on the list's content.
   for (const [slug, group] of Object.entries(parsed.groups as Record<string, Group>)) {
-    if (!Array.isArray(group.stripPrefixes) || group.stripPrefixes.length === 0) {
+    if (!Array.isArray(group.stripPrefixes)) {
       throw new Error(`${file}: group "${slug}" has no "stripPrefixes" (see docs/curation.md)`);
     }
   }

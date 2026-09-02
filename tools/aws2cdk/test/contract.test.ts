@@ -8,6 +8,7 @@
  * a deeply nested resource, a data source, an ephemeral resource, and the provider block.
  */
 import * as fs from "node:fs";
+import * as os from "node:os";
 import * as path from "node:path";
 import {
   FIXTURE_GROUPS,
@@ -107,8 +108,29 @@ describe("naming", () => {
     // longest match wins, so the group's two prefixes do not fight over cloudwatch_log_*
     ["aws_cloudwatch_log_group", "resource", ["cloudwatch_log", "cloudwatch"], "TfGroup"],
     ["aws_cloudwatch_query_definition", "resource", ["cloudwatch_log", "cloudwatch"], "TfQueryDefinition"],
+    // an EMPTY list is legal and strips nothing — the provider's own meta data sources
+    ["data_aws_arn", "data_source", [], "DataTfArn"],
+    ["data_aws_service_principal", "data_source", [], "DataTfServicePrincipal"],
   ] as const)("names %s (%s) %s -> %s", (parserType, surface, stripPrefixes, expected) => {
     expect(classNameForEntry({ parserType, surface, stripPrefixes: [...stripPrefixes] })).toBe(expected);
+  });
+
+  it("refuses a group that omits stripPrefixes, and accepts one that declares it empty", () => {
+    // Absence means "nobody decided" and would silently restore the 0.1.x spelling; `[]` is a
+    // decision. Probed on a copy of groups.json so the real file stays the fixture it is.
+    const real = JSON.parse(fs.readFileSync(groupsJsonPath, "utf-8"));
+    const probe = path.join(fs.mkdtempSync(path.join(os.tmpdir(), "groups-")), "groups.json");
+    const write = (mutate: (g: Record<string, { stripPrefixes?: string[] }>) => void) => {
+      const copy = JSON.parse(JSON.stringify(real));
+      mutate(copy.groups);
+      fs.writeFileSync(probe, JSON.stringify(copy));
+    };
+
+    write((groups) => delete groups.s3.stripPrefixes);
+    expect(() => readGroups(probe)).toThrow(/group "s3" has no "stripPrefixes"/);
+
+    write((groups) => (groups.s3.stripPrefixes = []));
+    expect(readGroups(probe).groups.s3.stripPrefixes).toEqual([]);
   });
 
   it("strips the group's own service prefix from the emitted class names", () => {
