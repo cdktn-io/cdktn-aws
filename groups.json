@@ -5,6 +5,9 @@
   "groups": {
     "account_management": {
       "title": "Account Management",
+      "stripPrefixes": [
+        "account"
+      ],
       "resources": [
         "aws_account_alternate_contact",
         "aws_account_primary_contact",
@@ -18,6 +21,9 @@
     },
     "acm": {
       "title": "ACM (Certificate Manager)",
+      "stripPrefixes": [
+        "acm"
+      ],
       "resources": [
         "aws_acm_certificate",
         "aws_acm_certificate_validation"
@@ -29,6 +35,9 @@
     },
     "acm_pca": {
       "title": "ACM PCA (Certificate Manager Private Certificate Authority)",
+      "stripPrefixes": [
+        "acmpca"
+      ],
       "resources": [
         "aws_acmpca_certificate",
         "aws_acmpca_certificate_authority",
@@ -44,6 +53,9 @@
     },
     "amazon_q_business": {
       "title": "Amazon Q Business",
+      "stripPrefixes": [
+        "qbusiness"
+      ],
       "resources": [
         "aws_qbusiness_application"
       ],
@@ -52,6 +64,9 @@
     },
     "amp": {
       "title": "AMP (Managed Prometheus)",
+      "stripPrefixes": [
+        "prometheus"
+      ],
       "resources": [
         "aws_prometheus_alert_manager_definition",
         "aws_prometheus_anomaly_detector",
@@ -72,6 +87,9 @@
     },
     "amplify": {
       "title": "Amplify",
+      "stripPrefixes": [
+        "amplify"
+      ],
       "resources": [
         "aws_amplify_app",
         "aws_amplify_backend_environment",
@@ -84,6 +102,9 @@
     },
     "api_gateway": {
       "title": "API Gateway",
+      "stripPrefixes": [
+        "api_gateway"
+      ],
       "resources": [
         "aws_api_gateway_account",
         "aws_api_gateway_api_key",
@@ -128,6 +149,9 @@
     },
     "api_gateway_v2": {
       "title": "API Gateway V2",
+      "stripPrefixes": [
+        "apigatewayv2"
+      ],
       "resources": [
         "aws_apigatewayv2_api",
         "aws_apigatewayv2_api_mapping",
@@ -153,6 +177,9 @@
     },
     "app_mesh": {
       "title": "App Mesh",
+      "stripPrefixes": [
+        "appmesh"
+      ],
       "resources": [
         "aws_appmesh_gateway_route",
         "aws_appmesh_mesh",
@@ -175,6 +202,9 @@
     },
     "app_runner": {
       "title": "App Runner",
+      "stripPrefixes": [
+        "apprunner"
+      ],
       "resources": [
         "aws_apprunner_auto_scaling_configuration_version",
         "aws_apprunner_connection",
@@ -193,6 +223,9 @@
     },
     "appconfig": {
       "title": "AppConfig",
+      "stripPrefixes": [
+        "appconfig"
+      ],
       "resources": [
         "aws_appconfig_application",
         "aws_appconfig_configuration_profile",
@@ -214,6 +247,9 @@
     },
     "appfabric": {
       "title": "AppFabric",
+      "stripPrefixes": [
+        "appfabric"
+      ],
       "resources": [
         "aws_appfabric_app_authorization",
         "aws_appfabric_app_authorization_connection",
@@ -226,6 +262,9 @@
     },
     "appflow": {
       "title": "AppFlow",
+      "stripPrefixes": [
+        "appflow"
+      ],
       "resources": [
         "aws_appflow_connector_profile",
         "aws_appflow_flow"
@@ -235,6 +274,9 @@
     },
     "appintegrations": {
       "title": "AppIntegrations",
+      "stripPrefixes": [
+        "appintegrations"
+      ],
       "resources": [
         "aws_appintegrations_data_integration",
         "aws_appintegrations_event_integration"
@@ -246,6 +288,9 @@
     },
     "application_auto_scaling": {
       "title": "Application Auto Scaling",
+      "stripPrefixes": [
+        "appautoscaling"
+      ],
       "resources": [
         "aws_appautoscaling_policy",
         "aws_appautoscaling_scheduled_action",
@@ -256,6 +301,9 @@
     },
     "appstream_2_0": {
       "title": "AppStream 2.0",
+      "stripPrefixes": [
+        "appstream"
+      ],
       "resources": [
         "aws_appstream_directory_config",
         "aws_appstream_fleet",
@@ -272,6 +320,9 @@
     },
     "appsync": {
       "title": "AppSync",
+      "stripPrefixes": [
+        "appsync"
+      ],
       "resources": [
         "aws_appsync_api",
         "aws_appsync_api_cache",
@@ -291,6 +342,9 @@
     },
     "arc_region_switch": {
       "title": "ARC (Application Recovery Controller) Region Switch",
+      "stripPrefixes": [
+        "arcregionswitch"
+      ],
       "resources": [
         "aws_arcregionswitch_plan"
       ],
@@ -302,6 +356,9 @@
     },
     "arc_zonal_shift": {
       "title": "ARC (Application Recovery Controller) Zonal Shift",
+      "stripPrefixes": [
+        "arczonalshift"
+      ],
       "resources": [
         "aws_arczonalshift_autoshift_observer_notification_status",
         "aws_arczonalshift_zonal_autoshift_configuration"
@@ -311,6 +368,9 @@
     },
     "athena": {
       "title": "Athena",
+      "stripPrefixes": [
+        "athena"
+      ],
       "resources": [
         "aws_athena_capacity_reservation",
         "aws_athena_data_catalog",
@@ -326,6 +386,9 @@
     },
     "audit_manager": {
       "title": "Audit Manager",
+      "stripPrefixes": [
+        "auditmanager"
+      ],
       "resources": [
         "aws_auditmanager_account_registration",
         "aws_auditmanager_assessment",
@@ -344,6 +407,9 @@
     },
     "auto_scaling": {
       "title": "Auto Scaling",
+      "stripPrefixes": [
+        "autoscaling"
+      ],
       "resources": [
         "aws_autoscaling_attachment",
         "aws_autoscaling_group",
@@ -364,6 +430,9 @@
     },
     "auto_scaling_plans": {
       "title": "Auto Scaling Plans",
+      "stripPrefixes": [
+        "autoscalingplans"
+      ],
       "resources": [
         "aws_autoscalingplans_scaling_plan"
       ],
@@ -372,6 +441,9 @@
     },
     "backup": {
       "title": "Backup",
+      "stripPrefixes": [
+        "backup"
+      ],
       "resources": [
         "aws_backup_framework",
         "aws_backup_global_settings",
@@ -398,6 +470,9 @@
     },
     "batch": {
       "title": "Batch",
+      "stripPrefixes": [
+        "batch"
+      ],
       "resources": [
         "aws_batch_compute_environment",
         "aws_batch_job_definition",
@@ -414,6 +489,9 @@
     },
     "bcm_data_exports": {
       "title": "BCM Data Exports",
+      "stripPrefixes": [
+        "bcmdataexports"
+      ],
       "resources": [
         "aws_bcmdataexports_export"
       ],
@@ -422,6 +500,9 @@
     },
     "bedrock": {
       "title": "Bedrock",
+      "stripPrefixes": [
+        "bedrock"
+      ],
       "resources": [
         "aws_bedrock_custom_model",
         "aws_bedrock_evaluation_job",
@@ -447,6 +528,9 @@
     },
     "bedrock_agentcore": {
       "title": "Bedrock AgentCore",
+      "stripPrefixes": [
+        "bedrockagentcore"
+      ],
       "resources": [
         "aws_bedrockagentcore_agent_runtime",
         "aws_bedrockagentcore_agent_runtime_endpoint",
@@ -475,6 +559,9 @@
     },
     "bedrock_agents": {
       "title": "Bedrock Agents",
+      "stripPrefixes": [
+        "bedrockagent"
+      ],
       "resources": [
         "aws_bedrockagent_agent",
         "aws_bedrockagent_agent_action_group",
@@ -493,6 +580,9 @@
     },
     "billing": {
       "title": "Billing",
+      "stripPrefixes": [
+        "billing"
+      ],
       "resources": [
         "aws_billing_view"
       ],
@@ -504,6 +594,9 @@
     },
     "ce": {
       "title": "CE (Cost Explorer)",
+      "stripPrefixes": [
+        "ce"
+      ],
       "resources": [
         "aws_ce_anomaly_monitor",
         "aws_ce_anomaly_subscription",
@@ -518,6 +611,9 @@
     },
     "chatbot": {
       "title": "Chatbot",
+      "stripPrefixes": [
+        "chatbot"
+      ],
       "resources": [
         "aws_chatbot_slack_channel_configuration",
         "aws_chatbot_teams_channel_configuration"
@@ -529,6 +625,9 @@
     },
     "chime": {
       "title": "Chime",
+      "stripPrefixes": [
+        "chime"
+      ],
       "resources": [
         "aws_chime_voice_connector",
         "aws_chime_voice_connector_group",
@@ -543,6 +642,9 @@
     },
     "chime_sdk_media_pipelines": {
       "title": "Chime SDK Media Pipelines",
+      "stripPrefixes": [
+        "chimesdkmediapipelines"
+      ],
       "resources": [
         "aws_chimesdkmediapipelines_media_insights_pipeline_configuration"
       ],
@@ -551,6 +653,9 @@
     },
     "chime_sdk_voice": {
       "title": "Chime SDK Voice",
+      "stripPrefixes": [
+        "chimesdkvoice"
+      ],
       "resources": [
         "aws_chimesdkvoice_global_settings",
         "aws_chimesdkvoice_sip_media_application",
@@ -562,6 +667,9 @@
     },
     "clean_rooms": {
       "title": "Clean Rooms",
+      "stripPrefixes": [
+        "cleanrooms"
+      ],
       "resources": [
         "aws_cleanrooms_collaboration",
         "aws_cleanrooms_configured_table",
@@ -572,6 +680,9 @@
     },
     "cloud9": {
       "title": "Cloud9",
+      "stripPrefixes": [
+        "cloud9"
+      ],
       "resources": [
         "aws_cloud9_environment_ec2",
         "aws_cloud9_environment_membership"
@@ -581,6 +692,9 @@
     },
     "cloud_control_api": {
       "title": "Cloud Control API",
+      "stripPrefixes": [
+        "cloudcontrolapi"
+      ],
       "resources": [
         "aws_cloudcontrolapi_resource"
       ],
@@ -591,6 +705,9 @@
     },
     "cloud_map": {
       "title": "Cloud Map",
+      "stripPrefixes": [
+        "service_discovery"
+      ],
       "resources": [
         "aws_service_discovery_http_namespace",
         "aws_service_discovery_instance",
@@ -607,6 +724,9 @@
     },
     "cloudformation": {
       "title": "CloudFormation",
+      "stripPrefixes": [
+        "cloudformation"
+      ],
       "resources": [
         "aws_cloudformation_stack",
         "aws_cloudformation_stack_instances",
@@ -623,6 +743,9 @@
     },
     "cloudfront": {
       "title": "CloudFront",
+      "stripPrefixes": [
+        "cloudfront"
+      ],
       "resources": [
         "aws_cloudfront_anycast_ip_list",
         "aws_cloudfront_cache_policy",
@@ -665,6 +788,9 @@
     },
     "cloudfront_keyvaluestore": {
       "title": "CloudFront KeyValueStore",
+      "stripPrefixes": [
+        "cloudfrontkeyvaluestore"
+      ],
       "resources": [
         "aws_cloudfrontkeyvaluestore_key",
         "aws_cloudfrontkeyvaluestore_keys_exclusive"
@@ -674,6 +800,10 @@
     },
     "cloudhsm": {
       "title": "CloudHSM",
+      "stripPrefixes": [
+        "cloudhsm",
+        "cloudhsm_v2"
+      ],
       "resources": [
         "aws_cloudhsm_v2_cluster",
         "aws_cloudhsm_v2_hsm"
@@ -685,6 +815,9 @@
     },
     "cloudsearch": {
       "title": "CloudSearch",
+      "stripPrefixes": [
+        "cloudsearch"
+      ],
       "resources": [
         "aws_cloudsearch_domain",
         "aws_cloudsearch_domain_service_access_policy"
@@ -694,6 +827,9 @@
     },
     "cloudtrail": {
       "title": "CloudTrail",
+      "stripPrefixes": [
+        "cloudtrail"
+      ],
       "resources": [
         "aws_cloudtrail",
         "aws_cloudtrail_event_data_store",
@@ -706,6 +842,9 @@
     },
     "cloudwatch": {
       "title": "CloudWatch",
+      "stripPrefixes": [
+        "cloudwatch"
+      ],
       "resources": [
         "aws_cloudwatch_alarm_mute_rule",
         "aws_cloudwatch_composite_alarm",
@@ -723,6 +862,9 @@
     },
     "cloudwatch_application_insights": {
       "title": "CloudWatch Application Insights",
+      "stripPrefixes": [
+        "applicationinsights"
+      ],
       "resources": [
         "aws_applicationinsights_application"
       ],
@@ -731,6 +873,9 @@
     },
     "cloudwatch_evidently": {
       "title": "CloudWatch Evidently",
+      "stripPrefixes": [
+        "evidently"
+      ],
       "resources": [
         "aws_evidently_feature",
         "aws_evidently_launch",
@@ -742,6 +887,9 @@
     },
     "cloudwatch_internet_monitor": {
       "title": "CloudWatch Internet Monitor",
+      "stripPrefixes": [
+        "internetmonitor"
+      ],
       "resources": [
         "aws_internetmonitor_monitor"
       ],
@@ -750,6 +898,10 @@
     },
     "cloudwatch_logs": {
       "title": "CloudWatch Logs",
+      "stripPrefixes": [
+        "cloudwatch",
+        "cloudwatch_log"
+      ],
       "resources": [
         "aws_cloudwatch_log_account_policy",
         "aws_cloudwatch_log_anomaly_detector",
@@ -780,6 +932,9 @@
     },
     "cloudwatch_network_monitor": {
       "title": "CloudWatch Network Monitor",
+      "stripPrefixes": [
+        "networkmonitor"
+      ],
       "resources": [
         "aws_networkmonitor_monitor",
         "aws_networkmonitor_probe"
@@ -789,6 +944,9 @@
     },
     "cloudwatch_networkflow_monitor": {
       "title": "CloudWatch NetworkFlow Monitor",
+      "stripPrefixes": [
+        "networkflowmonitor"
+      ],
       "resources": [
         "aws_networkflowmonitor_monitor",
         "aws_networkflowmonitor_scope"
@@ -798,6 +956,9 @@
     },
     "cloudwatch_observability_admin": {
       "title": "CloudWatch Observability Admin",
+      "stripPrefixes": [
+        "observabilityadmin"
+      ],
       "resources": [
         "aws_observabilityadmin_centralization_rule_for_organization",
         "aws_observabilityadmin_s3_table_integration",
@@ -813,6 +974,9 @@
     },
     "cloudwatch_rum": {
       "title": "CloudWatch RUM",
+      "stripPrefixes": [
+        "rum"
+      ],
       "resources": [
         "aws_rum_app_monitor",
         "aws_rum_metrics_destination"
@@ -822,6 +986,9 @@
     },
     "cloudwatch_synthetics": {
       "title": "CloudWatch Synthetics",
+      "stripPrefixes": [
+        "synthetics"
+      ],
       "resources": [
         "aws_synthetics_canary",
         "aws_synthetics_group",
@@ -835,6 +1002,9 @@
     },
     "codeartifact": {
       "title": "CodeArtifact",
+      "stripPrefixes": [
+        "codeartifact"
+      ],
       "resources": [
         "aws_codeartifact_domain",
         "aws_codeartifact_domain_permissions_policy",
@@ -849,6 +1019,9 @@
     },
     "codebuild": {
       "title": "CodeBuild",
+      "stripPrefixes": [
+        "codebuild"
+      ],
       "resources": [
         "aws_codebuild_fleet",
         "aws_codebuild_project",
@@ -864,6 +1037,9 @@
     },
     "codecatalyst": {
       "title": "CodeCatalyst",
+      "stripPrefixes": [
+        "codecatalyst"
+      ],
       "resources": [
         "aws_codecatalyst_dev_environment",
         "aws_codecatalyst_project",
@@ -876,6 +1052,9 @@
     },
     "codecommit": {
       "title": "CodeCommit",
+      "stripPrefixes": [
+        "codecommit"
+      ],
       "resources": [
         "aws_codecommit_approval_rule_template",
         "aws_codecommit_approval_rule_template_association",
@@ -890,6 +1069,9 @@
     },
     "codeconnections": {
       "title": "CodeConnections",
+      "stripPrefixes": [
+        "codeconnections"
+      ],
       "resources": [
         "aws_codeconnections_connection",
         "aws_codeconnections_host"
@@ -899,6 +1081,9 @@
     },
     "codedeploy": {
       "title": "CodeDeploy",
+      "stripPrefixes": [
+        "codedeploy"
+      ],
       "resources": [
         "aws_codedeploy_app",
         "aws_codedeploy_deployment_config",
@@ -909,6 +1094,9 @@
     },
     "codeguru_profiler": {
       "title": "CodeGuru Profiler",
+      "stripPrefixes": [
+        "codeguruprofiler"
+      ],
       "resources": [
         "aws_codeguruprofiler_profiling_group"
       ],
@@ -919,6 +1107,9 @@
     },
     "codeguru_reviewer": {
       "title": "CodeGuru Reviewer",
+      "stripPrefixes": [
+        "codegurureviewer"
+      ],
       "resources": [
         "aws_codegurureviewer_repository_association"
       ],
@@ -927,6 +1118,9 @@
     },
     "codepipeline": {
       "title": "CodePipeline",
+      "stripPrefixes": [
+        "codepipeline"
+      ],
       "resources": [
         "aws_codepipeline",
         "aws_codepipeline_custom_action_type",
@@ -937,6 +1131,9 @@
     },
     "codestar_connections": {
       "title": "CodeStar Connections",
+      "stripPrefixes": [
+        "codestarconnections"
+      ],
       "resources": [
         "aws_codestarconnections_connection",
         "aws_codestarconnections_host"
@@ -948,6 +1145,9 @@
     },
     "codestar_notifications": {
       "title": "CodeStar Notifications",
+      "stripPrefixes": [
+        "codestarnotifications"
+      ],
       "resources": [
         "aws_codestarnotifications_notification_rule"
       ],
@@ -956,6 +1156,9 @@
     },
     "cognito_identity": {
       "title": "Cognito Identity",
+      "stripPrefixes": [
+        "cognito_identity"
+      ],
       "resources": [
         "aws_cognito_identity_pool",
         "aws_cognito_identity_pool_provider_principal_tag",
@@ -970,6 +1173,9 @@
     },
     "cognito_idp": {
       "title": "Cognito IDP (Identity Provider)",
+      "stripPrefixes": [
+        "cognito"
+      ],
       "resources": [
         "aws_cognito_identity_provider",
         "aws_cognito_log_delivery_configuration",
@@ -998,6 +1204,9 @@
     },
     "comprehend": {
       "title": "Comprehend",
+      "stripPrefixes": [
+        "comprehend"
+      ],
       "resources": [
         "aws_comprehend_document_classifier",
         "aws_comprehend_entity_recognizer"
@@ -1007,6 +1216,9 @@
     },
     "compute_optimizer": {
       "title": "Compute Optimizer",
+      "stripPrefixes": [
+        "computeoptimizer"
+      ],
       "resources": [
         "aws_computeoptimizer_enrollment_status",
         "aws_computeoptimizer_recommendation_preferences"
@@ -1016,6 +1228,9 @@
     },
     "config": {
       "title": "Config",
+      "stripPrefixes": [
+        "config"
+      ],
       "resources": [
         "aws_config_aggregate_authorization",
         "aws_config_config_rule",
@@ -1036,6 +1251,9 @@
     },
     "connect": {
       "title": "Connect",
+      "stripPrefixes": [
+        "connect"
+      ],
       "resources": [
         "aws_connect_bot_association",
         "aws_connect_contact_flow",
@@ -1077,6 +1295,9 @@
     },
     "connect_customer_profiles": {
       "title": "Connect Customer Profiles",
+      "stripPrefixes": [
+        "customerprofiles"
+      ],
       "resources": [
         "aws_customerprofiles_domain",
         "aws_customerprofiles_profile"
@@ -1086,6 +1307,9 @@
     },
     "control_tower": {
       "title": "Control Tower",
+      "stripPrefixes": [
+        "controltower"
+      ],
       "resources": [
         "aws_controltower_baseline",
         "aws_controltower_control",
@@ -1098,6 +1322,9 @@
     },
     "cost_and_usage_report": {
       "title": "Cost and Usage Report",
+      "stripPrefixes": [
+        "cur"
+      ],
       "resources": [
         "aws_cur_report_definition"
       ],
@@ -1108,6 +1335,9 @@
     },
     "cost_optimization_hub": {
       "title": "Cost Optimization Hub",
+      "stripPrefixes": [
+        "costoptimizationhub"
+      ],
       "resources": [
         "aws_costoptimizationhub_enrollment_status",
         "aws_costoptimizationhub_preferences"
@@ -1117,6 +1347,9 @@
     },
     "data_exchange": {
       "title": "Data Exchange",
+      "stripPrefixes": [
+        "dataexchange"
+      ],
       "resources": [
         "aws_dataexchange_data_set",
         "aws_dataexchange_event_action",
@@ -1128,6 +1361,9 @@
     },
     "data_pipeline": {
       "title": "Data Pipeline",
+      "stripPrefixes": [
+        "datapipeline"
+      ],
       "resources": [
         "aws_datapipeline_pipeline",
         "aws_datapipeline_pipeline_definition"
@@ -1140,6 +1376,9 @@
     },
     "datasync": {
       "title": "DataSync",
+      "stripPrefixes": [
+        "datasync"
+      ],
       "resources": [
         "aws_datasync_agent",
         "aws_datasync_location_azure_blob",
@@ -1160,6 +1399,9 @@
     },
     "datazone": {
       "title": "DataZone",
+      "stripPrefixes": [
+        "datazone"
+      ],
       "resources": [
         "aws_datazone_asset_type",
         "aws_datazone_domain",
@@ -1180,6 +1422,9 @@
     },
     "dax": {
       "title": "DynamoDB Accelerator (DAX)",
+      "stripPrefixes": [
+        "dax"
+      ],
       "resources": [
         "aws_dax_cluster",
         "aws_dax_parameter_group",
@@ -1190,6 +1435,9 @@
     },
     "detective": {
       "title": "Detective",
+      "stripPrefixes": [
+        "detective"
+      ],
       "resources": [
         "aws_detective_graph",
         "aws_detective_invitation_accepter",
@@ -1202,6 +1450,9 @@
     },
     "device_farm": {
       "title": "Device Farm",
+      "stripPrefixes": [
+        "devicefarm"
+      ],
       "resources": [
         "aws_devicefarm_device_pool",
         "aws_devicefarm_instance_profile",
@@ -1215,6 +1466,9 @@
     },
     "devops_guru": {
       "title": "DevOps Guru",
+      "stripPrefixes": [
+        "devopsguru"
+      ],
       "resources": [
         "aws_devopsguru_event_sources_config",
         "aws_devopsguru_notification_channel",
@@ -1229,6 +1483,9 @@
     },
     "direct_connect": {
       "title": "Direct Connect",
+      "stripPrefixes": [
+        "dx"
+      ],
       "resources": [
         "aws_dx_bgp_peer",
         "aws_dx_connection",
@@ -1261,6 +1518,9 @@
     },
     "directory_service": {
       "title": "Directory Service",
+      "stripPrefixes": [
+        "directory_service"
+      ],
       "resources": [
         "aws_directory_service_conditional_forwarder",
         "aws_directory_service_directory",
@@ -1278,6 +1538,9 @@
     },
     "dlm": {
       "title": "DLM (Data Lifecycle Manager)",
+      "stripPrefixes": [
+        "dlm"
+      ],
       "resources": [
         "aws_dlm_lifecycle_policy"
       ],
@@ -1286,6 +1549,9 @@
     },
     "dms": {
       "title": "DMS (Database Migration)",
+      "stripPrefixes": [
+        "dms"
+      ],
       "resources": [
         "aws_dms_certificate",
         "aws_dms_endpoint",
@@ -1307,6 +1573,9 @@
     },
     "documentdb": {
       "title": "DocumentDB",
+      "stripPrefixes": [
+        "docdb"
+      ],
       "resources": [
         "aws_docdb_cluster",
         "aws_docdb_cluster_instance",
@@ -1324,6 +1593,9 @@
     },
     "documentdb_elastic": {
       "title": "DocumentDB Elastic",
+      "stripPrefixes": [
+        "docdbelastic"
+      ],
       "resources": [
         "aws_docdbelastic_cluster"
       ],
@@ -1332,6 +1604,9 @@
     },
     "drs": {
       "title": "DRS (Elastic Disaster Recovery)",
+      "stripPrefixes": [
+        "drs"
+      ],
       "resources": [
         "aws_drs_replication_configuration_template"
       ],
@@ -1340,6 +1615,9 @@
     },
     "dsql": {
       "title": "DSQL",
+      "stripPrefixes": [
+        "dsql"
+      ],
       "resources": [
         "aws_dsql_cluster",
         "aws_dsql_cluster_peering",
@@ -1350,6 +1628,9 @@
     },
     "dynamodb": {
       "title": "DynamoDB",
+      "stripPrefixes": [
+        "dynamodb"
+      ],
       "resources": [
         "aws_dynamodb_contributor_insights",
         "aws_dynamodb_global_secondary_index",
@@ -1372,6 +1653,9 @@
     },
     "ebs": {
       "title": "EBS (EC2)",
+      "stripPrefixes": [
+        "ebs"
+      ],
       "resources": [
         "aws_ebs_default_kms_key",
         "aws_ebs_encryption_by_default",
@@ -1397,6 +1681,9 @@
     },
     "ec2": {
       "title": "EC2 (Elastic Compute Cloud)",
+      "stripPrefixes": [
+        "ec2"
+      ],
       "resources": [
         "aws_ami",
         "aws_ami_copy",
@@ -1457,6 +1744,9 @@
     },
     "ec2_image_builder": {
       "title": "EC2 Image Builder",
+      "stripPrefixes": [
+        "imagebuilder"
+      ],
       "resources": [
         "aws_imagebuilder_component",
         "aws_imagebuilder_container_recipe",
@@ -1487,6 +1777,9 @@
     },
     "ecr": {
       "title": "ECR (Elastic Container Registry)",
+      "stripPrefixes": [
+        "ecr"
+      ],
       "resources": [
         "aws_ecr_account_setting",
         "aws_ecr_lifecycle_policy",
@@ -1515,6 +1808,9 @@
     },
     "ecr_public": {
       "title": "ECR Public",
+      "stripPrefixes": [
+        "ecrpublic"
+      ],
       "resources": [
         "aws_ecrpublic_repository",
         "aws_ecrpublic_repository_policy"
@@ -1529,6 +1825,9 @@
     },
     "ecs": {
       "title": "ECS (Elastic Container)",
+      "stripPrefixes": [
+        "ecs"
+      ],
       "resources": [
         "aws_ecs_account_setting_default",
         "aws_ecs_capacity_provider",
@@ -1554,6 +1853,9 @@
     },
     "efs": {
       "title": "EFS (Elastic File System)",
+      "stripPrefixes": [
+        "efs"
+      ],
       "resources": [
         "aws_efs_access_point",
         "aws_efs_backup_policy",
@@ -1572,6 +1874,9 @@
     },
     "eks": {
       "title": "EKS (Elastic Kubernetes)",
+      "stripPrefixes": [
+        "eks"
+      ],
       "resources": [
         "aws_eks_access_entry",
         "aws_eks_access_policy_association",
@@ -1601,6 +1906,9 @@
     },
     "elastic_beanstalk": {
       "title": "Elastic Beanstalk",
+      "stripPrefixes": [
+        "elastic_beanstalk"
+      ],
       "resources": [
         "aws_elastic_beanstalk_application",
         "aws_elastic_beanstalk_application_version",
@@ -1616,6 +1924,9 @@
     },
     "elastic_transcoder": {
       "title": "Elastic Transcoder",
+      "stripPrefixes": [
+        "elastictranscoder"
+      ],
       "resources": [
         "aws_elastictranscoder_pipeline",
         "aws_elastictranscoder_preset"
@@ -1625,6 +1936,9 @@
     },
     "elasticache": {
       "title": "ElastiCache",
+      "stripPrefixes": [
+        "elasticache"
+      ],
       "resources": [
         "aws_elasticache_cluster",
         "aws_elasticache_global_replication_group",
@@ -1651,6 +1965,9 @@
     },
     "elasticsearch": {
       "title": "Elasticsearch",
+      "stripPrefixes": [
+        "elasticsearch"
+      ],
       "resources": [
         "aws_elasticsearch_domain",
         "aws_elasticsearch_domain_policy",
@@ -1664,6 +1981,9 @@
     },
     "elb": {
       "title": "ELB (Elastic Load Balancing)",
+      "stripPrefixes": [
+        "lb"
+      ],
       "resources": [
         "aws_lb",
         "aws_lb_listener",
@@ -1687,6 +2007,9 @@
     },
     "elb_classic": {
       "title": "ELB Classic",
+      "stripPrefixes": [
+        "elb"
+      ],
       "resources": [
         "aws_app_cookie_stickiness_policy",
         "aws_elb",
@@ -1707,6 +2030,9 @@
     },
     "elemental_mediaconvert": {
       "title": "Elemental MediaConvert",
+      "stripPrefixes": [
+        "media_convert"
+      ],
       "resources": [
         "aws_media_convert_queue"
       ],
@@ -1717,6 +2043,9 @@
     },
     "elemental_medialive": {
       "title": "Elemental MediaLive",
+      "stripPrefixes": [
+        "medialive"
+      ],
       "resources": [
         "aws_medialive_channel",
         "aws_medialive_input",
@@ -1731,6 +2060,9 @@
     },
     "elemental_mediapackage": {
       "title": "Elemental MediaPackage",
+      "stripPrefixes": [
+        "media_package"
+      ],
       "resources": [
         "aws_media_package_channel"
       ],
@@ -1739,6 +2071,9 @@
     },
     "elemental_mediapackage_version_2": {
       "title": "Elemental MediaPackage Version 2",
+      "stripPrefixes": [
+        "media_packagev2"
+      ],
       "resources": [
         "aws_media_packagev2_channel_group"
       ],
@@ -1747,6 +2082,9 @@
     },
     "elemental_mediastore": {
       "title": "Elemental MediaStore",
+      "stripPrefixes": [
+        "media_store"
+      ],
       "resources": [
         "aws_media_store_container",
         "aws_media_store_container_policy"
@@ -1756,6 +2094,9 @@
     },
     "emr": {
       "title": "EMR",
+      "stripPrefixes": [
+        "emr"
+      ],
       "resources": [
         "aws_emr_block_public_access_configuration",
         "aws_emr_cluster",
@@ -1774,6 +2115,9 @@
     },
     "emr_containers": {
       "title": "EMR Containers",
+      "stripPrefixes": [
+        "emrcontainers"
+      ],
       "resources": [
         "aws_emrcontainers_job_template",
         "aws_emrcontainers_virtual_cluster"
@@ -1785,6 +2129,9 @@
     },
     "emr_serverless": {
       "title": "EMR Serverless",
+      "stripPrefixes": [
+        "emrserverless"
+      ],
       "resources": [
         "aws_emrserverless_application"
       ],
@@ -1793,6 +2140,9 @@
     },
     "end_user_messaging": {
       "title": "End User Messaging",
+      "stripPrefixes": [
+        "pinpoint"
+      ],
       "resources": [
         "aws_pinpoint_adm_channel",
         "aws_pinpoint_apns_channel",
@@ -1812,6 +2162,9 @@
     },
     "end_user_messaging_sms": {
       "title": "End User Messaging SMS",
+      "stripPrefixes": [
+        "pinpointsmsvoicev2"
+      ],
       "resources": [
         "aws_pinpointsmsvoicev2_configuration_set",
         "aws_pinpointsmsvoicev2_event_destination",
@@ -1827,6 +2180,9 @@
     },
     "eventbridge": {
       "title": "EventBridge",
+      "stripPrefixes": [
+        "cloudwatch_event"
+      ],
       "resources": [
         "aws_cloudwatch_event_api_destination",
         "aws_cloudwatch_event_archive",
@@ -1848,6 +2204,9 @@
     },
     "eventbridge_pipes": {
       "title": "EventBridge Pipes",
+      "stripPrefixes": [
+        "pipes"
+      ],
       "resources": [
         "aws_pipes_pipe"
       ],
@@ -1856,6 +2215,9 @@
     },
     "eventbridge_scheduler": {
       "title": "EventBridge Scheduler",
+      "stripPrefixes": [
+        "scheduler"
+      ],
       "resources": [
         "aws_scheduler_schedule",
         "aws_scheduler_schedule_group"
@@ -1865,6 +2227,9 @@
     },
     "eventbridge_schemas": {
       "title": "EventBridge Schemas",
+      "stripPrefixes": [
+        "schemas"
+      ],
       "resources": [
         "aws_schemas_discoverer",
         "aws_schemas_registry",
@@ -1876,6 +2241,9 @@
     },
     "finspace": {
       "title": "FinSpace",
+      "stripPrefixes": [
+        "finspace"
+      ],
       "resources": [
         "aws_finspace_kx_cluster",
         "aws_finspace_kx_database",
@@ -1890,6 +2258,9 @@
     },
     "fis": {
       "title": "FIS (Fault Injection Simulator)",
+      "stripPrefixes": [
+        "fis"
+      ],
       "resources": [
         "aws_fis_experiment_template",
         "aws_fis_target_account_configuration"
@@ -1901,6 +2272,9 @@
     },
     "fms": {
       "title": "FMS (Firewall Manager)",
+      "stripPrefixes": [
+        "fms"
+      ],
       "resources": [
         "aws_fms_admin_account",
         "aws_fms_policy",
@@ -1911,6 +2285,9 @@
     },
     "fsx": {
       "title": "FSx",
+      "stripPrefixes": [
+        "fsx"
+      ],
       "resources": [
         "aws_fsx_backup",
         "aws_fsx_data_repository_association",
@@ -1936,6 +2313,9 @@
     },
     "gamelift": {
       "title": "GameLift",
+      "stripPrefixes": [
+        "gamelift"
+      ],
       "resources": [
         "aws_gamelift_alias",
         "aws_gamelift_build",
@@ -1949,6 +2329,9 @@
     },
     "global_accelerator": {
       "title": "Global Accelerator",
+      "stripPrefixes": [
+        "globalaccelerator"
+      ],
       "resources": [
         "aws_globalaccelerator_accelerator",
         "aws_globalaccelerator_cross_account_attachment",
@@ -1966,6 +2349,9 @@
     },
     "glue": {
       "title": "Glue",
+      "stripPrefixes": [
+        "glue"
+      ],
       "resources": [
         "aws_glue_catalog",
         "aws_glue_catalog_database",
@@ -2001,6 +2387,9 @@
     },
     "guardduty": {
       "title": "GuardDuty",
+      "stripPrefixes": [
+        "guardduty"
+      ],
       "resources": [
         "aws_guardduty_detector",
         "aws_guardduty_detector_feature",
@@ -2024,6 +2413,9 @@
     },
     "iam": {
       "title": "IAM (Identity & Access Management)",
+      "stripPrefixes": [
+        "iam"
+      ],
       "resources": [
         "aws_iam_access_key",
         "aws_iam_account_alias",
@@ -2087,6 +2479,9 @@
     },
     "iam_access_analyzer": {
       "title": "IAM Access Analyzer",
+      "stripPrefixes": [
+        "accessanalyzer"
+      ],
       "resources": [
         "aws_accessanalyzer_analyzer",
         "aws_accessanalyzer_archive_rule"
@@ -2096,6 +2491,9 @@
     },
     "inspector": {
       "title": "Inspector",
+      "stripPrefixes": [
+        "inspector2"
+      ],
       "resources": [
         "aws_inspector2_delegated_admin_account",
         "aws_inspector2_enabler",
@@ -2108,6 +2506,9 @@
     },
     "inspector_classic": {
       "title": "Inspector Classic",
+      "stripPrefixes": [
+        "inspector"
+      ],
       "resources": [
         "aws_inspector_assessment_target",
         "aws_inspector_assessment_template",
@@ -2120,6 +2521,9 @@
     },
     "invoicing": {
       "title": "Invoicing",
+      "stripPrefixes": [
+        "invoicing"
+      ],
       "resources": [
         "aws_invoicing_invoice_unit"
       ],
@@ -2128,6 +2532,9 @@
     },
     "iot_core": {
       "title": "IoT Core",
+      "stripPrefixes": [
+        "iot"
+      ],
       "resources": [
         "aws_iot_authorizer",
         "aws_iot_billing_group",
@@ -2157,6 +2564,9 @@
     },
     "ivs": {
       "title": "IVS (Interactive Video)",
+      "stripPrefixes": [
+        "ivs"
+      ],
       "resources": [
         "aws_ivs_channel",
         "aws_ivs_playback_key_pair",
@@ -2169,6 +2579,9 @@
     },
     "ivs_chat": {
       "title": "IVS (Interactive Video) Chat",
+      "stripPrefixes": [
+        "ivschat"
+      ],
       "resources": [
         "aws_ivschat_logging_configuration",
         "aws_ivschat_room"
@@ -2178,6 +2591,9 @@
     },
     "kendra": {
       "title": "Kendra",
+      "stripPrefixes": [
+        "kendra"
+      ],
       "resources": [
         "aws_kendra_data_source",
         "aws_kendra_experience",
@@ -2197,6 +2613,9 @@
     },
     "keyspaces": {
       "title": "Keyspaces (for Apache Cassandra)",
+      "stripPrefixes": [
+        "keyspaces"
+      ],
       "resources": [
         "aws_keyspaces_keyspace",
         "aws_keyspaces_table"
@@ -2206,6 +2625,9 @@
     },
     "kinesis": {
       "title": "Kinesis",
+      "stripPrefixes": [
+        "kinesis"
+      ],
       "resources": [
         "aws_kinesis_account_settings",
         "aws_kinesis_resource_policy",
@@ -2220,6 +2642,9 @@
     },
     "kinesis_analytics": {
       "title": "Kinesis Analytics",
+      "stripPrefixes": [
+        "kinesis_analytics"
+      ],
       "resources": [
         "aws_kinesis_analytics_application"
       ],
@@ -2228,6 +2653,9 @@
     },
     "kinesis_analytics_v2": {
       "title": "Kinesis Analytics V2",
+      "stripPrefixes": [
+        "kinesisanalyticsv2"
+      ],
       "resources": [
         "aws_kinesisanalyticsv2_application",
         "aws_kinesisanalyticsv2_application_snapshot"
@@ -2237,6 +2665,9 @@
     },
     "kinesis_firehose": {
       "title": "Kinesis Firehose",
+      "stripPrefixes": [
+        "kinesis_firehose"
+      ],
       "resources": [
         "aws_kinesis_firehose_delivery_stream"
       ],
@@ -2247,6 +2678,9 @@
     },
     "kinesis_video": {
       "title": "Kinesis Video",
+      "stripPrefixes": [
+        "kinesis_video"
+      ],
       "resources": [
         "aws_kinesis_video_stream"
       ],
@@ -2255,6 +2689,9 @@
     },
     "kms": {
       "title": "KMS (Key Management)",
+      "stripPrefixes": [
+        "kms"
+      ],
       "resources": [
         "aws_kms_alias",
         "aws_kms_ciphertext",
@@ -2281,6 +2718,9 @@
     },
     "lake_formation": {
       "title": "Lake Formation",
+      "stripPrefixes": [
+        "lakeformation"
+      ],
       "resources": [
         "aws_lakeformation_data_cells_filter",
         "aws_lakeformation_data_lake_settings",
@@ -2302,6 +2742,9 @@
     },
     "lambda": {
       "title": "Lambda",
+      "stripPrefixes": [
+        "lambda"
+      ],
       "resources": [
         "aws_lambda_alias",
         "aws_lambda_capacity_provider",
@@ -2334,6 +2777,9 @@
     },
     "lambda_core": {
       "title": "Lambda Core",
+      "stripPrefixes": [
+        "lambdacore"
+      ],
       "resources": [
         "aws_lambdacore_network_connector"
       ],
@@ -2342,6 +2788,9 @@
     },
     "lambda_microvms": {
       "title": "Lambda MicroVMs",
+      "stripPrefixes": [
+        "lambdamicrovms"
+      ],
       "resources": [
         "aws_lambdamicrovms_image"
       ],
@@ -2350,6 +2799,9 @@
     },
     "lex_model_building": {
       "title": "Lex Model Building",
+      "stripPrefixes": [
+        "lex"
+      ],
       "resources": [
         "aws_lex_bot",
         "aws_lex_bot_alias",
@@ -2366,6 +2818,9 @@
     },
     "lex_v2_models": {
       "title": "Lex V2 Models",
+      "stripPrefixes": [
+        "lexv2models"
+      ],
       "resources": [
         "aws_lexv2models_bot",
         "aws_lexv2models_bot_locale",
@@ -2379,6 +2834,9 @@
     },
     "license_manager": {
       "title": "License Manager",
+      "stripPrefixes": [
+        "licensemanager"
+      ],
       "resources": [
         "aws_licensemanager_association",
         "aws_licensemanager_grant",
@@ -2394,6 +2852,9 @@
     },
     "lightsail": {
       "title": "Lightsail",
+      "stripPrefixes": [
+        "lightsail"
+      ],
       "resources": [
         "aws_lightsail_bucket",
         "aws_lightsail_bucket_access_key",
@@ -2424,6 +2885,9 @@
     },
     "location": {
       "title": "Location",
+      "stripPrefixes": [
+        "location"
+      ],
       "resources": [
         "aws_location_geofence_collection",
         "aws_location_map",
@@ -2445,6 +2909,9 @@
     },
     "macie": {
       "title": "Macie",
+      "stripPrefixes": [
+        "macie2"
+      ],
       "resources": [
         "aws_macie2_account",
         "aws_macie2_classification_export_configuration",
@@ -2461,6 +2928,9 @@
     },
     "mainframe_modernization": {
       "title": "Mainframe Modernization",
+      "stripPrefixes": [
+        "m2"
+      ],
       "resources": [
         "aws_m2_application",
         "aws_m2_deployment",
@@ -2471,6 +2941,9 @@
     },
     "managed_grafana": {
       "title": "Managed Grafana",
+      "stripPrefixes": [
+        "grafana"
+      ],
       "resources": [
         "aws_grafana_license_association",
         "aws_grafana_role_association",
@@ -2487,6 +2960,9 @@
     },
     "memorydb": {
       "title": "MemoryDB",
+      "stripPrefixes": [
+        "memorydb"
+      ],
       "resources": [
         "aws_memorydb_acl",
         "aws_memorydb_cluster",
@@ -2508,6 +2984,9 @@
     },
     "meta_data_sources": {
       "title": "Meta Data Sources",
+      "stripPrefixes": [
+        "arn"
+      ],
       "resources": [],
       "dataSources": [
         "aws_arn",
@@ -2523,6 +3002,9 @@
     },
     "mq": {
       "title": "MQ",
+      "stripPrefixes": [
+        "mq"
+      ],
       "resources": [
         "aws_mq_broker",
         "aws_mq_configuration"
@@ -2536,6 +3018,9 @@
     },
     "msk": {
       "title": "Managed Streaming for Kafka",
+      "stripPrefixes": [
+        "msk"
+      ],
       "resources": [
         "aws_msk_cluster",
         "aws_msk_cluster_policy",
@@ -2560,6 +3045,9 @@
     },
     "mskconnect": {
       "title": "Managed Streaming for Kafka Connect",
+      "stripPrefixes": [
+        "mskconnect"
+      ],
       "resources": [
         "aws_mskconnect_connector",
         "aws_mskconnect_custom_plugin",
@@ -2574,6 +3062,9 @@
     },
     "mwaa": {
       "title": "MWAA (Managed Workflows for Apache Airflow)",
+      "stripPrefixes": [
+        "mwaa"
+      ],
       "resources": [
         "aws_mwaa_environment"
       ],
@@ -2582,6 +3073,9 @@
     },
     "neptune": {
       "title": "Neptune",
+      "stripPrefixes": [
+        "neptune"
+      ],
       "resources": [
         "aws_neptune_cluster",
         "aws_neptune_cluster_endpoint",
@@ -2601,6 +3095,9 @@
     },
     "neptune_analytics": {
       "title": "Neptune Analytics",
+      "stripPrefixes": [
+        "neptunegraph"
+      ],
       "resources": [
         "aws_neptunegraph_graph",
         "aws_neptunegraph_private_graph_endpoint"
@@ -2610,6 +3107,9 @@
     },
     "network_firewall": {
       "title": "Network Firewall",
+      "stripPrefixes": [
+        "networkfirewall"
+      ],
       "resources": [
         "aws_networkfirewall_container_association",
         "aws_networkfirewall_firewall",
@@ -2630,6 +3130,9 @@
     },
     "network_manager": {
       "title": "Network Manager",
+      "stripPrefixes": [
+        "networkmanager"
+      ],
       "resources": [
         "aws_networkmanager_attachment_accepter",
         "aws_networkmanager_attachment_routing_policy_label",
@@ -2671,6 +3174,9 @@
     },
     "oam": {
       "title": "CloudWatch Observability Access Manager",
+      "stripPrefixes": [
+        "oam"
+      ],
       "resources": [
         "aws_oam_link",
         "aws_oam_sink",
@@ -2686,6 +3192,9 @@
     },
     "opensearch": {
       "title": "OpenSearch",
+      "stripPrefixes": [
+        "opensearch"
+      ],
       "resources": [
         "aws_opensearch_application",
         "aws_opensearch_authorize_vpc_endpoint_access",
@@ -2705,6 +3214,9 @@
     },
     "opensearch_serverless": {
       "title": "OpenSearch Serverless",
+      "stripPrefixes": [
+        "opensearchserverless"
+      ],
       "resources": [
         "aws_opensearchserverless_access_policy",
         "aws_opensearchserverless_collection",
@@ -2728,6 +3240,9 @@
     },
     "oracle_database_aws": {
       "title": "Oracle Database@AWS",
+      "stripPrefixes": [
+        "odb"
+      ],
       "resources": [
         "aws_odb_cloud_autonomous_vm_cluster",
         "aws_odb_cloud_exadata_infrastructure",
@@ -2759,6 +3274,9 @@
     },
     "organizations": {
       "title": "Organizations",
+      "stripPrefixes": [
+        "organizations"
+      ],
       "resources": [
         "aws_organizations_account",
         "aws_organizations_aws_service_access",
@@ -2790,6 +3308,9 @@
     },
     "osis": {
       "title": "OpenSearch Ingestion (OSIS)",
+      "stripPrefixes": [
+        "osis"
+      ],
       "resources": [
         "aws_osis_pipeline",
         "aws_osis_pipeline_endpoint",
@@ -2800,6 +3321,9 @@
     },
     "outposts": {
       "title": "Outposts",
+      "stripPrefixes": [
+        "outposts"
+      ],
       "resources": [
         "aws_outposts_capacity_task"
       ],
@@ -2817,6 +3341,9 @@
     },
     "outposts_ec2": {
       "title": "Outposts (EC2)",
+      "stripPrefixes": [
+        "ec2"
+      ],
       "resources": [
         "aws_ec2_local_gateway_route",
         "aws_ec2_local_gateway_route_table",
@@ -2840,6 +3367,9 @@
     },
     "payment_cryptography_control_plane": {
       "title": "Payment Cryptography Control Plane",
+      "stripPrefixes": [
+        "paymentcryptography"
+      ],
       "resources": [
         "aws_paymentcryptography_key",
         "aws_paymentcryptography_key_alias"
@@ -2849,6 +3379,9 @@
     },
     "polly": {
       "title": "Polly",
+      "stripPrefixes": [
+        "polly"
+      ],
       "resources": [],
       "dataSources": [
         "aws_polly_voices"
@@ -2857,6 +3390,9 @@
     },
     "pricing_calculator": {
       "title": "Pricing Calculator",
+      "stripPrefixes": [
+        "pricing"
+      ],
       "resources": [],
       "dataSources": [
         "aws_pricing_product"
@@ -2865,6 +3401,9 @@
     },
     "qldb": {
       "title": "QLDB (Quantum Ledger Database)",
+      "stripPrefixes": [
+        "qldb"
+      ],
       "resources": [
         "aws_qldb_ledger",
         "aws_qldb_stream"
@@ -2876,6 +3415,9 @@
     },
     "quicksight": {
       "title": "QuickSight",
+      "stripPrefixes": [
+        "quicksight"
+      ],
       "resources": [
         "aws_quicksight_account_settings",
         "aws_quicksight_account_subscription",
@@ -2914,6 +3456,9 @@
     },
     "ram": {
       "title": "RAM (Resource Access Manager)",
+      "stripPrefixes": [
+        "ram"
+      ],
       "resources": [
         "aws_ram_permission",
         "aws_ram_principal_association",
@@ -2930,6 +3475,9 @@
     },
     "rds": {
       "title": "RDS (Relational Database)",
+      "stripPrefixes": [
+        "rds"
+      ],
       "resources": [
         "aws_db_cluster_snapshot",
         "aws_db_event_subscription",
@@ -2984,6 +3532,9 @@
     },
     "recycle_bin": {
       "title": "Recycle Bin (RBin)",
+      "stripPrefixes": [
+        "rbin"
+      ],
       "resources": [
         "aws_rbin_rule"
       ],
@@ -2992,6 +3543,9 @@
     },
     "redshift": {
       "title": "Redshift",
+      "stripPrefixes": [
+        "redshift"
+      ],
       "resources": [
         "aws_redshift_authentication_profile",
         "aws_redshift_cluster",
@@ -3031,6 +3585,9 @@
     },
     "redshift_data": {
       "title": "Redshift Data",
+      "stripPrefixes": [
+        "redshiftdata"
+      ],
       "resources": [
         "aws_redshiftdata_statement"
       ],
@@ -3039,6 +3596,9 @@
     },
     "redshift_serverless": {
       "title": "Redshift Serverless",
+      "stripPrefixes": [
+        "redshiftserverless"
+      ],
       "resources": [
         "aws_redshiftserverless_custom_domain_association",
         "aws_redshiftserverless_endpoint_access",
@@ -3057,6 +3617,9 @@
     },
     "rekognition": {
       "title": "Rekognition",
+      "stripPrefixes": [
+        "rekognition"
+      ],
       "resources": [
         "aws_rekognition_collection",
         "aws_rekognition_project",
@@ -3067,6 +3630,9 @@
     },
     "resilience_hub": {
       "title": "Resilience Hub",
+      "stripPrefixes": [
+        "resiliencehub"
+      ],
       "resources": [
         "aws_resiliencehub_resiliency_policy"
       ],
@@ -3075,6 +3641,9 @@
     },
     "resilience_hub_v2": {
       "title": "Resilience Hub V2",
+      "stripPrefixes": [
+        "resiliencehubv2"
+      ],
       "resources": [
         "aws_resiliencehubv2_assertion",
         "aws_resiliencehubv2_input_source",
@@ -3093,6 +3662,9 @@
     },
     "resource_explorer": {
       "title": "Resource Explorer",
+      "stripPrefixes": [
+        "resourceexplorer2"
+      ],
       "resources": [
         "aws_resourceexplorer2_index",
         "aws_resourceexplorer2_view"
@@ -3104,6 +3676,9 @@
     },
     "resource_groups": {
       "title": "Resource Groups",
+      "stripPrefixes": [
+        "resourcegroups"
+      ],
       "resources": [
         "aws_resourcegroups_group",
         "aws_resourcegroups_resource"
@@ -3113,6 +3688,9 @@
     },
     "resource_groups_tagging": {
       "title": "Resource Groups Tagging",
+      "stripPrefixes": [
+        "resourcegroupstaggingapi"
+      ],
       "resources": [],
       "dataSources": [
         "aws_resourcegroupstaggingapi_required_tags",
@@ -3122,6 +3700,9 @@
     },
     "roles_anywhere": {
       "title": "Roles Anywhere",
+      "stripPrefixes": [
+        "rolesanywhere"
+      ],
       "resources": [
         "aws_rolesanywhere_profile",
         "aws_rolesanywhere_trust_anchor"
@@ -3131,6 +3712,9 @@
     },
     "route_53": {
       "title": "Route 53",
+      "stripPrefixes": [
+        "route53"
+      ],
       "resources": [
         "aws_route53_cidr_collection",
         "aws_route53_cidr_location",
@@ -3158,6 +3742,9 @@
     },
     "route_53_domains": {
       "title": "Route 53 Domains",
+      "stripPrefixes": [
+        "route53domains"
+      ],
       "resources": [
         "aws_route53domains_delegation_signer_record",
         "aws_route53domains_domain",
@@ -3168,6 +3755,9 @@
     },
     "route_53_profiles": {
       "title": "Route 53 Profiles",
+      "stripPrefixes": [
+        "route53profiles"
+      ],
       "resources": [
         "aws_route53profiles_association",
         "aws_route53profiles_profile",
@@ -3181,6 +3771,9 @@
     },
     "route_53_recovery_control_config": {
       "title": "Route 53 Recovery Control Config",
+      "stripPrefixes": [
+        "route53recoverycontrolconfig"
+      ],
       "resources": [
         "aws_route53recoverycontrolconfig_cluster",
         "aws_route53recoverycontrolconfig_control_panel",
@@ -3192,6 +3785,9 @@
     },
     "route_53_recovery_readiness": {
       "title": "Route 53 Recovery Readiness",
+      "stripPrefixes": [
+        "route53recoveryreadiness"
+      ],
       "resources": [
         "aws_route53recoveryreadiness_cell",
         "aws_route53recoveryreadiness_readiness_check",
@@ -3203,6 +3799,9 @@
     },
     "route_53_resolver": {
       "title": "Route 53 Resolver",
+      "stripPrefixes": [
+        "route53"
+      ],
       "resources": [
         "aws_route53_resolver_config",
         "aws_route53_resolver_dnssec_config",
@@ -3232,6 +3831,9 @@
     },
     "s3": {
       "title": "S3 (Simple Storage)",
+      "stripPrefixes": [
+        "s3"
+      ],
       "resources": [
         "aws_s3_bucket",
         "aws_s3_bucket_abac",
@@ -3278,6 +3880,9 @@
     },
     "s3_control": {
       "title": "S3 Control",
+      "stripPrefixes": [
+        "s3control"
+      ],
       "resources": [
         "aws_s3_access_point",
         "aws_s3_account_public_access_block",
@@ -3308,6 +3913,9 @@
     },
     "s3_files": {
       "title": "S3 Files",
+      "stripPrefixes": [
+        "s3files"
+      ],
       "resources": [
         "aws_s3files_access_point",
         "aws_s3files_file_system",
@@ -3325,6 +3933,9 @@
     },
     "s3_glacier": {
       "title": "S3 Glacier",
+      "stripPrefixes": [
+        "glacier"
+      ],
       "resources": [
         "aws_glacier_vault",
         "aws_glacier_vault_lock"
@@ -3334,6 +3945,9 @@
     },
     "s3_on_outposts": {
       "title": "S3 on Outposts",
+      "stripPrefixes": [
+        "s3outposts"
+      ],
       "resources": [
         "aws_s3outposts_endpoint"
       ],
@@ -3342,6 +3956,9 @@
     },
     "s3_tables": {
       "title": "S3 Tables",
+      "stripPrefixes": [
+        "s3tables"
+      ],
       "resources": [
         "aws_s3tables_namespace",
         "aws_s3tables_table",
@@ -3356,6 +3973,9 @@
     },
     "s3_vectors": {
       "title": "S3 Vectors",
+      "stripPrefixes": [
+        "s3vectors"
+      ],
       "resources": [
         "aws_s3vectors_index",
         "aws_s3vectors_vector_bucket",
@@ -3366,6 +3986,9 @@
     },
     "sagemaker_ai": {
       "title": "SageMaker AI",
+      "stripPrefixes": [
+        "sagemaker"
+      ],
       "resources": [
         "aws_sagemaker_algorithm",
         "aws_sagemaker_app",
@@ -3413,6 +4036,9 @@
     },
     "savings_plans": {
       "title": "Savings Plans",
+      "stripPrefixes": [
+        "savingsplans"
+      ],
       "resources": [
         "aws_savingsplans_savings_plan"
       ],
@@ -3424,6 +4050,9 @@
     },
     "secrets_manager": {
       "title": "Secrets Manager",
+      "stripPrefixes": [
+        "secretsmanager"
+      ],
       "resources": [
         "aws_secretsmanager_secret",
         "aws_secretsmanager_secret_policy",
@@ -3446,6 +4075,9 @@
     },
     "security_hub": {
       "title": "Security Hub",
+      "stripPrefixes": [
+        "securityhub"
+      ],
       "resources": [
         "aws_securityhub_account",
         "aws_securityhub_account_v2",
@@ -3477,6 +4109,9 @@
     },
     "security_lake": {
       "title": "Security Lake",
+      "stripPrefixes": [
+        "securitylake"
+      ],
       "resources": [
         "aws_securitylake_aws_log_source",
         "aws_securitylake_custom_log_source",
@@ -3489,6 +4124,9 @@
     },
     "serverlessrepo": {
       "title": "Serverless Application Repository",
+      "stripPrefixes": [
+        "serverlessapplicationrepository"
+      ],
       "resources": [
         "aws_serverlessapplicationrepository_cloudformation_stack"
       ],
@@ -3499,6 +4137,9 @@
     },
     "service_catalog": {
       "title": "Service Catalog",
+      "stripPrefixes": [
+        "servicecatalog"
+      ],
       "resources": [
         "aws_servicecatalog_budget_resource_association",
         "aws_servicecatalog_constraint",
@@ -3526,6 +4167,9 @@
     },
     "service_catalog_appregistry": {
       "title": "Service Catalog AppRegistry",
+      "stripPrefixes": [
+        "servicecatalogappregistry"
+      ],
       "resources": [
         "aws_servicecatalogappregistry_application",
         "aws_servicecatalogappregistry_attribute_group",
@@ -3540,6 +4184,9 @@
     },
     "service_quotas": {
       "title": "Service Quotas",
+      "stripPrefixes": [
+        "servicequotas"
+      ],
       "resources": [
         "aws_servicequotas_auto_management",
         "aws_servicequotas_service_quota",
@@ -3555,6 +4202,9 @@
     },
     "ses": {
       "title": "SES (Simple Email)",
+      "stripPrefixes": [
+        "ses"
+      ],
       "resources": [
         "aws_ses_active_receipt_rule_set",
         "aws_ses_configuration_set",
@@ -3580,6 +4230,9 @@
     },
     "ses_mail_manager": {
       "title": "SES Mail Manager",
+      "stripPrefixes": [
+        "mailmanager"
+      ],
       "resources": [
         "aws_mailmanager_ingress_point",
         "aws_mailmanager_relay",
@@ -3591,6 +4244,9 @@
     },
     "sesv2": {
       "title": "SESv2 (Simple Email V2)",
+      "stripPrefixes": [
+        "sesv2"
+      ],
       "resources": [
         "aws_sesv2_account_suppression_attributes",
         "aws_sesv2_account_vdm_attributes",
@@ -3617,6 +4273,9 @@
     },
     "sfn": {
       "title": "SFN (Step Functions)",
+      "stripPrefixes": [
+        "sfn"
+      ],
       "resources": [
         "aws_sfn_activity",
         "aws_sfn_alias",
@@ -3632,6 +4291,9 @@
     },
     "shield": {
       "title": "Shield",
+      "stripPrefixes": [
+        "shield"
+      ],
       "resources": [
         "aws_shield_application_layer_automatic_response",
         "aws_shield_drt_access_log_bucket_association",
@@ -3649,6 +4311,9 @@
     },
     "signer": {
       "title": "Signer",
+      "stripPrefixes": [
+        "signer"
+      ],
       "resources": [
         "aws_signer_signing_job",
         "aws_signer_signing_profile",
@@ -3662,6 +4327,9 @@
     },
     "sns": {
       "title": "SNS (Simple Notification)",
+      "stripPrefixes": [
+        "sns"
+      ],
       "resources": [
         "aws_sns_platform_application",
         "aws_sns_sms_preferences",
@@ -3677,6 +4345,9 @@
     },
     "sqs": {
       "title": "SQS (Simple Queue)",
+      "stripPrefixes": [
+        "sqs"
+      ],
       "resources": [
         "aws_sqs_queue",
         "aws_sqs_queue_policy",
@@ -3691,6 +4362,9 @@
     },
     "ssm": {
       "title": "SSM (Systems Manager)",
+      "stripPrefixes": [
+        "ssm"
+      ],
       "resources": [
         "aws_ssm_activation",
         "aws_ssm_association",
@@ -3720,6 +4394,9 @@
     },
     "ssm_contacts": {
       "title": "SSM Contacts",
+      "stripPrefixes": [
+        "ssmcontacts"
+      ],
       "resources": [
         "aws_ssmcontacts_contact",
         "aws_ssmcontacts_contact_channel",
@@ -3736,6 +4413,9 @@
     },
     "ssm_incident_manager_incidents": {
       "title": "SSM Incident Manager Incidents",
+      "stripPrefixes": [
+        "ssmincidents"
+      ],
       "resources": [
         "aws_ssmincidents_replication_set",
         "aws_ssmincidents_response_plan"
@@ -3748,6 +4428,9 @@
     },
     "ssm_quick_setup": {
       "title": "SSM Quick Setup",
+      "stripPrefixes": [
+        "ssmquicksetup"
+      ],
       "resources": [
         "aws_ssmquicksetup_configuration_manager"
       ],
@@ -3756,6 +4439,9 @@
     },
     "sso_admin": {
       "title": "SSO Admin",
+      "stripPrefixes": [
+        "ssoadmin"
+      ],
       "resources": [
         "aws_ssoadmin_account_assignment",
         "aws_ssoadmin_application",
@@ -3786,6 +4472,9 @@
     },
     "sso_identity_store": {
       "title": "SSO Identity Store",
+      "stripPrefixes": [
+        "identitystore"
+      ],
       "resources": [
         "aws_identitystore_group",
         "aws_identitystore_group_membership",
@@ -3802,6 +4491,9 @@
     },
     "storage_gateway": {
       "title": "Storage Gateway",
+      "stripPrefixes": [
+        "storagegateway"
+      ],
       "resources": [
         "aws_storagegateway_cache",
         "aws_storagegateway_cached_iscsi_volume",
@@ -3821,6 +4513,9 @@
     },
     "sts": {
       "title": "STS (Security Token)",
+      "stripPrefixes": [
+        "sts"
+      ],
       "resources": [],
       "dataSources": [
         "aws_caller_identity"
@@ -3831,6 +4526,9 @@
     },
     "swf": {
       "title": "SWF (Simple Workflow)",
+      "stripPrefixes": [
+        "swf"
+      ],
       "resources": [
         "aws_swf_domain"
       ],
@@ -3839,6 +4537,9 @@
     },
     "timestream_for_influxdb": {
       "title": "Timestream for InfluxDB",
+      "stripPrefixes": [
+        "timestreaminfluxdb"
+      ],
       "resources": [
         "aws_timestreaminfluxdb_db_cluster",
         "aws_timestreaminfluxdb_db_instance"
@@ -3848,6 +4549,9 @@
     },
     "timestream_query": {
       "title": "Timestream Query",
+      "stripPrefixes": [
+        "timestreamquery"
+      ],
       "resources": [
         "aws_timestreamquery_scheduled_query"
       ],
@@ -3856,6 +4560,9 @@
     },
     "timestream_write": {
       "title": "Timestream Write",
+      "stripPrefixes": [
+        "timestreamwrite"
+      ],
       "resources": [
         "aws_timestreamwrite_database",
         "aws_timestreamwrite_table"
@@ -3868,6 +4575,9 @@
     },
     "transcribe": {
       "title": "Transcribe",
+      "stripPrefixes": [
+        "transcribe"
+      ],
       "resources": [
         "aws_transcribe_language_model",
         "aws_transcribe_medical_vocabulary",
@@ -3879,6 +4589,9 @@
     },
     "transfer_family": {
       "title": "Transfer Family",
+      "stripPrefixes": [
+        "transfer"
+      ],
       "resources": [
         "aws_transfer_access",
         "aws_transfer_agreement",
@@ -3902,6 +4615,9 @@
     },
     "transit_gateway": {
       "title": "Transit Gateway",
+      "stripPrefixes": [
+        "ec2"
+      ],
       "resources": [
         "aws_ec2_transit_gateway",
         "aws_ec2_transit_gateway_connect",
@@ -3949,6 +4665,9 @@
     },
     "user_experience_customization": {
       "title": "User Experience Customization",
+      "stripPrefixes": [
+        "uxc"
+      ],
       "resources": [
         "aws_uxc_account_customizations"
       ],
@@ -3959,6 +4678,9 @@
     },
     "user_notifications": {
       "title": "User Notifications",
+      "stripPrefixes": [
+        "notifications"
+      ],
       "resources": [
         "aws_notifications_channel_association",
         "aws_notifications_event_rule",
@@ -3974,6 +4696,9 @@
     },
     "user_notifications_contacts": {
       "title": "User Notifications Contacts",
+      "stripPrefixes": [
+        "notificationscontacts"
+      ],
       "resources": [
         "aws_notificationscontacts_email_contact"
       ],
@@ -3982,6 +4707,9 @@
     },
     "verified_access": {
       "title": "Verified Access",
+      "stripPrefixes": [
+        "verifiedaccess"
+      ],
       "resources": [
         "aws_verifiedaccess_endpoint",
         "aws_verifiedaccess_group",
@@ -3995,6 +4723,9 @@
     },
     "verified_permissions": {
       "title": "Verified Permissions",
+      "stripPrefixes": [
+        "verifiedpermissions"
+      ],
       "resources": [
         "aws_verifiedpermissions_identity_source",
         "aws_verifiedpermissions_policy",
@@ -4009,6 +4740,9 @@
     },
     "vpc": {
       "title": "VPC (Virtual Private Cloud)",
+      "stripPrefixes": [
+        "vpc"
+      ],
       "resources": [
         "aws_default_network_acl",
         "aws_default_route_table",
@@ -4113,6 +4847,9 @@
     },
     "vpc_ipam": {
       "title": "VPC IPAM (IP Address Manager)",
+      "stripPrefixes": [
+        "vpc_ipam"
+      ],
       "resources": [
         "aws_vpc_ipam",
         "aws_vpc_ipam_organization_admin_account",
@@ -4136,6 +4873,9 @@
     },
     "vpc_lattice": {
       "title": "VPC Lattice",
+      "stripPrefixes": [
+        "vpclattice"
+      ],
       "resources": [
         "aws_vpclattice_access_log_subscription",
         "aws_vpclattice_auth_policy",
@@ -4165,6 +4905,9 @@
     },
     "vpn_client": {
       "title": "VPN (Client)",
+      "stripPrefixes": [
+        "ec2"
+      ],
       "resources": [
         "aws_ec2_client_vpn_authorization_rule",
         "aws_ec2_client_vpn_endpoint",
@@ -4178,6 +4921,9 @@
     },
     "vpn_site_to_site": {
       "title": "VPN (Site-to-Site)",
+      "stripPrefixes": [
+        "vpn"
+      ],
       "resources": [
         "aws_customer_gateway",
         "aws_vpn_concentrator",
@@ -4196,6 +4942,9 @@
     },
     "waf": {
       "title": "WAF",
+      "stripPrefixes": [
+        "wafv2"
+      ],
       "resources": [
         "aws_wafv2_api_key",
         "aws_wafv2_ip_set",
@@ -4218,6 +4967,9 @@
     },
     "waf_classic": {
       "title": "WAF Classic",
+      "stripPrefixes": [
+        "waf"
+      ],
       "resources": [
         "aws_waf_byte_match_set",
         "aws_waf_geo_match_set",
@@ -4243,6 +4995,9 @@
     },
     "waf_classic_regional": {
       "title": "WAF Classic Regional",
+      "stripPrefixes": [
+        "wafregional"
+      ],
       "resources": [
         "aws_wafregional_byte_match_set",
         "aws_wafregional_geo_match_set",
@@ -4269,6 +5024,9 @@
     },
     "wavelength": {
       "title": "Wavelength",
+      "stripPrefixes": [
+        "ec2"
+      ],
       "resources": [
         "aws_ec2_carrier_gateway"
       ],
@@ -4277,6 +5035,9 @@
     },
     "web_services_budgets": {
       "title": "Web Services Budgets",
+      "stripPrefixes": [
+        "budgets"
+      ],
       "resources": [
         "aws_budgets_budget",
         "aws_budgets_budget_action"
@@ -4288,6 +5049,9 @@
     },
     "workmail": {
       "title": "WorkMail",
+      "stripPrefixes": [
+        "workmail"
+      ],
       "resources": [
         "aws_workmail_default_domain",
         "aws_workmail_domain",
@@ -4300,6 +5064,9 @@
     },
     "workspaces": {
       "title": "WorkSpaces",
+      "stripPrefixes": [
+        "workspaces"
+      ],
       "resources": [
         "aws_workspaces_connection_alias",
         "aws_workspaces_directory",
@@ -4317,6 +5084,9 @@
     },
     "workspaces_web": {
       "title": "WorkSpaces Web",
+      "stripPrefixes": [
+        "workspacesweb"
+      ],
       "resources": [
         "aws_workspacesweb_browser_settings",
         "aws_workspacesweb_browser_settings_association",
@@ -4342,6 +5112,9 @@
     },
     "x_ray": {
       "title": "X-Ray",
+      "stripPrefixes": [
+        "xray"
+      ],
       "resources": [
         "aws_xray_encryption_config",
         "aws_xray_group",

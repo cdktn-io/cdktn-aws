@@ -30,6 +30,7 @@ export function serializeGroupsFile(g: GroupsFile): string {
     const src = g.groups[slug];
     groups[slug] = {
       title: src.title,
+      stripPrefixes: [...new Set(src.stripPrefixes ?? [])].sort(),
       resources: [...src.resources].sort(),
       dataSources: [...src.dataSources].sort(),
       ephemeralResources: [...src.ephemeralResources].sort(),

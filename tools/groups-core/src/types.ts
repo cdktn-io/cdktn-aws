@@ -30,6 +30,13 @@ export const DOC_DIR_BY_SURFACE: Record<SurfaceKind, string> = {
 export interface Group {
   /** The upstream `subcategory:` frontmatter value, verbatim. */
   title: string;
+  /**
+   * The service-name token prefixes the group title already conveys, stripped off a member's
+   * terraform type to name its class (`aws_s3_bucket` in group `s3` -> `TfBucket`). Sorted, unique,
+   * non-empty; proposed by the miner and curated in `mine-config.json#stripPrefixOverrides`.
+   * See docs/curation.md ("stripPrefixes") and docs/m6-tf-naming.md.
+   */
+  stripPrefixes: string[];
   resources: string[];
   dataSources: string[];
   ephemeralResources: string[];
@@ -56,6 +63,8 @@ export interface MineConfig {
   providerTag: string;
   /** Full `subcategory:` title -> handcrafted slug, overriding the derived one. */
   slugOverrides: Record<string, string>;
+  /** Group slug -> handcrafted `stripPrefixes`, overriding the mechanically proposed one. */
+  stripPrefixOverrides: Record<string, string[]>;
   /** Alias name -> canonical name, for schema entries with no doc file. */
   aliases: Record<string, string>;
   /** Per-surface: schema name -> slug, for entries the join cannot resolve. */

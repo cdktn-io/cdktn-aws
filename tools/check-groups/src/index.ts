@@ -11,6 +11,13 @@ import {
   type SurfaceKind,
 } from "@cdktn-aws/groups-core";
 import { groupsAtHead, isAcknowledged, readAcknowledgedMoves } from "./moves.js";
+// The generator's own class-name function, imported rather than re-implemented: a second copy of
+// the algorithm here would let groups.json pass this gate and still emit a colliding tree.
+import {
+  STRIP_PREFIX_PATTERN,
+  classNameForEntry,
+  type EntrySurface,
+} from "../../aws2cdk/src/naming.js";
 
 const failures: string[] = [];
 const fail = (msg: string) => failures.push(msg);
@@ -141,6 +148,79 @@ function main(): number {
       );
     }
   }
+
+  // ---------------------------------------------------------------- gate C --
+  // stripPrefixes: the curated input to every generated class name. A wrong list here is not a
+  // build failure — it is a silently misnamed public API — so all four properties are checked.
+  const SURFACE_OF: Record<SurfaceKind, EntrySurface> = {
+    resources: "resource",
+    dataSources: "data_source",
+    ephemeralResources: "ephemeral_resource",
+  };
+  const MARKER_OF: Record<SurfaceKind, string> = {
+    resources: "",
+    dataSources: "data_",
+    ephemeralResources: "ephemeral_",
+  };
+  let prefixCount = 0;
+  for (const slug of Object.keys(groups.groups).sort()) {
+    const prefixes = groups.groups[slug].stripPrefixes ?? [];
+    prefixCount += prefixes.length;
+    if (prefixes.length === 0) {
+      fail(`gate C: group "${slug}" has no stripPrefixes (see docs/curation.md)`);
+      continue;
+    }
+    for (const p of prefixes) {
+      if (!STRIP_PREFIX_PATTERN.test(p)) {
+        fail(`gate C: group "${slug}" prefix "${p}" is not lowercase \`_\`-separated tokens`);
+      }
+    }
+    const sortedUnique = [...new Set(prefixes)].sort();
+    if (JSON.stringify(prefixes) !== JSON.stringify(sortedUnique)) {
+      fail(`gate C: group "${slug}" stripPrefixes must be sorted and unique: ${JSON.stringify(sortedUnique)}`);
+    }
+
+    // A group's members are the names it lists plus the aliases that resolve into it — the
+    // generator emits a class for each, so both class-name uniqueness and prefix usefulness are
+    // judged over exactly that set.
+    const membersBySurface = {} as Record<SurfaceKind, string[]>;
+    for (const surface of SURFACES) {
+      membersBySurface[surface] = schema.names[surface].filter(
+        (name) => groupOf(groups, index, surface, name) === slug,
+      );
+    }
+    const rawTypes = SURFACES.flatMap((s) => membersBySurface[s]).map((n) => n.replace(/^aws_/, ""));
+    for (const p of prefixes) {
+      if (!rawTypes.some((raw) => raw === p || raw.startsWith(`${p}_`))) {
+        fail(`gate C: group "${slug}" prefix "${p}" matches no member — an unused prefix is a curation error`);
+      }
+    }
+
+    // Case-insensitive, and across all three surfaces at once: jsii-pacmak's Go emitter writes one
+    // file per type and `go build` rejects file names differing only in case.
+    const owner = new Map<string, string>();
+    for (const surface of SURFACES) {
+      for (const name of membersBySurface[surface]) {
+        const className = classNameForEntry({
+          parserType: `${MARKER_OF[surface]}${name}`,
+          surface: SURFACE_OF[surface],
+          stripPrefixes: prefixes,
+        });
+        const key = className.toLowerCase();
+        const previous = owner.get(key);
+        if (previous !== undefined) {
+          fail(`gate C: group "${slug}" derives ${className} from both "${previous}" and "${name}"`);
+        } else {
+          owner.set(key, name);
+        }
+      }
+    }
+  }
+  console.log(
+    `\n  gate C  ${"stripPrefixes".padEnd(19)} ${String(prefixCount).padStart(5)}` +
+      `        prefixes over ${Object.keys(groups.groups).length} groups, ` +
+      `every one used, no class-name collisions`,
+  );
 
   // ------------------------------------------------------------------ report
   console.log("");
